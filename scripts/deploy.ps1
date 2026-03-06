@@ -1,0 +1,1 @@
+Write-Host 'Starting strict deployment process...'; npx next build; Write-Host 'Build complete.'; Write-Host 'Deploying to Vercel...'; vercel --prod; Write-Host 'Deployment successful.'

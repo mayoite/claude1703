@@ -1,0 +1,15 @@
+﻿E:\Renameit\.lh-chrome-manual\Default\JumpListIconsMostVisited\d6ca3a3c-cd98-4ad5-8306-7bdba8e4d44a.tmp
+E:\Renameit\.lh-chrome-manual\Default\JumpListIconsRecentClosed\0b093681-cd68-4554-a75e-512f6b74c043.tmp
+E:\Renameit\.lh-chrome-manual\Default\JumpListIconsRecentClosed\e7bcf8cd-043b-4cfb-8a74-1cc1f8bfa60a.tmp
+E:\Renameit\.lh-profiles\profile-1772208312507-l55sdyl8uu\Default\Session Storage\LOG.old
+E:\Renameit\.lh-profiles\profile-1772208312507-l55sdyl8uu\Default\Storage\ext\nmmhkkegccagdldgiimedpiccmgmieda\def\Session Storage\LOG.old
+E:\Renameit\.lh-profiles\profile-1772208417765-nxzs2ugqmp\Default\Session Storage\LOG.old
+E:\Renameit\.lh-profiles\profile-1772208417765-nxzs2ugqmp\Default\Storage\ext\nmmhkkegccagdldgiimedpiccmgmieda\def\Session Storage\LOG.old
+E:\Renameit\backup\legacy\components\home\ClientLogos.tsx.old
+E:\Renameit\backup\legacy\components\home\HeroSlider.tsx.old
+E:\Renameit\backup\legacy\components\layout\MegaMenu.tsx.old
+E:\Renameit\backup\legacy\components\layout\MobileMenu.tsx.old
+E:\Renameit\backup\legacy\components\layout\Navbar.tsx.old
+E:\Renameit\backup\legacy\root\tailwind.config.js.bak
+E:\Renameit\scripts\tmp_glb_viewer_test.js
+E:\Renameit\scripts\tmp-visual-audit.mjs

@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Wooden Locker",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33d7c901acf6f5ce4d01b_locker_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33d88ac691a23437da4a9_locker_2.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Prelam Pedestal",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33ae51f36820d42518e0d_pedestal_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33aed4aa7c59dfbd123f7_pedestal_2.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Metal Pedestal",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33bcf4a8d0f9a68a69e9a_pedestal_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33bd6c74b7831216a4bd2_pedestal_2.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Compactor",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33d0e4e87f59cb2024410_compactor_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33d1345008068da79673a_compactor_2.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Metal Locker",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33d4237b54c7c3b17f6a6_metal_locker_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33d4537b54c7c3b17f77b_metal_locker_2.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Prelam Storage",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33b1f4db608137f871321_side_unit_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33b233bf78d6262fce39b_side_unit_2.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Metal Storages",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33c16043e63956b75b995_filing_cabinet_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33c1f277220df0e319a80_filing_cabinet_2.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Heavy Duty Racks",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33cc9d23f98155704413b_racks_1.jpg",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a33cd07e416b6139611e93_racks_2.jpg"
+    ],
+    "description": null
+  }
+]

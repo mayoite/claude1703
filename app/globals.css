@@ -1,0 +1,447 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Cisco Sans";
+  src: url("/fonts/cisco-sans/CiscoSans-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cisco Sans";
+  src: url("/fonts/cisco-sans/CiscoSans-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cisco Sans";
+  src: url("/fonts/cisco-sans/CiscoSans-ExtraLightOblique.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cisco Sans";
+  src: url("/fonts/cisco-sans/CiscoSans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cisco Sans";
+  src: url("/fonts/cisco-sans/CiscoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cisco Sans";
+  src: url("/fonts/cisco-sans/CiscoSans-Heavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #1434CB;
+  --color-primary-hover: #0f2db2;
+  --color-accent1: #fdbb0a;
+  --color-accent2: #faaa13;
+
+  --font-sans: "Cisco Sans", sans-serif;
+
+  --radius-default: 0px;
+  --radius-none: 0px;
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f4f4f5;
+  --color-neutral-200: #e4e4e7;
+  --color-neutral-300: #d4d4d8;
+  --color-neutral-400: #a1a1aa;
+  --color-neutral-500: #71717a;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #3f3f46;
+  --color-neutral-800: #27272a;
+  --color-neutral-900: #18181b;
+  --color-neutral-950: #09090b;
+
+  --text-xs: 0.875rem;
+  --text-3xl: 1.625rem;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -400px 0;
+    }
+
+    100% {
+      background-position: 400px 0;
+    }
+  }
+
+  --breakpoint-2xl: 1720px;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #212529;
+    --font-cisco: "Cisco Sans", sans-serif;
+    --fs-100: 0.75rem;
+    --fs-200: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-400: clamp(1.625rem, 2.2vw, 2.375rem);
+    --fs-500: clamp(2.5rem, 4.5vw, 3.75rem);
+
+    /* Design system spacing tokens */
+    --max-w-prose: 65ch;
+    --max-w-article: 720px;
+    --max-w-wide: 1200px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply antialiased bg-white text-neutral-900 leading-relaxed;
+    font-family: var(--font-cisco);
+    font-size: var(--fs-300);
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1434cb;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
+
+  a {
+    transition: color 0.3s ease;
+  }
+
+  img {
+    transition:
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.3s ease;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 3rem;
+  }
+
+  max-width: 1800px;
+}
+
+@utility content-extra-wide {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 3rem;
+  }
+
+  max-width: 1800px;
+}
+
+.container-wide {
+  @apply container;
+}
+
+@layer components {
+  .font-slogan {
+    font-family: var(--font-cisco);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-primary bg-primary px-6 py-3 text-sm font-semibold tracking-[0.04em] text-white transition-all duration-200 hover:border-primary-hover hover:bg-primary-hover hover:shadow-md active:translate-y-px;
+  }
+
+  .btn-outline {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-neutral-400 bg-white px-6 py-3 text-sm font-semibold tracking-[0.04em] text-neutral-900 transition-all duration-200 hover:border-neutral-900 hover:bg-neutral-50 hover:text-neutral-900 active:translate-y-px;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-hover;
+  }
+
+  /* Badge primitives */
+  .badge {
+    @apply inline-flex items-center rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-600;
+  }
+
+  .badge-primary {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .badge-outline {
+    @apply border border-neutral-200 bg-transparent text-neutral-600;
+  }
+
+  .typ-h1 {
+    font-size: var(--fs-400);
+    @apply leading-[1.08] font-normal tracking-tight;
+  }
+
+  .typ-h2 {
+    font-size: var(--fs-300);
+    @apply leading-[1.2] font-normal tracking-tight;
+  }
+
+  .typ-h3 {
+    font-size: var(--fs-200);
+    @apply leading-[1.4] font-normal;
+  }
+
+  .typ-eyebrow {
+    font-size: var(--fs-100);
+    @apply uppercase tracking-[0.3em] font-bold text-neutral-400;
+  }
+
+  .typ-cta {
+    font-size: var(--fs-200);
+    @apply uppercase tracking-[0.2em] font-bold;
+  }
+
+  .typ-subtle {
+    @apply text-neutral-500;
+  }
+
+  .text-3xl {
+    font-weight: 350;
+  }
+
+  /* ─── Editorial type scale ─── */
+  .typ-display {
+    font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  .typ-section {
+    font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+  }
+
+  .typ-lead {
+    font-size: clamp(1rem, 1.75vw, 1.375rem);
+    font-weight: 350;
+    line-height: 1.58;
+  }
+
+  .typ-label {
+    font-size: 0.84375rem;
+    font-weight: 550;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .typ-stat {
+    font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+    font-weight: 250;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+
+  .nav-shell {
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 16px 48px -30px rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(16px);
+  }
+
+  .nav-pill {
+    @apply transition-colors duration-200;
+  }
+
+  .mega-card {
+    transition: all 300ms;
+  }
+
+  .mega-card:hover {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 18px 40px -28px rgba(15, 23, 42, 0.55);
+  }
+
+  .menu-chip {
+    @apply transition-colors duration-200 hover:border-primary hover:text-primary;
+  }
+
+  .ai-search-shell {
+    border: 1px solid rgba(228, 228, 231, 0.8);
+    background-color: white;
+    box-shadow: 0 8px 30px -24px rgba(15, 23, 42, 0.45);
+  }
+
+  /* Card lift micro-interaction */
+  .card-lift {
+    @apply transition-all duration-300;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Skeleton shimmer */
+  .skeleton {
+    background: linear-gradient(90deg, #f4f4f5 25%, #e4e4e7 50%, #f4f4f5 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+
+    @supports (scrollbar-width: none) {
+      scrollbar-width: none;
+    }
+  }
+
+  /* Product grid fade-in animation */
+  .animate-fadein {
+    animation: fadein 0.25s ease-out both;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-pan {
+  0% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: scale(1.08) translate3d(-1.2%, -1%, 0);
+  }
+
+  100% {
+    transform: scale(1.12) translate3d(-2%, -1.6%, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-left 90s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-right 90s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-hero-pan {
+  animation: hero-pan 12s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-pan {
+    animation: none;
+  }
+}
+
+/* Hover scale utility (Tailwind doesn't include scale-103 by default) */
+.hover\:scale-103:hover {
+  transform: scale(1.03);
+}
+
+.group:hover .group-hover\:scale-103 {
+  transform: scale(1.03);
+}

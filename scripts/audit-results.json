@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-02-27T14:54:13.689Z",
+  "scannedProducts": 145,
+  "mismatchCount": 0,
+  "fixedProductCount": 0,
+  "columns": [
+    "productId",
+    "productName",
+    "category",
+    "slug",
+    "mismatchedImage",
+    "fixedImage"
+  ],
+  "rows": []
+}

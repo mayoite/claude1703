@@ -1,0 +1,56 @@
+"use client";
+
+import Link from "next/link";
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+import { GitCompareArrows, Trash2 } from "lucide-react";
+import {
+  MAX_COMPARE_ITEMS,
+  useProductCompare,
+} from "@/lib/store/productCompare";
+
+export function CompareDock() {
+  const pathname = usePathname();
+  const items = useProductCompare((state) => state.items);
+  const clear = useProductCompare((state) => state.clear);
+
+  const query = useMemo(
+    () => items.map((item) => item.productUrlKey).filter(Boolean).join(","),
+    [items],
+  );
+
+  if (items.length === 0 || pathname === "/compare") return null;
+
+  return (
+    <div className="fixed bottom-3 left-1/2 z-40 w-[calc(100%-1rem)] max-w-3xl -translate-x-1/2 rounded-xl border border-neutral-300 bg-white p-3 shadow-xl">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-700">
+            Compare products ({items.length}/{MAX_COMPARE_ITEMS})
+          </p>
+          <p className="truncate text-sm text-neutral-800">
+            {items.map((item) => item.name).join(" | ")}
+          </p>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={clear}
+            className="inline-flex min-h-10 items-center gap-1.5 rounded-md border border-neutral-300 px-3 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-700 transition-colors hover:border-neutral-500 hover:text-neutral-900"
+          >
+            <Trash2 className="h-3.5 w-3.5" />
+            Clear
+          </button>
+          <Link
+            href={query ? `/compare?items=${encodeURIComponent(query)}` : "/compare"}
+            className="inline-flex min-h-10 items-center gap-2 rounded-md bg-primary px-4 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-primary-hover"
+          >
+            <GitCompareArrows className="h-3.5 w-3.5" />
+            Compare now
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

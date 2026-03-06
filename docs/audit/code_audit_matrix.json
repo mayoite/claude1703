@@ -1,0 +1,634 @@
+[
+  {
+    "route": "*",
+    "file": "app/layout.tsx",
+    "metadata": true,
+    "canonical": true,
+    "openGraph": true,
+    "twitter": true,
+    "jsonLd": true,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Global canonical set to '/' can collapse canonical signals"
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "file": "app/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": true,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      },
+      {
+        "status": "risk",
+        "severity": "P2",
+        "text": "No page-specific JSON-LD schema found"
+      }
+    ]
+  },
+  {
+    "route": "/about",
+    "file": "app/about/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": true,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/career",
+    "file": "app/career/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/catalog",
+    "file": "app/catalog/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/configurator",
+    "file": "app/configurator/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": true,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "file": "app/contact/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      },
+      {
+        "status": "risk",
+        "severity": "P2",
+        "text": "No page-specific JSON-LD schema found"
+      }
+    ]
+  },
+  {
+    "route": "/downloads",
+    "file": "app/downloads/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/gallery",
+    "file": "app/gallery/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/imprint",
+    "file": "app/imprint/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/news",
+    "file": "app/news/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/planning",
+    "file": "app/planning/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/privacy",
+    "file": "app/privacy/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/products",
+    "file": "app/products/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/products/[category]",
+    "file": "app/products/[category]/page.tsx",
+    "metadata": true,
+    "canonical": true,
+    "openGraph": true,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": true,
+    "redirectOnly": false,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/products/[category]/[slug]",
+    "file": "app/products/[category]/[slug]/page.tsx",
+    "metadata": true,
+    "canonical": true,
+    "openGraph": true,
+    "twitter": true,
+    "jsonLd": true,
+    "supabaseDependency": true,
+    "redirectOnly": false,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/products/* legacy",
+    "file": "next.config.js",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P2",
+        "text": "Legacy route redirects use temporary redirects (permanent:false), weaker for SEO consolidation"
+      }
+    ]
+  },
+  {
+    "route": "/products/oando-chairs",
+    "file": "app/products/oando-chairs/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": true,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/products/oando-chairs/[slug]",
+    "file": "app/products/oando-chairs/[slug]/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": true,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/products/oando-other-seating",
+    "file": "app/products/oando-other-seating/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": true,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/products/oando-other-seating/[slug]",
+    "file": "app/products/oando-other-seating/[slug]/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": true,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/projects",
+    "file": "app/projects/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": true,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      },
+      {
+        "status": "risk",
+        "severity": "P2",
+        "text": "No page-specific JSON-LD schema found"
+      }
+    ]
+  },
+  {
+    "route": "/quote-cart",
+    "file": "app/quote-cart/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/robots.txt",
+    "file": "app/robots.ts",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P2",
+        "text": "Robots rules do not explicitly disallow fallback snapshot paths"
+      }
+    ]
+  },
+  {
+    "route": "/service",
+    "file": "app/service/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/showrooms",
+    "file": "app/showrooms/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/sitemap.xml",
+    "file": "app/sitemap.ts",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": true,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P2",
+        "text": "Sitemap includes low-index utility routes (/quote-cart or /tracking)"
+      }
+    ]
+  },
+  {
+    "route": "/social",
+    "file": "app/social/page.tsx",
+    "metadata": true,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": true,
+    "redirectOnly": false,
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "route": "/solutions",
+    "file": "app/solutions/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/[category]",
+    "file": "app/solutions/[category]/page.tsx",
+    "metadata": true,
+    "canonical": true,
+    "openGraph": true,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "ok",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Dynamic route metadata exists but runtime handling must support Next.js async params contract"
+      }
+    ]
+  },
+  {
+    "route": "/support-ivr",
+    "file": "app/support-ivr/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/sustainability",
+    "file": "app/sustainability/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/terms",
+    "file": "app/terms/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/tracking",
+    "file": "app/tracking/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  },
+  {
+    "route": "/workstations/configurator",
+    "file": "app/workstations/configurator/page.tsx",
+    "metadata": false,
+    "canonical": false,
+    "openGraph": false,
+    "twitter": false,
+    "jsonLd": false,
+    "supabaseDependency": false,
+    "redirectOnly": false,
+    "status": "risk",
+    "issues": [
+      {
+        "status": "risk",
+        "severity": "P1",
+        "text": "Missing route-level metadata export"
+      }
+    ]
+  }
+]
