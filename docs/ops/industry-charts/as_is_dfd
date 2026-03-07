@@ -1,0 +1,60 @@
+digraph as_is_mapping {
+	bgcolor=white fontname=Helvetica nodesep=0.45 rankdir=LR ranksep=0.7 splines=ortho
+	node [color="#2D3748" fillcolor="#F7FAFC" fontname=Helvetica fontsize=10 style="rounded,filled"]
+	edge [arrowsize=0.8 color="#4A5568" fontname=Helvetica fontsize=9 penwidth=1.2]
+	fontname="Helvetica-Bold" fontsize=14 label="AS-IS DFD (Level 1): Current Catalog Mapping Pipeline" labelloc=t
+	ext_afc [label="E1 AFC backups
+(manual corrections)" fillcolor="#FFF5F5" shape=box]
+	ext_seed [label="E2 seed_data.sql
+(product inserts)" fillcolor="#FFF5F5" shape=box]
+	ext_paths [label="E3 legacy image paths
+(/images/afc/*)" fillcolor="#FFF5F5" shape=box]
+	proc_map [label="P1 Current mapping execution
+(ad-hoc scripts + historical migrations)" fillcolor="#F7FAFC" shape=box]
+	subgraph cluster_store {
+		color="#CBD5E0" label="Data Stores" style=rounded
+		ds_products [label="D1 products" shape=cylinder]
+		ds_specs [label="D2 product_specs" shape=cylinder]
+		ds_images [label="D3 product_images" shape=cylinder]
+	}
+	subgraph cluster_serve {
+		color="#CBD5E0" label=Serving style=rounded
+		proc_fetch [label="P2 Catalog retrieval
+(getCatalog/getProducts)" shape=box]
+		gw_error [label="G1 Supabase error?" color="#B7791F" fillcolor="#FEFCBF" shape=diamond]
+		proc_fallback [label="P3 Optional fallback
+(Nhost)" fillcolor="#FFFAF0" shape=box]
+		proc_ui [label="P4 Filter API + Product UI" shape=box]
+	}
+	risk [label="Known Defects:
+- duplicate variants
+- inconsistent specs
+- image path/order drift
+- fallback can mask DB failures" color="#C53030" fillcolor="#FFF5F5" shape=note]
+	ext_afc -> proc_map [label="metadata corrections"]
+	ext_seed -> proc_map [label="core rows/spec seeds"]
+	ext_paths -> proc_map [label="legacy media refs"]
+	proc_map -> ds_products [label="upsert products"]
+	proc_map -> ds_specs [label="backfill specs"]
+	proc_map -> ds_images [label="backfill images"]
+	ds_products -> proc_fetch [label="catalog rows"]
+	ds_specs -> proc_fetch [label="spec overlays"]
+	ds_images -> proc_fetch [label="image ordering"]
+	proc_fetch -> gw_error
+	gw_error -> proc_fallback [label=Yes]
+	gw_error -> proc_ui [label=No]
+	proc_fallback -> proc_ui [label="fallback dataset"]
+	risk -> proc_ui [color="#C53030" style=dashed]
+	subgraph cluster_as_is_legend {
+		color="#CBD5E0" label=Legend style="rounded,dashed"
+		as_is_task [label="Task / Process" shape=box]
+		as_is_gateway [label="Decision Gateway" color="#B7791F" fillcolor="#FEFCBF" shape=diamond]
+		as_is_choice [label="Client Choice (E*)" color="#B7791F" fillcolor="#FFFBEB" shape=parallelogram]
+		as_is_store [label="Data Store" fillcolor="#EDF2F7" shape=cylinder]
+		as_is_event [label="Start/End Event" color="#2C7A7B" fillcolor="#E6FFFA" shape=circle]
+		as_is_task -> as_is_gateway [style=invis]
+		as_is_gateway -> as_is_choice [style=invis]
+		as_is_choice -> as_is_store [style=invis]
+		as_is_store -> as_is_event [style=invis]
+	}
+}

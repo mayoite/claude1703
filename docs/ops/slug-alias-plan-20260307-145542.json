@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-03-07T14:55:42",
+  "totalProducts": 145,
+  "duplicateGroups": [
+    {
+      "category_id": "seating",
+      "name_key": "fluid-x",
+      "canonical_slug": "oando-seating--fluid-x",
+      "members": [
+        {
+          "slug": "oando-seating--fluid-x",
+          "name": "Fluid X",
+          "subcategory": "Mesh chairs",
+          "imageCount": 8,
+          "score": 65
+        },
+        {
+          "slug": "fluid-x",
+          "name": "Fluid X",
+          "subcategory": "Mesh chairs",
+          "imageCount": 1,
+          "score": 11
+        }
+      ]
+    },
+    {
+      "category_id": "storages",
+      "name_key": "prelam",
+      "canonical_slug": "oando-storage--prelam-storage",
+      "members": [
+        {
+          "slug": "oando-storage--prelam-storage",
+          "name": "Prelam",
+          "subcategory": "Prelam Storage",
+          "imageCount": 8,
+          "score": 72
+        },
+        {
+          "slug": "oando-storage--pedestal",
+          "name": "Prelam",
+          "subcategory": "Prelam Storage",
+          "imageCount": 8,
+          "score": 70
+        }
+      ]
+    }
+  ],
+  "autoAliasCount": 0,
+  "autoAliases": [],
+  "reviewOnlyCount": 2,
+  "reviewOnly": [
+    {
+      "category_id": "seating",
+      "name_key": "fluid-x",
+      "candidate_slug": "fluid-x",
+      "suggested_canonical_slug": "oando-seating--fluid-x"
+    },
+    {
+      "category_id": "storages",
+      "name_key": "prelam",
+      "candidate_slug": "oando-storage--pedestal",
+      "suggested_canonical_slug": "oando-storage--prelam-storage"
+    }
+  ]
+}

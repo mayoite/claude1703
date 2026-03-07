@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current Mapping Chart</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f8fafc; }
+    h1 { margin: 0 0 12px; font-size: 20px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+  </style>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, theme: "default", securityLevel: "loose" });
+  </script>
+</head>
+<body>
+  <h1>Current Mapping (As-Is)</h1>
+  <div class="card">
+    <pre class="mermaid">
+flowchart TB
+  subgraph SRC["Source Inputs"]
+    S1["AFC backups (manual corrections)"]
+    S2["seed_data.sql (product inserts)"]
+    S3["legacy image paths (/images/afc/*)"]
+  end
+
+  subgraph MAP_NOW["Current Mapping Path"]
+    M1["ad-hoc scripts + historical migrations"]
+    M2["products columns updated directly"]
+    M3["metadata patches applied per run"]
+  end
+
+  subgraph STORE_NOW["Current Storage"]
+    T1["products.category_id"]
+    T2["products.series_id + series_name"]
+    T3["products.metadata.subcategory/_slug"]
+    T4["products.specs (jsonb)"]
+    T5["products.flagship_image + images + scene_images"]
+    T6["product_specs / product_images backfill tables"]
+  end
+
+  subgraph SERVE_NOW["Current Serving"]
+    R1["getCatalog/getProducts"]
+    R2["optional Nhost fallback on Supabase error"]
+    R3["filter API + grid rendering"]
+  end
+
+  S1 --> M1
+  S2 --> M1
+  S3 --> M1
+  M1 --> M2 --> M3
+  M3 --> T1
+  M3 --> T2
+  M3 --> T3
+  M3 --> T4
+  M3 --> T5
+  T4 --> T6
+  T5 --> T6
+  T1 --> R1
+  T2 --> R1
+  T3 --> R1
+  T4 --> R1
+  T5 --> R1
+  R1 --> R2 --> R3
+
+  E1["Common breakpoints:
+- duplicate slug/name variants
+- spec sparsity across products
+- image ordering/path drift
+- fallback behavior masking DB errors"]
+  E1 -.-> R3
+    </pre>
+  </div>
+</body>
+</html>

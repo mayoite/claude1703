@@ -73,3 +73,12 @@ supabase/.temp/
 .vercel
 .wrangler/
 oando_website/.DONOTDELETE/keys/raw-values-*/
+oando_website/.DONOTDELETE/keys/.env.local
+oando_website/.DONOTDELETE/keys/wrangler-account.json
+oando_website/.DONOTDELETE/keys/github-token.txt
+oando_website/.DONOTDELETE/keys/vercel-user.txt
+oando_website/99_bundles/*.zip
+oando_website/99_bundles/archive/*.zip
+oando_website/99_bundles/_tmp_*
+docs/ops/generated-artifacts-*.zip
+docs/ops/~$*.xlsx
