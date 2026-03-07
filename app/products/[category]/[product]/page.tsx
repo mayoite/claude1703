@@ -15,11 +15,9 @@ import {
   fetchProductSpecsMap,
 } from "@/lib/productDataTables";
 import { resolveProductByUrlKey } from "@/lib/productSlugResolver";
+import { SITE_URL } from "@/lib/siteUrl";
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  process.env.SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://ourwebsitecopy2026-02-21.vercel.app");
+const BASE_URL = SITE_URL;
 
 type CategoryResolutionRow = {
   id?: string;

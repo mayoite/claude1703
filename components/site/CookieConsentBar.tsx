@@ -127,8 +127,8 @@ export function CookieConsentBar() {
     >
       <div className="container flex flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between 2xl:px-0">
         <p className="text-sm leading-relaxed text-neutral-700">
-          We use essential cookies and optional SEO measurement cookies (landing page, referrer,
-          and UTM attribution) to improve discoverability and user journeys. See our{" "}
+          We use essential cookies and optional analytics & attribution cookies (landing page,
+          referrer, and UTM parameters) to improve discoverability and user journeys. See our{" "}
           <Link href="/privacy" className="font-semibold text-primary hover:underline">
             Privacy Policy
           </Link>

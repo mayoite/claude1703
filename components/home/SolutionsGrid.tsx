@@ -99,7 +99,7 @@ export function SolutionsGrid() {
             Browse full catalog
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-700">
+          <p className="block text-xs font-semibold uppercase tracking-[0.22em] text-neutral-700 lg:hidden">
             Swipe to browse categories
           </p>
         </div>

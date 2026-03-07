@@ -8,8 +8,21 @@ interface TrustStripProps {
 
 export function TrustStrip({ stats, asOfLabel }: TrustStripProps) {
   const kpis = [
-    { value: formatKpiValuePlus(stats.clientOrganisations), label: "Organisations served", testId: "kpi-client-organisations" },
-    { value: formatKpiValuePlus(stats.projectsDelivered), label: "Projects delivered", testId: "kpi-projects-delivered" },
+    {
+      value: formatKpiValuePlus(stats.clientOrganisations),
+      label: "Organisations served",
+      testId: "kpi-client-organisations",
+    },
+    {
+      value: formatKpiValuePlus(stats.projectsDelivered),
+      label: "Projects delivered",
+      testId: "kpi-projects-delivered",
+    },
+    {
+      value: `${stats.yearsExperience}+`,
+      label: "Years experience",
+      testId: "kpi-years-experience",
+    },
     { value: formatKpiValuePlus(stats.sectorsServed), label: "Sectors served", testId: undefined },
   ];
 
@@ -17,13 +30,15 @@ export function TrustStrip({ stats, asOfLabel }: TrustStripProps) {
     <section className="w-full border-y border-neutral-200 bg-white py-12 md:py-14" aria-label="Trust indicators">
       <div className="container px-6 2xl:px-0">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-4">
-          <p className="typ-label text-neutral-700">Trusted at a glance</p>
+          <p className="typ-label text-neutral-700">
+            120 organisations trust us - from DMRC to Tata Steel
+          </p>
           <p data-testid="kpi-as-of-home" className="typ-label text-neutral-700">
             {asOfLabel}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-5">
           {kpis.map(({ value, label, testId }) => (
             <div
               key={label}

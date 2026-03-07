@@ -34,6 +34,21 @@ interface ProductViewerProps {
   categoryId?: string;
 }
 
+function sanitizeDisplayText(value: string): string {
+  return String(value || "")
+    .replace(/[�]+/g, "")
+    .replace(/â€”/g, "—")
+    .replace(/â€“/g, "–")
+    .replace(/â€˜|â€™/g, "'")
+    .replace(/â€œ|â€\u009d|â€"/g, "\"")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function sanitizeDisplayList(values: string[]): string[] {
+  return values.map((item) => sanitizeDisplayText(item)).filter(Boolean);
+}
+
 export function ProductViewer({
   product,
   seriesName,
@@ -59,6 +74,7 @@ export function ProductViewer({
       ? product.variants[0]
       : null,
   );
+  const displayName = cleanName(sanitizeDisplayText(product.name));
 
   const modelPath =
     selectedVariant?.threeDModelUrl ||
@@ -85,7 +101,7 @@ export function ProductViewer({
     (product as unknown as { altText?: string }).altText ||
     (product.metadata as Record<string, unknown> | undefined)?.ai_alt_text?.toString() ||
     (product.metadata as Record<string, unknown> | undefined)?.aiAltText?.toString() ||
-    `${cleanName(product.name)} product image`;
+    `${displayName} product image`;
 
   useEffect(() => {
     // Basic anonymous tracking for recommendations
@@ -147,13 +163,13 @@ export function ProductViewer({
   }, [hasModelPath, modelPath]);
 
   const toText = (value: unknown): string => {
-    if (typeof value === "string") return value.trim();
+    if (typeof value === "string") return sanitizeDisplayText(value);
     if (typeof value === "number") return String(value);
     return "";
   };
   const toStringList = (value: unknown): string[] => {
     if (!Array.isArray(value)) return [];
-    return value.map((item) => String(item).trim()).filter(Boolean);
+    return sanitizeDisplayList(value.map((item) => String(item)));
   };
   const routeKey = (product.slug || product.id || "").trim();
   const compareId = `compare-${categoryId || "products"}-${routeKey}`;
@@ -186,15 +202,19 @@ export function ProductViewer({
       ? (product.specs as Record<string, unknown>)
       : {};
 
-  const overview = product.detailedInfo?.overview || product.description;
+  const overview = sanitizeDisplayText(
+    product.detailedInfo?.overview || product.description || "",
+  );
   const dimensions =
     product.detailedInfo?.dimensions ||
     toText(rawSpecs.dimensions) ||
     toText(rawSpecs.dimension) ||
     fallbackProfile.dimensions;
-  const primaryMaterials = product.detailedInfo?.materials?.filter(Boolean) || [];
+  const primaryMaterials = sanitizeDisplayList(
+    product.detailedInfo?.materials?.filter(Boolean) || [],
+  );
   const specMaterials = toStringList(rawSpecs.materials);
-  const metadataMaterials = product.metadata?.material || [];
+  const metadataMaterials = sanitizeDisplayList(product.metadata?.material || []);
   const materials =
     primaryMaterials.length > 0
       ? primaryMaterials
@@ -203,11 +223,12 @@ export function ProductViewer({
         : metadataMaterials.length > 0
           ? metadataMaterials
           : fallbackProfile.materials;
-  const features =
+  const features = sanitizeDisplayList(
     product.detailedInfo?.features?.filter(
       (f: string) => f && f !== "MANUFACTURING" && f !== "Sustainability",
-    ) || [];
-  const useCases = product.metadata?.useCase || fallbackProfile.useCase;
+    ) || [],
+  );
+  const useCases = sanitizeDisplayList(product.metadata?.useCase || fallbackProfile.useCase);
   const warrantyYears = product.metadata?.warrantyYears;
   const warrantyText = warrantyYears
     ? `${warrantyYears}-Year Warranty`
@@ -266,9 +287,9 @@ export function ProductViewer({
       .replace(/\b\w/g, (c) => c.toUpperCase());
   const toSpecText = (value: unknown): string => {
     if (value === null || value === undefined) return "";
-    if (Array.isArray(value)) return value.map((v) => String(v)).join(", ");
+    if (Array.isArray(value)) return sanitizeDisplayList(value.map((v) => String(v))).join(", ");
     if (typeof value === "object") return "";
-    return String(value).trim();
+    return sanitizeDisplayText(String(value));
   };
   const inlineSpecs = (() => {
     const entries: Array<{ label: string; value: string }> = [];
@@ -301,7 +322,7 @@ export function ProductViewer({
     return entries.slice(0, 16);
   })();
 
-  const seriesShort = seriesName.replace(/ Series$/i, "");
+  const seriesShort = sanitizeDisplayText(seriesName.replace(/ Series$/i, ""));
 
   return (
     <section className="bg-white min-h-screen">
@@ -323,7 +344,7 @@ export function ProductViewer({
           </Link>
           <ChevronRight className="w-3 h-3" />
           <span className="text-neutral-900 font-semibold">
-            {cleanName(product.name)}
+            {displayName}
           </span>
         </div>
       </div>
@@ -332,10 +353,10 @@ export function ProductViewer({
         {/* ── LEFT: IMAGE GALLERY ── */}
         <div className="w-full lg:w-[58%] xl:w-[62%] flex flex-col pt-0 lg:pt-8 bg-neutral-100">
           <div className="flex-1 w-full max-w-[800px] mx-auto p-4 lg:p-8">
-            <ProductGallery
-              images={uniqueImages}
-              productName={cleanName(product.name)}
-            />
+              <ProductGallery
+                images={uniqueImages}
+                productName={displayName}
+              />
           </div>
 
           {/* 3D viewer toggle wrapper */}
@@ -400,7 +421,7 @@ export function ProductViewer({
                         ios-src="${modelPath.replace(".glb", ".usdz")}"
                         camera-controls
                         shadow-intensity="1"
-                        alt="3D model of ${product.name}"
+                        alt="3D model of ${displayName}"
                         style="width: 100%; height: 100%;"
                       ></model-viewer>
                     `,
@@ -422,7 +443,7 @@ export function ProductViewer({
                 {seriesShort}
               </p>
               <h1 className="text-4xl sm:text-5xl font-light text-neutral-900 tracking-tight leading-[1.05] mb-5">
-                {cleanName(product.name)}
+                {displayName}
               </h1>
               <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-light mb-6 max-w-prose line-clamp-3 lg:line-clamp-none">
                 {shortOverview}
@@ -448,7 +469,7 @@ export function ProductViewer({
                   type="button"
                   onClick={() => {
                     const text = encodeURIComponent(
-                      `Check out ${product.name} at One & Only Furniture!`,
+                      `Check out ${displayName} at One & Only Furniture!`,
                     );
                     const url = encodeURIComponent(window.location.href);
                     window.open(
@@ -561,7 +582,7 @@ export function ProductViewer({
                 onClick={() =>
                   addItem({
                     id: `quote-${product.slug || product.id}`,
-                    name: cleanName(product.name),
+                    name: displayName,
                     image: uniqueImages[0],
                     href: `${categoryRoute}/${product.slug || product.id}`,
                     qty: 1,
@@ -582,7 +603,7 @@ export function ProductViewer({
                       id: compareId,
                       productUrlKey: routeKey,
                       categoryId: categoryId || "products",
-                      name: cleanName(product.name),
+                      name: displayName,
                       image: uniqueImages[0],
                       href: `${categoryRoute}/${routeKey}`,
                     })

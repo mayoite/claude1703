@@ -48,8 +48,19 @@ interface FlatProduct extends Product {
   altText?: string;
 }
 
+function sanitizeDisplayText(value: string): string {
+  return String(value || "")
+    .replace(/[�]+/g, "")
+    .replace(/â€”/g, "—")
+    .replace(/â€“/g, "–")
+    .replace(/â€˜|â€™/g, "'")
+    .replace(/â€œ|â€\u009d|â€"/g, "\"")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function normalizeToken(value?: string | null): string {
-  return String(value || "").trim().replace(/\s+/g, " ").toLowerCase();
+  return sanitizeDisplayText(String(value || "")).toLowerCase();
 }
 
 function getPrimaryImagePath(product: Pick<FlatProduct, "images" | "flagshipImage">): string {
@@ -119,7 +130,7 @@ function toTextList(value: unknown): string[] {
 }
 
 function toInlineSpec(value: string, max = 72): string {
-  const normalized = value.replace(/\s+/g, " ").trim();
+  const normalized = sanitizeDisplayText(value);
   if (!normalized) return "";
   return normalized.length > max ? `${normalized.slice(0, max)}...` : normalized;
 }
@@ -171,7 +182,7 @@ interface FilterResponse {
 }
 
 function fallbackAltText(productName: string, categoryName: string): string {
-  return `${productName} ${categoryName}`.replace(/\s+/g, " ").trim().slice(0, 140);
+  return sanitizeDisplayText(`${productName} ${categoryName}`).slice(0, 140);
 }
 
 function getProductRouteKey(product: Pick<FlatProduct, "slug" | "id">): string {
@@ -470,7 +481,7 @@ function ProductCard({
   const imageCandidates = buildImageCandidates(product);
   const [imgIndex, setImgIndex] = useState(0);
   const imgSrc = imageCandidates[imgIndex] || "/images/fallback/category.webp";
-  const displayName = product.name;
+  const displayName = sanitizeDisplayText(product.name);
   const ecoScore = product.metadata?.sustainabilityScore || 0;
   const routeKey = getProductRouteKey(product);
   const compareId = `compare-${categoryId}-${routeKey}`;
@@ -536,7 +547,7 @@ function ProductCard({
         </div>
         <div className="min-h-[13.5rem] p-4">
           <p className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium mb-1">
-            {product.seriesName}
+            {sanitizeDisplayText(product.seriesName)}
           </p>
           <h3 className="text-sm font-semibold text-neutral-900 group-hover:text-neutral-700 transition-colors leading-tight">
             {displayName}
@@ -547,7 +558,7 @@ function ProductCard({
             </p>
           )}
           <p className="text-xs text-neutral-500 mt-1 line-clamp-2 leading-relaxed">
-            {product.description}
+            {sanitizeDisplayText(product.description || "")}
           </p>
           <div className="mt-3 space-y-1 border-t border-neutral-100 pt-2.5">
             <p className="text-xs text-neutral-600 leading-relaxed line-clamp-1">

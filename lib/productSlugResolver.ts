@@ -15,6 +15,7 @@ const ALIAS_TABLE_CANDIDATES = ["catalog_product_slug_aliases", "product_slug_al
 let preferredAliasTable: (typeof ALIAS_TABLE_CANDIDATES)[number] | null = null;
 let aliasLookupDisabled = false;
 let aliasLookupDisabledLogged = false;
+const LOG_MISSING_ALIAS_TABLE = String(process.env.LOG_MISSING_ALIAS_TABLE || "").toLowerCase() === "true";
 
 export type ProductSlugResolution<T> = {
   row: T | null;
@@ -46,7 +47,7 @@ function isMissingAliasTableError(error: SupabaseErrorLike): boolean {
 
 function disableAliasLookupOnce(reason: string): void {
   aliasLookupDisabled = true;
-  if (aliasLookupDisabledLogged) return;
+  if (aliasLookupDisabledLogged || !LOG_MISSING_ALIAS_TABLE) return;
   aliasLookupDisabledLogged = true;
   console.warn(`[slug-resolver] alias lookup disabled: ${reason}`);
 }

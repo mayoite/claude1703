@@ -202,6 +202,13 @@ export function SiteHeader() {
               Workspace Furniture Specialist
             </p>
             <div className="flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
+              <a
+                href="tel:+919835630940"
+                className="text-neutral-700 hover:text-primary transition-colors"
+                aria-label="Call +91 98356 30940"
+              >
+                +91 98356 30940
+              </a>
               <Link href="/service" className="hover:text-primary transition-colors">
                 Service
               </Link>

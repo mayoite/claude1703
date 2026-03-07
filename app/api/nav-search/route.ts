@@ -111,6 +111,14 @@ async function buildSearchIndex(): Promise<SearchIndexEntry[]> {
   return entries;
 }
 
+function buildFallbackIndex(): SearchIndexEntry[] {
+  return STATIC_PAGES.map((page) => ({
+    ...page,
+    type: "page",
+    keywords: [page.title, page.href],
+  }));
+}
+
 function localSearch(entries: SearchIndexEntry[], query: string, limit: number): SearchResultItem[] {
   const trimmedQuery = normalize(query);
   if (trimmedQuery.length < 2) return [];
@@ -202,6 +210,58 @@ async function aiRank(
   return Array.isArray(parsed.ids) ? parsed.ids : [];
 }
 
+async function executeSearch(
+  query: string,
+  limit: number,
+  context: SearchContext,
+  started: number,
+) {
+  let indexFallbackUsed = false;
+  let index: SearchIndexEntry[] = [];
+
+  try {
+    index = await buildSearchIndex();
+  } catch {
+    // Keep nav-search responsive even if catalog fetch fails.
+    index = buildFallbackIndex();
+    indexFallbackUsed = true;
+  }
+
+  const localResults = localSearch(index, query, limit);
+  let results = localResults;
+  let fallbackUsed = indexFallbackUsed;
+
+  if (process.env.OPENROUTER_API_KEY && localResults.length > 0) {
+    try {
+      const rankedIds = await aiRank(query, context, localResults);
+      if (rankedIds.length > 0) {
+        const byId = new Map(localResults.map((item) => [item.id, item]));
+        const ordered = rankedIds
+          .map((id) => byId.get(id))
+          .filter((item): item is SearchResultItem => Boolean(item));
+        const seen = new Set(ordered.map((item) => item.id));
+        const tail = localResults.filter((item) => !seen.has(item.id));
+        results = [...ordered, ...tail].slice(0, limit).map((item) => ({
+          ...item,
+          source: "ai",
+        }));
+      } else {
+        fallbackUsed = true;
+      }
+    } catch {
+      fallbackUsed = true;
+    }
+  } else {
+    fallbackUsed = true;
+  }
+
+  return {
+    results,
+    fallbackUsed,
+    latencyMs: Date.now() - started,
+  };
+}
+
 export async function POST(req: NextRequest) {
   const started = Date.now();
   const ip = req.headers.get("x-forwarded-for") ?? "127.0.0.1";
@@ -240,40 +300,60 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const index = await buildSearchIndex();
-    const localResults = localSearch(index, query, limit);
-    let results = localResults;
-    let fallbackUsed = false;
+    return NextResponse.json(
+      await executeSearch(query, limit, context, started),
+    );
+  } catch {
+    return NextResponse.json(
+      {
+        results: [],
+        fallbackUsed: true,
+        latencyMs: Date.now() - started,
+        error: {
+          code: "SEARCH_FAILED",
+          message: "Unable to process search request right now.",
+        },
+      },
+      { status: 500 },
+    );
+  }
+}
 
-    if (process.env.OPENROUTER_API_KEY && localResults.length > 0) {
-      try {
-        const rankedIds = await aiRank(query, context, localResults);
-        if (rankedIds.length > 0) {
-          const byId = new Map(localResults.map((item) => [item.id, item]));
-          const ordered = rankedIds
-            .map((id) => byId.get(id))
-            .filter((item): item is SearchResultItem => Boolean(item));
-          const seen = new Set(ordered.map((item) => item.id));
-          const tail = localResults.filter((item) => !seen.has(item.id));
-          results = [...ordered, ...tail].slice(0, limit).map((item) => ({
-            ...item,
-            source: "ai",
-          }));
-        } else {
-          fallbackUsed = true;
-        }
-      } catch {
-        fallbackUsed = true;
-      }
-    } else {
-      fallbackUsed = true;
+export async function GET(req: NextRequest) {
+  const started = Date.now();
+  const ip = req.headers.get("x-forwarded-for") ?? "127.0.0.1";
+  const limitRes = rateLimit(ip, 20, 60000);
+  if (!limitRes.success) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429, headers: { "X-RateLimit-Reset": limitRes.reset.toString() } },
+    );
+  }
+
+  try {
+    const query = req.nextUrl.searchParams.get("q")?.trim() || "";
+    const limit = sanitizeLimit(Number(req.nextUrl.searchParams.get("limit") || "8"));
+    const contextRaw = req.nextUrl.searchParams.get("context");
+    const context: SearchContext = contextRaw === "mobile" ? "mobile" : "header";
+
+    if (query.length < 2) {
+      return NextResponse.json(
+        {
+          results: [],
+          fallbackUsed: false,
+          latencyMs: Date.now() - started,
+          error: {
+            code: "QUERY_TOO_SHORT",
+            message: "Query must be at least 2 characters.",
+          },
+        },
+        { status: 400 },
+      );
     }
 
-    return NextResponse.json({
-      results,
-      fallbackUsed,
-      latencyMs: Date.now() - started,
-    });
+    return NextResponse.json(
+      await executeSearch(query, limit, context, started),
+    );
   } catch {
     return NextResponse.json(
       {

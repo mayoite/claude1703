@@ -14,11 +14,9 @@ import {
   getCatalogCategoryLabel,
   normalizeRequestedCategoryId,
 } from "@/lib/catalogCategories";
+import { SITE_URL } from "@/lib/siteUrl";
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  process.env.SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://ourwebsitecopy2026-02-21.vercel.app");
+const BASE_URL = SITE_URL;
 
 export async function generateMetadata({
   params,

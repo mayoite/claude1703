@@ -7,21 +7,29 @@ import { ArrowRight } from "lucide-react";
 const STEPS = [
   {
     title: "Scope and align",
+    sla: "Day 1-2",
+    deliverable: "Signed scope brief",
     detail:
       "Capture requirement scope, budget range, timeline, and approval checkpoints before design starts.",
   },
   {
     title: "Design and validate",
+    sla: "Day 3-7",
+    deliverable: "Approved layout and BOQ options",
     detail:
-      "Prepare 2D/3D layouts and BOQ options so internal teams can review and approve quickly.",
+      "Study the layout and BOQ, then suggest the best options to ensure a client-friendly outcome.",
   },
   {
     title: "Supply and install",
+    sla: "As per approved schedule",
+    deliverable: "Installed and handed-over workspace",
     detail:
       "Coordinate production windows, dispatch schedules, and on-site installation with minimum disruption.",
   },
   {
     title: "Support after handover",
+    sla: "Ongoing",
+    deliverable: "Warranty and service response support",
     detail:
       "Manage warranty registration, issue response, and after-sales support through one accountable team.",
   },
@@ -64,6 +72,14 @@ export function ProcessSection() {
                 {step.title}
               </p>
               <p className="text-base leading-relaxed text-white/75">{step.detail}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="inline-flex rounded-full border border-primary/50 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-primary">
+                  {step.sla}
+                </span>
+                <span className="inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
+                  {step.deliverable}
+                </span>
+              </div>
             </motion.div>
           ))}
         </div>

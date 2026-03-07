@@ -374,6 +374,14 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
             </nav>
 
             <div className="sticky bottom-0 border-t border-neutral-100 bg-white px-5 py-4">
+              <a
+                href="tel:+919835630940"
+                onClick={handleClose}
+                className="mb-3 flex min-h-12 items-center justify-center rounded-full border border-primary/30 bg-primary/5 text-sm font-bold uppercase tracking-[0.1em] text-primary transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label="Call +91 98356 30940"
+              >
+                Call +91 98356 30940
+              </a>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {SITE_CTA_LINKS.map((cta) => (
                   <Link
