@@ -107,12 +107,18 @@ export function CookieConsentBar() {
   const acceptAll = () => {
     writeCookie(CONSENT_COOKIE, CONSENT_ACCEPTED, COOKIE_MAX_AGE_SECONDS);
     setSeoCookies();
+    window.dispatchEvent(
+      new CustomEvent("oando-cookie-consent", { detail: { value: CONSENT_ACCEPTED } }),
+    );
     setDismissed(true);
   };
 
   const rejectOptional = () => {
     writeCookie(CONSENT_COOKIE, CONSENT_REJECTED, COOKIE_MAX_AGE_SECONDS);
     clearSeoCookies();
+    window.dispatchEvent(
+      new CustomEvent("oando-cookie-consent", { detail: { value: CONSENT_REJECTED } }),
+    );
     setDismissed(true);
   };
 

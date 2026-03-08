@@ -1,12 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, Phone, X } from "lucide-react";
+import { hasConsentChoice } from "@/lib/consent";
 
 export function WhatsAppCTA() {
   const [open, setOpen] = useState(false);
+  const [consentChosen, setConsentChosen] = useState(true);
+
+  useEffect(() => {
+    setConsentChosen(hasConsentChoice());
+    const handleConsent = () => setConsentChosen(true);
+    window.addEventListener("oando-cookie-consent", handleConsent as EventListener);
+    return () => window.removeEventListener("oando-cookie-consent", handleConsent as EventListener);
+  }, []);
+
+  const buttonOffset = consentChosen ? "bottom-4 sm:bottom-24" : "bottom-28 sm:bottom-24";
+  const panelOffset = consentChosen ? "bottom-20 sm:bottom-40" : "bottom-44 sm:bottom-40";
 
   return (
     <>
@@ -17,7 +29,7 @@ export function WhatsAppCTA() {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.25 }}
-        className="fixed bottom-20 right-3 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full border border-green-600 bg-green-600 text-white shadow-lg transition-colors hover:bg-green-700 sm:bottom-24 sm:right-6"
+        className={`fixed right-3 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full border border-green-600 bg-green-600 text-white shadow-lg transition-colors hover:bg-green-700 sm:right-6 ${buttonOffset}`}
       >
         <MessageCircle className="h-6 w-6" />
       </motion.button>
@@ -29,7 +41,7 @@ export function WhatsAppCTA() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.96 }}
             transition={{ duration: 0.18 }}
-            className="fixed bottom-36 right-3 z-50 w-[19rem] rounded-2xl border border-neutral-300 bg-white p-4 shadow-2xl sm:bottom-40 sm:right-6"
+            className={`fixed right-3 z-50 w-[19rem] rounded-2xl border border-neutral-300 bg-white p-4 shadow-2xl sm:right-6 ${panelOffset}`}
           >
             <div className="mb-3 flex items-start justify-between gap-4">
               <div>

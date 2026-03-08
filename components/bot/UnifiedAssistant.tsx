@@ -14,6 +14,8 @@ import {
   Wand2,
   X,
 } from "lucide-react";
+import { hasConsentChoice } from "@/lib/consent";
+import { sanitizeDisplayText } from "@/lib/displayText";
 
 type UseCase =
   | "workstations"
@@ -167,6 +169,8 @@ export function UnifiedAssistant() {
   const pathname = usePathname();
   const [guidedOpen, setGuidedOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
+  const [mobileLauncherOpen, setMobileLauncherOpen] = useState(false);
+  const [consentChosen, setConsentChosen] = useState(true);
 
   const [guidedStep, setGuidedStep] = useState(0);
   const [guided, setGuided] = useState<GuidedState>(initialGuided);
@@ -186,6 +190,8 @@ export function UnifiedAssistant() {
   ]);
 
   useEffect(() => {
+    setConsentChosen(hasConsentChoice());
+
     const handleGuidedOpen = (event: Event) => {
       const custom = event as CustomEvent<{ tab?: "guided" | "ai" }>;
       if (custom.detail?.tab === "ai") {
@@ -195,12 +201,15 @@ export function UnifiedAssistant() {
       }
     };
     const handleChatbotOpen = () => setChatOpen(true);
+    const handleConsent = () => setConsentChosen(true);
 
     window.addEventListener("oando-assistant:open", handleGuidedOpen as EventListener);
     window.addEventListener("oando-chatbot:open", handleChatbotOpen as EventListener);
+    window.addEventListener("oando-cookie-consent", handleConsent as EventListener);
     return () => {
       window.removeEventListener("oando-assistant:open", handleGuidedOpen as EventListener);
       window.removeEventListener("oando-chatbot:open", handleChatbotOpen as EventListener);
+      window.removeEventListener("oando-cookie-consent", handleConsent as EventListener);
     };
   }, []);
 
@@ -352,27 +361,76 @@ export function UnifiedAssistant() {
     applyStarter(AI_STARTERS[index]);
   }
 
+  const mobileLauncherOffset = consentChosen ? "bottom-4" : "bottom-28";
+  const mobilePanelOffset = consentChosen ? "bottom-20" : "bottom-44";
+
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setGuidedOpen(true)}
-        aria-label="Open guided planner"
-        className="fixed bottom-4 left-3 z-50 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary sm:bottom-6 sm:left-6"
-      >
-        <MessageSquareText className="h-4 w-4" />
-        <span className="text-xs font-semibold uppercase tracking-wide sm:text-sm">Guided planner</span>
-      </button>
+      <div className="sm:hidden">
+        <button
+          type="button"
+          onClick={() => setMobileLauncherOpen((prev) => !prev)}
+          aria-label="Open workspace assistant"
+          aria-expanded={mobileLauncherOpen}
+          className={`fixed left-3 z-50 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary ${mobileLauncherOffset}`}
+        >
+          <Sparkles className="h-4 w-4" />
+          <span className="text-xs font-semibold uppercase tracking-wide">Workspace assistant</span>
+        </button>
 
-      <button
-        type="button"
-        onClick={() => setChatOpen(true)}
-        aria-label="Open AI chatbot"
-        className="fixed bottom-20 left-3 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary-hover sm:bottom-24 sm:left-6"
-      >
-        <Sparkles className="h-4 w-4" />
-        <span className="text-xs font-semibold uppercase tracking-wide sm:text-sm">AI chatbot</span>
-      </button>
+        {mobileLauncherOpen ? (
+          <div
+            className={`fixed left-3 right-20 z-50 rounded-2xl border border-neutral-200 bg-white p-3 shadow-2xl ${mobilePanelOffset}`}
+          >
+            <div className="grid grid-cols-1 gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileLauncherOpen(false);
+                  setGuidedOpen(true);
+                }}
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-4 text-sm font-semibold text-white"
+              >
+                <MessageSquareText className="h-4 w-4" />
+                Open Guided Planner
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileLauncherOpen(false);
+                  setChatOpen(true);
+                }}
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-semibold text-white"
+              >
+                <Sparkles className="h-4 w-4" />
+                Open AI Chatbot
+              </button>
+            </div>
+          </div>
+        ) : null}
+      </div>
+
+      <div className="hidden sm:block">
+        <button
+          type="button"
+          onClick={() => setGuidedOpen(true)}
+          aria-label="Open guided planner"
+          className="fixed bottom-6 left-6 z-50 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary"
+        >
+          <MessageSquareText className="h-4 w-4" />
+          <span className="text-sm font-semibold uppercase tracking-wide">Guided planner</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setChatOpen(true)}
+          aria-label="Open AI chatbot"
+          className="fixed bottom-24 left-6 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary-hover"
+        >
+          <Sparkles className="h-4 w-4" />
+          <span className="text-sm font-semibold uppercase tracking-wide">AI chatbot</span>
+        </button>
+      </div>
 
       {guidedOpen ? (
         <div
@@ -648,7 +706,7 @@ export function UnifiedAssistant() {
                         : "border border-neutral-200 bg-neutral-50 text-neutral-800"
                     }`}
                   >
-                    <p>{message.text}</p>
+                    <p>{sanitizeDisplayText(message.text)}</p>
 
                     {message.result ? (
                       <div className="mt-3 space-y-3">
