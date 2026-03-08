@@ -2,6 +2,8 @@ import "server-only";
 
 import type { Product, ProductMetadata } from "@/lib/getProducts";
 import { normalizeAssetList, normalizeAssetPath } from "@/lib/assetPaths";
+import { repairProductSlug } from "@/lib/catalogSlug";
+import postgres from "postgres";
 
 type NhostProductRow = {
   id?: string | null;
@@ -26,11 +28,19 @@ type NhostProductRow = {
 type NhostProductsResponse = {
   data?: {
     products?: NhostProductRow[];
+    product_slug_aliases?: Array<{
+      alias_slug?: string | null;
+      canonical_slug?: string | null;
+    }>;
   };
   errors?: Array<{ message?: string }>;
 };
 
 let loggedNhostCatalogError = false;
+
+type NhostSqlProductRow = NhostProductRow & {
+  slug?: string | null;
+};
 
 function isEnabled(): boolean {
   return process.env.NHOST_BACKUP_ENABLED === "true";
@@ -89,13 +99,18 @@ function toSpecs(input: unknown): Product["specs"] {
 }
 
 function toProduct(row: NhostProductRow): Product | null {
-  if (!row.id || !row.slug || !row.name || !row.category_id) return null;
+  const repairedSlug = repairProductSlug({
+    slug: row.slug,
+    categoryId: row.category_id,
+    name: row.name,
+  });
+  if (!row.id || !repairedSlug || !row.name || !row.category_id) return null;
   return {
     id: row.id,
     category_id: row.category_id,
     series: row.series || row.series_name || "",
     name: row.name,
-    slug: row.slug,
+    slug: repairedSlug,
     description: row.description || "",
     images: normalizeAssetList(toAssetArray(row.images)),
     flagship_image: normalizeAssetPath(row.flagship_image),
@@ -112,6 +127,70 @@ function toProduct(row: NhostProductRow): Product | null {
   };
 }
 
+async function fetchNhostProductsViaSql(options?: {
+  categoryId?: string;
+  productUrlKey?: string;
+}): Promise<Product[] | null> {
+  const dbUrl = process.env.NHOST_DATABASE_URL?.trim();
+  if (!dbUrl) return null;
+
+  const sql = postgres(dbUrl, {
+    ssl: "require",
+    max: 1,
+    connect_timeout: 5,
+    idle_timeout: 10,
+  });
+
+  try {
+    let rows: NhostSqlProductRow[] = [];
+
+    if (options?.productUrlKey) {
+      rows = await sql<NhostSqlProductRow[]>`
+        select *
+        from public.products
+        where slug = ${options.productUrlKey}
+        order by name asc
+      `;
+
+      if (rows.length === 0) {
+        const aliasRows = await sql<Array<{ canonical_slug: string }>>`
+          select canonical_slug
+          from public.product_slug_aliases
+          where alias_slug = ${options.productUrlKey}
+            and is_active = true
+          limit 1
+        `;
+        const canonicalSlug = String(aliasRows[0]?.canonical_slug || "").trim();
+        if (canonicalSlug) {
+          rows = await sql<NhostSqlProductRow[]>`
+            select *
+            from public.products
+            where slug = ${canonicalSlug}
+            order by name asc
+          `;
+        }
+      }
+    } else if (options?.categoryId) {
+      rows = await sql<NhostSqlProductRow[]>`
+        select *
+        from public.products
+        where category_id = ${options.categoryId}
+        order by name asc
+      `;
+    } else {
+      rows = await sql<NhostSqlProductRow[]>`
+        select *
+        from public.products
+        order by name asc
+      `;
+    }
+
+    return rows.map(toProduct).filter((row): row is Product => Boolean(row));
+  } finally {
+    await sql.end({ timeout: 5 });
+  }
+}
+
 export async function fetchNhostProducts(options?: {
   categoryId?: string;
   productUrlKey?: string;
@@ -124,7 +203,9 @@ export async function fetchNhostProducts(options?: {
   const credential =
     process.env.NHOST_ADMIN_SECRET?.trim() ||
     process.env.NHOST_SERVICE_ROLE_KEY?.trim();
-  if (!rawEndpoint || !credential) return null;
+  if (!rawEndpoint || !credential) {
+    return fetchNhostProductsViaSql(options);
+  }
   const endpoints = buildEndpointCandidates(rawEndpoint);
   if (endpoints.length === 0) return null;
 
@@ -152,6 +233,18 @@ export async function fetchNhostProducts(options?: {
         series_name
         created_at
         alt_text
+      }
+    }
+  `;
+
+  const aliasQuery = `
+    query ResolveAlias($aliasSlug: String!) {
+      product_slug_aliases(
+        where: { alias_slug: { _eq: $aliasSlug }, is_active: { _eq: true } }
+        limit: 1
+      ) {
+        alias_slug
+        canonical_slug
       }
     }
   `;
@@ -194,6 +287,28 @@ export async function fetchNhostProducts(options?: {
 
           const rows = payload.data?.products || [];
           const products = rows.map(toProduct).filter((p): p is Product => Boolean(p));
+          if (products.length === 0 && options?.productUrlKey) {
+            const aliasResponse = await fetch(endpoint, {
+              method: "POST",
+              headers,
+              body: JSON.stringify({
+                query: aliasQuery,
+                variables: { aliasSlug: options.productUrlKey },
+              }),
+              cache: "no-store",
+            });
+            if (aliasResponse.ok) {
+              const aliasPayload = (await aliasResponse.json()) as NhostProductsResponse;
+              const canonicalSlug = String(
+                aliasPayload.data?.product_slug_aliases?.[0]?.canonical_slug || "",
+              ).trim();
+              if (canonicalSlug && canonicalSlug !== options.productUrlKey) {
+                return fetchNhostProducts({ productUrlKey: canonicalSlug });
+              }
+            }
+            const sqlFallback = await fetchNhostProductsViaSql(options);
+            if (sqlFallback && sqlFallback.length > 0) return sqlFallback;
+          }
           return products;
         } finally {
           clearTimeout(timeoutId);
@@ -201,13 +316,13 @@ export async function fetchNhostProducts(options?: {
       }
     }
 
-    return null;
+    return fetchNhostProductsViaSql(options);
   } catch (error) {
     if (!loggedNhostCatalogError) {
       loggedNhostCatalogError = true;
       const reason = error instanceof Error ? error.message : String(error);
       console.error(`[nhost-catalog] fallback fetch failed: ${reason}`);
     }
-    return null;
+    return fetchNhostProductsViaSql(options);
   }
 }

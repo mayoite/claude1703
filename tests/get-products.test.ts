@@ -4,6 +4,7 @@
  * Supabase is mocked so these run without a real DB connection.
  */
 import { getProducts, getProductsByCategory, getProductBySlug, getCatalog, getCategoryIds } from '../lib/getProducts';
+import { fetchNhostProducts } from '../lib/nhostCatalog';
 
 // ── Mock Supabase ──────────────────────────────────────────────────────────────
 const mockSelect = jest.fn();
@@ -29,6 +30,26 @@ jest.mock('../lib/db', () => ({
         from: (...args: unknown[]) => mockFrom(...args),
     },
 }));
+
+jest.mock('../lib/nhostCatalog', () => ({
+    fetchNhostProducts: jest.fn(),
+}));
+
+const mockFetchNhostProducts = fetchNhostProducts as jest.MockedFunction<typeof fetchNhostProducts>;
+
+function resetSupabaseChain() {
+    mockFrom.mockReset();
+    mockSelect.mockReset();
+    mockOrder.mockReset();
+    mockEq.mockReset();
+    mockSingle.mockReset();
+
+    mockFrom.mockImplementation(() => chainMock);
+    mockSelect.mockReturnValue(chainMock);
+    mockOrder.mockReturnValue(chainMock);
+    mockEq.mockReturnValue(chainMock);
+    mockSingle.mockReturnValue(chainMock);
+}
 
 // ── Sample data fixtures ───────────────────────────────────────────────────────
 
@@ -66,10 +87,8 @@ const MOCK_PRODUCTS = [
 describe('getProducts()', () => {
     beforeEach(() => {
         jest.clearAllMocks();
-        mockFrom.mockImplementation(() => chainMock);
-        mockSelect.mockReturnValue(chainMock);
-        mockOrder.mockReturnValue(chainMock);
-        mockEq.mockReturnValue(chainMock);
+        resetSupabaseChain();
+        mockFetchNhostProducts.mockResolvedValue([]);
         chainMock.data = undefined;
         chainMock.error = undefined;
     });
@@ -92,6 +111,16 @@ describe('getProducts()', () => {
         expect(products).toHaveLength(0);
     });
 
+    test('returns Nhost fallback products when Supabase fails', async () => {
+        mockOrder.mockResolvedValueOnce({ data: null, error: { message: 'DB failure' } });
+        mockFetchNhostProducts.mockResolvedValueOnce([MOCK_PRODUCTS[0]] as any);
+
+        const products = await getProducts();
+
+        expect(products).toHaveLength(1);
+        expect(products[0].name).toBe('Ergo Chair');
+    });
+
     test('returns empty array when data is null', async () => {
         mockOrder.mockResolvedValueOnce({ data: null, error: null });
 
@@ -111,10 +140,8 @@ describe('getProducts()', () => {
 describe('getProductsByCategory()', () => {
     beforeEach(() => {
         jest.clearAllMocks();
-        mockFrom.mockImplementation(() => chainMock);
-        mockSelect.mockReturnValue(chainMock);
-        mockEq.mockReturnValue(chainMock);
-        mockOrder.mockReturnValue(chainMock);
+        resetSupabaseChain();
+        mockFetchNhostProducts.mockResolvedValue([]);
         chainMock.data = undefined;
         chainMock.error = undefined;
     });
@@ -148,10 +175,8 @@ describe('getProductsByCategory()', () => {
 describe('getProductBySlug()', () => {
     beforeEach(() => {
         jest.clearAllMocks();
-        mockFrom.mockImplementation(() => chainMock);
-        mockSelect.mockReturnValue(chainMock);
-        mockEq.mockReturnValue(chainMock);
-        mockSingle.mockReturnValue(chainMock);
+        resetSupabaseChain();
+        mockFetchNhostProducts.mockResolvedValue([]);
         chainMock.data = undefined;
         chainMock.error = undefined;
     });
@@ -182,9 +207,8 @@ describe('getCatalog()', () => {
 
     beforeEach(() => {
         jest.clearAllMocks();
-        mockSelect.mockReturnValue(chainMock);
-        mockEq.mockReturnValue(chainMock);
-        mockOrder.mockReturnValue(chainMock);
+        resetSupabaseChain();
+        mockFetchNhostProducts.mockResolvedValue([]);
         mockFrom.mockImplementation((table: string) => {
             if (table === 'categories') {
                 return chainMock;
@@ -252,9 +276,8 @@ describe('getCatalog()', () => {
 describe('getCategoryIds()', () => {
     beforeEach(() => {
         jest.clearAllMocks();
-        mockFrom.mockImplementation(() => chainMock);
-        mockSelect.mockReturnValue(chainMock);
-        mockOrder.mockReturnValue(chainMock);
+        resetSupabaseChain();
+        mockFetchNhostProducts.mockResolvedValue([]);
         chainMock.data = undefined;
         chainMock.error = undefined;
     });
