@@ -20,7 +20,7 @@ export default function AboutPage() {
 
       <section className="container px-6 py-18 2xl:px-0 md:py-22">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-neutral-300">
+          <div className="relative aspect-16/11 overflow-hidden rounded-2xl border border-neutral-200">
             <Image
               src="/images/hero/hero-2.webp"
               alt="Workspace delivery by One and Only Furniture"

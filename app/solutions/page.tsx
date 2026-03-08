@@ -62,7 +62,7 @@ export default function SolutionsPage() {
               surprises during rollout.
             </p>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-300">
+          <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-neutral-200">
             <Image
               src="/images/hero/hero-1.webp"
               alt="Workspace planning and delivery"
