@@ -258,10 +258,12 @@ export function SiteHeader() {
                         aria-controls="products-mega-menu"
                         onFocus={() => setActiveMega(link.label)}
                         className={cn(
-                          "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                          isActive || activeMega === link.label
-                            ? "text-primary"
-                            : "text-neutral-700 hover:text-primary",
+                          "relative inline-flex items-center gap-1 rounded-lg px-3 py-2 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                          isActive
+                            ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
+                            : activeMega === link.label
+                              ? "text-primary"
+                              : "text-neutral-700 hover:text-primary",
                         )}
                       >
                         {link.label}
@@ -281,9 +283,9 @@ export function SiteHeader() {
                     key={link.label}
                     href={link.href}
                     className={cn(
-                      "rounded-lg px-3 py-2 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      "relative rounded-lg px-3 py-2 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                       isActive
-                        ? "text-primary"
+                        ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
                         : "text-neutral-700 hover:text-primary",
                     )}
                   >
@@ -427,7 +429,7 @@ export function SiteHeader() {
                 <div className="grid grid-cols-6 gap-4">
                   {groupedCategories.map((group) => (
                     <div key={group.groupId}>
-                      <p className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-neutral-400">
+                      <p className="typ-label mb-2 text-neutral-400">
                         {group.groupLabel}
                       </p>
                       <ul className="space-y-1">
