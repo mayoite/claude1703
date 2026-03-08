@@ -26,6 +26,7 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { useQuoteCart } from "@/lib/store/quoteCart";
 import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
+import { sanitizeDisplayText as normalizeDisplayText } from "@/lib/displayText";
 
 interface ProductViewerProps {
   product: Product;
@@ -46,7 +47,7 @@ function sanitizeDisplayText(value: string): string {
 }
 
 function sanitizeDisplayList(values: string[]): string[] {
-  return values.map((item) => sanitizeDisplayText(item)).filter(Boolean);
+  return values.map((item) => normalizeDisplayText(item)).filter(Boolean);
 }
 
 export function ProductViewer({
@@ -74,7 +75,7 @@ export function ProductViewer({
       ? product.variants[0]
       : null,
   );
-  const displayName = cleanName(sanitizeDisplayText(product.name));
+  const displayName = cleanName(normalizeDisplayText(product.name));
 
   const modelPath =
     selectedVariant?.threeDModelUrl ||
@@ -163,7 +164,7 @@ export function ProductViewer({
   }, [hasModelPath, modelPath]);
 
   const toText = (value: unknown): string => {
-    if (typeof value === "string") return sanitizeDisplayText(value);
+    if (typeof value === "string") return normalizeDisplayText(value);
     if (typeof value === "number") return String(value);
     return "";
   };
@@ -202,7 +203,7 @@ export function ProductViewer({
       ? (product.specs as Record<string, unknown>)
       : {};
 
-  const overview = sanitizeDisplayText(
+  const overview = normalizeDisplayText(
     product.detailedInfo?.overview || product.description || "",
   );
   const dimensions =
@@ -289,7 +290,7 @@ export function ProductViewer({
     if (value === null || value === undefined) return "";
     if (Array.isArray(value)) return sanitizeDisplayList(value.map((v) => String(v))).join(", ");
     if (typeof value === "object") return "";
-    return sanitizeDisplayText(String(value));
+    return normalizeDisplayText(String(value));
   };
   const inlineSpecs = (() => {
     const entries: Array<{ label: string; value: string }> = [];
@@ -322,7 +323,7 @@ export function ProductViewer({
     return entries.slice(0, 16);
   })();
 
-  const seriesShort = sanitizeDisplayText(seriesName.replace(/ Series$/i, ""));
+  const seriesShort = normalizeDisplayText(seriesName.replace(/ Series$/i, ""));
 
   return (
     <section className="bg-white min-h-screen">

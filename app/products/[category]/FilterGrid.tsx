@@ -39,6 +39,7 @@ import {
   type ActiveFilters,
   type SortOption,
 } from "@/lib/productFilters";
+import { sanitizeDisplayText } from "@/lib/displayText";
 
 // â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
@@ -46,17 +47,6 @@ interface FlatProduct extends Product {
   seriesId: string;
   seriesName: string;
   altText?: string;
-}
-
-function sanitizeDisplayText(value: string): string {
-  return String(value || "")
-    .replace(/[�]+/g, "")
-    .replace(/â€”/g, "—")
-    .replace(/â€“/g, "–")
-    .replace(/â€˜|â€™/g, "'")
-    .replace(/â€œ|â€\u009d|â€"/g, "\"")
-    .replace(/\s+/g, " ")
-    .trim();
 }
 
 function normalizeToken(value?: string | null): string {
@@ -458,10 +448,10 @@ function Toggle({
 // â”€â”€â”€ Product Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const PRICE_MAP: Record<string, string> = {
-  budget: "₹4,999",
-  mid: "₹14,999",
-  premium: "₹34,999",
-  luxury: "₹74,999",
+  budget: "Rs. 4,999",
+  mid: "Rs. 14,999",
+  premium: "Rs. 34,999",
+  luxury: "Rs. 74,999",
 };
 
 function ProductCard({
@@ -1153,7 +1143,7 @@ function AdvancedFilterGridInner({
             total={activeCount}
           />
           {isFetching && (
-            <p className="pt-2 text-xs text-neutral-400">Refreshing products…</p>
+            <p className="pt-2 text-xs text-neutral-400">Refreshing products...</p>
           )}
           {error && (
             <p className="pt-2 text-xs text-red-600">
