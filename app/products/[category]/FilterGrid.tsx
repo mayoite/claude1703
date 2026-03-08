@@ -295,7 +295,7 @@ function AccordionSection({
         <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-neutral-600 group-hover:text-neutral-900 transition-colors flex items-center gap-2">
           {title}
           {count !== undefined && count > 0 && (
-            <span className="bg-neutral-900 text-white text-[9px] font-bold rounded-full px-1.5 py-0.5 leading-none">
+            <span className="badge bg-neutral-900 text-white text-[9px] px-1.5 py-0.5 leading-none">
               {count}
             </span>
           )}
@@ -368,7 +368,7 @@ function PriceButtons({
           className={clsx(
             "px-3 py-1.5 text-xs rounded-sm border transition-all capitalize font-medium",
             selected.includes(p)
-              ? "bg-[#fdbb0a] text-neutral-900 border-[#fdbb0a]"
+              ? "bg-accent1 text-neutral-900 border-accent1"
               : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
           )}
         >
@@ -394,7 +394,7 @@ function SustainabilityButtons({
         className={clsx(
           "px-3 py-1.5 text-xs rounded-sm border transition-all font-medium",
           selected === null
-            ? "bg-[#fdbb0a] border-[#fdbb0a] text-neutral-900"
+            ? "bg-accent1 border-accent1 text-neutral-900"
             : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
         )}
       >
@@ -408,7 +408,7 @@ function SustainabilityButtons({
           className={clsx(
             "px-3 py-1.5 text-xs rounded-sm border transition-all font-medium",
             selected === threshold
-              ? "bg-[#fdbb0a] border-[#fdbb0a] text-neutral-900"
+              ? "bg-accent1 border-accent1 text-neutral-900"
               : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
           )}
         >
@@ -441,7 +441,7 @@ function Toggle({
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
-          checked ? "bg-[#fdbb0a]" : "bg-neutral-200",
+          checked ? "bg-accent1" : "bg-neutral-200",
         )}
       >
         <span
@@ -678,7 +678,7 @@ function ActiveChips({
           key={`${chip.key}-${chip.value ?? ""}`}
           type="button"
           onClick={() => onRemove(chip.key, chip.value)}
-          className="flex items-center gap-1.5 bg-[#fdbb0a] text-neutral-900 text-xs px-2.5 py-1 rounded-sm hover:bg-[#faaa13] transition-colors"
+          className="flex items-center gap-1.5 bg-accent1 text-neutral-900 text-xs px-2.5 py-1 rounded-sm hover:bg-accent2 transition-colors"
         >
           <span className="capitalize">{chip.label}</span>
           <X className="w-3 h-3" />
@@ -906,11 +906,11 @@ function AdvancedFilterGridInner({
     <div className="bg-white border border-neutral-200 rounded-sm overflow-hidden">
       {/* Header */}
       <div className="px-4 py-3 border-b border-neutral-100 flex items-center justify-between">
-        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 flex items-center gap-2">
+        <span className="typ-label text-neutral-500 flex items-center gap-2">
           <Filter className="w-3.5 h-3.5" />
           Filters
           {activeCount > 0 && (
-            <span className="bg-neutral-900 text-white text-[9px] font-bold rounded-full px-1.5 py-0.5 leading-none">
+            <span className="badge bg-neutral-900 text-white text-[9px] px-1.5 py-0.5 leading-none">
               {activeCount}
             </span>
           )}
@@ -918,7 +918,7 @@ function AdvancedFilterGridInner({
         {activeCount > 0 && (
           <button
             onClick={clearAll}
-            className="text-[10px] text-neutral-500 hover:text-neutral-900 underline transition-colors"
+            className="typ-label text-primary hover:text-primary-hover transition-colors"
           >
             Clear all
           </button>
@@ -939,7 +939,7 @@ function AdvancedFilterGridInner({
               className={clsx(
                 "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
                 filters.series === "all"
-                  ? "bg-[#fdbb0a] text-neutral-900 font-semibold"
+                  ? "bg-accent1 text-neutral-900 font-semibold"
                   : "text-neutral-600 hover:bg-neutral-50",
               )}
             >
@@ -953,7 +953,7 @@ function AdvancedFilterGridInner({
                 className={clsx(
                   "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
                   filters.series === seriesName
-                    ? "bg-[#fdbb0a] text-neutral-900 font-semibold"
+                    ? "bg-accent1 text-neutral-900 font-semibold"
                     : "text-neutral-600 hover:bg-neutral-50",
                 )}
               >
@@ -1100,7 +1100,7 @@ function AdvancedFilterGridInner({
                 type="text"
                 placeholder={`Search ${category.name.toLowerCase()}...`}
                 aria-label={`Search ${category.name}`}
-                className="w-full h-10 pl-9 pr-8 bg-white border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-neutral-800 transition-colors"
+                className="w-full h-10 pl-9 pr-8 bg-white border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-primary transition-colors"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
               />
