@@ -18,6 +18,7 @@
     "catalog:organize:dry": "tsx scripts/organize-catalog-images.ts --dry-run",
     "catalog:organize:apply": "tsx scripts/organize-catalog-images.ts --apply",
     "catalog:organize:sync": "tsx scripts/organize-catalog-images.ts --sync-db --sync-catalog",
+    "audit:products:quality": "npx tsx scripts/audit-product-quality.ts",
     "test:e2e:nav": "playwright test tests/navigation-smoke.spec.ts",
     "test:e2e:filters": "playwright test tests/dynamic-filters.spec.ts",
     "test:e2e:stats-consistency": "playwright test tests/stats-consistency.spec.ts",

@@ -88,7 +88,7 @@ const DEFAULT_SCHEMA: ProductCategorySchema = {
 };
 
 function containsSuspiciousEncoding(value: string): boolean {
-  return /�|â€”|â€“|â€™|â€œ|â€/.test(value);
+  return /\uFFFD|â€”|â€“|â€™|â€œ|â€/.test(value);
 }
 
 function toText(value: unknown): string {
@@ -242,9 +242,7 @@ export function auditCompatProduct(
     });
   }
 
-  if (
-    getAllTextFields(product).some((value) => containsSuspiciousEncoding(value))
-  ) {
+  if (getAllTextFields(product).some((value) => containsSuspiciousEncoding(value))) {
     issues.push({
       code: "suspicious_text_encoding",
       severity: "high",

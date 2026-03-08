@@ -33,6 +33,8 @@ interface NavSearchResult {
   source: "ai" | "local";
 }
 
+type NavSearchMode = "ai" | "local" | "static-fallback";
+
 function prettify(id: string): string {
   return id
     .split("-")
@@ -85,7 +87,7 @@ export function Navbar() {
   const [mobileAccordion, setMobileAccordion] = useState<Record<string, boolean>>({});
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<NavSearchResult[]>([]);
-  const [searchSource, setSearchSource] = useState<"ai" | "local" | null>(null);
+  const [searchSource, setSearchSource] = useState<NavSearchMode | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
   const [showSearchPanel, setShowSearchPanel] = useState(false);
   const [parallaxOffset, setParallaxOffset] = useState(0);
@@ -176,6 +178,7 @@ export function Navbar() {
         const data = (await response.json()) as {
           results?: NavSearchResult[];
           fallbackUsed?: boolean;
+          rankingMode?: NavSearchMode;
         };
 
         if (!response.ok) {
@@ -186,7 +189,7 @@ export function Navbar() {
 
         const results = Array.isArray(data.results) ? data.results : [];
         setSearchResults(results);
-        const source = results[0]?.source || (data.fallbackUsed ? "local" : null);
+        const source = data.rankingMode || null;
         setSearchSource(source);
       } catch {
         setSearchResults([]);
@@ -375,7 +378,11 @@ export function Navbar() {
                           <span>{searchSectionTitle}</span>
                           {searchSource && (
                             <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px]">
-                              {searchSource === "ai" ? "AI Ranked" : "Local Fallback"}
+                              {searchSource === "ai"
+                                ? "AI Ranked"
+                                : searchSource === "static-fallback"
+                                  ? "Static Fallback"
+                                  : "Local Search"}
                             </span>
                           )}
                         </div>

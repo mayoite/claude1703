@@ -42,6 +42,8 @@ const SOCIAL_ICON_MAP: Record<string, () => React.JSX.Element> = {
 };
 
 export function SiteFooter() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="w-full bg-[#1a2030] text-[#aeb8ce]">
       {/* Main grid */}
@@ -133,8 +135,8 @@ export function SiteFooter() {
               Terms
             </Link>
           </div>
-          <div suppressHydrationWarning>
-            &copy; {new Date().getFullYear()} One and Only Furniture. All rights reserved.
+          <div>
+            Copyright {currentYear} One and Only Furniture. All rights reserved.
           </div>
         </div>
       </div>

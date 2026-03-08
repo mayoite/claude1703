@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/db";
+import { rateLimit } from "@/lib/rateLimit";
 
 type PreferredContact = "email" | "whatsapp" | "phone" | "any";
 
@@ -48,7 +49,27 @@ async function parsePayload(req: NextRequest): Promise<CustomerQueryPayload> {
   }
 }
 
+function getRequestIp(req: NextRequest): string {
+  const forwarded = req.headers.get("x-forwarded-for");
+  if (forwarded) return forwarded.split(",")[0].trim();
+  return req.headers.get("cf-connecting-ip") || "127.0.0.1";
+}
+
 export async function POST(req: NextRequest) {
+  const ip = getRequestIp(req);
+  const limitRes = rateLimit(`customer-queries:${ip}`, 6, 60 * 60 * 1000);
+  if (!limitRes.success) {
+    return NextResponse.json(
+      { error: "Too many submissions. Please try again after some time." },
+      {
+        status: 429,
+        headers: {
+          "X-RateLimit-Reset": limitRes.reset.toString(),
+        },
+      },
+    );
+  }
+
   const payload = await parsePayload(req);
 
   const name = normalizeText(payload.name, 180);

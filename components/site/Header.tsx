@@ -42,6 +42,8 @@ interface NavSearchResult {
   source: "ai" | "local";
 }
 
+type NavSearchMode = "ai" | "local" | "static-fallback";
+
 export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -53,7 +55,7 @@ export function SiteHeader() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<NavSearchResult[]>([]);
   const [searchLoading, setSearchLoading] = useState(false);
-  const [searchSource, setSearchSource] = useState<"ai" | "local" | null>(null);
+  const [searchSource, setSearchSource] = useState<NavSearchMode | null>(null);
   const [showSearchPanel, setShowSearchPanel] = useState(false);
 
   const hamburgerRef = useRef<HTMLButtonElement>(null);
@@ -142,6 +144,7 @@ export function SiteHeader() {
         const payload = (await response.json()) as {
           results?: NavSearchResult[];
           fallbackUsed?: boolean;
+          rankingMode?: NavSearchMode;
         };
 
         if (!response.ok) {
@@ -152,7 +155,7 @@ export function SiteHeader() {
 
         const results = Array.isArray(payload.results) ? payload.results : [];
         setSearchResults(results);
-        setSearchSource(results[0]?.source || (payload.fallbackUsed ? "local" : null));
+        setSearchSource(payload.rankingMode || null);
       } catch {
         setSearchResults([]);
         setSearchSource(null);
@@ -319,7 +322,11 @@ export function SiteHeader() {
                         <span>{searchSectionTitle}</span>
                         {searchSource && (
                           <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px]">
-                            {searchSource === "ai" ? "AI ranked" : "Local fallback"}
+                            {searchSource === "ai"
+                              ? "AI ranked"
+                              : searchSource === "static-fallback"
+                                ? "Static fallback"
+                                : "Local search"}
                           </span>
                         )}
                       </div>

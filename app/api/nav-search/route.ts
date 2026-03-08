@@ -4,12 +4,14 @@ import Fuse from "fuse.js";
 import { getCatalog } from "@/lib/getProducts";
 import { buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
 import { rateLimit } from "@/lib/rateLimit";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export const dynamic = "force-dynamic";
 
 type SearchContext = "header" | "mobile";
 type SearchResultType = "product" | "category" | "page";
 type SearchSource = "ai" | "local";
+type SearchRankingMode = "ai" | "local" | "static-fallback";
 
 interface SearchIndexEntry {
   id: string;
@@ -176,7 +178,7 @@ async function aiRank(
     baseURL: "https://openrouter.ai/api/v1",
     apiKey,
     defaultHeaders: {
-      "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+      "HTTP-Referer": SITE_URL,
       "X-Title": "One and Only Furniture Navigation Search",
     },
   });
@@ -222,14 +224,14 @@ async function executeSearch(
   try {
     index = await buildSearchIndex();
   } catch {
-    // Keep nav-search responsive even if catalog fetch fails.
     index = buildFallbackIndex();
     indexFallbackUsed = true;
   }
 
   const localResults = localSearch(index, query, limit);
   let results = localResults;
-  let fallbackUsed = indexFallbackUsed;
+  const fallbackUsed = indexFallbackUsed;
+  let rankingMode: SearchRankingMode = indexFallbackUsed ? "static-fallback" : "local";
 
   if (process.env.OPENROUTER_API_KEY && localResults.length > 0) {
     try {
@@ -245,19 +247,17 @@ async function executeSearch(
           ...item,
           source: "ai",
         }));
-      } else {
-        fallbackUsed = true;
+        rankingMode = "ai";
       }
     } catch {
-      fallbackUsed = true;
+      rankingMode = indexFallbackUsed ? "static-fallback" : "local";
     }
-  } else {
-    fallbackUsed = true;
   }
 
   return {
     results,
     fallbackUsed,
+    rankingMode,
     latencyMs: Date.now() - started,
   };
 }
@@ -265,12 +265,12 @@ async function executeSearch(
 export async function POST(req: NextRequest) {
   const started = Date.now();
   const ip = req.headers.get("x-forwarded-for") ?? "127.0.0.1";
-  const limitRes = rateLimit(ip, 20, 60000); // 20 requests per minute
+  const limitRes = rateLimit(ip, 20, 60000);
 
   if (!limitRes.success) {
     return NextResponse.json(
       { error: "Too many requests. Please try again later." },
-      { status: 429, headers: { "X-RateLimit-Reset": limitRes.reset.toString() } }
+      { status: 429, headers: { "X-RateLimit-Reset": limitRes.reset.toString() } },
     );
   }
 
@@ -290,6 +290,7 @@ export async function POST(req: NextRequest) {
         {
           results: [],
           fallbackUsed: false,
+          rankingMode: "local",
           latencyMs: Date.now() - started,
           error: {
             code: "QUERY_TOO_SHORT",
@@ -300,14 +301,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    return NextResponse.json(
-      await executeSearch(query, limit, context, started),
-    );
+    return NextResponse.json(await executeSearch(query, limit, context, started));
   } catch {
     return NextResponse.json(
       {
         results: [],
         fallbackUsed: true,
+        rankingMode: "static-fallback",
         latencyMs: Date.now() - started,
         error: {
           code: "SEARCH_FAILED",
@@ -341,6 +341,7 @@ export async function GET(req: NextRequest) {
         {
           results: [],
           fallbackUsed: false,
+          rankingMode: "local",
           latencyMs: Date.now() - started,
           error: {
             code: "QUERY_TOO_SHORT",
@@ -351,14 +352,13 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    return NextResponse.json(
-      await executeSearch(query, limit, context, started),
-    );
+    return NextResponse.json(await executeSearch(query, limit, context, started));
   } catch {
     return NextResponse.json(
       {
         results: [],
         fallbackUsed: true,
+        rankingMode: "static-fallback",
         latencyMs: Date.now() - started,
         error: {
           code: "SEARCH_FAILED",

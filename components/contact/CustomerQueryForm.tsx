@@ -31,6 +31,9 @@ const initialState: FormState = {
   message: "",
 };
 
+const PRIMARY_QUOTE_PHONE_DISPLAY = "+91 98356 30940";
+const PRIMARY_QUOTE_PHONE_LINK = "tel:+919835630940";
+
 export function CustomerQueryForm() {
   const pathname = usePathname();
   const [form, setForm] = useState<FormState>(initialState);
@@ -88,9 +91,13 @@ export function CustomerQueryForm() {
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
+      <p className="text-sm text-neutral-600">
+        Fields marked <span className="font-semibold text-primary">*</span> are required. Share
+        either email or phone and we will respond within 1 business day.
+      </p>
       <div>
         <label htmlFor="name" className="mb-2 block text-sm font-medium text-neutral-700">
-          Name
+          Name <span className="text-primary">*</span>
         </label>
         <input
           id="name"
@@ -169,7 +176,7 @@ export function CustomerQueryForm() {
       </div>
       <div>
         <label htmlFor="message" className="mb-2 block text-sm font-medium text-neutral-700">
-          Message
+          Message <span className="text-primary">*</span>
         </label>
         <textarea
           id="message"
@@ -216,13 +223,25 @@ export function CustomerQueryForm() {
         </div>
       ) : null}
 
-      <button
-        type="submit"
-        disabled={!canSubmit || isSubmitting}
-        className="w-full bg-primary px-8 py-3 text-sm font-medium uppercase tracking-wide text-white transition-colors hover:bg-neutral-900 disabled:cursor-not-allowed disabled:opacity-60 md:w-auto"
-      >
-        {isSubmitting ? "Sending..." : "Send Message"}
-      </button>
+      <div className="space-y-3">
+        <button
+          type="submit"
+          disabled={!canSubmit || isSubmitting}
+          className="w-full bg-primary px-8 py-3 text-sm font-medium uppercase tracking-wide text-white transition-colors hover:bg-neutral-900 disabled:cursor-not-allowed disabled:opacity-60 md:w-auto"
+        >
+          {isSubmitting ? "Sending..." : "Send - we respond within 1 business day"}
+        </button>
+        <p className="text-sm text-neutral-600">
+          Prefer to speak now?{" "}
+          <a
+            href={PRIMARY_QUOTE_PHONE_LINK}
+            className="font-semibold text-primary transition-colors hover:text-primary/80"
+          >
+            Call {PRIMARY_QUOTE_PHONE_DISPLAY}
+          </a>
+          .
+        </p>
+      </div>
     </form>
   );
 }
