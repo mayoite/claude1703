@@ -1,0 +1,308 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "One and Only Furniture - home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "One and Only Furniture" [ref=e8]
+      - button "Open menu" [ref=e10]:
+        - img [ref=e11]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e15]:
+        - link "Products" [ref=e16] [cursor=pointer]:
+          - /url: /products/
+        - img [ref=e17]
+        - link "Seating" [ref=e19] [cursor=pointer]:
+          - /url: /products/seating/
+        - img [ref=e20]
+        - generic [ref=e22]: X Mesh
+      - generic [ref=e23]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - button "X Mesh thumbnail 1" [ref=e28]:
+              - img "X Mesh thumbnail 1" [ref=e29]
+            - button "X Mesh thumbnail 2" [ref=e30]:
+              - img "X Mesh thumbnail 2" [ref=e31]
+            - button "X Mesh thumbnail 3" [ref=e32]:
+              - img "X Mesh thumbnail 3" [ref=e33]
+            - button "X Mesh thumbnail 4" [ref=e34]:
+              - img "X Mesh thumbnail 4" [ref=e35]
+            - button "X Mesh thumbnail 5" [ref=e36]:
+              - img "X Mesh thumbnail 5" [ref=e37]
+            - button "X Mesh thumbnail 6" [ref=e38]:
+              - img "X Mesh thumbnail 6" [ref=e39]
+            - button "X Mesh thumbnail 7" [ref=e40]:
+              - img "X Mesh thumbnail 7" [ref=e41]
+          - generic [ref=e42]:
+            - img "X Mesh" [ref=e43]
+            - generic: 1 / 7
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - paragraph [ref=e47]: Seating
+            - heading "X Mesh" [level=1] [ref=e48]
+            - paragraph [ref=e49]: X-Mesh provides targeted lumbar support and breathable mesh for an exceptionally comfortable and cool sitting experience.
+            - generic [ref=e50]:
+              - generic [ref=e51]: 5-Year Warranty
+              - generic [ref=e52]: BIFMA
+            - generic [ref=e53]:
+              - button "Share on Twitter" [ref=e54]:
+                - img [ref=e55]
+              - button "Share on Facebook" [ref=e57]:
+                - img [ref=e58]
+              - button "Copy Link" [ref=e60]:
+                - img [ref=e61]
+                - text: Copy Link
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - paragraph [ref=e69]: Configuration
+              - generic [ref=e70]: 1 options
+            - button "Standard Model" [ref=e72]:
+              - img "Standard Model" [ref=e73]
+            - paragraph [ref=e74]: "Selected: Standard Model"
+          - generic [ref=e75]:
+            - button "Add to Quote Cart" [ref=e76]:
+              - generic [ref=e77]: Add to Quote Cart
+              - img [ref=e78]
+            - button "Add To Compare" [ref=e82]:
+              - generic [ref=e83]: Add To Compare
+              - img [ref=e84]
+            - link "Request Quote" [ref=e91] [cursor=pointer]:
+              - /url: /contact/
+              - generic [ref=e92]: Request Quote
+              - img [ref=e93]
+            - link "Book a Consultation" [ref=e95] [cursor=pointer]:
+              - /url: /contact/
+              - generic [ref=e96]: Book a Consultation
+              - img [ref=e97]
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - img [ref=e101]
+              - generic [ref=e104]: 5-Year Warranty
+              - paragraph [ref=e105]: Guaranteed durability and performance.
+            - generic [ref=e106]:
+              - img [ref=e107]
+              - generic [ref=e110]: Made in India
+              - paragraph [ref=e111]: Engineered locally to global standards.
+            - generic [ref=e112]:
+              - img [ref=e113]
+              - generic [ref=e115]: BIFMA Certified
+              - paragraph [ref=e116]: Certified for extended use.
+          - generic [ref=e117]:
+            - heading "Specifications" [level=2] [ref=e118]
+            - generic [ref=e119]:
+              - generic [ref=e120]:
+                - generic [ref=e121]: Dimensions
+                - generic [ref=e122]: W600D600H9001000mm (seat height adj. via gas lift)
+              - generic [ref=e123]:
+                - generic [ref=e124]: Materials
+                - generic [ref=e125]: Mesh or fabric back, Moulded foam seat, polyester cover, Nylon 5-star base, 50mm casters
+              - generic [ref=e126]:
+                - generic [ref=e127]: Warranty
+                - generic [ref=e128]: 5-Year Warranty
+              - generic [ref=e129]:
+                - generic [ref=e130]: Certification
+                - generic [ref=e131]: BIFMA Certified
+              - generic [ref=e132]:
+                - generic [ref=e133]: Configuration
+                - generic [ref=e134]: Mesh chairs
+              - generic [ref=e135]:
+                - generic [ref=e136]: Use Case
+                - generic [ref=e137]: Corporate, Institutional
+              - generic [ref=e138]:
+                - generic [ref=e139]: Sustainability
+                - generic [ref=e140]: Sustainability details on request
+            - generic [ref=e141]:
+              - paragraph [ref=e142]: Key Features
+              - list [ref=e143]:
+                - listitem [ref=e144]:
+                  - generic [ref=e145]: "-"
+                  - generic [ref=e146]: Targeted Lumbar Support
+                - listitem [ref=e147]:
+                  - generic [ref=e148]: "-"
+                  - generic [ref=e149]: Cool Mesh Technology
+                - listitem [ref=e150]:
+                  - generic [ref=e151]: "-"
+                  - generic [ref=e152]: Dynamic Tension Adjustment
+            - generic [ref=e153]:
+              - heading "Technical Details" [level=3] [ref=e154]
+              - generic [ref=e155]:
+                - generic [ref=e156]:
+                  - generic [ref=e157]: Source
+                  - generic [ref=e158]: oando.co.in
+                - generic [ref=e159]:
+                  - generic [ref=e160]: Category
+                  - generic [ref=e161]: Seating
+                - generic [ref=e162]:
+                  - generic [ref=e163]: Subcategory
+                  - generic [ref=e164]: Mesh chairs
+                - generic [ref=e165]:
+                  - generic [ref=e166]: Warranty Years
+                  - generic [ref=e167]: "5"
+                - generic [ref=e168]:
+                  - generic [ref=e169]: Bifma Certified
+                  - generic [ref=e170]: "true"
+            - generic [ref=e171]:
+              - heading "Material Options" [level=3] [ref=e172]
+              - generic [ref=e173]:
+                - generic [ref=e174]: Mesh or fabric back
+                - generic [ref=e175]: Moulded foam seat, polyester cover
+                - generic [ref=e176]: Nylon 5-star base, 50mm casters
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - heading "Customer Reviews" [level=3] [ref=e180]
+          - generic [ref=e181]:
+            - generic [ref=e182]:
+              - img [ref=e183]
+              - img [ref=e185]
+              - img [ref=e187]
+              - img [ref=e189]
+              - img [ref=e191]
+            - generic [ref=e193]: 0.0/5.0 (0 Reviews)
+        - generic [ref=e194]:
+          - paragraph [ref=e196]: No reviews yet. Be the first to review!
+          - generic [ref=e197]:
+            - heading "Write a Review" [level=4] [ref=e198]
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - generic [ref=e201]: Rating
+                - generic [ref=e202]:
+                  - button "Rate 1 stars" [ref=e203]:
+                    - img [ref=e204]
+                  - button "Rate 2 stars" [ref=e206]:
+                    - img [ref=e207]
+                  - button "Rate 3 stars" [ref=e209]:
+                    - img [ref=e210]
+                  - button "Rate 4 stars" [ref=e212]:
+                    - img [ref=e213]
+                  - button "Rate 5 stars" [ref=e215]:
+                    - img [ref=e216]
+              - generic [ref=e218]:
+                - generic [ref=e219]: Name
+                - textbox "Name" [ref=e220]
+              - generic [ref=e221]:
+                - generic [ref=e222]: Review
+                - textbox "Review" [ref=e223]
+              - button "Submit Review" [ref=e224]
+  - contentinfo [ref=e225]:
+    - generic [ref=e227]:
+      - generic [ref=e228]:
+        - link "One and Only Furniture" [ref=e229] [cursor=pointer]:
+          - /url: /
+          - img "One and Only Furniture" [ref=e231]
+        - generic [ref=e232]: Patna, Bihar and Jharkhand, India
+        - generic [ref=e233]:
+          - link "+91 90310 22875" [ref=e234] [cursor=pointer]:
+            - /url: tel:+919031022875
+          - link "sales@oando.co.in" [ref=e235] [cursor=pointer]:
+            - /url: mailto:sales@oando.co.in
+        - generic [ref=e236]:
+          - link "YouTube" [ref=e237] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCehXuPNAXkyfODPCwyAU1gQ
+            - img [ref=e238]
+          - link "Facebook" [ref=e240] [cursor=pointer]:
+            - /url: https://www.facebook.com/oandofurniture
+            - img [ref=e241]
+      - generic [ref=e243]:
+        - generic [ref=e244]:
+          - paragraph [ref=e245]: Products
+          - list [ref=e246]:
+            - listitem [ref=e247]:
+              - link "All Products" [ref=e248] [cursor=pointer]:
+                - /url: /products/
+            - listitem [ref=e249]:
+              - link "Seating" [ref=e250] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e251]:
+              - link "Workstations" [ref=e252] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e253]:
+              - link "Tables" [ref=e254] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e255]:
+              - link "Storage" [ref=e256] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e257]:
+              - link "Soft Seating" [ref=e258] [cursor=pointer]:
+                - /url: /products/soft-seating/
+            - listitem [ref=e259]:
+              - link "Education" [ref=e260] [cursor=pointer]:
+                - /url: /products/education/
+        - generic [ref=e261]:
+          - paragraph [ref=e262]: Solutions
+          - list [ref=e263]:
+            - listitem [ref=e264]:
+              - link "All Solutions" [ref=e265] [cursor=pointer]:
+                - /url: /solutions/
+            - listitem [ref=e266]:
+              - link "Seating" [ref=e267] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e268]:
+              - link "Workstations" [ref=e269] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e270]:
+              - link "Meeting Rooms" [ref=e271] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e272]:
+              - link "Storage and Filing" [ref=e273] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e274]:
+              - link "Space Planning" [ref=e275] [cursor=pointer]:
+                - /url: /solutions/
+        - generic [ref=e276]:
+          - paragraph [ref=e277]: Company
+          - list [ref=e278]:
+            - listitem [ref=e279]:
+              - link "About Us" [ref=e280] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e281]:
+              - link "Trusted By" [ref=e282] [cursor=pointer]:
+                - /url: /trusted-by/
+            - listitem [ref=e283]:
+              - link "Projects" [ref=e284] [cursor=pointer]:
+                - /url: /projects/
+            - listitem [ref=e285]:
+              - link "Portfolio" [ref=e286] [cursor=pointer]:
+                - /url: /portfolio/
+            - listitem [ref=e287]:
+              - link "Sustainability" [ref=e288] [cursor=pointer]:
+                - /url: /sustainability/
+            - listitem [ref=e289]:
+              - link "After Sales" [ref=e290] [cursor=pointer]:
+                - /url: /service/
+        - generic [ref=e291]:
+          - paragraph [ref=e292]: Support
+          - list [ref=e293]:
+            - listitem [ref=e294]:
+              - link "Contact Us" [ref=e295] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e296]:
+              - link "2D Configurator" [ref=e297] [cursor=pointer]:
+                - /url: /configurator/
+            - listitem [ref=e298]:
+              - link "Get Quote" [ref=e299] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e300]:
+              - link "Refund Policy" [ref=e301] [cursor=pointer]:
+                - /url: /refund-and-return-policy/
+            - listitem [ref=e302]:
+              - link "Privacy Policy" [ref=e303] [cursor=pointer]:
+                - /url: /privacy/
+    - generic [ref=e305]:
+      - generic [ref=e306]:
+        - link "Refund Policy" [ref=e307] [cursor=pointer]:
+          - /url: /refund-and-return-policy/
+        - link "Privacy Policy" [ref=e308] [cursor=pointer]:
+          - /url: /privacy/
+        - link "Terms" [ref=e309] [cursor=pointer]:
+          - /url: /terms/
+      - generic [ref=e310]: Copyright 2026 One and Only Furniture. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e316] [cursor=pointer]:
+    - img [ref=e317]
+  - alert [ref=e320]
+  - button "Open workspace assistant" [ref=e321]:
+    - img [ref=e322]
+    - generic [ref=e325]: Workspace assistant
+  - button "Open WhatsApp quick contact" [ref=e326]:
+    - img [ref=e327]

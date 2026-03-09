@@ -1,0 +1,139 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "One and Only Furniture - home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "One and Only Furniture" [ref=e8]
+      - button "Open menu" [ref=e10]:
+        - img [ref=e11]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - img "Hero Background" [ref=e16]
+        - generic [ref=e21]:
+          - heading "Seating" [level=1] [ref=e23]
+          - paragraph [ref=e24]: Leather, mesh, training and cafe chair collections.
+      - generic [ref=e25]: Loading products...
+  - contentinfo [ref=e26]:
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - link "One and Only Furniture" [ref=e30] [cursor=pointer]:
+          - /url: /
+          - img "One and Only Furniture" [ref=e32]
+        - generic [ref=e33]: Patna, Bihar and Jharkhand, India
+        - generic [ref=e34]:
+          - link "+91 90310 22875" [ref=e35] [cursor=pointer]:
+            - /url: tel:+919031022875
+          - link "sales@oando.co.in" [ref=e36] [cursor=pointer]:
+            - /url: mailto:sales@oando.co.in
+        - generic [ref=e37]:
+          - link "YouTube" [ref=e38] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCehXuPNAXkyfODPCwyAU1gQ
+            - img [ref=e39]
+          - link "Facebook" [ref=e41] [cursor=pointer]:
+            - /url: https://www.facebook.com/oandofurniture
+            - img [ref=e42]
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - paragraph [ref=e46]: Products
+          - list [ref=e47]:
+            - listitem [ref=e48]:
+              - link "All Products" [ref=e49] [cursor=pointer]:
+                - /url: /products/
+            - listitem [ref=e50]:
+              - link "Seating" [ref=e51] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e52]:
+              - link "Workstations" [ref=e53] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e54]:
+              - link "Tables" [ref=e55] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e56]:
+              - link "Storage" [ref=e57] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e58]:
+              - link "Soft Seating" [ref=e59] [cursor=pointer]:
+                - /url: /products/soft-seating/
+            - listitem [ref=e60]:
+              - link "Education" [ref=e61] [cursor=pointer]:
+                - /url: /products/education/
+        - generic [ref=e62]:
+          - paragraph [ref=e63]: Solutions
+          - list [ref=e64]:
+            - listitem [ref=e65]:
+              - link "All Solutions" [ref=e66] [cursor=pointer]:
+                - /url: /solutions/
+            - listitem [ref=e67]:
+              - link "Seating" [ref=e68] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e69]:
+              - link "Workstations" [ref=e70] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e71]:
+              - link "Meeting Rooms" [ref=e72] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e73]:
+              - link "Storage and Filing" [ref=e74] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e75]:
+              - link "Space Planning" [ref=e76] [cursor=pointer]:
+                - /url: /solutions/
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: Company
+          - list [ref=e79]:
+            - listitem [ref=e80]:
+              - link "About Us" [ref=e81] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e82]:
+              - link "Trusted By" [ref=e83] [cursor=pointer]:
+                - /url: /trusted-by/
+            - listitem [ref=e84]:
+              - link "Projects" [ref=e85] [cursor=pointer]:
+                - /url: /projects/
+            - listitem [ref=e86]:
+              - link "Portfolio" [ref=e87] [cursor=pointer]:
+                - /url: /portfolio/
+            - listitem [ref=e88]:
+              - link "Sustainability" [ref=e89] [cursor=pointer]:
+                - /url: /sustainability/
+            - listitem [ref=e90]:
+              - link "After Sales" [ref=e91] [cursor=pointer]:
+                - /url: /service/
+        - generic [ref=e92]:
+          - paragraph [ref=e93]: Support
+          - list [ref=e94]:
+            - listitem [ref=e95]:
+              - link "Contact Us" [ref=e96] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e97]:
+              - link "2D Configurator" [ref=e98] [cursor=pointer]:
+                - /url: /configurator/
+            - listitem [ref=e99]:
+              - link "Get Quote" [ref=e100] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e101]:
+              - link "Refund Policy" [ref=e102] [cursor=pointer]:
+                - /url: /refund-and-return-policy/
+            - listitem [ref=e103]:
+              - link "Privacy Policy" [ref=e104] [cursor=pointer]:
+                - /url: /privacy/
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - link "Refund Policy" [ref=e108] [cursor=pointer]:
+          - /url: /refund-and-return-policy/
+        - link "Privacy Policy" [ref=e109] [cursor=pointer]:
+          - /url: /privacy/
+        - link "Terms" [ref=e110] [cursor=pointer]:
+          - /url: /terms/
+      - generic [ref=e111]: Copyright 2026 One and Only Furniture. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e117] [cursor=pointer]:
+    - img [ref=e118]
+  - alert [ref=e121]
+  - button "Open workspace assistant" [ref=e122]:
+    - img [ref=e123]
+    - generic [ref=e126]: Workspace assistant
+  - button "Open WhatsApp quick contact" [ref=e127]:
+    - img [ref=e128]

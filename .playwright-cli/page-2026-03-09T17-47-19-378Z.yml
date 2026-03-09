@@ -1,0 +1,1195 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "One and Only Furniture - home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "One and Only Furniture" [ref=e8]
+      - button "Open menu" [ref=e10]:
+        - img [ref=e11]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - img "Hero Background" [ref=e16]
+        - generic [ref=e21]:
+          - heading "Seating" [level=1] [ref=e23]
+          - paragraph [ref=e24]: Leather, mesh, training and cafe chair collections.
+      - region "Seating product catalog" [ref=e25]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - button "Open filters" [ref=e29]:
+              - img [ref=e30]
+              - text: Filters
+            - generic [ref=e31]:
+              - img [ref=e32]
+              - textbox "Search Seating" [ref=e35]:
+                - /placeholder: Search seating...
+            - generic [ref=e36]:
+              - generic [ref=e37]: 43 / 43 products
+              - combobox "Sort products" [ref=e38]:
+                - option "Name A-Z" [selected]
+                - option "Name Z-A"
+                - option "Eco Score High-Low"
+                - option "Eco Score Low-High"
+          - paragraph [ref=e39]: Refreshing products...
+        - generic [ref=e42]:
+          - article [ref=e44]:
+            - button "Add to compare" [ref=e45]:
+              - img [ref=e46]
+              - text: Compare
+            - 'link "Arvo ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Arvo Arvo modern office chairs for comfort and sleek workspace design. Discover seating for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e53] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--arvo/
+              - generic [ref=e54]:
+                - img "Arvo ergonomic office chair" [ref=e55]
+                - generic [ref=e56]: BIFMA
+                - generic [ref=e57]: "Eco-Score: 5/10"
+              - generic [ref=e58]:
+                - paragraph [ref=e59]: Seating Series
+                - heading "Arvo" [level=3] [ref=e60]
+                - paragraph [ref=e61]: Arvo modern office chairs for comfort and sleek workspace design. Discover seating for modern workspaces.
+                - generic [ref=e62]:
+                  - paragraph [ref=e63]: Type:Cafe chairs
+                  - paragraph [ref=e64]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e65]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e66]:
+              - link "View Details" [ref=e67] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--arvo/
+              - button "Add to Quote" [ref=e68]:
+                - img [ref=e69]
+                - text: Add to Quote
+          - article [ref=e74]:
+            - button "Add to compare" [ref=e75]:
+              - img [ref=e76]
+              - text: Compare
+            - 'link "Breeze ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Breeze Breeze office chairs for modern workspaces. Discover breathable ergonomic seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e83] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--breeze/
+              - generic [ref=e84]:
+                - img "Breeze ergonomic office chair" [ref=e85]
+                - generic [ref=e86]: BIFMA
+                - generic [ref=e87]: "Eco-Score: 5/10"
+              - generic [ref=e88]:
+                - paragraph [ref=e89]: Seating Series
+                - heading "Breeze" [level=3] [ref=e90]
+                - paragraph [ref=e91]: Breeze office chairs for modern workspaces. Discover breathable ergonomic seating for modern workspaces.
+                - generic [ref=e92]:
+                  - paragraph [ref=e93]: Type:Mesh chairs
+                  - paragraph [ref=e94]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e95]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e96]:
+              - link "View Details" [ref=e97] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--breeze/
+              - button "Add to Quote" [ref=e98]:
+                - img [ref=e99]
+                - text: Add to Quote
+          - article [ref=e104]:
+            - button "Add to compare" [ref=e105]:
+              - img [ref=e106]
+              - text: Compare
+            - 'link "Canaret ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Canaret Canaret office seating for comfort and contemporary interiors. Explore quality chairs for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e113] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--canaret/
+              - generic [ref=e114]:
+                - img "Canaret ergonomic office chair" [ref=e115]
+                - generic [ref=e116]: BIFMA
+                - generic [ref=e117]: "Eco-Score: 5/10"
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: Seating Series
+                - heading "Canaret" [level=3] [ref=e120]
+                - paragraph [ref=e121]: Canaret office seating for comfort and contemporary interiors. Explore quality chairs for modern workspaces.
+                - generic [ref=e122]:
+                  - paragraph [ref=e123]: Type:Cafe chairs
+                  - paragraph [ref=e124]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e125]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e126]:
+              - link "View Details" [ref=e127] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--canaret/
+              - button "Add to Quote" [ref=e128]:
+                - img [ref=e129]
+                - text: Add to Quote
+          - article [ref=e134]:
+            - button "Add to compare" [ref=e135]:
+              - img [ref=e136]
+              - text: Compare
+            - 'link "Caneva ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Caneva Caneva office chair series for ergonomic comfort and modern appeal. Discover seating for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e143] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--caneva/
+              - generic [ref=e144]:
+                - img "Caneva ergonomic office chair" [ref=e145]
+                - generic [ref=e146]: BIFMA
+                - generic [ref=e147]: "Eco-Score: 5/10"
+              - generic [ref=e148]:
+                - paragraph [ref=e149]: Seating Series
+                - heading "Caneva" [level=3] [ref=e150]
+                - paragraph [ref=e151]: Caneva office chair series for ergonomic comfort and modern appeal. Discover seating for modern workspaces.
+                - generic [ref=e152]:
+                  - paragraph [ref=e153]: Type:Cafe chairs
+                  - paragraph [ref=e154]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e155]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e156]:
+              - link "View Details" [ref=e157] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--caneva/
+              - button "Add to Quote" [ref=e158]:
+                - img [ref=e159]
+                - text: Add to Quote
+          - article [ref=e164]:
+            - button "Add to compare" [ref=e165]:
+              - img [ref=e166]
+              - text: Compare
+            - 'link "Caneva-High ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Caneva-High Caneva high-back office chairs for executive comfort and ergonomic support. Discover seating for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e173] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--caneva-high/
+              - generic [ref=e174]:
+                - img "Caneva-High ergonomic office chair" [ref=e175]
+                - generic [ref=e176]: BIFMA
+                - generic [ref=e177]: "Eco-Score: 5/10"
+              - generic [ref=e178]:
+                - paragraph [ref=e179]: Seating Series
+                - heading "Caneva-High" [level=3] [ref=e180]
+                - paragraph [ref=e181]: Caneva high-back office chairs for executive comfort and ergonomic support. Discover seating for modern workspaces.
+                - generic [ref=e182]:
+                  - paragraph [ref=e183]: Type:Cafe chairs
+                  - paragraph [ref=e184]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e185]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e186]:
+              - link "View Details" [ref=e187] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--caneva-high/
+              - button "Add to Quote" [ref=e188]:
+                - img [ref=e189]
+                - text: Add to Quote
+          - article [ref=e194]:
+            - button "Add to compare" [ref=e195]:
+              - img [ref=e196]
+              - text: Compare
+            - 'link "Casca ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Casca Casca provides a sleek and modern seating solution with a focus on clean lines and ergonomic comfort for dynamic workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e203] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--casca/
+              - generic [ref=e204]:
+                - img "Casca ergonomic office chair" [ref=e205]
+                - generic [ref=e206]: BIFMA
+                - generic [ref=e207]: "Eco-Score: 5/10"
+              - generic [ref=e208]:
+                - paragraph [ref=e209]: Seating Series
+                - heading "Casca" [level=3] [ref=e210]
+                - paragraph [ref=e211]: Casca provides a sleek and modern seating solution with a focus on clean lines and ergonomic comfort for dynamic workspaces.
+                - generic [ref=e212]:
+                  - paragraph [ref=e213]: Type:Mesh chairs
+                  - paragraph [ref=e214]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e215]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e216]:
+              - link "View Details" [ref=e217] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--casca/
+              - button "Add to Quote" [ref=e218]:
+                - img [ref=e219]
+                - text: Add to Quote
+          - article [ref=e224]:
+            - button "Add to compare" [ref=e225]:
+              - img [ref=e226]
+              - text: Compare
+            - 'link "Classy Executive ergonomic office chair premium Eco-Score: 6/10 Seating Series Classy Executive Starting from Rs. 34,999 High-back leather executive chair for boardroom environments. Type:Leather chairs Size:W700 x D700 x H950-1100mm Material:Leather, Chrome" [ref=e233] [cursor=pointer]':
+              - /url: /products/seating/classy-executive/
+              - generic [ref=e234]:
+                - img "Classy Executive ergonomic office chair" [ref=e235]
+                - generic [ref=e236]: premium
+                - generic [ref=e237]: "Eco-Score: 6/10"
+              - generic [ref=e238]:
+                - paragraph [ref=e239]: Seating Series
+                - heading "Classy Executive" [level=3] [ref=e240]
+                - paragraph [ref=e241]: Starting from Rs. 34,999
+                - paragraph [ref=e242]: High-back leather executive chair for boardroom environments.
+                - generic [ref=e243]:
+                  - paragraph [ref=e244]: Type:Leather chairs
+                  - paragraph [ref=e245]: Size:W700 x D700 x H950-1100mm
+                  - paragraph [ref=e246]: Material:Leather, Chrome
+            - generic [ref=e247]:
+              - link "View Details" [ref=e248] [cursor=pointer]:
+                - /url: /products/seating/classy-executive/
+              - button "Add to Quote" [ref=e249]:
+                - img [ref=e250]
+                - text: Add to Quote
+          - article [ref=e255]:
+            - button "Add to compare" [ref=e256]:
+              - img [ref=e257]
+              - text: Compare
+            - 'link "Crox ergonomic office chair BIFMA mid Eco-Score: 5/10 Seating Series Crox Starting from Rs. 14,999 Crox visitor and cafe chair, offering a comfortable and versatile seating solution for receptions, lounges, and waiting areas. Type:Mesh chairs Size:W550 D560 H810mm Material:Molded shell, Steel tube base" [ref=e264] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--crox/
+              - generic [ref=e265]:
+                - img "Crox ergonomic office chair" [ref=e266]
+                - generic [ref=e267]: BIFMA
+                - generic [ref=e268]: mid
+                - generic [ref=e269]: "Eco-Score: 5/10"
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: Seating Series
+                - heading "Crox" [level=3] [ref=e272]
+                - paragraph [ref=e273]: Starting from Rs. 14,999
+                - paragraph [ref=e274]: Crox visitor and cafe chair, offering a comfortable and versatile seating solution for receptions, lounges, and waiting areas.
+                - generic [ref=e275]:
+                  - paragraph [ref=e276]: Type:Mesh chairs
+                  - paragraph [ref=e277]: Size:W550 D560 H810mm
+                  - paragraph [ref=e278]: Material:Molded shell, Steel tube base
+            - generic [ref=e279]:
+              - link "View Details" [ref=e280] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--crox/
+              - button "Add to Quote" [ref=e281]:
+                - img [ref=e282]
+                - text: Add to Quote
+          - article [ref=e287]:
+            - button "Add to compare" [ref=e288]:
+              - img [ref=e289]
+              - text: Compare
+            - 'link "Dive ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Dive Dive collaborative seating for teamwork and shared spaces. Discover modern office seating for modern workspaces. Type:Leather chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e296] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--dive/
+              - generic [ref=e297]:
+                - img "Dive ergonomic office chair" [ref=e298]
+                - generic [ref=e299]: BIFMA
+                - generic [ref=e300]: "Eco-Score: 5/10"
+              - generic [ref=e301]:
+                - paragraph [ref=e302]: Seating Series
+                - heading "Dive" [level=3] [ref=e303]
+                - paragraph [ref=e304]: Dive collaborative seating for teamwork and shared spaces. Discover modern office seating for modern workspaces.
+                - generic [ref=e305]:
+                  - paragraph [ref=e306]: Type:Leather chairs
+                  - paragraph [ref=e307]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e308]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e309]:
+              - link "View Details" [ref=e310] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--dive/
+              - button "Add to Quote" [ref=e311]:
+                - img [ref=e312]
+                - text: Add to Quote
+          - article [ref=e317]:
+            - button "Add to compare" [ref=e318]:
+              - img [ref=e319]
+              - text: Compare
+            - 'link "Ember ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Ember Ember executive office furniture for premium leadership spaces. Discover modern design for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e326] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--ember/
+              - generic [ref=e327]:
+                - img "Ember ergonomic office chair" [ref=e328]
+                - generic [ref=e329]: BIFMA
+                - generic [ref=e330]: "Eco-Score: 5/10"
+              - generic [ref=e331]:
+                - paragraph [ref=e332]: Seating Series
+                - heading "Ember" [level=3] [ref=e333]
+                - paragraph [ref=e334]: Ember executive office furniture for premium leadership spaces. Discover modern design for modern workspaces.
+                - generic [ref=e335]:
+                  - paragraph [ref=e336]: Type:Cafe chairs
+                  - paragraph [ref=e337]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e338]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e339]:
+              - link "View Details" [ref=e340] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--ember/
+              - button "Add to Quote" [ref=e341]:
+                - img [ref=e342]
+                - text: Add to Quote
+          - article [ref=e347]:
+            - button "Add to compare" [ref=e348]:
+              - img [ref=e349]
+              - text: Compare
+            - 'link "Flare ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Flare Flare designer office seating combining comfort and modern style. Explore seating for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e356] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--flare/
+              - generic [ref=e357]:
+                - img "Flare ergonomic office chair" [ref=e358]
+                - generic [ref=e359]: BIFMA
+                - generic [ref=e360]: "Eco-Score: 5/10"
+              - generic [ref=e361]:
+                - paragraph [ref=e362]: Seating Series
+                - heading "Flare" [level=3] [ref=e363]
+                - paragraph [ref=e364]: Flare designer office seating combining comfort and modern style. Explore seating for modern workspaces.
+                - generic [ref=e365]:
+                  - paragraph [ref=e366]: Type:Cafe chairs
+                  - paragraph [ref=e367]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e368]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e369]:
+              - link "View Details" [ref=e370] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--flare/
+              - button "Add to Quote" [ref=e371]:
+                - img [ref=e372]
+                - text: Add to Quote
+          - article [ref=e377]:
+            - button "Add to compare" [ref=e378]:
+              - img [ref=e379]
+              - text: Compare
+            - 'link "Flex ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Flex Flex office furniture for adaptable workspaces. Discover modular desks and seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e386] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--flex/
+              - generic [ref=e387]:
+                - img "Flex ergonomic office chair" [ref=e388]
+                - generic [ref=e389]: BIFMA
+                - generic [ref=e390]: "Eco-Score: 5/10"
+              - generic [ref=e391]:
+                - paragraph [ref=e392]: Seating Series
+                - heading "Flex" [level=3] [ref=e393]
+                - paragraph [ref=e394]: Flex office furniture for adaptable workspaces. Discover modular desks and seating for modern workspaces.
+                - generic [ref=e395]:
+                  - paragraph [ref=e396]: Type:Mesh chairs
+                  - paragraph [ref=e397]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e398]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e399]:
+              - link "View Details" [ref=e400] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--flex/
+              - button "Add to Quote" [ref=e401]:
+                - img [ref=e402]
+                - text: Add to Quote
+          - article [ref=e407]:
+            - button "Add to compare" [ref=e408]:
+              - img [ref=e409]
+              - text: Compare
+            - 'link "Flip ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Flip Flip training chair with optional tablet arm, designed for agility and comfort in flexible learning and meeting environments. Type:Study chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e416] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--flip/
+              - generic [ref=e417]:
+                - img "Flip ergonomic office chair" [ref=e418]
+                - generic [ref=e419]: BIFMA
+                - generic [ref=e420]: "Eco-Score: 5/10"
+              - generic [ref=e421]:
+                - paragraph [ref=e422]: Seating Series
+                - heading "Flip" [level=3] [ref=e423]
+                - paragraph [ref=e424]: Flip training chair with optional tablet arm, designed for agility and comfort in flexible learning and meeting environments.
+                - generic [ref=e425]:
+                  - paragraph [ref=e426]: Type:Study chairs
+                  - paragraph [ref=e427]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e428]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e429]:
+              - link "View Details" [ref=e430] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--flip/
+              - button "Add to Quote" [ref=e431]:
+                - img [ref=e432]
+                - text: Add to Quote
+          - article [ref=e437]:
+            - button "Add to compare" [ref=e438]:
+              - img [ref=e439]
+              - text: Compare
+            - 'link "Fluid ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Fluid Fluid-2 ergonomic office chair for posture support and productivity. Discover modern seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e446] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--fluid/
+              - generic [ref=e447]:
+                - img "Fluid ergonomic office chair" [ref=e448]
+                - generic [ref=e449]: BIFMA
+                - generic [ref=e450]: "Eco-Score: 5/10"
+              - generic [ref=e451]:
+                - paragraph [ref=e452]: Seating Series
+                - heading "Fluid" [level=3] [ref=e453]
+                - paragraph [ref=e454]: Fluid-2 ergonomic office chair for posture support and productivity. Discover modern seating for modern workspaces.
+                - generic [ref=e455]:
+                  - paragraph [ref=e456]: Type:Mesh chairs
+                  - paragraph [ref=e457]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e458]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e459]:
+              - link "View Details" [ref=e460] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--fluid/
+              - button "Add to Quote" [ref=e461]:
+                - img [ref=e462]
+                - text: Add to Quote
+          - article [ref=e467]:
+            - button "Add to compare" [ref=e468]:
+              - img [ref=e469]
+              - text: Compare
+            - 'link "Fluid Task ergonomic office chair BIFMA mid Eco-Score: 7/10 Seating Series Fluid Task Starting from Rs. 14,999 Mid-back ergonomic task chair for extended desk work. Type:Study chairs Size:W620 x D620 x H850-1000mm Material:Fabric, Nylon" [ref=e476] [cursor=pointer]':
+              - /url: /products/seating/fluid-task/
+              - generic [ref=e477]:
+                - img "Fluid Task ergonomic office chair" [ref=e478]
+                - generic [ref=e479]: BIFMA
+                - generic [ref=e480]: mid
+                - generic [ref=e481]: "Eco-Score: 7/10"
+              - generic [ref=e482]:
+                - paragraph [ref=e483]: Seating Series
+                - heading "Fluid Task" [level=3] [ref=e484]
+                - paragraph [ref=e485]: Starting from Rs. 14,999
+                - paragraph [ref=e486]: Mid-back ergonomic task chair for extended desk work.
+                - generic [ref=e487]:
+                  - paragraph [ref=e488]: Type:Study chairs
+                  - paragraph [ref=e489]: Size:W620 x D620 x H850-1000mm
+                  - paragraph [ref=e490]: Material:Fabric, Nylon
+            - generic [ref=e491]:
+              - link "View Details" [ref=e492] [cursor=pointer]:
+                - /url: /products/seating/fluid-task/
+              - button "Add to Quote" [ref=e493]:
+                - img [ref=e494]
+                - text: Add to Quote
+          - article [ref=e499]:
+            - button "Add to compare" [ref=e500]:
+              - img [ref=e501]
+              - text: Compare
+            - 'link "Fluid X ergonomic office chair Eco-Score: 5/10 Seating Series Fluid X Fluid-X ergonomic office chair for posture support and comfort. Discover modern seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e508] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--fluid-x/
+              - generic [ref=e509]:
+                - img "Fluid X ergonomic office chair" [ref=e510]
+                - generic [ref=e511]: "Eco-Score: 5/10"
+              - generic [ref=e512]:
+                - paragraph [ref=e513]: Seating Series
+                - heading "Fluid X" [level=3] [ref=e514]
+                - paragraph [ref=e515]: Fluid-X ergonomic office chair for posture support and comfort. Discover modern seating for modern workspaces.
+                - generic [ref=e516]:
+                  - paragraph [ref=e517]: Type:Mesh chairs
+                  - paragraph [ref=e518]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e519]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e520]:
+              - link "View Details" [ref=e521] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--fluid-x/
+              - button "Add to Quote" [ref=e522]:
+                - img [ref=e523]
+                - text: Add to Quote
+          - article [ref=e528]:
+            - button "Add to compare" [ref=e529]:
+              - img [ref=e530]
+              - text: Compare
+            - 'link "Fusion ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Fusion Fusion modular office furniture for flexible layouts and efficient workspace planning. Discover solutions for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e537] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--fusion/
+              - generic [ref=e538]:
+                - img "Fusion ergonomic office chair" [ref=e539]
+                - generic [ref=e540]: BIFMA
+                - generic [ref=e541]: "Eco-Score: 5/10"
+              - generic [ref=e542]:
+                - paragraph [ref=e543]: Seating Series
+                - heading "Fusion" [level=3] [ref=e544]
+                - paragraph [ref=e545]: Fusion modular office furniture for flexible layouts and efficient workspace planning. Discover solutions for modern workspaces.
+                - generic [ref=e546]:
+                  - paragraph [ref=e547]: Type:Cafe chairs
+                  - paragraph [ref=e548]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e549]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e550]:
+              - link "View Details" [ref=e551] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--fusion/
+              - button "Add to Quote" [ref=e552]:
+                - img [ref=e553]
+                - text: Add to Quote
+          - article [ref=e558]:
+            - button "Add to compare" [ref=e559]:
+              - img [ref=e560]
+              - text: Compare
+            - 'link "Halo ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Halo Halo ergonomic mesh chair with a wide headrest and supportive shell design. Engineered for daily productivity and style. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e567] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--halo/
+              - generic [ref=e568]:
+                - img "Halo ergonomic office chair" [ref=e569]
+                - generic [ref=e570]: BIFMA
+                - generic [ref=e571]: "Eco-Score: 5/10"
+              - generic [ref=e572]:
+                - paragraph [ref=e573]: Seating Series
+                - heading "Halo" [level=3] [ref=e574]
+                - paragraph [ref=e575]: Halo ergonomic mesh chair with a wide headrest and supportive shell design. Engineered for daily productivity and style.
+                - generic [ref=e576]:
+                  - paragraph [ref=e577]: Type:Mesh chairs
+                  - paragraph [ref=e578]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e579]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e580]:
+              - link "View Details" [ref=e581] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--halo/
+              - button "Add to Quote" [ref=e582]:
+                - img [ref=e583]
+                - text: Add to Quote
+          - article [ref=e588]:
+            - button "Add to compare" [ref=e589]:
+              - img [ref=e590]
+              - text: Compare
+            - 'link "Leaf ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Leaf Leaf collaborative seating for teamwork and shared workspaces. Discover modern seating for modern workspaces. Type:Leather chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e597] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--leaf/
+              - generic [ref=e598]:
+                - img "Leaf ergonomic office chair" [ref=e599]
+                - generic [ref=e600]: BIFMA
+                - generic [ref=e601]: "Eco-Score: 5/10"
+              - generic [ref=e602]:
+                - paragraph [ref=e603]: Seating Series
+                - heading "Leaf" [level=3] [ref=e604]
+                - paragraph [ref=e605]: Leaf collaborative seating for teamwork and shared workspaces. Discover modern seating for modern workspaces.
+                - generic [ref=e606]:
+                  - paragraph [ref=e607]: Type:Leather chairs
+                  - paragraph [ref=e608]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e609]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e610]:
+              - link "View Details" [ref=e611] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--leaf/
+              - button "Add to Quote" [ref=e612]:
+                - img [ref=e613]
+                - text: Add to Quote
+          - article [ref=e618]:
+            - button "Add to compare" [ref=e619]:
+              - img [ref=e620]
+              - text: Compare
+            - 'link "Lexus ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Lexus Lexus executive office chairs for premium comfort and durability. Explore seating for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e627] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--lexus/
+              - generic [ref=e628]:
+                - img "Lexus ergonomic office chair" [ref=e629]
+                - generic [ref=e630]: BIFMA
+                - generic [ref=e631]: "Eco-Score: 5/10"
+              - generic [ref=e632]:
+                - paragraph [ref=e633]: Seating Series
+                - heading "Lexus" [level=3] [ref=e634]
+                - paragraph [ref=e635]: Lexus executive office chairs for premium comfort and durability. Explore seating for modern workspaces.
+                - generic [ref=e636]:
+                  - paragraph [ref=e637]: Type:Cafe chairs
+                  - paragraph [ref=e638]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e639]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e640]:
+              - link "View Details" [ref=e641] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--lexus/
+              - button "Add to Quote" [ref=e642]:
+                - img [ref=e643]
+                - text: Add to Quote
+          - article [ref=e648]:
+            - button "Add to compare" [ref=e649]:
+              - img [ref=e650]
+              - text: Compare
+            - 'link "Lisbo ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Lisbo Lisbo lounge seating for relaxed office spaces and modern interiors. Explore soft seating for modern workspaces. Type:Leather chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e657] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--lisbo/
+              - generic [ref=e658]:
+                - img "Lisbo ergonomic office chair" [ref=e659]
+                - generic [ref=e660]: BIFMA
+                - generic [ref=e661]: "Eco-Score: 5/10"
+              - generic [ref=e662]:
+                - paragraph [ref=e663]: Seating Series
+                - heading "Lisbo" [level=3] [ref=e664]
+                - paragraph [ref=e665]: Lisbo lounge seating for relaxed office spaces and modern interiors. Explore soft seating for modern workspaces.
+                - generic [ref=e666]:
+                  - paragraph [ref=e667]: Type:Leather chairs
+                  - paragraph [ref=e668]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e669]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e670]:
+              - link "View Details" [ref=e671] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--lisbo/
+              - button "Add to Quote" [ref=e672]:
+                - img [ref=e673]
+                - text: Add to Quote
+          - article [ref=e678]:
+            - button "Add to compare" [ref=e679]:
+              - img [ref=e680]
+              - text: Compare
+            - 'link "Logica ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Logica Logica modular workstations for modern offices. Discover flexible layouts for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e687] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--logica/
+              - generic [ref=e688]:
+                - img "Logica ergonomic office chair" [ref=e689]
+                - generic [ref=e690]: BIFMA
+                - generic [ref=e691]: "Eco-Score: 5/10"
+              - generic [ref=e692]:
+                - paragraph [ref=e693]: Seating Series
+                - heading "Logica" [level=3] [ref=e694]
+                - paragraph [ref=e695]: Logica modular workstations for modern offices. Discover flexible layouts for modern workspaces.
+                - generic [ref=e696]:
+                  - paragraph [ref=e697]: Type:Mesh chairs
+                  - paragraph [ref=e698]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e699]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e700]:
+              - link "View Details" [ref=e701] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--logica/
+              - button "Add to Quote" [ref=e702]:
+                - img [ref=e703]
+                - text: Add to Quote
+          - article [ref=e708]:
+            - button "Add to compare" [ref=e709]:
+              - img [ref=e710]
+              - text: Compare
+            - 'link "Moonlight ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Moonlight Moonlight premium office seating for comfort and modern interiors. Explore seating for modern workspaces. Type:Leather chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e717] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--moonlight/
+              - generic [ref=e718]:
+                - img "Moonlight ergonomic office chair" [ref=e719]
+                - generic [ref=e720]: BIFMA
+                - generic [ref=e721]: "Eco-Score: 5/10"
+              - generic [ref=e722]:
+                - paragraph [ref=e723]: Seating Series
+                - heading "Moonlight" [level=3] [ref=e724]
+                - paragraph [ref=e725]: Moonlight premium office seating for comfort and modern interiors. Explore seating for modern workspaces.
+                - generic [ref=e726]:
+                  - paragraph [ref=e727]: Type:Leather chairs
+                  - paragraph [ref=e728]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e729]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e730]:
+              - link "View Details" [ref=e731] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--moonlight/
+              - button "Add to Quote" [ref=e732]:
+                - img [ref=e733]
+                - text: Add to Quote
+          - article [ref=e738]:
+            - button "Add to compare" [ref=e739]:
+              - img [ref=e740]
+              - text: Compare
+            - 'link "Myel ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Myel A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest to provide effortless support throughout the workday. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e747] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--myel/
+              - generic [ref=e748]:
+                - img "Myel ergonomic office chair" [ref=e749]
+                - generic [ref=e750]: BIFMA
+                - generic [ref=e751]: "Eco-Score: 5/10"
+              - generic [ref=e752]:
+                - paragraph [ref=e753]: Seating Series
+                - heading "Myel" [level=3] [ref=e754]
+                - paragraph [ref=e755]: A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest to provide effortless support throughout the workday.
+                - generic [ref=e756]:
+                  - paragraph [ref=e757]: Type:Mesh chairs
+                  - paragraph [ref=e758]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e759]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e760]:
+              - link "View Details" [ref=e761] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--myel/
+              - button "Add to Quote" [ref=e762]:
+                - img [ref=e763]
+                - text: Add to Quote
+          - article [ref=e768]:
+            - button "Add to compare" [ref=e769]:
+              - img [ref=e770]
+              - text: Compare
+            - 'link "Nordic ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Nordic Nordic wooden frame visitor chair inspired by Scandinavian minimalism. Perfect for breakout zones and casual meetings. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e777] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--nordic/
+              - generic [ref=e778]:
+                - img "Nordic ergonomic office chair" [ref=e779]
+                - generic [ref=e780]: BIFMA
+                - generic [ref=e781]: "Eco-Score: 5/10"
+              - generic [ref=e782]:
+                - paragraph [ref=e783]: Seating Series
+                - heading "Nordic" [level=3] [ref=e784]
+                - paragraph [ref=e785]: Nordic wooden frame visitor chair inspired by Scandinavian minimalism. Perfect for breakout zones and casual meetings.
+                - generic [ref=e786]:
+                  - paragraph [ref=e787]: Type:Cafe chairs
+                  - paragraph [ref=e788]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e789]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e790]:
+              - link "View Details" [ref=e791] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--nordic/
+              - button "Add to Quote" [ref=e792]:
+                - img [ref=e793]
+                - text: Add to Quote
+          - article [ref=e798]:
+            - button "Add to compare" [ref=e799]:
+              - img [ref=e800]
+              - text: Compare
+            - 'link "Nuvic ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Nuvic Nuvic office chairs designed for comfort and posture support. Discover seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e807] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--nuvic/
+              - generic [ref=e808]:
+                - img "Nuvic ergonomic office chair" [ref=e809]
+                - generic [ref=e810]: BIFMA
+                - generic [ref=e811]: "Eco-Score: 5/10"
+              - generic [ref=e812]:
+                - paragraph [ref=e813]: Seating Series
+                - heading "Nuvic" [level=3] [ref=e814]
+                - paragraph [ref=e815]: Nuvic office chairs designed for comfort and posture support. Discover seating for modern workspaces.
+                - generic [ref=e816]:
+                  - paragraph [ref=e817]: Type:Mesh chairs
+                  - paragraph [ref=e818]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e819]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e820]:
+              - link "View Details" [ref=e821] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--nuvic/
+              - button "Add to Quote" [ref=e822]:
+                - img [ref=e823]
+                - text: Add to Quote
+          - article [ref=e828]:
+            - button "Add to compare" [ref=e829]:
+              - img [ref=e830]
+              - text: Compare
+            - 'link "Orbit ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Orbit Orbit office chairs designed for posture support and comfort. Discover seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e837] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--orbit/
+              - generic [ref=e838]:
+                - img "Orbit ergonomic office chair" [ref=e839]
+                - generic [ref=e840]: BIFMA
+                - generic [ref=e841]: "Eco-Score: 5/10"
+              - generic [ref=e842]:
+                - paragraph [ref=e843]: Seating Series
+                - heading "Orbit" [level=3] [ref=e844]
+                - paragraph [ref=e845]: Orbit office chairs designed for posture support and comfort. Discover seating for modern workspaces.
+                - generic [ref=e846]:
+                  - paragraph [ref=e847]: Type:Mesh chairs
+                  - paragraph [ref=e848]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e849]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e850]:
+              - link "View Details" [ref=e851] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--orbit/
+              - button "Add to Quote" [ref=e852]:
+                - img [ref=e853]
+                - text: Add to Quote
+          - article [ref=e858]:
+            - button "Add to compare" [ref=e859]:
+              - img [ref=e860]
+              - text: Compare
+            - 'link "Phoenix ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Phoenix Phoenix office chairs for durability and ergonomic support. Discover seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e867] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--phoenix/
+              - generic [ref=e868]:
+                - img "Phoenix ergonomic office chair" [ref=e869]
+                - generic [ref=e870]: BIFMA
+                - generic [ref=e871]: "Eco-Score: 5/10"
+              - generic [ref=e872]:
+                - paragraph [ref=e873]: Seating Series
+                - heading "Phoenix" [level=3] [ref=e874]
+                - paragraph [ref=e875]: Phoenix office chairs for durability and ergonomic support. Discover seating for modern workspaces.
+                - generic [ref=e876]:
+                  - paragraph [ref=e877]: Type:Mesh chairs
+                  - paragraph [ref=e878]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e879]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e880]:
+              - link "View Details" [ref=e881] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--phoenix/
+              - button "Add to Quote" [ref=e882]:
+                - img [ref=e883]
+                - text: Add to Quote
+          - article [ref=e888]:
+            - button "Add to compare" [ref=e889]:
+              - img [ref=e890]
+              - text: Compare
+            - 'link "Pinnacle ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Pinnacle Pinnacle executive office furniture for premium leadership spaces. Discover solutions for modern workspaces. Type:Leather chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e897] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--pinnacle/
+              - generic [ref=e898]:
+                - img "Pinnacle ergonomic office chair" [ref=e899]
+                - generic [ref=e900]: BIFMA
+                - generic [ref=e901]: "Eco-Score: 5/10"
+              - generic [ref=e902]:
+                - paragraph [ref=e903]: Seating Series
+                - heading "Pinnacle" [level=3] [ref=e904]
+                - paragraph [ref=e905]: Pinnacle executive office furniture for premium leadership spaces. Discover solutions for modern workspaces.
+                - generic [ref=e906]:
+                  - paragraph [ref=e907]: Type:Leather chairs
+                  - paragraph [ref=e908]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e909]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e910]:
+              - link "View Details" [ref=e911] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--pinnacle/
+              - button "Add to Quote" [ref=e912]:
+                - img [ref=e913]
+                - text: Add to Quote
+          - article [ref=e918]:
+            - button "Add to compare" [ref=e919]:
+              - img [ref=e920]
+              - text: Compare
+            - 'link "Revoq ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Revoq Revoq office chairs for comfort and productivity. Discover modern seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e927] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--revoq/
+              - generic [ref=e928]:
+                - img "Revoq ergonomic office chair" [ref=e929]
+                - generic [ref=e930]: BIFMA
+                - generic [ref=e931]: "Eco-Score: 5/10"
+              - generic [ref=e932]:
+                - paragraph [ref=e933]: Seating Series
+                - heading "Revoq" [level=3] [ref=e934]
+                - paragraph [ref=e935]: Revoq office chairs for comfort and productivity. Discover modern seating for modern workspaces.
+                - generic [ref=e936]:
+                  - paragraph [ref=e937]: Type:Mesh chairs
+                  - paragraph [ref=e938]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e939]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e940]:
+              - link "View Details" [ref=e941] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--revoq/
+              - button "Add to Quote" [ref=e942]:
+                - img [ref=e943]
+                - text: Add to Quote
+          - article [ref=e948]:
+            - button "Add to compare" [ref=e949]:
+              - img [ref=e950]
+              - text: Compare
+            - 'link "Rider ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Rider Rider ergonomic office chairs for comfort, posture support, and productivity. Discover seating for modern workspaces. Type:Leather chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e957] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--rider/
+              - generic [ref=e958]:
+                - img "Rider ergonomic office chair" [ref=e959]
+                - generic [ref=e960]: BIFMA
+                - generic [ref=e961]: "Eco-Score: 5/10"
+              - generic [ref=e962]:
+                - paragraph [ref=e963]: Seating Series
+                - heading "Rider" [level=3] [ref=e964]
+                - paragraph [ref=e965]: Rider ergonomic office chairs for comfort, posture support, and productivity. Discover seating for modern workspaces.
+                - generic [ref=e966]:
+                  - paragraph [ref=e967]: Type:Leather chairs
+                  - paragraph [ref=e968]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e969]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e970]:
+              - link "View Details" [ref=e971] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--rider/
+              - button "Add to Quote" [ref=e972]:
+                - img [ref=e973]
+                - text: Add to Quote
+          - article [ref=e978]:
+            - button "Add to compare" [ref=e979]:
+              - img [ref=e980]
+              - text: Compare
+            - 'link "Rio ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Rio Rio office furniture collection for modern and functional workspaces. Explore solutions for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e987] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--rio/
+              - generic [ref=e988]:
+                - img "Rio ergonomic office chair" [ref=e989]
+                - generic [ref=e990]: BIFMA
+                - generic [ref=e991]: "Eco-Score: 5/10"
+              - generic [ref=e992]:
+                - paragraph [ref=e993]: Seating Series
+                - heading "Rio" [level=3] [ref=e994]
+                - paragraph [ref=e995]: Rio office furniture collection for modern and functional workspaces. Explore solutions for modern workspaces.
+                - generic [ref=e996]:
+                  - paragraph [ref=e997]: Type:Cafe chairs
+                  - paragraph [ref=e998]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e999]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1000]:
+              - link "View Details" [ref=e1001] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--rio/
+              - button "Add to Quote" [ref=e1002]:
+                - img [ref=e1003]
+                - text: Add to Quote
+          - article [ref=e1008]:
+            - button "Add to compare" [ref=e1009]:
+              - img [ref=e1010]
+              - text: Compare
+            - 'link "Rock ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Rock Rock office chairs for durability and comfort. Discover ergonomic seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1017] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--rock/
+              - generic [ref=e1018]:
+                - img "Rock ergonomic office chair" [ref=e1019]
+                - generic [ref=e1020]: BIFMA
+                - generic [ref=e1021]: "Eco-Score: 5/10"
+              - generic [ref=e1022]:
+                - paragraph [ref=e1023]: Seating Series
+                - heading "Rock" [level=3] [ref=e1024]
+                - paragraph [ref=e1025]: Rock office chairs for durability and comfort. Discover ergonomic seating for modern workspaces.
+                - generic [ref=e1026]:
+                  - paragraph [ref=e1027]: Type:Mesh chairs
+                  - paragraph [ref=e1028]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1029]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1030]:
+              - link "View Details" [ref=e1031] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--rock/
+              - button "Add to Quote" [ref=e1032]:
+                - img [ref=e1033]
+                - text: Add to Quote
+          - article [ref=e1038]:
+            - button "Add to compare" [ref=e1039]:
+              - img [ref=e1040]
+              - text: Compare
+            - 'link "Sleek Cafe ergonomic office chair BIFMA budget Eco-Score: 5/10 Seating Series Sleek Cafe Starting from Rs. 4,999 Sleek Cafe cafeteria chair for dining spaces and informal meeting zones, designed for durability and ease of maintenance. Type:Cafe chairs Size:W520 D540 H800mm Material:Polypropylene shell, Chromed steel legs" [ref=e1047] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--cafe-sleek/
+              - generic [ref=e1048]:
+                - img "Sleek Cafe ergonomic office chair" [ref=e1049]
+                - generic [ref=e1050]: BIFMA
+                - generic [ref=e1051]: budget
+                - generic [ref=e1052]: "Eco-Score: 5/10"
+              - generic [ref=e1053]:
+                - paragraph [ref=e1054]: Seating Series
+                - heading "Sleek Cafe" [level=3] [ref=e1055]
+                - paragraph [ref=e1056]: Starting from Rs. 4,999
+                - paragraph [ref=e1057]: Sleek Cafe cafeteria chair for dining spaces and informal meeting zones, designed for durability and ease of maintenance.
+                - generic [ref=e1058]:
+                  - paragraph [ref=e1059]: Type:Cafe chairs
+                  - paragraph [ref=e1060]: Size:W520 D540 H800mm
+                  - paragraph [ref=e1061]: Material:Polypropylene shell, Chromed steel legs
+            - generic [ref=e1062]:
+              - link "View Details" [ref=e1063] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--cafe-sleek/
+              - button "Add to Quote" [ref=e1064]:
+                - img [ref=e1065]
+                - text: Add to Quote
+          - article [ref=e1070]:
+            - button "Add to compare" [ref=e1071]:
+              - img [ref=e1072]
+              - text: Compare
+            - 'link "Smile ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Smile Smile office chair collection for comfort and modern appeal. Explore seating for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1079] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--smile/
+              - generic [ref=e1080]:
+                - img "Smile ergonomic office chair" [ref=e1081]
+                - generic [ref=e1082]: BIFMA
+                - generic [ref=e1083]: "Eco-Score: 5/10"
+              - generic [ref=e1084]:
+                - paragraph [ref=e1085]: Seating Series
+                - heading "Smile" [level=3] [ref=e1086]
+                - paragraph [ref=e1087]: Smile office chair collection for comfort and modern appeal. Explore seating for modern workspaces.
+                - generic [ref=e1088]:
+                  - paragraph [ref=e1089]: Type:Cafe chairs
+                  - paragraph [ref=e1090]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1091]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1092]:
+              - link "View Details" [ref=e1093] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--smile/
+              - button "Add to Quote" [ref=e1094]:
+                - img [ref=e1095]
+                - text: Add to Quote
+          - article [ref=e1100]:
+            - button "Add to compare" [ref=e1101]:
+              - img [ref=e1102]
+              - text: Compare
+            - 'link "Solace ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Solace Solace ergonomic office chair designed for superior posture support and daily comfort. A perfect blend of style and ergonomics. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1109] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--solace/
+              - generic [ref=e1110]:
+                - img "Solace ergonomic office chair" [ref=e1111]
+                - generic [ref=e1112]: BIFMA
+                - generic [ref=e1113]: "Eco-Score: 5/10"
+              - generic [ref=e1114]:
+                - paragraph [ref=e1115]: Seating Series
+                - heading "Solace" [level=3] [ref=e1116]
+                - paragraph [ref=e1117]: Solace ergonomic office chair designed for superior posture support and daily comfort. A perfect blend of style and ergonomics.
+                - generic [ref=e1118]:
+                  - paragraph [ref=e1119]: Type:Mesh chairs
+                  - paragraph [ref=e1120]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1121]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1122]:
+              - link "View Details" [ref=e1123] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--solace/
+              - button "Add to Quote" [ref=e1124]:
+                - img [ref=e1125]
+                - text: Add to Quote
+          - article [ref=e1130]:
+            - button "Add to compare" [ref=e1131]:
+              - img [ref=e1132]
+              - text: Compare
+            - 'link "Spino ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Spino Spino office chairs for daily comfort and productivity. Discover modern seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1139] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--spino/
+              - generic [ref=e1140]:
+                - img "Spino ergonomic office chair" [ref=e1141]
+                - generic [ref=e1142]: BIFMA
+                - generic [ref=e1143]: "Eco-Score: 5/10"
+              - generic [ref=e1144]:
+                - paragraph [ref=e1145]: Seating Series
+                - heading "Spino" [level=3] [ref=e1146]
+                - paragraph [ref=e1147]: Spino office chairs for daily comfort and productivity. Discover modern seating for modern workspaces.
+                - generic [ref=e1148]:
+                  - paragraph [ref=e1149]: Type:Mesh chairs
+                  - paragraph [ref=e1150]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1151]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1152]:
+              - link "View Details" [ref=e1153] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--spino/
+              - button "Add to Quote" [ref=e1154]:
+                - img [ref=e1155]
+                - text: Add to Quote
+          - article [ref=e1160]:
+            - button "Add to compare" [ref=e1161]:
+              - img [ref=e1162]
+              - text: Compare
+            - 'link "Sullion ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Sullion Sullion office seating for modern interiors. Discover comfortable chairs for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1169] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--sullion/
+              - generic [ref=e1170]:
+                - img "Sullion ergonomic office chair" [ref=e1171]
+                - generic [ref=e1172]: BIFMA
+                - generic [ref=e1173]: "Eco-Score: 5/10"
+              - generic [ref=e1174]:
+                - paragraph [ref=e1175]: Seating Series
+                - heading "Sullion" [level=3] [ref=e1176]
+                - paragraph [ref=e1177]: Sullion office seating for modern interiors. Discover comfortable chairs for modern workspaces.
+                - generic [ref=e1178]:
+                  - paragraph [ref=e1179]: Type:Mesh chairs
+                  - paragraph [ref=e1180]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1181]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1182]:
+              - link "View Details" [ref=e1183] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--sullion/
+              - button "Add to Quote" [ref=e1184]:
+                - img [ref=e1185]
+                - text: Add to Quote
+          - article [ref=e1190]:
+            - button "Add to compare" [ref=e1191]:
+              - img [ref=e1192]
+              - text: Compare
+            - 'link "Sway ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Sway Sway office chairs designed for posture support and comfort. Discover seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1199] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--sway/
+              - generic [ref=e1200]:
+                - img "Sway ergonomic office chair" [ref=e1201]
+                - generic [ref=e1202]: BIFMA
+                - generic [ref=e1203]: "Eco-Score: 5/10"
+              - generic [ref=e1204]:
+                - paragraph [ref=e1205]: Seating Series
+                - heading "Sway" [level=3] [ref=e1206]
+                - paragraph [ref=e1207]: Sway office chairs designed for posture support and comfort. Discover seating for modern workspaces.
+                - generic [ref=e1208]:
+                  - paragraph [ref=e1209]: Type:Mesh chairs
+                  - paragraph [ref=e1210]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1211]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1212]:
+              - link "View Details" [ref=e1213] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--sway/
+              - button "Add to Quote" [ref=e1214]:
+                - img [ref=e1215]
+                - text: Add to Quote
+          - article [ref=e1220]:
+            - button "Add to compare" [ref=e1221]:
+              - img [ref=e1222]
+              - text: Compare
+            - 'link "Toro ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Toro Toro office chairs for durability and comfort. Discover ergonomic seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1229] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--toro/
+              - generic [ref=e1230]:
+                - img "Toro ergonomic office chair" [ref=e1231]
+                - generic [ref=e1232]: BIFMA
+                - generic [ref=e1233]: "Eco-Score: 5/10"
+              - generic [ref=e1234]:
+                - paragraph [ref=e1235]: Seating Series
+                - heading "Toro" [level=3] [ref=e1236]
+                - paragraph [ref=e1237]: Toro office chairs for durability and comfort. Discover ergonomic seating for modern workspaces.
+                - generic [ref=e1238]:
+                  - paragraph [ref=e1239]: Type:Mesh chairs
+                  - paragraph [ref=e1240]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1241]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1242]:
+              - link "View Details" [ref=e1243] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--toro/
+              - button "Add to Quote" [ref=e1244]:
+                - img [ref=e1245]
+                - text: Add to Quote
+          - article [ref=e1250]:
+            - button "Add to compare" [ref=e1251]:
+              - img [ref=e1252]
+              - text: Compare
+            - 'link "Wing ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Wing Wing ergonomic office chairs for posture support and daily comfort. Explore modern seating for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1259] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--wing/
+              - generic [ref=e1260]:
+                - img "Wing ergonomic office chair" [ref=e1261]
+                - generic [ref=e1262]: BIFMA
+                - generic [ref=e1263]: "Eco-Score: 5/10"
+              - generic [ref=e1264]:
+                - paragraph [ref=e1265]: Seating Series
+                - heading "Wing" [level=3] [ref=e1266]
+                - paragraph [ref=e1267]: Wing ergonomic office chairs for posture support and daily comfort. Explore modern seating for modern workspaces.
+                - generic [ref=e1268]:
+                  - paragraph [ref=e1269]: Type:Cafe chairs
+                  - paragraph [ref=e1270]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1271]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1272]:
+              - link "View Details" [ref=e1273] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--wing/
+              - button "Add to Quote" [ref=e1274]:
+                - img [ref=e1275]
+                - text: Add to Quote
+          - article [ref=e1280]:
+            - button "Add to compare" [ref=e1281]:
+              - img [ref=e1282]
+              - text: Compare
+            - 'link "X Mesh ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series X Mesh X-Mesh ergonomic office chair for breathability and comfort. Discover seating for modern workspaces. Type:Mesh chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1289] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--x-mesh/
+              - generic [ref=e1290]:
+                - img "X Mesh ergonomic office chair" [ref=e1291]
+                - generic [ref=e1292]: BIFMA
+                - generic [ref=e1293]: "Eco-Score: 5/10"
+              - generic [ref=e1294]:
+                - paragraph [ref=e1295]: Seating Series
+                - heading "X Mesh" [level=3] [ref=e1296]
+                - paragraph [ref=e1297]: X-Mesh ergonomic office chair for breathability and comfort. Discover seating for modern workspaces.
+                - generic [ref=e1298]:
+                  - paragraph [ref=e1299]: Type:Mesh chairs
+                  - paragraph [ref=e1300]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1301]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1302]:
+              - link "View Details" [ref=e1303] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--x-mesh/
+              - button "Add to Quote" [ref=e1304]:
+                - img [ref=e1305]
+                - text: Add to Quote
+          - article [ref=e1310]:
+            - button "Add to compare" [ref=e1311]:
+              - img [ref=e1312]
+              - text: Compare
+            - 'link "Zilo ergonomic office chair BIFMA Eco-Score: 5/10 Seating Series Zilo Zilo modern office furniture for flexible and stylish workspaces. Explore solutions for modern workspaces. Type:Cafe chairs Size:W600D600H9001000mm (seat height adj. via gas lift) Material:Mesh or fabric back, Moulded foam seat, polyester cover" [ref=e1319] [cursor=pointer]':
+              - /url: /products/seating/oando-seating--zilo/
+              - generic [ref=e1320]:
+                - img "Zilo ergonomic office chair" [ref=e1321]
+                - generic [ref=e1322]: BIFMA
+                - generic [ref=e1323]: "Eco-Score: 5/10"
+              - generic [ref=e1324]:
+                - paragraph [ref=e1325]: Seating Series
+                - heading "Zilo" [level=3] [ref=e1326]
+                - paragraph [ref=e1327]: Zilo modern office furniture for flexible and stylish workspaces. Explore solutions for modern workspaces.
+                - generic [ref=e1328]:
+                  - paragraph [ref=e1329]: Type:Cafe chairs
+                  - paragraph [ref=e1330]: Size:W600D600H9001000mm (seat height adj. via gas lift)
+                  - paragraph [ref=e1331]: Material:Mesh or fabric back, Moulded foam seat, polyester cover
+            - generic [ref=e1332]:
+              - link "View Details" [ref=e1333] [cursor=pointer]:
+                - /url: /products/seating/oando-seating--zilo/
+              - button "Add to Quote" [ref=e1334]:
+                - img [ref=e1335]
+                - text: Add to Quote
+  - contentinfo [ref=e1339]:
+    - generic [ref=e1341]:
+      - generic [ref=e1342]:
+        - link "One and Only Furniture" [ref=e1343] [cursor=pointer]:
+          - /url: /
+          - img "One and Only Furniture" [ref=e1345]
+        - generic [ref=e1346]: Patna, Bihar and Jharkhand, India
+        - generic [ref=e1347]:
+          - link "+91 90310 22875" [ref=e1348] [cursor=pointer]:
+            - /url: tel:+919031022875
+          - link "sales@oando.co.in" [ref=e1349] [cursor=pointer]:
+            - /url: mailto:sales@oando.co.in
+        - generic [ref=e1350]:
+          - link "YouTube" [ref=e1351] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCehXuPNAXkyfODPCwyAU1gQ
+            - img [ref=e1352]
+          - link "Facebook" [ref=e1354] [cursor=pointer]:
+            - /url: https://www.facebook.com/oandofurniture
+            - img [ref=e1355]
+      - generic [ref=e1357]:
+        - generic [ref=e1358]:
+          - paragraph [ref=e1359]: Products
+          - list [ref=e1360]:
+            - listitem [ref=e1361]:
+              - link "All Products" [ref=e1362] [cursor=pointer]:
+                - /url: /products/
+            - listitem [ref=e1363]:
+              - link "Seating" [ref=e1364] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e1365]:
+              - link "Workstations" [ref=e1366] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e1367]:
+              - link "Tables" [ref=e1368] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e1369]:
+              - link "Storage" [ref=e1370] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e1371]:
+              - link "Soft Seating" [ref=e1372] [cursor=pointer]:
+                - /url: /products/soft-seating/
+            - listitem [ref=e1373]:
+              - link "Education" [ref=e1374] [cursor=pointer]:
+                - /url: /products/education/
+        - generic [ref=e1375]:
+          - paragraph [ref=e1376]: Solutions
+          - list [ref=e1377]:
+            - listitem [ref=e1378]:
+              - link "All Solutions" [ref=e1379] [cursor=pointer]:
+                - /url: /solutions/
+            - listitem [ref=e1380]:
+              - link "Seating" [ref=e1381] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e1382]:
+              - link "Workstations" [ref=e1383] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e1384]:
+              - link "Meeting Rooms" [ref=e1385] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e1386]:
+              - link "Storage and Filing" [ref=e1387] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e1388]:
+              - link "Space Planning" [ref=e1389] [cursor=pointer]:
+                - /url: /solutions/
+        - generic [ref=e1390]:
+          - paragraph [ref=e1391]: Company
+          - list [ref=e1392]:
+            - listitem [ref=e1393]:
+              - link "About Us" [ref=e1394] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e1395]:
+              - link "Trusted By" [ref=e1396] [cursor=pointer]:
+                - /url: /trusted-by/
+            - listitem [ref=e1397]:
+              - link "Projects" [ref=e1398] [cursor=pointer]:
+                - /url: /projects/
+            - listitem [ref=e1399]:
+              - link "Portfolio" [ref=e1400] [cursor=pointer]:
+                - /url: /portfolio/
+            - listitem [ref=e1401]:
+              - link "Sustainability" [ref=e1402] [cursor=pointer]:
+                - /url: /sustainability/
+            - listitem [ref=e1403]:
+              - link "After Sales" [ref=e1404] [cursor=pointer]:
+                - /url: /service/
+        - generic [ref=e1405]:
+          - paragraph [ref=e1406]: Support
+          - list [ref=e1407]:
+            - listitem [ref=e1408]:
+              - link "Contact Us" [ref=e1409] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e1410]:
+              - link "2D Configurator" [ref=e1411] [cursor=pointer]:
+                - /url: /configurator/
+            - listitem [ref=e1412]:
+              - link "Get Quote" [ref=e1413] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e1414]:
+              - link "Refund Policy" [ref=e1415] [cursor=pointer]:
+                - /url: /refund-and-return-policy/
+            - listitem [ref=e1416]:
+              - link "Privacy Policy" [ref=e1417] [cursor=pointer]:
+                - /url: /privacy/
+    - generic [ref=e1419]:
+      - generic [ref=e1420]:
+        - link "Refund Policy" [ref=e1421] [cursor=pointer]:
+          - /url: /refund-and-return-policy/
+        - link "Privacy Policy" [ref=e1422] [cursor=pointer]:
+          - /url: /privacy/
+        - link "Terms" [ref=e1423] [cursor=pointer]:
+          - /url: /terms/
+      - generic [ref=e1424]: Copyright 2026 One and Only Furniture. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e1430] [cursor=pointer]:
+    - img [ref=e1431]
+  - alert [ref=e1434]
+  - button "Open workspace assistant" [ref=e1435]:
+    - img [ref=e1436]
+    - generic [ref=e1439]: Workspace assistant
+  - button "Open WhatsApp quick contact" [ref=e1440]:
+    - img [ref=e1441]

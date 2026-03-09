@@ -1,0 +1,211 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "One and Only Furniture - home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "One and Only Furniture" [ref=e8]
+      - button "Open menu" [ref=e10]:
+        - img [ref=e11]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - img "Hero Background" [ref=e16]
+        - generic [ref=e21]:
+          - heading "Contact us" [level=1] [ref=e23]
+          - paragraph [ref=e24]: Share your workspace requirement and our team will respond with next steps.
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - heading "Office and support contacts" [level=3] [ref=e28]
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - img [ref=e31]
+              - generic [ref=e34]:
+                - generic [ref=e35]:
+                  - paragraph [ref=e36]: Corporate office
+                  - paragraph [ref=e37]: 401, Jagat Trade Centre
+                  - paragraph [ref=e38]: Frazer Road
+                  - paragraph [ref=e39]: Patna - 800 013
+                  - paragraph [ref=e40]: India
+                - generic [ref=e41]:
+                  - paragraph [ref=e42]: Showroom
+                  - paragraph [ref=e43]: One and Only Furniture Pvt Ltd
+                  - paragraph [ref=e44]: Opp Patliputra Telephone Exchange
+                  - paragraph [ref=e45]: North Industrial Estate Road
+                  - paragraph [ref=e46]: Patna - 800 010
+                  - paragraph [ref=e47]: India
+            - generic [ref=e48]:
+              - img [ref=e49]
+              - link "+91 98356 30940 (Get a quote)" [ref=e51] [cursor=pointer]:
+                - /url: tel:+919835630940
+            - generic [ref=e52]:
+              - img [ref=e53]
+              - link "+91 90310 22875 (Enquiries)" [ref=e55] [cursor=pointer]:
+                - /url: tel:+919031022875
+            - generic [ref=e56]:
+              - img [ref=e57]
+              - link "sales@oando.co.in" [ref=e60] [cursor=pointer]:
+                - /url: mailto:sales@oando.co.in
+        - generic [ref=e62]:
+          - paragraph [ref=e63]: Fields marked * are required. Share either email or phone and we will respond within 1 business day.
+          - generic [ref=e64]:
+            - generic [ref=e65]: Name *
+            - textbox "Name *" [ref=e66]:
+              - /placeholder: Your Name
+          - generic [ref=e67]:
+            - generic [ref=e68]: Company
+            - textbox "Company" [ref=e69]:
+              - /placeholder: Company Name (optional)
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]: Email
+              - textbox "Email" [ref=e73]:
+                - /placeholder: your@email.com
+            - generic [ref=e74]:
+              - generic [ref=e75]: Phone / WhatsApp
+              - textbox "Phone / WhatsApp" [ref=e76]:
+                - /placeholder: +91...
+          - generic [ref=e77]:
+            - generic [ref=e78]: Preferred Contact
+            - combobox "Preferred Contact" [ref=e79]:
+              - option "Any" [selected]
+              - option "Email"
+              - option "WhatsApp"
+              - option "Phone"
+          - generic [ref=e80]:
+            - generic [ref=e81]: Message *
+            - textbox "Message *" [ref=e82]:
+              - /placeholder: What do you need for your workspace?
+          - generic [ref=e83]:
+            - button "Send - we respond within 1 business day" [disabled] [ref=e84]
+            - paragraph [ref=e85]:
+              - text: Prefer to speak now?
+              - link "Call +91 98356 30940" [ref=e86] [cursor=pointer]:
+                - /url: tel:+919835630940
+              - text: .
+  - contentinfo [ref=e87]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - link "One and Only Furniture" [ref=e91] [cursor=pointer]:
+          - /url: /
+          - img "One and Only Furniture" [ref=e93]
+        - generic [ref=e94]: Patna, Bihar and Jharkhand, India
+        - generic [ref=e95]:
+          - link "+91 90310 22875" [ref=e96] [cursor=pointer]:
+            - /url: tel:+919031022875
+          - link "sales@oando.co.in" [ref=e97] [cursor=pointer]:
+            - /url: mailto:sales@oando.co.in
+        - generic [ref=e98]:
+          - link "YouTube" [ref=e99] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCehXuPNAXkyfODPCwyAU1gQ
+            - img [ref=e100]
+          - link "Facebook" [ref=e102] [cursor=pointer]:
+            - /url: https://www.facebook.com/oandofurniture
+            - img [ref=e103]
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - paragraph [ref=e107]: Products
+          - list [ref=e108]:
+            - listitem [ref=e109]:
+              - link "All Products" [ref=e110] [cursor=pointer]:
+                - /url: /products/
+            - listitem [ref=e111]:
+              - link "Seating" [ref=e112] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e113]:
+              - link "Workstations" [ref=e114] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e115]:
+              - link "Tables" [ref=e116] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e117]:
+              - link "Storage" [ref=e118] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e119]:
+              - link "Soft Seating" [ref=e120] [cursor=pointer]:
+                - /url: /products/soft-seating/
+            - listitem [ref=e121]:
+              - link "Education" [ref=e122] [cursor=pointer]:
+                - /url: /products/education/
+        - generic [ref=e123]:
+          - paragraph [ref=e124]: Solutions
+          - list [ref=e125]:
+            - listitem [ref=e126]:
+              - link "All Solutions" [ref=e127] [cursor=pointer]:
+                - /url: /solutions/
+            - listitem [ref=e128]:
+              - link "Seating" [ref=e129] [cursor=pointer]:
+                - /url: /products/seating/
+            - listitem [ref=e130]:
+              - link "Workstations" [ref=e131] [cursor=pointer]:
+                - /url: /products/workstations/
+            - listitem [ref=e132]:
+              - link "Meeting Rooms" [ref=e133] [cursor=pointer]:
+                - /url: /products/tables/
+            - listitem [ref=e134]:
+              - link "Storage and Filing" [ref=e135] [cursor=pointer]:
+                - /url: /products/storages/
+            - listitem [ref=e136]:
+              - link "Space Planning" [ref=e137] [cursor=pointer]:
+                - /url: /solutions/
+        - generic [ref=e138]:
+          - paragraph [ref=e139]: Company
+          - list [ref=e140]:
+            - listitem [ref=e141]:
+              - link "About Us" [ref=e142] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e143]:
+              - link "Trusted By" [ref=e144] [cursor=pointer]:
+                - /url: /trusted-by/
+            - listitem [ref=e145]:
+              - link "Projects" [ref=e146] [cursor=pointer]:
+                - /url: /projects/
+            - listitem [ref=e147]:
+              - link "Portfolio" [ref=e148] [cursor=pointer]:
+                - /url: /portfolio/
+            - listitem [ref=e149]:
+              - link "Sustainability" [ref=e150] [cursor=pointer]:
+                - /url: /sustainability/
+            - listitem [ref=e151]:
+              - link "After Sales" [ref=e152] [cursor=pointer]:
+                - /url: /service/
+        - generic [ref=e153]:
+          - paragraph [ref=e154]: Support
+          - list [ref=e155]:
+            - listitem [ref=e156]:
+              - link "Contact Us" [ref=e157] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e158]:
+              - link "2D Configurator" [ref=e159] [cursor=pointer]:
+                - /url: /configurator/
+            - listitem [ref=e160]:
+              - link "Get Quote" [ref=e161] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e162]:
+              - link "Refund Policy" [ref=e163] [cursor=pointer]:
+                - /url: /refund-and-return-policy/
+            - listitem [ref=e164]:
+              - link "Privacy Policy" [ref=e165] [cursor=pointer]:
+                - /url: /privacy/
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - link "Refund Policy" [ref=e169] [cursor=pointer]:
+          - /url: /refund-and-return-policy/
+        - link "Privacy Policy" [ref=e170] [cursor=pointer]:
+          - /url: /privacy/
+        - link "Terms" [ref=e171] [cursor=pointer]:
+          - /url: /terms/
+      - generic [ref=e172]: Copyright 2026 One and Only Furniture. All rights reserved.
+  - dialog "Cookie preferences" [ref=e173]:
+    - generic [ref=e175]:
+      - paragraph [ref=e176]:
+        - text: We use essential cookies and optional analytics & attribution cookies to improve discoverability and user journeys. See our
+        - link "Privacy Policy" [ref=e177] [cursor=pointer]:
+          - /url: /privacy/
+        - text: .
+      - generic [ref=e178]:
+        - button "Reject Optional" [ref=e179]
+        - button "Accept All" [ref=e180]
+  - button "Open Next.js Dev Tools" [ref=e186] [cursor=pointer]:
+    - img [ref=e187]
