@@ -577,3 +577,196 @@ export const CONFIGURATOR_PAGE_COPY = {
     "Sectors served",
   ],
 } as const;
+
+export const LEGAL_PAGE_COPY = {
+  privacy: {
+    title: "Privacy Policy",
+    intro: [
+      "One and Only Furniture Private Limited (\"OOFPL\") operates oando.co.in. This policy explains what personal data we collect, how we use it, and what cookies we set when you browse our website or submit an enquiry.",
+      "Personal information includes data that can identify or contact you, such as your name, company, email address, phone number, IP address, and any enquiry details you share through our forms.",
+    ],
+  },
+  terms: {
+    title: "Terms & Conditions",
+    sections: [
+      {
+        heading: "General Terms and Conditions",
+        body: "These Terms and Conditions govern the use of this website and all commercial dealings with One and Only Furniture, including product enquiries, quotations, supply, and support services.",
+      },
+      {
+        heading: "1. Scope",
+        body: "These terms apply to all business relationships with customers, subject to any project-specific written agreement executed between both parties.",
+      },
+      {
+        heading: "2. Quotations and acceptance",
+        body: "Product and service information on this website is informational. A binding transaction occurs only after written quote acceptance and order confirmation.",
+      },
+      {
+        heading: "3. Delivery and installation",
+        body: "Delivery schedules are shared at order confirmation and may vary by project scope, site readiness, and material availability.",
+      },
+      {
+        heading: "4. Warranty and support",
+        body: "Warranty applicability follows the specific product line and agreed terms. Service and support requests are handled through our official channels.",
+      },
+      {
+        heading: "5. Liability",
+        body: "Liability is limited to the extent permitted by law and the value or terms agreed in the corresponding commercial contract.",
+      },
+    ],
+  },
+  imprint: {
+    title: "Imprint",
+    sections: [
+      {
+        heading: "Legal Information",
+        lines: ["One and Only Furniture", "401, Jagat Trade Centre", "Frazer Road", "Patna - 800 001, Bihar", "India"],
+      },
+      {
+        heading: "Represented by",
+        lines: ["Management: Arvind Kumar Singh"],
+      },
+      {
+        heading: "Contact",
+        lines: ["Phone: +91 90310 22875", "Email: sales@oando.co.in"],
+      },
+      {
+        heading: "Business Identification",
+        lines: ["Authorized Dealer for leading office furniture brands.", "Registered in Patna, Bihar."],
+      },
+    ],
+  },
+  refund: {
+    metadataTitle: "Refund and Return Policy",
+    metadataDescription: "Refund, return, replacement, and cancellation policy for One and Only Furniture.",
+    heroTitle: "Refund and return policy",
+    heroSubtitle: "Terms for returns, replacements, cancellations, and refunds.",
+    sections: [
+      {
+        title: "General policy",
+        tone: "white",
+        items: [
+          "Change requests are not accepted after delivery is completed, except for damaged or defective products.",
+          "Exchanges are only provided for products that arrive damaged or defective.",
+          "Product images on the website are representational and a few features may vary on the final product.",
+          "Cancellation is allowed before shipment. Discounted purchases are not eligible for cancellation.",
+        ],
+      },
+      {
+        title: "Damaged or defective products",
+        tone: "soft",
+        items: [
+          "Report damage within 24 hours of delivery by email with product photos.",
+          "Contact: sales@oando.co.in",
+          "Reverse pickup and replacement for damaged product cases are arranged by our team.",
+          "Replaceable faulty parts are usually arranged within 7 days; full replacement can take up to 15 days depending on availability.",
+        ],
+      },
+      {
+        title: "Returns and refunds",
+        tone: "white",
+        items: [
+          "Returns are accepted only when products are damaged on arrival.",
+          "Refund is issued only if replacement or replacement parts are not available for the same product.",
+          "For non-damage refund requests, repackaging and transport charges may apply.",
+          "Refunds are processed via NEFT or back to the original payment method, usually within 7 working days.",
+        ],
+      },
+      {
+        title: "How to initiate return or cancellation",
+        tone: "soft",
+        items: [],
+        contactLines: [
+          "Email: sales@oando.co.in",
+          "Phone: +91 90310 22875",
+          "Corporate Office: 401, Jagat Trade Centre, Frazer Road, Patna - 800 001, Bihar, India",
+        ],
+      },
+    ],
+  },
+} as const;
+
+export const PRODUCTS_PAGE_COPY = {
+  heroTitle: "Workspace products",
+  heroSubtitle:
+    "Furniture categories built for real office workflows, long-term durability, and scalable growth.",
+  strategyKicker: "Product strategy",
+  strategyTitle: "Products selected for performance, not just presentation.",
+  strategyDescription:
+    "We help teams choose categories and specifications that support productivity, maintenance, and long-term value across different departments and work modes.",
+  featureBullets: [
+    "Ergonomic seating for task, executive, and visitor zones.",
+    "Modular workstations for scalable team layouts.",
+    "Meeting and collaboration furniture for shared spaces.",
+    "Storage systems and accessories for organized operations.",
+  ],
+  whyKicker: "Why teams choose us",
+  whyTitle: "A practical product-led delivery model.",
+  consultKicker: "Need recommendations?",
+  consultTitle: "Share your brief and we will suggest the right category mix.",
+  consultDescription:
+    "Tell us your team size, workspace type, and timeline. We will respond with practical product options and implementation guidance.",
+  consultPrimaryCta: "Request product consultation",
+  consultSecondaryCta: "Open 2D configurator",
+  consultTertiaryCta: "Explore planning service",
+  confidenceKicker: "Client confidence",
+  confidenceCta: "Compare selected products",
+  pillars: [
+    {
+      title: "Specification-led guidance",
+      detail:
+        "We map headcount, usage patterns, and budget so product choices are practical from day one.",
+      icon: "check-circle",
+    },
+    {
+      title: "Reliable timelines",
+      detail:
+        "Modular categories and structured planning help teams move from approval to installation with control.",
+      icon: "clock",
+    },
+    {
+      title: "After-sales confidence",
+      detail:
+        "Warranty coverage and service support are built into every proposal, not handled as an afterthought.",
+      icon: "shield",
+    },
+  ],
+  clients: ["DMRC", "Tata Steel", "IndianOil", "HDFC", "NTPC", "L&T"],
+} as const;
+
+export const CATEGORY_ROUTE_COPY = {
+  metadataSuffix: "One and Only Furniture",
+  metadataTail: "Browse our full range of {category} for practical office planning and delivery.",
+  offlineTitle: "Workspace product catalog temporarily unavailable",
+  offlineDescription:
+    "Product data is temporarily unavailable while the catalog reconnects. Please try again shortly.",
+} as const;
+
+export const PDP_ROUTE_COPY = {
+  fallbackDescription: "{name} - premium office furniture from One and Only Furniture.",
+  productBrand: "One and Only Furniture",
+  trustBadges: {
+    madeInIndia: "Made in India",
+    madeInIndiaDescription: "Engineered locally to global standards.",
+    certificationFallback: "Certification available by model",
+    certificationDescription: "Certified for extended use.",
+    warrantyDescription: "Guaranteed durability and performance.",
+  },
+  ctas: {
+    addToQuote: "Add to Quote Cart",
+    addToCompare: "Add To Compare",
+    addedToCompare: "Added To Compare",
+    requestQuote: "Request Quote",
+    consultation: "Book a Consultation",
+    copyLink: "Copy Link",
+    configuration: "Configuration",
+    specifications: "Specifications",
+    keyFeatures: "Key Features",
+    technicalDetails: "Technical Details",
+    materialOptions: "Material Options",
+    modelUnavailable: "3D model currently unavailable for this product.",
+    modelChecking: "Checking 3D model availability...",
+    viewImage: "View Image",
+    view3d: "View in 3D/AR",
+  },
+} as const;

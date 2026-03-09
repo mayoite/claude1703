@@ -205,7 +205,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.24, ease: "easeInOut" }}
-            className="fixed inset-y-0 right-0 z-[70] flex w-[92vw] max-w-md flex-col overflow-y-auto bg-white shadow-2xl lg:hidden"
+            className="drawer-shell fixed inset-y-0 right-0 z-[70] flex w-[92vw] max-w-md flex-col overflow-y-auto lg:hidden"
           >
             <div className="flex items-center justify-between border-b border-neutral-100 px-5 py-4">
               <OneAndOnlyLogo className="h-8" variant="orange" />
@@ -222,7 +222,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
 
             <nav className="flex-1 overflow-y-auto px-5 py-4" aria-label="Mobile primary navigation">
               <div className="mb-4">
-                <div className="ai-search-shell flex items-center gap-2 rounded-2xl px-3 py-2.5">
+                <div className="drawer-search">
                   <Search className="h-4 w-4 text-neutral-500" />
                   <input
                     value={searchQuery}
@@ -237,7 +237,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
 
                 {(showSearchPanel || searchQuery.trim().length >= 2) && (
                   <div className="mt-2 rounded-2xl border border-neutral-200 bg-neutral-50 p-3">
-                    <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-neutral-500">
+                    <p className="mb-2 text-[10px] font-normal tracking-[0.04em] text-neutral-500">
                       {searchLoading
                         ? "Searching"
                         : searchResults.length > 0
@@ -256,7 +256,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                               className="flex items-center justify-between rounded-lg bg-white px-3 py-2 text-sm text-neutral-700"
                             >
                               <span>{result.title}</span>
-                              <span className="text-[10px] uppercase tracking-[0.14em] text-neutral-400">
+                              <span className="text-[10px] tracking-[0.04em] text-neutral-400">
                                 {result.type}
                               </span>
                             </Link>
@@ -284,7 +284,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                           onClick={() =>
                             setAccordion((prev) => ({ ...prev, products: !prev.products }))
                           }
-                          className="flex w-full min-h-12 items-center justify-between rounded-xl px-3 text-[1.0625rem] font-semibold text-neutral-800 hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                          className="drawer-link w-full justify-between"
                         >
                           {link.label}
                           <ChevronDown
@@ -300,7 +300,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                             <Link
                               href="/products"
                               onClick={handleClose}
-                              className="flex min-h-11 items-center rounded-lg px-3 text-base font-semibold text-primary hover:bg-white"
+                              className="drawer-subtle-link text-primary"
                             >
                               All Products
                             </Link>
@@ -317,7 +317,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                                         <Link
                                           href={item.href}
                                           onClick={handleClose}
-                                          className="flex min-h-11 items-center justify-between rounded-lg px-3 text-base text-neutral-700 hover:bg-white"
+                                          className="drawer-subtle-link"
                                         >
                                           <span>{item.name}</span>
                                           {typeof item.count === "number" && (
@@ -334,7 +334,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                                               <Link
                                                 href={subcategory.href}
                                                 onClick={handleClose}
-                                                className="flex min-h-9 items-center justify-between rounded-md px-2 py-1 text-sm text-neutral-600 hover:bg-white"
+                                                className="drawer-subcategory-link"
                                               >
                                                 <span>{subcategory.name}</span>
                                                 {typeof subcategory.count === "number" && (
@@ -363,7 +363,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                       <Link
                         href={link.href}
                         onClick={handleClose}
-                        className="flex min-h-12 items-center rounded-xl px-3 text-[1.0625rem] font-semibold text-neutral-800 hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        className="drawer-link"
                       >
                         {link.label}
                       </Link>
@@ -377,7 +377,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
               <a
                 href="tel:+919835630940"
                 onClick={handleClose}
-                className="mb-3 flex min-h-12 items-center justify-center rounded-lg border border-neutral-200 text-sm font-semibold tracking-[0.06em] text-primary transition-colors hover:border-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                className="mb-3 flex min-h-12 items-center justify-center rounded-lg border border-neutral-200 text-sm font-normal tracking-[0.03em] text-primary transition-colors hover:border-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 aria-label="Call +91 98356 30940"
               >
                 Call +91 98356 30940

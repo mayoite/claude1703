@@ -3,6 +3,8 @@
  * These are reference patterns. Adapt as needed for your use cases.
  */
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { SmartAssistant, smartQuery } from '@/lib/openai-client';
 const configuredModel = process.env.OPENAI_MODEL || 'gpt-5.4';
 type ExampleConversationHistory = Array<{ role: 'user' | 'assistant'; content: string }>;

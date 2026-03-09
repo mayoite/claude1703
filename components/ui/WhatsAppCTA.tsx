@@ -1,24 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, Phone, X } from "lucide-react";
 import { hasConsentChoice } from "@/lib/consent";
 
 export function WhatsAppCTA() {
   const [open, setOpen] = useState(false);
-  const [consentChosen, setConsentChosen] = useState(true);
+  const isHydrated = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+  const consentSettled = useSyncExternalStore(
+    (onStoreChange) => {
+      if (typeof window === "undefined") return () => {};
+      const handler = () => onStoreChange();
+      window.addEventListener("oando-cookie-consent", handler as EventListener);
+      return () => window.removeEventListener("oando-cookie-consent", handler as EventListener);
+    },
+    () => hasConsentChoice(),
+    () => false,
+  );
 
-  useEffect(() => {
-    setConsentChosen(hasConsentChoice());
-    const handleConsent = () => setConsentChosen(true);
-    window.addEventListener("oando-cookie-consent", handleConsent as EventListener);
-    return () => window.removeEventListener("oando-cookie-consent", handleConsent as EventListener);
-  }, []);
+  if (!isHydrated) return null;
 
-  const buttonOffset = consentChosen ? "bottom-4 sm:bottom-24" : "bottom-36 sm:bottom-24";
-  const panelOffset = consentChosen ? "bottom-20 sm:bottom-40" : "bottom-52 sm:bottom-40";
+  const buttonOffset = consentSettled ? "bottom-4 sm:bottom-24" : "bottom-36 sm:bottom-24";
+  const panelOffset = consentSettled ? "bottom-20 sm:bottom-40" : "bottom-52 sm:bottom-40";
 
   return (
     <>

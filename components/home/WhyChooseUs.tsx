@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ShieldCheck, Zap, Leaf, Activity } from "lucide-react";
-import { useScrollAnimation } from "@/lib/hooks/useScrollAnimation";
+import { useInViewOnce } from "@/hooks/useInViewOnce";
 
 const features = [
   {
@@ -32,7 +32,7 @@ const features = [
 ];
 
 export function WhyChooseUs() {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useInViewOnce();
 
   return (
     <section className="py-16 md:py-24 bg-white">

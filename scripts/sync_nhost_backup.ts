@@ -6,6 +6,11 @@ import { repairProductSlug } from "@/lib/catalogSlug";
 type ProductRow = {
   id: string;
   category_id: string;
+  canonical_category_id?: string | null;
+  canonical_subcategory_id?: string | null;
+  canonical_subcategory_label?: string | null;
+  canonical_slug_v2?: string | null;
+  canonical_series_id?: string | null;
   series: string | null;
   name: string;
   slug: string | null;
@@ -26,6 +31,7 @@ type ProductRow = {
 
 type CategoryRow = {
   id: string;
+  canonical_id?: string | null;
   name: string;
   description: string | null;
 };
@@ -216,6 +222,11 @@ async function main() {
       return {
         id: row.id,
         category_id: row.category_id,
+        canonical_category_id: row.canonical_category_id ?? row.category_id,
+        canonical_subcategory_id: row.canonical_subcategory_id ?? null,
+        canonical_subcategory_label: row.canonical_subcategory_label ?? null,
+        canonical_slug_v2: row.canonical_slug_v2 ?? null,
+        canonical_series_id: row.canonical_series_id ?? null,
         series: row.series ?? null,
         name: row.name,
         slug: repairedSlug,
@@ -242,6 +253,7 @@ async function main() {
 
     const categoryPayload = categories.map((row) => ({
       id: row.id,
+      canonical_id: row.canonical_id ?? row.id,
       name: row.name,
       description: row.description ?? null,
     }));
@@ -332,6 +344,7 @@ async function main() {
       await tx`
         create table public.catalog_categories (
           id text primary key,
+          canonical_id text,
           name text not null,
           description text
         );
@@ -341,6 +354,11 @@ async function main() {
         create table public.catalog_products (
           id uuid primary key,
           category_id text not null,
+          canonical_category_id text,
+          canonical_subcategory_id text,
+          canonical_subcategory_label text,
+          canonical_slug_v2 text,
+          canonical_series_id text,
           series text,
           name text not null,
           slug text not null unique,
@@ -427,6 +445,9 @@ async function main() {
       await tx.unsafe(`
         create index idx_catalog_products_slug on public.catalog_products(slug);
         create index idx_catalog_products_category_id on public.catalog_products(category_id);
+        create index idx_catalog_products_canonical_category_id on public.catalog_products(canonical_category_id);
+        create index idx_catalog_products_canonical_subcategory_id on public.catalog_products(canonical_subcategory_id);
+        create index idx_catalog_products_canonical_slug_v2 on public.catalog_products(canonical_slug_v2);
         create index idx_catalog_products_name on public.catalog_products(name);
         create index idx_catalog_products_category_normalized_name_key
           on public.catalog_products(category_id, normalized_name_key);
@@ -518,14 +539,19 @@ async function main() {
       `);
 
       if (categoryPayload.length > 0) {
-        await tx`insert into public.catalog_categories ${tx(categoryPayload, ["id", "name", "description"])}`;
-        await tx`insert into public.categories ${tx(categoryPayload, ["id", "name", "description"])}`;
+        await tx`insert into public.catalog_categories ${tx(categoryPayload, ["id", "canonical_id", "name", "description"])}`;
+        await tx`insert into public.categories ${tx(categoryPayload, ["id", "canonical_id", "name", "description"])}`;
       }
       if (productPayload.length > 0) {
         await tx`
           insert into public.catalog_products ${tx(productPayload, [
             "id",
             "category_id",
+            "canonical_category_id",
+            "canonical_subcategory_id",
+            "canonical_subcategory_label",
+            "canonical_slug_v2",
+            "canonical_series_id",
             "series",
             "name",
             "slug",
@@ -548,6 +574,11 @@ async function main() {
           insert into public.products ${tx(productPayload, [
             "id",
             "category_id",
+            "canonical_category_id",
+            "canonical_subcategory_id",
+            "canonical_subcategory_label",
+            "canonical_slug_v2",
+            "canonical_series_id",
             "series",
             "name",
             "slug",

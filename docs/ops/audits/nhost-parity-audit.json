@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-03-09T10:49:22.258Z",
+  "supabaseHost": "erpweaiypimorcunaimz.supabase.co",
+  "nhostDbHost": "bggcbrfwssqgflkuhgkg.db.ap-south-1.nhost.run:5432",
+  "supabaseCounts": {
+    "categories": 6,
+    "products": 145,
+    "product_specs": 145,
+    "product_images": 1478,
+    "product_slug_aliases": 704,
+    "business_stats_current": 1
+  },
+  "nhostCounts": {
+    "catalog_categories": 6,
+    "catalog_products": 145,
+    "catalog_product_specs": 145,
+    "catalog_product_images": 1478,
+    "catalog_product_slug_aliases": 704,
+    "business_stats_current": 1,
+    "categories": 6,
+    "products": 145,
+    "product_specs": 145,
+    "product_images": 1478,
+    "product_slug_aliases": 704
+  },
+  "diffs": [
+    {
+      "table": "categories -> categories",
+      "supabase": 6,
+      "nhost": 6,
+      "diff": 0
+    },
+    {
+      "table": "products -> products",
+      "supabase": 145,
+      "nhost": 145,
+      "diff": 0
+    },
+    {
+      "table": "product_specs -> product_specs",
+      "supabase": 145,
+      "nhost": 145,
+      "diff": 0
+    },
+    {
+      "table": "product_images -> product_images",
+      "supabase": 1478,
+      "nhost": 1478,
+      "diff": 0
+    },
+    {
+      "table": "product_slug_aliases -> product_slug_aliases",
+      "supabase": 704,
+      "nhost": 704,
+      "diff": 0
+    },
+    {
+      "table": "business_stats_current -> business_stats_current",
+      "supabase": 1,
+      "nhost": 1,
+      "diff": 0
+    },
+    {
+      "table": "categories -> catalog_categories",
+      "supabase": 6,
+      "nhost": 6,
+      "diff": 0
+    },
+    {
+      "table": "products -> catalog_products",
+      "supabase": 145,
+      "nhost": 145,
+      "diff": 0
+    },
+    {
+      "table": "product_specs -> catalog_product_specs",
+      "supabase": 145,
+      "nhost": 145,
+      "diff": 0
+    },
+    {
+      "table": "product_images -> catalog_product_images",
+      "supabase": 1478,
+      "nhost": 1478,
+      "diff": 0
+    },
+    {
+      "table": "product_slug_aliases -> catalog_product_slug_aliases",
+      "supabase": 704,
+      "nhost": 704,
+      "diff": 0
+    }
+  ],
+  "graphqlChecks": [
+    {
+      "label": "products",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "label": "product_slug_aliases",
+      "ok": false,
+      "detail": "field 'product_slug_aliases' not found in type: 'query_root'"
+    },
+    {
+      "label": "business_stats_current",
+      "ok": true,
+      "detail": "ok"
+    }
+  ],
+  "sampledSlugChecks": [
+    {
+      "slug": "accent-study",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "cabin-60x30",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "cabin-l-shape",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "classy-executive",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "cocoon-lounge",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "conference-8-seater",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "fluid-task",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "fluid-x",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-collaborative--cocoon-pod",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-collaborative--solace-pod",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    }
+  ],
+  "sampledAliasChecks": [
+    {
+      "alias_slug": "education-classroom-academia",
+      "canonical_slug": "oando-educational--academia",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "soft-seating-lounge-accent",
+      "canonical_slug": "oando-soft-seating--accent",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "education-classroom-accent-study-chair",
+      "canonical_slug": "accent-study",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "soft-seating-lounge-adam",
+      "canonical_slug": "oando-soft-seating--adam",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "workstations-height-adjustable-adaptable",
+      "canonical_slug": "oando-workstations--adaptable",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "soft-seating-sofa-alonzo",
+      "canonical_slug": "oando-soft-seating--alonzo",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "tables-cabin-apex",
+      "canonical_slug": "oando-tables--apex",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "soft-seating-lounge-arcana",
+      "canonical_slug": "oando-soft-seating--arcana",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "soft-seating-lounge-arco",
+      "canonical_slug": "oando-soft-seating--arco",
+      "resolvesInNhost": true
+    },
+    {
+      "alias_slug": "soft-seating-sofa-armora",
+      "canonical_slug": "oando-soft-seating--armora",
+      "resolvesInNhost": true
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { HOMEPAGE_PARTNERSHIP_CONTENT } from "@/data/site/homepage";
 
 export function PartnershipBanner() {
   return (
@@ -9,8 +10,8 @@ export function PartnershipBanner() {
         <div className="flex flex-col items-center justify-between gap-12 md:flex-row">
           <div className="shrink-0">
             <Image
-              src="/catalog-logo-sharp.webp"
-              alt="AFC - Authorized Franchise Partner"
+              src={HOMEPAGE_PARTNERSHIP_CONTENT.image.src}
+              alt={HOMEPAGE_PARTNERSHIP_CONTENT.image.alt}
               width={224}
               height={153}
               sizes="(max-width: 768px) 154px, 224px"
@@ -21,17 +22,16 @@ export function PartnershipBanner() {
 
           <div className="max-w-2xl text-center md:text-right">
             <span className="typ-label mb-4 block text-neutral-700">
-              Official Strategic Partnership
+              {HOMEPAGE_PARTNERSHIP_CONTENT.kicker}
             </span>
             <h2 className="typ-section mb-6 text-neutral-950">
-              Authorized Franchise <br className="hidden md:block" /> Partner
+              {HOMEPAGE_PARTNERSHIP_CONTENT.title[0]} <br className="hidden md:block" /> {HOMEPAGE_PARTNERSHIP_CONTENT.title[1]}
             </h2>
             <p className="mb-8 max-w-lg text-base text-neutral-800 md:ml-auto">
-              Bringing world-class manufacturing excellence and sustainable furniture
-              solutions to your workspace.
+              {HOMEPAGE_PARTNERSHIP_CONTENT.description}
             </p>
-            <Link href="/about" className="link-arrow typ-label">
-              Partner Profile <ArrowRight className="h-4 w-4" />
+            <Link href={HOMEPAGE_PARTNERSHIP_CONTENT.cta.href} className="link-arrow typ-label">
+              {HOMEPAGE_PARTNERSHIP_CONTENT.cta.label} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

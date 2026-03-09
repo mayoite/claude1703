@@ -1,3 +1,5 @@
+import { LEGAL_PAGE_COPY } from "@/data/site/routeCopy";
+
 const COOKIE_ROWS = [
   {
     name: "oando_cookie_consent",
@@ -60,21 +62,13 @@ export default function PrivacyPage() {
     <section className="flex min-h-screen flex-col items-center bg-white pt-24">
       <section className="container px-6 py-12 2xl:px-0">
         <h1 className="mb-12 font-slogan text-5xl text-neutral-900 md:text-6xl">
-          Privacy Policy
+          {LEGAL_PAGE_COPY.privacy.title}
         </h1>
 
         <div className="space-y-6 font-light text-neutral-600">
-          <p>
-            One and Only Furniture Private Limited ("OOFPL") operates oando.co.in. This policy
-            explains what personal data we collect, how we use it, and what cookies we set when
-            you browse our website or submit an enquiry.
-          </p>
-
-          <p>
-            Personal information includes data that can identify or contact you, such as your
-            name, company, email address, phone number, IP address, and any enquiry details you
-            share through our forms.
-          </p>
+          {LEGAL_PAGE_COPY.privacy.intro.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
 
           <h2 className="mt-8 text-xl font-medium text-neutral-900">
             How we use your information

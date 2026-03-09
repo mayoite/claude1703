@@ -12,9 +12,10 @@ import {
   groupCategories,
   type GroupedCategory,
 } from "@/lib/navigation";
-import { SITE_NAV_LINKS, SITE_CTA_LINKS } from "@/lib/siteNav";
+import { SITE_NAV_LINKS } from "@/lib/siteNav";
 import { MobileNavDrawer } from "@/components/site/MobileNavDrawer";
 import { cn } from "@/lib/utils";
+import { SITE_BRAND } from "@/data/site/brand";
 
 function prettify(id: string): string {
   return id
@@ -183,6 +184,10 @@ export function SiteHeader() {
     setSearchQuery("");
   };
 
+  const openGuidedPlanner = () => {
+    window.dispatchEvent(new CustomEvent("oando-assistant:open"));
+  };
+
   return (
     <>
       <header
@@ -201,17 +206,10 @@ export function SiteHeader() {
             )}
             aria-label="Utility navigation"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-neutral-400">
-              Workspace Furniture Specialist
+            <p className="text-xs font-normal tracking-[0.04em] text-neutral-400">
+              {SITE_BRAND.utilityTagline}
             </p>
-            <div className="flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
-              <a
-                href="tel:+919835630940"
-                className="text-neutral-700 hover:text-primary transition-colors"
-                aria-label="Call +91 98356 30940"
-              >
-                +91 98356 30940
-              </a>
+            <div className="flex items-center gap-5 text-xs font-normal tracking-[0.04em] text-neutral-500">
               <Link href="/service" className="hover:text-primary transition-colors">
                 Service
               </Link>
@@ -230,14 +228,14 @@ export function SiteHeader() {
             <Link
               href="/"
               aria-label="One and Only Furniture - home"
-              className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              className="inline-flex h-full shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
             >
               <OneAndOnlyLogo className="h-8 md:h-9" variant="orange" />
             </Link>
 
             {/* Center nav — desktop only */}
             <nav
-              className="hidden lg:flex items-center gap-1"
+              className="hidden h-full lg:flex items-center gap-1"
               aria-label="Primary navigation"
             >
               {SITE_NAV_LINKS.map((link) => {
@@ -258,7 +256,7 @@ export function SiteHeader() {
                         aria-controls="products-mega-menu"
                         onFocus={() => setActiveMega(link.label)}
                         className={cn(
-                          "relative inline-flex items-center gap-1 rounded-lg px-3 py-2 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                          "relative inline-flex items-center gap-1 rounded-lg px-3 py-2 text-base font-normal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                           isActive
                             ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
                             : activeMega === link.label
@@ -283,7 +281,7 @@ export function SiteHeader() {
                     key={link.label}
                     href={link.href}
                     className={cn(
-                      "relative rounded-lg px-3 py-2 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      "relative rounded-lg px-3 py-2 text-base font-normal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                       isActive
                         ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
                         : "text-neutral-700 hover:text-primary",
@@ -296,7 +294,7 @@ export function SiteHeader() {
             </nav>
 
             {/* Right CTAs */}
-            <div className="flex items-center gap-2">
+            <div className="flex h-full items-center gap-2">
               <div ref={searchPanelRef} className="relative hidden xl:block">
                 <label className="ai-search-shell flex h-11 items-center gap-2.5 rounded-full px-4">
                   <Search className="h-4 w-4 text-neutral-500" />
@@ -320,7 +318,7 @@ export function SiteHeader() {
                       transition={{ duration: 0.15 }}
                       className="absolute right-0 mt-2 w-[24rem] overflow-hidden rounded-3xl border border-neutral-200 bg-white p-4 shadow-[0_24px_55px_-30px_rgba(0,0,0,0.45)]"
                     >
-                      <div className="mb-2 flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-500">
+                      <div className="mb-2 flex items-center justify-between text-[11px] font-normal tracking-[0.04em] text-neutral-500">
                         <span>{searchSectionTitle}</span>
                         {searchSource && (
                           <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px]">
@@ -381,20 +379,13 @@ export function SiteHeader() {
                 </AnimatePresence>
               </div>
 
-              {SITE_CTA_LINKS.map((cta) => (
-                <Link
-                  key={cta.label}
-                  href={cta.href}
-                  className={cn(
-                    "rounded-full px-4 py-2 text-sm font-bold uppercase tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-                    cta.variant === "primary"
-                      ? "bg-primary text-white hover:bg-primary/90"
-                      : "hidden md:inline-flex border border-neutral-300 text-neutral-700 hover:border-neutral-500 hover:text-neutral-900",
-                  )}
-                >
-                  {cta.label}
-                </Link>
-              ))}
+              <button
+                type="button"
+                onClick={openGuidedPlanner}
+                className="btn-nav-primary"
+              >
+                Guided Planner
+              </button>
 
               {/* Hamburger — mobile only */}
               <button
@@ -482,7 +473,7 @@ export function SiteHeader() {
                     <Link
                       href="/products"
                       onClick={() => setActiveMega(null)}
-                      className="text-base font-semibold text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      className="text-base font-normal text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       All Products &gt;
                     </Link>

@@ -63,25 +63,25 @@
 - [x] Refactor assistant surfaces to use shared config and helpers
 
 ## Section 7: Homepage overhaul
-- [ ] Refactor active homepage sections to shared foundation classes
+- [x] Refactor active homepage sections to shared foundation classes
 - [ ] Remove repeated local visual formulas
-- [ ] Move repeated proof/contact/CTA copy into `data/site/*`
-- [ ] Verify mobile hierarchy
-- [ ] Verify desktop hierarchy
-- [ ] Verify no floating-control collisions
+- [x] Move repeated proof/contact/CTA copy into `data/site/*`
+- [x] Verify mobile hierarchy
+- [x] Verify desktop hierarchy
+- [x] Verify no floating-control collisions
 
 ## Section 8: Route rollout
 - [x] About, trusted-by, projects, portfolio, gallery, and showrooms
 - [x] Contact, solutions, configurator, planning, service, downloads, brochure, career, and sustainability
-- [ ] Privacy, terms, imprint, and refund routes
-- [ ] Products, category pages, and PDP routes for shared page-level copy only
+- [x] Privacy, terms, imprint, and refund routes
+- [x] Products, category pages, and PDP routes for shared page-level copy only
 
 ## Section 9: Hardcoding verification
-- [ ] Search for repeated region strings outside `data/site/*`
-- [ ] Search for repeated CTA strings outside `data/site/*`
-- [ ] Search for repeated trust/client strings outside `data/site/*`
+- [x] Search for repeated region strings outside `data/site/*`
+- [x] Search for repeated CTA strings outside `data/site/*`
+- [x] Search for repeated trust/client strings outside `data/site/*`
 - [x] Search for assistant prompt duplication
-- [ ] Search for repeated arbitrary visual formulas in homepage and shell files
+- [x] Search for repeated arbitrary visual formulas in homepage and shell files
 
 ## Section 10: Final validation
 - [x] `npm run lint`

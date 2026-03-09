@@ -27,6 +27,7 @@ import { useQuoteCart } from "@/lib/store/quoteCart";
 import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
 import { sanitizeDisplayText as normalizeDisplayText } from "@/lib/displayText";
+import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
 
 interface ProductViewerProps {
   product: Product;
@@ -35,7 +36,7 @@ interface ProductViewerProps {
   categoryId?: string;
 }
 
-function sanitizeDisplayText(value: string): string {
+export function sanitizeDisplayText(value: string): string {
   return String(value || "")
     .replace(/[�]+/g, "")
     .replace(/â€”/g, "—")
@@ -238,7 +239,7 @@ export function ProductViewer({
       : "Warranty on request";
   const certificationText = product.metadata?.bifmaCertified
     ? "BIFMA Certified"
-    : "Certification available by model";
+    : PDP_ROUTE_COPY.trustBadges.certificationFallback;
   const sustainabilityText =
     typeof product.metadata?.sustainabilityScore === "number"
       ? `Eco Score ${product.metadata.sustainabilityScore}/10`
@@ -378,20 +379,20 @@ export function ProductViewer({
                       : "text-neutral-400 cursor-not-allowed",
                   )}
                 >
-                  {is3DMode ? "View Image" : "View in 3D/AR"}
+                  {is3DMode ? PDP_ROUTE_COPY.ctas.viewImage : PDP_ROUTE_COPY.ctas.view3d}
                 </button>
               </div>
               {!isModelAvailable && !isCheckingModel && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
                   <p className="text-xs uppercase tracking-[0.14em] text-neutral-500">
-                    3D model currently unavailable for this product.
+                    {PDP_ROUTE_COPY.ctas.modelUnavailable}
                   </p>
                 </div>
               )}
               {isCheckingModel && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
                   <p className="text-xs uppercase tracking-[0.14em] text-neutral-500">
-                    Checking 3D model availability...
+                    {PDP_ROUTE_COPY.ctas.modelChecking}
                   </p>
                 </div>
               )}
@@ -503,10 +504,10 @@ export function ProductViewer({
                     navigator.clipboard.writeText(window.location.href);
                     // could add a toast here
                   }}
-                  aria-label="Copy product link"
+                  aria-label={PDP_ROUTE_COPY.ctas.copyLink}
                   className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors"
                 >
-                  <Share2 className="w-3.5 h-3.5" /> Copy Link
+                  <Share2 className="w-3.5 h-3.5" /> {PDP_ROUTE_COPY.ctas.copyLink}
                 </button>
               </div>
             </div>
@@ -516,7 +517,7 @@ export function ProductViewer({
               <div className="pt-7 border-t border-neutral-100 mb-8">
                 <div className="flex items-center justify-between mb-4">
                   <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-400">
-                    Configuration
+                    {PDP_ROUTE_COPY.ctas.configuration}
                   </p>
                   <span className="text-xs text-neutral-400">
                     {product.variants.length} options
@@ -592,7 +593,7 @@ export function ProductViewer({
                 className="group mb-2 flex w-full items-center justify-between border border-primary text-primary px-6 py-3.5 hover:bg-primary hover:text-white transition-colors"
               >
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                  Add to Quote Cart
+                  {PDP_ROUTE_COPY.ctas.addToQuote}
                 </span>
                 <ShoppingCart className="w-4 h-4" />
               </button>
@@ -617,7 +618,7 @@ export function ProductViewer({
                   )}
                 >
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                    {inCompare ? "Added To Compare" : "Add To Compare"}
+                    {inCompare ? PDP_ROUTE_COPY.ctas.addedToCompare : PDP_ROUTE_COPY.ctas.addToCompare}
                   </span>
                   <GitCompareArrows className="w-4 h-4" />
                 </button>
@@ -627,7 +628,7 @@ export function ProductViewer({
                 className="group flex w-full items-center justify-between bg-neutral-900 text-white px-6 py-4 hover:bg-neutral-800 transition-colors"
               >
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                  Request Quote
+                  {PDP_ROUTE_COPY.ctas.requestQuote}
                 </span>
                 <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -636,7 +637,7 @@ export function ProductViewer({
                 className="group flex w-full items-center justify-between border border-neutral-200 text-neutral-900 px-6 py-3.5 hover:border-neutral-400 transition-colors mt-2"
               >
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                  Book a Consultation
+                  {PDP_ROUTE_COPY.ctas.consultation}
                 </span>
                 <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -650,16 +651,16 @@ export function ProductViewer({
                   {warrantyText}
                 </span>
                 <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                  Guaranteed durability and performance.
+                  {PDP_ROUTE_COPY.trustBadges.warrantyDescription}
                 </p>
               </div>
               <div className="flex flex-col gap-2">
                 <Award className="w-5 h-5 text-neutral-400" />
                 <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-900">
-                  Made in India
+                  {PDP_ROUTE_COPY.trustBadges.madeInIndia}
                 </span>
                 <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                  Engineered locally to global standards.
+                  {PDP_ROUTE_COPY.trustBadges.madeInIndiaDescription}
                 </p>
               </div>
               <div className="flex flex-col gap-2">
@@ -668,7 +669,7 @@ export function ProductViewer({
                   {certificationText}
                 </span>
                 <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                  Certified for extended use.
+                  {PDP_ROUTE_COPY.trustBadges.certificationDescription}
                 </p>
               </div>
             </div>
@@ -676,7 +677,7 @@ export function ProductViewer({
             {/* Specifications */}
             <div className="pt-7 border-t border-neutral-100">
               <h2 className="text-xl font-semibold text-neutral-900 mb-4">
-                Specifications
+                {PDP_ROUTE_COPY.ctas.specifications}
               </h2>
               <div className="rounded-lg border border-neutral-200 overflow-hidden mb-7">
                 {specRows.map((row) => (
@@ -697,7 +698,7 @@ export function ProductViewer({
               {features.length > 0 && (
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-500 mb-3">
-                    Key Features
+                    {PDP_ROUTE_COPY.ctas.keyFeatures}
                   </p>
                   <ul className="space-y-2">
                     {features.slice(0, 8).map((f: string, i: number) => (
@@ -716,7 +717,7 @@ export function ProductViewer({
               {inlineSpecs.length > 0 && (
                 <div className="pt-7 border-t border-neutral-100 mt-7">
                   <h3 className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-500 mb-3">
-                    Technical Details
+                    {PDP_ROUTE_COPY.ctas.technicalDetails}
                   </h3>
                   <div className="rounded-lg border border-neutral-200 overflow-hidden">
                     {inlineSpecs.map((row) => (
@@ -739,7 +740,7 @@ export function ProductViewer({
               {materials.length > 0 && (
                 <div className="pt-7 border-t border-neutral-100 mt-7">
                   <h3 className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-500 mb-3">
-                    Material Options
+                    {PDP_ROUTE_COPY.ctas.materialOptions}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {materials.map((material) => (

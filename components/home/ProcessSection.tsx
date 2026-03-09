@@ -3,82 +3,45 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-const STEPS = [
-  {
-    title: "Scope and align",
-    sla: "Day 1-2",
-    deliverable: "Signed scope brief",
-    detail:
-      "Capture requirement scope, budget range, timeline, and approval checkpoints before design starts.",
-  },
-  {
-    title: "Design and validate",
-    sla: "Day 3-7",
-    deliverable: "Approved layout and BOQ options",
-    detail:
-      "Study the layout and BOQ, then suggest the best options to ensure a client-friendly outcome.",
-  },
-  {
-    title: "Supply and install",
-    sla: "As per approved schedule",
-    deliverable: "Installed and handed-over workspace",
-    detail:
-      "Coordinate production windows, dispatch schedules, and on-site installation with minimum disruption.",
-  },
-  {
-    title: "Support after handover",
-    sla: "Ongoing",
-    deliverable: "Warranty and service response support",
-    detail:
-      "Manage warranty registration, issue response, and after-sales support through one accountable team.",
-  },
-] as const;
+import { HOMEPAGE_PROCESS_CONTENT } from "@/data/site/homepage";
 
 export function ProcessSection() {
   return (
-    <section className="w-full bg-neutral-950 py-18 md:py-24">
-      <div className="container px-6 2xl:px-0">
+    <section className="home-section bg-neutral-950 py-18 md:py-24">
+      <div className="home-shell">
         <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="typ-label mb-4 text-white/60">How we work</p>
-            <h2 className="typ-section max-w-3xl text-white">
-              A clear four-step delivery system.
+            <p className="home-kicker mb-4 text-white/60">{HOMEPAGE_PROCESS_CONTENT.kicker}</p>
+            <h2 className="home-heading max-w-3xl text-white">
+              {HOMEPAGE_PROCESS_CONTENT.title}
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">
-              Each project follows a transparent sequence so procurement, facilities, and leadership
-              teams stay aligned from day one.
+              {HOMEPAGE_PROCESS_CONTENT.description}
             </p>
           </div>
-          <Link href="/contact" className="btn-primary self-start md:self-auto">
-            Start your project brief <ArrowRight className="h-4 w-4" />
+          <Link href={HOMEPAGE_PROCESS_CONTENT.cta.href} className="btn-primary self-start md:self-auto">
+            {HOMEPAGE_PROCESS_CONTENT.cta.label} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {STEPS.map((step, index) => (
+          {HOMEPAGE_PROCESS_CONTENT.steps.map((step, index) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: index * 0.07, duration: 0.5, ease: "easeOut" }}
-              className="group rounded-xl border border-white/20 bg-white/5 p-6 transition-colors hover:border-primary/60"
+              className="home-step-card group"
             >
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-                Step {index + 1}
-              </p>
-              <p className="mb-3 text-2xl font-light leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-white">
+              <p className="home-step-card__step">Step {index + 1}</p>
+              <p className="mb-3 text-2xl font-light leading-tight tracking-tight text-white">
                 {step.title}
               </p>
               <p className="text-base leading-relaxed text-white/75">{step.detail}</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                <span className="inline-flex rounded-full border border-primary/50 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-primary">
-                  {step.sla}
-                </span>
-                <span className="inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
-                  {step.deliverable}
-                </span>
+                <span className="home-chip home-chip--accent">{step.sla}</span>
+                <span className="home-step-card__meta">{step.deliverable}</span>
               </div>
             </motion.div>
           ))}

@@ -22,6 +22,11 @@ export interface ProductMetadata {
     source?: string;
     category?: string;
     subcategory?: string;
+    categoryIdCanonical?: string;
+    subcategoryId?: string;
+    subcategoryLabel?: string;
+    canonicalSlugV2?: string;
+    canonicalSeriesId?: string;
     bifmaCertified?: boolean;
     warrantyYears?: number;
     sustainabilityScore?: number;

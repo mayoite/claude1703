@@ -1,4 +1,10 @@
-const CATEGORY_SLUG_SEGMENTS: Record<string, string> = {
+import {
+  getCanonicalSubcategoryId,
+  normalizeRequestedCategoryId,
+  slugifyCatalogToken,
+} from "@/lib/catalogCategories";
+
+const LEGACY_CATEGORY_SLUG_SEGMENTS: Record<string, string> = {
   seating: "seating",
   "oando-seating": "seating",
   "oando-chairs": "seating",
@@ -24,27 +30,80 @@ function normalize(input: unknown): string {
 }
 
 export function slugifyProductName(name: unknown): string {
-  return String(name || "")
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/×/g, "x")
-    .replace(/&/g, " and ")
-    .replace(/[^a-zA-Z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/-+/g, "-")
-    .toLowerCase();
+  return slugifyCatalogToken(name);
 }
 
 export function categorySlugSegment(categoryId: unknown): string {
   const normalized = normalize(categoryId);
-  return CATEGORY_SLUG_SEGMENTS[normalized] || normalized.replace(/^oando-/, "") || "products";
+  return LEGACY_CATEGORY_SLUG_SEGMENTS[normalized] || normalized.replace(/^oando-/, "") || "products";
 }
 
-export function buildCanonicalProductSlug(categoryId: unknown, name: unknown): string {
+export function canonicalCategorySlugSegment(categoryId: unknown): string {
+  const canonical = normalizeRequestedCategoryId(String(categoryId || ""));
+  return canonical || slugifyProductName(categoryId) || "products";
+}
+
+export function buildCanonicalCatalogProductSlug(input: {
+  categoryId?: unknown;
+  subcategoryId?: unknown;
+  subcategoryLabel?: unknown;
+  name?: unknown;
+}): string {
+  const categorySegment = canonicalCategorySlugSegment(input.categoryId);
+  const subcategorySource =
+    String(input.subcategoryId || "").trim() ||
+    String(input.subcategoryLabel || "").trim();
+  const subcategorySegment = subcategorySource
+    ? getCanonicalSubcategoryId(categorySegment, subcategorySource)
+    : "";
+  const productNameSlug = slugifyProductName(input.name);
+  if (!productNameSlug) return "";
+  if (!subcategorySegment) return `${categorySegment}-${productNameSlug}`;
+  return `${categorySegment}-${subcategorySegment}-${productNameSlug}`;
+}
+
+export function buildCanonicalSeriesId(input: {
+  categoryId?: unknown;
+  subcategoryId?: unknown;
+  subcategoryLabel?: unknown;
+  seriesName?: unknown;
+}): string {
+  const categorySegment = canonicalCategorySlugSegment(input.categoryId);
+  const subcategorySource =
+    String(input.subcategoryId || "").trim() ||
+    String(input.subcategoryLabel || "").trim();
+  const subcategorySegment = subcategorySource
+    ? getCanonicalSubcategoryId(categorySegment, subcategorySource)
+    : "general";
+  const seriesSegment = slugifyProductName(input.seriesName || "series");
+  return `${categorySegment}-${subcategorySegment}-${seriesSegment}`;
+}
+
+export function isLegacyCatalogSlug(slug: unknown, categoryId: unknown): boolean {
+  const normalizedSlug = normalize(slug);
+  if (!normalizedSlug) return false;
+  return normalizedSlug.startsWith(`oando-${categorySlugSegment(categoryId)}--`);
+}
+
+export function isCanonicalCatalogSlug(slug: unknown, categoryId: unknown): boolean {
+  const normalizedSlug = normalize(slug);
+  if (!normalizedSlug) return false;
+  return normalizedSlug.startsWith(`${canonicalCategorySlugSegment(categoryId)}-`);
+}
+
+export function isSupportedCatalogSlug(slug: unknown, categoryId: unknown): boolean {
+  return isLegacyCatalogSlug(slug, categoryId) || isCanonicalCatalogSlug(slug, categoryId);
+}
+
+export function buildLegacyProductSlug(categoryId: unknown, name: unknown): string {
   const segment = categorySlugSegment(categoryId);
   const productNameSlug = slugifyProductName(name);
   if (!productNameSlug) return "";
   return `oando-${segment}--${productNameSlug}`;
+}
+
+export function buildCanonicalProductSlug(categoryId: unknown, name: unknown): string {
+  return buildLegacyProductSlug(categoryId, name);
 }
 
 export function repairProductSlug(input: {
@@ -54,5 +113,5 @@ export function repairProductSlug(input: {
 }): string {
   const existing = normalize(input.slug);
   if (existing) return existing;
-  return buildCanonicalProductSlug(input.categoryId, input.name);
+  return buildLegacyProductSlug(input.categoryId, input.name);
 }

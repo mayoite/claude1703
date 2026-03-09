@@ -1,6 +1,8 @@
 "use client";
 
 import { Bot, MessageSquareText, Phone } from "lucide-react";
+import { SITE_CONTACT } from "@/data/site/contact";
+import { HOMEPAGE_CONTACT_CONTENT } from "@/data/site/homepage";
 
 export function ContactTeaser() {
   function openGuidedPlanner() {
@@ -12,67 +14,70 @@ export function ContactTeaser() {
   }
 
   return (
-    <section className="w-full border-t border-neutral-100 bg-white py-20 md:py-28">
-      <div className="container px-6 2xl:px-0">
-        <div className="mb-10 max-w-3xl">
-          <p className="typ-label mb-4 text-neutral-700">Get in touch</p>
-          <h2 className="typ-section mb-4 text-neutral-950">
-            Choose how you want to start.
-          </h2>
-          <p className="typ-lead text-neutral-800">
-            Use guided planning for structured intake and lead capture, or open the AI chatbot for
-            quick recommendations. Human support is available any time.
-          </p>
-        </div>
+    <section className="home-section home-section--soft border-t border-neutral-200 py-20 md:py-28">
+      <div className="home-shell">
+        <div className="overflow-hidden border border-neutral-300 bg-white">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="border-b border-neutral-200 px-6 py-10 md:px-10 lg:border-b-0 lg:border-r">
+              <p className="typ-label mb-4 text-neutral-700">{HOMEPAGE_CONTACT_CONTENT.kicker}</p>
+              <h2 className="typ-section mb-4 max-w-xl text-neutral-950">
+                {HOMEPAGE_CONTACT_CONTENT.title}
+              </h2>
+              <p className="max-w-xl text-base leading-relaxed text-neutral-700 md:text-lg">
+                {HOMEPAGE_CONTACT_CONTENT.description}
+              </p>
 
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-          <article className="rounded-2xl border border-primary/25 bg-primary/[0.04] p-6 md:p-8">
-            <p className="typ-label mb-3 text-neutral-700">Guided planner</p>
-            <h3 className="text-3xl font-light tracking-tight text-neutral-950">
-              Structured project intake
-            </h3>
-            <p className="mt-3 text-base leading-relaxed text-neutral-800">
-              Share seats, timeline, and city in a few guided steps. We save your requirement and
-              respond with next actions.
-            </p>
-            <button
-              type="button"
-              onClick={openGuidedPlanner}
-              className="btn-primary mt-6"
-            >
-              <MessageSquareText className="h-4 w-4" />
-              Open Guided Planner
-            </button>
-          </article>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <button
+                  type="button"
+                  onClick={openGuidedPlanner}
+                  aria-label="Open guided planner"
+                  className="btn-primary"
+                >
+                  <MessageSquareText className="h-4 w-4" />
+                  {HOMEPAGE_CONTACT_CONTENT.primary.cta}
+                </button>
+                <button
+                  type="button"
+                  onClick={openChatbot}
+                  aria-label="Open AI chatbot"
+                  className="btn-outline"
+                >
+                  <Bot className="h-4 w-4" />
+                  {HOMEPAGE_CONTACT_CONTENT.secondary.cta}
+                </button>
+              </div>
+            </div>
 
-          <article className="rounded-2xl border border-neutral-300 bg-neutral-50 p-6 md:p-8">
-            <p className="typ-label mb-3 text-neutral-700">AI chatbot</p>
-            <h3 className="text-3xl font-light tracking-tight text-neutral-950">
-              Ask, explore, compare
-            </h3>
-            <p className="mt-3 text-base leading-relaxed text-neutral-800">
-              Describe your requirement and get practical product recommendations instantly. Shift
-              to guided planning whenever you are ready.
-            </p>
-            <button
-              type="button"
-              onClick={openChatbot}
-              className="btn-outline mt-6"
-            >
-              <Bot className="h-4 w-4" />
-              Open AI Chatbot
-            </button>
-          </article>
-        </div>
+            <div className="bg-neutral-950 px-6 py-10 md:px-10">
+              <p className="typ-label mb-4 text-white/58">{HOMEPAGE_CONTACT_CONTENT.kicker}</p>
+              <h3 className="text-[2rem] tracking-tight text-white">
+                {HOMEPAGE_CONTACT_CONTENT.direct.title}
+              </h3>
+              <p className="mt-3 max-w-md text-base leading-relaxed text-white/70">
+                {HOMEPAGE_CONTACT_CONTENT.direct.description}
+              </p>
 
-        <div className="mt-8 flex flex-wrap items-center gap-5 rounded-xl border border-neutral-200 bg-white px-5 py-4 text-sm text-neutral-700">
-          <span className="inline-flex items-center gap-2">
-            <Phone className="h-4 w-4 text-primary" />
-            Need direct support? +91 90310 22875
-          </span>
-          <a href="mailto:sales@oando.co.in" className="link-arrow">
-            sales@oando.co.in
-          </a>
+              <div className="mt-8 space-y-4 border-t border-white/10 pt-6">
+                <div className="border-b border-white/10 pb-4">
+                  <span className="inline-flex items-center gap-2 text-sm text-white/56">
+                    <Phone className="h-4 w-4 text-white/70" />
+                    Call or WhatsApp
+                  </span>
+                  <p className="mt-2 text-2xl tracking-tight text-white">{SITE_CONTACT.supportPhone}</p>
+                </div>
+                <div>
+                  <span className="inline-flex items-center gap-2 text-sm text-white/56">
+                    <MessageSquareText className="h-4 w-4 text-white/70" />
+                    Email
+                  </span>
+                  <a href={`mailto:${SITE_CONTACT.salesEmail}`} className="mt-2 block text-xl tracking-tight text-white transition-colors hover:text-white/80">
+                    {SITE_CONTACT.salesEmail}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

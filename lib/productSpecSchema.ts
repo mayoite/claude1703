@@ -1,6 +1,7 @@
 import { existsSync } from "fs";
 import { join } from "path";
 import type { CompatProduct } from "@/lib/getProducts";
+import { isSupportedCatalogSlug } from "@/lib/catalogSlug";
 
 export type ProductIssueSeverity = "critical" | "high" | "medium";
 
@@ -175,6 +176,7 @@ export function auditCompatProduct(
       ? toTextList(product.detailedInfo?.features)
       : toTextList(specs.features);
   const subcategory = toText(product.metadata?.subcategory);
+  const subcategoryId = toText(product.metadata?.subcategoryId);
   const warrantyYears = toNumber(product.metadata?.warrantyYears);
   const sustainabilityScore =
     toNumber(product.metadata?.sustainabilityScore) ?? toNumber(specs.sustainability_score);
@@ -234,11 +236,11 @@ export function auditCompatProduct(
     });
   }
 
-  if (!product.slug?.startsWith(`oando-${categoryId}--`)) {
+  if (!isSupportedCatalogSlug(product.slug, categoryId)) {
     issues.push({
       code: "legacy_slug_format",
       severity: "medium",
-      message: `Slug does not follow canonical format for ${categoryId}.`,
+      message: `Slug does not follow a supported catalog format for ${categoryId}.`,
     });
   }
 
@@ -275,7 +277,7 @@ export function auditCompatProduct(
       });
     }
 
-    if (requirement.code === "missing_subcategory" && !subcategory) {
+    if (requirement.code === "missing_subcategory" && !subcategory && !subcategoryId) {
       issues.push({
         code: requirement.code,
         severity: requirement.severity,

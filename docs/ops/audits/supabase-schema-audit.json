@@ -1,0 +1,150 @@
+{
+  "generatedAt": "2026-03-09T10:48:55.275Z",
+  "supabaseHost": "erpweaiypimorcunaimz.supabase.co",
+  "tables": [
+    {
+      "table": "categories",
+      "exists": true,
+      "rowCount": 6,
+      "error": null
+    },
+    {
+      "table": "products",
+      "exists": true,
+      "rowCount": 145,
+      "error": null
+    },
+    {
+      "table": "product_specs",
+      "exists": true,
+      "rowCount": 145,
+      "error": null
+    },
+    {
+      "table": "product_images",
+      "exists": true,
+      "rowCount": 1478,
+      "error": null
+    },
+    {
+      "table": "product_slug_aliases",
+      "exists": true,
+      "rowCount": 704,
+      "error": null
+    },
+    {
+      "table": "business_stats_current",
+      "exists": true,
+      "rowCount": 1,
+      "error": null
+    },
+    {
+      "table": "customer_queries",
+      "exists": true,
+      "rowCount": 0,
+      "error": null
+    },
+    {
+      "table": "catalog_categories",
+      "exists": true,
+      "rowCount": 0,
+      "error": null
+    },
+    {
+      "table": "catalog_products",
+      "exists": true,
+      "rowCount": 0,
+      "error": null
+    },
+    {
+      "table": "catalog_product_specs",
+      "exists": true,
+      "rowCount": 0,
+      "error": null
+    },
+    {
+      "table": "catalog_product_images",
+      "exists": true,
+      "rowCount": 0,
+      "error": null
+    },
+    {
+      "table": "catalog_product_slug_aliases",
+      "exists": true,
+      "rowCount": 0,
+      "error": null
+    }
+  ],
+  "runtimeQueries": [
+    {
+      "label": "Products list",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "label": "Categories list",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "label": "Product specs",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "label": "Product images",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "label": "Alias table",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "label": "Business stats",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "label": "Customer queries",
+      "ok": true,
+      "detail": "ok"
+    }
+  ],
+  "dataQuality": {
+    "productCount": 145,
+    "categoryCount": 6,
+    "blankSlugs": 0,
+    "duplicateSlugs": [],
+    "missingCategoryIds": 0,
+    "missingSubcategorySlug": 0,
+    "missingAltText": 145,
+    "missingPrimaryImage": 1,
+    "duplicateNameKeysByCategory": [
+      {
+        "category_id": "seating",
+        "normalized_name_key": "fluid-x",
+        "count": 2,
+        "slugs": [
+          "fluid-x",
+          "oando-seating--fluid-x"
+        ]
+      },
+      {
+        "category_id": "storages",
+        "normalized_name_key": "prelam",
+        "count": 2,
+        "slugs": [
+          "oando-storage--pedestal",
+          "oando-storage--prelam-storage"
+        ]
+      }
+    ],
+    "aliasCount": 704,
+    "blankAliasRows": 0,
+    "selfAliasRows": 0,
+    "missingBusinessStatsRows": 0,
+    "activeBusinessStatsRows": 1
+  }
+}

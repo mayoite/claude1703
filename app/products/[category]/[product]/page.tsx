@@ -16,6 +16,7 @@ import {
 } from "@/lib/productDataTables";
 import { resolveProductByUrlKey } from "@/lib/productSlugResolver";
 import { SITE_URL } from "@/lib/siteUrl";
+import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
 
 const BASE_URL = SITE_URL;
 
@@ -106,9 +107,14 @@ export async function generateMetadata({
     categoryId,
   );
 
-  const title = `${product.name} | One and Only Furniture`;
+  const productName = typeof product.name === "string" ? product.name : "";
+  const title = `${productName} | ${PDP_ROUTE_COPY.productBrand}`;
+  const descriptionFallback = PDP_ROUTE_COPY.fallbackDescription.replace(
+    "{name}",
+    productName,
+  );
   const description =
-    product.description ||
+    product.description || descriptionFallback ||
     `${product.name} — premium office furniture from One and Only Furniture.`;
   const images = Array.isArray(product.images) ? product.images : [];
   const image =
@@ -290,12 +296,12 @@ async function ProductContent({
     description: aiOverview,
     image: mergedImages.length > 0 ? mergedImages : [mergedFlagship],
     url,
-    brand: { "@type": "Brand", name: "One and Only Furniture" },
+    brand: { "@type": "Brand", name: PDP_ROUTE_COPY.productBrand },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       priceCurrency: "INR",
-      seller: { "@type": "Organization", name: "One and Only Furniture" },
+      seller: { "@type": "Organization", name: PDP_ROUTE_COPY.productBrand },
     },
     category: resolvedCategoryId,
   };

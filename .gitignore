@@ -69,6 +69,12 @@ backup/
 /tmp/
 /docs/migrations/backups/
 supabase/.temp/
+.DONOTDELETE/
+archive/tool-state/
+archive/test-artifacts/
+archive/duplicate-assets/
+docs/archive/root-reports/
+docs/ops/artifacts/
 
 .vercel
 .wrangler/

@@ -16,6 +16,16 @@ import {
 } from "lucide-react";
 import { hasConsentChoice } from "@/lib/consent";
 import { sanitizeDisplayText } from "@/lib/displayText";
+import { getCatalogProductHref } from "@/lib/catalogCategories";
+import {
+  AI_ADVISOR_COPY,
+  AI_ASSISTANT_REFINERS,
+  AI_ASSISTANT_STARTERS,
+  AI_ASSISTANT_WELCOME_MESSAGE,
+  AI_CHATBOT_COPY,
+  GUIDED_PLANNER_COPY,
+  MOBILE_ASSISTANT_COPY,
+} from "@/data/site/assistant";
 
 type UseCase =
   | "workstations"
@@ -27,6 +37,7 @@ type UseCase =
   | "cafeteria"
   | "full-office"
   | "other";
+
 type Timeline = "immediately" | "one-to-three" | "three-to-six" | "exploring";
 
 type GuidedState = {
@@ -64,33 +75,7 @@ type ChatMessage = {
   result?: AdvisorResult;
 };
 
-const AI_STARTERS = [
-  "Recommend workstations for a 60-person operations team in Patna.",
-  "Suggest a storage plan for HR and finance records in one floor.",
-  "Need seating + collaboration furniture for a growing sales office.",
-  "Budget-focused workspace options for 40 users with 3-month timeline.",
-];
-
-const AI_REFINERS = [
-  {
-    label: "Lower budget",
-    apply: (query: string) => `Give lower-budget alternatives for: ${query}`,
-  },
-  {
-    label: "Premium options",
-    apply: (query: string) => `Give premium alternatives for: ${query}`,
-  },
-  {
-    label: "Faster delivery",
-    apply: (query: string) => `Prioritize faster delivery options for: ${query}`,
-  },
-  {
-    label: "More ergonomic",
-    apply: (query: string) => `Focus more on ergonomic performance for: ${query}`,
-  },
-] as const;
-
-const initialGuided: GuidedState = {
+const INITIAL_GUIDED: GuidedState = {
   useCase: "",
   seats: "",
   company: "",
@@ -103,7 +88,7 @@ const initialGuided: GuidedState = {
   phone: "",
 };
 
-const useCaseLabel: Record<UseCase, string> = {
+const USE_CASE_LABEL: Record<UseCase, string> = {
   workstations: "Workstations",
   seating: "Seating",
   meeting: "Meeting and conference",
@@ -115,50 +100,28 @@ const useCaseLabel: Record<UseCase, string> = {
   other: "Other",
 };
 
-const timelineLabel: Record<Timeline, string> = {
+const TIMELINE_LABEL: Record<Timeline, string> = {
   immediately: "Immediate (0-4 weeks)",
   "one-to-three": "1-3 months",
   "three-to-six": "3-6 months",
   exploring: "Exploring options",
 };
 
-const categoryRoute: Record<string, string> = {
-  seating: "seating",
-  workstations: "workstations",
-  tables: "tables",
-  storages: "storages",
-  storage: "storages",
-  "soft-seating": "soft-seating",
-  education: "education",
-  "oando-seating": "seating",
-  "oando-chairs": "seating",
-  "oando-other-seating": "seating",
-  "oando-workstations": "workstations",
-  "oando-tables": "tables",
-  "oando-storage": "storages",
-  "oando-soft-seating": "soft-seating",
-  "oando-collaborative": "soft-seating",
-  "oando-educational": "education",
-};
-
 function buildGuidedSummary(guided: GuidedState) {
   const lines = ["Guided planner intake"];
-  if (guided.useCase) lines.push(`Use case: ${useCaseLabel[guided.useCase]}`);
+  if (guided.useCase) lines.push(`Use case: ${USE_CASE_LABEL[guided.useCase]}`);
   if (guided.seats.trim()) lines.push(`Seats/units: ${guided.seats.trim()}`);
   if (guided.company.trim()) lines.push(`Company: ${guided.company.trim()}`);
   if (guided.city.trim()) lines.push(`City: ${guided.city.trim()}`);
-  if (guided.timeline) lines.push(`Timeline: ${timelineLabel[guided.timeline]}`);
+  if (guided.timeline) lines.push(`Timeline: ${TIMELINE_LABEL[guided.timeline]}`);
   if (guided.budget.trim()) lines.push(`Budget: ${guided.budget.trim()}`);
   if (guided.notes.trim()) lines.push(`Notes: ${guided.notes.trim()}`);
   return lines.join("\n");
 }
 
 function recommendationHref(rec: AdvisorRecommendation) {
-  const normalized = (rec.category || "").trim().toLowerCase();
-  const mapped = categoryRoute[normalized] || normalized.replace(/^oando-/, "") || "";
-  if (!mapped) return "/products";
   const key = rec.productUrlKey || rec.productId || "";
-  return key ? `/products/${mapped}/${key}` : `/products/${mapped}`;
+  return getCatalogProductHref(String(rec.category || "").trim().toLowerCase(), key);
 }
 
 function generateId(prefix: string) {
@@ -173,7 +136,7 @@ export function UnifiedAssistant() {
   const [consentChosen, setConsentChosen] = useState(true);
 
   const [guidedStep, setGuidedStep] = useState(0);
-  const [guided, setGuided] = useState<GuidedState>(initialGuided);
+  const [guided, setGuided] = useState<GuidedState>(INITIAL_GUIDED);
   const [guidedSaving, setGuidedSaving] = useState(false);
   const [guidedError, setGuidedError] = useState("");
   const [guidedSubmittedId, setGuidedSubmittedId] = useState<string | null>(null);
@@ -185,7 +148,7 @@ export function UnifiedAssistant() {
     {
       id: generateId("assistant"),
       role: "assistant",
-      text: "Hi, I’m your workspace AI assistant. Share your requirement and I’ll suggest practical options.",
+      text: AI_ASSISTANT_WELCOME_MESSAGE,
     },
   ]);
 
@@ -221,8 +184,8 @@ export function UnifiedAssistant() {
 
   const guidedSummary = useMemo(() => buildGuidedSummary(guided), [guided]);
   const lastUserQuery = useMemo(() => {
-    const users = chatMessages.filter((message) => message.role === "user");
-    return users.length > 0 ? users[users.length - 1].text : "";
+    const userMessages = chatMessages.filter((message) => message.role === "user");
+    return userMessages.length > 0 ? userMessages[userMessages.length - 1].text : "";
   }, [chatMessages]);
 
   async function completeGuidedFlow() {
@@ -242,7 +205,7 @@ export function UnifiedAssistant() {
           message: guidedSummary,
           requirement: guided.useCase || undefined,
           budget: guided.budget || undefined,
-          timeline: guided.timeline ? timelineLabel[guided.timeline] : undefined,
+          timeline: guided.timeline ? TIMELINE_LABEL[guided.timeline] : undefined,
           preferredContact: guided.phone.trim() ? "phone" : "email",
           source: "homepage-chatbot",
           sourcePath: pathname,
@@ -251,13 +214,13 @@ export function UnifiedAssistant() {
 
       const json = (await response.json()) as { queryId?: string; error?: string };
       if (!response.ok || !json.queryId) {
-        setGuidedError(json.error || "Unable to save planner intake right now.");
+        setGuidedError(json.error || GUIDED_PLANNER_COPY.errors.saveFailed);
         return;
       }
 
       setGuidedSubmittedId(json.queryId);
     } catch {
-      setGuidedError("Network error while saving intake.");
+      setGuidedError(GUIDED_PLANNER_COPY.errors.network);
     } finally {
       setGuidedSaving(false);
     }
@@ -273,7 +236,7 @@ export function UnifiedAssistant() {
   }
 
   function resetGuided() {
-    setGuided(initialGuided);
+    setGuided(INITIAL_GUIDED);
     setGuidedStep(0);
     setGuidedError("");
     setGuidedSubmittedId(null);
@@ -304,14 +267,14 @@ export function UnifiedAssistant() {
 
       const json = (await response.json()) as AdvisorResult & { error?: string };
       if (!response.ok || !json.recommendations) {
-        const errorText = json.error || "Unable to generate recommendations right now.";
+        const errorText = json.error || AI_CHATBOT_COPY.advisorUnavailable;
         setAiError(errorText);
         setChatMessages((prev) => [
           ...prev,
           {
             id: generateId("assistant"),
             role: "assistant",
-            text: `I hit a snag: ${errorText}`,
+            text: `${AI_CHATBOT_COPY.errorPrefix} ${errorText}`,
           },
         ]);
         return;
@@ -322,7 +285,7 @@ export function UnifiedAssistant() {
         {
           id: generateId("assistant"),
           role: "assistant",
-          text: json.summary || "Here are recommended options for your requirement.",
+          text: json.summary || AI_CHATBOT_COPY.summaryFallback,
           result: {
             recommendations: json.recommendations,
             totalBudget: json.totalBudget,
@@ -331,14 +294,14 @@ export function UnifiedAssistant() {
         },
       ]);
     } catch {
-      const errorText = "Network error while generating recommendations.";
+      const errorText = AI_CHATBOT_COPY.advisorNetwork;
       setAiError(errorText);
       setChatMessages((prev) => [
         ...prev,
         {
           id: generateId("assistant"),
           role: "assistant",
-          text: `I couldn’t reach the advisor right now. ${errorText}`,
+          text: `${AI_CHATBOT_COPY.networkPrefix} ${errorText}`,
         },
       ]);
     } finally {
@@ -357,30 +320,37 @@ export function UnifiedAssistant() {
   }
 
   function useSurprisePrompt() {
-    const index = Math.floor(Math.random() * AI_STARTERS.length);
-    applyStarter(AI_STARTERS[index]);
+    const index = Math.floor(Math.random() * AI_ASSISTANT_STARTERS.length);
+    applyStarter(AI_ASSISTANT_STARTERS[index]);
   }
 
-  const mobileLauncherOffset = consentChosen ? "bottom-4" : "bottom-36";
-  const mobilePanelOffset = consentChosen ? "bottom-20" : "bottom-52";
+  const suppressFloatingLauncher =
+    pathname.startsWith("/products") ||
+    pathname === "/compare";
+  const mobileLauncherOffset = consentChosen ? "bottom-20" : "bottom-40";
+  const mobilePanelOffset = consentChosen ? "bottom-36" : "bottom-56";
 
   return (
     <>
       <div className="sm:hidden">
+        {!suppressFloatingLauncher ? (
         <button
           type="button"
           onClick={() => setMobileLauncherOpen((prev) => !prev)}
           aria-label="Open workspace assistant"
           aria-expanded={mobileLauncherOpen}
-          className={`fixed left-3 z-50 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary ${mobileLauncherOffset}`}
+          className={`fixed left-3 z-50 inline-flex min-h-11 max-w-[calc(100vw-6.75rem)] items-center gap-2 rounded-full bg-neutral-900 px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary ${mobileLauncherOffset}`}
         >
           <Sparkles className="h-4 w-4" />
-          <span className="text-xs font-semibold uppercase tracking-wide">Workspace assistant</span>
+          <span className="truncate text-sm font-normal">
+            {MOBILE_ASSISTANT_COPY.launcher}
+          </span>
         </button>
+        ) : null}
 
-        {mobileLauncherOpen ? (
+        {mobileLauncherOpen && !suppressFloatingLauncher ? (
           <div
-            className={`fixed left-3 right-20 z-50 rounded-2xl border border-neutral-200 bg-white p-3 shadow-2xl ${mobilePanelOffset}`}
+            className={`fixed left-3 right-3 z-50 rounded-2xl border border-neutral-200 bg-white p-3 shadow-2xl ${mobilePanelOffset}`}
           >
             <div className="grid grid-cols-1 gap-2">
               <button
@@ -389,10 +359,10 @@ export function UnifiedAssistant() {
                   setMobileLauncherOpen(false);
                   setGuidedOpen(true);
                 }}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-4 text-sm font-semibold text-white"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-4 text-sm font-normal text-white"
               >
                 <MessageSquareText className="h-4 w-4" />
-                Open Guided Planner
+                {MOBILE_ASSISTANT_COPY.planner}
               </button>
               <button
                 type="button"
@@ -400,10 +370,10 @@ export function UnifiedAssistant() {
                   setMobileLauncherOpen(false);
                   setChatOpen(true);
                 }}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-semibold text-white"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-normal text-white"
               >
                 <Sparkles className="h-4 w-4" />
-                Open AI Chatbot
+                {MOBILE_ASSISTANT_COPY.chatbot}
               </button>
             </div>
           </div>
@@ -411,25 +381,19 @@ export function UnifiedAssistant() {
       </div>
 
       <div className="hidden sm:block">
-        <button
-          type="button"
-          onClick={() => setGuidedOpen(true)}
-          aria-label="Open guided planner"
-          className="fixed bottom-6 left-6 z-50 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary"
-        >
-          <MessageSquareText className="h-4 w-4" />
-          <span className="text-sm font-semibold uppercase tracking-wide">Guided planner</span>
-        </button>
-
+        {!suppressFloatingLauncher ? (
         <button
           type="button"
           onClick={() => setChatOpen(true)}
           aria-label="Open AI chatbot"
-          className="fixed bottom-24 left-6 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary-hover"
+          className="fixed bottom-16 left-6 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary-hover"
         >
           <Sparkles className="h-4 w-4" />
-          <span className="text-sm font-semibold uppercase tracking-wide">AI chatbot</span>
+          <span className="text-sm font-semibold uppercase tracking-wide">
+            {AI_CHATBOT_COPY.title}
+          </span>
         </button>
+        ) : null}
       </div>
 
       {guidedOpen ? (
@@ -446,8 +410,8 @@ export function UnifiedAssistant() {
                   <Bot className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-neutral-900">Guided Planner</p>
-                  <p className="text-xs text-neutral-500">Structured intake with auto lead capture</p>
+                  <p className="text-sm font-semibold text-neutral-900">{GUIDED_PLANNER_COPY.title}</p>
+                  <p className="text-xs text-neutral-500">{GUIDED_PLANNER_COPY.subtitle}</p>
                 </div>
               </div>
               <button
@@ -465,7 +429,7 @@ export function UnifiedAssistant() {
                 <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
                   <p className="mb-1 flex items-center gap-2 text-sm font-semibold text-emerald-900">
                     <CheckCircle2 className="h-4 w-4" />
-                    Intake submitted
+                    {GUIDED_PLANNER_COPY.submittedTitle}
                   </p>
                   <p className="text-sm text-emerald-800">Reference: {guidedSubmittedId}</p>
                   <div className="mt-3 flex gap-3">
@@ -477,14 +441,14 @@ export function UnifiedAssistant() {
                       }}
                       className="text-xs font-semibold uppercase tracking-wide text-neutral-900 underline"
                     >
-                      Open AI chatbot
+                      {GUIDED_PLANNER_COPY.submittedFollowUp}
                     </button>
                     <button
                       type="button"
                       onClick={resetGuided}
                       className="text-xs font-semibold uppercase tracking-wide text-neutral-500 underline"
                     >
-                      New intake
+                      {GUIDED_PLANNER_COPY.submittedReset}
                     </button>
                   </div>
                 </div>
@@ -492,11 +456,9 @@ export function UnifiedAssistant() {
                 <div className="space-y-4">
                   {guidedStep === 0 ? (
                     <>
-                      <p className="text-sm text-neutral-700">
-                        What project are you planning, and roughly how many seats/units?
-                      </p>
+                      <p className="text-sm text-neutral-700">{GUIDED_PLANNER_COPY.stepOneIntro}</p>
                       <div className="flex flex-wrap gap-2">
-                        {(Object.keys(useCaseLabel) as UseCase[]).map((key) => (
+                        {(Object.keys(USE_CASE_LABEL) as UseCase[]).map((key) => (
                           <button
                             key={key}
                             type="button"
@@ -507,13 +469,13 @@ export function UnifiedAssistant() {
                                 : "border-neutral-300 text-neutral-700"
                             }`}
                           >
-                            {useCaseLabel[key]}
+                            {USE_CASE_LABEL[key]}
                           </button>
                         ))}
                       </div>
                       <input
                         type="text"
-                        placeholder="Seats/units (e.g. 60 workstations)"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.seats}
                         value={guided.seats}
                         onChange={(event) => setGuided({ ...guided, seats: event.target.value })}
                         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
@@ -523,23 +485,23 @@ export function UnifiedAssistant() {
 
                   {guidedStep === 1 ? (
                     <>
-                      <p className="text-sm text-neutral-700">Add project details.</p>
+                      <p className="text-sm text-neutral-700">{GUIDED_PLANNER_COPY.stepTwoIntro}</p>
                       <input
                         type="text"
-                        placeholder="Company (optional)"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.company}
                         value={guided.company}
                         onChange={(event) => setGuided({ ...guided, company: event.target.value })}
                         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
                       />
                       <input
                         type="text"
-                        placeholder="City and state"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.city}
                         value={guided.city}
                         onChange={(event) => setGuided({ ...guided, city: event.target.value })}
                         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
                       />
                       <div className="flex flex-wrap gap-2">
-                        {(Object.keys(timelineLabel) as Timeline[]).map((key) => (
+                        {(Object.keys(TIMELINE_LABEL) as Timeline[]).map((key) => (
                           <button
                             key={key}
                             type="button"
@@ -550,20 +512,20 @@ export function UnifiedAssistant() {
                                 : "border-neutral-300 text-neutral-700"
                             }`}
                           >
-                            {timelineLabel[key]}
+                            {TIMELINE_LABEL[key]}
                           </button>
                         ))}
                       </div>
                       <input
                         type="text"
-                        placeholder="Budget (optional)"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.budget}
                         value={guided.budget}
                         onChange={(event) => setGuided({ ...guided, budget: event.target.value })}
                         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
                       />
                       <textarea
                         rows={3}
-                        placeholder="Notes (optional)"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.notes}
                         value={guided.notes}
                         onChange={(event) => setGuided({ ...guided, notes: event.target.value })}
                         className="w-full resize-none rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
@@ -573,26 +535,24 @@ export function UnifiedAssistant() {
 
                   {guidedStep === 2 ? (
                     <>
-                      <p className="text-sm text-neutral-700">
-                        Add contact details. We save this automatically when you finish.
-                      </p>
+                      <p className="text-sm text-neutral-700">{GUIDED_PLANNER_COPY.stepThreeIntro}</p>
                       <input
                         type="text"
-                        placeholder="Your name"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.name}
                         value={guided.name}
                         onChange={(event) => setGuided({ ...guided, name: event.target.value })}
                         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
                       />
                       <input
                         type="email"
-                        placeholder="Work email"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.email}
                         value={guided.email}
                         onChange={(event) => setGuided({ ...guided, email: event.target.value })}
                         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
                       />
                       <input
                         type="tel"
-                        placeholder="Phone (optional)"
+                        placeholder={GUIDED_PLANNER_COPY.placeholders.phone}
                         value={guided.phone}
                         onChange={(event) => setGuided({ ...guided, phone: event.target.value })}
                         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
@@ -609,7 +569,7 @@ export function UnifiedAssistant() {
                       className="text-xs font-semibold uppercase tracking-wide text-neutral-500"
                       disabled={guidedStep === 0 || guidedSaving}
                     >
-                      Back
+                      {GUIDED_PLANNER_COPY.back}
                     </button>
                     <button
                       type="button"
@@ -620,16 +580,16 @@ export function UnifiedAssistant() {
                       {guidedSaving ? (
                         <>
                           <Loader2 className="h-4 w-4 animate-spin" />
-                          Saving
+                          {GUIDED_PLANNER_COPY.saving}
                         </>
                       ) : guidedStep === 2 ? (
                         <>
-                          Finish
+                          {GUIDED_PLANNER_COPY.finish}
                           <CheckCircle2 className="h-4 w-4" />
                         </>
                       ) : (
                         <>
-                          Continue
+                          {GUIDED_PLANNER_COPY.continue}
                           <ArrowRight className="h-4 w-4" />
                         </>
                       )}
@@ -656,8 +616,8 @@ export function UnifiedAssistant() {
                   <Sparkles className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-neutral-900">AI Chatbot</p>
-                  <p className="text-xs text-neutral-500">Interactive recommendations with memory in this chat</p>
+                  <p className="text-sm font-semibold text-neutral-900">{AI_CHATBOT_COPY.title}</p>
+                  <p className="text-xs text-neutral-500">{AI_CHATBOT_COPY.subtitle}</p>
                 </div>
               </div>
               <button
@@ -672,7 +632,7 @@ export function UnifiedAssistant() {
 
             <div className="border-b border-neutral-100 bg-primary/5 px-5 py-3">
               <div className="flex flex-wrap gap-2">
-                {AI_STARTERS.map((starter) => (
+                {AI_ASSISTANT_STARTERS.map((starter) => (
                   <button
                     key={starter}
                     type="button"
@@ -689,7 +649,7 @@ export function UnifiedAssistant() {
                 className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-primary"
               >
                 <Wand2 className="h-3.5 w-3.5" />
-                Surprise me
+                {AI_ADVISOR_COPY.surpriseLabel}
               </button>
             </div>
 
@@ -712,7 +672,7 @@ export function UnifiedAssistant() {
                       <div className="mt-3 space-y-3">
                         <div className="rounded-lg border border-neutral-200 bg-white p-3">
                           <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-                            Estimated total
+                            {AI_CHATBOT_COPY.totalLabel}
                           </p>
                           <p className="mt-1 text-sm font-semibold text-neutral-900">
                             {message.result.totalBudget}
@@ -720,10 +680,18 @@ export function UnifiedAssistant() {
                         </div>
 
                         {message.result.recommendations.map((item) => (
-                          <div key={`${message.id}-${item.productId}`} className="rounded-lg border border-neutral-200 bg-white p-3">
+                          <div
+                            key={`${message.id}-${item.productId}`}
+                            className="rounded-lg border border-neutral-200 bg-white p-3"
+                          >
                             <div className="mb-1 flex items-start justify-between gap-2">
-                              <p className="text-sm font-semibold text-neutral-900">{item.productName}</p>
-                              <Link href={recommendationHref(item)} className="text-xs font-semibold uppercase tracking-wide text-primary underline">
+                              <p className="text-sm font-semibold text-neutral-900">
+                                {item.productName}
+                              </p>
+                              <Link
+                                href={recommendationHref(item)}
+                                className="text-xs font-semibold uppercase tracking-wide text-primary underline"
+                              >
                                 View
                               </Link>
                             </div>
@@ -740,7 +708,7 @@ export function UnifiedAssistant() {
                 <div className="flex justify-start">
                   <div className="inline-flex items-center gap-2 rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
                     <Loader2 className="h-4 w-4 animate-spin" />
-                    Thinking through options...
+                    {AI_CHATBOT_COPY.thinking}
                   </div>
                 </div>
               ) : null}
@@ -749,7 +717,7 @@ export function UnifiedAssistant() {
             <div className="border-t border-neutral-100 p-4">
               {lastUserQuery ? (
                 <div className="mb-3 flex flex-wrap gap-2">
-                  {AI_REFINERS.map((refiner) => (
+                  {AI_ASSISTANT_REFINERS.map((refiner) => (
                     <button
                       key={refiner.label}
                       type="button"
@@ -767,7 +735,7 @@ export function UnifiedAssistant() {
                     }}
                     className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
                   >
-                    Switch to guided planner
+                    {AI_CHATBOT_COPY.switchToPlanner}
                   </button>
                 </div>
               ) : null}
@@ -777,7 +745,7 @@ export function UnifiedAssistant() {
                   rows={2}
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Ask about layouts, pricing bands, category mix, alternatives..."
+                  placeholder={AI_CHATBOT_COPY.placeholder}
                   className="min-h-11 flex-1 resize-none rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
                 />
                 <button
@@ -786,7 +754,7 @@ export function UnifiedAssistant() {
                   className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-neutral-900 px-4 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <Send className="h-4 w-4" />
-                  Send
+                  {AI_CHATBOT_COPY.send}
                 </button>
               </form>
               {aiError ? <p className="mt-2 text-xs text-red-600">{aiError}</p> : null}

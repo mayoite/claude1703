@@ -4,6 +4,11 @@ import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/db";
 import type { BusinessStats, BusinessStatsResult } from "@/lib/types/businessStats";
 import { fetchNhostBusinessStats } from "@/lib/nhostBackup";
+import {
+  BUSINESS_STATS_FETCH_TIMEOUT_MS,
+  BUSINESS_STATS_REVALIDATE_SECONDS,
+  BUSINESS_STATS_SAFE_DEFAULTS,
+} from "@/data/site/fallbacks";
 
 interface BusinessStatsRow {
   projects_delivered: number;
@@ -13,18 +18,6 @@ interface BusinessStatsRow {
   years_experience: number;
   as_of_date: string;
 }
-
-const FETCH_TIMEOUT_MS = 1200;
-const STATS_REVALIDATE_SECONDS = 300;
-
-const SAFE_DEFAULT_STATS: BusinessStats = {
-  projectsDelivered: 259,
-  clientOrganisations: 120,
-  sectorsServed: 18,
-  locationsServed: 20,
-  yearsExperience: 15,
-  asOfDate: "2026-03-01",
-};
 
 let lastKnownGoodStats: BusinessStats | null = null;
 const loggedBusinessStatsFallbacks = new Set<string>();
@@ -40,7 +33,7 @@ function isExpectedStatsFallback(message: string): boolean {
 function normalizeAsOfDate(value: string): string {
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) {
-    return SAFE_DEFAULT_STATS.asOfDate;
+    return BUSINESS_STATS_SAFE_DEFAULTS.asOfDate;
   }
   return parsed.toISOString().slice(0, 10);
 }
@@ -67,7 +60,10 @@ async function fetchLiveBusinessStats(): Promise<BusinessStats> {
     .maybeSingle();
 
   const timeout = new Promise<never>((_, reject) => {
-    setTimeout(() => reject(new Error(`timeout>${FETCH_TIMEOUT_MS}ms`)), FETCH_TIMEOUT_MS);
+    setTimeout(
+      () => reject(new Error(`timeout>${BUSINESS_STATS_FETCH_TIMEOUT_MS}ms`)),
+      BUSINESS_STATS_FETCH_TIMEOUT_MS,
+    );
   });
 
   const result = await Promise.race([dbQuery, timeout]);
@@ -85,7 +81,7 @@ async function fetchLiveBusinessStats(): Promise<BusinessStats> {
 }
 
 const getCachedLiveBusinessStats = unstable_cache(fetchLiveBusinessStats, ["business-stats-live"], {
-  revalidate: STATS_REVALIDATE_SECONDS,
+  revalidate: BUSINESS_STATS_REVALIDATE_SECONDS,
   tags: ["business-stats"],
 });
 
@@ -110,7 +106,7 @@ export async function getBusinessStats(options?: {
       }
     }
 
-    const nhostStats = await fetchNhostBusinessStats(SAFE_DEFAULT_STATS.asOfDate);
+    const nhostStats = await fetchNhostBusinessStats(BUSINESS_STATS_SAFE_DEFAULTS.asOfDate);
     if (nhostStats) {
       lastKnownGoodStats = nhostStats;
       return { stats: nhostStats, source: "nhost-backup", fetchedAt };
@@ -120,6 +116,6 @@ export async function getBusinessStats(options?: {
       return { stats: lastKnownGoodStats, source: "stale-cache", fetchedAt };
     }
 
-    return { stats: SAFE_DEFAULT_STATS, source: "safe-default", fetchedAt };
+    return { stats: BUSINESS_STATS_SAFE_DEFAULTS, source: "safe-default", fetchedAt };
   }
 }

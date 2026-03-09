@@ -55,11 +55,11 @@ const config: Config = {
       },
       // ONE consistent font family — Cisco Sans for everything
       fontFamily: {
-        sans: ['Cisco Sans', 'sans-serif'],
-        serif: ['Cisco Sans', 'sans-serif'],
-        heading: ['Cisco Sans', 'sans-serif'],
-        slogan: ['Cisco Sans', 'sans-serif'],
-        mono: ['Cisco Sans', 'sans-serif'],
+        sans: ['"Helvetica Neue"', '"Helvetica W01"', 'Helvetica', 'sans-serif'],
+        serif: ['"Helvetica Neue"', '"Helvetica W01"', 'Helvetica', 'sans-serif'],
+        heading: ['"Helvetica Neue"', '"Helvetica W01"', 'Helvetica', 'sans-serif'],
+        slogan: ['"Helvetica Neue"', '"Helvetica W01"', 'Helvetica', 'sans-serif'],
+        mono: ['"Helvetica Neue"', '"Helvetica W01"', 'Helvetica', 'sans-serif'],
       },
       // ONE consistent type scale (px → rem, line-height, letter-spacing)
       fontSize: {
@@ -81,4 +81,3 @@ const config: Config = {
 }
 
 export default config
-

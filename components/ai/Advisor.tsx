@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
-import { Bot, X, Send, Loader2, ExternalLink, Sparkles } from "lucide-react";
+import { Bot, ExternalLink, Loader2, Send, Sparkles, X } from "lucide-react";
 import Link from "next/link";
+import { getCatalogProductHref } from "@/lib/catalogCategories";
+import { AI_ADVISOR_COPY, AI_ADVISOR_SAMPLE_QUERIES } from "@/data/site/assistant";
 
 interface Recommendation {
   productUrlKey?: string;
@@ -20,13 +22,6 @@ interface AdvisorResult {
   summary: string;
 }
 
-const SAMPLE_QUERIES = [
-  "Ergonomic seating for Bihar government project, 50 people",
-  "Modular workstations for a 20-person tech startup in Patna",
-  "Conference room furniture for corporate head office",
-  "Complete office setup for 100-seat BPO centre",
-];
-
 export function AIAdvisor() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -35,7 +30,6 @@ export function AIAdvisor() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const focusTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Focus input when opened
   useEffect(() => {
     if (focusTimeoutRef.current) clearTimeout(focusTimeoutRef.current);
     if (open) {
@@ -48,31 +42,30 @@ export function AIAdvisor() {
 
   async function handleSubmit(e?: React.FormEvent, prefill?: string) {
     e?.preventDefault();
-    const q = prefill ?? query;
-    if (!q.trim()) return;
+    const nextQuery = prefill ?? query;
+    if (!nextQuery.trim()) return;
 
     setLoading(true);
     setResult(null);
 
     try {
-      const res = await fetch("/api/ai-advisor/", {
+      const response = await fetch("/api/ai-advisor/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: q }),
+        body: JSON.stringify({ query: nextQuery }),
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
+      const data = await response.json();
+      if (!response.ok) {
         throw new Error(data.error ?? "Something went wrong");
       }
 
       setResult(data);
       if (prefill) setQuery(prefill);
     } catch (err) {
-      const msg =
+      const message =
         err instanceof Error ? err.message : "Failed to get recommendations";
-      toast.error(msg, {
+      toast.error(message, {
         duration: 4000,
         style: {
           background: "#1a1a1a",
@@ -86,191 +79,136 @@ export function AIAdvisor() {
     }
   }
 
-  const categorySlug: Record<string, string> = {
-    seating: "seating",
-    workstations: "workstations",
-    tables: "tables",
-    storages: "storages",
-    storage: "storages",
-    "soft-seating": "soft-seating",
-    education: "education",
-    "oando-seating": "seating",
-    "oando-chairs": "seating",
-    "oando-other-seating": "seating",
-    "oando-workstations": "workstations",
-    "oando-tables": "tables",
-    "oando-storage": "storages",
-    "oando-soft-seating": "soft-seating",
-    "oando-collaborative": "soft-seating",
-    "oando-educational": "education",
-  };
-
-  const recommendationHref = (rec: Recommendation) => {
-    const normalizedCategory = (rec.category || "").trim().toLowerCase();
-    const categoryRoute =
-      categorySlug[normalizedCategory] ??
-      normalizedCategory.replace(/^oando-/, "") ??
-      "";
+  function recommendationHref(rec: Recommendation) {
     const productUrlKey = rec.productUrlKey || rec.productId || "";
-    if (!categoryRoute) return "/products";
-    return productUrlKey
-      ? `/products/${categoryRoute}/${productUrlKey}`
-      : `/products/${categoryRoute}`;
-  };
+    return getCatalogProductHref(
+      String(rec.category || "").trim().toLowerCase(),
+      productUrlKey,
+    );
+  }
 
   return (
     <>
       <Toaster position="bottom-right" />
 
-      {/* Floating trigger button */}
       <button
         id="ai-advisor-trigger"
         onClick={() => setOpen(true)}
         aria-label="Open AI Workspace Advisor"
-        className={`fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2 bg-neutral-900 text-white px-3.5 sm:px-5 py-2.5 sm:py-3.5 rounded-full shadow-2xl shadow-black/30 hover:bg-primary transition-all duration-300 group ${
-          open
-            ? "opacity-0 pointer-events-none scale-90"
-            : "opacity-100 scale-100"
+        className={`fixed bottom-4 right-3 z-50 flex items-center gap-2 rounded-full bg-neutral-900 px-3.5 py-2.5 text-white shadow-2xl shadow-black/30 transition-all duration-300 group hover:bg-primary sm:bottom-6 sm:right-6 sm:px-5 sm:py-3.5 ${
+          open ? "pointer-events-none scale-90 opacity-0" : "scale-100 opacity-100"
         }`}
       >
-        <Sparkles className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
-        <span className="hidden sm:inline text-sm font-bold tracking-wide">
-          AI Advisor
-        </span>
-        <span className="sm:hidden text-xs font-bold tracking-wide">AI</span>
+        <Sparkles className="h-4 w-4 text-primary transition-colors group-hover:text-white" />
+        <span className="hidden text-sm font-bold tracking-wide sm:inline">AI Advisor</span>
+        <span className="text-xs font-bold tracking-wide sm:hidden">AI</span>
       </button>
 
-      {/* Modal overlay */}
-      {open && (
+      {open ? (
         <div
-          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:justify-end p-0 sm:p-6"
+          className="fixed inset-0 z-50 flex items-end justify-center p-0 sm:items-center sm:justify-end sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="AI Workspace Advisor"
         >
-          {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/40 backdrop-blur-sm"
             onClick={() => setOpen(false)}
           />
 
-          {/* Panel */}
-          <div className="relative w-full sm:w-[480px] bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl flex flex-col max-h-[92vh] sm:max-h-[85vh] overflow-hidden">
-            {/* Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-100">
+          <div className="relative flex max-h-[92vh] w-full flex-col overflow-hidden rounded-t-3xl bg-white shadow-2xl sm:max-h-[85vh] sm:w-[480px] sm:rounded-2xl">
+            <div className="flex items-center justify-between border-b border-neutral-100 px-6 py-5">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 bg-neutral-900 rounded-full flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-white" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900">
+                  <Bot className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-neutral-900 text-sm leading-none">
+                  <p className="text-sm font-semibold leading-none text-neutral-900">
                     AI Workspace Consultant
                   </p>
-                  <p className="text-xs text-neutral-400 mt-0.5">
-                    Powered by One &amp; Only × ChatGPT 5.4
-                  </p>
+                  <p className="mt-0.5 text-xs text-neutral-400">{AI_ADVISOR_COPY.subtitle}</p>
                 </div>
               </div>
               <button
                 onClick={() => setOpen(false)}
-                className="w-8 h-8 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center transition-colors"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-100 transition-colors hover:bg-neutral-200"
                 aria-label="Close advisor"
               >
-                <X className="w-4 h-4" />
+                <X className="h-4 w-4" />
               </button>
             </div>
 
-            {/* Body */}
-            <div className="flex-1 overflow-y-auto px-6 py-5 space-y-6">
-              {!result && !loading && (
+            <div className="flex-1 space-y-6 overflow-y-auto px-6 py-5">
+              {!result && !loading ? (
                 <>
-                  <p className="text-sm text-neutral-500 leading-relaxed">
-                    Describe your workspace project — team size, industry,
-                    location, and budget — and I&apos;ll engineer a curated
-                    system recommendation from our live catalog.
-                  </p>
+                  <p className="text-sm leading-relaxed text-neutral-500">{AI_ADVISOR_COPY.intro}</p>
 
                   <div className="space-y-2">
-                    <p className="text-xs font-bold tracking-widest uppercase text-neutral-400">
-                      Try a sample
+                    <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+                      {AI_ADVISOR_COPY.surpriseLabel}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {SAMPLE_QUERIES.map((q) => (
+                      {AI_ADVISOR_SAMPLE_QUERIES.map((sample) => (
                         <button
-                          key={q}
-                          onClick={() => handleSubmit(undefined, q)}
-                          className="text-xs px-3 py-1.5 rounded-full bg-neutral-100 hover:bg-neutral-900 hover:text-white text-neutral-700 transition-colors"
+                          key={sample}
+                          onClick={() => handleSubmit(undefined, sample)}
+                          className="rounded-full bg-neutral-100 px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:bg-neutral-900 hover:text-white"
                         >
-                          {q}
+                          {sample}
                         </button>
                       ))}
                     </div>
                   </div>
                 </>
-              )}
+              ) : null}
 
-              {loading && (
-                <div className="flex flex-col items-center justify-center py-12 gap-4 text-neutral-500">
-                  <Loader2 className="w-8 h-8 animate-spin text-primary" />
-                  <p className="text-sm">
-                    Analysing catalog and engineering your recommendations…
-                  </p>
+              {loading ? (
+                <div className="flex flex-col items-center justify-center gap-4 py-12 text-neutral-500">
+                  <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                  <p className="text-sm">{AI_ADVISOR_COPY.loading}</p>
                 </div>
-              )}
+              ) : null}
 
-              {result && (
+              {result ? (
                 <div className="space-y-4">
-                  {/* Summary */}
-                  <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200">
-                    <p className="text-xs font-bold tracking-widest uppercase text-neutral-400 mb-2">
+                  <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+                    <p className="mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400">
                       Consultant Summary
                     </p>
-                    <p className="text-sm text-neutral-700 leading-relaxed">
-                      {result.summary}
-                    </p>
+                    <p className="text-sm leading-relaxed text-neutral-700">{result.summary}</p>
                     <div className="mt-3 flex items-center gap-2">
-                      <span className="text-xs text-neutral-400">
-                        Estimated project total:
-                      </span>
-                      <span className="text-sm font-bold text-neutral-900">
-                        {result.totalBudget}
-                      </span>
+                      <span className="text-xs text-neutral-400">Estimated project total:</span>
+                      <span className="text-sm font-bold text-neutral-900">{result.totalBudget}</span>
                     </div>
                   </div>
 
-                  {/* Recommendations */}
                   <div className="space-y-3">
-                    <p className="text-xs font-bold tracking-widest uppercase text-neutral-400">
-                      Recommended Systems ({result.recommendations?.length ?? 0}
-                      )
+                    <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+                      Recommended Systems ({result.recommendations?.length ?? 0})
                     </p>
-                    {result.recommendations?.map((rec, i) => (
+                    {result.recommendations?.map((rec, index) => (
                       <div
-                        key={i}
-                        className="p-4 rounded-xl border border-neutral-200 hover:border-neutral-400 transition-colors group"
+                        key={`${rec.productId}-${index}`}
+                        className="group rounded-xl border border-neutral-200 p-4 transition-colors hover:border-neutral-400"
                       >
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                          <h4 className="font-semibold text-neutral-900 text-sm leading-tight">
+                        <div className="mb-2 flex items-start justify-between gap-2">
+                          <h4 className="text-sm font-semibold leading-tight text-neutral-900">
                             {rec.productName}
                           </h4>
                           <Link
                             href={recommendationHref(rec)}
-                            className="shrink-0 w-7 h-7 rounded-full bg-neutral-100 group-hover:bg-neutral-900 group-hover:text-white flex items-center justify-center transition-colors"
+                            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-neutral-100 transition-colors group-hover:bg-neutral-900 group-hover:text-white"
                             aria-label={`View ${rec.productName}`}
                           >
-                            <ExternalLink className="w-3.5 h-3.5" />
+                            <ExternalLink className="h-3.5 w-3.5" />
                           </Link>
                         </div>
-                        <p className="text-xs text-neutral-500 leading-relaxed mb-3">
-                          {rec.why}
-                        </p>
+                        <p className="mb-3 text-xs leading-relaxed text-neutral-500">{rec.why}</p>
                         <div className="flex items-center gap-2">
-                          <span className="text-xs px-2 py-1 bg-neutral-100 rounded-full text-neutral-600 font-medium">
-                            {rec.category
-                              ?.replace("oando-", "")
-                              .replace(/-/g, " ")}
+                          <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs font-medium text-neutral-600">
+                            {rec.category?.replace("oando-", "").replace(/-/g, " ")}
                           </span>
-                          <span className="text-xs text-primary font-semibold">
+                          <span className="text-xs font-semibold text-primary">
                             {rec.budgetEstimate}
                           </span>
                         </div>
@@ -283,56 +221,52 @@ export function AIAdvisor() {
                       setResult(null);
                       setQuery("");
                     }}
-                    className="text-xs text-neutral-400 hover:text-neutral-900 transition-colors underline"
+                    className="text-xs text-neutral-400 underline transition-colors hover:text-neutral-900"
                   >
                     Start a new query
                   </button>
                 </div>
-              )}
+              ) : null}
             </div>
 
-            {/* Input */}
-            {!result && (
-              <form
-                onSubmit={handleSubmit}
-                className="px-6 py-4 border-t border-neutral-100 bg-white"
-              >
-                <div className="flex gap-3 items-end">
+            {!result ? (
+              <form onSubmit={handleSubmit} className="border-t border-neutral-100 bg-white px-6 py-4">
+                <div className="flex items-end gap-3">
                   <textarea
                     ref={inputRef}
                     id="ai-advisor-input"
                     rows={2}
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" && !e.shiftKey) {
-                        e.preventDefault();
-                        handleSubmit();
+                    onChange={(event) => setQuery(event.target.value)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" && !event.shiftKey) {
+                        event.preventDefault();
+                        void handleSubmit();
                       }
                     }}
-                    placeholder="e.g. Ergonomic seating for Bihar government project, 50 people…"
-                    className="flex-1 resize-none text-sm border border-neutral-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-neutral-900 placeholder:text-neutral-400 bg-neutral-50"
+                    placeholder={AI_ADVISOR_COPY.placeholder}
+                    className="flex-1 resize-none rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900"
                     disabled={loading}
                   />
                   <button
                     type="submit"
                     disabled={loading || !query.trim()}
                     id="ai-advisor-submit"
-                    className="w-11 h-11 bg-neutral-900 rounded-xl flex items-center justify-center text-white hover:bg-primary transition-colors disabled:opacity-40 shrink-0"
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-neutral-900 text-white transition-colors hover:bg-primary disabled:opacity-40"
                     aria-label="Send query"
                   >
                     {loading ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
-                      <Send className="w-4 h-4" />
+                      <Send className="h-4 w-4" />
                     )}
                   </button>
                 </div>
               </form>
-            )}
+            ) : null}
           </div>
         </div>
-      )}
+      ) : null}
     </>
   );
 }

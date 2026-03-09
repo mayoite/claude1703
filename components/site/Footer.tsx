@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SITE_FOOTER_NAV, SITE_SOCIAL_LINKS } from "@/lib/siteNav";
 import { OneAndOnlyLogo } from "@/components/ui/Logo";
+import { SITE_CONTACT } from "@/data/site/contact";
 
 function LinkedInIcon() {
   return (
@@ -47,36 +48,36 @@ export function SiteFooter() {
   return (
     <footer className="w-full bg-footer-bg text-footer-muted">
       {/* Main grid */}
-      <div className="container px-6 2xl:px-0 py-12 md:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-8">
+      <div className="container px-6 2xl:px-0 py-10 md:py-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-7">
 
           {/* Brand + contact */}
-          <div className="md:col-span-1 flex flex-col gap-5">
+          <div className="md:col-span-1 flex flex-col gap-4">
             <Link href="/" prefetch={false} className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
               <OneAndOnlyLogo variant="orange" className="h-10" />
             </Link>
 
-            <address className="not-italic text-base leading-8 text-footer-muted">
-              Patna, Bihar & Jharkhand, India
+            <address className="not-italic text-[0.98rem] leading-6 text-footer-muted">
+              {SITE_CONTACT.regionLine}
             </address>
 
-            <div className="space-y-1.5 text-base">
+            <div className="space-y-1 text-[0.95rem]">
               <a
-                href="tel:+919031022875"
+                href={`tel:${SITE_CONTACT.supportPhone.replace(/\s+/g, "")}`}
                 className="block transition-colors hover:text-footer-hover"
               >
-                +91 90310 22875
+                {SITE_CONTACT.supportPhone}
               </a>
               <a
-                href="mailto:sales@oando.co.in"
+                href={`mailto:${SITE_CONTACT.salesEmail}`}
                 className="block transition-colors hover:text-footer-hover"
               >
-                sales@oando.co.in
+                {SITE_CONTACT.salesEmail}
               </a>
             </div>
 
             {/* Social icons */}
-            <div className="flex items-center gap-3 pt-1">
+            <div className="flex items-center gap-3 pt-0.5">
               {SITE_SOCIAL_LINKS.map((social) => {
                 const Icon = SOCIAL_ICON_MAP[social.id];
                 return (
@@ -96,19 +97,19 @@ export function SiteFooter() {
           </div>
 
           {/* Nav columns */}
-          <div className="md:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-6">
+          <div className="md:col-span-4 grid grid-cols-2 gap-7 sm:grid-cols-4 md:gap-5">
             {SITE_FOOTER_NAV.map((col) => (
               <div key={col.heading}>
-                <p className="typ-label mb-4 text-footer-subtle">
+                <p className="typ-label mb-3 text-footer-subtle">
                   {col.heading}
                 </p>
-                <ul className="flex flex-col gap-2.5">
+                <ul className="flex flex-col gap-2">
                   {col.links.map(({ href, label }) => (
                     <li key={`${href}-${label}`}>
                       <Link
                         href={href}
                         prefetch={false}
-                        className="rounded text-base text-footer-link transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        className="rounded text-[0.94rem] text-footer-link transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                       >
                         {label}
                       </Link>
@@ -123,8 +124,8 @@ export function SiteFooter() {
 
       {/* Bottom bar */}
       <div className="border-t border-footer-border">
-        <div className="container flex flex-col items-center justify-between gap-4 px-6 py-5 text-sm text-footer-dim sm:flex-row 2xl:px-0">
-          <div className="flex gap-6">
+        <div className="container flex flex-col items-center justify-between gap-3 px-6 py-4 text-[0.92rem] text-footer-dim sm:flex-row 2xl:px-0">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:justify-start">
             <Link href="/refund-and-return-policy" prefetch={false} className="rounded transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
               Refund Policy
             </Link>

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getProducts, type Product } from "@/lib/getProducts";
 import { createSupabaseAdminClient } from "@/lib/supabaseAdmin";
+import { getCatalogProductHref } from "@/lib/catalogCategories";
 
 type RecommendationsPayload = {
   userId?: string;
@@ -52,7 +53,7 @@ function toRecommendation(product: Product, reason: string): Recommendation {
     category: getCategoryLabel(product),
     why: reason,
     budgetEstimate: getBudgetEstimate(product),
-    href: `/products/${product.category_id}/${product.slug}`,
+    href: getCatalogProductHref(product.category_id, product.slug),
   };
 }
 

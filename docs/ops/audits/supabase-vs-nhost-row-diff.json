@@ -1,0 +1,68 @@
+[
+  {
+    "table": "categories -> categories",
+    "supabase": 6,
+    "nhost": 6,
+    "diff": 0
+  },
+  {
+    "table": "products -> products",
+    "supabase": 145,
+    "nhost": 145,
+    "diff": 0
+  },
+  {
+    "table": "product_specs -> product_specs",
+    "supabase": 145,
+    "nhost": 145,
+    "diff": 0
+  },
+  {
+    "table": "product_images -> product_images",
+    "supabase": 1478,
+    "nhost": 1478,
+    "diff": 0
+  },
+  {
+    "table": "product_slug_aliases -> product_slug_aliases",
+    "supabase": 704,
+    "nhost": 704,
+    "diff": 0
+  },
+  {
+    "table": "business_stats_current -> business_stats_current",
+    "supabase": 1,
+    "nhost": 1,
+    "diff": 0
+  },
+  {
+    "table": "categories -> catalog_categories",
+    "supabase": 6,
+    "nhost": 6,
+    "diff": 0
+  },
+  {
+    "table": "products -> catalog_products",
+    "supabase": 145,
+    "nhost": 145,
+    "diff": 0
+  },
+  {
+    "table": "product_specs -> catalog_product_specs",
+    "supabase": 145,
+    "nhost": 145,
+    "diff": 0
+  },
+  {
+    "table": "product_images -> catalog_product_images",
+    "supabase": 1478,
+    "nhost": 1478,
+    "diff": 0
+  },
+  {
+    "table": "product_slug_aliases -> catalog_product_slug_aliases",
+    "supabase": 704,
+    "nhost": 704,
+    "diff": 0
+  }
+]

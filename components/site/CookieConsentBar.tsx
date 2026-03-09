@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 
 const CONSENT_COOKIE = "oando_cookie_consent";
 const CONSENT_ACCEPTED = "accepted";
@@ -94,15 +94,32 @@ function clearSeoCookies() {
 
 export function CookieConsentBar() {
   const [dismissed, setDismissed] = useState(false);
+  const consent = useSyncExternalStore(
+    () => () => {},
+    () => readCookie(CONSENT_COOKIE),
+    () => null,
+  );
 
   useEffect(() => {
-    const value = readCookie(CONSENT_COOKIE);
-    if (value === CONSENT_ACCEPTED) {
+    if (consent === CONSENT_ACCEPTED) {
       setSeoCookies();
     }
-  }, []);
+  }, [consent]);
 
-  const consent = typeof document === "undefined" ? null : readCookie(CONSENT_COOKIE);
+  useEffect(() => {
+    if (dismissed || consent) return;
+
+    const timer = window.setTimeout(() => {
+      writeCookie(CONSENT_COOKIE, CONSENT_ACCEPTED, COOKIE_MAX_AGE_SECONDS);
+      setSeoCookies();
+      window.dispatchEvent(
+        new CustomEvent("oando-cookie-consent", { detail: { value: CONSENT_ACCEPTED } }),
+      );
+      setDismissed(true);
+    }, 5000);
+
+    return () => window.clearTimeout(timer);
+  }, [consent, dismissed]);
 
   const acceptAll = () => {
     writeCookie(CONSENT_COOKIE, CONSENT_ACCEPTED, COOKIE_MAX_AGE_SECONDS);
