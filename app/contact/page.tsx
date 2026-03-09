@@ -14,60 +14,76 @@ export default function ContactPage() {
         showButton={false}
         backgroundImage="/images/hero/tvs-patna-enhanced.webp"
       />
-      <section className="container px-6 2xl:px-0 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <h3 className="typ-section text-neutral-950">{CONTACT_PAGE_COPY.sectionTitle}</h3>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-primary mt-1" />
-                <div className="font-light text-neutral-800">
-                  {CONTACT_PAGE_COPY.offices.map((office, index) => (
-                    <div key={office.title} className={index === 0 ? "" : "mt-4"}>
-                      <p className="mb-1 font-medium text-neutral-950">{office.title}</p>
-                      {office.lines.map((line) => (
-                        <p key={`${office.title}-${line}`}>{line}</p>
-                      ))}
-                    </div>
+      <section className="contact-shell">
+        <div className="contact-summary">
+          <div className="contact-summary__intro section-divider">
+            <p className="contact-summary__eyebrow">{CONTACT_PAGE_COPY.sectionTitle}</p>
+            <h2 className="typ-section mt-3 text-neutral-950">Start with the right team.</h2>
+            <p className="contact-summary__copy">
+              Share your requirement, timeline, or category mix. We will route it to the right
+              planning or sales contact and respond with practical next steps.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {CONTACT_PAGE_COPY.offices.map((office) => (
+              <div key={office.title} className="contact-card">
+                <p className="contact-card__title">{office.title}</p>
+                <div className="contact-card__value">
+                  {office.lines.map((line) => (
+                    <p key={`${office.title}-${line}`}>{line}</p>
                   ))}
                 </div>
               </div>
+            ))}
+          </div>
 
-              <div className="flex items-center gap-4">
-                <Phone className="w-6 h-6 text-primary" />
+          <div className="contact-card">
+            <div className="contact-channel">
+              <MapPin className="contact-channel__icon" />
+              <div>
+                <p className="contact-channel__label">Service region</p>
+                <p className="contact-card__meta">{SITE_CONTACT.regionLine}</p>
+              </div>
+            </div>
+            <div className="contact-channel">
+              <Phone className="contact-channel__icon" />
+              <div>
+                <p className="contact-channel__label">Quotes and planning</p>
                 <a
                   href={`tel:${SITE_CONTACT.salesPhone.replace(/\s+/g, "")}`}
-                  className="font-light text-neutral-800 transition-colors hover:text-primary"
+                  className="contact-channel__link"
                 >
-                  {SITE_CONTACT.salesPhone} (Get a quote)
+                  {SITE_CONTACT.salesPhone}
                 </a>
               </div>
-
-              <div className="flex items-center gap-4">
-                <Phone className="w-6 h-6 text-primary" />
+            </div>
+            <div className="contact-channel">
+              <Phone className="contact-channel__icon" />
+              <div>
+                <p className="contact-channel__label">Support and enquiries</p>
                 <a
                   href={`tel:${SITE_CONTACT.supportPhone.replace(/\s+/g, "")}`}
-                  className="font-light text-neutral-800 transition-colors hover:text-primary"
+                  className="contact-channel__link"
                 >
-                  {SITE_CONTACT.supportPhone} (Enquiries)
+                  {SITE_CONTACT.supportPhone}
                 </a>
               </div>
-
-              <div className="flex items-center gap-4">
-                <Mail className="w-6 h-6 text-primary" />
-                <a
-                  href={`mailto:${SITE_CONTACT.salesEmail}`}
-                  className="font-light text-neutral-800 transition-colors hover:text-primary"
-                >
+            </div>
+            <div className="contact-channel">
+              <Mail className="contact-channel__icon" />
+              <div>
+                <p className="contact-channel__label">Email</p>
+                <a href={`mailto:${SITE_CONTACT.salesEmail}`} className="contact-channel__link">
                   {SITE_CONTACT.salesEmail}
                 </a>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="border-t border-neutral-200 pt-8 md:border-t-0 md:border-l md:pl-16 md:pt-0">
-            <CustomerQueryForm />
-          </div>
+        <div className="contact-form-panel">
+          <CustomerQueryForm />
         </div>
       </section>
     </section>

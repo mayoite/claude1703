@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface SectionRevealProps {
   children: React.ReactNode;
@@ -8,12 +8,6 @@ interface SectionRevealProps {
 }
 
 export function SectionReveal({ children, delay = 0 }: SectionRevealProps) {
-  const prefersReducedMotion = useReducedMotion();
-
-  if (prefersReducedMotion) {
-    return <>{children}</>;
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

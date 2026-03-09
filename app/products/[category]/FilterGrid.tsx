@@ -282,7 +282,7 @@ function AccordionSection({
         className="w-full flex items-center justify-between px-4 py-3 text-left group"
         aria-expanded={open}
       >
-        <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-neutral-600 group-hover:text-neutral-900 transition-colors flex items-center gap-2">
+        <span className="text-[11px] font-normal tracking-[0.04em] text-neutral-600 group-hover:text-neutral-900 transition-colors flex items-center gap-2">
           {title}
           {count !== undefined && count > 0 && (
             <span className="badge bg-neutral-900 text-white text-[9px] px-1.5 py-0.5 leading-none">
@@ -470,7 +470,10 @@ function ProductCard({
   const toggleCompareItem = useProductCompare((state) => state.toggleItem);
   const imageCandidates = buildImageCandidates(product);
   const [imgIndex, setImgIndex] = useState(0);
-  const imgSrc = imageCandidates[imgIndex] || "/images/fallback/category.webp";
+  const imgSrc =
+    imageCandidates[imgIndex] ||
+    imageCandidates[0] ||
+    "/images/fallback/category.webp";
   const displayName = sanitizeDisplayText(product.name);
   const ecoScore = product.metadata?.sustainabilityScore || 0;
   const routeKey = getProductRouteKey(product);
@@ -492,13 +495,8 @@ function ProductCard({
   const dimensions = getDisplayDimensions(product) || "Specs available on request";
   const materials = getDisplayMaterials(product) || "Material options available";
 
-  useEffect(() => {
-    setImgIndex(0);
-  }, [product.id, product.slug, product.flagshipImage, product.images]);
-
   return (
-    <article className="group relative bg-white border border-neutral-100 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-      {/* Compare toggle — visible on hover or when active */}
+    <article className="catalog-card group">
       <button
         type="button"
         onClick={() =>
@@ -513,93 +511,77 @@ function ProductCard({
         }
         aria-label={inCompare ? "Remove from compare" : "Add to compare"}
         className={clsx(
-          "absolute top-2 right-2 z-10 flex items-center gap-1 rounded-sm border px-2 py-1 text-[10px] font-bold uppercase tracking-wider transition-all duration-200",
+          "catalog-card__compare",
           inCompare
-            ? "border-primary bg-primary text-white opacity-100"
-            : "border-neutral-300 bg-white/90 text-neutral-600 opacity-0 group-hover:opacity-100",
+            ? "catalog-card__compare--active"
+            : "catalog-card__compare--idle",
         )}
       >
         <GitCompareArrows className="h-3 w-3" />
-        {inCompare ? "Added" : "Compare"}
+        {inCompare ? "Compared" : "Compare"}
       </button>
 
       <Link href={productHref} className="block">
-        <div className="relative w-full aspect-square bg-stone-50 rounded-md overflow-hidden">
+        <div className="catalog-card__media">
           <Image
             src={imgSrc}
             alt={imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-contain p-3 sm:p-4 transition-transform duration-500 group-hover:scale-103"
+            className="object-contain p-4 sm:p-5 transition-transform duration-500 group-hover:scale-[1.02]"
             onError={() =>
               setImgIndex((current) =>
                 current + 1 < imageCandidates.length ? current + 1 : current,
               )
             }
           />
-          {product.metadata?.bifmaCertified && (
-            <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-[10px] sm:text-xs font-bold uppercase tracking-widest text-neutral-600 px-2.5 py-1.5 rounded-sm shadow-sm">
-              BIFMA
-            </div>
-          )}
-          {product.metadata?.priceRange && (
-            <div className="absolute bottom-2 right-2 bg-neutral-900/75 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2.5 py-1.5 rounded-sm shadow-sm">
-              {product.metadata.priceRange}
-            </div>
-          )}
-          {ecoScore > 0 && (
-            <div
-              className={clsx(
-                "absolute bottom-2 left-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-sm shadow-sm",
-                ecoScore > 7
-                  ? "bg-green-100/90 text-green-800"
-                  : "bg-white/90 text-neutral-600",
-              )}
-            >
-              Eco-Score: {ecoScore}/10
-            </div>
-          )}
+          <div className="catalog-card__badge-row">
+            {product.metadata?.bifmaCertified ? (
+              <span className="catalog-card__badge">BIFMA</span>
+            ) : null}
+            {ecoScore > 0 ? (
+              <span className="catalog-card__badge">Eco {ecoScore}/10</span>
+            ) : null}
+          </div>
         </div>
-        <div className="min-h-[13.5rem] p-4">
-          <p className="typ-label text-neutral-400 mb-1">
-            {sanitizeDisplayText(product.seriesName)}
-          </p>
-          <h3 className="text-sm font-semibold text-neutral-900 group-hover:text-primary transition-colors leading-tight">
-            {displayName}
-          </h3>
-          {product.metadata?.priceRange && (
-            <p className="text-xs font-bold text-primary mt-1">
-              Starting from {PRICE_MAP[product.metadata.priceRange.toLowerCase()] || "Contact for price"}
-            </p>
-          )}
-          <p className="text-xs text-neutral-500 mt-1 line-clamp-2 leading-relaxed">
-            {sanitizeDisplayText(product.description || "")}
-          </p>
-          <div className="mt-3 space-y-1 border-t border-neutral-100 pt-2.5">
-            <p className="text-xs text-neutral-600 leading-relaxed line-clamp-1">
-              <span className="font-semibold text-neutral-500 mr-1">Type:</span>
+        <div className="catalog-card__body">
+          <div className="space-y-2">
+            <p className="catalog-card__eyebrow">
               {subcategory}
             </p>
-            <p className="text-xs text-neutral-600 leading-relaxed line-clamp-1">
-              <span className="font-semibold text-neutral-500 mr-1">Size:</span>
-              {dimensions}
+            <h3 className="catalog-card__title">
+              {displayName}
+            </h3>
+            <p className="catalog-card__description line-clamp-2">
+              {sanitizeDisplayText(product.description || "Configured for professional workspaces.")}
             </p>
-            <p className="text-xs text-neutral-600 leading-relaxed line-clamp-1">
-              <span className="font-semibold text-neutral-500 mr-1">Material:</span>
-              {materials}
+          </div>
+          <div className="space-y-1">
+            <p className="typ-label text-neutral-400">
+            {sanitizeDisplayText(product.seriesName)}
             </p>
+            {product.metadata?.priceRange ? (
+              <p className="text-sm text-primary">
+                Starting from {PRICE_MAP[product.metadata.priceRange.toLowerCase()] || "Contact for price"}
+              </p>
+            ) : null}
+          </div>
+          <div className="catalog-card__meta">
+            <p className="catalog-card__meta-row">
+              <span className="catalog-card__meta-label">Dimensions</span>
+              <span className="line-clamp-1">{dimensions}</span>
+            </p>
+            <p className="catalog-card__meta-row">
+              <span className="catalog-card__meta-label">Materials</span>
+              <span className="line-clamp-1">{materials}</span>
+            </p>
+          </div>
+          <div className="catalog-card__actions">
+            <span className="btn-primary text-center text-xs">View Product</span>
           </div>
         </div>
       </Link>
-
-      {/* Actions: primary CTA + secondary quote */}
-      <div className="px-4 pb-4 flex flex-col gap-2">
-        <Link
-          href={productHref}
-          className="btn-primary w-full text-center text-xs"
-        >
-          View Details
-        </Link>
+      <div className="px-5 pb-5 pt-0">
         <button
           type="button"
           onClick={() =>
@@ -611,7 +593,7 @@ function ProductCard({
               qty: 1,
             })
           }
-          className="inline-flex min-h-10 w-full items-center justify-center gap-1.5 rounded-sm border border-neutral-200 px-3 py-1.5 text-xs font-semibold tracking-[0.1em] text-neutral-600 transition-colors hover:border-neutral-400 hover:text-neutral-900"
+          className="btn-outline w-full text-xs"
         >
           <ShoppingCart className="h-3.5 w-3.5" />
           Add to Quote
@@ -772,9 +754,13 @@ function AdvancedFilterGridInner({
   });
 
   const shouldUseFallbackData = !hasFilterQuery || Boolean(data) || Boolean(error);
-  const filteredProducts = shouldUseFallbackData
-    ? (data?.products ?? fallbackProducts)
-    : [];
+  const filteredProducts = useMemo(
+    () =>
+      shouldUseFallbackData
+        ? (data?.products ?? fallbackProducts)
+        : [],
+    [data?.products, fallbackProducts, shouldUseFallbackData],
+  );
   const navigableProducts = useMemo(
     () => filteredProducts.filter((product) => getProductRouteKey(product).length > 0),
     [filteredProducts],
@@ -929,7 +915,7 @@ function AdvancedFilterGridInner({
               className={clsx(
                 "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
                 filters.series === "all"
-                  ? "bg-accent1 text-neutral-900 font-semibold"
+                  ? "bg-accent1 text-neutral-900 font-normal"
                   : "text-neutral-600 hover:bg-neutral-50",
               )}
             >
@@ -943,7 +929,7 @@ function AdvancedFilterGridInner({
                 className={clsx(
                   "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
                   filters.series === seriesName
-                    ? "bg-accent1 text-neutral-900 font-semibold"
+                    ? "bg-accent1 text-neutral-900 font-normal"
                     : "text-neutral-600 hover:bg-neutral-50",
                 )}
               >
@@ -1079,7 +1065,7 @@ function AdvancedFilterGridInner({
               <SlidersHorizontal className="w-4 h-4" />
               Filters
               {activeCount > 0 && (
-                <span className="bg-neutral-900 text-white text-[9px] font-bold rounded-full px-1.5 py-0.5 leading-none">
+                <span className="bg-neutral-900 text-white text-[9px] font-normal rounded-full px-1.5 py-0.5 leading-none">
                   {activeCount}
                 </span>
               )}
@@ -1176,7 +1162,7 @@ function AdvancedFilterGridInner({
               <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center mb-4">
                 <SearchIcon className="w-5 h-5 text-neutral-400" />
               </div>
-              <p className="text-base font-semibold text-neutral-700 mb-1">
+              <p className="mb-1 text-base font-normal text-neutral-700">
                 No products found
               </p>
               <p className="text-sm text-neutral-400 mb-4">
@@ -1229,11 +1215,11 @@ function AdvancedFilterGridInner({
             aria-label="Filter products"
           >
             <div className="flex items-center justify-between px-4 py-4 border-b border-neutral-200 bg-white">
-              <span className="text-sm font-bold text-neutral-900 flex items-center gap-2">
+              <span className="text-sm font-normal text-neutral-900 flex items-center gap-2">
                 <Filter className="w-4 h-4" />
                 Filters
                 {activeCount > 0 && (
-                  <span className="bg-neutral-900 text-white text-[9px] font-bold rounded-full px-1.5 py-0.5 leading-none">
+                  <span className="bg-neutral-900 text-white text-[9px] font-normal rounded-full px-1.5 py-0.5 leading-none">
                     {activeCount}
                   </span>
                 )}
@@ -1264,7 +1250,7 @@ function AdvancedFilterGridInner({
               <button
                 type="button"
                 onClick={() => setDrawerOpen(false)}
-                className="flex-1 h-11 bg-neutral-900 text-white text-sm rounded-sm hover:bg-neutral-700 transition-colors font-medium"
+                className="flex-1 h-11 rounded-sm bg-neutral-900 text-sm font-normal text-white transition-colors hover:bg-neutral-700"
               >
                 View {navigableProducts.length} results
               </button>
