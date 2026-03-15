@@ -65,6 +65,59 @@ function resolveRequestedCategoryId(
   });
 }
 
+async function resolvePreferredProductSlug(
+  row: CategoryResolutionRow,
+): Promise<string | null> {
+  const currentSlug = typeof row.slug === "string" ? row.slug.trim() : "";
+  const metadataRecord =
+    row.metadata && typeof row.metadata === "object"
+      ? (row.metadata as Record<string, unknown>)
+      : null;
+  const sourceSlug =
+    metadataRecord && typeof metadataRecord.sourceSlug === "string"
+      ? metadataRecord.sourceSlug.trim()
+      : "";
+  const categoryId = typeof row.category_id === "string" ? row.category_id.trim() : "";
+  const productName = typeof row.name === "string" ? row.name.trim() : "";
+
+  if (!currentSlug || currentSlug.startsWith("oando-") || !sourceSlug || !categoryId) {
+    return null;
+  }
+
+  const candidates = await fetchWithSupabaseRetry<CategoryResolutionRow[]>(
+    `product-canonical-slug-${categoryId}-${sourceSlug}`,
+    async () =>
+      supabase
+        .from("products")
+        .select("slug, name, category_id, metadata")
+        .eq("category_id", categoryId),
+    [],
+  );
+
+  const canonicalMatch = (candidates ?? []).find((candidate) => {
+    const candidateSlug =
+      typeof candidate.slug === "string" ? candidate.slug.trim() : "";
+    const candidateMetadata =
+      candidate.metadata && typeof candidate.metadata === "object"
+        ? (candidate.metadata as Record<string, unknown>)
+        : null;
+    const candidateSourceSlug =
+      candidateMetadata && typeof candidateMetadata.sourceSlug === "string"
+        ? candidateMetadata.sourceSlug.trim()
+        : "";
+    const candidateName = typeof candidate.name === "string" ? candidate.name.trim() : "";
+
+    return (
+      candidateSlug.startsWith("oando-") &&
+      candidateSlug !== currentSlug &&
+      candidateSourceSlug === sourceSlug &&
+      candidateName === productName
+    );
+  });
+
+  return canonicalMatch?.slug || null;
+}
+
 export async function generateStaticParams() {
   const data = await fetchWithSupabaseRetry<CategoryResolutionRow[]>(
     "product-static-params",
@@ -108,6 +161,9 @@ export async function generateMetadata({
     product as CategoryResolutionRow,
     categoryId,
   );
+  const preferredCanonicalSlug = await resolvePreferredProductSlug(
+    product as CategoryResolutionRow,
+  );
 
   const productName = typeof product.name === "string" ? product.name : "";
   const title = `${productName} | ${PDP_ROUTE_COPY.productBrand}`;
@@ -121,7 +177,8 @@ export async function generateMetadata({
     normalizeAssetPath(images.length > 0 ? images[0] : null) ||
     normalizeAssetPath(product.flagship_image) ||
     "/images/fallback/category.webp";
-  const canonicalProductUrlKey = productResolution.canonicalSlug || productUrlKey;
+  const canonicalProductUrlKey =
+    preferredCanonicalSlug || productResolution.canonicalSlug || productUrlKey;
 
   return buildPageMetadata(BASE_URL, {
     title,
@@ -152,9 +209,6 @@ async function ProductContent({
 }) {
   const productResolution = await resolveProductByUrlKey<Product>(productUrlKey, "*");
   const rawProduct = productResolution.row;
-  const canonicalProductUrlKey = productResolution.canonicalSlug || productUrlKey;
-  const needsSlugRedirect =
-    productResolution.resolvedViaAlias && canonicalProductUrlKey !== productUrlKey;
 
   if (!rawProduct) {
     notFound();
@@ -212,6 +266,15 @@ async function ProductContent({
     p as CategoryResolutionRow,
     categoryId,
   );
+  const preferredCanonicalSlug = await resolvePreferredProductSlug(
+    p as CategoryResolutionRow,
+  );
+  const canonicalProductUrlKey =
+    preferredCanonicalSlug || productResolution.canonicalSlug || productUrlKey;
+  const needsSlugRedirect =
+    canonicalProductUrlKey !== productUrlKey ||
+    (productResolution.resolvedViaAlias && canonicalProductUrlKey !== productUrlKey);
+
   if (categoryId !== resolvedCategoryId || needsSlugRedirect) {
     redirect(`/products/${resolvedCategoryId}/${canonicalProductUrlKey}`);
   }

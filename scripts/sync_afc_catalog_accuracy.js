@@ -112,8 +112,17 @@ function repairImportedText(value) {
 
 function normalizeDimensionLine(value) {
   return repairImportedText(value)
+    .replace(
+      /\bW\s*(\d{2,4})\s*D\s*(\d{2,4})\s*H\s*(\d{3,4})\s*[-/]?\s*(\d{3,4})\s*mm\b/gi,
+      "W $1 x D $2 x H $3-$4 mm",
+    )
+    .replace(
+      /\bW\s*(\d{2,4})\s*D\s*(\d{2,4})\s*H\s*(\d{2,4})\s*mm\b/gi,
+      "W $1 x D $2 x H $3 mm",
+    )
     .replace(/([0-9])([A-Z])/g, "$1 $2")
     .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/(\d)(mm)\b/gi, "$1 $2")
     .replace(
       /([0-9)])\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*(?:\s+\([^)]*\))?:)/g,
       "$1; $2",
@@ -438,8 +447,6 @@ function buildSpecs(source) {
   const materialDetails = extractMaterialDetails(source);
   const finishOptions = source.materials.filter((item) => isLikelyFinishToken(item)).slice(0, 20);
   return {
-    category: source.categoryLabel,
-    subcategory: source.subcategoryLabel,
     features: buildFeatureList(source),
     materials: materialDetails,
     finish_options: finishOptions,
@@ -649,6 +656,7 @@ async function run() {
       const localImages = await writeLocalImages(row.slug, source.galleryImages.slice(0, 8));
       const updatePayload = {
         name: target.name,
+        category: target.category_id,
         category_id: target.category_id,
         series_name: target.series_name,
         description: target.description,

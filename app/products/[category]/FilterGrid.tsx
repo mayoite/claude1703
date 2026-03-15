@@ -40,7 +40,11 @@ import {
   type ActiveFilters,
   type SortOption,
 } from "@/lib/productFilters";
-import { sanitizeDisplayText, normalizeDimensionText } from "@/lib/displayText";
+import {
+  sanitizeDisplayText,
+  normalizeDimensionText,
+  filterMeaningfulMaterialList,
+} from "@/lib/displayText";
 import { CATEGORY_ROUTE_COPY } from "@/data/site/routeCopy";
 
 // Types
@@ -53,13 +57,6 @@ interface FlatProduct extends Product {
 
 function normalizeToken(value?: string | null): string {
   return sanitizeDisplayText(String(value || "")).toLowerCase();
-}
-
-function getPrimaryImagePath(product: Pick<FlatProduct, "images" | "flagshipImage">): string {
-  if (Array.isArray(product.images) && product.images.length > 0) {
-    return String(product.images[0] || "").trim();
-  }
-  return String(product.flagshipImage || "").trim();
 }
 
 function dedupePriority(product: FlatProduct): number {
@@ -75,7 +72,7 @@ function dedupeFlatProducts(products: FlatProduct[]): FlatProduct[] {
   const bestByKey = new Map<string, FlatProduct>();
 
   for (const product of products) {
-    const key = `${normalizeToken(product.name)}|${normalizeToken(product.metadata?.subcategory || "")}|${normalizeToken(getPrimaryImagePath(product))}`;
+    const key = `${normalizeToken(product.name)}|${normalizeToken(product.metadata?.subcategory || "")}`;
     const existing = bestByKey.get(key);
     if (!existing) {
       bestByKey.set(key, product);
@@ -144,12 +141,12 @@ function getDisplayMaterials(product: FlatProduct): string {
   const specs = product.specs && typeof product.specs === "object" && !Array.isArray(product.specs)
     ? (product.specs as Record<string, unknown>)
     : {};
-  const sourceMaterials = toTextList(specs.materials);
+  const sourceMaterials = filterMeaningfulMaterialList(toTextList(specs.materials));
   if (sourceMaterials.length > 0) {
     return toInlineSpec(sourceMaterials.slice(0, 2).join(", "), 68);
   }
 
-  const detailed = toTextList(product.detailedInfo?.materials);
+  const detailed = filterMeaningfulMaterialList(toTextList(product.detailedInfo?.materials));
   return toInlineSpec(detailed.slice(0, 2).join(", "), 68);
 }
 

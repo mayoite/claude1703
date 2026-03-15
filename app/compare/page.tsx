@@ -5,6 +5,7 @@ import {
   getCatalogCategoryLabel,
   normalizeRequestedCategoryId,
 } from "@/lib/catalogCategories";
+import { filterMeaningfulMaterialList, normalizeDimensionText } from "@/lib/displayText";
 import { COMPARE_ROUTE_COPY } from "@/data/site/routeCopy";
 import { CompareColumnActions } from "@/components/products/CompareColumnActions";
 
@@ -55,30 +56,30 @@ function specValue(item: CompareItem, key: string): string {
     return getCatalogCategoryLabel(item.categoryId, item.categoryId);
   }
   if (key === "series") {
-    return item.product.series_name || "Standard series";
+    return item.product.series_name || "";
   }
   if (key === "dimensions") {
-    return (
-      toText(specs.dimensions) ||
-      toText(specs.dimension) ||
-      "Dimensions available on request"
+    return normalizeDimensionText(
+      toText(specs.dimensions) || toText(specs.dimension) || "",
     );
   }
   if (key === "materials") {
-    const specMaterials = toList(specs.materials);
-    const metadataMaterials = Array.isArray(metadata.material)
-      ? metadata.material.map((m) => String(m))
-      : [];
+    const specMaterials = filterMeaningfulMaterialList(toList(specs.materials));
+    const metadataMaterials = filterMeaningfulMaterialList(
+      Array.isArray(metadata.material) ? metadata.material.map((m) => String(m)) : [],
+    );
     const materials = specMaterials.length > 0 ? specMaterials : metadataMaterials;
-    return materials.length > 0 ? materials.slice(0, 3).join(", ") : "Material options available";
+    return materials.length > 0 ? materials.slice(0, 3).join(", ") : "";
   }
   if (key === "warranty") {
     const warrantyYears =
       typeof metadata.warrantyYears === "number" ? metadata.warrantyYears : null;
-    return warrantyYears ? `${warrantyYears}-Year warranty` : "Warranty by model";
+    return warrantyYears ? `${warrantyYears}-Year warranty` : "";
   }
   if (key === "certification") {
-    return metadata.bifmaCertified ? "BIFMA certified" : "Certification by model";
+    const certifications = toList(specs.certifications);
+    if (certifications.length > 0) return certifications.slice(0, 3).join(", ");
+    return metadata.bifmaCertified ? "BIFMA certified" : "";
   }
   if (key === "sustainability") {
     const score =
@@ -87,11 +88,11 @@ function specValue(item: CompareItem, key: string): string {
         : typeof specs.sustainability_score === "number"
           ? specs.sustainability_score
           : null;
-    return typeof score === "number" ? `Eco score ${score}/10` : "Sustainability data on request";
+    return typeof score === "number" ? `Eco score ${score}/10` : "";
   }
   if (key === "features") {
     const features = toList(specs.features);
-    return features.length > 0 ? features.slice(0, 3).join(", ") : "Feature details on request";
+    return features.length > 0 ? features.slice(0, 3).join(", ") : "";
   }
   return "-";
 }
@@ -115,7 +116,7 @@ export default async function ComparePage({
     )
   ).filter((item): item is CompareItem => Boolean(item));
 
-  const compareRows = [
+  const allCompareRows = [
     { key: "category", label: "Category" },
     { key: "series", label: "Series" },
     { key: "dimensions", label: "Dimensions" },
@@ -125,6 +126,11 @@ export default async function ComparePage({
     { key: "sustainability", label: "Sustainability" },
     { key: "features", label: "Key features" },
   ] as const;
+
+  const compareRows = allCompareRows.filter((row) =>
+    row.key === "category" ||
+    items.some((item) => specValue(item, row.key).trim().length > 0),
+  );
 
   return (
     <section className="min-h-screen bg-white pt-24">

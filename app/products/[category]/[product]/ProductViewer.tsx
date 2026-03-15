@@ -9,8 +9,6 @@ import type {
 import {
   ArrowLeft,
   ChevronRight,
-  Twitter,
-  Facebook,
   Share2,
   ShoppingCart,
   GitCompareArrows,
@@ -26,6 +24,7 @@ import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
 import {
   sanitizeDisplayText as normalizeDisplayText,
+  filterMeaningfulMaterialList,
   normalizeDimensionText,
 } from "@/lib/displayText";
 import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
@@ -109,7 +108,7 @@ export function ProductViewer({
     (product as unknown as { altText?: string }).altText ||
     (product.metadata as Record<string, unknown> | undefined)?.ai_alt_text?.toString() ||
     (product.metadata as Record<string, unknown> | undefined)?.aiAltText?.toString() ||
-    `${displayName} product image`;
+    `${displayName} in ${categoryName}`;
   const metadataRecord = product.metadata as Record<string, unknown> | undefined;
 
   useEffect(() => {
@@ -207,18 +206,17 @@ export function ProductViewer({
       product.detailedInfo?.dimensions ||
       "",
   );
-  const specMaterials = toStringList(rawSpecs.materials);
+  const specMaterials = filterMeaningfulMaterialList(toStringList(rawSpecs.materials));
   const finishOptions = toStringList(rawSpecs.finish_options);
-  const primaryMaterials = sanitizeDisplayList(
-    product.detailedInfo?.materials?.filter(Boolean) || [],
+  const primaryMaterials = filterMeaningfulMaterialList(
+    sanitizeDisplayList(product.detailedInfo?.materials?.filter(Boolean) || []),
   );
-  const metadataMaterials = sanitizeDisplayList(product.metadata?.material || []);
   const materials =
     specMaterials.length > 0
       ? specMaterials
       : primaryMaterials.length > 0
         ? primaryMaterials
-        : metadataMaterials;
+        : [];
   const features = sanitizeDisplayList(
     product.detailedInfo?.features?.filter(
       (f: string) => f && f !== "MANUFACTURING" && f !== "Sustainability",
@@ -254,6 +252,8 @@ export function ProductViewer({
     if (sentenceMatch?.[0]) return sentenceMatch[0].trim();
     return clean.length > 180 ? `${clean.slice(0, 180).trim()}...` : clean;
   })();
+  const fullOverview =
+    overview && shortOverview && overview !== shortOverview ? overview : "";
   const specRows = [
     { label: "Dimensions", value: dimensions },
     ...(materials.length > 0
@@ -297,10 +297,22 @@ export function ProductViewer({
     const entries: Array<{ label: string; value: string }> = [];
     const seen = new Set<string>();
     const blocked = new Set([
+      "category",
+      "subcategory",
       "dimensions",
       "materials",
       "finish_options",
       "features",
+      "documents",
+      "document_titles",
+      "certifications",
+      "warranty_text",
+      "warranty_years",
+      "bifma_certified",
+      "price_range",
+      "overview_sections",
+      "dimension_sections",
+      "sustainability_text",
       "sustainability_score",
     ]);
 
@@ -342,6 +354,11 @@ export function ProductViewer({
     return PDP_ROUTE_COPY.summary.modelConditional;
   })();
   const categoryLabel = normalizeDisplayText(categoryName);
+  const headlineFacts = [
+    { label: "Series", value: seriesShort },
+    { label: "Category", value: categoryLabel },
+    { label: "Configuration", value: quickConfig },
+  ].filter((fact) => fact.value);
   const useCasePreview = useCases.slice(0, 4);
   const materialPreview = materials.slice(0, 3).join(", ");
   const finishPreview = finishOptions.slice(0, 3).join(", ");
@@ -522,14 +539,12 @@ export function ProductViewer({
                 </span>
                 <span className="pdp-chip pdp-chip--soft">{categoryLabel}</span>
               </div>
-              <p className="pdp-section-label mb-3">
-                {PDP_ROUTE_COPY.summary.title}
-              </p>
+              <p className="pdp-section-label mb-3">Product overview</p>
               <h1 className="text-4xl sm:text-5xl font-light text-neutral-900 tracking-tight leading-[1.05] mb-5">
                 {displayName}
               </h1>
               {shortOverview ? (
-                <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-light mb-6 max-w-prose line-clamp-3 lg:line-clamp-none">
+                <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-light mb-6 max-w-prose">
                   {shortOverview}
                 </p>
               ) : null}
@@ -559,12 +574,31 @@ export function ProductViewer({
                     {modelStatusText}
                   </span>
                 </div>
+                {headlineFacts.length > 0 ? (
+                  <div className="mb-5 grid gap-3 border-b border-neutral-200 pb-5">
+                    {headlineFacts.map((fact) => (
+                      <div
+                        key={fact.label}
+                        className="flex items-start justify-between gap-4 rounded-2xl border border-neutral-200 bg-white px-4 py-3"
+                      >
+                        <p className="pdp-card-label">{fact.label}</p>
+                        <p className="text-right text-sm leading-relaxed text-neutral-800">
+                          {fact.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 {summaryCards.length > 0 ? (
                   <>
                     <p className="mb-2 text-sm font-medium text-neutral-900">
-                      {PDP_ROUTE_COPY.summary.description}
+                      Product snapshot
                     </p>
-                    <div className="grid gap-3 sm:grid-cols-2">
+                    <p className="mb-4 text-sm leading-relaxed text-neutral-600">
+                      The quickest way to judge fit before drawings, quantities,
+                      and commercial follow-up.
+                    </p>
+                    <div className="grid gap-3">
                       {summaryCards.map((card) => (
                         <div
                           key={card.label}
@@ -670,6 +704,13 @@ export function ProductViewer({
             {/* CTA */}
             <div className="mb-8">
               <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-5">
+                <p className="mb-2 text-sm font-medium text-neutral-900">
+                  Take the next step
+                </p>
+                <p className="mb-4 text-sm leading-relaxed text-neutral-600">
+                  Build a shortlist, request a quote, or move into planning support
+                  depending on where your team is in the decision.
+                </p>
                 <button
                   type="button"
                   onClick={handleAddToQuote}
@@ -728,45 +769,14 @@ export function ProductViewer({
                     <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
-                <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-neutral-200 pt-4">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const text = encodeURIComponent(
-                        `Check out ${displayName} at One & Only Furniture!`,
-                      );
-                      const url = encodeURIComponent(window.location.href);
-                      window.open(
-                        `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
-                        "_blank",
-                      );
-                    }}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors hover:border-neutral-400 hover:text-neutral-900"
-                    aria-label="Share on Twitter"
-                  >
-                    <Twitter className="w-3.5 h-3.5" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const url = encodeURIComponent(window.location.href);
-                      window.open(
-                        `https://www.facebook.com/sharer/sharer.php?u=${url}`,
-                        "_blank",
-                      );
-                    }}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors hover:border-neutral-400 hover:text-neutral-900"
-                    aria-label="Share on Facebook"
-                  >
-                    <Facebook className="w-3.5 h-3.5" />
-                  </button>
+                <div className="mt-4 border-t border-neutral-200 pt-4">
                   <button
                     type="button"
                     onClick={() => {
                       navigator.clipboard.writeText(window.location.href);
                     }}
                     aria-label={PDP_ROUTE_COPY.ctas.copyLink}
-                    className="pdp-copy-link flex items-center gap-2 transition-colors hover:text-neutral-900"
+                    className="pdp-copy-link inline-flex items-center gap-2 text-sm text-neutral-600 transition-colors hover:text-neutral-900"
                   >
                     <Share2 className="w-3.5 h-3.5" />
                     {PDP_ROUTE_COPY.ctas.copyLink}
@@ -798,7 +808,7 @@ export function ProductViewer({
               <h2 className="mb-4 text-xl font-semibold text-neutral-900">
                 {PDP_ROUTE_COPY.ctas.specifications}
               </h2>
-              <div className="grid gap-3 sm:grid-cols-2 mb-7">
+              <div className="mb-7 grid gap-3">
                 {specRows.map((row) => (
                   <div
                     key={row.label}
@@ -819,7 +829,7 @@ export function ProductViewer({
                   <p className="pdp-section-label mb-3 text-neutral-500">
                     {PDP_ROUTE_COPY.ctas.keyFeatures}
                   </p>
-                  <ul className="grid gap-3 sm:grid-cols-2">
+                  <ul className="grid gap-3">
                     {features.slice(0, 8).map((f: string, i: number) => (
                       <li
                         key={i}
@@ -838,7 +848,7 @@ export function ProductViewer({
                   <h3 className="pdp-section-label mb-3 text-neutral-500">
                     {PDP_ROUTE_COPY.ctas.technicalDetails}
                   </h3>
-                  <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="grid gap-3">
                     {inlineSpecs.map((row) => (
                       <div
                         key={row.label}
@@ -855,6 +865,15 @@ export function ProductViewer({
                   </div>
                 </div>
               )}
+
+              {fullOverview ? (
+                <div className="mt-7 border-t border-neutral-100 pt-7">
+                  <h3 className="pdp-section-label mb-3 text-neutral-500">Overview</h3>
+                  <div className="rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-4 text-sm leading-relaxed text-neutral-700">
+                    {fullOverview}
+                  </div>
+                </div>
+              ) : null}
 
               {materials.length > 0 && (
                 <div className="mt-7 border-t border-neutral-100 pt-7">
