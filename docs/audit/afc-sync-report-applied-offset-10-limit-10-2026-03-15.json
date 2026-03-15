@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:16:33.231Z",
+  "generatedAt": "2026-03-15T14:55:59.796Z",
   "mode": "apply",
   "offset": 10,
   "limit": 10,
@@ -21,6 +21,7 @@
           "A Platform for Impactful Presentations"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -36,8 +37,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Educational",
@@ -49,7 +50,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Podium Auditorium",
         "sourceSlug": "podium"
       },
@@ -91,6 +92,7 @@
           "Reliable Comfort for Hostel Living"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -114,8 +116,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Educational",
@@ -127,7 +129,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Wooden Bed Hostel",
         "sourceSlug": "wooden-bed"
       },
@@ -169,6 +171,7 @@
           "Durable & Organized for the Classroom"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -192,8 +195,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Educational",
@@ -205,7 +208,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Xplorer Classroom",
         "sourceSlug": "xplorer"
       },
@@ -247,6 +250,7 @@
           "Enduring Form"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 820mm.; Width: 520 mm.; Height of Seat: 480 mm.",
         "documents": [],
         "document_titles": [],
@@ -279,8 +283,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -292,7 +296,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Arvo Cafe Chair",
         "sourceSlug": "arvo"
       },
@@ -333,7 +337,8 @@
         "features": [
           "Responsive Framework"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -345,7 +350,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "",
         "documents": [],
@@ -368,8 +377,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -383,7 +392,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Breeze Mesh Chair",
         "sourceSlug": "breeze"
       },
@@ -429,6 +438,7 @@
           "Understated Luxury"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 730mm.; Width: 480 mm.; Depth: 510 mm.",
         "documents": [],
         "document_titles": [],
@@ -461,8 +471,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -474,7 +484,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Brim Cafe Chair",
         "sourceSlug": "brim"
       },
@@ -516,6 +526,7 @@
           "Crafted Tradition"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -539,8 +550,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -552,7 +563,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Canaret Cafe Chair",
         "sourceSlug": "canaret"
       },
@@ -596,6 +607,7 @@
           "Textural Dialogue"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 850mm.; Width: 490 mm.; Height of Seat: 450 mm",
         "documents": [],
         "document_titles": [],
@@ -628,8 +640,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -641,7 +653,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Caneva Cafe Chair",
         "sourceSlug": "caneva"
       },
@@ -682,7 +694,8 @@
         "features": [
           "Pure, Modern Comfort"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -694,7 +707,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "Height: 1100mm.; Width: 360 mm.; Height of Seat: 400 mm.",
         "documents": [],
@@ -728,8 +742,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -741,7 +755,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Caneva-High Cafe Chair",
         "sourceSlug": "caneva-high"
       },

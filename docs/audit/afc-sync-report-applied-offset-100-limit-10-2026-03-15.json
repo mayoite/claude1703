@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:18:08.887Z",
+  "generatedAt": "2026-03-15T14:57:47.748Z",
   "mode": "apply",
   "offset": 100,
   "limit": 10,
@@ -21,6 +21,7 @@
           "Modern Elegance"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Overall Height: 450mm; Dia: 450 / 600 / 750 mm",
         "documents": [],
         "document_titles": [],
@@ -44,8 +45,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -57,7 +58,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Virello Occasional Table",
         "sourceSlug": "virello"
       },
@@ -98,7 +99,8 @@
         "features": [
           "Storage That Works Smarter"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Light Blue",
           "Sea Green",
           "Orange",
@@ -152,8 +154,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Storage",
@@ -165,7 +167,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Compactor Compactor Storage",
         "sourceSlug": "compactor"
       },
@@ -205,6 +207,7 @@
           "Build Up. Store Smart."
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -228,8 +231,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Storage",
@@ -241,7 +244,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Heavy Duty Racks Metal Storage",
         "sourceSlug": "heavy-duty-racks"
       },
@@ -282,7 +285,8 @@
         "features": [
           "Secure Storage. Smarter Spaces."
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Light Blue",
           "Sea Green",
           "Orange",
@@ -335,8 +339,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Storage",
@@ -348,7 +352,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Metal Locker Locker",
         "sourceSlug": "metal-locker"
       },
@@ -393,7 +397,8 @@
         "features": [
           "Strength That Organises Your Day"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Light Blue",
           "Sea Green",
           "Orange",
@@ -453,8 +458,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Storage",
@@ -466,7 +471,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Metal Pedestal Metal Storage",
         "sourceSlug": "metal-pedestal"
       },
@@ -511,7 +516,8 @@
         "features": [
           "Built to Endure, Designed to Perform"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Light Blue",
           "Sea Green",
           "Orange",
@@ -575,8 +581,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Storage",
@@ -588,7 +594,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Metal Storages Metal Storage",
         "sourceSlug": "metal-storages"
       },
@@ -635,7 +641,8 @@
         "features": [
           "Style Meets Smart Storage."
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -696,8 +703,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Storage",
@@ -709,7 +716,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Prelam Pedestal Prelam Storage",
         "sourceSlug": "pedestal"
       },
@@ -754,7 +761,8 @@
         "features": [
           "Flexible Storage. Timeless Design."
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -810,8 +818,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Storage",
@@ -823,7 +831,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Prelam Storage Prelam Storage",
         "sourceSlug": "prelam-storage"
       },

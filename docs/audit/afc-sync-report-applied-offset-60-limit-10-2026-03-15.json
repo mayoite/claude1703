@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:17:29.916Z",
+  "generatedAt": "2026-03-15T14:57:00.367Z",
   "mode": "apply",
   "offset": 60,
   "limit": 10,
@@ -20,7 +20,8 @@
         "features": [
           "Purposeful Elegance with Lasting Presence"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -64,8 +65,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -77,7 +78,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Armora Sofa",
         "sourceSlug": "armora"
       },
@@ -112,102 +113,6 @@
       ]
     },
     {
-      "id": "25a3e38f-7b6f-48ac-aa3a-03341fb5b544",
-      "slug": "oando-seating--casca",
-      "name": "Casca",
-      "category_id": "soft-seating",
-      "series_name": "Lounge",
-      "description": "Casca is a lounge designed for combining comfort and durability.",
-      "specs": {
-        "category": "Soft Seating",
-        "subcategory": "Lounge",
-        "features": [
-          "Softly Modern"
-        ],
-        "materials": [
-          "Fabric 10",
-          "Fabric 9",
-          "Fabric 8",
-          "Fabric 7",
-          "Fabric 6",
-          "Fabric 5",
-          "Fabric 4",
-          "Fabric 3",
-          "Fabric 2",
-          "Fabric 1"
-        ],
-        "dimensions": "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm",
-        "documents": [],
-        "document_titles": [],
-        "certifications": [],
-        "overview_sections": [
-          {
-            "heading": "Softly Modern",
-            "body": "The Casca Soft Seating chair features a gently curved, enveloping shell that offers a warm and inviting seating experience. Its smooth, flowing form creates a sense of comfort that naturally encourages moments of pause and conversation."
-          },
-          {
-            "heading": "",
-            "body": "Supported by slender, gracefully angled legs, Casca achieves the perfect balance between lightness and stability. Its minimalist structure adds elegance without compromising durability. Ideal for contemporary interiors, Casca brings together style, comfort, and sophistication in one harmonious design."
-          },
-          {
-            "heading": "",
-            "body": "The seamless, wraparound shell design offers full-body support, creating a cozy, enveloping seating experience perfect for lounges, waiting areas, and collaborative spaces."
-          },
-          {
-            "heading": "",
-            "body": "The wide, cushioned seat paired with smooth, textured fabric ensures long-lasting comfort, making it ideal for prolonged sitting without fatigue."
-          }
-        ],
-        "dimension_sections": [
-          {
-            "heading": "Casca",
-            "lines": [
-              "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm"
-            ]
-          }
-        ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
-      },
-      "metadata": {
-        "category": "Soft Seating",
-        "categoryIdCanonical": "soft-seating",
-        "subcategory": "Lounge",
-        "subcategoryId": "lounge",
-        "subcategoryLabel": "Lounge",
-        "subcategory_slug": "lounge",
-        "certifications": [],
-        "hasHeadrest": false,
-        "bifmaCertified": false,
-        "warrantyYears": 10,
-        "ai_alt_text": "Casca Lounge",
-        "sourceSlug": "casca"
-      },
-      "alt_text": "Casca Lounge",
-      "sourceSlug": "casca",
-      "sourceCategory": "Soft Seating",
-      "sourceSubcategory": "Lounge",
-      "sourceImages": [
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28c029522c2424a2396e_IMG%204.jpg",
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28df7c3b199656fe0ebd_IMG%205.jpg",
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28fb480e037714f1e665_IMG%201.jpg",
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c291d5bc6454c874c2ee9_IMG%202.jpg"
-      ],
-      "sourceDocs": [
-        {
-          "title": "",
-          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
-        }
-      ],
-      "sourceCertifications": [],
-      "localImages": [
-        "/images/catalog/oando-seating--casca/image-1.jpg",
-        "/images/catalog/oando-seating--casca/image-2.jpg",
-        "/images/catalog/oando-seating--casca/image-3.jpg",
-        "/images/catalog/oando-seating--casca/image-4.jpg"
-      ]
-    },
-    {
       "id": "5ff78724-ee6c-4be5-8217-debe2cad4976",
       "slug": "oando-soft-seating--casca",
       "name": "Casca",
@@ -220,7 +125,8 @@
         "features": [
           "Softly Modern"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -262,8 +168,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -275,7 +181,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Casca Lounge",
         "sourceSlug": "casca"
       },
@@ -304,6 +210,103 @@
       ]
     },
     {
+      "id": "25a3e38f-7b6f-48ac-aa3a-03341fb5b544",
+      "slug": "oando-seating--casca",
+      "name": "Casca",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Casca is a lounge designed for combining comfort and durability.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Softly Modern"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Softly Modern",
+            "body": "The Casca Soft Seating chair features a gently curved, enveloping shell that offers a warm and inviting seating experience. Its smooth, flowing form creates a sense of comfort that naturally encourages moments of pause and conversation."
+          },
+          {
+            "heading": "",
+            "body": "Supported by slender, gracefully angled legs, Casca achieves the perfect balance between lightness and stability. Its minimalist structure adds elegance without compromising durability. Ideal for contemporary interiors, Casca brings together style, comfort, and sophistication in one harmonious design."
+          },
+          {
+            "heading": "",
+            "body": "The seamless, wraparound shell design offers full-body support, creating a cozy, enveloping seating experience perfect for lounges, waiting areas, and collaborative spaces."
+          },
+          {
+            "heading": "",
+            "body": "The wide, cushioned seat paired with smooth, textured fabric ensures long-lasting comfort, making it ideal for prolonged sitting without fatigue."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Casca",
+            "lines": [
+              "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Casca Lounge",
+        "sourceSlug": "casca"
+      },
+      "alt_text": "Casca Lounge",
+      "sourceSlug": "casca",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28c029522c2424a2396e_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28df7c3b199656fe0ebd_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28fb480e037714f1e665_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c291d5bc6454c874c2ee9_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--casca/image-1.jpg",
+        "/images/catalog/oando-seating--casca/image-2.jpg",
+        "/images/catalog/oando-seating--casca/image-3.jpg",
+        "/images/catalog/oando-seating--casca/image-4.jpg"
+      ]
+    },
+    {
       "id": "34e5a5be-872c-41a4-bd9a-bf057fc4cbc8",
       "slug": "oando-soft-seating--ceda",
       "name": "Ceda",
@@ -316,7 +319,8 @@
         "features": [
           "Crafted for Comfort"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -359,8 +363,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -372,7 +376,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Ceda Lounge",
         "sourceSlug": "ceda"
       },
@@ -415,7 +419,8 @@
         "features": [
           "Fluid Design for Creative Collaboration"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -450,8 +455,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -463,7 +468,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Cirq Collaborative",
         "sourceSlug": "cirq"
       },
@@ -508,7 +513,8 @@
         "features": [
           "Soft Comfort with Architectural Clarity"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -551,8 +557,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -564,7 +570,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Cocoon Collaborative",
         "sourceSlug": "cocoon"
       },
@@ -607,7 +613,8 @@
         "features": [
           "Soft Serenity with Modular Freedom"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -661,8 +668,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -674,7 +681,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Como Sofa",
         "sourceSlug": "como"
       },
@@ -716,14 +723,15 @@
         "subcategory": "Occasional Tables",
         "features": [],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
         "certifications": [],
         "overview_sections": [],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -735,7 +743,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Cone Occasional Table",
         "sourceSlug": "cone"
       },

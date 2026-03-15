@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:16:55.210Z",
+  "generatedAt": "2026-03-15T14:56:23.759Z",
   "mode": "apply",
   "offset": 30,
   "limit": 10,
@@ -21,6 +21,7 @@
           "Casual Sophistication"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -44,8 +45,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -57,7 +58,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Fynn Cafe Chair",
         "sourceSlug": "fynn"
       },
@@ -99,6 +100,7 @@
           "Executive Comfort, Sculpted in Leather"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -126,8 +128,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -139,7 +141,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Grace Leather Chair",
         "sourceSlug": "grace"
       },
@@ -187,6 +189,7 @@
           "Stack Up in Style"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 775mm.; Width: 800 mm.; Depth: 550 mm.",
         "documents": [],
         "document_titles": [],
@@ -219,8 +222,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -232,7 +235,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Leaf Cafe Chair",
         "sourceSlug": "leaf"
       },
@@ -276,6 +279,7 @@
           "Crafted to Last"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 790mm.; Width: 380 mm.; Depth: 380 mm.",
         "documents": [],
         "document_titles": [],
@@ -308,8 +312,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -321,7 +325,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Lexus Cafe Chair",
         "sourceSlug": "lexus"
       },
@@ -361,6 +365,7 @@
         "subcategory": "Cafe Chair",
         "features": [],
         "materials": [],
+        "finish_options": [],
         "dimensions": "(W) 500mm x (H) 740mm x (D) 430mm; (Seat height: 740mm, Seat depth: 350mm)",
         "documents": [],
         "document_titles": [],
@@ -388,8 +393,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -401,7 +406,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Lisbo Cafe Chair",
         "sourceSlug": "lisbo"
       },
@@ -435,7 +440,8 @@
         "features": [
           "Smart design. Effortless support. Comfort that fits the way you work"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -447,7 +453,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Armrest height (from floor): 670 mm; Armrest width: 250 mm.; Armrest width: 85 mm.; Overall height: 1000 mm; Seat headrest width : 515 mm; Overall width (base including wheels): 700 mm; Seat width: 500 mm.",
         "documents": [],
@@ -485,8 +495,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -501,7 +511,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": true,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Logica Mesh Chair",
         "sourceSlug": "logica"
       },
@@ -544,6 +554,7 @@
           "Sculpted Comfort with a Modern Edge"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -567,8 +578,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -580,7 +591,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Moonlight Leather Chair",
         "sourceSlug": "moonlight"
       },
@@ -621,7 +632,8 @@
         "features": [
           "Managing your everyday life"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -633,7 +645,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Overall width: 635 ±10 mm; Backrest width (atinner frame): 460 ±10 mm; Armrest heightadjustment: 200–255 ±10 mm; Seat heightadjustment: 435–505 ±10 mm; Backrest width: 490 ±10 mm; Headrest width: 270 ±10 mm; Headrest height adjustment: 170–220 ±10 mm; Base width: 500 ±10 mm; Caster wheel clearance: 45 ±5 mm; Overall depth: 580 ±10 mm; Seat depth adjustment: 465–525 ±10 mm; Backrest height (without headrest): 1010–1080 ±10 mm; Overall height (with headrest): 1165–1235 ±10 mm; Base height (minimum): 640 ±10 mm",
         "documents": [],
@@ -691,8 +707,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -707,7 +723,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": true,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Myel Mesh Chair",
         "sourceSlug": "myel"
       },
@@ -756,6 +772,7 @@
           "Wooded Elegance"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 756mm.; Width: 570 mm.; Height of Seat: 465 mm.",
         "documents": [],
         "document_titles": [],
@@ -788,8 +805,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -801,7 +818,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Nordic Cafe Chair",
         "sourceSlug": "nordic"
       },
@@ -844,7 +861,8 @@
         "features": [
           "Engineered for active posture. Support that moves as you do"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -856,7 +874,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Seat height till armrest: 300 mm.; Armrest length: 250 mm.; Seat height till ground: 450 mm.; Overall height: 1080 mm; Seat headrest width : 400 mm; Overall width (base including wheels): 660 mm",
         "documents": [],
@@ -900,8 +922,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -915,7 +937,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Nuvic Mesh Chair",
         "sourceSlug": "nuvic"
       },

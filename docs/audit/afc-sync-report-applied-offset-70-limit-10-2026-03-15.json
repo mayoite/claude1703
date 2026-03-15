@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:17:40.001Z",
+  "generatedAt": "2026-03-15T14:57:17.994Z",
   "mode": "apply",
   "offset": 70,
   "limit": 10,
@@ -20,7 +20,8 @@
         "features": [
           "Versatile Seating for Dynamic Spaces"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -51,8 +52,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -64,7 +65,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Cove Collaborative",
         "sourceSlug": "cove"
       },
@@ -109,7 +110,8 @@
         "features": [
           "Sculpted Simplicity with Balanced Comfort"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -151,8 +153,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -164,7 +166,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Covea Lounge",
         "sourceSlug": "covea"
       },
@@ -209,7 +211,8 @@
         "features": [
           "Sculpted Comfort with Inviting Warmth"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -248,8 +251,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -261,7 +264,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Cozy Lounge",
         "sourceSlug": "cozy"
       },
@@ -304,7 +307,8 @@
         "features": [
           "Timeless Warmth"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -348,8 +352,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -361,7 +365,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Crossa Lounge",
         "sourceSlug": "crossa"
       },
@@ -404,7 +408,8 @@
         "features": [
           "Posture Perfect"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -448,8 +453,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -461,7 +466,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Eclips Lounge",
         "sourceSlug": "eclips"
       },
@@ -502,7 +507,8 @@
         "features": [
           "Tailored Ergonomics"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -545,8 +551,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -558,7 +564,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Embrace Lounge",
         "sourceSlug": "embrace"
       },
@@ -601,7 +607,8 @@
         "features": [
           "Bold Geometry with Modular Flexibility"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -636,8 +643,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -649,7 +656,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Esmor Sofa",
         "sourceSlug": "esmor"
       },
@@ -692,7 +699,8 @@
         "features": [
           "Geometric Balance"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -731,8 +739,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -744,7 +752,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Halo Lounge",
         "sourceSlug": "halo"
       },
@@ -787,7 +795,8 @@
         "features": [
           "Geometric Balance"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -826,8 +835,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -839,7 +848,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Halo Lounge",
         "sourceSlug": "halo"
       },
@@ -882,7 +891,8 @@
         "features": [
           "Subtle Statement"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -922,8 +932,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -935,7 +945,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Hush Sofa",
         "sourceSlug": "hush"
       },

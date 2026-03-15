@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:16:44.472Z",
+  "generatedAt": "2026-03-15T14:56:11.112Z",
   "mode": "apply",
   "offset": 20,
   "limit": 10,
@@ -21,6 +21,7 @@
           "Fluid Modernity"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 750mm.; Width: 480 mm.; Depth: 480 mm.",
         "documents": [],
         "document_titles": [],
@@ -53,8 +54,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -66,7 +67,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Dive Cafe Chair",
         "sourceSlug": "dive"
       },
@@ -110,6 +111,7 @@
           "Timeless Simplicity"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 762mm.; Width: 635 mm.; Height of Seat: 445 mm.",
         "documents": [],
         "document_titles": [],
@@ -138,8 +140,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -151,7 +153,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Ember Cafe Chair",
         "sourceSlug": "ember"
       },
@@ -195,6 +197,7 @@
           "Sleek Minimalism"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 790mm.; Width: 460 mm.; Depth: 540 mm.",
         "documents": [],
         "document_titles": [],
@@ -227,8 +230,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -240,7 +243,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Flare Cafe Chair",
         "sourceSlug": "flare"
       },
@@ -281,7 +284,8 @@
         "features": [
           "Minimal effort. Maximum support. Built to keep things simple—and strong"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -293,7 +297,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Armrest length: 280 mm.; Seat height till ground: 400 mm.; Seat base width (including wheels): 540 mm.; Overall height: 910 mm.; Seat width: 470 mm.; Seat backrest width: 420 mm.; Armrest height till seat: 220 mm.",
         "documents": [],
@@ -330,8 +338,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -345,7 +353,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Flex Mesh Chair",
         "sourceSlug": "flex"
       },
@@ -388,7 +396,8 @@
         "features": [
           "Smart Design"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -423,8 +432,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -436,7 +445,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Flip Training Chair",
         "sourceSlug": "flip"
       },
@@ -477,7 +486,8 @@
         "features": [
           "Balancing work and wellbeing. Work-ready comfort, refined"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -489,7 +499,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Overall height: 1035 mm; Seat height (from floor): 450 mm; Seat depth: 500 mm; Armrest length: 250 mm; Overall height (from armrest to ground): 650 mm; Seat width: 475 mm; Arm width: 95 mm; Armrest length: 250 mm; Backrest width (top): 460 mm.",
         "documents": [],
@@ -537,8 +551,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -553,7 +567,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": true,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Fluid Mesh Chair",
         "sourceSlug": "fluid"
       },
@@ -585,124 +599,6 @@
       ]
     },
     {
-      "id": "7d0868fd-89e2-483e-933f-4d6159a9cf79",
-      "slug": "fluid-x",
-      "name": "Fluid X",
-      "category_id": "seating",
-      "series_name": "Mesh Chair",
-      "description": "Fluid X is a mesh chair designed for posture support and comfort. Integrated lumbar support helps maintain a steadier seated posture.",
-      "specs": {
-        "category": "Seating",
-        "subcategory": "Mesh Chair",
-        "features": [
-          "Designed for seamless support. Comfort that flows with every move"
-        ],
-        "materials": [
-          "Silver Grey",
-          "Light Grey",
-          "Cadit Grey",
-          "Butter Scotch",
-          "Blue",
-          "Black",
-          "Fabric 9",
-          "Fabric 8",
-          "Fabric 7",
-          "Fabric 6",
-          "Fabric 5",
-          "Fabric 4"
-        ],
-        "dimensions": "Overall height (including headrest): 1300 mm; Seat height (from floor): 450 mm; Headrest height: 170 mm; Armrest width: 250 mm.; Headrest width: 280 mm.; Overall height: 1020 mm; Seat headrest width : 420 mm; Overall width (base including wheels): 660 mm; Seat width: 500 mm.; Armrest width: 100 mm.",
-        "documents": [],
-        "document_titles": [],
-        "certifications": [
-          "GREEN PRO"
-        ],
-        "overview_sections": [
-          {
-            "heading": "Designed for seamless support. Comfort that flows with every move",
-            "body": "Fluid X is built for those who need their chair to keep up. With smooth adjustability and responsive features, it follows your posture—not the other way around—offering comfort that adapts with you from the first task to the last"
-          },
-          {
-            "heading": "",
-            "body": "From neck to lower back, Fluid X adapts to your body’s shape and movement—minimizing tension so your mind stays sharp"
-          },
-          {
-            "heading": "",
-            "body": "Shift the armrests to match your ideal working angle—offering relief for your arms and better alignment for your upper body"
-          },
-          {
-            "heading": "",
-            "body": "The backrest includes targeted lumbar reinforcement that adapts to your spine’s curve, reducing pressure and improving seated posture"
-          }
-        ],
-        "dimension_sections": [
-          {
-            "heading": "Side View Dimensions (in mm)",
-            "lines": [
-              "Overall height (including headrest): 1300 mm",
-              "Seat height (from floor): 450 mm",
-              "Headrest height: 170 mm",
-              "Armrest width: 250 mm.",
-              "Headrest width: 280 mm."
-            ]
-          },
-          {
-            "heading": "Front View Dimensions (in mm)",
-            "lines": [
-              "Overall height: 1020 mm",
-              "Seat headrest width : 420 mm",
-              "Overall width (base including wheels): 660 mm",
-              "Seat width: 500 mm.",
-              "Armrest width: 100 mm."
-            ]
-          }
-        ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
-      },
-      "metadata": {
-        "category": "Seating",
-        "categoryIdCanonical": "seating",
-        "subcategory": "Mesh Chair",
-        "subcategoryId": "mesh",
-        "subcategoryLabel": "Mesh Chair",
-        "subcategory_slug": "mesh-chair",
-        "certifications": [
-          "GREEN PRO"
-        ],
-        "hasHeadrest": true,
-        "bifmaCertified": false,
-        "warrantyYears": 10,
-        "ai_alt_text": "Fluid X Mesh Chair",
-        "sourceSlug": "fluid-x"
-      },
-      "alt_text": "Fluid X Mesh Chair",
-      "sourceSlug": "fluid-x",
-      "sourceCategory": "Seating",
-      "sourceSubcategory": "Mesh Chair",
-      "sourceImages": [
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2c179eab7b0118d4b60_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2faf7da5d71f48bda8c_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a357fa22351df0f1a207_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
-        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a39d44f677337b4be24e_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg"
-      ],
-      "sourceDocs": [
-        {
-          "title": "",
-          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
-        }
-      ],
-      "sourceCertifications": [
-        "GREEN PRO"
-      ],
-      "localImages": [
-        "/images/catalog/fluid-x/image-1.jpg",
-        "/images/catalog/fluid-x/image-2.jpg",
-        "/images/catalog/fluid-x/image-3.jpg",
-        "/images/catalog/fluid-x/image-4.jpg"
-      ]
-    },
-    {
       "id": "86ef7b3e-ed97-45f5-981e-a6cab2d437d4",
       "slug": "oando-seating--fluid-x",
       "name": "Fluid X",
@@ -715,7 +611,8 @@
         "features": [
           "Designed for seamless support. Comfort that flows with every move"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -727,7 +624,10 @@
           "Fabric 7",
           "Fabric 6",
           "Fabric 5",
-          "Fabric 4"
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Overall height (including headrest): 1300 mm; Seat height (from floor): 450 mm; Headrest height: 170 mm; Armrest width: 250 mm.; Headrest width: 280 mm.; Overall height: 1020 mm; Seat headrest width : 420 mm; Overall width (base including wheels): 660 mm; Seat width: 500 mm.; Armrest width: 100 mm.",
         "documents": [],
@@ -775,8 +675,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -790,7 +690,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Fluid X Mesh Chair",
         "sourceSlug": "fluid-x"
       },
@@ -821,6 +721,128 @@
       ]
     },
     {
+      "id": "7d0868fd-89e2-483e-933f-4d6159a9cf79",
+      "slug": "fluid-x",
+      "name": "Fluid X",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Fluid X is a mesh chair designed for posture support and comfort. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Designed for seamless support. Comfort that flows with every move"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall height (including headrest): 1300 mm; Seat height (from floor): 450 mm; Headrest height: 170 mm; Armrest width: 250 mm.; Headrest width: 280 mm.; Overall height: 1020 mm; Seat headrest width : 420 mm; Overall width (base including wheels): 660 mm; Seat width: 500 mm.; Armrest width: 100 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Designed for seamless support. Comfort that flows with every move",
+            "body": "Fluid X is built for those who need their chair to keep up. With smooth adjustability and responsive features, it follows your posture—not the other way around—offering comfort that adapts with you from the first task to the last"
+          },
+          {
+            "heading": "",
+            "body": "From neck to lower back, Fluid X adapts to your body’s shape and movement—minimizing tension so your mind stays sharp"
+          },
+          {
+            "heading": "",
+            "body": "Shift the armrests to match your ideal working angle—offering relief for your arms and better alignment for your upper body"
+          },
+          {
+            "heading": "",
+            "body": "The backrest includes targeted lumbar reinforcement that adapts to your spine’s curve, reducing pressure and improving seated posture"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Overall height (including headrest): 1300 mm",
+              "Seat height (from floor): 450 mm",
+              "Headrest height: 170 mm",
+              "Armrest width: 250 mm.",
+              "Headrest width: 280 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1020 mm",
+              "Seat headrest width : 420 mm",
+              "Overall width (base including wheels): 660 mm",
+              "Seat width: 500 mm.",
+              "Armrest width: 100 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Fluid X Mesh Chair",
+        "sourceSlug": "fluid-x"
+      },
+      "alt_text": "Fluid X Mesh Chair",
+      "sourceSlug": "fluid-x",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2c179eab7b0118d4b60_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2faf7da5d71f48bda8c_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a357fa22351df0f1a207_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a39d44f677337b4be24e_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/fluid-x/image-1.jpg",
+        "/images/catalog/fluid-x/image-2.jpg",
+        "/images/catalog/fluid-x/image-3.jpg",
+        "/images/catalog/fluid-x/image-4.jpg"
+      ]
+    },
+    {
       "id": "3fa7c7be-286b-4b3b-9df9-a780e1c9a4e5",
       "slug": "oando-seating--fusion",
       "name": "Fusion",
@@ -834,6 +856,7 @@
           "Fluid Modernity"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 1000mm.; Width: 480 mm.; Depth: 490 mm.",
         "documents": [],
         "document_titles": [],
@@ -862,8 +885,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -875,7 +898,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Fusion Cafe Chair",
         "sourceSlug": "fusion"
       },

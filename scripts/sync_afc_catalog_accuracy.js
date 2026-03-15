@@ -114,7 +114,10 @@ function normalizeDimensionLine(value) {
   return repairImportedText(value)
     .replace(/([0-9])([A-Z])/g, "$1 $2")
     .replace(/([a-z])([A-Z])/g, "$1 $2")
-    .replace(/([0-9)])\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*:)/g, "$1; $2")
+    .replace(
+      /([0-9)])\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*(?:\s+\([^)]*\))?:)/g,
+      "$1; $2",
+    )
     .replace(/\s{2,}/g, " ")
     .trim();
 }
@@ -147,10 +150,16 @@ function isLikelyFinishToken(value) {
   const normalized = sanitizeText(value).toLowerCase();
   if (!normalized) return false;
   if (/^fabric\s*\d+$/i.test(normalized)) return true;
-  if (/^(black|white|blue|orange|green|grey|gray|silver|misty|slate|gothic|graphite|cadit|butter scotch|light grey|silver grey)$/i.test(normalized)) {
+  if (
+    /(black|white|blue|orange|green|grey|gray|silver|misty|slate|gothic|graphite|cadit|butter scotch|light grey|silver grey|frosty|sea green)/i.test(
+      normalized,
+    )
+  ) {
     return true;
   }
-  if (/(teak|maple|pine|acacia)$/i.test(normalized)) return true;
+  if (/(teak|maple|pine|acacia|moldau|elegant|thansau|highland)/i.test(normalized)) {
+    return true;
+  }
   return false;
 }
 
@@ -164,18 +173,6 @@ function extractMaterialDetails(source) {
   };
 
   source.materials.forEach(add);
-
-  const bodies = source.overviewPairs.flatMap((pair) => [pair.heading, pair.body]);
-  const materialKeywords =
-    /\b(mesh|fabric|foam|nylon|metal|steel|aluminium|aluminum|wood|wooden|laminate|plywood|polyester|polypropylene|polyurethane|upholster|upholstery|base|frame|top)\b/i;
-  for (const body of bodies) {
-    const sentences = sanitizeText(body)
-      .split(/(?<=[.!?])\s+/)
-      .map((sentence) => sanitizeText(sentence));
-    for (const sentence of sentences) {
-      if (materialKeywords.test(sentence)) add(sentence);
-    }
-  }
 
   return [...new Set(candidates)].slice(0, 8);
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T13:51:56.893Z",
+  "generatedAt": "2026-03-15T15:00:13.452Z",
   "mode": "dry-run",
   "offset": 0,
   "limit": null,
@@ -15,13 +15,13 @@
       "series_name": "Cafe Tables",
       "description": "Crox is a cafe table designed for offices and lounges. The cross-base layout keeps the table steady through daily use.",
       "specs": {
-        "source": "afcindia.in",
         "category": "Tables",
         "subcategory": "Cafe Tables",
         "features": [
           "Refined Simplicity"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -33,7 +33,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -61,11 +62,10 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
-        "source": "afcindia.in",
         "category": "Tables",
         "categoryIdCanonical": "tables",
         "subcategory": "Cafe Tables",
@@ -78,7 +78,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Crox Cafe Table",
         "sourceSlug": "crox"
       },

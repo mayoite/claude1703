@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:17:52.356Z",
+  "generatedAt": "2026-03-15T14:57:30.891Z",
   "mode": "apply",
   "offset": 80,
   "limit": 10,
@@ -19,14 +19,15 @@
         "subcategory": "Occasional Tables",
         "features": [],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
         "certifications": [],
         "overview_sections": [],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -38,7 +39,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Luxar Occasional Table",
         "sourceSlug": "luxar"
       },
@@ -64,7 +65,8 @@
         "features": [
           "A Statement Piece"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -107,8 +109,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -120,7 +122,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Margas Lounge",
         "sourceSlug": "margas"
       },
@@ -162,6 +164,7 @@
           "Natural Harmony"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Overall Height (top to floor): 500mm; Top Thickness: 25 mm; Dia: 450 / 600 / 750 mm",
         "documents": [],
         "document_titles": [],
@@ -190,8 +193,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -203,7 +206,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Nook Occasional Table",
         "sourceSlug": "nook"
       },
@@ -244,7 +247,8 @@
         "features": [
           "Designed for Focused Collaboration"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -287,8 +291,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -300,7 +304,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Nuvora Collaborative",
         "sourceSlug": "nuvora"
       },
@@ -345,7 +349,8 @@
         "features": [
           "Elevated privacy, effortless comfort."
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -388,8 +393,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -401,7 +406,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Padora Collaborative",
         "sourceSlug": "padora"
       },

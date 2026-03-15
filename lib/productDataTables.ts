@@ -1,5 +1,6 @@
 import { supabase } from "@/lib/db";
 import { normalizeAssetPath } from "@/lib/assetPaths";
+import { fetchWithSupabaseRetry } from "@/lib/supabaseSafe";
 
 type ProductSpecsRow = {
   product_id: string;
@@ -56,22 +57,27 @@ export async function fetchProductSpecsMap(
   const result = new Map<string, Record<string, unknown>>();
   if (ids.length === 0 || specsTableMissing) return result;
 
-  const { data, error } = await supabase
-    .from("product_specs")
-    .select("product_id, specs")
-    .in("product_id", ids);
+  const data = await fetchWithSupabaseRetry<ProductSpecsRow[]>(
+    "product_specs",
+    async () => {
+      const response = await supabase
+        .from("product_specs")
+        .select("product_id, specs")
+        .in("product_id", ids);
 
-  if (error) {
-    if (isMissingTableError(error.message)) {
-      specsTableMissing = true;
-      if (!loggedSpecsMissing) {
-        loggedSpecsMissing = true;
-        console.warn("[product_specs] table missing; falling back to products.specs");
+      if (response.error && isMissingTableError(response.error.message)) {
+        specsTableMissing = true;
+        if (!loggedSpecsMissing) {
+          loggedSpecsMissing = true;
+          console.warn("[product_specs] table missing; falling back to products.specs");
+        }
+        return { data: [], error: null };
       }
-      return result;
-    }
-    throw new Error(`[product_specs] fetch failed: ${error.message}`);
-  }
+
+      return response;
+    },
+    [],
+  );
 
   for (const row of (data ?? []) as ProductSpecsRow[]) {
     result.set(row.product_id, toSpecsObject(row.specs));
@@ -87,25 +93,30 @@ export async function fetchProductImagesMap(
   const result = new Map<string, ProductImageBundle>();
   if (ids.length === 0 || imagesTableMissing) return result;
 
-  const { data, error } = await supabase
-    .from("product_images")
-    .select("product_id, image_url, image_kind, sort_order")
-    .in("product_id", ids)
-    .order("sort_order", { ascending: true });
+  const data = await fetchWithSupabaseRetry<ProductImageRow[]>(
+    "product_images",
+    async () => {
+      const response = await supabase
+        .from("product_images")
+        .select("product_id, image_url, image_kind, sort_order")
+        .in("product_id", ids)
+        .order("sort_order", { ascending: true });
 
-  if (error) {
-    if (isMissingTableError(error.message)) {
-      imagesTableMissing = true;
-      if (!loggedImagesMissing) {
-        loggedImagesMissing = true;
-        console.warn(
-          "[product_images] table missing; falling back to products image columns",
-        );
+      if (response.error && isMissingTableError(response.error.message)) {
+        imagesTableMissing = true;
+        if (!loggedImagesMissing) {
+          loggedImagesMissing = true;
+          console.warn(
+            "[product_images] table missing; falling back to products image columns",
+          );
+        }
+        return { data: [], error: null };
       }
-      return result;
-    }
-    throw new Error(`[product_images] fetch failed: ${error.message}`);
-  }
+
+      return response;
+    },
+    [],
+  );
 
   for (const row of (data ?? []) as ProductImageRow[]) {
     const normalized = normalizeAssetPath(row.image_url);

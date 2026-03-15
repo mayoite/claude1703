@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:18:18.905Z",
+  "generatedAt": "2026-03-15T14:58:01.589Z",
   "mode": "apply",
   "offset": 110,
   "limit": 10,
@@ -23,16 +23,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "1350 L X 450 D X 600 HT (With Top 1650 L); 1500 L X 450 D X 600 HT (With Top 1950 L); 1650 L X 450 D X 600 HT (With Top 2100 L); L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H – 750",
         "documents": [],
@@ -83,8 +94,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -99,7 +110,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Apex Cabin Table",
         "sourceSlug": "apex"
       },
@@ -142,16 +153,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "1500 L X 450 D X 750 HT (With Top 1950 L); 1650 L X 450 D X 750 HT (With Top 2100 L); L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H - 750",
         "documents": [],
@@ -201,8 +223,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -217,7 +239,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Consulate Cabin Table",
         "sourceSlug": "consulate"
       },
@@ -259,7 +281,8 @@
         "features": [
           "Functional Style"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -271,7 +294,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -299,8 +323,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -315,7 +339,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Convene Cafe Table",
         "sourceSlug": "convene"
       },
@@ -362,16 +386,26 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "BOARDROOMTABLE (Gable End Based); L : 3150/4300/4500/4800/5400; D : 1200/1500; H : 750; MEETING TABLE(Gable End Based); L : 1500/1800/2400; D :1050/1200; H : 750",
         "documents": [],
@@ -413,8 +447,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -429,7 +463,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Convesso Meeting Table",
         "sourceSlug": "convesso"
       },
@@ -478,16 +512,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "2250 x 600 x 600 H; 2400 x 600 x 600 H; 2400 x 600 x 600 H; 2100 x 1050 x 750 H; 2250 x 1200 x 750 H; 2400 x 1200 x 750 H",
         "documents": [],
@@ -536,8 +581,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -552,7 +597,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Crest Cabin Table",
         "sourceSlug": "crest"
       },
@@ -594,7 +639,8 @@
         "features": [
           "Refined Simplicity"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -606,7 +652,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -634,8 +681,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -650,7 +697,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Crox Cafe Table",
         "sourceSlug": "crox"
       },
@@ -701,16 +748,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "DISCUSSIONTABLE; Dia – 900 /1050 / 1200; H - 750; MEETINGTABLE; L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250; D – 600 /750 / 900 / 1050 / 1200; H - 750; CONFERENCETABLE; L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750; D - 1200 /1500; H - 750",
         "documents": [],
@@ -770,8 +828,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -787,7 +845,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Curvivo-Meet Meeting Table",
         "sourceSlug": "curvivo-meet"
       },

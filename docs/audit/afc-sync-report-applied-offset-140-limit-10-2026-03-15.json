@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:18:51.136Z",
+  "generatedAt": "2026-03-15T14:58:35.710Z",
   "mode": "apply",
   "offset": 140,
   "limit": 10,
@@ -20,7 +20,8 @@
         "features": [
           "A workstation built for productivity, crafted to deliver balance and clarity."
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -32,7 +33,15 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
         ],
         "dimensions": "L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600; D2 - 600; HT - 1150 / 1200; L1 - 1500; L2 - 1200 / 1350 /1500; D1 - 600; D2 - 600; HT - 1150 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 1150 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 1150 / 1200",
         "documents": [],
@@ -106,8 +115,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Workstations",
@@ -123,7 +132,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": true,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "DeskPro workstation system",
         "sourceSlug": "deskpro"
       },
@@ -172,7 +181,8 @@
         "features": [
           "Composed Function"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -184,7 +194,15 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
         ],
         "dimensions": "L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200; L1 - 1500; L2 - 1350 /1500; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 / 1050 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 / 1050 / 1200; L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200",
         "documents": [],
@@ -254,8 +272,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Workstations",
@@ -271,7 +289,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Fenix workstation system",
         "sourceSlug": "fenix"
       },
@@ -318,7 +336,8 @@
         "features": [
           "A workstation for modern simplicity, one that embraces choice and color"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -330,7 +349,15 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 4",
+          "Fabric 3"
         ],
         "dimensions": "L1 - 1200 / 1350 / 1500; L2 - 1200 / 1350 / 1500; D1 - 600 / 750; D2 - 600 / 750; HT - 1200; L1 – 1050/ 1200; L2 - 1050/ 1200; D1 - 600; D2 - 600; HT - 1200; L1 - 900 / 1050 /1200 / 1350 / 1500 (750+750)); D1 - 600; HT - 1200; L1 - 900 / 1050 /1200 / 1350 / 1500 (750+750)); D1 - 600; HT - 1200",
         "documents": [],
@@ -402,8 +429,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Workstations",
@@ -417,7 +444,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Panel Pro workstation system",
         "sourceSlug": "panel-pro"
       },
@@ -462,7 +489,8 @@
         "features": [
           "A workstation that blends modern elegance with lasting strength"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -474,7 +502,15 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
         ],
         "dimensions": "L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 / 1050 / 1200; L1 - 1500; L2 - 1350 /1500; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 / 1050 / 1200; L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200",
         "documents": [],
@@ -548,8 +584,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Workstations",
@@ -565,7 +601,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Sleek workstation system",
         "sourceSlug": "sleek"
       },
@@ -614,7 +650,8 @@
         "features": [
           "A workstation for strength and collaboration, one that embraces versatility and purpose"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -626,7 +663,15 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
         ],
         "dimensions": "L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200; L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200; L1 - 1500; L2 - 1350 /1500; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200; L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200",
         "documents": [],
@@ -699,8 +744,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Workstations",
@@ -715,7 +760,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "X-Bench workstation system",
         "sourceSlug": "x-bench"
       },

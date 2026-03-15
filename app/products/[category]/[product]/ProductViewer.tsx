@@ -208,6 +208,7 @@ export function ProductViewer({
       "",
   );
   const specMaterials = toStringList(rawSpecs.materials);
+  const finishOptions = toStringList(rawSpecs.finish_options);
   const primaryMaterials = sanitizeDisplayList(
     product.detailedInfo?.materials?.filter(Boolean) || [],
   );
@@ -255,10 +256,22 @@ export function ProductViewer({
   })();
   const specRows = [
     { label: "Dimensions", value: dimensions },
-    {
-      label: "Materials",
-      value: materials.length > 0 ? materials.slice(0, 3).join(", ") : "",
-    },
+    ...(materials.length > 0
+      ? [
+          {
+            label: "Materials",
+            value: materials.slice(0, 3).join(", "),
+          },
+        ]
+      : []),
+    ...(finishOptions.length > 0
+      ? [
+          {
+            label: "Finish Options",
+            value: finishOptions.slice(0, 3).join(", "),
+          },
+        ]
+      : []),
     { label: "Warranty", value: warrantyText },
     { label: "Certification", value: certificationText },
     { label: "Configuration", value: quickConfig },
@@ -286,6 +299,7 @@ export function ProductViewer({
     const blocked = new Set([
       "dimensions",
       "materials",
+      "finish_options",
       "features",
       "sustainability_score",
     ]);
@@ -330,11 +344,20 @@ export function ProductViewer({
   const categoryLabel = normalizeDisplayText(categoryName);
   const useCasePreview = useCases.slice(0, 4);
   const materialPreview = materials.slice(0, 3).join(", ");
+  const finishPreview = finishOptions.slice(0, 3).join(", ");
   const summaryCards = [
     { label: PDP_ROUTE_COPY.summary.bestFor, value: useCasePreview.join(", ") },
     { label: PDP_ROUTE_COPY.ctas.configuration, value: quickConfig },
     { label: PDP_ROUTE_COPY.summary.dimensions, value: dimensions },
-    { label: PDP_ROUTE_COPY.summary.materials, value: materialPreview },
+    {
+      label:
+        materials.length > 0
+          ? PDP_ROUTE_COPY.summary.materials
+          : finishOptions.length > 0
+            ? "Finish Options"
+            : PDP_ROUTE_COPY.summary.materials,
+      value: materials.length > 0 ? materialPreview : finishPreview,
+    },
   ].filter((card) => card.value);
   const assuranceCards = [
     warrantyText ? { label: "Warranty", value: warrantyText } : null,
@@ -843,6 +866,22 @@ export function ProductViewer({
                         className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs text-neutral-700"
                       >
                         {material}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {finishOptions.length > 0 && (
+                <div className="mt-7 border-t border-neutral-100 pt-7">
+                  <h3 className="pdp-section-label mb-3 text-neutral-500">Finish Options</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {finishOptions.map((finish) => (
+                      <span
+                        key={finish}
+                        className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs text-neutral-700"
+                      >
+                        {finish}
                       </span>
                     ))}
                   </div>

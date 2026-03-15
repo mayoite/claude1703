@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:18:27.365Z",
+  "generatedAt": "2026-03-15T14:58:10.822Z",
   "mode": "apply",
   "offset": 120,
   "limit": 10,
@@ -23,16 +23,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "DISCUSSIONTABLE; Dia – 900 /1050 / 1200; H - 750; MEETINGTABLE; L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250; D – 600 /750 / 900 / 1050 / 1200; H - 750; CONFERENCETABLE; L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750; D - 1200 /1500; H - 750",
         "documents": [],
@@ -89,8 +100,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -107,7 +118,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": true,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Desk-Meet Meeting Table",
         "sourceSlug": "desk-meet"
       },
@@ -158,16 +169,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "2100 X 450 X2100 H; 2250 X 450 X2100 H; 2400 X 450 X 2100 H; 2250 x 500 x600 H; 2400 x 500 x600 H; 2400 x 500 x 600 H; 2100 x 1050x 750 H; 2250 x 1200x 750 H; 2400 x 1200x 750 H",
         "documents": [],
@@ -224,8 +246,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -240,7 +262,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Exquisite Cabin Table",
         "sourceSlug": "exquisite"
       },
@@ -282,7 +304,8 @@
         "features": [
           "Above the Ordinary"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -294,7 +317,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -318,8 +342,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -334,7 +358,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "High-Cafe Cafe Table",
         "sourceSlug": "high-cafe"
       },
@@ -376,7 +400,8 @@
         "features": [
           "Adaptable to Every Workspace"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -388,7 +413,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -413,8 +439,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -426,7 +452,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Impulse Training Table",
         "sourceSlug": "impulse"
       },
@@ -467,7 +493,8 @@
         "features": [
           "Modern Minimalism"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -479,7 +506,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -507,8 +535,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -523,7 +551,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Inox Cafe Table",
         "sourceSlug": "inox"
       },
@@ -570,16 +598,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "BOARDROOMTABLE; 6000/750 X 3000/750 X 750; 5700/600 X 2700/600 X 600",
         "documents": [],
@@ -616,8 +655,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -632,7 +671,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Letz Think Meeting Table",
         "sourceSlug": "letz-think"
       },
@@ -676,7 +715,8 @@
         "features": [
           "Strong Structure with Timeless Design"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -688,7 +728,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -713,8 +754,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -726,7 +767,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Modulus Training Table",
         "sourceSlug": "modulus"
       },
@@ -767,7 +808,8 @@
         "features": [
           "Flexible by Design"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
@@ -779,7 +821,8 @@
           "Sea Green",
           "Orange",
           "Graphite Grey",
-          "Misty Grey"
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "",
         "documents": [],
@@ -804,8 +847,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -817,7 +860,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "NexTable Training Table",
         "sourceSlug": "nextable"
       },
@@ -861,16 +904,25 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
           "Highland Pine",
-          "Slate Grey"
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "White"
         ],
         "dimensions": "2250 x 500 x 600 H; 2400 x 500 x 600 H; 2400 x 500 x 600 H; 2100 x 1050 x 750 H; 2250 x 1200 x 750 H; 2400 x 1200 x 750 H",
         "documents": [],
@@ -919,8 +971,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -935,7 +987,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Opus Cabin Table",
         "sourceSlug": "opus"
       },
@@ -980,16 +1032,27 @@
         "materials": [
           "Afromosia Oak",
           "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
           "Black",
           "Dyed ash Silver Crown",
-          "Natural Oak Brown",
           "Natural Teak",
           "Teak Crown",
           "White Oak",
           "Moldau Acacia Dark",
           "Elegant Teak",
           "Thansau Maple",
-          "Highland Pine"
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
         ],
         "dimensions": "W: 1050 / 1200 / 1350 / 1600; D: 400 / 450; H: 2100; L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H – 750",
         "documents": [],
@@ -1036,8 +1099,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Tables",
@@ -1052,7 +1115,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Presidency Cabin Table",
         "sourceSlug": "presidency"
       },

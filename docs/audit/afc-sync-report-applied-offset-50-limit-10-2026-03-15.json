@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:17:19.165Z",
+  "generatedAt": "2026-03-15T14:56:48.843Z",
   "mode": "apply",
   "offset": 50,
   "limit": 10,
@@ -20,7 +20,8 @@
         "features": [
           "Shaping your daily rhythm, Where motion meets intention."
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -32,7 +33,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Armrest length: 250 mm.; Seat height till ground: 430 mm.; Total length: 1010 mm.; Seat base width (including wheels): 660 mm.; Seat backrest width: 465 mm.; Overall height: 1180 mm.; Armrest height till seat: 300 mm.; Armrest width: 95 mm.; Headrest width: 320 mm.; Headrest length: 170 mm.",
         "documents": [],
@@ -82,8 +87,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -99,7 +104,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": true,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Sway Mesh Chair",
         "sourceSlug": "sway"
       },
@@ -144,7 +149,8 @@
         "category": "Seating",
         "subcategory": "Mesh Chair",
         "features": [],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -156,7 +162,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "",
         "documents": [],
@@ -166,8 +176,8 @@
         ],
         "overview_sections": [],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -181,7 +191,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Toro Mesh Chair",
         "sourceSlug": "toro"
       },
@@ -213,14 +223,15 @@
         "subcategory": "Cafe Chair",
         "features": [],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
         "certifications": [],
         "overview_sections": [],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -232,7 +243,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Wing Cafe Chair",
         "sourceSlug": "wing"
       },
@@ -258,7 +269,8 @@
         "features": [
           "Intelligent Spine Support"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -270,7 +282,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "",
         "documents": [],
@@ -289,8 +305,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -304,7 +320,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "X-Mesh Mesh Chair",
         "sourceSlug": "x-mesh"
       },
@@ -348,6 +364,7 @@
           "Classic Essential"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 800mm.; Width: 550 mm.; Depth: 440 mm.",
         "documents": [],
         "document_titles": [],
@@ -380,8 +397,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -393,7 +410,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Zilo Cafe Chair",
         "sourceSlug": "zilo"
       },
@@ -434,7 +451,8 @@
         "features": [
           "Effortless Modernity"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -476,8 +494,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -489,7 +507,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Accent Lounge",
         "sourceSlug": "accent"
       },
@@ -528,7 +546,8 @@
         "features": [
           "Elegant Comfort"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -571,8 +590,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -584,7 +603,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Adam Lounge",
         "sourceSlug": "adam"
       },
@@ -629,7 +648,8 @@
         "features": [
           "Crafted for Modern Focus and Elevated Comfort"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -673,8 +693,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -686,7 +706,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Alonzo Sofa",
         "sourceSlug": "alonzo"
       },
@@ -731,7 +751,8 @@
         "features": [
           "Essential Form"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -743,7 +764,7 @@
           "Fabric 2",
           "Fabric 1"
         ],
-        "dimensions": "Overall Height: 790 Seat Height: 450; Seat Width(Front View): 500 Seat Depth (Top View): 490",
+        "dimensions": "Overall Height: 790; Seat Height: 450; Seat Width(Front View): 500; Seat Depth (Top View): 490",
         "documents": [],
         "document_titles": [],
         "certifications": [],
@@ -765,13 +786,13 @@
           {
             "heading": "Arcana",
             "lines": [
-              "Overall Height: 790 Seat Height: 450",
-              "Seat Width(Front View): 500 Seat Depth (Top View): 490"
+              "Overall Height: 790; Seat Height: 450",
+              "Seat Width(Front View): 500; Seat Depth (Top View): 490"
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -783,7 +804,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Arcana Lounge",
         "sourceSlug": "arcana"
       },
@@ -826,7 +847,8 @@
         "features": [
           "Elegant Comfort"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Fabric 10",
           "Fabric 9",
           "Fabric 8",
@@ -868,8 +890,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Soft Seating",
@@ -881,7 +903,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Arco Lounge",
         "sourceSlug": "arco"
       },

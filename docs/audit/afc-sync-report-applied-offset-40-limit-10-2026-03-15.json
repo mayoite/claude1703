@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T14:17:08.050Z",
+  "generatedAt": "2026-03-15T14:56:35.974Z",
   "mode": "apply",
   "offset": 40,
   "limit": 10,
@@ -20,7 +20,8 @@
         "features": [
           "Balanced Comfort"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -32,7 +33,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Overall Height: 1040 mm; Overall Width: 660 mm; Overall Depth: 660 mm; Seat Width: 460 mm; Seat Depth: 470 mm",
         "documents": [],
@@ -62,8 +67,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -77,7 +82,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Orbit Mesh Chair",
         "sourceSlug": "orbit"
       },
@@ -122,7 +127,8 @@
         "features": [
           "Balancing work and wellbeing. Precision in posture. Comfort in motion"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -134,7 +140,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Armrest width: 300 mm.; Armrest to seat height: 300 mm.; Seat width: 450 mm.; Backrest to seat height: 700 mm.; Seat base width (including wheels): 660 mm.; Overall height: 1250 mm.; Seat width: 510 mm.; Seat base width (including wheels): 660 mm.; Armrest length: 250 mm.; Headrest length: 200 mm.; Headrest width: 340 mm; Seat to ground height: 450 mm.",
         "documents": [],
@@ -185,8 +195,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -201,7 +211,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Phoenix Mesh Chair",
         "sourceSlug": "phoenix"
       },
@@ -244,6 +254,7 @@
           "Executive Luxury with Timeless Appeal"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -267,8 +278,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -280,7 +291,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Pinnacle Leather Chair",
         "sourceSlug": "pinnacle"
       },
@@ -325,7 +336,8 @@
         "features": [
           "Designed for everyday agility. Comfort that adapts as fast as you do"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -337,7 +349,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Seat height till ground : 430 mm; Overall width (base including wheels): 660 mm; Seat width: 520 mm.; Armrest length: 250 mm.; Headrest width: 320 mm.; Armrest width: 100 mm.; Overall height: 10800 mm; Seat height till ground: 635 mm.; Seat to width: 465 mm.",
         "documents": [],
@@ -384,8 +400,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -399,7 +415,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Revoq Mesh Chair",
         "sourceSlug": "revoq"
       },
@@ -443,6 +459,7 @@
           "Contoured Elegance for Executive Spaces"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "",
         "documents": [],
         "document_titles": [],
@@ -466,8 +483,8 @@
           }
         ],
         "dimension_sections": [],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -479,7 +496,7 @@
         "certifications": [],
         "hasHeadrest": true,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Rider Leather Chair",
         "sourceSlug": "rider"
       },
@@ -523,6 +540,7 @@
           "Sculpted Simplicity"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 770mm.; Width: 480 mm.; Depth: 510 mm.",
         "documents": [],
         "document_titles": [],
@@ -555,8 +573,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -568,7 +586,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Rio Cafe Chair",
         "sourceSlug": "rio"
       },
@@ -611,7 +629,8 @@
         "features": [
           "Made to move with you. Support that shifts as you do"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -623,7 +642,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Seat backrest width: 490 mm.; Overall height: 960 mm; Seat height till ground: 290 mm.; Headrest width: 490 mm.; Overall height: 1110 mm; Seat height till ground: 450 mm.; Seat width: 470 mm.; Headrest height: 150 mm.; Armrest height till seat: 290 mm.; Seat base width (including wheels): 680 mm.",
         "documents": [],
@@ -671,8 +694,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -686,7 +709,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Rock Mesh Chair",
         "sourceSlug": "rock"
       },
@@ -728,6 +751,7 @@
           "Casual Comfort"
         ],
         "materials": [],
+        "finish_options": [],
         "dimensions": "Height: 770mm.; Width: 440 mm.; Depth: 520 mm.",
         "documents": [],
         "document_titles": [],
@@ -760,8 +784,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -773,7 +797,7 @@
         "certifications": [],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Smile Cafe Chair",
         "sourceSlug": "smile"
       },
@@ -816,7 +840,8 @@
         "features": [
           "Built for better posture. Support that has your back."
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -828,7 +853,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Seat base width (including wheels): 660 mm.; Armrest length: 250 mm.; Overall height: 1270 mm..; Headrest width: 280 mm.; Headrest height: 170 mm.; Overall height: 990 mm.; Armrest width: 85 mm.; Seat width: 490 mm.; Seat backrest width: 470 mm.; Armrest height till seat: 300 mm.; Seat height till ground: 450 mm.",
         "documents": [],
@@ -877,8 +906,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -892,7 +921,7 @@
         ],
         "hasHeadrest": true,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Spino Mesh Chair",
         "sourceSlug": "spino"
       },
@@ -931,7 +960,8 @@
         "features": [
           "Refined function. Everyday ease. Comfort where it matters most"
         ],
-        "materials": [
+        "materials": [],
+        "finish_options": [
           "Silver Grey",
           "Light Grey",
           "Cadit Grey",
@@ -943,7 +973,11 @@
           "Fabric 8",
           "Fabric 7",
           "Fabric 6",
-          "Fabric 5"
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
         ],
         "dimensions": "Seat base width (including wheels): 660 mm.; Armrest length: 250 mm.; Seat height: 1270 mm..; Seat height till ground: 450 mm.; Overall height: 1650 mm.; Armrest width: 85 mm.; Seat width: 485 mm.; Seat backrest width: 490 mm.; Armrest height till seat: 300 mm.",
         "documents": [],
@@ -986,8 +1020,8 @@
             ]
           }
         ],
-        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
-        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+        "warranty_text": "",
+        "sustainability_text": ""
       },
       "metadata": {
         "category": "Seating",
@@ -1001,7 +1035,7 @@
         ],
         "hasHeadrest": false,
         "bifmaCertified": false,
-        "warrantyYears": 10,
+        "warrantyYears": null,
         "ai_alt_text": "Sullion Mesh Chair",
         "sourceSlug": "sullion"
       },
