@@ -1,6 +1,10 @@
+import "server-only";
+
+import { unstable_cache } from "next/cache";
 import { supabase } from "./db";
 import { normalizeAssetList, normalizeAssetPath } from "./assetPaths";
 import { fetchNhostProducts } from "./nhostCatalog";
+import { CATALOG_REVALIDATE_SECONDS } from "@/data/site/fallbacks";
 
 // ── Supabase-sourced Product types ──────────────────────────────────────────
 
@@ -164,7 +168,7 @@ function toCompatProduct(p: Product): CompatProduct {
 // ── Query helpers ──────────────────────────────────────────────────────────
 
 /** Fetch ALL products from Supabase */
-export async function getProducts(): Promise<Product[]> {
+async function fetchAllProductsLive(): Promise<Product[]> {
     const { data, error } = await supabase
         .from("products")
         .select("*")
@@ -192,8 +196,17 @@ export async function getProducts(): Promise<Product[]> {
     }));
 }
 
+const getCachedProducts = unstable_cache(fetchAllProductsLive, ["catalog-products"], {
+    revalidate: CATALOG_REVALIDATE_SECONDS,
+    tags: ["catalog", "catalog-products"],
+});
+
+export async function getProducts(): Promise<Product[]> {
+    return getCachedProducts();
+}
+
 /** Fetch products filtered by category id, with category join */
-export async function getProductsByCategory(categoryId: string): Promise<Product[]> {
+async function fetchProductsByCategoryLive(categoryId: string): Promise<Product[]> {
     const { data, error } = await supabase
         .from("products")
         .select("*, categories(name)")
@@ -222,8 +235,21 @@ export async function getProductsByCategory(categoryId: string): Promise<Product
     }));
 }
 
+const getCachedProductsByCategory = unstable_cache(
+    async (categoryId: string) => fetchProductsByCategoryLive(categoryId),
+    ["catalog-products-by-category"],
+    {
+        revalidate: CATALOG_REVALIDATE_SECONDS,
+        tags: ["catalog", "catalog-products"],
+    },
+);
+
+export async function getProductsByCategory(categoryId: string): Promise<Product[]> {
+    return getCachedProductsByCategory(categoryId);
+}
+
 /** Fetch a single product by its product URL key (stored internally in `slug`). */
-export async function getProductByUrlKey(productUrlKey: string): Promise<Product | null> {
+async function fetchProductByUrlKeyLive(productUrlKey: string): Promise<Product | null> {
     const { data, error } = await supabase
         .from("products")
         .select("*")
@@ -252,6 +278,19 @@ export async function getProductByUrlKey(productUrlKey: string): Promise<Product
         flagship_image: normalizeAssetPath(row.flagship_image),
         "3d_model": normalizeAssetPath(row["3d_model"]),
     };
+}
+
+const getCachedProductByUrlKey = unstable_cache(
+    async (productUrlKey: string) => fetchProductByUrlKeyLive(productUrlKey),
+    ["catalog-product-by-url-key"],
+    {
+        revalidate: CATALOG_REVALIDATE_SECONDS,
+        tags: ["catalog", "catalog-products"],
+    },
+);
+
+export async function getProductByUrlKey(productUrlKey: string): Promise<Product | null> {
+    return getCachedProductByUrlKey(productUrlKey);
 }
 
 /** Backward-compatible alias. Prefer `getProductByUrlKey` in new code. */
@@ -300,7 +339,7 @@ function wait(ms: number): Promise<void> {
 
 /** Fetch all products and group them into the old Category[] shape.
  *  This is the main bridge used by pages during migration. */
-export async function getCatalog(): Promise<CompatCategory[]> {
+async function buildCatalogLive(): Promise<CompatCategory[]> {
     let categories: CategoryRow[] = [];
     let products: Product[] = [];
     let lastError = "";
@@ -428,6 +467,15 @@ export async function getCatalog(): Promise<CompatCategory[]> {
         return [];
     }
     return result;
+}
+
+const getCachedCatalog = unstable_cache(buildCatalogLive, ["catalog-tree"], {
+    revalidate: CATALOG_REVALIDATE_SECONDS,
+    tags: ["catalog", "catalog-tree"],
+});
+
+export async function getCatalog(): Promise<CompatCategory[]> {
+    return getCachedCatalog();
 }
 
 /** Get all unique category IDs from Supabase (for generateStaticParams) */

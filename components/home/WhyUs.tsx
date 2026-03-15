@@ -29,7 +29,7 @@ export function WhyUs({ stats, asOfLabel }: WhyUsProps) {
   ] as const;
 
   return (
-    <section className="w-full bg-[#040C18] py-20 md:py-28">
+    <section className="section-ink w-full py-20 md:py-28">
       <div className="container px-6 2xl:px-0">
         <div className="mb-14">
           <p className="typ-label mb-4 text-cyan-300/50">Why teams choose us</p>
@@ -44,12 +44,12 @@ export function WhyUs({ stats, asOfLabel }: WhyUsProps) {
               >
                 {number}
               </span>
-              <p className="typ-label text-white/40 mb-2">{label}</p>
-              <p className="typ-lead text-white/40 max-w-[26ch]">{caption}</p>
+              <p className="typ-label scheme-text-inverse-muted mb-2">{label}</p>
+              <p className="typ-lead scheme-text-inverse-body max-w-[26ch]">{caption}</p>
             </div>
           ))}
         </div>
-        <p data-testid="kpi-as-of-home" className="mt-10 text-xs text-white/20 tracking-wide">
+        <p data-testid="kpi-as-of-home" className="scheme-text-inverse-subtle mt-10 text-xs tracking-wide">
           {asOfLabel}
         </p>
       </div>

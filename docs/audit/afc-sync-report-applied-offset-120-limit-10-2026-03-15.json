@@ -1,0 +1,1088 @@
+{
+  "generatedAt": "2026-03-15T14:18:27.365Z",
+  "mode": "apply",
+  "offset": 120,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "77716082-57fe-41cd-a22a-3f7a4cdc8c19",
+      "slug": "oando-tables--desk-meet",
+      "name": "Desk-Meet",
+      "category_id": "tables",
+      "series_name": "Meeting Tables",
+      "description": "Desk-Meet is a meeting table designed for productive discussions.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Meeting Tables",
+        "features": [
+          "Integrated Versatility"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Oak Brown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine"
+        ],
+        "dimensions": "DISCUSSIONTABLE; Dia – 900 /1050 / 1200; H - 750; MEETINGTABLE; L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250; D – 600 /750 / 900 / 1050 / 1200; H - 750; CONFERENCETABLE; L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750; D - 1200 /1500; H - 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Deskpro",
+          "SCS GOLD",
+          "GREEN PRO",
+          "BIFMA DESK PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Integrated Versatility",
+            "body": "The DeskMeet series integrates effortlessly across discussion zones, meeting rooms, and collaborative areas, offering multiple configurations to suit diverse workplace needs. Its adaptable nature allows teams to shape the space exactly as required."
+          },
+          {
+            "heading": "",
+            "body": "With a focus on modern aesthetics and practical performance, DeskMeet enhances both functionality and visual appeal. It brings flexibility, style, and purpose together — making it an ideal choice for any professional environment."
+          },
+          {
+            "heading": "",
+            "body": "Keeps cables neatly organized and out of sight for a clean, efficient workspace."
+          },
+          {
+            "heading": "",
+            "body": "A distinct, modern leg structure that adds style while ensuring strong, stable support."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "DESKMEET 3",
+            "lines": [
+              "DISCUSSIONTABLE",
+              "Dia – 900 /1050 / 1200",
+              "H - 750"
+            ]
+          },
+          {
+            "heading": "DESKMEET 2",
+            "lines": [
+              "MEETINGTABLE",
+              "L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250",
+              "D – 600 /750 / 900 / 1050 / 1200",
+              "H - 750"
+            ]
+          },
+          {
+            "heading": "DESKMEET 1",
+            "lines": [
+              "CONFERENCETABLE",
+              "L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750",
+              "D - 1200 /1500",
+              "H - 750"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Meeting Tables",
+        "subcategoryId": "meeting",
+        "subcategoryLabel": "Meeting Tables",
+        "subcategory_slug": "meeting-tables",
+        "certifications": [
+          "Deskpro",
+          "SCS GOLD",
+          "GREEN PRO",
+          "BIFMA DESK PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": true,
+        "warrantyYears": 10,
+        "ai_alt_text": "Desk-Meet Meeting Table",
+        "sourceSlug": "desk-meet"
+      },
+      "alt_text": "Desk-Meet Meeting Table",
+      "sourceSlug": "desk-meet",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Meeting Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcd126fb80582d4fba198_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcd292b3676f26550d92d_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcd42f01b217dcb65c036_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcd5692bb3d483c31e96c_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcd6c485d3bc860edce5a_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Deskpro",
+        "SCS GOLD",
+        "GREEN PRO",
+        "BIFMA DESK PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--desk-meet/image-1.jpg",
+        "/images/catalog/oando-tables--desk-meet/image-2.jpg",
+        "/images/catalog/oando-tables--desk-meet/image-3.jpg",
+        "/images/catalog/oando-tables--desk-meet/image-4.jpg",
+        "/images/catalog/oando-tables--desk-meet/image-5.jpg"
+      ]
+    },
+    {
+      "id": "21392e93-fd7d-4572-9d6d-ceacbbd4a6f7",
+      "slug": "oando-tables--exquisite",
+      "name": "Exquisite",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Exquisite is a cabin table designed for modern cabins. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "Executive Grace"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Oak Brown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine"
+        ],
+        "dimensions": "2100 X 450 X2100 H; 2250 X 450 X2100 H; 2400 X 450 X 2100 H; 2250 x 500 x600 H; 2400 x 500 x600 H; 2400 x 500 x 600 H; 2100 x 1050x 750 H; 2250 x 1200x 750 H; 2400 x 1200x 750 H",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Executive Grace",
+            "body": "Exquisite blends refined craftsmanship with modern authority. Premium veneers and precise detailing create a bold yet graceful presence that defines the executive space."
+          },
+          {
+            "heading": "",
+            "body": "Every element is designed for balance—where sophistication meets functionality, and timeless design reflects leadership with quiet confidence"
+          },
+          {
+            "heading": "",
+            "body": "The essence of wooden furniture lies in its finish. Exquisite uses a two-component waterborne paint that significantly reduces formaldehyde, providing a healthier and eco-friendly office environment"
+          },
+          {
+            "heading": "",
+            "body": "Flexible access to power and data through the work surface or power beam, keeping the workspace clean and clutter-free"
+          },
+          {
+            "heading": "",
+            "body": "The multi storage features four seamless partitions, offering a refined look while providing organized spaces. Its modern design enhances any environment, blending functionality with elegance"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "BACK UNITSTORAGE",
+            "lines": [
+              "2100 X 450 X2100 H",
+              "2250 X 450 X2100 H",
+              "2400 X 450 X 2100 H"
+            ]
+          },
+          {
+            "heading": "SIDE UNIT",
+            "lines": [
+              "2250 x 500 x600 H",
+              "2400 x 500 x600 H",
+              "2400 x 500 x 600 H"
+            ]
+          },
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "2100 x 1050x 750 H",
+              "2250 x 1200x 750 H",
+              "2400 x 1200x 750 H"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Exquisite Cabin Table",
+        "sourceSlug": "exquisite"
+      },
+      "alt_text": "Exquisite Cabin Table",
+      "sourceSlug": "exquisite",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69019fa9fc18b75a14e7835f_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69019fead6b0dd97fdeb9a35_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901a00f4db5c6368a40dc93_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--exquisite/image-1.jpg",
+        "/images/catalog/oando-tables--exquisite/image-2.jpg",
+        "/images/catalog/oando-tables--exquisite/image-3.jpg"
+      ]
+    },
+    {
+      "id": "7ccbbec5-e514-43f3-9cbb-837dbdf04f95",
+      "slug": "oando-soft-seating--high-cafe",
+      "name": "High-Cafe",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "High-Cafe is a cafe table designed for breakout and dining spaces.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [
+          "Above the Ordinary"
+        ],
+        "materials": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Above the Ordinary",
+            "body": "Crafted with precision, this high table blends modern style with long-lasting durability, making it ideal for cafés and collaborative zones. Its clean design and versatile form create an inviting setting for conversations and casual interactions."
+          },
+          {
+            "heading": "",
+            "body": "Finished with premium PU paint, it offers a smooth, resilient surface that withstands daily use while keeping its vibrant look intact. Available in multiple colours and finishes, it seamlessly complements any interior aesthetic."
+          },
+          {
+            "heading": "",
+            "body": "The table features a robust, cross-supported base that ensures exceptional steadiness, even in high-traffic café and collaboration areas."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "High-Cafe Cafe Table",
+        "sourceSlug": "high-cafe"
+      },
+      "alt_text": "High-Cafe Cafe Table",
+      "sourceSlug": "high-cafe",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69398a303cdae13ef3a95db6_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69398a0edf357a40b53aea48_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69398a4a6b6bba8abab680f3_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--high-cafe/image-1.jpg",
+        "/images/catalog/oando-soft-seating--high-cafe/image-2.jpg",
+        "/images/catalog/oando-soft-seating--high-cafe/image-3.jpg"
+      ]
+    },
+    {
+      "id": "398187b0-7910-4698-98b4-60088556cb8d",
+      "slug": "oando-tables--impulse",
+      "name": "Impulse",
+      "category_id": "tables",
+      "series_name": "Training Tables",
+      "description": "Impulse is a training table designed for modular office layouts.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Training Tables",
+        "features": [
+          "Adaptable to Every Workspace"
+        ],
+        "materials": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Adaptable to Every Workspace",
+            "body": "Impulse is a versatile desk system crafted to support the evolving needs of modern offices. With a wide range of desk sizes and multiple configuration options, it easily fits diverse layouts."
+          },
+          {
+            "heading": "",
+            "body": "Designed for a clean and efficient workspace, Impulse includes cable-managed legs, optional cable baskets, and CPU holders for seamless organization. Built with durability and style, it ensures a clutter-free environment that enhances productivity and maintains a professional aesthetic."
+          },
+          {
+            "heading": "",
+            "body": "The robust metal structure provides excellent stability and durability, making it ideal for daily training use while maintaining a sleek, professional look."
+          },
+          {
+            "heading": "",
+            "body": "Designed with cable-managed legs and built-in grommets, the desk keeps wires organized and out of sight, ensuring a clean, clutter-free workspace."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Training Tables",
+        "subcategoryId": "training",
+        "subcategoryLabel": "Training Tables",
+        "subcategory_slug": "training-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Impulse Training Table",
+        "sourceSlug": "impulse"
+      },
+      "alt_text": "Impulse Training Table",
+      "sourceSlug": "impulse",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Training Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693addc13537f3807c35a011_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693addda63e6d63e62e58eed_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693addf145c66682bb3b5c6d_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ade1763e6d63e62e5af2c_IMG%201.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-tables--impulse/image-1.jpg",
+        "/images/catalog/oando-tables--impulse/image-2.jpg",
+        "/images/catalog/oando-tables--impulse/image-3.jpg",
+        "/images/catalog/oando-tables--impulse/image-4.jpg"
+      ]
+    },
+    {
+      "id": "16d570b7-2ab3-4554-938a-3b7b7bc014db",
+      "slug": "oando-tables--inox",
+      "name": "Inox",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "Inox is a cafe table designed for modern office furniture needs.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [
+          "Modern Minimalism"
+        ],
+        "materials": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Modern Minimalism",
+            "body": "The INOX Café Table brings a clean, contemporary look to any workspace or café-style setting. Designed for everyday functionality, it comes in multiple shapes, sizes, and heights to adapt effortlessly to different environments."
+          },
+          {
+            "heading": "",
+            "body": "Its durable form enhances modern interiors while offering flexibility for discussions, dining, or casual collaboration. Combining simplicity with sophistication, the INOX Collection delivers style without compromising practicality."
+          },
+          {
+            "heading": "",
+            "body": "The table base features a square column, offering robust stability for the tabletop."
+          },
+          {
+            "heading": "",
+            "body": "The tabletop features a commercial-grade laminate finish designed specifically for high-traffic dining areas. It offers superior resistance to scratches, heat, and moisture, making it easy to sanitize and maintain in a busy office canteen environment."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Inox Cafe Table",
+        "sourceSlug": "inox"
+      },
+      "alt_text": "Inox Cafe Table",
+      "sourceSlug": "inox",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ac402aeb72b6246cb6f9d_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ac4190b18dc48d4127044_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ac42ffb6c9ead3c6f4715_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ac44129ad41e4f6661d37_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--inox/image-1.jpg",
+        "/images/catalog/oando-tables--inox/image-2.jpg",
+        "/images/catalog/oando-tables--inox/image-3.jpg",
+        "/images/catalog/oando-tables--inox/image-4.jpg"
+      ]
+    },
+    {
+      "id": "24e7279d-f407-42f1-8c52-171c31a02137",
+      "slug": "oando-tables--letz-think",
+      "name": "Letz Think",
+      "category_id": "tables",
+      "series_name": "Meeting Tables",
+      "description": "Letz Think is a meeting table designed for classrooms and offices.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Meeting Tables",
+        "features": [
+          "Professional Innovation"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Oak Brown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine"
+        ],
+        "dimensions": "BOARDROOMTABLE; 6000/750 X 3000/750 X 750; 5700/600 X 2700/600 X 600",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Professional Innovation",
+            "body": "AFC’s Letz Think redefines the modern office by creating a space that balances organization, efficiency, and collaboration. Its thoughtful design encourages focus while keeping the workspace clean and structured."
+          },
+          {
+            "heading": "",
+            "body": "With a seamless blend of functionality and style, Letz Think enhances productivity and elevates the professional atmosphere — making it an essential choice for forward-thinking workplaces."
+          },
+          {
+            "heading": "",
+            "body": "Encourages open dialogue and inclusivity, ideal for large meetings and collaborative discussions."
+          },
+          {
+            "heading": "",
+            "body": "Provides excellent strength and durability with a clean, professional look."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Letz Think",
+            "lines": [
+              "BOARDROOMTABLE",
+              "6000/750 X 3000/750 X 750",
+              "5700/600 X 2700/600 X 600"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Meeting Tables",
+        "subcategoryId": "meeting",
+        "subcategoryLabel": "Meeting Tables",
+        "subcategory_slug": "meeting-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Letz Think Meeting Table",
+        "sourceSlug": "letz-think"
+      },
+      "alt_text": "Letz Think Meeting Table",
+      "sourceSlug": "letz-think",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Meeting Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921bc3f6cb2e82636f90b0d_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921bc514128917072ba208b_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921bc644128917072ba2184_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921bc76399bc42ee7b8063c_SCROLL%20IMAGE%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--letz-think/image-1.jpg",
+        "/images/catalog/oando-tables--letz-think/image-2.jpg",
+        "/images/catalog/oando-tables--letz-think/image-3.jpg",
+        "/images/catalog/oando-tables--letz-think/image-4.jpg"
+      ]
+    },
+    {
+      "id": "0c52cc32-5be7-435d-b2d6-fd485bd523c5",
+      "slug": "oando-tables--modulus",
+      "name": "Modulus",
+      "category_id": "tables",
+      "series_name": "Training Tables",
+      "description": "Modulus is a training table designed for flexible layouts and efficient space planning.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Training Tables",
+        "features": [
+          "Strong Structure with Timeless Design"
+        ],
+        "materials": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Strong Structure with Timeless Design",
+            "body": "The Modulus straight desk features a sturdy gable-end design that delivers lasting strength. Its classic aesthetic blends seamlessly into both traditional and modern interiors."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple sizes, the Modulus desk adapts easily to different room layouts. Built-in wire management keeps the workspace clean, making it ideal for offices, training rooms, and shared environments."
+          },
+          {
+            "heading": "",
+            "body": "The table features a solid gable-end design that offers excellent stability and long-lasting durability for everyday use."
+          },
+          {
+            "heading": "",
+            "body": "Built-in wire ports keep cables organized and out of sight, ensuring a clean and clutter-free workspace."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Training Tables",
+        "subcategoryId": "training",
+        "subcategoryLabel": "Training Tables",
+        "subcategory_slug": "training-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Modulus Training Table",
+        "sourceSlug": "modulus"
+      },
+      "alt_text": "Modulus Training Table",
+      "sourceSlug": "modulus",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Training Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6948f18680d55743ad7a9945_SECTION%206%20-%20BROCHURE%20TRAINING%20TABLE.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6948f19e152707c7b36d695d_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6948f1b580d55743ad7ad6f1_IMG4.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6948f1c680d55743ad7ae00a_IMG%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-tables--modulus/image-1.jpg",
+        "/images/catalog/oando-tables--modulus/image-2.jpg",
+        "/images/catalog/oando-tables--modulus/image-3.jpg",
+        "/images/catalog/oando-tables--modulus/image-4.jpg"
+      ]
+    },
+    {
+      "id": "6550d179-dd29-4a6d-8949-b3c82cfe9482",
+      "slug": "oando-tables--nextable",
+      "name": "NexTable",
+      "category_id": "tables",
+      "series_name": "Training Tables",
+      "description": "NexTable is a training table designed for ergonomic comfort. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Training Tables",
+        "features": [
+          "Flexible by Design"
+        ],
+        "materials": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Flexible by Design",
+            "body": "Nextable is a folding training table crafted for versatility in modern workspaces. Its foldable structure and compact profile make it easy to set up, shift, and store. Perfect for fast-changing office layouts, it supports training sessions, workshops, and collaborative environments effortlessly."
+          },
+          {
+            "heading": "",
+            "body": "Constructed with durable materials, Nextable ensures long-lasting. Smooth-rolling casters allow hassle-free movement across spaces, enabling quick reconfiguration. Its sturdy build blends function and convenience, making it a reliable addition to any workspace."
+          },
+          {
+            "heading": "",
+            "body": "The tabletop flips smoothly, allowing multiple tables to nest compactly. This makes storage efficient and setup quick for dynamic training or meeting spaces."
+          },
+          {
+            "heading": "",
+            "body": "Equipped with high-quality wheels, the table moves easily across rooms and locks securely in place. Ideal for flexible layouts and frequent reconfigurations."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Training Tables",
+        "subcategoryId": "training",
+        "subcategoryLabel": "Training Tables",
+        "subcategory_slug": "training-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "NexTable Training Table",
+        "sourceSlug": "nextable"
+      },
+      "alt_text": "NexTable Training Table",
+      "sourceSlug": "nextable",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Training Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693adaae21ff6c3d51a07e58_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693adaddf087af88ff8fff99_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693adac521ff6c3d51a083ee_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693adaf0be22070f0fc0a8b5_IMG%201.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-tables--nextable/image-1.jpg",
+        "/images/catalog/oando-tables--nextable/image-2.jpg",
+        "/images/catalog/oando-tables--nextable/image-3.jpg",
+        "/images/catalog/oando-tables--nextable/image-4.jpg"
+      ]
+    },
+    {
+      "id": "5f2e7de8-e78c-4255-9d9c-3ce8fd1aafb9",
+      "slug": "oando-tables--opus-2",
+      "name": "Opus",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Opus is a cabin table designed for modern office furniture and cabin setups. Cable-routing support keeps workstation layouts cleaner and easier to maintain.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "Curved Conﬁdence"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Oak Brown",
+          "Natural Teak",
+          "Teak Crown",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey"
+        ],
+        "dimensions": "2250 x 500 x 600 H; 2400 x 500 x 600 H; 2400 x 500 x 600 H; 2100 x 1050 x 750 H; 2250 x 1200 x 750 H; 2400 x 1200 x 750 H",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Curved Conﬁdence",
+            "body": "This cabin table embodies fluid elegance with soft-edged surfaces and sculptural fluted columns that add depth and texture to the executive space. Its curved credenza creates a seamless connection between work and storage, enhancing the sense of balance and movement"
+          },
+          {
+            "heading": "",
+            "body": "Blending mixed material finishes with refined detailing, it offers both sophistication and utility. Integrated cable management and versatile storage ensure every element serves with purpose and style"
+          },
+          {
+            "heading": "",
+            "body": "A striking support column that merges strength with artistry, adding architectural charm to the workspace"
+          },
+          {
+            "heading": "",
+            "body": "Thoughtfully integrated for a clean, organized, and clutter-free desk experience"
+          },
+          {
+            "heading": "",
+            "body": "Smartly designed compartments ensure effortless access and seamless organization for everyday essentials"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "SIDE UNIT",
+            "lines": [
+              "2250 x 500 x 600 H",
+              "2400 x 500 x 600 H",
+              "2400 x 500 x 600 H"
+            ]
+          },
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "2100 x 1050 x 750 H",
+              "2250 x 1200 x 750 H",
+              "2400 x 1200 x 750 H"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Opus Cabin Table",
+        "sourceSlug": "opus"
+      },
+      "alt_text": "Opus Cabin Table",
+      "sourceSlug": "opus",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69032941d12a0e07bab0d373_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6903292a0bf7d73077b2e4f8_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69032958fe6b91fcc7c247c9_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--opus-2/image-1.jpg",
+        "/images/catalog/oando-tables--opus-2/image-2.jpg",
+        "/images/catalog/oando-tables--opus-2/image-3.jpg"
+      ]
+    },
+    {
+      "id": "edc64170-387c-4fe1-825d-7d91d69494e0",
+      "slug": "oando-tables--presidency",
+      "name": "Presidency",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Presidency is a cabin table designed for luxury boss cabins. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "Distinguished Presence"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Oak Brown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine"
+        ],
+        "dimensions": "W: 1050 / 1200 / 1350 / 1600; D: 400 / 450; H: 2100; L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H – 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Distinguished Presence",
+            "body": "Presidency embodies leadership through a commanding asymmetric form that blends strength with sophistication. Its extended curved wing fosters informal interactions, creating a perfect balance between collaboration and control"
+          },
+          {
+            "heading": "",
+            "body": "Crafted with warm wood tones and bold charcoal finishes, it reflects timeless elegance and executive poise. With integrated storage and refined lines, Presidency transforms every workspace into a statement of confidence and purpose."
+          },
+          {
+            "heading": "",
+            "body": "Easily access power and data ports while keeping cables neatly organized. Maintain a clean, efficient workspace with hidden wiring for a clutter-free environment"
+          },
+          {
+            "heading": "",
+            "body": "The unique L-shaped design provides a spacious, productive workspace with integrated storage. Its finish and thoughtful details create a modern, professional environment"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side/Rear & Back Storage",
+            "lines": [
+              "W: 1050 / 1200 / 1350 / 1600",
+              "D: 400 / 450",
+              "H: 2100"
+            ]
+          },
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "L1 – 1500/ 1650 / 1800 / 1950 / 2100",
+              "D1- 600 / 750 / 900",
+              "L2 - 900/ 1050/ 1200",
+              "D2 – 450 / 600",
+              "H – 750"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Presidency Cabin Table",
+        "sourceSlug": "presidency"
+      },
+      "alt_text": "Presidency Cabin Table",
+      "sourceSlug": "presidency",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690210a7868054485ddf1e87_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690210c9084d425b872d4ead_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690210eb7902dd98c4262148_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6902110e371b46646f927933_SCROLL%20IMAGE%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--presidency/image-1.jpg",
+        "/images/catalog/oando-tables--presidency/image-2.jpg",
+        "/images/catalog/oando-tables--presidency/image-3.jpg",
+        "/images/catalog/oando-tables--presidency/image-4.jpg"
+      ]
+    }
+  ],
+  "unmatched": []
+}

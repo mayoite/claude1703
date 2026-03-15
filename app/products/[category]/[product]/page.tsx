@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import type { Product, CompatProduct, ProductVariant } from "@/lib/getProducts";
 import {
   classifyToRequestedCategory,
+  getCatalogCategoryLabel,
   normalizeRequestedCategoryId,
 } from "@/lib/catalogCategories";
 import { fetchWithSupabaseRetry } from "@/lib/supabaseSafe";
@@ -17,6 +18,7 @@ import {
 import { resolveProductByUrlKey } from "@/lib/productSlugResolver";
 import { SITE_URL } from "@/lib/siteUrl";
 import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
+import { buildBreadcrumbJsonLd, buildPageMetadata } from "@/data/site/seo";
 
 const BASE_URL = SITE_URL;
 
@@ -113,35 +115,20 @@ export async function generateMetadata({
     "{name}",
     productName,
   );
-  const description =
-    product.description || descriptionFallback ||
-    `${product.name} — premium office furniture from One and Only Furniture.`;
+  const description = product.description || descriptionFallback;
   const images = Array.isArray(product.images) ? product.images : [];
   const image =
     normalizeAssetPath(images.length > 0 ? images[0] : null) ||
     normalizeAssetPath(product.flagship_image) ||
     "/images/fallback/category.webp";
   const canonicalProductUrlKey = productResolution.canonicalSlug || productUrlKey;
-  const url = `${BASE_URL}/products/${resolvedCategoryId}/${canonicalProductUrlKey}`;
 
-  return {
+  return buildPageMetadata(BASE_URL, {
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: {
-      title,
-      description,
-      url,
-      type: "website",
-      images: [{ url: image, width: 800, height: 800, alt: product.name ?? "Product image" }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [image],
-    },
-  };
+    path: `/products/${resolvedCategoryId}/${canonicalProductUrlKey}`,
+    image,
+  });
 }
 
 function ProductLoadingSkeleton() {
@@ -159,11 +146,9 @@ function ProductLoadingSkeleton() {
 async function ProductContent({
   categoryId,
   productUrlKey,
-  fromQuery,
 }: {
   categoryId: string;
   productUrlKey: string;
-  fromQuery?: string;
 }) {
   const productResolution = await resolveProductByUrlKey<Product>(productUrlKey, "*");
   const rawProduct = productResolution.row;
@@ -228,8 +213,7 @@ async function ProductContent({
     categoryId,
   );
   if (categoryId !== resolvedCategoryId || needsSlugRedirect) {
-    const base = `/products/${resolvedCategoryId}/${canonicalProductUrlKey}`;
-    redirect(fromQuery ? `${base}?${fromQuery}` : base);
+    redirect(`/products/${resolvedCategoryId}/${canonicalProductUrlKey}`);
   }
   const aiOverview = p.alt_text || p.metadata?.ai_alt_text || p.description || "";
   const deterministicAlt =
@@ -284,11 +268,18 @@ async function ProductContent({
     specs: mergedSpecs,
   };
 
-  const categoryRoute = fromQuery
-    ? `/products/${resolvedCategoryId}?${fromQuery}`
-    : `/products/${resolvedCategoryId}`;
+  const categoryRoute = `/products/${resolvedCategoryId}`;
 
   const url = `${BASE_URL}/products/${resolvedCategoryId}/${canonicalProductUrlKey}`;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(BASE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    {
+      name: getCatalogCategoryLabel(resolvedCategoryId, resolvedCategoryId),
+      path: `/products/${resolvedCategoryId}`,
+    },
+    { name: p.name, path: `/products/${resolvedCategoryId}/${canonicalProductUrlKey}` },
+  ]);
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -310,6 +301,10 @@ async function ProductContent({
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
       <ProductViewer
@@ -317,6 +312,8 @@ async function ProductContent({
         seriesName={p.series_name}
         categoryRoute={categoryRoute}
         categoryId={resolvedCategoryId}
+        categoryName={getCatalogCategoryLabel(resolvedCategoryId, resolvedCategoryId)}
+        productRoute={`/products/${resolvedCategoryId}/${canonicalProductUrlKey}`}
       />
     </>
   );
@@ -324,26 +321,16 @@ async function ProductContent({
 
 export default async function ProductPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ category: string; product: string }>;
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { category: categoryId, product: productUrlKey } = await params;
-  const resolvedSearchParams = searchParams ? await searchParams : {};
-  const rawFrom = resolvedSearchParams.from;
-  const fromQuery = Array.isArray(rawFrom) ? rawFrom[0] : rawFrom;
-  const safeFromQuery =
-    typeof fromQuery === "string" && fromQuery.length > 0
-      ? fromQuery.slice(0, 1500)
-      : undefined;
 
   return (
     <Suspense fallback={<ProductLoadingSkeleton />}>
       <ProductContent
         categoryId={categoryId}
         productUrlKey={productUrlKey}
-        fromQuery={safeFromQuery}
       />
     </Suspense>
   );

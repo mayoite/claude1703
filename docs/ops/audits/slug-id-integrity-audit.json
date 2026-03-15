@@ -1,33 +1,16 @@
 {
-  "generatedAt": "2026-03-09T12:43:28.817Z",
+  "generatedAt": "2026-03-15T12:41:45.727Z",
   "totals": {
     "products": 145,
     "missingCanonicalCategoryId": 0,
     "missingCanonicalSubcategoryId": 0,
     "missingCanonicalSlugV2": 0,
     "missingCanonicalSeriesId": 0,
-    "aliasCoverageMissing": 4,
+    "aliasCoverageMissing": 0,
     "canonicalSlugConflicts": 2
   },
   "missingCanonicalFields": [],
-  "aliasCoverageMissing": [
-    {
-      "currentSlug": "oando-seating--fluid-x",
-      "expectedCanonicalSlug": "seating-mesh-fluid-x"
-    },
-    {
-      "currentSlug": "fluid-x",
-      "expectedCanonicalSlug": "seating-mesh-fluid-x"
-    },
-    {
-      "currentSlug": "oando-storage--pedestal",
-      "expectedCanonicalSlug": "storages-prelam-prelam"
-    },
-    {
-      "currentSlug": "oando-storage--prelam-storage",
-      "expectedCanonicalSlug": "storages-prelam-prelam"
-    }
-  ],
+  "aliasCoverageMissing": [],
   "canonicalConflicts": [
     {
       "canonicalSlug": "seating-mesh-fluid-x",

@@ -1,0 +1,559 @@
+categoryId,seriesId,seriesName,productId,productName,slug,severity,issueCode,issueMessage,imageCount
+workstations,oando-workstations-series,Workstations Series,curvivo,Curvivo,curvivo,critical,invalid_primary_image_path,Primary image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899aa009be5eb667a604f17_image_(5).png,2
+workstations,oando-workstations-series,Workstations Series,curvivo,Curvivo,curvivo,high,invalid_gallery_image_path,Gallery image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899aa009be5eb667a604f17_image_(5).png,2
+workstations,oando-workstations-series,Workstations Series,curvivo,Curvivo,curvivo,medium,missing_alt_text,Alt text is missing.,2
+workstations,oando-workstations-series,Workstations Series,curvivo,Curvivo,curvivo,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,2
+workstations,oando-workstations-series,Workstations Series,curvivo,Curvivo,curvivo,medium,missing_sustainability_score,Sustainability score is missing.,2
+workstations,oando-workstations-series,Workstations Series,curvivo,Curvivo,curvivo,medium,missing_documents,Spec sheet or brochure document is missing.,2
+workstations,oando-workstations-series,Workstations Series,adaptable,Adaptable,adaptable,medium,missing_alt_text,Alt text is missing.,2
+workstations,oando-workstations-series,Workstations Series,adaptable,Adaptable,adaptable,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,2
+workstations,oando-workstations-series,Workstations Series,adaptable,Adaptable,adaptable,medium,missing_sustainability_score,Sustainability score is missing.,2
+workstations,oando-workstations-series,Workstations Series,adaptable,Adaptable,adaptable,medium,missing_documents,Spec sheet or brochure document is missing.,2
+workstations,oando-workstations-series,Workstations Series,deskpro,DeskPro,deskpro,critical,invalid_primary_image_path,Primary image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899a993e44404f6f3bcc398_image_(3).png,2
+workstations,oando-workstations-series,Workstations Series,deskpro,DeskPro,deskpro,high,invalid_gallery_image_path,Gallery image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899a993e44404f6f3bcc398_image_(3).png,2
+workstations,oando-workstations-series,Workstations Series,deskpro,DeskPro,deskpro,medium,missing_alt_text,Alt text is missing.,2
+workstations,oando-workstations-series,Workstations Series,deskpro,DeskPro,deskpro,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,2
+workstations,oando-workstations-series,Workstations Series,deskpro,DeskPro,deskpro,medium,missing_sustainability_score,Sustainability score is missing.,2
+workstations,oando-workstations-series,Workstations Series,deskpro,DeskPro,deskpro,medium,missing_documents,Spec sheet or brochure document is missing.,2
+workstations,oando-workstations-series,Workstations Series,sleek,Sleek,sleek,critical,invalid_primary_image_path,Primary image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899a9c13d41a799c8276857_image_(4).png,2
+workstations,oando-workstations-series,Workstations Series,sleek,Sleek,sleek,high,invalid_gallery_image_path,Gallery image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899a9c13d41a799c8276857_image_(4).png,2
+workstations,oando-workstations-series,Workstations Series,sleek,Sleek,sleek,medium,missing_alt_text,Alt text is missing.,2
+workstations,oando-workstations-series,Workstations Series,sleek,Sleek,sleek,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,2
+workstations,oando-workstations-series,Workstations Series,sleek,Sleek,sleek,medium,missing_sustainability_score,Sustainability score is missing.,2
+workstations,oando-workstations-series,Workstations Series,sleek,Sleek,sleek,medium,missing_documents,Spec sheet or brochure document is missing.,2
+workstations,oando-workstations-series,Workstations Series,trio-2,Trio,trio-2,medium,missing_alt_text,Alt text is missing.,2
+workstations,oando-workstations-series,Workstations Series,trio-2,Trio,trio-2,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,2
+workstations,oando-workstations-series,Workstations Series,trio-2,Trio,trio-2,medium,missing_subcategory,Subcategory is missing.,2
+workstations,oando-workstations-series,Workstations Series,trio-2,Trio,trio-2,medium,missing_sustainability_score,Sustainability score is missing.,2
+workstations,oando-workstations-series,Workstations Series,trio-2,Trio,trio-2,medium,missing_documents,Spec sheet or brochure document is missing.,2
+workstations,oando-workstations-series,Workstations Series,panel-pro,Panel Pro,panel-pro,critical,invalid_primary_image_path,Primary image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899aa91f03e6a89282d60c6_image_(7).png,2
+workstations,oando-workstations-series,Workstations Series,panel-pro,Panel Pro,panel-pro,high,invalid_gallery_image_path,Gallery image asset not found: /images/catalog/686d3b55385e7b905b01d3a5_6899aa91f03e6a89282d60c6_image_(7).png,2
+workstations,oando-workstations-series,Workstations Series,panel-pro,Panel Pro,panel-pro,medium,missing_alt_text,Alt text is missing.,2
+workstations,oando-workstations-series,Workstations Series,panel-pro,Panel Pro,panel-pro,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,2
+workstations,oando-workstations-series,Workstations Series,panel-pro,Panel Pro,panel-pro,medium,missing_subcategory,Subcategory is missing.,2
+workstations,oando-workstations-series,Workstations Series,panel-pro,Panel Pro,panel-pro,medium,missing_sustainability_score,Sustainability score is missing.,2
+workstations,oando-workstations-series,Workstations Series,panel-pro,Panel Pro,panel-pro,medium,missing_documents,Spec sheet or brochure document is missing.,2
+workstations,oando-workstations-series,Workstations Series,x-bench,X Bench,x-bench,critical,missing_primary_image,Primary image is missing.,0
+workstations,oando-workstations-series,Workstations Series,x-bench,X Bench,x-bench,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+workstations,oando-workstations-series,Workstations Series,x-bench,X Bench,x-bench,medium,missing_alt_text,Alt text is missing.,0
+workstations,oando-workstations-series,Workstations Series,x-bench,X Bench,x-bench,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,0
+workstations,oando-workstations-series,Workstations Series,x-bench,X Bench,x-bench,medium,missing_subcategory,Subcategory is missing.,0
+workstations,oando-workstations-series,Workstations Series,x-bench,X Bench,x-bench,medium,missing_sustainability_score,Sustainability score is missing.,0
+workstations,oando-workstations-series,Workstations Series,x-bench,X Bench,x-bench,medium,missing_documents,Spec sheet or brochure document is missing.,0
+workstations,oando-workstations-series,Workstations Series,fenix,Fenix,fenix,medium,missing_alt_text,Alt text is missing.,2
+workstations,oando-workstations-series,Workstations Series,fenix,Fenix,fenix,medium,legacy_slug_format,Slug does not follow canonical format for workstations.,2
+workstations,oando-workstations-series,Workstations Series,fenix,Fenix,fenix,medium,missing_subcategory,Subcategory is missing.,2
+workstations,oando-workstations-series,Workstations Series,fenix,Fenix,fenix,medium,missing_sustainability_score,Sustainability score is missing.,2
+workstations,oando-workstations-series,Workstations Series,fenix,Fenix,fenix,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,exquisite,Exquisite,exquisite,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,exquisite,Exquisite,exquisite,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,exquisite,Exquisite,exquisite,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,exquisite,Exquisite,exquisite,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,exquisite,Exquisite,exquisite,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,nextable,NexTable,nextable,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,nextable,NexTable,nextable,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,nextable,NexTable,nextable,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,nextable,NexTable,nextable,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,nextable,NexTable,nextable,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,impulse,Impulse,impulse,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,impulse,Impulse,impulse,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,impulse,Impulse,impulse,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,impulse,Impulse,impulse,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,impulse,Impulse,impulse,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,crest,Crest,crest,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,crest,Crest,crest,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,crest,Crest,crest,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,crest,Crest,crest,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,crest,Crest,crest,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,opus-2,Opus,opus-2,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,opus-2,Opus,opus-2,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,opus-2,Opus,opus-2,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,opus-2,Opus,opus-2,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,opus-2,Opus,opus-2,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,convesso,Convesso,convesso,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,convesso,Convesso,convesso,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,convesso,Convesso,convesso,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,convesso,Convesso,convesso,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,convesso,Convesso,convesso,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,uniflip,Uniflip,uniflip,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,uniflip,Uniflip,uniflip,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,uniflip,Uniflip,uniflip,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,uniflip,Uniflip,uniflip,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,uniflip,Uniflip,uniflip,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,sleek-meet,Sleek-Meet,sleek-meet,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,sleek-meet,Sleek-Meet,sleek-meet,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,sleek-meet,Sleek-Meet,sleek-meet,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,sleek-meet,Sleek-Meet,sleek-meet,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,sleek-meet,Sleek-Meet,sleek-meet,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,convene,Convene,convene,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,convene,Convene,convene,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,convene,Convene,convene,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,convene,Convene,convene,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,convene,Convene,convene,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,desk-meet,Desk-Meet,desk-meet,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,desk-meet,Desk-Meet,desk-meet,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,desk-meet,Desk-Meet,desk-meet,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,desk-meet,Desk-Meet,desk-meet,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,desk-meet,Desk-Meet,desk-meet,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,modulus,Modulus,modulus,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,modulus,Modulus,modulus,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,modulus,Modulus,modulus,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,modulus,Modulus,modulus,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,modulus,Modulus,modulus,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,presidency,Presidency,presidency,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,presidency,Presidency,presidency,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,presidency,Presidency,presidency,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,presidency,Presidency,presidency,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,presidency,Presidency,presidency,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,curvivo-meet,Curvivo,curvivo-meet,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,curvivo-meet,Curvivo,curvivo-meet,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,curvivo-meet,Curvivo,curvivo-meet,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,curvivo-meet,Curvivo,curvivo-meet,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,curvivo-meet,Curvivo,curvivo-meet,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,stake,Stake,stake,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,stake,Stake,stake,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,stake,Stake,stake,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,stake,Stake,stake,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,stake,Stake,stake,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,inox,Inox,inox,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,inox,Inox,inox,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,inox,Inox,inox,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,inox,Inox,inox,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,inox,Inox,inox,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,consulate,Consulate,consulate,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,consulate,Consulate,consulate,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,consulate,Consulate,consulate,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,consulate,Consulate,consulate,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,consulate,Consulate,consulate,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,x-meet,X Meet,x-meet,critical,missing_primary_image,Primary image is missing.,0
+tables,oando-tables-series,Tables Series,x-meet,X Meet,x-meet,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+tables,oando-tables-series,Tables Series,x-meet,X Meet,x-meet,medium,missing_alt_text,Alt text is missing.,0
+tables,oando-tables-series,Tables Series,x-meet,X Meet,x-meet,medium,legacy_slug_format,Slug does not follow canonical format for tables.,0
+tables,oando-tables-series,Tables Series,x-meet,X Meet,x-meet,medium,missing_subcategory,Subcategory is missing.,0
+tables,oando-tables-series,Tables Series,x-meet,X Meet,x-meet,medium,missing_sustainability_score,Sustainability score is missing.,0
+tables,oando-tables-series,Tables Series,x-meet,X Meet,x-meet,medium,missing_documents,Spec sheet or brochure document is missing.,0
+tables,oando-tables-series,Tables Series,sleek-tab,Sleek,sleek-tab,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,sleek-tab,Sleek,sleek-tab,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,sleek-tab,Sleek,sleek-tab,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,sleek-tab,Sleek,sleek-tab,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,sleek-tab,Sleek,sleek-tab,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,letz-think,Letz,letz-think,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,letz-think,Letz,letz-think,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,letz-think,Letz,letz-think,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,letz-think,Letz,letz-think,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,letz-think,Letz,letz-think,medium,missing_documents,Spec sheet or brochure document is missing.,2
+tables,oando-tables-series,Tables Series,apex,Apex,apex,medium,missing_alt_text,Alt text is missing.,2
+tables,oando-tables-series,Tables Series,apex,Apex,apex,medium,legacy_slug_format,Slug does not follow canonical format for tables.,2
+tables,oando-tables-series,Tables Series,apex,Apex,apex,medium,missing_subcategory,Subcategory is missing.,2
+tables,oando-tables-series,Tables Series,apex,Apex,apex,medium,missing_sustainability_score,Sustainability score is missing.,2
+tables,oando-tables-series,Tables Series,apex,Apex,apex,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,prelam-locker,Wooden,prelam-locker,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,prelam-locker,Wooden,prelam-locker,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,prelam-locker,Wooden,prelam-locker,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,prelam-locker,Wooden,prelam-locker,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,prelam-locker,Wooden,prelam-locker,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,pedestal,Prelam,pedestal,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,pedestal,Prelam,pedestal,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,pedestal,Prelam,pedestal,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,pedestal,Prelam,pedestal,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,pedestal,Prelam,pedestal,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,metal-pedestal,Metal Pedestal,metal-pedestal,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,metal-pedestal,Metal Pedestal,metal-pedestal,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,metal-pedestal,Metal Pedestal,metal-pedestal,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,metal-pedestal,Metal Pedestal,metal-pedestal,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,metal-pedestal,Metal Pedestal,metal-pedestal,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,compactor,Compactor,compactor,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,compactor,Compactor,compactor,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,compactor,Compactor,compactor,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,compactor,Compactor,compactor,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,compactor,Compactor,compactor,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,metal-locker,Metal Locker,metal-locker,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,metal-locker,Metal Locker,metal-locker,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,metal-locker,Metal Locker,metal-locker,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,metal-locker,Metal Locker,metal-locker,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,metal-locker,Metal Locker,metal-locker,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,prelam-storage,Prelam,prelam-storage,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,prelam-storage,Prelam,prelam-storage,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,prelam-storage,Prelam,prelam-storage,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,prelam-storage,Prelam,prelam-storage,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,prelam-storage,Prelam,prelam-storage,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,metal-storages,Metal,metal-storages,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,metal-storages,Metal,metal-storages,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,metal-storages,Metal,metal-storages,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,metal-storages,Metal,metal-storages,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,metal-storages,Metal,metal-storages,medium,missing_documents,Spec sheet or brochure document is missing.,2
+storage,oando-storage-series,Storage Series,heavy-duty-racks,Heavy Dut,heavy-duty-racks,medium,missing_alt_text,Alt text is missing.,2
+storage,oando-storage-series,Storage Series,heavy-duty-racks,Heavy Dut,heavy-duty-racks,medium,legacy_slug_format,Slug does not follow canonical format for storage.,2
+storage,oando-storage-series,Storage Series,heavy-duty-racks,Heavy Dut,heavy-duty-racks,medium,missing_subcategory,Subcategory is missing.,2
+storage,oando-storage-series,Storage Series,heavy-duty-racks,Heavy Dut,heavy-duty-racks,medium,missing_sustainability_score,Sustainability score is missing.,2
+storage,oando-storage-series,Storage Series,heavy-duty-racks,Heavy Dut,heavy-duty-racks,medium,missing_documents,Spec sheet or brochure document is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,verka,Verka,verka,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,verka,Verka,verka,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,verka,Verka,verka,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,verka,Verka,verka,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,verka,Verka,verka,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,verka,Verka,verka,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,high-cafe,High Cafe,high-cafe,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,high-cafe,High Cafe,high-cafe,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,high-cafe,High Cafe,high-cafe,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,high-cafe,High Cafe,high-cafe,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,high-cafe,High Cafe,high-cafe,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,high-cafe,High Cafe,high-cafe,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,grace,Grace,grace,medium,missing_alt_text,Alt text is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,grace,Grace,grace,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,grace,Grace,grace,medium,missing_sustainability_score,Sustainability score is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,grace,Grace,grace,medium,missing_documents,Spec sheet or brochure document is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,brim,Brim,brim,medium,missing_alt_text,Alt text is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,brim,Brim,brim,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,brim,Brim,brim,medium,missing_sustainability_score,Sustainability score is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,brim,Brim,brim,medium,missing_documents,Spec sheet or brochure document is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,fynn,Fynn,fynn,medium,missing_alt_text,Alt text is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,fynn,Fynn,fynn,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,fynn,Fynn,fynn,medium,missing_sustainability_score,Sustainability score is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,fynn,Fynn,fynn,medium,missing_documents,Spec sheet or brochure document is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,accent,Accent,accent,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,accent,Accent,accent,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,accent,Accent,accent,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,accent,Accent,accent,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,accent,Accent,accent,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,accent,Accent,accent,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,accent,Accent,accent,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,como,Como,como,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,como,Como,como,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,como,Como,como,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,como,Como,como,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,como,Como,como,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,como,Como,como,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,como,Como,como,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,padora,Padora,padora,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,padora,Padora,padora,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,padora,Padora,padora,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,padora,Padora,padora,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,padora,Padora,padora,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,padora,Padora,padora,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,padora,Padora,padora,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,trion,Trion,trion,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,trion,Trion,trion,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,trion,Trion,trion,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,trion,Trion,trion,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,trion,Trion,trion,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,trion,Trion,trion,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,trion,Trion,trion,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luna,Luna,luna,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luna,Luna,luna,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luna,Luna,luna,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luna,Luna,luna,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luna,Luna,luna,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luna,Luna,luna,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luna,Luna,luna,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,armora,Armora,armora,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,armora,Armora,armora,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,armora,Armora,armora,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,armora,Armora,armora,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,armora,Armora,armora,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,armora,Armora,armora,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,armora,Armora,armora,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nuvora,Nuvora,nuvora,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nuvora,Nuvora,nuvora,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nuvora,Nuvora,nuvora,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nuvora,Nuvora,nuvora,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nuvora,Nuvora,nuvora,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nuvora,Nuvora,nuvora,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nuvora,Nuvora,nuvora,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nook,Nook,nook,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nook,Nook,nook,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nook,Nook,nook,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nook,Nook,nook,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nook,Nook,nook,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nook,Nook,nook,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,nook,Nook,nook,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,opera,Opera,opera,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,opera,Opera,opera,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,opera,Opera,opera,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,opera,Opera,opera,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,opera,Opera,opera,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,opera,Opera,opera,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,opera,Opera,opera,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,crossa,Crossa,crossa,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,crossa,Crossa,crossa,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,crossa,Crossa,crossa,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,crossa,Crossa,crossa,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,crossa,Crossa,crossa,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,crossa,Crossa,crossa,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,crossa,Crossa,crossa,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,alonzo,Alonzo,alonzo,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,alonzo,Alonzo,alonzo,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,alonzo,Alonzo,alonzo,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,alonzo,Alonzo,alonzo,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,alonzo,Alonzo,alonzo,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,alonzo,Alonzo,alonzo,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,alonzo,Alonzo,alonzo,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,spectrum,Spectrum,spectrum,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,spectrum,Spectrum,spectrum,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,spectrum,Spectrum,spectrum,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,spectrum,Spectrum,spectrum,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,spectrum,Spectrum,spectrum,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,spectrum,Spectrum,spectrum,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,spectrum,Spectrum,spectrum,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,virello,Virello,virello,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,virello,Virello,virello,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,virello,Virello,virello,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,virello,Virello,virello,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,virello,Virello,virello,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,virello,Virello,virello,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,virello,Virello,virello,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arco,Arco,arco,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arco,Arco,arco,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arco,Arco,arco,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arco,Arco,arco,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arco,Arco,arco,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arco,Arco,arco,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arco,Arco,arco,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,esmor,Esmor,esmor,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,esmor,Esmor,esmor,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,esmor,Esmor,esmor,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,esmor,Esmor,esmor,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,esmor,Esmor,esmor,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,esmor,Esmor,esmor,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,esmor,Esmor,esmor,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cirq,Cirq,cirq,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cirq,Cirq,cirq,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cirq,Cirq,cirq,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cirq,Cirq,cirq,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cirq,Cirq,cirq,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cirq,Cirq,cirq,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cirq,Cirq,cirq,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,orb,Orb,orb,medium,missing_alt_text,Alt text is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,orb,Orb,orb,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,orb,Orb,orb,medium,missing_subcategory,Subcategory is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,orb,Orb,orb,medium,missing_sustainability_score,Sustainability score is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,orb,Orb,orb,medium,missing_documents,Spec sheet or brochure document is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,tectara,Tectara,tectara,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,tectara,Tectara,tectara,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,tectara,Tectara,tectara,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,tectara,Tectara,tectara,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,tectara,Tectara,tectara,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,tectara,Tectara,tectara,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,tectara,Tectara,tectara,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,velto,Velto,velto,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,velto,Velto,velto,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,velto,Velto,velto,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,velto,Velto,velto,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,velto,Velto,velto,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,velto,Velto,velto,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,velto,Velto,velto,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cocoon,Cocoon,cocoon,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cocoon,Cocoon,cocoon,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cocoon,Cocoon,cocoon,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cocoon,Cocoon,cocoon,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cocoon,Cocoon,cocoon,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cocoon,Cocoon,cocoon,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cocoon,Cocoon,cocoon,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,moon,Moon,moon,medium,missing_alt_text,Alt text is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,moon,Moon,moon,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,moon,Moon,moon,medium,missing_subcategory,Subcategory is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,moon,Moon,moon,medium,missing_sustainability_score,Sustainability score is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,moon,Moon,moon,medium,missing_documents,Spec sheet or brochure document is missing.,2
+soft-seating,oando-soft-seating-series,Soft Seating Series,cone,Cone,cone,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cone,Cone,cone,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cone,Cone,cone,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cone,Cone,cone,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cone,Cone,cone,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cone,Cone,cone,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cone,Cone,cone,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,rattique,Rattique,rattique,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,rattique,Rattique,rattique,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,rattique,Rattique,rattique,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,rattique,Rattique,rattique,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,rattique,Rattique,rattique,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,rattique,Rattique,rattique,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,rattique,Rattique,rattique,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cove,Cove,cove,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cove,Cove,cove,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cove,Cove,cove,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cove,Cove,cove,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cove,Cove,cove,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cove,Cove,cove,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cove,Cove,cove,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luxar,Luxar,luxar,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luxar,Luxar,luxar,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luxar,Luxar,luxar,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luxar,Luxar,luxar,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luxar,Luxar,luxar,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luxar,Luxar,luxar,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,luxar,Luxar,luxar,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,ceda,Ceda,ceda,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,ceda,Ceda,ceda,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,ceda,Ceda,ceda,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,ceda,Ceda,ceda,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,ceda,Ceda,ceda,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,ceda,Ceda,ceda,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,ceda,Ceda,ceda,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,hush,Hush,hush,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,hush,Hush,hush,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,hush,Hush,hush,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,hush,Hush,hush,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,hush,Hush,hush,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,hush,Hush,hush,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,hush,Hush,hush,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,eclips,Eclips,eclips,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,eclips,Eclips,eclips,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,eclips,Eclips,eclips,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,eclips,Eclips,eclips,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,eclips,Eclips,eclips,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,eclips,Eclips,eclips,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,eclips,Eclips,eclips,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,twig,Twig,twig,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,twig,Twig,twig,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,twig,Twig,twig,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,twig,Twig,twig,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,twig,Twig,twig,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,twig,Twig,twig,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,twig,Twig,twig,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,margas,Margas,margas,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,margas,Margas,margas,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,margas,Margas,margas,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,margas,Margas,margas,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,margas,Margas,margas,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,margas,Margas,margas,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,margas,Margas,margas,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,lura,Lura,lura,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,lura,Lura,lura,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,lura,Lura,lura,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,lura,Lura,lura,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,lura,Lura,lura,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,lura,Lura,lura,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,lura,Lura,lura,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,embrace,Embrace,embrace,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,embrace,Embrace,embrace,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,embrace,Embrace,embrace,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,embrace,Embrace,embrace,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,embrace,Embrace,embrace,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,embrace,Embrace,embrace,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,embrace,Embrace,embrace,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,halo,Halo,halo,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,halo,Halo,halo,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,halo,Halo,halo,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,halo,Halo,halo,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,halo,Halo,halo,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,halo,Halo,halo,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,halo,Halo,halo,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,relax,Relax,relax,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,relax,Relax,relax,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,relax,Relax,relax,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,relax,Relax,relax,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,relax,Relax,relax,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,relax,Relax,relax,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,relax,Relax,relax,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arcana,Arcana,arcana,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arcana,Arcana,arcana,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arcana,Arcana,arcana,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arcana,Arcana,arcana,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arcana,Arcana,arcana,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arcana,Arcana,arcana,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,arcana,Arcana,arcana,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,plumb,Plumb,plumb,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,plumb,Plumb,plumb,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,plumb,Plumb,plumb,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,plumb,Plumb,plumb,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,plumb,Plumb,plumb,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,plumb,Plumb,plumb,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,plumb,Plumb,plumb,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,casca,Casca,casca,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,casca,Casca,casca,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,casca,Casca,casca,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,casca,Casca,casca,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,casca,Casca,casca,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,casca,Casca,casca,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,casca,Casca,casca,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,adam,Adam,adam,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,adam,Adam,adam,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,adam,Adam,adam,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,adam,Adam,adam,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,adam,Adam,adam,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,adam,Adam,adam,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,adam,Adam,adam,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cozy,Cozy,cozy,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cozy,Cozy,cozy,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cozy,Cozy,cozy,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cozy,Cozy,cozy,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cozy,Cozy,cozy,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cozy,Cozy,cozy,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,cozy,Cozy,cozy,medium,missing_documents,Spec sheet or brochure document is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,covea,Covea,covea,critical,missing_primary_image,Primary image is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,covea,Covea,covea,high,missing_gallery_images,Product has fewer than 2 usable gallery images.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,covea,Covea,covea,medium,missing_alt_text,Alt text is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,covea,Covea,covea,medium,legacy_slug_format,Slug does not follow canonical format for soft-seating.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,covea,Covea,covea,medium,missing_subcategory,Subcategory is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,covea,Covea,covea,medium,missing_sustainability_score,Sustainability score is missing.,0
+soft-seating,oando-soft-seating-series,Soft Seating Series,covea,Covea,covea,medium,missing_documents,Spec sheet or brochure document is missing.,0
+educational,oando-educational-series,Educational Series,performer,Performer,performer,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,performer,Performer,performer,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,performer,Performer,performer,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,performer,Performer,performer,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,performer,Performer,performer,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,connecta,Connecta,connecta,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,connecta,Connecta,connecta,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,connecta,Connecta,connecta,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,connecta,Connecta,connecta,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,connecta,Connecta,connecta,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,wooden-bed,Wooden Bed,wooden-bed,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,wooden-bed,Wooden Bed,wooden-bed,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,wooden-bed,Wooden Bed,wooden-bed,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,wooden-bed,Wooden Bed,wooden-bed,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,wooden-bed,Wooden Bed,wooden-bed,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,audi-chair,Audi Chair,audi-chair,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,audi-chair,Audi Chair,audi-chair,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,audi-chair,Audi Chair,audi-chair,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,audi-chair,Audi Chair,audi-chair,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,audi-chair,Audi Chair,audi-chair,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,xplorer,Xplorer,xplorer,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,xplorer,Xplorer,xplorer,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,xplorer,Xplorer,xplorer,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,xplorer,Xplorer,xplorer,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,xplorer,Xplorer,xplorer,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,forma,Forma,forma,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,forma,Forma,forma,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,forma,Forma,forma,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,forma,Forma,forma,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,forma,Forma,forma,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,metal-bed,Metal Bed,metal-bed,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,metal-bed,Metal Bed,metal-bed,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,metal-bed,Metal Bed,metal-bed,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,metal-bed,Metal Bed,metal-bed,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,metal-bed,Metal Bed,metal-bed,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,podium,Podium,podium,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,podium,Podium,podium,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,podium,Podium,podium,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,podium,Podium,podium,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,podium,Podium,podium,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,academia,Academia,academia,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,academia,Academia,academia,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,academia,Academia,academia,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,academia,Academia,academia,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,academia,Academia,academia,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,magazine-rack,Magazine Rack,magazine-rack,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,magazine-rack,Magazine Rack,magazine-rack,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,magazine-rack,Magazine Rack,magazine-rack,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,magazine-rack,Magazine Rack,magazine-rack,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,magazine-rack,Magazine Rack,magazine-rack,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,classcraft,Classcraft,classcraft,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,classcraft,Classcraft,classcraft,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,classcraft,Classcraft,classcraft,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,classcraft,Classcraft,classcraft,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,classcraft,Classcraft,classcraft,medium,missing_documents,Spec sheet or brochure document is missing.,2
+educational,oando-educational-series,Educational Series,learnix,Learnix,learnix,medium,missing_alt_text,Alt text is missing.,2
+educational,oando-educational-series,Educational Series,learnix,Learnix,learnix,medium,legacy_slug_format,Slug does not follow canonical format for educational.,2
+educational,oando-educational-series,Educational Series,learnix,Learnix,learnix,medium,missing_subcategory,Subcategory is missing.,2
+educational,oando-educational-series,Educational Series,learnix,Learnix,learnix,medium,missing_sustainability_score,Sustainability score is missing.,2
+educational,oando-educational-series,Educational Series,learnix,Learnix,learnix,medium,missing_documents,Spec sheet or brochure document is missing.,2
+collaborative,oando-collaborative-series,Collaborative Series,solace-pod,Solace Pod,solace-pod,medium,missing_alt_text,Alt text is missing.,3
+collaborative,oando-collaborative-series,Collaborative Series,solace-pod,Solace Pod,solace-pod,medium,legacy_slug_format,Slug does not follow canonical format for collaborative.,3
+collaborative,oando-collaborative-series,Collaborative Series,solace-pod,Solace Pod,solace-pod,medium,missing_subcategory,Subcategory is missing.,3
+collaborative,oando-collaborative-series,Collaborative Series,solace-pod,Solace Pod,solace-pod,medium,missing_sustainability_score,Sustainability score is missing.,3
+collaborative,oando-collaborative-series,Collaborative Series,solace-pod,Solace Pod,solace-pod,medium,missing_documents,Spec sheet or brochure document is missing.,3
+collaborative,oando-collaborative-series,Collaborative Series,cocoon-pod,Cocoon Pod,cocoon-pod,medium,missing_alt_text,Alt text is missing.,2
+collaborative,oando-collaborative-series,Collaborative Series,cocoon-pod,Cocoon Pod,cocoon-pod,medium,legacy_slug_format,Slug does not follow canonical format for collaborative.,2
+collaborative,oando-collaborative-series,Collaborative Series,cocoon-pod,Cocoon Pod,cocoon-pod,medium,missing_subcategory,Subcategory is missing.,2
+collaborative,oando-collaborative-series,Collaborative Series,cocoon-pod,Cocoon Pod,cocoon-pod,medium,missing_sustainability_score,Sustainability score is missing.,2
+collaborative,oando-collaborative-series,Collaborative Series,cocoon-pod,Cocoon Pod,cocoon-pod,medium,missing_documents,Spec sheet or brochure document is missing.,2

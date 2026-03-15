@@ -1,0 +1,353 @@
+# Recovery State
+
+- Timestamp: 2026-03-15T17:35:00
+- Branch: main
+
+## Operator Note
+Footer and global contact-surface hardening is implemented and verified. Next active frontier: bounded trust-sensitive copy and alt-text hardening.
+
+## Suggested Current Focus
+- Audit trust-sensitive public copy and alt-text ownership before editing
+- Keep public language credible and specific without inventing unsupported claims
+- Leave archive and release-hardening work outside this bounded lane
+
+## Next 45 Minutes Plan
+- Audit trust-sensitive public copy and alt-text pathways on the highest-impact public routes
+- Fix only the highest-impact content-quality issues found
+- Re-run `npm run lint` and `npm run build` after the content-quality pass
+
+## Next Explicit Step
+
+- Audit trust-sensitive public copy and alt-text ownership on the highest-impact public routes before editing the next bounded content-quality lane.
+
+## Git Status
+```text
+M app/about/page.tsx
+ M app/api/ai-advisor/route.ts
+ M app/career/page.tsx
+ M app/compare/page.tsx
+ M app/contact/page.tsx
+ M app/downloads/page.tsx
+ M app/gallery/page.tsx
+ M app/globals.css
+ M app/imprint/page.tsx
+ M app/layout.tsx
+ M app/news/page.tsx
+ M app/page.tsx
+ M app/planning/page.tsx
+ M app/portfolio/page.tsx
+ M app/privacy/page.tsx
+ M app/products/[category]/FilterGrid.tsx
+ M app/products/[category]/[product]/ProductViewer.tsx
+ M app/products/[category]/[product]/page.tsx
+ M app/products/page.tsx
+ M app/projects/page.tsx
+ M app/quote-cart/page.tsx
+ M app/refund-and-return-policy/page.tsx
+ M app/service/page.tsx
+ M app/showrooms/page.tsx
+ M app/social/page.tsx
+ M app/solutions/page.tsx
+ M app/support-ivr/page.tsx
+ M app/sustainability/page.tsx
+ M app/terms/page.tsx
+ M app/tracking/page.tsx
+ M app/trusted-by/page.tsx
+ M archive/README.md
+ D components/3DViewer.tsx
+ M components/ClientBadge.tsx
+ D components/ClientCard.tsx
+ D components/FounderCard.tsx
+ D components/HeroCarousel.tsx
+ M components/ProductGallery.tsx
+ D components/ScrollAnimate.tsx
+ D components/ai/Advisor.tsx
+ M components/bot/AdvancedBot.tsx
+ D components/bot/BotLoader.tsx
+ M components/bot/UnifiedAssistant.tsx
+ D components/configurator/ConfiguratorCSS.tsx
+ D components/configurator/ConfiguratorLayout.tsx
+ M components/configurator/Simple2DConfigurator.tsx
+ M components/configurator/SummaryPanel.tsx
+ D components/configurator/productMapping.ts
+ M components/home/BrandStatement.tsx
+ M components/home/CTASection.tsx
+ M components/home/CategoryGrid.tsx
+ M components/home/ClientLogos.tsx
+ M components/home/ClientMarquee.tsx
+ M components/home/ClientQuote.tsx
+ D components/home/ClientStories.tsx
+ M components/home/CollaborationSection.tsx
+ M components/home/Collections.tsx
+ D components/home/FeatureGrid.tsx
+ M components/home/FeaturedCarousel.tsx
+ M components/home/Hero.tsx
+ D components/home/HeroSlider.tsx
+ M components/home/HomepageHero.tsx
+ M components/home/InteractiveRoom.tsx
+ D components/home/OurExperience.tsx
+ M components/home/OurWork.tsx
+ D components/home/Partners.tsx
+ M components/home/PartnershipBanner.tsx
+ M components/home/ProcessSection.tsx
+ D components/home/ProductCategories.tsx
+ M components/home/Projects.tsx
+ D components/home/Recommendations.tsx
+ D components/home/ServiceSection.tsx
+ D components/home/SolutionsGrid.tsx
+ M components/home/StatsSection.tsx
+ M components/home/Teaser.tsx
+ M components/home/TrustStrip.tsx
+ D components/home/TrustedClients.tsx
+ M components/home/VideoSection.tsx
+ M components/home/WhyChooseUs.tsx
+ M components/home/WhyUs.tsx
+ D components/home/WorkspaceShowcase.tsx
+ M components/layout/Footer.tsx
+ M components/layout/WhatsAppBot.tsx
+ D components/product/ParallaxGallery.tsx
+ M components/products/CompareDock.tsx
+ D components/seo/JsonLd.tsx
+ M components/shared/ContactTeaser.tsx
+ D components/shared/ContentBlock.tsx
+ D components/shared/FilterSidebar.tsx
+ D components/shared/GsapAnimations.tsx
+ M components/shared/Newsletter.tsx
+ D components/shared/PageAnimations.tsx
+ D components/shared/PageLoader.tsx
+ D components/shared/SmoothScroll.tsx
+ M components/site/CookieConsentBar.tsx
+ M components/site/Footer.tsx
+ M components/site/Header.tsx
+ M components/site/MobileNavDrawer.tsx
+ D components/ui/Accordion.tsx
+ D components/ui/Badge.tsx
+ D components/ui/Breadcrumbs.tsx
+ D components/ui/Card.tsx
+ D components/ui/ContactPerson.tsx
+ D components/ui/Container.tsx
+ D components/ui/Input.tsx
+ D components/ui/SectionHeader.tsx
+ D components/ui/Slider.tsx
+ D components/ui/Tabs.tsx
+ D components/ui/Teaser.tsx
+ M components/ui/WhatsAppCTA.tsx
+ D data/products.ts
+ M data/site/assistant.ts
+ M data/site/brand.ts
+ M data/site/contact.ts
+ M data/site/fallbacks.ts
+ M data/site/homepage.ts
+ M data/site/navigation.ts
+ M data/site/routeCopy.ts
+ M data/site/seo.ts
+ D docs/archive/root-notes/CHANGES_SUMMARY.md
+ D docs/archive/root-notes/step6.md
+ D docs/audit/GPT.md
+ D docs/audit/GPT121313.md
+ D docs/audit/ai-recommendation-spec.md
+ D docs/audit/baseline-status.md
+ D docs/audit/code_audit_matrix.json
+ D docs/audit/code_findings.md
+ D docs/audit/color-and-css-blueprint.md
+ D docs/audit/current-reaudit-report-2026-03-08.md
+ D docs/audit/fix-blueprint.md
+ D docs/audit/full-site-adversarial-audit-2026-03-05.docx
+ D docs/audit/full_audit_summary.md
+ D docs/audit/kpi-integrity-baseline-2026-03-01.md
+ D docs/audit/kpi-monitoring.md
+ D docs/audit/merge-ready-summary-2026-03-01.md
+ D docs/audit/prioritized_fix_backlog.md
+ D docs/audit/product-page-audit-report.json
+ D docs/audit/product-page-audit-report.md
+ M docs/audit/product-quality-audit.csv
+ M docs/audit/product-quality-audit.json
+ M docs/audit/product-quality-audit.md
+ D docs/audit/release-checklist-2026-03-01.md
+ D docs/audit/release-log.md
+ D docs/audit/rollout-checklist.md
+ D docs/audit/route-link-findings.md
+ D docs/audit/route_manifest.json
+ D docs/audit/security-findings.md
+ D docs/audit/seo-local-spec.md
+ D docs/audit/sustainability-page-spec.md
+ D docs/audit/today-execution-summary.md
+ D docs/audit/visual_desktop_audit.json
+ D docs/audit/visual_findings_desktop.md
+ D docs/audit/visual_findings_mobile.md
+ D docs/audit/visual_mobile_audit.json
+ D docs/checkpoints/full-site-walkthrough-2026-03-02.md
+ D docs/checkpoints/live-audit-2026-03-02.json
+ D docs/checkpoints/main-window-checklist.md
+ D docs/checkpoints/session-2026-03-02.md
+ D docs/checkpoints/supabase-redo-2026-03-02.md
+ D docs/cleanup/delete-manifest-md.txt
+ D docs/cleanup/delete-manifest-temp.txt
+ D docs/cleanup/deletion-summary.md
+ M docs/ops/audits/nhost-parity-audit.json
+ M docs/ops/audits/nhost-parity-audit.md
+ M docs/ops/audits/nhost-runtime-fallback-audit.md
+ M docs/ops/audits/slug-id-integrity-audit.json
+ M docs/ops/audits/slug-id-overhaul-baseline.md
+ M docs/ops/audits/supabase-runtime-query-audit.md
+ M docs/ops/audits/supabase-schema-audit.json
+ M docs/ops/audits/supabase-schema-audit.md
+ D docs/ops/charts/current-mapping-chart.html
+ D docs/ops/charts/industry-charts/as_is_dfd
+ D docs/ops/charts/industry-charts/as_is_dfd.png
+ D docs/ops/charts/industry-charts/as_is_dfd.svg
+ D docs/ops/charts/industry-charts/to_be_bpmn.png
+ D docs/ops/charts/industry-charts/to_be_bpmn.svg
+ D docs/ops/charts/industry-charts/to_be_bpmn_choices_off.png
+ D docs/ops/charts/industry-charts/to_be_bpmn_choices_off.svg
+ D docs/ops/charts/industry-charts/to_be_bpmn_choices_on.png
+ D docs/ops/charts/industry-charts/to_be_bpmn_choices_on.svg
+ D docs/ops/charts/planned-mapping-chart.html
+ D docs/ops/charts/supabase-flowcharts.xlsx
+ D docs/ops/charts/supabase-redo-flowchart.md
+ M docs/ops/reconcile/pilot-reconcile-20260307-144329.json
+ M docs/ops/reconcile/pilot-reconcile-report.json
+ D docs/tasks/full-overhaul-checklist.md
+ M lib/assetPaths.ts
+ M lib/businessStats.ts
+ D lib/catalog.ts
+ M lib/getProducts.ts
+ M lib/nhostBackup.ts
+ D lib/openai-client.example.ts
+ M lib/productFilters.ts
+ M lib/productSlugResolver.ts
+ M lib/productSpecSchema.ts
+ D lib/products.ts
+ D lib/products_imported.ts
+ D lib/sql.ts
+ D lib/trustedBy.ts
+ M lib/types/businessStats.ts
+ D oando_website/.DONOTDELETE/INDEX.md
+ D oando_website/.DONOTDELETE/configs/.env.example
+ D oando_website/.DONOTDELETE/configs/next.config.js
+ D oando_website/.DONOTDELETE/configs/tsconfig.json
+ D oando_website/.DONOTDELETE/documents/00_MASTER_INDEX.md
+ D oando_website/.DONOTDELETE/documents/README.md
+ D oando_website/.DONOTDELETE/documents/slug-alias-plan-20260307-145611.json
+ D oando_website/.DONOTDELETE/documents/slug-alias-plan-20260307-145611.md
+ D oando_website/.DONOTDELETE/documents/slug-policy-with-e.md
+ D oando_website/.DONOTDELETE/keys/.env.example
+ D oando_website/.DONOTDELETE/keys/README.md
+ D oando_website/.DONOTDELETE/sql/20260307150500_add_product_slug_aliases_and_name_key.sql
+ D oando_website/.DONOTDELETE/sql/20260307153500_rename_to_catalog_tables.sql
+ D oando_website/.DONOTDELETE/sql/pilot-reconcile-20260307-144329.sql
+ D oando_website/.DONOTDELETE/sql/slug-alias-plan-20260307-145611.sql
+ D oando_website/.DONOTDELETE/walkthroughs/cloudflare-r2-setup-status.md
+ D oando_website/.DONOTDELETE/walkthroughs/database-walkthrough-with-filenames.md
+ D oando_website/00_MASTER_INDEX.md
+ D oando_website/01_sql/migrations/20260307150500_add_product_slug_aliases_and_name_key.sql
+ D oando_website/01_sql/migrations/20260307153500_rename_to_catalog_tables.sql
+ D oando_website/01_sql/plans/pilot-reconcile-20260307-144329.sql
+ D oando_website/01_sql/plans/slug-alias-plan-20260307-145611.sql
+ D oando_website/02_reports/audits/external-asset-audit-20260307-150246.json
+ D oando_website/02_reports/audits/supabase-live-audit-20260307-144410.json
+ D oando_website/02_reports/plans/slug-alias-plan-20260307-145611.json
+ D oando_website/02_reports/plans/slug-alias-plan-20260307-145611.md
+ D oando_website/02_reports/plans/slug-policy-with-e.md
+ D oando_website/02_reports/reconcile/pilot-reconcile-20260307-144329.json
+ D oando_website/02_reports/reconcile/pilot-reconcile-20260307-144329.md
+ D oando_website/02_reports/walkthroughs/cloudflare-r2-setup-status.md
+ D oando_website/02_reports/walkthroughs/cloudflare-settings-audit-2026-03-07.md
+ D oando_website/02_reports/walkthroughs/database-walkthrough-with-filenames.md
+ D oando_website/03_charts/as_is_dfd.png
+ D oando_website/03_charts/as_is_dfd.svg
+ D oando_website/03_charts/charts-index.md
+ D oando_website/03_charts/to_be_bpmn.png
+ D oando_website/03_charts/to_be_bpmn.svg
+ D oando_website/03_charts/to_be_bpmn_choices_off.png
+ D oando_website/03_charts/to_be_bpmn_choices_off.svg
+ D oando_website/03_charts/to_be_bpmn_choices_on.png
+ D oando_website/03_charts/to_be_bpmn_choices_on.svg
+ D oando_website/04_code/app-support-ivr-page.tsx
+ D oando_website/04_code/lib-productSlugResolver.ts
+ D oando_website/04_code/lib-products_imported.ts
+ D oando_website/05_config/.env.example
+ D oando_website/05_config/cloudflare/r2-cors-oando-assets-prod.json
+ D oando_website/05_config/next.config.js
+ D oando_website/05_config/tsconfig.json
+ D oando_website/06_scripts/audit_external_asset_hosts.py
+ D oando_website/06_scripts/plan_slug_aliases.py
+ D oando_website/06_scripts/sync_public_images_to_r2.ps1
+ D oando_website/README.md
+ M package-lock.json
+ M package.json
+ M scripts/audit-product-pages.ts
+ M scripts/audit-product-quality.ts
+ M scripts/audit_slug_id_integrity.ts
+ M scripts/export_flowcharts_excel.py
+ M scripts/fix-missing-images.ts
+ M scripts/generate_industry_charts.py
+ M scripts/sync_nhost_backup.ts
+ M tests/accessibility.spec.ts
+ M tests/homepage.spec.ts
+ M tests/product-tools.spec.ts
+ M tests/stats-consistency.spec.ts
+ M tsconfig.json
+?? .playwright-cli/page-2026-03-11T17-50-53-801Z.yml
+?? .playwright-cli/page-2026-03-11T17-51-10-609Z.yml
+?? .playwright-cli/page-2026-03-11T17-52-18-913Z.yml
+?? .playwright-cli/page-2026-03-11T17-52-34-504Z.yml
+?? .playwright-cli/page-2026-03-11T17-58-49-962Z.yml
+?? .playwright-cli/page-2026-03-11T17-58-51-258Z.yml
+?? .playwright-cli/page-2026-03-11T17-59-07-489Z.yml
+?? .playwright-cli/page-2026-03-11T18-00-58-240Z.yml
+?? .playwright-cli/page-2026-03-11T18-01-52-307Z.yml
+?? .playwright-cli/page-2026-03-11T18-03-38-470Z.yml
+?? .playwright-cli/page-2026-03-11T18-04-37-769Z.yml
+?? .playwright-cli/page-2026-03-15T06-46-06-892Z.yml
+?? .playwright-cli/page-2026-03-15T06-46-15-353Z.yml
+?? .playwright-cli/page-2026-03-15T06-47-16-978Z.yml
+?? .vscode/
+?? 0
+?? app/color-contrast.css
+?? app/custom-components.css
+?? app/home-unused/
+?? app/theme-overrides.css
+?? app/theme-tokens.css
+?? app/typography.css
+?? archive/trashfiles-review/
+?? codex-recovery/
+?? components/site/FooterConversionPanel.tsx
+?? data/site/configurator.ts
+?? data/site/heroCarousel.ts
+?? data/site/marketing.ts
+?? data/site/support.ts
+?? docs/homepage-ia-flowchart.md
+?? docs/ops/Supabase/
+?? docs/ops/external-asset-audit-20260312-231407.json
+?? docs/product-quality-audit.csv
+?? "dont touch oando_website.zip"
+?? lib/aiAdvisor.ts
+?? lib/contactSurfaces.ts
+?? output/playwright/afc-polish.png
+?? output/playwright/all-pages-audit-2026-03-12T18-01-32-637Z/
+?? output/playwright/all-pages-audit-2026-03-12T18-15-25-301Z/
+?? output/playwright/category-mobile-check-2026-03-13/
+?? output/playwright/contact-polish.png
+?? output/playwright/fullpage-audit-2026-03-12T17-51-12-174Z/
+?? output/playwright/home-current.png
+?? output/playwright/home-dev-pass.png
+?? output/playwright/home-polish-pass.png
+?? output/playwright/process-section-fix.png
+?? output/playwright/targeted-recovery-check-2026-03-13/
+?? output/playwright/trust-polish.png
+?? output/playwright/typography-check-2026-03-13-pass2/
+?? output/playwright/typography-check-2026-03-13/
+?? output/playwright/visual-reaudit-2026-03-12T17-47-28-924Z/
+?? output/playwright/workspaces-polish.png
+?? scripts/all-pages-rolling-audit.mjs
+?? scripts/chat-snapshot.mjs
+?? scripts/recovery-handover.mjs
+?? scripts/recovery-state.mjs
+?? tests/home-unused.spec.ts
+?? unused/
+```
+
+## Next Actions
+- Update this file with the current objective if the focus shifts.
+- Keep snapshots immutable; use the next timestamped file instead of editing prior history.

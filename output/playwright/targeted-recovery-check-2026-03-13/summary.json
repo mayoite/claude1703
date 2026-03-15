@@ -1,0 +1,58 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/products/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/products/seating/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/products/seating/oando-seating--arvo/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/products/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/products/seating/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/products/seating/oando-seating--arvo/",
+    "status": 200,
+    "badResponseCount": 0,
+    "badResponses": []
+  }
+]

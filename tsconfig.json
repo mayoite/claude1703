@@ -34,8 +34,10 @@
   ],
   "exclude": [
     "node_modules",
+    "unused",
     "scripts",
     "archive",
+    "trashfiles",
     "tmp",
     "backups",
     "backup",

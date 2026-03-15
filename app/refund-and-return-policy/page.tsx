@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
+import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { LEGAL_PAGE_COPY } from "@/data/site/routeCopy";
 
 export const metadata = {
@@ -8,7 +10,7 @@ export const metadata = {
 
 export default function RefundAndReturnPolicyPage() {
   return (
-    <section className="flex min-h-screen flex-col items-center bg-white">
+    <section className="scheme-page flex min-h-screen flex-col items-center">
       <Hero
         variant="small"
         title={LEGAL_PAGE_COPY.refund.heroTitle}
@@ -17,25 +19,44 @@ export default function RefundAndReturnPolicyPage() {
         backgroundImage="/images/hero/hero-3.webp"
       />
 
-      <section className="container px-6 py-16 2xl:px-0">
-        <div className="mx-auto max-w-5xl space-y-10">
+      <section className="container px-6 py-16 2xl:px-0 md:py-20">
+        <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+          <aside className="scheme-panel-soft scheme-border rounded-[2rem] border p-7 md:p-9">
+            <p className="typ-label scheme-text-brand">{LEGAL_PAGE_COPY.refund.overviewKicker}</p>
+            <h2 className="typ-section scheme-text-strong mt-3">
+              {LEGAL_PAGE_COPY.refund.overviewTitle}
+            </h2>
+            <p className="page-copy scheme-text-body mt-4">
+              {LEGAL_PAGE_COPY.refund.overviewDescription}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/contact" className="home-btn-primary">
+                Contact sales desk
+              </Link>
+              <Link href="/service" className="home-btn-secondary">
+                Service and support
+              </Link>
+            </div>
+          </aside>
+
+          <div className="space-y-4">
           {LEGAL_PAGE_COPY.refund.sections.map((section) => (
             <article
               key={section.title}
-              className={`rounded-2xl border border-neutral-200 p-8 md:p-10 ${
-                section.tone === "soft" ? "bg-neutral-50" : "bg-white"
+              className={`scheme-border rounded-[1.75rem] border p-7 md:p-8 ${
+                section.tone === "soft" ? "scheme-panel-soft" : "scheme-panel"
               }`}
             >
-              <h2 className="typ-h3 text-neutral-900">{section.title}</h2>
+              <h2 className="typ-card scheme-text-strong">{section.title}</h2>
               {section.items.length > 0 ? (
-                <ul className="mt-4 list-disc space-y-3 pl-5 text-base leading-relaxed text-neutral-700">
+                <ul className="page-copy-sm scheme-text-body mt-4 list-disc space-y-3 pl-5">
                   {section.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
               ) : null}
               {"contactLines" in section && section.contactLines ? (
-                <div className="mt-4 space-y-2 text-base text-neutral-800">
+                <div className="page-copy-sm scheme-text-body mt-4 space-y-2">
                   {section.contactLines.map((line) => (
                     <p key={line}>{line}</p>
                   ))}
@@ -43,8 +64,11 @@ export default function RefundAndReturnPolicyPage() {
               ) : null}
             </article>
           ))}
+          </div>
         </div>
       </section>
+
+      <ContactTeaser />
     </section>
   );
 }

@@ -3,89 +3,55 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-
-const projects = [
-  {
-    client: "Titan",
-    location: "Patna, Bihar",
-    category: "Corporate Office",
-    image: "/photos/Titan/hero.webp",
-    slug: "titan-patna",
-  },
-  {
-    client: "DMRC",
-    location: "New Delhi",
-    category: "Government Infrastructure",
-    image: "/photos/DMRC/hero.webp",
-    slug: "dmrc-delhi",
-  },
-  {
-    client: "Usha International",
-    location: "New Delhi",
-    category: "Corporate Headquarters",
-    image: "/photos/Usha/hero.webp",
-    slug: "usha-delhi",
-  },
-];
+import { HOMEPAGE_PROJECTS_CONTENT } from "@/data/site/homepage";
 
 export function Projects() {
+  const layouts = ["primary", "secondary", "tertiary", "quaternary"] as const;
+
   return (
-    <section className="py-32 bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-2xl">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600 mb-6 block">
-              Featured Work
-            </span>
-            <h2 className="text-5xl md:text-6xl font-medium tracking-tighter leading-[1.05] text-neutral-900">
-              Spaces Designed For <br className="hidden md:block" />
-              <span className="text-neutral-400 italic font-light">
-                Excellence.
+    <section className="projects-section">
+      <div className="projects-section__shell">
+        <div className="projects-section__header">
+          <div className="max-w-3xl">
+            <h2 className="home-heading">
+              {HOMEPAGE_PROJECTS_CONTENT.titleLead}{" "}
+              <span className="home-heading__accent">
+                {HOMEPAGE_PROJECTS_CONTENT.titleAccent}
               </span>
             </h2>
           </div>
           <Link
-            href="/gallery"
-            className="group flex items-center gap-4 text-sm font-semibold uppercase tracking-widest text-neutral-900 hover:text-amber-600 transition-colors pb-2 border-b border-neutral-900 hover:border-amber-600"
+            href={HOMEPAGE_PROJECTS_CONTENT.cta.href}
+            className="projects-section__cta group"
           >
-            View Complete Portfolio
+            {HOMEPAGE_PROJECTS_CONTENT.cta.label}
             <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-x-8 lg:gap-x-12">
-          {projects.map((project, idx) => (
+        <div className="projects-grid">
+          {HOMEPAGE_PROJECTS_CONTENT.cards.map((project, index) => (
             <div
-              key={idx}
-              className={`group flex flex-col ${idx === 0
-                  ? "md:col-span-12 lg:col-span-8"
-                  : idx === 1
-                    ? "md:col-span-6 lg:col-span-4 lg:mt-32"
-                    : "md:col-span-6 lg:col-span-6 lg:mt-[-100px]"
-                }`}
+              key={project.companyName}
+              className={`projects-card projects-card--${layouts[index] ?? "quaternary"} group`}
             >
-              <div className="relative aspect-4/3 w-full overflow-hidden bg-neutral-100 mb-6">
+              <div className="projects-card__media">
                 <Image
                   src={project.image}
-                  alt={`${project.client} - ${project.category}`}
+                  alt={`${project.companyName} - ${project.sector}`}
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="projects-card__image"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className="flex flex-col">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
-                    {project.category}
+              <div className="projects-card__body">
+                <div className="projects-card__meta">
+                  <span className="projects-card__category">
+                    {project.sector}
                   </span>
-                  <div className="h-px flex-1 bg-neutral-200"></div>
+                  <div className="projects-card__line"></div>
                 </div>
-                <h3 className="text-2xl font-medium text-neutral-900 mb-1">
-                  {project.client}
-                </h3>
-                <p className="text-[15px] text-neutral-500 font-light">
-                  {project.location}
-                </p>
+                <h3 className="projects-card__title">{project.companyName}</h3>
               </div>
             </div>
           ))}

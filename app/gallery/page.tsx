@@ -6,7 +6,7 @@ import { Masonry, MasonryItem } from "@/components/ui/Masonry";
 
 export default function GalleryPage() {
   return (
-    <section className="flex min-h-screen flex-col items-center bg-white">
+    <section className="scheme-page flex min-h-screen flex-col items-center">
       <Hero
         variant="small"
         title={GALLERY_PAGE_COPY.heroTitle}
@@ -16,10 +16,10 @@ export default function GalleryPage() {
       />
 
       <section className="container px-6 py-18 md:py-22 2xl:px-0">
-        <div className="mb-12 max-w-4xl">
-          <p className="typ-label mb-4 text-neutral-700">{GALLERY_PAGE_COPY.kicker}</p>
-          <h2 className="typ-section text-neutral-950">{GALLERY_PAGE_COPY.title}</h2>
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-neutral-800">
+        <div className="scheme-panel scheme-border mb-12 max-w-4xl rounded-[2rem] border p-8 md:p-10">
+          <p className="typ-label mb-4 scheme-text-body">{GALLERY_PAGE_COPY.kicker}</p>
+          <h2 className="typ-section scheme-text-strong">{GALLERY_PAGE_COPY.title}</h2>
+          <p className="page-copy mt-4 max-w-3xl scheme-text-body">
             {GALLERY_PAGE_COPY.description}
           </p>
         </div>
@@ -27,7 +27,7 @@ export default function GalleryPage() {
         <Masonry columns={2} gap="2rem">
           {GALLERY_PROJECTS.map((project) => (
             <MasonryItem key={`${project.title}-${project.location}`}>
-              <article className="group relative mb-8 overflow-hidden rounded-xl border border-neutral-300 bg-neutral-100">
+              <article className="group scheme-border relative mb-8 overflow-hidden rounded-xl border bg-neutral-100">
                 <Image
                   src={project.image}
                   alt={`${project.title} project`}
@@ -37,11 +37,11 @@ export default function GalleryPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
+                  <p className="scheme-text-inverse-muted text-xs font-semibold uppercase tracking-[0.18em]">
                     {project.category}
                   </p>
                   <h3 className="mt-2 text-3xl font-light tracking-tight text-white">{project.title}</h3>
-                  <p className="mt-1 text-sm text-white/85">{project.location}</p>
+                  <p className="scheme-text-inverse-body mt-1 text-sm">{project.location}</p>
                 </div>
               </article>
             </MasonryItem>

@@ -17,6 +17,7 @@ import {
 import { hasConsentChoice } from "@/lib/consent";
 import { sanitizeDisplayText } from "@/lib/displayText";
 import { getCatalogProductHref } from "@/lib/catalogCategories";
+import { type AdvisorRecommendation, type AdvisorResult } from "@/lib/aiAdvisor";
 import {
   AI_ADVISOR_COPY,
   AI_ASSISTANT_REFINERS,
@@ -51,21 +52,6 @@ type GuidedState = {
   name: string;
   email: string;
   phone: string;
-};
-
-type AdvisorRecommendation = {
-  productUrlKey?: string;
-  productId: string;
-  productName: string;
-  category: string;
-  why: string;
-  budgetEstimate: string;
-};
-
-type AdvisorResult = {
-  recommendations: AdvisorRecommendation[];
-  totalBudget: string;
-  summary: string;
 };
 
 type ChatMessage = {
@@ -188,6 +174,18 @@ export function UnifiedAssistant() {
     return userMessages.length > 0 ? userMessages[userMessages.length - 1].text : "";
   }, [chatMessages]);
 
+  function resetChatbot() {
+    setQuery("");
+    setAiError("");
+    setChatMessages([
+      {
+        id: generateId("assistant"),
+        role: "assistant",
+        text: AI_ASSISTANT_WELCOME_MESSAGE,
+      },
+    ]);
+  }
+
   async function completeGuidedFlow() {
     if (guidedSaving || guidedSubmittedId) return;
     setGuidedSaving(true);
@@ -262,7 +260,13 @@ export function UnifiedAssistant() {
       const response = await fetch("/api/ai-advisor/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: trimmed }),
+        body: JSON.stringify({
+          query: trimmed,
+          context: {
+            source: "global",
+            sourcePath: pathname,
+          },
+        }),
       });
 
       const json = (await response.json()) as AdvisorResult & { error?: string };
@@ -290,6 +294,9 @@ export function UnifiedAssistant() {
             recommendations: json.recommendations,
             totalBudget: json.totalBudget,
             summary: json.summary,
+            nextActions: json.nextActions,
+            warnings: json.warnings,
+            pricingMode: json.pricingMode,
           },
         },
       ]);
@@ -315,8 +322,8 @@ export function UnifiedAssistant() {
   }
 
   function applyStarter(text: string) {
-    setQuery(text);
     setAiError("");
+    void submitAiQuery(text);
   }
 
   function useSurprisePrompt() {
@@ -326,7 +333,8 @@ export function UnifiedAssistant() {
 
   const suppressFloatingLauncher =
     pathname.startsWith("/products") ||
-    pathname === "/compare";
+    pathname === "/compare" ||
+    pathname.startsWith("/configurator");
   const mobileLauncherOffset = consentChosen ? "bottom-20" : "bottom-40";
   const mobilePanelOffset = consentChosen ? "bottom-36" : "bottom-56";
 
@@ -386,10 +394,10 @@ export function UnifiedAssistant() {
           type="button"
           onClick={() => setChatOpen(true)}
           aria-label="Open AI chatbot"
-          className="fixed bottom-16 left-6 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary-hover"
+          className="fixed bottom-5 left-4 z-40 inline-flex items-center gap-2 rounded-full bg-primary px-3.5 py-3 text-white shadow-xl transition-colors hover:bg-primary-hover"
         >
           <Sparkles className="h-4 w-4" />
-          <span className="text-sm font-semibold uppercase tracking-wide">
+          <span className="hidden xl:inline text-xs font-semibold uppercase tracking-[0.14em]">
             {AI_CHATBOT_COPY.title}
           </span>
         </button>
@@ -672,12 +680,27 @@ export function UnifiedAssistant() {
                       <div className="mt-3 space-y-3">
                         <div className="rounded-lg border border-neutral-200 bg-white p-3">
                           <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-                            {AI_CHATBOT_COPY.totalLabel}
+                            {message.result.pricingMode === "band"
+                              ? AI_CHATBOT_COPY.bandLabel
+                              : AI_CHATBOT_COPY.totalLabel}
                           </p>
                           <p className="mt-1 text-sm font-semibold text-neutral-900">
                             {message.result.totalBudget}
                           </p>
                         </div>
+
+                        {message.result.warnings?.length ? (
+                          <div className="rounded-lg border border-amber-200 bg-amber-50 p-3">
+                            <p className="text-xs font-semibold uppercase tracking-wide text-amber-900">
+                              {AI_CHATBOT_COPY.warningsTitle}
+                            </p>
+                            <div className="mt-2 space-y-1 text-xs text-amber-900">
+                              {message.result.warnings.map((warning) => (
+                                <p key={warning}>{warning}</p>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
 
                         {message.result.recommendations.map((item) => (
                           <div
@@ -698,6 +721,19 @@ export function UnifiedAssistant() {
                             <p className="text-xs text-neutral-700">{item.why}</p>
                           </div>
                         ))}
+
+                        {message.result.nextActions?.length ? (
+                          <div className="rounded-lg border border-neutral-200 bg-white p-3">
+                            <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                              {AI_CHATBOT_COPY.nextActionsTitle}
+                            </p>
+                            <div className="mt-2 space-y-1 text-xs text-neutral-700">
+                              {message.result.nextActions.map((action) => (
+                                <p key={action}>{action}</p>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
                       </div>
                     ) : null}
                   </div>
@@ -736,6 +772,13 @@ export function UnifiedAssistant() {
                     className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
                   >
                     {AI_CHATBOT_COPY.switchToPlanner}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={resetChatbot}
+                    className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
+                  >
+                    {AI_CHATBOT_COPY.reset}
                   </button>
                 </div>
               ) : null}

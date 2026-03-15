@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useConfigurator } from "./ConfiguratorContext";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { buildMailtoHref, buildWhatsAppHref } from "@/data/site/contact";
 
 export function SummaryPanel() {
     const { getSummary } = useConfigurator();
@@ -11,13 +12,14 @@ export function SummaryPanel() {
 
     const summary = getSummary();
 
-    const whatsappUrl = `https://wa.me/919031022875?text=${encodeURIComponent(
+    const whatsappUrl = buildWhatsAppHref(
         `Modular Furniture Configurator Request\n\n${summary}`
-    )}`;
+    );
 
-    const mailtoUrl = `mailto:sales@oando.co.in?subject=${encodeURIComponent(
-        "Modular Furniture Configurator Request"
-    )}&body=${encodeURIComponent(summary)}`;
+    const mailtoUrl = buildMailtoHref(
+        "Modular Furniture Configurator Request",
+        summary
+    );
 
     const handleCopy = async () => {
         try {
@@ -60,7 +62,7 @@ export function SummaryPanel() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 text-sm font-medium hover:bg-[#20bd5a] transition-colors"
+                    className="whatsapp-cta flex items-center gap-2 px-6 py-3 text-sm font-medium text-white transition-colors"
                 >
                     Send via WhatsApp
                     <ArrowRight className="w-4 h-4" />

@@ -4,6 +4,11 @@
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { Catalog_CATEGORY_ORDER, buildCatalogCategoryNav } from "@/lib/catalogCategories";
+import {
+  buildWhatsAppHref,
+  SITE_CONTACT,
+  toTelHref,
+} from "@/data/site/contact";
 
 const NAV = [
   {
@@ -29,6 +34,10 @@ const NAV = [
 ];
 
 export function Footer() {
+  const whatsappHref = buildWhatsAppHref(
+    `Hi, I'd like to enquire about ${SITE_CONTACT.brandName}.`,
+  );
+
   return (
     <footer className="footer w-full bg-neutral-900 text-neutral-400">
       {/* Main grid */}
@@ -46,30 +55,30 @@ export function Footer() {
             </Link>
 
             <address className="not-italic text-sm leading-7 text-neutral-400">
-              Patna, Bihar & Jharkhand, India
+              {SITE_CONTACT.regionLine}
             </address>
 
             <div className="text-sm space-y-1">
               <a
-                href="tel:+919031022875"
+                href={toTelHref(SITE_CONTACT.supportPhone)}
                 className="block hover:text-white transition-colors"
               >
-                +91 90310 22875
+                {SITE_CONTACT.supportPhone}
               </a>
               <a
-                href="mailto:sales@oando.co.in"
+                href={`mailto:${SITE_CONTACT.salesEmail}`}
                 className="block hover:text-white transition-colors"
               >
-                sales@oando.co.in
+                {SITE_CONTACT.salesEmail}
               </a>
             </div>
 
             <a
-              href="https://wa.me/919031022875?text=Hi%2C+I%27d+like+to+enquire+about+office+furniture"
+              href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-semibold tracking-widest uppercase px-4 py-2.5 hover:bg-[#128C7E] transition-colors w-fit"
+              className="whatsapp-cta whatsapp-cta--footer inline-flex w-fit items-center gap-2 px-4 py-2.5 text-xs font-semibold tracking-widest uppercase transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp Us

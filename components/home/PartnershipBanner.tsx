@@ -5,10 +5,10 @@ import { HOMEPAGE_PARTNERSHIP_CONTENT } from "@/data/site/homepage";
 
 export function PartnershipBanner() {
   return (
-    <section className="border-y border-neutral-200 bg-white py-12 md:py-14">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex flex-col items-center justify-between gap-12 md:flex-row">
-          <div className="shrink-0">
+    <section className="scheme-section-soft py-10 md:py-12">
+      <div className="home-shell">
+        <div className="home-frame home-frame--roomy flex flex-col items-center justify-between gap-10 md:flex-row">
+          <div className="shrink-0 md:pl-2">
             <Image
               src={HOMEPAGE_PARTNERSHIP_CONTENT.image.src}
               alt={HOMEPAGE_PARTNERSHIP_CONTENT.image.alt}
@@ -21,13 +21,13 @@ export function PartnershipBanner() {
           </div>
 
           <div className="max-w-2xl text-center md:text-right">
-            <span className="typ-label mb-4 block text-neutral-700">
-              {HOMEPAGE_PARTNERSHIP_CONTENT.kicker}
-            </span>
-            <h2 className="typ-section mb-6 text-neutral-950">
-              {HOMEPAGE_PARTNERSHIP_CONTENT.title[0]} <br className="hidden md:block" /> {HOMEPAGE_PARTNERSHIP_CONTENT.title[1]}
+            <h2 className="home-heading scheme-text-strong mb-6">
+              {HOMEPAGE_PARTNERSHIP_CONTENT.title[0]}{" "}
+              <span className="home-heading__accent">
+                {HOMEPAGE_PARTNERSHIP_CONTENT.title[1]}
+              </span>
             </h2>
-            <p className="mb-8 max-w-lg text-base text-neutral-800 md:ml-auto">
+            <p className="scheme-text-body mb-8 max-w-lg text-base md:ml-auto">
               {HOMEPAGE_PARTNERSHIP_CONTENT.description}
             </p>
             <Link href={HOMEPAGE_PARTNERSHIP_CONTENT.cta.href} className="link-arrow typ-label">

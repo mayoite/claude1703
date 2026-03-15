@@ -2,6 +2,7 @@ import { existsSync } from "fs";
 import { join } from "path";
 import type { CompatProduct } from "@/lib/getProducts";
 import { isSupportedCatalogSlug } from "@/lib/catalogSlug";
+import { normalizeAssetList, normalizeAssetPath } from "@/lib/assetPaths";
 
 export type ProductIssueSeverity = "critical" | "high" | "medium";
 
@@ -50,36 +51,16 @@ const COMMON_REQUIREMENTS: ProductFieldRequirement[] = [
 ];
 
 export const PRODUCT_CATEGORY_SCHEMAS: Record<string, ProductCategorySchema> = {
-  seating: {
-    categoryId: "seating",
-    displayName: "Seating",
-    requirements: COMMON_REQUIREMENTS,
-  },
-  workstations: {
-    categoryId: "workstations",
-    displayName: "Workstations",
-    requirements: COMMON_REQUIREMENTS,
-  },
-  tables: {
-    categoryId: "tables",
-    displayName: "Tables",
-    requirements: COMMON_REQUIREMENTS,
-  },
-  storages: {
-    categoryId: "storages",
-    displayName: "Storages",
-    requirements: COMMON_REQUIREMENTS,
-  },
+  seating: { categoryId: "seating", displayName: "Seating", requirements: COMMON_REQUIREMENTS },
+  workstations: { categoryId: "workstations", displayName: "Workstations", requirements: COMMON_REQUIREMENTS },
+  tables: { categoryId: "tables", displayName: "Tables", requirements: COMMON_REQUIREMENTS },
+  storages: { categoryId: "storages", displayName: "Storages", requirements: COMMON_REQUIREMENTS },
   "soft-seating": {
     categoryId: "soft-seating",
     displayName: "Soft Seating",
     requirements: COMMON_REQUIREMENTS,
   },
-  education: {
-    categoryId: "education",
-    displayName: "Education",
-    requirements: COMMON_REQUIREMENTS,
-  },
+  education: { categoryId: "education", displayName: "Education", requirements: COMMON_REQUIREMENTS },
 };
 
 const DEFAULT_SCHEMA: ProductCategorySchema = {
@@ -89,7 +70,7 @@ const DEFAULT_SCHEMA: ProductCategorySchema = {
 };
 
 function containsSuspiciousEncoding(value: string): boolean {
-  return /\uFFFD|â€”|â€“|â€™|â€œ|â€/.test(value);
+  return /\uFFFD|Ã¢â‚¬â€|Ã¢â‚¬â€œ|Ã¢â‚¬â„¢|Ã¢â‚¬Å“|Ã¢â‚¬/.test(value);
 }
 
 function toText(value: unknown): string {
@@ -104,6 +85,49 @@ function toNumber(value: unknown): number | null {
 function toTextList(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   return value.map((item) => String(item || "").trim()).filter(Boolean);
+}
+
+function extractDocumentCandidates(value: unknown): string[] {
+  if (typeof value === "string") {
+    const text = value.trim();
+    return text ? [text] : [];
+  }
+
+  if (Array.isArray(value)) {
+    return value.flatMap((item) => extractDocumentCandidates(item));
+  }
+
+  if (!value || typeof value !== "object") {
+    return [];
+  }
+
+  const record = value as Record<string, unknown>;
+  const directKeys = [
+    "documents",
+    "document",
+    "documentUrl",
+    "documentUrls",
+    "documentLink",
+    "documentLinks",
+    "brochure",
+    "brochures",
+    "brochureUrl",
+    "brochureUrls",
+    "pdf",
+    "pdfs",
+    "downloads",
+    "downloadsUrl",
+    "technicalDrawings",
+    "technicalDrawing",
+    "specSheet",
+    "specSheets",
+    "specSheetUrl",
+    "specSheetUrls",
+    "datasheet",
+    "datasheets",
+  ];
+
+  return directKeys.flatMap((key) => extractDocumentCandidates(record[key]));
 }
 
 function getSpecs(product: CompatProduct): Record<string, unknown> {
@@ -140,17 +164,36 @@ export function getProductCategorySchema(categoryId: string): ProductCategorySch
 export function collectProductImages(product: CompatProduct): string[] {
   const seen = new Set<string>();
   const images = [
-    product.flagshipImage,
-    ...(Array.isArray(product.images) ? product.images : []),
-    ...(Array.isArray(product.sceneImages) ? product.sceneImages : []),
+    normalizeAssetPath(product.flagshipImage),
+    ...normalizeAssetList(Array.isArray(product.images) ? product.images : []),
+    ...normalizeAssetList(Array.isArray(product.sceneImages) ? product.sceneImages : []),
     ...(Array.isArray(product.variants)
-      ? product.variants.flatMap((variant) => variant.galleryImages || [])
+      ? product.variants.flatMap((variant) => normalizeAssetList(variant.galleryImages || []))
       : []),
   ]
     .map((value) => String(value || "").trim())
     .filter(Boolean);
 
   return images.filter((value) => {
+    if (seen.has(value)) return false;
+    seen.add(value);
+    return true;
+  });
+}
+
+export function collectProductDocuments(product: CompatProduct): string[] {
+  const seen = new Set<string>();
+  const values = [
+    ...extractDocumentCandidates(product.documents),
+    ...extractDocumentCandidates(product.technicalDrawings),
+    ...extractDocumentCandidates(product.metadata),
+    ...extractDocumentCandidates(product.specs),
+    ...extractDocumentCandidates(product.variants),
+  ]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean);
+
+  return values.filter((value) => {
     if (seen.has(value)) return false;
     seen.add(value);
     return true;
@@ -181,19 +224,15 @@ export function auditCompatProduct(
   const sustainabilityScore =
     toNumber(product.metadata?.sustainabilityScore) ?? toNumber(specs.sustainability_score);
   const images = collectProductImages(product);
-  const primaryImage = toText(product.flagshipImage) || images[0] || "";
+  const primaryImage = normalizeAssetPath(toText(product.flagshipImage)) || images[0] || "";
   const altText =
     toText(product.altText) ||
     toText(product.metadata?.ai_alt_text) ||
     toText(product.metadata?.aiAltText);
-  const documents = Array.isArray(product.documents) ? product.documents.filter(Boolean) : [];
+  const documents = collectProductDocuments(product);
 
   if (!primaryImage) {
-    issues.push({
-      code: "missing_primary_image",
-      severity: "critical",
-      message: "Primary image is missing.",
-    });
+    issues.push({ code: "missing_primary_image", severity: "critical", message: "Primary image is missing." });
   } else if (!fileExistsForPublicAsset(primaryImage)) {
     issues.push({
       code: "invalid_primary_image_path",
@@ -221,19 +260,11 @@ export function auditCompatProduct(
   }
 
   if (toText(product.description).length < 20) {
-    issues.push({
-      code: "missing_description",
-      severity: "high",
-      message: "Description is missing or too short.",
-    });
+    issues.push({ code: "missing_description", severity: "high", message: "Description is missing or too short." });
   }
 
   if (!altText) {
-    issues.push({
-      code: "missing_alt_text",
-      severity: "medium",
-      message: "Alt text is missing.",
-    });
+    issues.push({ code: "missing_alt_text", severity: "medium", message: "Alt text is missing." });
   }
 
   if (!isSupportedCatalogSlug(product.slug, categoryId)) {
@@ -254,54 +285,22 @@ export function auditCompatProduct(
 
   for (const requirement of schema.requirements) {
     if (requirement.code === "missing_dimensions" && !dimensions) {
-      issues.push({
-        code: requirement.code,
-        severity: requirement.severity,
-        message: `${requirement.label} is missing.`,
-      });
+      issues.push({ code: requirement.code, severity: requirement.severity, message: `${requirement.label} is missing.` });
     }
-
     if (requirement.code === "missing_materials" && materials.length === 0) {
-      issues.push({
-        code: requirement.code,
-        severity: requirement.severity,
-        message: `${requirement.label} is missing.`,
-      });
+      issues.push({ code: requirement.code, severity: requirement.severity, message: `${requirement.label} is missing.` });
     }
-
     if (requirement.code === "missing_features" && features.length === 0) {
-      issues.push({
-        code: requirement.code,
-        severity: requirement.severity,
-        message: `${requirement.label} is missing.`,
-      });
+      issues.push({ code: requirement.code, severity: requirement.severity, message: `${requirement.label} is missing.` });
     }
-
     if (requirement.code === "missing_subcategory" && !subcategory && !subcategoryId) {
-      issues.push({
-        code: requirement.code,
-        severity: requirement.severity,
-        message: `${requirement.label} is missing.`,
-      });
+      issues.push({ code: requirement.code, severity: requirement.severity, message: `${requirement.label} is missing.` });
     }
-
     if (requirement.code === "missing_warranty" && warrantyYears === null) {
-      issues.push({
-        code: requirement.code,
-        severity: requirement.severity,
-        message: `${requirement.label} is missing.`,
-      });
+      issues.push({ code: requirement.code, severity: requirement.severity, message: `${requirement.label} is missing.` });
     }
-
-    if (
-      requirement.code === "missing_sustainability_score" &&
-      sustainabilityScore === null
-    ) {
-      issues.push({
-        code: requirement.code,
-        severity: requirement.severity,
-        message: `${requirement.label} is missing.`,
-      });
+    if (requirement.code === "missing_sustainability_score" && sustainabilityScore === null) {
+      issues.push({ code: requirement.code, severity: requirement.severity, message: `${requirement.label} is missing.` });
     }
   }
 

@@ -4,15 +4,14 @@ import { getProducts } from "@/lib/getProducts";
 import { createSupabaseAdminClient } from "@/lib/supabaseAdmin";
 import { normalizeRequestedCategoryId } from "@/lib/catalogCategories";
 import { SITE_URL } from "@/lib/siteUrl";
-
-type AdvisorRecommendation = {
-  productUrlKey: string;
-  productId: string;
-  productName: string;
-  category: string;
-  why: string;
-  budgetEstimate: string;
-};
+import {
+  buildConfiguratorContextSummary,
+  sanitizeAdvisorPriceText,
+  type AdvisorRecommendation,
+  type AdvisorRequest,
+  type AdvisorResult,
+  type ConfiguratorAdvisorContext,
+} from "@/lib/aiAdvisor";
 
 type ProductLite = Awaited<ReturnType<typeof getProducts>>[number];
 type AdvisorClientConfig = {
@@ -55,13 +54,17 @@ function resolveAdvisorClient(): AdvisorClientConfig | null {
 
 function parsePayload(
   value: unknown,
-): { query: string; userId: string } | null {
+): { query: string; userId: string; context?: ConfiguratorAdvisorContext } | null {
   if (!value || typeof value !== "object") return null;
-  const source = value as Record<string, unknown>;
+  const source = value as AdvisorRequest & Record<string, unknown>;
   const query = typeof source.query === "string" ? source.query.trim() : "";
   const userId = typeof source.userId === "string" ? source.userId.trim() : "";
   if (!query) return null;
-  return { query, userId };
+  const context =
+    source.context && typeof source.context === "object"
+      ? (source.context as ConfiguratorAdvisorContext)
+      : undefined;
+  return { query, userId, context };
 }
 
 function normalizeCategoryId(raw: string): string {
@@ -88,10 +91,10 @@ function parsePriceRange(priceRange: string | undefined): string {
 
 function inferBudgetFromQuery(query: string): string {
   const text = query.toLowerCase();
-  if (text.includes("budget") || text.includes("cost effective")) return "Budget-friendly";
-  if (text.includes("premium") || text.includes("executive")) return "Premium";
-  if (text.includes("luxury") || text.includes("director")) return "Luxury";
-  return "Budget to premium, based on final configuration";
+  if (text.includes("budget") || text.includes("cost effective")) return "Indicative value band on request";
+  if (text.includes("premium") || text.includes("executive")) return "Indicative premium band on request";
+  if (text.includes("luxury") || text.includes("director")) return "Indicative premium band on request";
+  return "Indicative budget band on request";
 }
 
 function buildHeuristicRecommendations(
@@ -163,13 +166,62 @@ function buildHeuristicRecommendations(
   return finalList;
 }
 
-function buildFallbackAdvisorResponse(query: string, products: ProductLite[]) {
+function buildContextualNextActions(
+  context: ConfiguratorAdvisorContext | undefined,
+): string[] {
+  if (!context || context.source !== "configurator") {
+    return [
+      "Share team size, city, and category priorities to tighten the shortlist.",
+      "Confirm whether budget, delivery speed, or ergonomics should lead the recommendation.",
+    ];
+  }
+
+  const actions = [
+    "Review the fit result before locking product family decisions.",
+    "Compare one lower-budget and one ergonomic alternative against the current snapshot.",
+  ];
+  if (context.fitStatus?.toLowerCase().includes("over")) {
+    actions.unshift("Reduce seat or unit density, or increase the usable planning zone.");
+  }
+  if (!context.siteLocation) {
+    actions.push("Add site location to tune installation and delivery assumptions.");
+  }
+  return actions;
+}
+
+function buildContextualWarnings(
+  context: ConfiguratorAdvisorContext | undefined,
+): string[] {
+  if (!context || context.source !== "configurator") return [];
+  const warnings: string[] = [];
+  if (context.fitStatus?.toLowerCase().includes("over")) {
+    warnings.push("Current layout does not fit inside the stated planning zone.");
+  }
+  if (!context.budgetBand || context.budgetBand.toLowerCase().includes("guidance")) {
+    warnings.push("Budget band is still open, so pricing remains indicative only.");
+  }
+  return warnings;
+}
+
+function buildFallbackAdvisorResponse(
+  query: string,
+  products: ProductLite[],
+  context?: ConfiguratorAdvisorContext,
+): AdvisorResult {
   const recommendations = buildHeuristicRecommendations(query, products);
   return {
     recommendations,
-    totalBudget: inferBudgetFromQuery(query),
+    totalBudget:
+      context?.estimatedBudget && !context.estimatedBudget.toLowerCase().includes("$")
+        ? context.estimatedBudget
+        : inferBudgetFromQuery(query),
     summary:
-      "Here is a practical shortlist based on your brief and our available catalog. Share team size and site details for a tighter BOQ.",
+      context?.source === "configurator"
+        ? "Here is a practical shortlist based on the current configurator snapshot. Use this to decide the next change, not as a final BOQ."
+        : "Here is a practical shortlist based on your brief and our available catalog. Share team size and site details for a tighter recommendation.",
+    nextActions: buildContextualNextActions(context),
+    warnings: buildContextualWarnings(context),
+    pricingMode: context?.estimatedBudget ? "band" : "on-request",
     fallbackUsed: true,
   };
 }
@@ -207,7 +259,7 @@ function normalizeRecommendation(
         : product?.description?.split(".")[0] || "",
     budgetEstimate:
       typeof source.budgetEstimate === "string" && source.budgetEstimate.trim().length > 0
-        ? source.budgetEstimate
+        ? sanitizeAdvisorPriceText(source.budgetEstimate, parsePriceRange(product?.metadata?.priceRange))
         : parsePriceRange(product?.metadata?.priceRange),
   };
 }
@@ -226,7 +278,7 @@ export async function POST(req: NextRequest) {
     if (!parsedBody) {
       return NextResponse.json({ error: "Query is required" }, { status: 400 });
     }
-    const { query, userId } = parsedBody;
+    const { query, userId, context } = parsedBody;
 
     const products = await getProducts();
     if (!products || products.length === 0) {
@@ -235,6 +287,9 @@ export async function POST(req: NextRequest) {
           recommendations: [],
           totalBudget: "On request",
           summary: "Catalog is temporarily unavailable.",
+          nextActions: buildContextualNextActions(context),
+          warnings: buildContextualWarnings(context),
+          pricingMode: "on-request",
           fallbackUsed: true,
         },
         { status: 200 },
@@ -245,7 +300,7 @@ export async function POST(req: NextRequest) {
 
     const advisorClient = resolveAdvisorClient();
     if (!advisorClient) {
-      return NextResponse.json(buildFallbackAdvisorResponse(query, products), {
+      return NextResponse.json(buildFallbackAdvisorResponse(query, products, context), {
         status: 200,
       });
     }
@@ -276,10 +331,15 @@ export async function POST(req: NextRequest) {
       )
       .join("\n");
 
+    const contextSummary = buildConfiguratorContextSummary(context);
     const systemPrompt = `You are an enterprise workspace engineering consultant for One & Only Furniture.
 Recommend 3 to 5 specific products from the catalog.
 Consider team size, industry, budget sensitivity, location context, and ergonomic needs.
+Only use the live catalog below.
+This is an India-facing experience, so never return USD or dollar pricing. Use INR budget bands or "On request".
+Do not fabricate a final BOQ or fake precision totals.
 ${historyContext}
+${contextSummary ? `\n${contextSummary}\n` : ""}
 
 Available products:
 ${productList}
@@ -297,7 +357,10 @@ Respond ONLY with valid JSON in this exact shape:
     }
   ],
   "totalBudget": "<estimated project total range>",
-  "summary": "<2-sentence consultation summary>"
+  "summary": "<2-sentence consultation summary>",
+  "nextActions": ["<specific next change or validation step>"],
+  "warnings": ["<optional risk or confidence caveat>"],
+  "pricingMode": "band"
 }`;
 
     const completion = await advisorClient.client.chat.completions.create({
@@ -315,7 +378,7 @@ Respond ONLY with valid JSON in this exact shape:
       raw = raw.replace(/^```json\n/, "").replace(/\n```$/, "").trim();
       parsed = JSON.parse(raw) as Record<string, unknown>;
     } catch {
-      return NextResponse.json(buildFallbackAdvisorResponse(query, products), {
+      return NextResponse.json(buildFallbackAdvisorResponse(query, products, context), {
         status: 200,
       });
     }
@@ -327,21 +390,35 @@ Respond ONLY with valid JSON in this exact shape:
       : [];
 
     if (recommendations.length === 0) {
-      return NextResponse.json(buildFallbackAdvisorResponse(query, products), {
+      return NextResponse.json(buildFallbackAdvisorResponse(query, products, context), {
         status: 200,
       });
     }
 
     return NextResponse.json({
       recommendations,
-      totalBudget:
+      totalBudget: sanitizeAdvisorPriceText(
         typeof parsed.totalBudget === "string" && parsed.totalBudget.trim().length > 0
           ? parsed.totalBudget
-          : inferBudgetFromQuery(query),
+          : context?.estimatedBudget || inferBudgetFromQuery(query),
+        context?.estimatedBudget || inferBudgetFromQuery(query),
+      ),
       summary:
         typeof parsed.summary === "string" && parsed.summary.trim().length > 0
           ? parsed.summary
           : "Recommendation shortlist generated from your project brief and current catalog.",
+      nextActions: Array.isArray(parsed.nextActions)
+        ? parsed.nextActions.filter((item): item is string => typeof item === "string" && item.trim().length > 0)
+        : buildContextualNextActions(context),
+      warnings: Array.isArray(parsed.warnings)
+        ? parsed.warnings.filter((item): item is string => typeof item === "string" && item.trim().length > 0)
+        : buildContextualWarnings(context),
+      pricingMode:
+        parsed.pricingMode === "band" || parsed.pricingMode === "on-request"
+          ? parsed.pricingMode
+          : context?.estimatedBudget
+            ? "band"
+            : "on-request",
       fallbackUsed: false,
     });
   } catch (err) {
@@ -351,6 +428,9 @@ Respond ONLY with valid JSON in this exact shape:
         recommendations: [],
         totalBudget: "On request",
         summary: "Unable to process advisor request right now.",
+        nextActions: buildContextualNextActions(undefined),
+        warnings: [],
+        pricingMode: "on-request",
         fallbackUsed: true,
       },
       { status: 200 },

@@ -53,7 +53,7 @@ export function Teaser({
                   <span
                     className={cn(
                       "typ-cta",
-                      lightMode ? "text-neutral-500" : "text-white/80",
+                      lightMode ? "scheme-text-muted" : "scheme-text-inverse-body",
                     )}
                   >
                     {subtitle}

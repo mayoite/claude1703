@@ -1,7 +1,12 @@
 import Link from "next/link";
-import { SITE_FOOTER_NAV, SITE_SOCIAL_LINKS } from "@/lib/siteNav";
 import { OneAndOnlyLogo } from "@/components/ui/Logo";
-import { SITE_CONTACT } from "@/data/site/contact";
+import { FooterConversionPanel } from "@/components/site/FooterConversionPanel";
+import {
+  buildMailtoHref,
+  SITE_CONTACT,
+  toTelHref,
+} from "@/data/site/contact";
+import { SITE_FOOTER_NAV, SITE_SOCIAL_LINKS } from "@/lib/siteNav";
 
 function LinkedInIcon() {
   return (
@@ -46,37 +51,41 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-footer-bg text-footer-muted">
-      {/* Main grid */}
-      <div className="container px-6 2xl:px-0 py-10 md:py-12">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-7">
+    <footer className="site-footer w-full">
+      <FooterConversionPanel />
 
-          {/* Brand + contact */}
-          <div className="md:col-span-1 flex flex-col gap-4">
-            <Link href="/" prefetch={false} className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+      <div className="container px-6 py-10 2xl:px-0 md:py-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-7">
+          <div className="flex flex-col gap-4 md:col-span-1">
+            <Link href="/" prefetch={false} className="site-footer__link block">
               <OneAndOnlyLogo variant="orange" className="h-10" />
             </Link>
 
-            <address className="not-italic text-[0.98rem] leading-6 text-footer-muted">
+            <address className="site-footer__address typ-body-sm not-italic">
               {SITE_CONTACT.regionLine}
             </address>
 
-            <div className="space-y-1 text-[0.95rem]">
-              <a
-                href={`tel:${SITE_CONTACT.supportPhone.replace(/\s+/g, "")}`}
-                className="block transition-colors hover:text-footer-hover"
-              >
-                {SITE_CONTACT.supportPhone}
-              </a>
-              <a
-                href={`mailto:${SITE_CONTACT.salesEmail}`}
-                className="block transition-colors hover:text-footer-hover"
-              >
-                {SITE_CONTACT.salesEmail}
-              </a>
+            <div className="site-footer__meta typ-body-sm space-y-3">
+              <div>
+                <p className="site-footer__heading typ-overline mb-1">Quotes and planning</p>
+                <a href={toTelHref(SITE_CONTACT.salesPhone)} className="site-footer__link block">
+                  {SITE_CONTACT.salesPhone}
+                </a>
+              </div>
+              <div>
+                <p className="site-footer__heading typ-overline mb-1">Support and enquiries</p>
+                <a href={toTelHref(SITE_CONTACT.supportPhone)} className="site-footer__link block">
+                  {SITE_CONTACT.supportPhone}
+                </a>
+              </div>
+              <div>
+                <p className="site-footer__heading typ-overline mb-1">Email</p>
+                <a href={buildMailtoHref()} className="site-footer__link block">
+                  {SITE_CONTACT.salesEmail}
+                </a>
+              </div>
             </div>
 
-            {/* Social icons */}
             <div className="flex items-center gap-3 pt-0.5">
               {SITE_SOCIAL_LINKS.map((social) => {
                 const Icon = SOCIAL_ICON_MAP[social.id];
@@ -87,7 +96,7 @@ export function SiteFooter() {
                     aria-label={social.label}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded text-footer-subtle transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="site-footer__social"
                   >
                     {Icon ? <Icon /> : null}
                   </a>
@@ -96,21 +105,14 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Nav columns */}
-          <div className="md:col-span-4 grid grid-cols-2 gap-7 sm:grid-cols-4 md:gap-5">
+          <div className="grid grid-cols-2 gap-7 sm:grid-cols-4 md:col-span-4 md:gap-5">
             {SITE_FOOTER_NAV.map((col) => (
               <div key={col.heading}>
-                <p className="typ-label mb-3 text-footer-subtle">
-                  {col.heading}
-                </p>
+                <p className="site-footer__heading typ-overline mb-3">{col.heading}</p>
                 <ul className="flex flex-col gap-2">
                   {col.links.map(({ href, label }) => (
                     <li key={`${href}-${label}`}>
-                      <Link
-                        href={href}
-                        prefetch={false}
-                        className="rounded text-[0.94rem] text-footer-link transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                      >
+                      <Link href={href} prefetch={false} className="site-footer__link typ-body-sm">
                         {label}
                       </Link>
                     </li>
@@ -122,26 +124,22 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-footer-border">
-        <div className="container flex flex-col items-center justify-between gap-3 px-6 py-4 text-[0.92rem] text-footer-dim sm:flex-row 2xl:px-0">
+      <div className="site-footer__divider border-t">
+        <div className="site-footer__legal-row typ-body-sm container flex flex-col items-center justify-between gap-3 px-6 py-4 sm:flex-row 2xl:px-0">
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:justify-start">
-            <Link href="/refund-and-return-policy" prefetch={false} className="rounded transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <Link href="/refund-and-return-policy" prefetch={false} className="site-footer__legal">
               Refund Policy
             </Link>
-            <Link href="/privacy" prefetch={false} className="rounded transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <Link href="/privacy" prefetch={false} className="site-footer__legal">
               Privacy Policy
             </Link>
-            <Link href="/terms" prefetch={false} className="rounded transition-colors hover:text-footer-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <Link href="/terms" prefetch={false} className="site-footer__legal">
               Terms
             </Link>
           </div>
-          <div>
-            Copyright {currentYear} One and Only Furniture. All rights reserved.
-          </div>
+          <div>Copyright {currentYear} One and Only Furniture. All rights reserved.</div>
         </div>
       </div>
     </footer>
   );
 }
-

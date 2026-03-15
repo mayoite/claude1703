@@ -146,11 +146,11 @@ export function CookieConsentBar() {
       role="dialog"
       aria-live="polite"
       aria-label="Cookie preferences"
-      className="fixed inset-x-0 bottom-0 z-30 border-t border-neutral-200 bg-white/95 shadow-[0_-12px_28px_-24px_rgba(15,23,42,0.65)] backdrop-blur"
+      className="consent-bar"
     >
       <div className="container px-4 py-3 sm:px-6 md:py-4 2xl:px-0">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
-          <p className="max-w-3xl text-[13px] leading-5 text-neutral-700 md:text-sm md:leading-relaxed">
+          <p className="consent-bar__copy">
             We use essential cookies and optional analytics & attribution cookies to improve
             discoverability and user journeys. See our{" "}
           <Link href="/privacy" className="font-semibold text-primary hover:underline">
@@ -162,14 +162,14 @@ export function CookieConsentBar() {
             <button
               type="button"
               onClick={rejectOptional}
-              className="min-h-10 rounded-full border border-neutral-300 px-3 text-xs font-semibold text-neutral-700 transition-colors hover:border-neutral-500 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:min-h-11 md:px-4 md:text-sm"
+              className="consent-bar__action consent-bar__action--secondary"
             >
               Reject Optional
             </button>
             <button
               type="button"
               onClick={acceptAll}
-              className="min-h-10 rounded-full bg-primary px-3 text-xs font-semibold text-white transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:min-h-11 md:px-4 md:text-sm"
+              className="consent-bar__action consent-bar__action--primary"
             >
               Accept All
             </button>

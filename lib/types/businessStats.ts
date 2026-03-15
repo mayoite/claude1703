@@ -1,6 +1,7 @@
 export type StatsSource =
   | "supabase"
-  | "nhost-backup"
+  | "nhost-graphql"
+  | "nhost-sql"
   | "stale-cache"
   | "safe-default";
 

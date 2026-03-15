@@ -102,12 +102,12 @@ export function VideoSection({
       <div className="container relative z-10 px-6 2xl:px-0 h-full flex flex-col justify-center pt-10 md:pt-6 pointer-events-none">
         <div className="max-w-4xl space-y-6 pointer-events-auto">
           <h2
-            className={`text-[36px] md:text-[48px] lg:text-[58px] font-light leading-[1.08] tracking-tight text-balance ${lightMode ? "text-neutral-900" : "text-white"}`}
+            className={`text-ui-36 md:text-ui-48 lg:text-ui-58 font-light leading-ui-108 tracking-tight text-balance ${lightMode ? "text-neutral-900" : "text-white"}`}
           >
             {title}
           </h2>
           <p
-            className={`text-[18px] font-light leading-relaxed max-w-2xl ${lightMode ? "text-neutral-700" : "text-neutral-200"}`}
+            className={`text-ui-18 font-light leading-relaxed max-w-2xl ${lightMode ? "text-neutral-700" : "text-neutral-200"}`}
           >
             {description}
           </p>
@@ -120,7 +120,7 @@ export function VideoSection({
                   : "text-white border-white hover:text-primary hover:border-primary-hover"
                 }`}
             >
-              <span className="text-[13px] font-semibold uppercase tracking-[0.2em]">
+              <span className="text-ui-13 font-semibold uppercase tracking-ui-020">
                 {buttonText}
               </span>
               <span className="text-lg transition-transform group-hover:translate-x-1">

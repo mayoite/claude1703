@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-03-15T14:01:14.256Z",
+  "mode": "dry-run",
+  "offset": 0,
+  "limit": 1,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 1,
+  "matched": [
+    {
+      "id": "0d6355f9-e2f4-40b6-8e04-79e7abdbb984",
+      "slug": "oando-educational--academia",
+      "name": "Academia",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Academia is a classroom designed for schools and colleges. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "source": "afcindia.in",
+        "category": "Educational",
+        "subcategory": "Classroom",
+        "features": [
+          "Smart Storage & Stability for Learning"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Smart Storage & Stability for Learning",
+            "body": "Academia is a thoughtfully designed classroom desk that prioritizes functionality and long-lasting durability. Its high-quality MDF tabletop provides a sturdy, reliable surface suited for everyday academic use."
+          },
+          {
+            "heading": "",
+            "body": "With integrated, practical storage solutions, Academia blends style with utility effortlessly. Its clean, modern design makes it an ideal choice for contemporary learning environments."
+          },
+          {
+            "heading": "",
+            "body": "Ergonomically contoured back handle allows easy lifting and repositioning of the chair, enabling quick, effortless classroom rearrangements without strain."
+          },
+          {
+            "heading": "",
+            "body": "Integrated wire-mesh under-desk storage offers ample space for books and bags while keeping the desktop clear and the classroom neatly organized."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "source": "afcindia.in",
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Academia Classroom",
+        "sourceSlug": "academia"
+      },
+      "alt_text": "Academia Classroom",
+      "sourceSlug": "academia",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946894f3a0ee1af09490d4a_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946896ec97a3dd24159e676_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946897f3cfe78289a4011f1_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946899207bf3d039acf31f1_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": []
+    }
+  ],
+  "unmatched": []
+}

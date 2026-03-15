@@ -1,42 +1,49 @@
+import type { Metadata } from "next";
 import { HomepageHero } from "@/components/home/HomepageHero";
-import { TrustStrip } from "@/components/home/TrustStrip";
-import { SolutionsGrid } from "@/components/home/SolutionsGrid";
-import { OurExperience } from "@/components/home/OurExperience";
-import { ProcessSection } from "@/components/home/ProcessSection";
 import { PartnershipBanner } from "@/components/home/PartnershipBanner";
-import { WorkspaceShowcase } from "@/components/home/WorkspaceShowcase";
-import { ClientStories } from "@/components/home/ClientStories";
+import { TrustStrip } from "@/components/home/TrustStrip";
+import { ProcessSection } from "@/components/home/ProcessSection";
+import { Collections } from "@/components/home/Collections";
+import { Projects } from "@/components/home/Projects";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { SectionReveal } from "@/components/shared/SectionReveal";
+import { SITE_BRAND } from "@/data/site/brand";
+import { buildPageJsonLd, buildPageMetadata } from "@/data/site/seo";
 import { getBusinessStats } from "@/lib/businessStats";
-import { formatKpiAsOf } from "@/lib/kpiFormat";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: SITE_BRAND.defaultTitle,
+  description: SITE_BRAND.description,
+  path: "/",
+});
 
 export default async function Home() {
   const { stats } = await getBusinessStats();
-  const asOfLabel = formatKpiAsOf(stats.asOfDate);
+  const homeJsonLd = buildPageJsonLd(SITE_URL, {
+    path: "/",
+    title: SITE_BRAND.defaultTitle,
+    description: SITE_BRAND.description,
+    pageType: "WebPage",
+  });
 
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <HomepageHero />
-
       <SectionReveal>
-        <TrustStrip stats={stats} asOfLabel={asOfLabel} />
+        <PartnershipBanner />
       </SectionReveal>
 
       <SectionReveal>
-        <WorkspaceShowcase />
+        <Collections />
       </SectionReveal>
 
       <SectionReveal>
-        <ClientStories />
-      </SectionReveal>
-
-      <SectionReveal>
-        <SolutionsGrid />
-      </SectionReveal>
-
-      <SectionReveal>
-        <OurExperience clientCount={stats.clientOrganisations} />
+        <Projects />
       </SectionReveal>
 
       <SectionReveal>
@@ -44,7 +51,7 @@ export default async function Home() {
       </SectionReveal>
 
       <SectionReveal>
-        <PartnershipBanner />
+        <TrustStrip stats={stats} />
       </SectionReveal>
 
       <SectionReveal>

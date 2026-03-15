@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Search, Sparkles, X } from "lucide-react";
 import { OneAndOnlyLogo } from "@/components/ui/Logo";
@@ -40,6 +41,33 @@ interface NavSearchResult {
   source: "ai" | "local";
 }
 
+async function resolveSearchDestination(
+  query: string,
+  context: "header" | "mobile",
+  currentResults: NavSearchResult[],
+) {
+  if (currentResults[0]?.href) {
+    return currentResults[0].href;
+  }
+
+  if (query.length < 2) {
+    return "/products";
+  }
+
+  try {
+    const response = await fetch(
+      `/api/nav-search/?q=${encodeURIComponent(query)}&limit=1&context=${context}`,
+    );
+    if (!response.ok) {
+      return "/products";
+    }
+    const payload = (await response.json()) as { results?: NavSearchResult[] };
+    return payload.results?.[0]?.href || "/products";
+  } catch {
+    return "/products";
+  }
+}
+
 interface MobileNavDrawerProps {
   open: boolean;
   onClose: () => void;
@@ -47,6 +75,7 @@ interface MobileNavDrawerProps {
 }
 
 export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDrawerProps) {
+  const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const [accordion, setAccordion] = useState<Record<string, boolean>>({});
@@ -181,6 +210,15 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
     handleClose();
   };
 
+  const submitSearch = async () => {
+    const query = searchQuery.trim();
+    const destination = await resolveSearchDestination(query, "mobile", searchResults);
+    router.push(destination);
+    setShowSearchPanel(false);
+    setSearchQuery("");
+    handleClose();
+  };
+
   return (
     <AnimatePresence>
       {open && (
@@ -222,7 +260,13 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
 
             <nav className="flex-1 overflow-y-auto px-5 py-4" aria-label="Mobile primary navigation">
               <div className="mb-4">
-                <div className="drawer-search">
+                <form
+                  className="drawer-search"
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    void submitSearch();
+                  }}
+                >
                   <Search className="h-4 w-4 text-neutral-500" />
                   <input
                     value={searchQuery}
@@ -233,11 +277,14 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                     aria-label="Mobile AI product search"
                   />
                   <Sparkles className="h-4 w-4 text-accent1" />
-                </div>
+                  <button type="submit" className="sr-only">
+                    Submit mobile search
+                  </button>
+                </form>
 
                 {(showSearchPanel || searchQuery.trim().length >= 2) && (
                   <div className="mt-2 rounded-2xl border border-neutral-200 bg-neutral-50 p-3">
-                    <p className="mb-2 text-[10px] font-normal tracking-[0.04em] text-neutral-500">
+                    <p className="shell-search-note">
                       {searchLoading
                         ? "Searching"
                         : searchResults.length > 0
@@ -256,7 +303,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                               className="flex items-center justify-between rounded-lg bg-white px-3 py-2 text-sm text-neutral-700"
                             >
                               <span>{result.title}</span>
-                              <span className="text-[10px] tracking-[0.04em] text-neutral-400">
+                              <span className="shell-count">
                                 {result.type}
                               </span>
                             </Link>
@@ -307,7 +354,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
 
                             {groupedCategories.map((group) => (
                               <div key={group.groupId}>
-                                <p className="typ-label px-3 pb-1 pt-2 text-neutral-400">
+                                <p className="drawer-group-label">
                                   {group.groupLabel}
                                 </p>
                                 <ul className="space-y-1">
@@ -321,7 +368,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                                         >
                                           <span>{item.name}</span>
                                           {typeof item.count === "number" && (
-                                            <span className="text-[10px] text-neutral-400">{item.count}</span>
+                                            <span className="shell-count">{item.count}</span>
                                           )}
                                         </Link>
                                       )}
@@ -338,7 +385,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
                                               >
                                                 <span>{subcategory.name}</span>
                                                 {typeof subcategory.count === "number" && (
-                                                  <span className="text-[10px] text-neutral-400">
+                                                  <span className="shell-count">
                                                     {subcategory.count}
                                                   </span>
                                                 )}
@@ -377,7 +424,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDraw
               <a
                 href="tel:+919835630940"
                 onClick={handleClose}
-                className="mb-3 flex min-h-12 items-center justify-center rounded-lg border border-neutral-200 text-sm font-normal tracking-[0.03em] text-primary transition-colors hover:border-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                className="drawer-call-link"
                 aria-label="Call +91 98356 30940"
               >
                 Call +91 98356 30940

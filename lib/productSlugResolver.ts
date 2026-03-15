@@ -1,5 +1,9 @@
+import "server-only";
+
+import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/db";
 import { summarizeSupabaseError } from "@/lib/supabaseSafe";
+import { CATALOG_REVALIDATE_SECONDS } from "@/data/site/fallbacks";
 
 type SupabaseErrorLike = {
   code?: string | null;
@@ -105,7 +109,7 @@ async function fetchAliasMapping(slug: string): Promise<ProductSlugAliasRow | nu
   return null;
 }
 
-export async function resolveProductByUrlKey<T>(
+async function resolveProductByUrlKeyLive<T>(
   requestedUrlKey: string,
   selectClause = "*",
 ): Promise<ProductSlugResolution<T>> {
@@ -154,4 +158,21 @@ export async function resolveProductByUrlKey<T>(
     resolvedViaAlias: false,
     aliasSlug: null,
   };
+}
+
+const getCachedProductResolution = unstable_cache(
+  async <T>(requestedUrlKey: string, selectClause = "*") =>
+    resolveProductByUrlKeyLive<T>(requestedUrlKey, selectClause),
+  ["catalog-product-resolution"],
+  {
+    revalidate: CATALOG_REVALIDATE_SECONDS,
+    tags: ["catalog", "catalog-products", "catalog-slugs"],
+  },
+);
+
+export async function resolveProductByUrlKey<T>(
+  requestedUrlKey: string,
+  selectClause = "*",
+): Promise<ProductSlugResolution<T>> {
+  return getCachedProductResolution<T>(requestedUrlKey, selectClause);
 }

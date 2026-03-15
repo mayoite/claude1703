@@ -1,0 +1,764 @@
+{
+  "generatedAt": "2026-03-15T14:17:29.916Z",
+  "mode": "apply",
+  "offset": 60,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "92f239bb-c1ad-43d4-9413-9aed75c2f1c4",
+      "slug": "oando-soft-seating--armora",
+      "name": "Armora",
+      "category_id": "soft-seating",
+      "series_name": "Sofa",
+      "description": "Armora is a sofa designed for durability and workspace organization.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Sofa",
+        "features": [
+          "Purposeful Elegance with Lasting Presence"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "01 SEATER Size - 900 X800 X450-750 H MM; 02 SEATER Size - 1800 X800 X450-750 H MM; 03 SEATER Size - 2100 X800 X450-750 H MM",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Purposeful Elegance with Lasting Presence",
+            "body": "Generous proportions and a robust frame offer lasting support while enhancing the clarity of any environment. Versatile and sculpted, Armora adapts beautifully across lounges, reception areas, and modern interiors."
+          },
+          {
+            "heading": "",
+            "body": "Generous proportions and a robust frame offer lasting support while enhancing the clarity of any environment. Versatile and sculpted, Armora adapts beautifully across lounges, reception areas, and modern interiors."
+          },
+          {
+            "heading": "",
+            "body": "Unlike standard rectangular sofas, this design features a distinctive \"overhanging\" armrest top. This architectural ledge breaks the visual monotony of a plain boxy shape and provides a wider, more substantial surface for resting arms or devices."
+          },
+          {
+            "heading": "",
+            "body": "The back cushions utilize precise grid-tufting (stitched squares). Beyond the visual texture, this technique keeps the internal foam firmly in place, ensuring the sofa retains its sharp, professional appearance without the \"slouchy\" look that develops in loose-cushion sofas over time."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Armora",
+            "lines": [
+              "01 SEATER Size - 900 X800 X450-750 H MM",
+              "02 SEATER Size - 1800 X800 X450-750 H MM",
+              "03 SEATER Size - 2100 X800 X450-750 H MM"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Sofa",
+        "subcategoryId": "sofa",
+        "subcategoryLabel": "Sofa",
+        "subcategory_slug": "sofa",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Armora Sofa",
+        "sourceSlug": "armora"
+      },
+      "alt_text": "Armora Sofa",
+      "sourceSlug": "armora",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Sofa",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d47633d56c0e5d6630e32_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d47761e966055d3f509c3_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d479bfee668203cf6f1d4_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d47b82956bd9b3e499093_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d47ca469e703371ab976e_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d47dc472cd9b9a568cc75_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d47eb056b78eab7e94e06_IMG%207.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--armora/image-1.jpg",
+        "/images/catalog/oando-soft-seating--armora/image-2.jpg",
+        "/images/catalog/oando-soft-seating--armora/image-3.jpg",
+        "/images/catalog/oando-soft-seating--armora/image-4.jpg",
+        "/images/catalog/oando-soft-seating--armora/image-5.jpg",
+        "/images/catalog/oando-soft-seating--armora/image-6.jpg",
+        "/images/catalog/oando-soft-seating--armora/image-7.jpg"
+      ]
+    },
+    {
+      "id": "25a3e38f-7b6f-48ac-aa3a-03341fb5b544",
+      "slug": "oando-seating--casca",
+      "name": "Casca",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Casca is a lounge designed for combining comfort and durability.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Softly Modern"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Softly Modern",
+            "body": "The Casca Soft Seating chair features a gently curved, enveloping shell that offers a warm and inviting seating experience. Its smooth, flowing form creates a sense of comfort that naturally encourages moments of pause and conversation."
+          },
+          {
+            "heading": "",
+            "body": "Supported by slender, gracefully angled legs, Casca achieves the perfect balance between lightness and stability. Its minimalist structure adds elegance without compromising durability. Ideal for contemporary interiors, Casca brings together style, comfort, and sophistication in one harmonious design."
+          },
+          {
+            "heading": "",
+            "body": "The seamless, wraparound shell design offers full-body support, creating a cozy, enveloping seating experience perfect for lounges, waiting areas, and collaborative spaces."
+          },
+          {
+            "heading": "",
+            "body": "The wide, cushioned seat paired with smooth, textured fabric ensures long-lasting comfort, making it ideal for prolonged sitting without fatigue."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Casca",
+            "lines": [
+              "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Casca Lounge",
+        "sourceSlug": "casca"
+      },
+      "alt_text": "Casca Lounge",
+      "sourceSlug": "casca",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28c029522c2424a2396e_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28df7c3b199656fe0ebd_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28fb480e037714f1e665_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c291d5bc6454c874c2ee9_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--casca/image-1.jpg",
+        "/images/catalog/oando-seating--casca/image-2.jpg",
+        "/images/catalog/oando-seating--casca/image-3.jpg",
+        "/images/catalog/oando-seating--casca/image-4.jpg"
+      ]
+    },
+    {
+      "id": "5ff78724-ee6c-4be5-8217-debe2cad4976",
+      "slug": "oando-soft-seating--casca",
+      "name": "Casca",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Casca is a lounge designed for combining comfort and durability.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Softly Modern"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Softly Modern",
+            "body": "The Casca Soft Seating chair features a gently curved, enveloping shell that offers a warm and inviting seating experience. Its smooth, flowing form creates a sense of comfort that naturally encourages moments of pause and conversation."
+          },
+          {
+            "heading": "",
+            "body": "Supported by slender, gracefully angled legs, Casca achieves the perfect balance between lightness and stability. Its minimalist structure adds elegance without compromising durability. Ideal for contemporary interiors, Casca brings together style, comfort, and sophistication in one harmonious design."
+          },
+          {
+            "heading": "",
+            "body": "The seamless, wraparound shell design offers full-body support, creating a cozy, enveloping seating experience perfect for lounges, waiting areas, and collaborative spaces."
+          },
+          {
+            "heading": "",
+            "body": "The wide, cushioned seat paired with smooth, textured fabric ensures long-lasting comfort, making it ideal for prolonged sitting without fatigue."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Casca",
+            "lines": [
+              "Overall Height: 800 mm Seat Height: 400 mm Seat Height (with cushion): 450 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Casca Lounge",
+        "sourceSlug": "casca"
+      },
+      "alt_text": "Casca Lounge",
+      "sourceSlug": "casca",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28c029522c2424a2396e_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28df7c3b199656fe0ebd_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c28fb480e037714f1e665_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c291d5bc6454c874c2ee9_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--casca/image-1.jpg",
+        "/images/catalog/oando-soft-seating--casca/image-2.jpg",
+        "/images/catalog/oando-soft-seating--casca/image-3.jpg",
+        "/images/catalog/oando-soft-seating--casca/image-4.jpg"
+      ]
+    },
+    {
+      "id": "34e5a5be-872c-41a4-bd9a-bf057fc4cbc8",
+      "slug": "oando-soft-seating--ceda",
+      "name": "Ceda",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Ceda is a lounge designed for leadership spaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Crafted for Comfort"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height (Front View): 870 mm Overall Width (Front View): 550 mm; Overall Height (Side View): 640 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Crafted for Comfort",
+            "body": "The Ceda Soft Seating chair combines timeless hardwood craftsmanship with soft upholstered comfort, offering a perfect balance of style and usability. Its sleek frame and natural wooden tones bring a refined, modern touch to work lounges, breakout zones, and collaborative spaces."
+          },
+          {
+            "heading": "",
+            "body": "Built for durability, Ceda delivers steady support while maintaining a lightweight, elegant presence. Its versatile design makes it suitable for compact lounges as well as open plan work environments. Blending enduring quality with contemporary comfort, it elevates any setting with effortless sophistication."
+          },
+          {
+            "heading": "",
+            "body": "The elegant, flowing wooden armrests transition smoothly into the frame, offering natural support and adding a handcrafted, sculptural aesthetic."
+          },
+          {
+            "heading": "",
+            "body": "The gently curved seat and backrest provide balanced support and comfort, enhanced by soft-touch upholstery that elevates both feel and durability."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Ceda",
+            "lines": [
+              "Overall Height (Front View): 870 mm Overall Width (Front View): 550 mm",
+              "Overall Height (Side View): 640 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Ceda Lounge",
+        "sourceSlug": "ceda"
+      },
+      "alt_text": "Ceda Lounge",
+      "sourceSlug": "ceda",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf99daff276804ccd9d19_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf9bb020996a0d0d206d2_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf9d14b3ea77dc4e009da_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf9f20fad3020311c0aca_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bfa09aff276804ccdbbc4_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--ceda/image-1.jpg",
+        "/images/catalog/oando-soft-seating--ceda/image-2.jpg",
+        "/images/catalog/oando-soft-seating--ceda/image-3.jpg",
+        "/images/catalog/oando-soft-seating--ceda/image-4.jpg",
+        "/images/catalog/oando-soft-seating--ceda/image-5.jpg"
+      ]
+    },
+    {
+      "id": "c1fc79f7-2f0b-4e13-a8b3-589bceab4f0b",
+      "slug": "oando-soft-seating--cirq",
+      "name": "Cirq",
+      "category_id": "soft-seating",
+      "series_name": "Collaborative",
+      "description": "Cirq is a collaborative designed for teamwork and shared spaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Collaborative",
+        "features": [
+          "Fluid Design for Creative Collaboration"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Fluid Design for Creative Collaboration",
+            "body": "Cirq is a modular seating solution crafted for modern lounges, breakout zones, and creative environments. Defined by fluid curves and rounded geometry, it encourages natural interaction and effortless connection while supporting multiple configurations that foster open dialogue and community."
+          },
+          {
+            "heading": "",
+            "body": "With single, dual, or multitone upholstery options, Cirq adapts easily to diverse interior themes. Powder-coated tapered metal legs add contemporary character and ergonomic comfort, allowing the system to transform waiting areas, café-style settings, or collaborative hubs with ease."
+          },
+          {
+            "heading": "",
+            "body": "High-quality upholstery delivers superior comfort and a refined visual appeal, enhancing both durability and everyday seating experience."
+          },
+          {
+            "heading": "",
+            "body": "Powder-coated metal legs provide long-lasting stability while maintaining clean under-seat space for a light, uncluttered look."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Collaborative",
+        "subcategoryId": "collaborative",
+        "subcategoryLabel": "Collaborative",
+        "subcategory_slug": "collaborative",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Cirq Collaborative",
+        "sourceSlug": "cirq"
+      },
+      "alt_text": "Cirq Collaborative",
+      "sourceSlug": "cirq",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Collaborative",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694677e5e7ad38eb7a246f4a_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694677f6e7ad38eb7a247654_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467806e7ad38eb7a247d74_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467816f828c5fbf4a19384_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694678249bde5ab9f203d674_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467832f686106c62b2eb80_SECTION%203-SCROLL%20IMAGES%2011.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--cirq/image-1.jpg",
+        "/images/catalog/oando-soft-seating--cirq/image-2.jpg",
+        "/images/catalog/oando-soft-seating--cirq/image-3.jpg",
+        "/images/catalog/oando-soft-seating--cirq/image-4.jpg",
+        "/images/catalog/oando-soft-seating--cirq/image-5.jpg",
+        "/images/catalog/oando-soft-seating--cirq/image-6.jpg"
+      ]
+    },
+    {
+      "id": "0bc4009e-6411-47dd-a0d9-e6690a2fd90f",
+      "slug": "oando-soft-seating--cocoon",
+      "name": "Cocoon",
+      "category_id": "soft-seating",
+      "series_name": "Collaborative",
+      "description": "Cocoon is a collaborative designed for privacy and focus.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Collaborative",
+        "features": [
+          "Soft Comfort with Architectural Clarity"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Soft Comfort with Architectural Clarity",
+            "body": "The Cocoon Collection delivers soft, enveloping comfort within a clean, architectural silhouette. Offered in open and semi-enclosed formats, it supports flexible configurations from solo lounging to small team huddles in breakout and collaborative spaces."
+          },
+          {
+            "heading": "",
+            "body": "Designed as a modular lounge system, Cocoon blends plush aesthetics with ergonomic intent. Ideal for co-working hubs, libraries, waiting areas, and collaborative nooks, it creates cosy yet productive environments that invite comfort and focus."
+          },
+          {
+            "heading": "",
+            "body": "Discreetly mountable under the seat modules, swivel tray tables offer convenient surfaces for devices or notes without occupying extra space."
+          },
+          {
+            "heading": "",
+            "body": "Powder-coated metal legs ensure long-term stability while maintaining clear under-seat space for a light, uncluttered appearance."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple colours, adjustable cushions provide enhanced back support while adding visual variety and personalization to the seating system."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple configurations, the system adapts effortlessly to diverse layouts and workstyles, supporting collaboration, focus, and seamless spatial planning."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Collaborative",
+        "subcategoryId": "collaborative",
+        "subcategoryLabel": "Collaborative",
+        "subcategory_slug": "collaborative",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Cocoon Collaborative",
+        "sourceSlug": "cocoon"
+      },
+      "alt_text": "Cocoon Collaborative",
+      "sourceSlug": "cocoon",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Collaborative",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467947bbba389e5169948f_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694679580233d8c6aeac9fd8_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467965f893547ba967ce8e_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694679749fc1027ec525e47e_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467981656037ebb7f386e7_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--cocoon/image-1.jpg",
+        "/images/catalog/oando-soft-seating--cocoon/image-2.jpg",
+        "/images/catalog/oando-soft-seating--cocoon/image-3.jpg",
+        "/images/catalog/oando-soft-seating--cocoon/image-4.jpg",
+        "/images/catalog/oando-soft-seating--cocoon/image-5.jpg"
+      ]
+    },
+    {
+      "id": "90d132f0-e62e-459f-a8b8-750f81bbe765",
+      "slug": "oando-soft-seating--como",
+      "name": "Como",
+      "category_id": "soft-seating",
+      "series_name": "Sofa",
+      "description": "Como is a sofa designed for premium leadership spaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Sofa",
+        "features": [
+          "Soft Serenity with Modular Freedom"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "2100 X800 X450-750 H MM; 1800 X800 X450-750 H MM; 850 X800 X450-750 H MM",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Soft Serenity with Modular Freedom",
+            "body": "With its soft curves and low, grounded profile, the Como Sofa introduces a calm, confident presence to any space. Its fluid form supports easy movement, working beautifully in both compact clusters and open layouts."
+          },
+          {
+            "heading": "",
+            "body": "Designed for versatility, Como’s sculpted shape encourages relaxed, informal interactions. Its modular build allows creative configurations, adapting seamlessly to a wide range of interior settings."
+          },
+          {
+            "heading": "",
+            "body": "Unlike traditional linear furniture, this collection features a continuous, curved backrest that wraps around the user, acting as a sculptural centre piece while offering a sense of psychological privacy and enclosure."
+          },
+          {
+            "heading": "",
+            "body": "The design pairs soft, high-texture bouclé fabric with a solid wooden plinth base, creating a sophisticated \"earthy\" contrast that physically grounds the space and adds natural warmth to modern interiors."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Como 3-Seater",
+            "lines": [
+              "2100 X800 X450-750 H MM"
+            ]
+          },
+          {
+            "heading": "Como 2-Seater",
+            "lines": [
+              "1800 X800 X450-750 H MM"
+            ]
+          },
+          {
+            "heading": "Como Single Seater",
+            "lines": [
+              "850 X800 X450-750 H MM"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Sofa",
+        "subcategoryId": "sofa",
+        "subcategoryLabel": "Sofa",
+        "subcategory_slug": "sofa",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Como Sofa",
+        "sourceSlug": "como"
+      },
+      "alt_text": "Como Sofa",
+      "sourceSlug": "como",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Sofa",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d45b161d28656a6baacc2_img%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d45c2056b78eab7e89fa9_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d46282956bd9b3e4918bb_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d463c2956bd9b3e491ef3_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d4652f38159f3d808f22c_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--como/image-1.jpg",
+        "/images/catalog/oando-soft-seating--como/image-2.jpg",
+        "/images/catalog/oando-soft-seating--como/image-3.jpg",
+        "/images/catalog/oando-soft-seating--como/image-4.jpg",
+        "/images/catalog/oando-soft-seating--como/image-5.jpg"
+      ]
+    },
+    {
+      "id": "fa76ce51-1c13-4e65-901e-0d71df2e093f",
+      "slug": "oando-soft-seating--cone",
+      "name": "Cone",
+      "category_id": "soft-seating",
+      "series_name": "Occasional Tables",
+      "description": "Cone is a occasional table designed for modern interiors.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Occasional Tables",
+        "features": [],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Occasional Tables",
+        "subcategoryId": "occasional-tables",
+        "subcategoryLabel": "Occasional Tables",
+        "subcategory_slug": "occasional-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Cone Occasional Table",
+        "sourceSlug": "cone"
+      },
+      "alt_text": "Cone Occasional Table",
+      "sourceSlug": "cone",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Occasional Tables",
+      "sourceImages": [],
+      "sourceDocs": [],
+      "sourceCertifications": [],
+      "localImages": []
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "soft-seating-lounge-cocoon-lounge-chair",
+      "name": "Cocoon Lounge Chair",
+      "categoryId": "soft-seating"
+    },
+    {
+      "slug": "soft-seating-collaborative-cocoon-pod",
+      "name": "Cocoon Pod",
+      "categoryId": "soft-seating"
+    }
+  ]
+}

@@ -110,7 +110,7 @@ async function waitForServer(url, timeoutMs = 180000) {
 }
 
 function startServer() {
-  return spawn("npm", ["run", "dev", "--", "--port", String(PORT)], {
+  return spawn("npm", ["run", "start", "--", "--hostname", "127.0.0.1", "--port", String(PORT)], {
     cwd: process.cwd(),
     shell: true,
     stdio: ["ignore", "pipe", "pipe"],

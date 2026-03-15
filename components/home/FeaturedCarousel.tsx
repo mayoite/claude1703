@@ -121,7 +121,7 @@ export function FeaturedCarousel() {
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent p-6">
-                      <p className="typ-label mb-1 text-white/70">{product.category}</p>
+                      <p className="typ-label scheme-text-inverse-muted mb-1">{product.category}</p>
                       <h3 className="typ-section tracking-tight text-white">{product.name}</h3>
                     </div>
                   </div>

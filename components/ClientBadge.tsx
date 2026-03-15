@@ -44,7 +44,7 @@ export function ClientBadge({
       <div className="flex items-start justify-between gap-2 mb-4">
         <span
           className={clsx(
-            "inline-block text-[10px] font-bold uppercase tracking-[0.15em] px-2 py-1 rounded-sm border",
+            "typ-overline inline-block px-2 py-1 rounded-sm border",
             sectorStyle,
           )}
         >
@@ -56,7 +56,7 @@ export function ClientBadge({
           {name}
         </h3>
         {location && (
-          <p className="text-xs text-neutral-400 mt-1 font-medium">{location}</p>
+          <p className="scheme-text-muted text-xs mt-1 font-medium">{location}</p>
         )}
       </div>
     </div>

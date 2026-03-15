@@ -50,7 +50,7 @@ def build_as_is_chart() -> Digraph:
 
     g.node("ext_afc", "E1 AFC backups\n(manual corrections)", shape="box", fillcolor="#FFF5F5")
     g.node("ext_seed", "E2 seed_data.sql\n(product inserts)", shape="box", fillcolor="#FFF5F5")
-    g.node("ext_paths", "E3 legacy image paths\n(/images/afc/*)", shape="box", fillcolor="#FFF5F5")
+    g.node("ext_paths", "E3 legacy image paths\n(normalized into /images/catalog/*)", shape="box", fillcolor="#FFF5F5")
     g.node("proc_map", "P1 Current mapping execution\n(ad-hoc scripts + historical migrations)", shape="box", fillcolor="#F7FAFC")
 
     with g.subgraph(name="cluster_store") as c:

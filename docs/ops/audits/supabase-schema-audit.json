@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T10:48:55.275Z",
+  "generatedAt": "2026-03-15T12:41:48.922Z",
   "supabaseHost": "erpweaiypimorcunaimz.supabase.co",
   "tables": [
     {
@@ -29,7 +29,7 @@
     {
       "table": "product_slug_aliases",
       "exists": true,
-      "rowCount": 704,
+      "rowCount": 716,
       "error": null
     },
     {
@@ -41,7 +41,7 @@
     {
       "table": "customer_queries",
       "exists": true,
-      "rowCount": 0,
+      "rowCount": 2,
       "error": null
     },
     {
@@ -141,7 +141,7 @@
         ]
       }
     ],
-    "aliasCount": 704,
+    "aliasCount": 716,
     "blankAliasRows": 0,
     "selfAliasRows": 0,
     "missingBusinessStatsRows": 0,

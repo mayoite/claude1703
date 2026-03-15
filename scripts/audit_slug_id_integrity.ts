@@ -94,6 +94,7 @@ async function main() {
   const missingCanonicalFields: IntegritySummary["missingCanonicalFields"] = [];
   const aliasCoverageMissing: IntegritySummary["aliasCoverageMissing"] = [];
   const canonicalConflictMap = new Map<string, Set<string>>();
+  const aliasCoverageSeen = new Set<string>();
 
   for (const row of (products ?? []) as ProductRow[]) {
     const metadata = row.metadata && typeof row.metadata === "object" ? row.metadata : {};
@@ -142,11 +143,12 @@ async function main() {
         canonicalSlugV2,
         new Set([...(canonicalConflictMap.get(canonicalSlugV2) ?? []), currentSlug]),
       );
-      if (aliasLookup.get(canonicalSlugV2) !== currentSlug) {
+      if (!aliasLookup.has(canonicalSlugV2) && !aliasCoverageSeen.has(canonicalSlugV2)) {
         aliasCoverageMissing.push({
           currentSlug,
           expectedCanonicalSlug: canonicalSlugV2,
         });
+        aliasCoverageSeen.add(canonicalSlugV2);
       }
     }
   }

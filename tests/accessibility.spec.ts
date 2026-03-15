@@ -1,7 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-const ROUTES = ["/", "/products", "/products/seating", "/contact", "/quote-cart"];
+const ROUTES = ["/", "/products", "/products/seating", "/contact", "/quote-cart", "/configurator"];
 
 async function settleForA11y(page: Page) {
   await page.waitForLoadState("domcontentloaded");

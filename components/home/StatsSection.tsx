@@ -23,7 +23,7 @@ export function StatsSection({ title, subtitle, stats }: StatsSectionProps) {
                             {title}
                         </h2>
                         {subtitle && (
-                            <p className="text-xl text-neutral-400 font-light leading-relaxed">
+                            <p className="scheme-text-inverse-body text-xl font-light leading-relaxed">
                                 {subtitle}
                             </p>
                         )}
@@ -44,7 +44,7 @@ export function StatsSection({ title, subtitle, stats }: StatsSectionProps) {
                                 {stat.value}
                             </div>
                             <div className="h-px w-12 bg-neutral-700" />
-                            <div className="text-sm uppercase tracking-[0.2em] font-medium text-neutral-400">
+                            <div className="scheme-text-inverse-muted text-sm uppercase tracking-[0.2em] font-medium">
                                 {stat.label}
                             </div>
                         </motion.div>

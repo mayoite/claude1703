@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import type {
   CompatProduct as Product,
   ProductVariant,
@@ -10,9 +11,6 @@ import {
   ChevronRight,
   Twitter,
   Facebook,
-  ShieldCheck,
-  Award,
-  ThumbsUp,
   Share2,
   ShoppingCart,
   GitCompareArrows,
@@ -26,7 +24,10 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { useQuoteCart } from "@/lib/store/quoteCart";
 import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
-import { sanitizeDisplayText as normalizeDisplayText } from "@/lib/displayText";
+import {
+  sanitizeDisplayText as normalizeDisplayText,
+  normalizeDimensionText,
+} from "@/lib/displayText";
 import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
 
 interface ProductViewerProps {
@@ -34,6 +35,8 @@ interface ProductViewerProps {
   seriesName: string;
   categoryRoute: string;
   categoryId?: string;
+  categoryName: string;
+  productRoute: string;
 }
 
 export function sanitizeDisplayText(value: string): string {
@@ -56,10 +59,13 @@ export function ProductViewer({
   seriesName,
   categoryRoute,
   categoryId,
+  categoryName,
+  productRoute,
 }: ProductViewerProps) {
   const addItem = useQuoteCart((state) => state.addItem);
   const compareItems = useProductCompare((state) => state.items);
   const toggleCompareItem = useProductCompare((state) => state.toggleItem);
+  const searchParams = useSearchParams();
   const cleanName = (raw: string) => {
     if (!raw) return raw;
     const m = raw.match(/^([A-Z][a-z]+(?:[- ][A-Z][a-z0-9]*)?)\1/);
@@ -104,6 +110,7 @@ export function ProductViewer({
     (product.metadata as Record<string, unknown> | undefined)?.ai_alt_text?.toString() ||
     (product.metadata as Record<string, unknown> | undefined)?.aiAltText?.toString() ||
     `${displayName} product image`;
+  const metadataRecord = product.metadata as Record<string, unknown> | undefined;
 
   useEffect(() => {
     // Basic anonymous tracking for recommendations
@@ -176,28 +183,15 @@ export function ProductViewer({
   const routeKey = (product.slug || product.id || "").trim();
   const compareId = `compare-${categoryId || "products"}-${routeKey}`;
   const inCompare = compareItems.some((item) => item.id === compareId);
-
-  const normalizedCategory = (categoryId || "").toLowerCase();
-  const categorySpecProfile: Record<
-    string,
-    { dimensions: string; materials: string[]; useCase: string[] }
-  > = {
-    workstations: {
-      dimensions: "Module width and depth customized to floor layout",
-      materials: ["PLPB top", "Powder-coated steel frame"],
-      useCase: ["Open offices", "Operations floors", "Team work areas"],
-    },
-    storages: {
-      dimensions: "Cabinet and locker sizes configured per storage volume",
-      materials: ["CRCA steel", "Prelam board options"],
-      useCase: ["File rooms", "Utility zones", "Department storage"],
-    },
-  };
-  const fallbackProfile = categorySpecProfile[normalizedCategory] || {
-    dimensions: "Configuration dimensions available on request",
-    materials: ["Material options available"],
-    useCase: ["Corporate", "Institutional"],
-  };
+  const rawFrom = searchParams.get("from");
+  const safeFrom = rawFrom && rawFrom.length > 0 ? rawFrom.slice(0, 1500) : "";
+  const encodedFrom = safeFrom ? encodeURIComponent(safeFrom) : "";
+  const categoryRouteWithContext = safeFrom
+    ? `${categoryRoute}?${safeFrom}`
+    : categoryRoute;
+  const productRouteWithContext = encodedFrom
+    ? `${productRoute}?from=${encodedFrom}`
+    : productRoute;
 
   const rawSpecs =
     product.specs && typeof product.specs === "object" && !Array.isArray(product.specs)
@@ -207,52 +201,51 @@ export function ProductViewer({
   const overview = normalizeDisplayText(
     product.detailedInfo?.overview || product.description || "",
   );
-  const dimensions =
-    product.detailedInfo?.dimensions ||
+  const dimensions = normalizeDimensionText(
     toText(rawSpecs.dimensions) ||
-    toText(rawSpecs.dimension) ||
-    fallbackProfile.dimensions;
+      toText(rawSpecs.dimension) ||
+      product.detailedInfo?.dimensions ||
+      "",
+  );
+  const specMaterials = toStringList(rawSpecs.materials);
   const primaryMaterials = sanitizeDisplayList(
     product.detailedInfo?.materials?.filter(Boolean) || [],
   );
-  const specMaterials = toStringList(rawSpecs.materials);
   const metadataMaterials = sanitizeDisplayList(product.metadata?.material || []);
   const materials =
-    primaryMaterials.length > 0
-      ? primaryMaterials
-      : specMaterials.length > 0
-        ? specMaterials
-        : metadataMaterials.length > 0
-          ? metadataMaterials
-          : fallbackProfile.materials;
+    specMaterials.length > 0
+      ? specMaterials
+      : primaryMaterials.length > 0
+        ? primaryMaterials
+        : metadataMaterials;
   const features = sanitizeDisplayList(
     product.detailedInfo?.features?.filter(
       (f: string) => f && f !== "MANUFACTURING" && f !== "Sustainability",
     ) || [],
   );
-  const useCases = sanitizeDisplayList(product.metadata?.useCase || fallbackProfile.useCase);
+  const useCases = sanitizeDisplayList(
+    Array.isArray(product.metadata?.useCase)
+      ? product.metadata.useCase
+      : toStringList(rawSpecs.use_case),
+  );
   const warrantyYears = product.metadata?.warrantyYears;
+  const warrantyRaw = toText(rawSpecs.warranty_text);
   const warrantyText = warrantyYears
     ? `${warrantyYears}-Year Warranty`
-    : normalizedCategory === "workstations" || normalizedCategory === "storages"
-      ? "Up to 5-year warranty (model dependent)"
-      : "Warranty on request";
-  const certificationText = product.metadata?.bifmaCertified
-    ? "BIFMA Certified"
-    : PDP_ROUTE_COPY.trustBadges.certificationFallback;
+    : warrantyRaw;
+  const certifications = sanitizeDisplayList([
+    ...toStringList(rawSpecs.certifications),
+    ...toStringList(metadataRecord?.certifications),
+    ...(product.metadata?.bifmaCertified ? ["BIFMA Certified"] : []),
+  ]);
+  const certificationText = certifications.join(", ");
   const sustainabilityText =
     typeof product.metadata?.sustainabilityScore === "number"
       ? `Eco Score ${product.metadata.sustainabilityScore}/10`
-      : "Sustainability details on request";
+      : toText(rawSpecs.sustainability_text);
   const quickConfig =
     toText(rawSpecs.configuration) ||
-    toText(rawSpecs.type) ||
-    toText(product.metadata?.subcategory) ||
-    (normalizedCategory === "workstations"
-      ? "Modular workstation system"
-      : normalizedCategory === "storages"
-        ? "Modular storage system"
-        : "Configuration available");
+    toText(rawSpecs.type);
   const shortOverview = (() => {
     if (!overview) return "";
     const clean = overview.replace(/\s+/g, " ").trim();
@@ -264,23 +257,17 @@ export function ProductViewer({
     { label: "Dimensions", value: dimensions },
     {
       label: "Materials",
-      value:
-        materials.length > 0
-          ? materials.slice(0, 3).join(", ")
-          : "Material options available",
+      value: materials.length > 0 ? materials.slice(0, 3).join(", ") : "",
     },
     { label: "Warranty", value: warrantyText },
     { label: "Certification", value: certificationText },
     { label: "Configuration", value: quickConfig },
     {
       label: "Use Case",
-      value:
-        useCases.length > 0
-          ? useCases.slice(0, 3).join(", ")
-          : "Corporate and institutional",
+      value: useCases.length > 0 ? useCases.slice(0, 3).join(", ") : "",
     },
     { label: "Sustainability", value: sustainabilityText },
-  ];
+  ].filter((row) => row.value);
   const formatSpecLabel = (key: string) =>
     key
       .replace(/_/g, " ")
@@ -319,18 +306,64 @@ export function ProductViewer({
 
     addEntriesFromObject(product.specs);
     addEntriesFromObject(
-      (product.metadata as Record<string, unknown> | undefined)?.specifications,
+      metadataRecord?.specifications,
     );
     return entries.slice(0, 16);
   })();
 
   const seriesShort = normalizeDisplayText(seriesName.replace(/ Series$/i, ""));
+  const hasReturnContext = Boolean(encodedFrom);
+  const returnLabel = hasReturnContext
+    ? PDP_ROUTE_COPY.ctas.returnToResults
+    : PDP_ROUTE_COPY.ctas.returnToCategory;
+  const imageCount = uniqueImages.length > 0 ? uniqueImages.length : 1;
+  const visualCoverageText = PDP_ROUTE_COPY.summary.visualCoverage.replace(
+    "{count}",
+    String(imageCount),
+  );
+  const modelStatusText = (() => {
+    if (!hasModelPath) return PDP_ROUTE_COPY.summary.galleryOnly;
+    if (isCheckingModel) return PDP_ROUTE_COPY.ctas.modelChecking;
+    if (isModelAvailable) return PDP_ROUTE_COPY.summary.modelReady;
+    return PDP_ROUTE_COPY.summary.modelConditional;
+  })();
+  const categoryLabel = normalizeDisplayText(categoryName);
+  const useCasePreview = useCases.slice(0, 4);
+  const materialPreview = materials.slice(0, 3).join(", ");
+  const summaryCards = [
+    { label: PDP_ROUTE_COPY.summary.bestFor, value: useCasePreview.join(", ") },
+    { label: PDP_ROUTE_COPY.ctas.configuration, value: quickConfig },
+    { label: PDP_ROUTE_COPY.summary.dimensions, value: dimensions },
+    { label: PDP_ROUTE_COPY.summary.materials, value: materialPreview },
+  ].filter((card) => card.value);
+  const assuranceCards = [
+    warrantyText ? { label: "Warranty", value: warrantyText } : null,
+    certificationText ? { label: "Certification", value: certificationText } : null,
+    sustainabilityText ? { label: "Sustainability", value: sustainabilityText } : null,
+  ].filter(Boolean) as Array<{ label: string; value: string }>;
+  const handleAddToQuote = () =>
+    addItem({
+      id: `quote-${product.slug || product.id}`,
+      name: displayName,
+      image: uniqueImages[0],
+      href: productRouteWithContext,
+      qty: 1,
+    });
+  const handleCompareToggle = () =>
+    toggleCompareItem({
+      id: compareId,
+      productUrlKey: routeKey,
+      categoryId: categoryId || "products",
+      name: displayName,
+      image: uniqueImages[0],
+      href: productRouteWithContext,
+    });
 
   return (
-    <section className="bg-white min-h-screen">
+    <section className="bg-white min-h-screen pb-24 sm:pb-28 lg:pb-0">
       {/* ── BREADCRUMB BAR ── */}
       <div className="border-b border-neutral-100 bg-white/90 backdrop-blur-sm sticky top-16 z-10">
-        <div className="container px-6 2xl:px-0 h-10 flex items-center gap-1.5 text-[11px] font-medium text-neutral-500">
+        <div className="pdp-breadcrumb container flex h-10 items-center gap-1.5 px-6 2xl:px-0">
           <Link
             href="/products"
             className="hover:text-neutral-900 transition-colors"
@@ -339,10 +372,10 @@ export function ProductViewer({
           </Link>
           <ChevronRight className="w-3 h-3" />
           <Link
-            href={categoryRoute}
+            href={categoryRouteWithContext}
             className="hover:text-neutral-900 transition-colors"
           >
-            {seriesShort}
+            {categoryName}
           </Link>
           <ChevronRight className="w-3 h-3" />
           <span className="text-neutral-900 font-semibold">
@@ -355,10 +388,22 @@ export function ProductViewer({
         {/* ── LEFT: IMAGE GALLERY ── */}
         <div className="w-full lg:w-[58%] xl:w-[62%] flex flex-col pt-0 lg:pt-8 bg-neutral-100">
           <div className="flex-1 w-full max-w-[800px] mx-auto p-4 lg:p-8">
-              <ProductGallery
-                images={uniqueImages}
-                productName={displayName}
-              />
+            <ProductGallery
+              images={uniqueImages}
+              productName={displayName}
+            />
+          </div>
+
+          <div className="border-t border-neutral-200 bg-white/70 px-4 py-4 sm:px-6 lg:px-8">
+            <div className="mx-auto flex w-full max-w-[800px] flex-wrap gap-2">
+              <span className="pdp-chip pdp-chip--white">
+                {visualCoverageText}
+              </span>
+              <span className="pdp-chip pdp-chip--white">
+                {modelStatusText}
+              </span>
+              <span className="pdp-chip pdp-chip--white">{categoryLabel}</span>
+            </div>
           </div>
 
           {/* 3D viewer toggle wrapper */}
@@ -373,10 +418,10 @@ export function ProductViewer({
                   }}
                   disabled={!isModelAvailable}
                   className={clsx(
-                    "bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-sm border border-neutral-200",
+                    "pdp-chip bg-white/90 px-3 py-1.5 backdrop-blur",
                     isModelAvailable
                       ? "text-neutral-800 hover:bg-neutral-900 hover:text-white transition-colors"
-                      : "text-neutral-400 cursor-not-allowed",
+                      : "scheme-text-subtle cursor-not-allowed",
                   )}
                 >
                   {is3DMode ? PDP_ROUTE_COPY.ctas.viewImage : PDP_ROUTE_COPY.ctas.view3d}
@@ -384,14 +429,14 @@ export function ProductViewer({
               </div>
               {!isModelAvailable && !isCheckingModel && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
-                  <p className="text-xs uppercase tracking-[0.14em] text-neutral-500">
+                  <p className="typ-overline text-neutral-500">
                     {PDP_ROUTE_COPY.ctas.modelUnavailable}
                   </p>
                 </div>
               )}
               {isCheckingModel && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
-                  <p className="text-xs uppercase tracking-[0.14em] text-neutral-500">
+                  <p className="typ-overline text-neutral-500">
                     {PDP_ROUTE_COPY.ctas.modelChecking}
                   </p>
                 </div>
@@ -441,74 +486,96 @@ export function ProductViewer({
           <div className="max-w-sm mx-auto lg:max-w-none">
             {/* Title block */}
             <div className="mb-8">
-              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-400 mb-3">
-                {seriesShort}
+              <Link
+                href={categoryRouteWithContext}
+                className="pdp-action-label mb-4 inline-flex items-center gap-2 text-neutral-500 transition-colors hover:text-neutral-900"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" />
+                {returnLabel}
+              </Link>
+              <div className="mb-4 flex flex-wrap items-center gap-2">
+                <span className="pdp-chip pdp-chip--soft">
+                  {seriesShort}
+                </span>
+                <span className="pdp-chip pdp-chip--soft">{categoryLabel}</span>
+              </div>
+              <p className="pdp-section-label mb-3">
+                {PDP_ROUTE_COPY.summary.title}
               </p>
               <h1 className="text-4xl sm:text-5xl font-light text-neutral-900 tracking-tight leading-[1.05] mb-5">
                 {displayName}
               </h1>
-              <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-light mb-6 max-w-prose line-clamp-3 lg:line-clamp-none">
-                {shortOverview}
-              </p>
+              {shortOverview ? (
+                <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-light mb-6 max-w-prose line-clamp-3 lg:line-clamp-none">
+                  {shortOverview}
+                </p>
+              ) : null}
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] bg-neutral-100 text-neutral-700">
-                  {warrantyText}
-                </span>
+                {warrantyText ? (
+                  <span className="pdp-chip pdp-chip--soft px-2.5">
+                    {warrantyText}
+                  </span>
+                ) : null}
                 {product.metadata?.bifmaCertified && (
-                  <span className="px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] bg-neutral-900 text-white">
+                  <span className="pdp-chip pdp-chip--solid px-2.5">
                     BIFMA
                   </span>
                 )}
                 {typeof product.metadata?.sustainabilityScore === "number" && (
-                  <span className="px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] bg-green-50 text-green-700 border border-green-200">
+                  <span className="pdp-chip pdp-chip--success px-2.5">
                     Eco {product.metadata.sustainabilityScore}/10
                   </span>
                 )}
               </div>
-
-              <div className="flex gap-4 items-center mb-6">
-                <button
-                  type="button"
-                  onClick={() => {
-                    const text = encodeURIComponent(
-                      `Check out ${displayName} at One & Only Furniture!`,
-                    );
-                    const url = encodeURIComponent(window.location.href);
-                    window.open(
-                      `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
-                      "_blank",
-                    );
-                  }}
-                  className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-500 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
-                  aria-label="Share on Twitter"
-                >
-                  <Twitter className="w-3.5 h-3.5" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const url = encodeURIComponent(window.location.href);
-                    window.open(
-                      `https://www.facebook.com/sharer/sharer.php?u=${url}`,
-                      "_blank",
-                    );
-                  }}
-                  className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-500 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
-                  aria-label="Share on Facebook"
-                >
-                  <Facebook className="w-3.5 h-3.5" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    navigator.clipboard.writeText(window.location.href);
-                    // could add a toast here
-                  }}
-                  aria-label={PDP_ROUTE_COPY.ctas.copyLink}
-                  className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors"
-                >
-                  <Share2 className="w-3.5 h-3.5" /> {PDP_ROUTE_COPY.ctas.copyLink}
-                </button>
+              <div className="rounded-3xl border border-neutral-200 bg-neutral-50/80 p-5 sm:p-6">
+                <div className="mb-5 flex flex-wrap gap-2">
+                  <span className="pdp-chip pdp-chip--white">
+                    {visualCoverageText}
+                  </span>
+                  <span className="pdp-chip pdp-chip--white">
+                    {modelStatusText}
+                  </span>
+                </div>
+                {summaryCards.length > 0 ? (
+                  <>
+                    <p className="mb-2 text-sm font-medium text-neutral-900">
+                      {PDP_ROUTE_COPY.summary.description}
+                    </p>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {summaryCards.map((card) => (
+                        <div
+                          key={card.label}
+                          className="rounded-2xl border border-neutral-200 bg-white p-4"
+                        >
+                          <p className="pdp-card-label mb-2">
+                            {card.label}
+                          </p>
+                          <p className="text-sm leading-relaxed text-neutral-800">
+                            {card.value}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ) : null}
+                {assuranceCards.length > 0 ? (
+                  <div className="mt-5 border-t border-neutral-200 pt-5">
+                    <p className="pdp-card-label mb-3">Verified product facts</p>
+                    <div className="grid gap-2">
+                      {assuranceCards.map((item) => (
+                        <div
+                          key={item.label}
+                          className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm leading-relaxed text-neutral-700"
+                        >
+                          <span className="font-medium text-neutral-900">
+                            {item.label}:
+                          </span>{" "}
+                          {item.value}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </div>
             </div>
 
@@ -516,10 +583,10 @@ export function ProductViewer({
             {product.variants && product.variants.length > 0 && (
               <div className="pt-7 border-t border-neutral-100 mb-8">
                 <div className="flex items-center justify-between mb-4">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-400">
+                  <p className="pdp-section-label">
                     {PDP_ROUTE_COPY.ctas.configuration}
                   </p>
-                  <span className="text-xs text-neutral-400">
+                  <span className="scheme-text-muted text-xs">
                     {product.variants.length} options
                   </span>
                 </div>
@@ -579,116 +646,145 @@ export function ProductViewer({
 
             {/* CTA */}
             <div className="mb-8">
-              <button
-                type="button"
-                onClick={() =>
-                  addItem({
-                    id: `quote-${product.slug || product.id}`,
-                    name: displayName,
-                    image: uniqueImages[0],
-                    href: `${categoryRoute}/${product.slug || product.id}`,
-                    qty: 1,
-                  })
-                }
-                className="group mb-2 flex w-full items-center justify-between border border-primary text-primary px-6 py-3.5 hover:bg-primary hover:text-white transition-colors"
-              >
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                  {PDP_ROUTE_COPY.ctas.addToQuote}
-                </span>
-                <ShoppingCart className="w-4 h-4" />
-              </button>
-              {routeKey ? (
+              <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-5">
                 <button
                   type="button"
-                  onClick={() =>
-                    toggleCompareItem({
-                      id: compareId,
-                      productUrlKey: routeKey,
-                      categoryId: categoryId || "products",
-                      name: displayName,
-                      image: uniqueImages[0],
-                      href: `${categoryRoute}/${routeKey}`,
-                    })
-                  }
-                  className={clsx(
-                    "group mb-2 flex w-full items-center justify-between border px-6 py-3.5 transition-colors",
-                    inCompare
-                      ? "border-primary bg-primary text-white hover:bg-primary-hover"
-                      : "border-neutral-300 text-neutral-800 hover:border-primary hover:text-primary",
-                  )}
+                  onClick={handleAddToQuote}
+                  className="group mb-2 flex w-full items-center justify-between rounded-2xl border border-primary px-6 py-4 text-primary transition-colors hover:bg-primary hover:text-white"
                 >
-                  <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                    {inCompare ? PDP_ROUTE_COPY.ctas.addedToCompare : PDP_ROUTE_COPY.ctas.addToCompare}
+                  <span className="pdp-action-label">
+                    {PDP_ROUTE_COPY.ctas.addToQuote}
                   </span>
-                  <GitCompareArrows className="w-4 h-4" />
+                  <ShoppingCart className="w-4 h-4" />
                 </button>
-              ) : null}
-              <Link
-                href="/contact"
-                className="group flex w-full items-center justify-between bg-neutral-900 text-white px-6 py-4 hover:bg-neutral-800 transition-colors"
-              >
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                  {PDP_ROUTE_COPY.ctas.requestQuote}
-                </span>
-                <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/contact"
-                className="group flex w-full items-center justify-between border border-neutral-200 text-neutral-900 px-6 py-3.5 hover:border-neutral-400 transition-colors mt-2"
-              >
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-                  {PDP_ROUTE_COPY.ctas.consultation}
-                </span>
-                <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
-              </Link>
+                {routeKey ? (
+                  <button
+                    type="button"
+                    onClick={handleCompareToggle}
+                    className={clsx(
+                      "group mb-2 flex w-full items-center justify-between rounded-2xl border px-6 py-4 transition-colors",
+                      inCompare
+                        ? "border-primary bg-primary text-white hover:bg-primary-hover"
+                        : "border-neutral-300 text-neutral-800 hover:border-primary hover:text-primary",
+                    )}
+                  >
+                    <span className="pdp-action-label">
+                      {inCompare
+                        ? PDP_ROUTE_COPY.ctas.addedToCompare
+                        : PDP_ROUTE_COPY.ctas.addToCompare}
+                    </span>
+                    <GitCompareArrows className="w-4 h-4" />
+                  </button>
+                ) : null}
+                <Link
+                  href="/contact"
+                  className="group flex w-full items-center justify-between rounded-2xl bg-neutral-900 px-6 py-4 text-white transition-colors hover:bg-neutral-800"
+                >
+                  <span className="pdp-action-label">
+                    {PDP_ROUTE_COPY.ctas.requestQuote}
+                  </span>
+                  <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                  <Link
+                    href="/planning"
+                    className="group flex items-center justify-between rounded-2xl border border-neutral-200 px-5 py-3.5 text-neutral-900 transition-colors hover:border-neutral-400"
+                  >
+                    <span className="pdp-action-label">
+                      {PDP_ROUTE_COPY.ctas.planning}
+                    </span>
+                    <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <Link
+                    href="/downloads"
+                    className="group flex items-center justify-between rounded-2xl border border-neutral-200 px-5 py-3.5 text-neutral-900 transition-colors hover:border-neutral-400"
+                  >
+                    <span className="pdp-action-label">
+                      {PDP_ROUTE_COPY.ctas.resourceDesk}
+                    </span>
+                    <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+                <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-neutral-200 pt-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const text = encodeURIComponent(
+                        `Check out ${displayName} at One & Only Furniture!`,
+                      );
+                      const url = encodeURIComponent(window.location.href);
+                      window.open(
+                        `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+                        "_blank",
+                      );
+                    }}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors hover:border-neutral-400 hover:text-neutral-900"
+                    aria-label="Share on Twitter"
+                  >
+                    <Twitter className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const url = encodeURIComponent(window.location.href);
+                      window.open(
+                        `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+                        "_blank",
+                      );
+                    }}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors hover:border-neutral-400 hover:text-neutral-900"
+                    aria-label="Share on Facebook"
+                  >
+                    <Facebook className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      navigator.clipboard.writeText(window.location.href);
+                    }}
+                    aria-label={PDP_ROUTE_COPY.ctas.copyLink}
+                    className="pdp-copy-link flex items-center gap-2 transition-colors hover:text-neutral-900"
+                  >
+                    <Share2 className="w-3.5 h-3.5" />
+                    {PDP_ROUTE_COPY.ctas.copyLink}
+                  </button>
+                </div>
+              </div>
             </div>
 
-            {/* Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-6 border-t border-neutral-100">
-              <div className="flex flex-col gap-2">
-                <ShieldCheck className="w-5 h-5 text-neutral-400" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-900">
-                  {warrantyText}
-                </span>
-                <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                  {PDP_ROUTE_COPY.trustBadges.warrantyDescription}
-                </p>
+            {useCasePreview.length > 0 && (
+              <div className="mt-8 border-t border-neutral-100 pt-7">
+                <h2 className="mb-4 text-xl font-semibold text-neutral-900">
+                  {PDP_ROUTE_COPY.summary.useCases}
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {useCasePreview.map((useCase) => (
+                    <span
+                      key={useCase}
+                      className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-medium text-neutral-700"
+                    >
+                      {useCase}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <Award className="w-5 h-5 text-neutral-400" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-900">
-                  {PDP_ROUTE_COPY.trustBadges.madeInIndia}
-                </span>
-                <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                  {PDP_ROUTE_COPY.trustBadges.madeInIndiaDescription}
-                </p>
-              </div>
-              <div className="flex flex-col gap-2">
-                <ThumbsUp className="w-5 h-5 text-neutral-400" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-900">
-                  {certificationText}
-                </span>
-                <p className="text-xs text-neutral-600 leading-relaxed font-light">
-                  {PDP_ROUTE_COPY.trustBadges.certificationDescription}
-                </p>
-              </div>
-            </div>
+            )}
 
             {/* Specifications */}
-            <div className="pt-7 border-t border-neutral-100">
-              <h2 className="text-xl font-semibold text-neutral-900 mb-4">
+            <div className="mt-8 border-t border-neutral-100 pt-7">
+              <h2 className="mb-4 text-xl font-semibold text-neutral-900">
                 {PDP_ROUTE_COPY.ctas.specifications}
               </h2>
-              <div className="rounded-lg border border-neutral-200 overflow-hidden mb-7">
+              <div className="grid gap-3 sm:grid-cols-2 mb-7">
                 {specRows.map((row) => (
                   <div
                     key={row.label}
-                    className="grid grid-cols-[120px_1fr] gap-3 px-4 py-3 border-b border-neutral-100 last:border-b-0"
+                    className="rounded-2xl border border-neutral-200 bg-white p-4"
                   >
-                    <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-500">
+                    <span className="pdp-card-label mb-2 block">
                       {row.label}
                     </span>
-                    <span className="text-sm text-neutral-700 leading-relaxed">
+                    <span className="text-sm leading-relaxed text-neutral-700">
                       {row.value}
                     </span>
                   </div>
@@ -697,16 +793,16 @@ export function ProductViewer({
 
               {features.length > 0 && (
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-500 mb-3">
+                  <p className="pdp-section-label mb-3 text-neutral-500">
                     {PDP_ROUTE_COPY.ctas.keyFeatures}
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="grid gap-3 sm:grid-cols-2">
                     {features.slice(0, 8).map((f: string, i: number) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-sm text-neutral-700 leading-relaxed"
+                        className="flex min-h-full items-start gap-3 rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm leading-relaxed text-neutral-700"
                       >
-                        <span className="text-neutral-400 mt-0.5 shrink-0">-</span>
+                        <span className="scheme-text-subtle mt-0.5 shrink-0">-</span>
                         <span>{f}</span>
                       </li>
                     ))}
@@ -715,20 +811,20 @@ export function ProductViewer({
               )}
 
               {inlineSpecs.length > 0 && (
-                <div className="pt-7 border-t border-neutral-100 mt-7">
-                  <h3 className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-500 mb-3">
+                <div className="mt-7 border-t border-neutral-100 pt-7">
+                  <h3 className="pdp-section-label mb-3 text-neutral-500">
                     {PDP_ROUTE_COPY.ctas.technicalDetails}
                   </h3>
-                  <div className="rounded-lg border border-neutral-200 overflow-hidden">
+                  <div className="grid gap-3 sm:grid-cols-2">
                     {inlineSpecs.map((row) => (
                       <div
                         key={row.label}
-                        className="grid grid-cols-[120px_1fr] gap-3 px-4 py-3 border-b border-neutral-100 last:border-b-0"
+                        className="rounded-2xl border border-neutral-200 bg-white p-4"
                       >
-                        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-500">
+                        <span className="pdp-card-label mb-2 block">
                           {row.label}
                         </span>
-                        <span className="text-sm text-neutral-700 leading-relaxed">
+                        <span className="text-sm leading-relaxed text-neutral-700">
                           {row.value}
                         </span>
                       </div>
@@ -738,15 +834,13 @@ export function ProductViewer({
               )}
 
               {materials.length > 0 && (
-                <div className="pt-7 border-t border-neutral-100 mt-7">
-                  <h3 className="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-500 mb-3">
-                    {PDP_ROUTE_COPY.ctas.materialOptions}
-                  </h3>
+                <div className="mt-7 border-t border-neutral-100 pt-7">
+                  <h3 className="pdp-section-label mb-3 text-neutral-500">Materials</h3>
                   <div className="flex flex-wrap gap-2">
                     {materials.map((material) => (
                       <span
                         key={material}
-                        className="px-2.5 py-1 text-xs text-neutral-700 border border-neutral-200 bg-neutral-50"
+                        className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs text-neutral-700"
                       >
                         {material}
                       </span>

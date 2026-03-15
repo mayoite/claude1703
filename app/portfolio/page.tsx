@@ -1,3 +1,4 @@
+import Link from "next/link";
 import fs from "node:fs/promises";
 import path from "node:path";
 import Image from "next/image";
@@ -40,7 +41,7 @@ export default async function PortfolioPage() {
   const totalPhotos = portfolio.reduce((sum, item) => sum + item.photos.length, 0);
 
   return (
-    <section className="flex min-h-screen flex-col items-center bg-white">
+    <section className="scheme-page flex min-h-screen flex-col items-center">
       <Hero
         variant="small"
         title={PORTFOLIO_PAGE_COPY.heroTitle}
@@ -50,23 +51,28 @@ export default async function PortfolioPage() {
       />
 
       <section className="container px-6 py-16 md:py-20 2xl:px-0">
-        <div className="mb-10 flex items-end justify-between gap-6">
+        <div className="scheme-panel scheme-border mb-10 flex flex-wrap items-end justify-between gap-6 rounded-[2rem] border p-8 md:p-10">
           <div>
             <p className="typ-eyebrow">{PORTFOLIO_PAGE_COPY.eyebrow}</p>
             <h2 className="typ-h1 mt-2 text-neutral-900">{PORTFOLIO_PAGE_COPY.title}</h2>
           </div>
-          <p className="hidden text-sm text-neutral-500 md:block">
-            {PORTFOLIO_PAGE_COPY.totalTemplate
-              .replace("{clients}", String(portfolio.length))
-              .replace("{photos}", String(totalPhotos))}
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p className="text-sm text-neutral-500">
+              {PORTFOLIO_PAGE_COPY.totalTemplate
+                .replace("{clients}", String(portfolio.length))
+                .replace("{photos}", String(totalPhotos))}
+            </p>
+            <Link href="/projects" className="btn-outline">
+              View clients
+            </Link>
+          </div>
         </div>
 
         <div className="space-y-12">
           {portfolio.map((client) => (
             <article
               key={client.id}
-              className="overflow-hidden rounded-3xl border border-neutral-200 bg-white p-5 md:p-7"
+              className="scheme-panel scheme-border overflow-hidden rounded-3xl border p-5 md:p-7"
             >
               <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
                 <div>

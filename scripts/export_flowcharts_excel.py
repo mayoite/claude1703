@@ -39,7 +39,7 @@ def main():
     current_nodes = [
         ("S1", "AFC backups (manual corrections)", "Source Inputs"),
         ("S2", "seed_data.sql (product inserts)", "Source Inputs"),
-        ("S3", "legacy image paths (/images/afc/*)", "Source Inputs"),
+        ("S3", "legacy image paths normalized into /images/catalog/*", "Source Inputs"),
         ("M1", "ad-hoc scripts + historical migrations", "Current Mapping Path"),
         ("M2", "products columns updated directly", "Current Mapping Path"),
         ("M3", "metadata patches applied per run", "Current Mapping Path"),
@@ -184,7 +184,7 @@ def main():
         ),
         (
             "media paths/order",
-            "legacy AFC paths + seed_data.sql",
+            "legacy catalog image paths + seed_data.sql",
             "products.flagship_image/images/scene_images + product_images",
             "Normalize path + order; keep deterministic gallery sort",
             "Image URL reachable + ordered",

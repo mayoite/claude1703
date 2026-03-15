@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T10:49:22.258Z",
+  "generatedAt": "2026-03-12T21:36:21.877Z",
   "supabaseHost": "erpweaiypimorcunaimz.supabase.co",
   "nhostDbHost": "bggcbrfwssqgflkuhgkg.db.ap-south-1.nhost.run:5432",
   "supabaseCounts": {
@@ -99,8 +99,8 @@
     },
     {
       "label": "product_slug_aliases",
-      "ok": false,
-      "detail": "field 'product_slug_aliases' not found in type: 'query_root'"
+      "ok": true,
+      "detail": "ok"
     },
     {
       "label": "business_stats_current",

@@ -1,0 +1,780 @@
+{
+  "generatedAt": "2026-03-15T14:16:33.231Z",
+  "mode": "apply",
+  "offset": 10,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "cb4b1fd8-3f25-4d6b-8365-22a7925e4324",
+      "slug": "oando-educational--podium",
+      "name": "Podium",
+      "category_id": "education",
+      "series_name": "Auditorium",
+      "description": "Podium is a auditorium designed for presentations and meetings.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Auditorium",
+        "features": [
+          "A Platform for Impactful Presentations"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "A Platform for Impactful Presentations",
+            "body": "A versatile addition to any presentation space, the podium offers a professional platform for speeches, lectures, and events. Its sleek design ensures a polished presence across both formal and casual settings"
+          },
+          {
+            "heading": "",
+            "body": "Built with a sturdy structure for reliable performance, this podium is ideal for auditoriums, classrooms, and conference halls, enhancing clarity, confidence, and impact in every presentation."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Auditorium",
+        "subcategoryId": "auditorium",
+        "subcategoryLabel": "Auditorium",
+        "subcategory_slug": "auditorium",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Podium Auditorium",
+        "sourceSlug": "podium"
+      },
+      "alt_text": "Podium Auditorium",
+      "sourceSlug": "podium",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Auditorium",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b54ebd1e3c74085f4b6c_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b55e869c2b69d90c9e0c_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b571290934ab3028d8d5_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b592a5d59c428bee8d09_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--podium/image-1.jpg",
+        "/images/catalog/oando-educational--podium/image-2.jpg",
+        "/images/catalog/oando-educational--podium/image-3.jpg",
+        "/images/catalog/oando-educational--podium/image-4.jpg"
+      ]
+    },
+    {
+      "id": "fc9a0b2e-5175-445c-a1ab-d6ecf5a90c81",
+      "slug": "oando-educational--wooden-bed",
+      "name": "Wooden Bed",
+      "category_id": "education",
+      "series_name": "Hostel",
+      "description": "Wooden Bed is a hostel designed for institutional and staff accommodation. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Hostel",
+        "features": [
+          "Reliable Comfort for Hostel Living"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Reliable Comfort for Hostel Living",
+            "body": "Thoughtfully crafted to bring comfort and durability to hostel spaces, this wooden bed features a sturdy construction that ensures long-lasting support for everyday use."
+          },
+          {
+            "heading": "",
+            "body": "Its minimalist design adds a warm, inviting touch to dorms and hostel rooms, making it an ideal choice for reliable comfort and restful sleep in shared living environments."
+          },
+          {
+            "heading": "",
+            "body": "A smooth lift-up mechanism reveals spacious under-bed storage, making it easy to organize belongings while maximizing room efficiency without compromising comfort."
+          },
+          {
+            "heading": "",
+            "body": "Smooth-glide drawers built into the bed provide secure, easy-access storage for personal essentials, helping keep shared living spaces neat and organized."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Hostel",
+        "subcategoryId": "hostel",
+        "subcategoryLabel": "Hostel",
+        "subcategory_slug": "hostel",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Wooden Bed Hostel",
+        "sourceSlug": "wooden-bed"
+      },
+      "alt_text": "Wooden Bed Hostel",
+      "sourceSlug": "wooden-bed",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Hostel",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946abff7cf9cad519ee64cd_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946ac147cf9cad519ee7756_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946ac2d3cfe78289a479853_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946ac403cfe78289a479ad1_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--wooden-bed/image-1.jpg",
+        "/images/catalog/oando-educational--wooden-bed/image-2.jpg",
+        "/images/catalog/oando-educational--wooden-bed/image-3.jpg",
+        "/images/catalog/oando-educational--wooden-bed/image-4.jpg"
+      ]
+    },
+    {
+      "id": "01a05ab3-1278-4738-b89e-69e03aa72aa0",
+      "slug": "oando-educational--xplorer",
+      "name": "Xplorer",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Xplorer is a classroom designed for modern offices. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Classroom",
+        "features": [
+          "Durable & Organized for the Classroom"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Durable & Organized for the Classroom",
+            "body": "Xplorer is the ideal classroom desk, thoughtfully designed to support focused learning with a durable tabletop and practical ergonomic features that suit daily classroom use."
+          },
+          {
+            "heading": "",
+            "body": "With a sturdy PE seat that offers comfort and stability, Xplorer is perfect for modern classrooms that prioritize long-lasting durability and functional design."
+          },
+          {
+            "heading": "",
+            "body": "Built-in side storage keeps books neatly accessible, while the attached desk and chair design ensures stability, uniformity, and efficient classroom layouts."
+          },
+          {
+            "heading": "",
+            "body": "A clean, streamlined desktop paired with strong, premium-finish legs delivers long-lasting stability while maintaining a refined classroom aesthetic."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Xplorer Classroom",
+        "sourceSlug": "xplorer"
+      },
+      "alt_text": "Xplorer Classroom",
+      "sourceSlug": "xplorer",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694687429fc1027ec5277e47_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468757581b5f851c47c638_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694687683cfe78289a3fb622_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468778c97a3dd2415979ef_IMG%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--xplorer/image-1.jpg",
+        "/images/catalog/oando-educational--xplorer/image-2.jpg",
+        "/images/catalog/oando-educational--xplorer/image-3.jpg",
+        "/images/catalog/oando-educational--xplorer/image-4.jpg"
+      ]
+    },
+    {
+      "id": "99678116-151d-48d6-b3af-6cbaddcf7146",
+      "slug": "oando-seating--arvo",
+      "name": "Arvo",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Arvo is a cafe chair designed for comfort and sleek workspace design.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Enduring Form"
+        ],
+        "materials": [],
+        "dimensions": "Height: 820mm.; Width: 520 mm.; Height of Seat: 480 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Enduring Form",
+            "body": "Arvo celebrates the beauty of solid hardwood through precise craftsmanship and balanced proportions. Its clean structure highlights authenticity and warm materiality, bringing a naturally refined presence to any café or dining environment."
+          },
+          {
+            "heading": "",
+            "body": "Paired with an upholstered seat, it delivers comfort while preserving the design’s modern simplicity. Built for long-lasting use, Arvo adds a sense of contemporary elegance where true craftsmanship leaves a lasting impression."
+          },
+          {
+            "heading": "",
+            "body": "A smoothly sculpted wooden backrest provides natural support while keeping the form sleek and minimal—bringing warmth, clarity, and comfort into every setting."
+          },
+          {
+            "heading": "",
+            "body": "Experience superior comfort with the soft, durable heathered fabric cushion, perfectly paired with a smooth, supportive light wood frame for style that lasts."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Arvo Cafe Chair",
+            "lines": [
+              "Height: 820mm.",
+              "Width: 520 mm.",
+              "Height of Seat: 480 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Arvo Cafe Chair",
+        "sourceSlug": "arvo"
+      },
+      "alt_text": "Arvo Cafe Chair",
+      "sourceSlug": "arvo",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6925772ab582bcfb4214a828_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692577b061a4fc5925160173_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692577c18219b8ccede2b819_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692577d79dbc3af84ffd5c5d_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--arvo/image-1.jpg",
+        "/images/catalog/oando-seating--arvo/image-2.jpg",
+        "/images/catalog/oando-seating--arvo/image-3.jpg",
+        "/images/catalog/oando-seating--arvo/image-4.jpg"
+      ]
+    },
+    {
+      "id": "f9dcace8-5020-406a-903a-42431013a573",
+      "slug": "oando-seating--breeze",
+      "name": "Breeze",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Breeze is a mesh chair designed for modern workspaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Responsive Framework"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Responsive Framework",
+            "body": "The BREEZ Chair combines a breathable mesh design with ergonomic support to keep you cool and comfortable throughout the workday. Its contoured form promotes proper posture while maintaining a light, modern look."
+          },
+          {
+            "heading": "",
+            "body": "A lightweight frame with smooth rolling casters ensures effortless mobility across workspaces. With adjustable height and tilt functions, BREEZ offers a personalized seating experience tailored to individual comfort needs."
+          },
+          {
+            "heading": "",
+            "body": "The adjustable armrests let users fine tune height and position for personalized support, reducing strain on the shoulders and arms during extended work hours."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Breeze Mesh Chair",
+        "sourceSlug": "breeze"
+      },
+      "alt_text": "Breeze Mesh Chair",
+      "sourceSlug": "breeze",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6964e47e70ca56c86777571d_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6964e49ad4d36b37d7af40b3_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6964e4b3a34bb46583324798_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6964e4c7779d462a1534920a_IMG%207.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6964e4db97a1c55212eac214_IMG%201.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--breeze/image-1.jpg",
+        "/images/catalog/oando-seating--breeze/image-2.jpg",
+        "/images/catalog/oando-seating--breeze/image-3.jpg",
+        "/images/catalog/oando-seating--breeze/image-4.jpg",
+        "/images/catalog/oando-seating--breeze/image-5.jpg"
+      ]
+    },
+    {
+      "id": "097e1ca2-de87-4efd-a939-c694049ea911",
+      "slug": "oando-soft-seating--brim",
+      "name": "Brim",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Brim is a cafe chair designed for waiting areas and informal spaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Understated Luxury"
+        ],
+        "materials": [],
+        "dimensions": "Height: 730mm.; Width: 480 mm.; Depth: 510 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Understated Luxury",
+            "body": "The Brim Chair blends modern aesthetics with practical, everyday comfort. Its smooth, curved backrest provides supportive seating, while the cushioned seat enhances ease during long hours of use."
+          },
+          {
+            "heading": "",
+            "body": "Built with a robust frame, the Brim Chair ensures durability and longlasting performance. Its versatile form makes it suitable for workspaces, dining areas, and casual settings alike. Offering both style and functionality, it delivers comfort without compromising on design."
+          },
+          {
+            "heading": "",
+            "body": "The broad, curved backrest gives balanced support with a clean, modern look. Its smooth one-piece form keeps posture comfortable, offering easy, stable seating for everyday use."
+          },
+          {
+            "heading": "",
+            "body": "The clean, tapered legs offer strong stability and everyday durability. Their modern shape adds elegance while keeping the chair sturdy and minimal in style."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Brim",
+            "lines": [
+              "Height: 730mm.",
+              "Width: 480 mm.",
+              "Depth: 510 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Brim Cafe Chair",
+        "sourceSlug": "brim"
+      },
+      "alt_text": "Brim Cafe Chair",
+      "sourceSlug": "brim",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69280d5fe31b9d60a3bddf90_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69280d6e1ede752a61a7df21_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69280d791ede752a61a7e473_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69280d8a3c414ee98bc9d6d8_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--brim/image-1.jpg",
+        "/images/catalog/oando-soft-seating--brim/image-2.jpg",
+        "/images/catalog/oando-soft-seating--brim/image-3.jpg",
+        "/images/catalog/oando-soft-seating--brim/image-4.jpg"
+      ]
+    },
+    {
+      "id": "fafe7efa-1c97-41cd-a1c1-25af39c2fba3",
+      "slug": "oando-seating--canaret",
+      "name": "Canaret",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Canaret is a cafe chair designed for comfort and contemporary interiors.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Crafted Tradition"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Crafted Tradition",
+            "body": "The Chair brings a clean, classic silhouette to any dining or café setting. Its refined lines and modern detailing create an understated elegance that fits seamlessly into both contemporary and traditional interiors. Designed to feel welcoming, it enhances any space with its balanced, versatile style."
+          },
+          {
+            "heading": "",
+            "body": "Built with comfort in mind, the Canaret Chair features supportive contours that make long hours of sitting feel effortless. Its ergonomic shaping and sturdy construction ensure a pleasant, reliable seating experience."
+          },
+          {
+            "heading": "",
+            "body": "The wide, sculpted backrest offers strong ergonomic support with a sleek look. Its single-piece moulded design is durable and seamless, providing all-day comfort for work or leisure."
+          },
+          {
+            "heading": "",
+            "body": "The cross-braced frame adds steady support without adding bulk, while the moulded seat flows seamlessly into the wooden legs for a clean, sturdy build. Strong, stylish, and perfect for everyday modern spaces."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Canaret Cafe Chair",
+        "sourceSlug": "canaret"
+      },
+      "alt_text": "Canaret Cafe Chair",
+      "sourceSlug": "canaret",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927fb84581ddc6a7e889eab_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927fb97d108010d7340288f_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927fba83bd41e7a3331d2de_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927fbd1942e1711f533cd11_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927fbf0026616736327c4d0_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--canaret/image-1.jpg",
+        "/images/catalog/oando-seating--canaret/image-2.jpg",
+        "/images/catalog/oando-seating--canaret/image-3.jpg",
+        "/images/catalog/oando-seating--canaret/image-4.jpg",
+        "/images/catalog/oando-seating--canaret/image-5.jpg"
+      ]
+    },
+    {
+      "id": "ee3baa73-9653-498e-877c-e5e28c14de66",
+      "slug": "oando-seating--caneva",
+      "name": "Caneva",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Caneva is a cafe chair designed for executive comfort and ergonomic support.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Textural Dialogue"
+        ],
+        "materials": [],
+        "dimensions": "Height: 850mm.; Width: 490 mm.; Height of Seat: 450 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Textural Dialogue",
+            "body": "The Caneva blends contemporary clarity with warm, natural materials. Its clean wooden frame pairs beautifully with a woven cane backrest that adds subtle texture. The gentle curve of the back provides comfort while maintaining a light, modern silhouette."
+          },
+          {
+            "heading": "",
+            "body": "A smooth, cushioned seat enhances comfort and contrasts elegantly with the airy cane weave. Designed with refined proportions, this chair brings understated elegance to cafés, dining areas, and social spaces. Its timeless details make it both visually appealing and functional for everyday use."
+          },
+          {
+            "heading": "",
+            "body": "The chair’s cane woven backrest adds natural texture while keeping the design airy and comfortable. Its solid wooden frame offers dependable support, creating a refined and timeless look in any setting."
+          },
+          {
+            "heading": "",
+            "body": "The chair features a smooth, cushioned seat designed for long lasting comfort and support. Its premium upholstery adds a refined touch while resisting wear for everyday use."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Caneva Cafe Chair",
+            "lines": [
+              "Height: 850mm.",
+              "Width: 490 mm.",
+              "Height of Seat: 450 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Caneva Cafe Chair",
+        "sourceSlug": "caneva"
+      },
+      "alt_text": "Caneva Cafe Chair",
+      "sourceSlug": "caneva",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927e9f7ffb3698cf6fa1bf6_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927ea1139a9752fd0f4c09d_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927ea2c3cfd0cc2fba3c311_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927ea407c697f105fe4d615_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--caneva/image-1.jpg",
+        "/images/catalog/oando-seating--caneva/image-2.jpg",
+        "/images/catalog/oando-seating--caneva/image-3.jpg",
+        "/images/catalog/oando-seating--caneva/image-4.jpg"
+      ]
+    },
+    {
+      "id": "8382c701-4ecd-43fd-b38f-3c371294dbd9",
+      "slug": "oando-seating--caneva-high",
+      "name": "Caneva-High",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Caneva-High is a cafe chair designed for executive comfort and ergonomic support.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Pure, Modern Comfort"
+        ],
+        "materials": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey"
+        ],
+        "dimensions": "Height: 1100mm.; Width: 360 mm.; Height of Seat: 400 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Pure, Modern Comfort",
+            "body": "The Caneva Café Chair brings a sleek, modern character with its clean lines and thoughtfully contoured form. Designed for comfort, its supportive seat and backrest make it suitable for cafés, collaborative spaces, and casual social zones."
+          },
+          {
+            "heading": "",
+            "body": "Versatile and timeless, the Flare Café Chair comes in finishes that complement a wide range of environments. Its durable construction ensures everyday reliability while maintaining a refined, modern look. Built for both comfort and practicality, it adapts seamlessly to dynamic, multifunctional spaces."
+          },
+          {
+            "heading": "",
+            "body": "The backrest features a hand-woven cane insert framed in solid wood, providing breathable support with timeless craftsmanship. Its open weave enhances airflow for added comfort, while the sturdy wooden frame ensures stability and a warm, elegant aesthetic."
+          },
+          {
+            "heading": "",
+            "body": "Crafted from sturdy natural wood, the legs provide lasting strength with a clean, modern profile that still feels warm and classic. An integrated cross brace boosts stability, ensuring reliable support in both home and café spaces."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Caneva High",
+            "lines": [
+              "Height: 1100mm.",
+              "Width: 360 mm.",
+              "Height of Seat: 400 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Caneva-High Cafe Chair",
+        "sourceSlug": "caneva-high"
+      },
+      "alt_text": "Caneva-High Cafe Chair",
+      "sourceSlug": "caneva-high",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af5c4d24b4fdaca9544e8_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af5db11e33e59fa502d55_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af5f03d9e608442797947_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af62111e33e59fa505221_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--caneva-high/image-1.jpg",
+        "/images/catalog/oando-seating--caneva-high/image-2.jpg",
+        "/images/catalog/oando-seating--caneva-high/image-3.jpg",
+        "/images/catalog/oando-seating--caneva-high/image-4.jpg"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "seating-leather-classy-executive",
+      "name": "Classy Executive",
+      "categoryId": "seating"
+    }
+  ]
+}

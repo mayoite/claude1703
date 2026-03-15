@@ -8,13 +8,13 @@ import QueryProvider from "@/app/providers/QueryProvider";
 import { WhatsAppCTA } from "@/components/ui/WhatsAppCTA";
 import { ciscoSans } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/siteUrl";
-import { buildLocalBusinessJsonLd, buildSiteMetadata } from "@/data/site/seo";
+import { buildGlobalJsonLd, buildSiteMetadata } from "@/data/site/seo";
 
 const DynamicBotWrapper = dynamic(() => import("@/components/bot/DynamicBotWrapper"));
 
 export const metadata: Metadata = buildSiteMetadata(SITE_URL);
 
-const LOCAL_BUSINESS_JSON_LD = buildLocalBusinessJsonLd(SITE_URL);
+const GLOBAL_JSON_LD = buildGlobalJsonLd(SITE_URL);
 
 export default function RootLayout({
   children,
@@ -27,7 +27,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(LOCAL_BUSINESS_JSON_LD),
+            __html: JSON.stringify(GLOBAL_JSON_LD),
           }}
         />
       </head>

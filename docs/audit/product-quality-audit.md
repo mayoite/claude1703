@@ -1,66 +1,61 @@
 # Product Quality Audit
 
-- Audited at: 2026-03-08T17:18:35.484Z
-- Products audited: 95
-- Total issue rows: 558
+- Audited at: 2026-03-15T12:41:46.008Z
+- Products audited: 145
+- Total issue rows: 148
 
 ## Issues by type
-- missing_alt_text: 95
-- legacy_slug_format: 95
-- missing_sustainability_score: 95
-- missing_documents: 95
-- missing_subcategory: 86
-- missing_primary_image: 42
-- missing_gallery_images: 42
-- invalid_primary_image_path: 4
-- invalid_gallery_image_path: 4
+- missing_documents: 145
+- legacy_slug_format: 1
+- missing_primary_image: 1
+- missing_gallery_images: 1
 
 ## Products by category
-- collaborative: 2
-- educational: 12
-- soft-seating: 45
-- storage: 8
-- tables: 20
+- education: 13
+- seating: 44
+- soft-seating: 48
+- storages: 9
+- tables: 23
 - workstations: 8
 
 ## First 40 issue rows
-- workstations/curvivo: invalid_primary_image_path (critical)
-- workstations/curvivo: invalid_gallery_image_path (high)
-- workstations/curvivo: missing_alt_text (medium)
-- workstations/curvivo: legacy_slug_format (medium)
-- workstations/curvivo: missing_sustainability_score (medium)
-- workstations/curvivo: missing_documents (medium)
-- workstations/adaptable: missing_alt_text (medium)
-- workstations/adaptable: legacy_slug_format (medium)
-- workstations/adaptable: missing_sustainability_score (medium)
-- workstations/adaptable: missing_documents (medium)
-- workstations/deskpro: invalid_primary_image_path (critical)
-- workstations/deskpro: invalid_gallery_image_path (high)
-- workstations/deskpro: missing_alt_text (medium)
-- workstations/deskpro: legacy_slug_format (medium)
-- workstations/deskpro: missing_sustainability_score (medium)
-- workstations/deskpro: missing_documents (medium)
-- workstations/sleek: invalid_primary_image_path (critical)
-- workstations/sleek: invalid_gallery_image_path (high)
-- workstations/sleek: missing_alt_text (medium)
-- workstations/sleek: legacy_slug_format (medium)
-- workstations/sleek: missing_sustainability_score (medium)
-- workstations/sleek: missing_documents (medium)
-- workstations/trio-2: missing_alt_text (medium)
-- workstations/trio-2: legacy_slug_format (medium)
-- workstations/trio-2: missing_subcategory (medium)
-- workstations/trio-2: missing_sustainability_score (medium)
-- workstations/trio-2: missing_documents (medium)
-- workstations/panel-pro: invalid_primary_image_path (critical)
-- workstations/panel-pro: invalid_gallery_image_path (high)
-- workstations/panel-pro: missing_alt_text (medium)
-- workstations/panel-pro: legacy_slug_format (medium)
-- workstations/panel-pro: missing_subcategory (medium)
-- workstations/panel-pro: missing_sustainability_score (medium)
-- workstations/panel-pro: missing_documents (medium)
-- workstations/x-bench: missing_primary_image (critical)
-- workstations/x-bench: missing_gallery_images (high)
-- workstations/x-bench: missing_alt_text (medium)
-- workstations/x-bench: legacy_slug_format (medium)
-- workstations/x-bench: missing_subcategory (medium)
-- workstations/x-bench: missing_sustainability_score (medium)
+- seating/oando-seating--arvo: missing_documents (medium)
+- seating/oando-seating--breeze: missing_documents (medium)
+- seating/oando-seating--canaret: missing_documents (medium)
+- seating/oando-seating--caneva: missing_documents (medium)
+- seating/oando-seating--caneva-high: missing_documents (medium)
+- seating/oando-seating--casca: missing_documents (medium)
+- seating/oando-seating--crox: missing_documents (medium)
+- seating/oando-seating--dive: missing_documents (medium)
+- seating/oando-seating--ember: missing_documents (medium)
+- seating/oando-seating--flare: missing_documents (medium)
+- seating/oando-seating--flex: missing_documents (medium)
+- seating/oando-seating--flip: missing_documents (medium)
+- seating/oando-seating--fluid: missing_documents (medium)
+- seating/oando-seating--fluid-x: missing_documents (medium)
+- seating/oando-seating--fusion: missing_documents (medium)
+- seating/oando-seating--halo: missing_documents (medium)
+- seating/oando-seating--leaf: missing_documents (medium)
+- seating/oando-seating--lexus: missing_documents (medium)
+- seating/oando-seating--lisbo: missing_documents (medium)
+- seating/oando-seating--logica: missing_documents (medium)
+- seating/oando-seating--moonlight: missing_documents (medium)
+- seating/oando-seating--myel: missing_documents (medium)
+- seating/oando-seating--nordic: missing_documents (medium)
+- seating/oando-seating--nuvic: missing_documents (medium)
+- seating/oando-seating--orbit: missing_documents (medium)
+- seating/oando-seating--phoenix: missing_documents (medium)
+- seating/oando-seating--pinnacle: missing_documents (medium)
+- seating/oando-seating--revoq: missing_documents (medium)
+- seating/oando-seating--rider: missing_documents (medium)
+- seating/oando-seating--rio: missing_documents (medium)
+- seating/oando-seating--rock: missing_documents (medium)
+- seating/oando-seating--cafe-sleek: missing_documents (medium)
+- seating/oando-seating--smile: missing_documents (medium)
+- seating/oando-seating--solace: missing_documents (medium)
+- seating/oando-seating--spino: missing_documents (medium)
+- seating/oando-seating--sullion: missing_documents (medium)
+- seating/oando-seating--sway: missing_documents (medium)
+- seating/oando-seating--toro: missing_documents (medium)
+- seating/oando-seating--wing: missing_documents (medium)
+- seating/oando-seating--x-mesh: missing_documents (medium)

@@ -1,9 +1,21 @@
 import { config } from "dotenv";
 import { mkdirSync, writeFileSync } from "fs";
 import { resolve } from "path";
-import type { CompatCategory, CompatProduct } from "../lib/getProducts.ts";
-import { oandoCatalog } from "../lib/catalog.ts";
-import { auditCompatProduct, collectProductImages } from "../lib/productSpecSchema.ts";
+import { createClient } from "@supabase/supabase-js";
+import type {
+  CompatCategory,
+  CompatProduct,
+  CompatSeries,
+  Product,
+  ProductDetailedInfo,
+  ProductMetadata,
+  ProductVariant,
+} from "../lib/getProducts.ts";
+import {
+  auditCompatProduct,
+  collectProductDocuments,
+  collectProductImages,
+} from "../lib/productSpecSchema.ts";
 
 config({ path: resolve(process.cwd(), ".env.local") });
 
@@ -20,6 +32,157 @@ type AuditRow = {
   imageCount: number;
 };
 
+type CategoryRow = {
+  id: string;
+  name: string;
+};
+
+function createSupabaseAdminClient() {
+  const url =
+    process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ??
+    process.env.SUPABASE_URL?.trim() ??
+    "";
+  const key =
+    process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ??
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim() ??
+    "";
+
+  if (!url || !key) {
+    throw new Error(
+      "Missing Supabase credentials. Expected NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.",
+    );
+  }
+
+  return createClient(url, key, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
+    },
+  });
+}
+
+function toCompatProduct(product: Product): CompatProduct {
+  const specsObject =
+    product.specs && typeof product.specs === "object" && !Array.isArray(product.specs)
+      ? (product.specs as Record<string, unknown>)
+      : {};
+  const specsDimensions =
+    typeof specsObject.dimensions === "string" ? specsObject.dimensions.trim() : "";
+  const specsMaterials = Array.isArray(specsObject.materials)
+    ? specsObject.materials.map((item) => String(item).trim()).filter(Boolean)
+    : [];
+  const specsFeatures = Array.isArray(specsObject.features)
+    ? specsObject.features.map((item) => String(item).trim()).filter(Boolean)
+    : [];
+
+  const baseProduct: CompatProduct = {
+    id: product.id,
+    slug: product.slug,
+    name: product.name,
+    description: product.description || "",
+    flagshipImage: product.flagship_image || "",
+    sceneImages: Array.isArray(product.scene_images) ? product.scene_images : [],
+    variants: Array.isArray(product.variants) ? (product.variants as ProductVariant[]) : [],
+    detailedInfo: {
+      overview: product.description || "",
+      features: specsFeatures,
+      dimensions: specsDimensions,
+      materials: specsMaterials,
+    } satisfies ProductDetailedInfo,
+    metadata: {
+      ...(product.metadata ?? {}),
+      sustainabilityScore:
+        product.metadata?.sustainabilityScore ?? product.specs?.sustainability_score,
+    } satisfies ProductMetadata,
+    "3d_model": product["3d_model"],
+    threeDModelUrl: product["3d_model"],
+    technicalDrawings: [],
+    documents: [],
+    images: Array.isArray(product.images) ? product.images : [],
+    altText:
+      product.alt_text ||
+      product.metadata?.ai_alt_text ||
+      product.metadata?.aiAltText ||
+      `${product.name} product image`,
+    specs: specsObject,
+  };
+
+  const documents = collectProductDocuments(baseProduct);
+
+  return {
+    ...baseProduct,
+    technicalDrawings: documents,
+    documents,
+  };
+}
+
+async function getCompatCatalog(): Promise<CompatCategory[]> {
+  const supabase = createSupabaseAdminClient();
+  const [categoriesResponse, productsResponse] = await Promise.all([
+    supabase.from("categories").select("id,name"),
+    supabase.from("products").select("*").order("name", { ascending: true }),
+  ]);
+
+  if (categoriesResponse.error) {
+    throw new Error(`Failed fetching categories: ${categoriesResponse.error.message}`);
+  }
+  if (productsResponse.error) {
+    throw new Error(`Failed fetching products: ${productsResponse.error.message}`);
+  }
+
+  const categories = (categoriesResponse.data ?? []) as CategoryRow[];
+  const products = (productsResponse.data ?? []) as Product[];
+
+  const categoryMap = new Map<string, { info: CategoryRow; products: Product[] }>();
+  for (const category of categories) {
+    categoryMap.set(category.id, { info: category, products: [] });
+  }
+
+  for (const product of products) {
+    const categoryId = product.category_id;
+    if (!categoryMap.has(categoryId)) {
+      categoryMap.set(categoryId, {
+        info: { id: categoryId, name: categoryId },
+        products: [],
+      });
+    }
+    categoryMap.get(categoryId)?.products.push(product);
+  }
+
+  const result: CompatCategory[] = [];
+
+  for (const [categoryId, categoryData] of categoryMap) {
+    if (categoryData.products.length === 0) continue;
+
+    const seriesMap = new Map<string, Product[]>();
+    for (const product of categoryData.products) {
+      const seriesId = product.series_id || `${categoryId}-series`;
+      if (!seriesMap.has(seriesId)) seriesMap.set(seriesId, []);
+      seriesMap.get(seriesId)?.push(product);
+    }
+
+    const series: CompatSeries[] = [];
+    for (const [seriesId, seriesProducts] of seriesMap) {
+      series.push({
+        id: seriesId,
+        name: seriesProducts[0]?.series_name || "Series",
+        description: `Premium ${categoryData.info.name.toLowerCase()} solutions`,
+        products: seriesProducts.map(toCompatProduct),
+      });
+    }
+
+    result.push({
+      id: categoryId,
+      name: categoryData.info.name,
+      description: `Professional furniture systems for ${categoryData.info.name.toLowerCase()}`,
+      series,
+    });
+  }
+
+  return result;
+}
+
 function csvEscape(value: unknown): string {
   const text = String(value ?? "");
   if (/[",\n]/.test(text)) {
@@ -28,45 +191,35 @@ function csvEscape(value: unknown): string {
   return text;
 }
 
-function toCompatFallbackCatalog(): CompatCategory[] {
-  return oandoCatalog.map((category) => ({
-    id: category.id.replace(/^oando-/, ""),
-    name: category.name,
-    description: category.description,
-    series: category.series.map((series) => ({
-      id: series.id,
-      name: series.name,
-      description: series.description,
-      products: series.products.map((product) => ({
-        id: product.id,
-        slug: product.id,
-        name: product.name,
-        description: product.description,
-        flagshipImage: product.flagshipImage,
-        sceneImages: product.sceneImages,
-        variants: product.variants,
-        detailedInfo: product.detailedInfo,
-        metadata: product.metadata || {},
-        technicalDrawings: product.technicalDrawings,
-        documents: product.documents,
-        images: [product.flagshipImage, ...product.sceneImages].filter(Boolean),
-      })),
-    })),
-  }));
-}
-
 async function main() {
-  const catalog = toCompatFallbackCatalog();
+  const catalog = await getCompatCatalog();
   const rows: AuditRow[] = [];
   const issueCounts = new Map<string, number>();
   const categoryCounts = new Map<string, number>();
   let productCount = 0;
+  const debugSlug = process.env.AUDIT_DEBUG_SLUG?.trim();
 
   for (const category of catalog) {
     for (const series of category.series) {
       for (const product of series.products) {
         productCount += 1;
         categoryCounts.set(category.id, (categoryCounts.get(category.id) || 0) + 1);
+        if (debugSlug && product.slug === debugSlug) {
+          console.log(
+            JSON.stringify(
+              {
+                debugSlug,
+                categoryId: category.id,
+                flagshipImage: product.flagshipImage,
+                images: product.images,
+                collectedImages: collectProductImages(product as CompatProduct),
+                metadata: product.metadata,
+              },
+              null,
+              2,
+            ),
+          );
+        }
         const issues = auditCompatProduct(category.id, product as CompatProduct);
         for (const issue of issues) {
           rows.push({

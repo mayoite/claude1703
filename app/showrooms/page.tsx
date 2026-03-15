@@ -19,7 +19,7 @@ export default async function ShowroomsPage() {
   const asOfLabel = formatKpiAsOf(stats.asOfDate);
 
   return (
-    <section className="flex min-h-screen flex-col items-center bg-white">
+    <section className="scheme-page flex min-h-screen flex-col items-center">
       <Hero
         variant="small"
         title={SHOWROOMS_PAGE_COPY.heroTitle}
@@ -28,11 +28,11 @@ export default async function ShowroomsPage() {
         backgroundImage="/images/hero/dmrc-hero.webp"
       />
 
-      <section className="w-full border-y border-neutral-200 bg-white py-16 md:py-20">
+      <section className="scheme-section-soft scheme-border w-full border-y py-16 md:py-20">
         <div className="container px-6 2xl:px-0">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <p className="typ-label text-neutral-700">{SHOWROOMS_PAGE_COPY.trustedKicker}</p>
-            <p className="typ-label text-neutral-700">{asOfLabel}</p>
+            <p className="typ-label scheme-text-body">{SHOWROOMS_PAGE_COPY.trustedKicker}</p>
+            <p className="typ-label scheme-text-body">{asOfLabel}</p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div className="rounded-xl border border-neutral-300 bg-neutral-50 px-6 py-5">
@@ -51,26 +51,26 @@ export default async function ShowroomsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white py-18 md:py-22">
+      <section className="w-full py-18 md:py-22">
         <div className="container px-6 2xl:px-0">
-          <div className="mb-10">
-            <p className="typ-label mb-3 text-neutral-700">{SHOWROOMS_PAGE_COPY.aboutKicker}</p>
-            <h2 className="typ-section max-w-3xl text-neutral-950">{SHOWROOMS_PAGE_COPY.aboutTitle}</h2>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-neutral-800">
+          <div className="scheme-panel scheme-border rounded-[2rem] border p-8 md:p-10">
+            <p className="typ-label mb-3 scheme-text-body">{SHOWROOMS_PAGE_COPY.aboutKicker}</p>
+            <h2 className="typ-section max-w-3xl scheme-text-strong">{SHOWROOMS_PAGE_COPY.aboutTitle}</h2>
+            <p className="page-copy mt-4 max-w-3xl scheme-text-body">
               {SHOWROOMS_PAGE_COPY.aboutDescription}
             </p>
           </div>
         </div>
       </section>
 
-      <section className="w-full border-y border-neutral-200 bg-neutral-50 py-18 md:py-22">
+      <section className="scheme-section-soft scheme-border w-full border-y py-18 md:py-22">
         <div className="container px-6 2xl:px-0">
-          <p className="typ-label mb-5 text-neutral-700">{SHOWROOMS_PAGE_COPY.clientsKicker}</p>
+          <p className="typ-label mb-5 scheme-text-body">{SHOWROOMS_PAGE_COPY.clientsKicker}</p>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
             {SHOWROOMS_CLIENTS.map((client) => (
               <div
                 key={client}
-                className="rounded-md border border-neutral-300 bg-white px-4 py-3 text-sm font-semibold text-neutral-800"
+                className="scheme-panel scheme-border rounded-md border px-4 py-3 text-sm font-semibold text-neutral-800"
               >
                 {client}
               </div>
@@ -82,12 +82,12 @@ export default async function ShowroomsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white py-18 md:py-22">
+      <section className="w-full py-18 md:py-22">
         <div className="container px-6 2xl:px-0">
-          <p className="typ-label mb-5 text-neutral-700">{SHOWROOMS_PAGE_COPY.highlightsKicker}</p>
+          <p className="typ-label mb-5 scheme-text-body">{SHOWROOMS_PAGE_COPY.highlightsKicker}</p>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {SHOWROOMS_HIGHLIGHTS.map((item) => (
-              <article key={item.title} className="rounded-xl border border-neutral-300 bg-neutral-50 p-6">
+              <article key={item.title} className="scheme-panel-soft scheme-border rounded-xl border p-6">
                 <h3 className="text-2xl font-light tracking-tight text-neutral-950">{item.title}</h3>
                 <p className="mt-3 text-base leading-relaxed text-neutral-800">{item.detail}</p>
               </article>

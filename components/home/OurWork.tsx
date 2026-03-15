@@ -33,7 +33,7 @@ export function OurWork({ clientCount }: OurWorkProps) {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-2xl">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase text-neutral-400 mb-4">
+            <p className="scheme-text-muted text-xs font-bold tracking-[0.25em] uppercase mb-4">
               Trusted Clients
             </p>
             <h2 className="text-3xl md:text-4xl text-neutral-900 tracking-tight leading-tight">
@@ -56,7 +56,7 @@ export function OurWork({ clientCount }: OurWorkProps) {
         </div>
 
         {/* Count footer */}
-        <p data-testid="kpi-clients-footer" className="mt-8 text-xs text-neutral-400 font-medium tracking-wide text-center">
+        <p data-testid="kpi-clients-footer" className="scheme-text-muted mt-8 text-xs font-medium tracking-wide text-center">
           {formatTrustedClientsFooter(clientCount)}
         </p>
       </div>

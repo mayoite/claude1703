@@ -1,0 +1,948 @@
+{
+  "generatedAt": "2026-03-15T14:16:55.210Z",
+  "mode": "apply",
+  "offset": 30,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "812136a0-4177-45b2-828b-c55810e24671",
+      "slug": "oando-soft-seating--fynn",
+      "name": "Fynn",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Fynn is a cafe chair designed for waiting areas and relaxed office spaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Casual Sophistication"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Casual Sophistication",
+            "body": "The Fynn High Café Chair blends natural warmth with clean, modern precision through its solid wood base and upholstered seat. Its balanced proportions and supportive backrest make it a comfortable choice for cafés, collaborative zones, and social spaces."
+          },
+          {
+            "heading": "",
+            "body": "Available in a variety of finishes, the Fynn High Café Chair offers versatility that suits both contemporary and classic interiors. Its durable construction ensures lasting comfort, while the elevated seat height adds a sophisticated presence. With timeless appeal and everyday functionality, Fynn is built to enhance any setting."
+          },
+          {
+            "heading": "",
+            "body": "The plush, fully upholstered backrest offers gentle, wraparound support for extended comfort, while its smooth contours and textured fabric add visual warmth."
+          },
+          {
+            "heading": "",
+            "body": "The robust legs provide lasting durability and a warm, timeless look. Their wide, angled stance and reinforced crossbars ensure superior stability and strength, making the stool secure and comfortable for both café and home use."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Fynn Cafe Chair",
+        "sourceSlug": "fynn"
+      },
+      "alt_text": "Fynn Cafe Chair",
+      "sourceSlug": "fynn",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af27c85f137c0d9fe13ed_IMG4.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af28d11e33e59fa4fb221_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af2a0e42881c134c6232f_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af2b585f137c0d9fe2821_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--fynn/image-1.jpg",
+        "/images/catalog/oando-soft-seating--fynn/image-2.jpg",
+        "/images/catalog/oando-soft-seating--fynn/image-3.jpg",
+        "/images/catalog/oando-soft-seating--fynn/image-4.jpg"
+      ]
+    },
+    {
+      "id": "f3cf6682-920a-4f22-abb2-1ff9478280f9",
+      "slug": "oando-soft-seating--grace",
+      "name": "Grace",
+      "category_id": "seating",
+      "series_name": "Leather Chair",
+      "description": "Grace is a leather chair designed for modern executive spaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "features": [
+          "Executive Comfort, Sculpted in Leather"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Executive Comfort, Sculpted in Leather",
+            "body": "Crafted with premium leather upholstery, this ergonomic chair delivers a refined balance of luxury and comfort. Its smooth, contoured surfaces offer a plush seating experience while elevating the visual language of modern executive spaces."
+          },
+          {
+            "heading": "",
+            "body": "Designed to support natural posture, the chair features precision ergonomics that adapt to your body’s movement. From long strategy sessions to focused work hours, it ensures sustained comfort, stability, and effortless mobility."
+          },
+          {
+            "heading": "",
+            "body": "Precision die-cast armrests deliver superior strength and stability, offering consistent support with a refined metallic finish that elevates the chair’s executive appeal."
+          },
+          {
+            "heading": "",
+            "body": "The elegantly contoured backrest is designed to follow the natural curve of the spine, promoting healthy posture while adding a sleek, modern silhouette."
+          },
+          {
+            "heading": "",
+            "body": "Upholstered in premium leather, the seat provides a plush, breathable feel that ensures lasting comfort and a luxurious seating experience throughout long work hours."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Leather Chair",
+        "subcategoryId": "leather",
+        "subcategoryLabel": "Leather Chair",
+        "subcategory_slug": "leather-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Grace Leather Chair",
+        "sourceSlug": "grace"
+      },
+      "alt_text": "Grace Leather Chair",
+      "sourceSlug": "grace",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Leather Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694b91b152d876745c3cb93b_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694b91c352d876745c3cc011_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694b91d25c5001242af9a4c0_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694b91e4e8eb928ca73abee3_SCROLL%20IMAGE%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694b91f55f51b584e3c38f85_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694b92025c5001242af9ce8f_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694b92114dcbc9f3da2dd19c_SCROLL%20IMAGE%207.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--grace/image-1.jpg",
+        "/images/catalog/oando-soft-seating--grace/image-2.jpg",
+        "/images/catalog/oando-soft-seating--grace/image-3.jpg",
+        "/images/catalog/oando-soft-seating--grace/image-4.jpg",
+        "/images/catalog/oando-soft-seating--grace/image-5.jpg",
+        "/images/catalog/oando-soft-seating--grace/image-6.jpg",
+        "/images/catalog/oando-soft-seating--grace/image-7.jpg"
+      ]
+    },
+    {
+      "id": "b8ad7d2b-0f9b-4a2c-88e1-a1a2596b20e2",
+      "slug": "oando-seating--leaf",
+      "name": "Leaf",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Leaf is a cafe chair designed for teamwork and shared workspaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Stack Up in Style"
+        ],
+        "materials": [],
+        "dimensions": "Height: 775mm.; Width: 800 mm.; Depth: 550 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Stack Up in Style",
+            "body": "The Leaf Café Chair features a distinctive wing shaped silhouette that adds a refined and stylish touch to any setting. Its graceful, sculpted form brings a sense of sophistication while blending effortlessly into cafés, dining rooms, lounges, and workspaces. Designed to elevate interiors, it offers both visual appeal and everyday practicality."
+          },
+          {
+            "heading": "",
+            "body": "Crafted with comfort in mind, the leaf Café Chair provides supportive seating ideal for extended use in both home and commercial environments. Its thoughtfully shaped backrest enhances posture while maintaining a light, contemporary feel. Versatile and functional, it adds character and comfort to any space it occupies."
+          },
+          {
+            "heading": "",
+            "body": "The perforated backrest allows refreshing airflow for cool comfort, while its gentle curve offers natural ergonomic support. Lightweight yet durable, the design flexes with the body, delivering a modern look with enhanced ease and comfort."
+          },
+          {
+            "heading": "",
+            "body": "The smooth, perforated seat provides breathable comfort with a contoured shape that supports natural posture while keeping the design lightweight. Paired with sturdy molded legs for reliable stability and durability, the chair is well-suited for cafés, dining areas, and everyday spaces."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Leaf",
+            "lines": [
+              "Height: 775mm.",
+              "Width: 800 mm.",
+              "Depth: 550 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Leaf Cafe Chair",
+        "sourceSlug": "leaf"
+      },
+      "alt_text": "Leaf Cafe Chair",
+      "sourceSlug": "leaf",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692ae6cb77a173215be980cd_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692ae6e0e21862e6b834de4b_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692ae6f28a3d7c7369b016b0_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692ae703b716f614a5b89eeb_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692ae714edac0b8195c3e744_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--leaf/image-1.jpg",
+        "/images/catalog/oando-seating--leaf/image-2.jpg",
+        "/images/catalog/oando-seating--leaf/image-3.jpg",
+        "/images/catalog/oando-seating--leaf/image-4.jpg",
+        "/images/catalog/oando-seating--leaf/image-5.jpg"
+      ]
+    },
+    {
+      "id": "62936096-e3af-4ccf-bb15-c26942b271f4",
+      "slug": "oando-seating--lexus",
+      "name": "Lexus",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Lexus is a cafe chair designed for premium comfort and durability.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Crafted to Last"
+        ],
+        "materials": [],
+        "dimensions": "Height: 790mm.; Width: 380 mm.; Depth: 380 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Crafted to Last",
+            "body": "The Lexus Café Chair brings together timeless design and contemporary appeal with its refined, wing inspired silhouette. Its smooth, sculpted form adds character to cafés, dining areas, and social spaces. Blending tradition with modern aesthetics, it stands out as both elegant and versatile."
+          },
+          {
+            "heading": "",
+            "body": "Lightweight yet reliably sturdy, the Lexus Café Chair is crafted for everyday comfort and durability. Its supportive structure ensures ease during long seating periods, making it ideal for both home and commercial settings. Designed for lasting use, it delivers style, comfort, and practicality in every space."
+          },
+          {
+            "heading": "",
+            "body": "The seat’s woven cane-style pattern brings natural texture and airflow for cool comfort, while its molded build ensures durability with gentle flexibility. Lightweight yet supportive, it blends traditional craftsmanship with modern ease."
+          },
+          {
+            "heading": "",
+            "body": "The molded cane-style backrest enhances airflow and adds a warm, natural texture, while its gentle curve offers supportive comfort for longer sitting. Lightweight yet durable, it combines traditional charm with modern structural strength."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Lexus",
+            "lines": [
+              "Height: 790mm.",
+              "Width: 380 mm.",
+              "Depth: 380 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Lexus Cafe Chair",
+        "sourceSlug": "lexus"
+      },
+      "alt_text": "Lexus Cafe Chair",
+      "sourceSlug": "lexus",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeb6e11e33e59fa4eed70_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeb8207459fa95409b3d2_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeb965c747ac16e306c96_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeba9e42881c134c4fad2_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--lexus/image-1.jpg",
+        "/images/catalog/oando-seating--lexus/image-2.jpg",
+        "/images/catalog/oando-seating--lexus/image-3.jpg",
+        "/images/catalog/oando-seating--lexus/image-4.jpg"
+      ]
+    },
+    {
+      "id": "20524b4b-de51-4df6-a2c1-d986a879a66d",
+      "slug": "oando-seating--lisbo",
+      "name": "Lisbo",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Lisbo is a cafe chair designed for relaxed office spaces and modern interiors.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [],
+        "materials": [],
+        "dimensions": "(W) 500mm x (H) 740mm x (D) 430mm; (Seat height: 740mm, Seat depth: 350mm)",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "",
+            "body": "Built with ergonomic support in mind, the Lisbo High Café Chair offers a comfortable seating experience ideal for long durations. Its supportive structure makes it perfect for high counters, workspaces, and social settings."
+          },
+          {
+            "heading": "",
+            "body": "The smooth, gently curved backrest supports the upper body while offering relaxed, ergonomic seating. Its seamless moulded design is minimal and elegant, adding a refined modern touch to any space."
+          },
+          {
+            "heading": "",
+            "body": "The strong, finished legs offer lasting durability and a warm, refined look. Their angled stance with an integrated metal footrest ensures stability and comfort, combining strength, style, and elegance."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Lisbo",
+            "lines": [
+              "(W) 500mm x (H) 740mm x (D) 430mm",
+              "(Seat height: 740mm, Seat depth: 350mm)"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Lisbo Cafe Chair",
+        "sourceSlug": "lisbo"
+      },
+      "alt_text": "Lisbo Cafe Chair",
+      "sourceSlug": "lisbo",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af86a73fdba73d58bc9e2_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af87ff014edab0a111f3b_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af8af0e61ebf45e29c51c_IMG%204.jpg"
+      ],
+      "sourceDocs": [],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--lisbo/image-1.jpg",
+        "/images/catalog/oando-seating--lisbo/image-2.jpg",
+        "/images/catalog/oando-seating--lisbo/image-3.jpg"
+      ]
+    },
+    {
+      "id": "9ed93dd6-ce59-4ebc-a6c2-5b81e5ca621d",
+      "slug": "oando-seating--logica",
+      "name": "Logica",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Logica is a mesh chair designed for modern offices.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Smart design. Effortless support. Comfort that fits the way you work"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "Armrest height (from floor): 670 mm; Armrest width: 250 mm.; Armrest width: 85 mm.; Overall height: 1000 mm; Seat headrest width : 515 mm; Overall width (base including wheels): 700 mm; Seat width: 500 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO",
+          "BIFMA LOGICA"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Smart design. Effortless support. Comfort that fits the way you work",
+            "body": "Logica is built with simplicity and intelligence at its core. With user-friendly features and essential support, it brings balance to your setup—helping you stay comfortable and aligned through your entire workday"
+          },
+          {
+            "heading": "",
+            "body": "With thoughtful ergonomic features, Logica helps relieve pressure across your back and shoulders—allowing you to stay focused, not fatigued."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Armrest height (from floor): 670 mm",
+              "Armrest width: 250 mm.",
+              "Armrest width: 85 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1000 mm",
+              "Seat headrest width : 515 mm",
+              "Overall width (base including wheels): 700 mm",
+              "Seat width: 500 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO",
+          "BIFMA LOGICA"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": true,
+        "warrantyYears": 10,
+        "ai_alt_text": "Logica Mesh Chair",
+        "sourceSlug": "logica"
+      },
+      "alt_text": "Logica Mesh Chair",
+      "sourceSlug": "logica",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea256b18ce118468ecb2c7_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea258929bc76be1f98a8d5_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea25c1b8f8413ddf5f012f_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO",
+        "BIFMA LOGICA"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--logica/image-1.jpg",
+        "/images/catalog/oando-seating--logica/image-2.jpg",
+        "/images/catalog/oando-seating--logica/image-3.jpg"
+      ]
+    },
+    {
+      "id": "43642a20-00cb-4349-97c4-eed6afea0b9e",
+      "slug": "oando-seating--moonlight",
+      "name": "Moonlight",
+      "category_id": "seating",
+      "series_name": "Leather Chair",
+      "description": "Moonlight is a leather chair designed for comfort and modern interiors.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "features": [
+          "Sculpted Comfort with a Modern Edge"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Sculpted Comfort with a Modern Edge",
+            "body": "Defined by clean lines and a softly contoured form, this premium leather chair brings understated sophistication to contemporary offices. The seamless upholstery and refined proportions create a calm, confident visual presence"
+          },
+          {
+            "heading": "",
+            "body": "Thoughtfully engineered ergonomics provide balanced support to the back and seat, adapting naturally to extended sitting. The result is a composed, comfortable seating experience that keeps you focused, poised, and in control throughout the day."
+          },
+          {
+            "heading": "",
+            "body": "The intelligently engineered recline mechanism allows fluid back movement, adapting naturally to posture changes for relaxed comfort during extended sitting."
+          },
+          {
+            "heading": "",
+            "body": "Soft premium leather upholstery with generous padding delivers superior seating comfort, combining visual elegance with a plush, supportive feel throughout the day."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Leather Chair",
+        "subcategoryId": "leather",
+        "subcategoryLabel": "Leather Chair",
+        "subcategory_slug": "leather-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Moonlight Leather Chair",
+        "sourceSlug": "moonlight"
+      },
+      "alt_text": "Moonlight Leather Chair",
+      "sourceSlug": "moonlight",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Leather Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bc517402c0b3d04c410a0_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bc5278a852e39b5a76a8d_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bc536402c0b3d04c412d6_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bc54f3334556ca3266704_SCROLL%20IMAGE%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--moonlight/image-1.jpg",
+        "/images/catalog/oando-seating--moonlight/image-2.jpg",
+        "/images/catalog/oando-seating--moonlight/image-3.jpg",
+        "/images/catalog/oando-seating--moonlight/image-4.jpg"
+      ]
+    },
+    {
+      "id": "126acd5e-a4d5-4a86-80dd-cc5e7ad56964",
+      "slug": "oando-seating--myel",
+      "name": "Myel",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Myel is a mesh chair designed for daily comfort and productivity. The chair includes dedicated head and neck support for longer work sessions.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Managing your everyday life"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "Overall width: 635 ±10 mm; Backrest width (atinner frame): 460 ±10 mm; Armrest heightadjustment: 200–255 ±10 mm; Seat heightadjustment: 435–505 ±10 mm; Backrest width: 490 ±10 mm; Headrest width: 270 ±10 mm; Headrest height adjustment: 170–220 ±10 mm; Base width: 500 ±10 mm; Caster wheel clearance: 45 ±5 mm; Overall depth: 580 ±10 mm; Seat depth adjustment: 465–525 ±10 mm; Backrest height (without headrest): 1010–1080 ±10 mm; Overall height (with headrest): 1165–1235 ±10 mm; Base height (minimum): 640 ±10 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO",
+          "BIFMA - MYEL"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Managing your everyday life",
+            "body": "Myel Excellence represents the perfect fusion of unparalleled comfort and superior craftsmanship. Each chair is meticulously designed to provide the ultimate seating experience, blending luxurious support with timeless style."
+          },
+          {
+            "heading": "",
+            "body": "The chair features an adjustable headrest, offering support for your neck, promoting relaxation during long sitting sessions."
+          },
+          {
+            "heading": "",
+            "body": "Equipped with 3D adjustable armrests, the Myel chair allows for customizable positioning, ensuring optimal support and reducing strain on your arms and shoulders."
+          },
+          {
+            "heading": "",
+            "body": "With adjustable lumbar support, the Myel chair helps maintain proper posture, providing targeted lower back support for enhanced comfort throughout the day"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Myel Front view",
+            "lines": [
+              "Overall width: 635 ±10 mm",
+              "Backrest width (atinner frame): 460 ±10 mm",
+              "Armrest heightadjustment: 200–255 ±10 mm",
+              "Seat heightadjustment: 435–505 ±10 mm"
+            ]
+          },
+          {
+            "heading": "Myel Back View",
+            "lines": [
+              "Backrest width: 490 ±10 mm",
+              "Headrest width: 270 ±10 mm",
+              "Headrest height adjustment: 170–220 ±10 mm",
+              "Base width: 500 ±10 mm",
+              "Caster wheel clearance: 45 ±5 mm"
+            ]
+          },
+          {
+            "heading": "Myel Side View",
+            "lines": [
+              "Overall depth: 580 ±10 mm",
+              "Seat depth adjustment: 465–525 ±10 mm",
+              "Backrest height (without headrest): 1010–1080 ±10 mm",
+              "Overall height (with headrest): 1165–1235 ±10 mm",
+              "Base height (minimum): 640 ±10 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO",
+          "BIFMA - MYEL"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": true,
+        "warrantyYears": 10,
+        "ai_alt_text": "Myel Mesh Chair",
+        "sourceSlug": "myel"
+      },
+      "alt_text": "Myel Mesh Chair",
+      "sourceSlug": "myel",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e4d8acf4741cf5b7217188_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e4d90c562c5d3c1515465a_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e4d94c16648bc98d5c6216_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e4d9802320971c751ca4fa_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e7775472ed87ce4223919f_image%201256.png",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e778f37bac15d530eaf35b_MYEL%20copy%204%403x.png"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO",
+        "BIFMA - MYEL"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--myel/image-1.jpg",
+        "/images/catalog/oando-seating--myel/image-2.jpg",
+        "/images/catalog/oando-seating--myel/image-3.jpg",
+        "/images/catalog/oando-seating--myel/image-4.jpg",
+        "/images/catalog/oando-seating--myel/image-5.png",
+        "/images/catalog/oando-seating--myel/image-6.png"
+      ]
+    },
+    {
+      "id": "900f0318-a72b-455f-a766-e5dfc584274c",
+      "slug": "oando-seating--nordic",
+      "name": "Nordic",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Nordic is a cafe chair built for commercial interiors.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Wooded Elegance"
+        ],
+        "materials": [],
+        "dimensions": "Height: 756mm.; Width: 570 mm.; Height of Seat: 465 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Wooded Elegance",
+            "body": "The Nordic Cafe Chair features clean lines and a beautifully sculpted form that showcases timeless wooden craftsmanship. Its angular silhouette paired with an open-frame backrest creates a perfect balance of strength and lightness."
+          },
+          {
+            "heading": "",
+            "body": "Enhanced with a soft upholstered seat, it provides exceptional comfort while adding a tactile touch. Thoughtfully designed, it blends effortlessly into both contemporary interiors and classic spaces with understated elegance."
+          },
+          {
+            "heading": "",
+            "body": "Engineered with a sleek, open-frame backrest that offers natural support while maintaining a light visual profile. Its fluid wooden contour enhances posture and adds a refined, modern character to any setting."
+          },
+          {
+            "heading": "",
+            "body": "The cushioned seat offers soft, supportive comfort with a refined textile touch. Its durable upholstery and precise wooden detailing ensure both long-lasting ease and elevated aesthetics in every sit."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Nordic cafe chair",
+            "lines": [
+              "Height: 756mm.",
+              "Width: 570 mm.",
+              "Height of Seat: 465 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Nordic Cafe Chair",
+        "sourceSlug": "nordic"
+      },
+      "alt_text": "Nordic Cafe Chair",
+      "sourceSlug": "nordic",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692565831e58cf71f56ef254_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6925659bc42056982bb4a281_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692565b1c42056982bb4afd6_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692565c37cce485e544a89ed_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692565d5d4f113e899915109_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--nordic/image-1.jpg",
+        "/images/catalog/oando-seating--nordic/image-2.jpg",
+        "/images/catalog/oando-seating--nordic/image-3.jpg",
+        "/images/catalog/oando-seating--nordic/image-4.jpg",
+        "/images/catalog/oando-seating--nordic/image-5.jpg"
+      ]
+    },
+    {
+      "id": "6e7141e1-d856-4a94-aab7-030b46d2aaab",
+      "slug": "oando-seating--nuvic",
+      "name": "Nuvic",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Nuvic is a mesh chair designed for comfort and posture support. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Engineered for active posture. Support that moves as you do"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "Seat height till armrest: 300 mm.; Armrest length: 250 mm.; Seat height till ground: 450 mm.; Overall height: 1080 mm; Seat headrest width : 400 mm; Overall width (base including wheels): 660 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Engineered for active posture. Support that moves as you do",
+            "body": "Nuvic is made for motion—combining responsive ergonomics with a clean, modern build. It encourages better posture, smoother transitions, and focused work with comfort that stays consistent from task to task."
+          },
+          {
+            "heading": "",
+            "body": "With flexible structure and personalized adjustment, Nuvic supports key pressure zones and helps you maintain balance through hours of deep work"
+          },
+          {
+            "heading": "",
+            "body": "Move the armrests vertically to match your natural arm position, reducing fatigue and enhancing ergonomic alignment"
+          },
+          {
+            "heading": "",
+            "body": "Built-in lumbar shaping offers steady lower back support, promoting an upright position and reducing strain throughout the day"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Seat height till armrest: 300 mm.",
+              "Armrest length: 250 mm.",
+              "Seat height till ground: 450 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1080 mm",
+              "Seat headrest width : 400 mm",
+              "Overall width (base including wheels): 660 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Nuvic Mesh Chair",
+        "sourceSlug": "nuvic"
+      },
+      "alt_text": "Nuvic Mesh Chair",
+      "sourceSlug": "nuvic",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea2ac70761950e794977a9_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea2aff24df3e8fa457a0e9_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea2b2e5f5eada2eda0c46c_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--nuvic/image-1.jpg",
+        "/images/catalog/oando-seating--nuvic/image-2.jpg",
+        "/images/catalog/oando-seating--nuvic/image-3.jpg"
+      ]
+    }
+  ],
+  "unmatched": []
+}

@@ -106,10 +106,10 @@ export async function getBusinessStats(options?: {
       }
     }
 
-    const nhostStats = await fetchNhostBusinessStats(BUSINESS_STATS_SAFE_DEFAULTS.asOfDate);
-    if (nhostStats) {
-      lastKnownGoodStats = nhostStats;
-      return { stats: nhostStats, source: "nhost-backup", fetchedAt };
+    const nhostResult = await fetchNhostBusinessStats(BUSINESS_STATS_SAFE_DEFAULTS.asOfDate);
+    if (nhostResult) {
+      lastKnownGoodStats = nhostResult.stats;
+      return { stats: nhostResult.stats, source: nhostResult.source, fetchedAt };
     }
 
     if (lastKnownGoodStats) {

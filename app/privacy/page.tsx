@@ -1,4 +1,8 @@
+import Link from "next/link";
+import { Hero } from "@/components/home/Hero";
+import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { LEGAL_PAGE_COPY } from "@/data/site/routeCopy";
+import { SITE_CONTACT } from "@/data/site/contact";
 
 const COOKIE_ROWS = [
   {
@@ -59,100 +63,143 @@ const COOKIE_ROWS = [
 
 export default function PrivacyPage() {
   return (
-    <section className="flex min-h-screen flex-col items-center bg-white pt-24">
-      <section className="container px-6 py-12 2xl:px-0">
-        <h1 className="mb-12 font-slogan text-5xl text-neutral-900 md:text-6xl">
-          {LEGAL_PAGE_COPY.privacy.title}
-        </h1>
+    <section className="scheme-page flex min-h-screen flex-col items-center">
+      <Hero
+        variant="small"
+        title={LEGAL_PAGE_COPY.privacy.title}
+        subtitle={LEGAL_PAGE_COPY.privacy.heroSubtitle}
+        showButton={false}
+        backgroundImage="/images/hero/hero-3.webp"
+      />
 
-        <div className="space-y-6 font-light text-neutral-600">
-          {LEGAL_PAGE_COPY.privacy.intro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
+      <section className="container px-6 py-16 2xl:px-0 md:py-20">
+        <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+          <aside className="scheme-panel-dark rounded-[2rem] p-7 md:p-9">
+            <p className="typ-label scheme-text-inverse-muted">{LEGAL_PAGE_COPY.privacy.overviewKicker}</p>
+            <h2 className="typ-section mt-3 text-white">{LEGAL_PAGE_COPY.privacy.overviewTitle}</h2>
+            <p className="page-copy scheme-text-inverse-body mt-4">
+              {LEGAL_PAGE_COPY.privacy.overviewDescription}
+            </p>
 
-          <h2 className="mt-8 text-xl font-medium text-neutral-900">
-            How we use your information
-          </h2>
-          <p>
-            We use submitted information to respond to quote requests, follow up on workspace
-            enquiries, improve service quality, and maintain internal records of sales and support
-            conversations.
-          </p>
-          <p>
-            We do not sell your personal information. We may disclose information when required by
-            law, to investigate misuse, or to maintain and secure our services.
-          </p>
-
-          <h2 className="mt-8 text-xl font-medium text-neutral-900">
-            Cookies, tags, and similar technologies
-          </h2>
-          <p>
-            We use one essential cookie to remember your consent choice and optional analytics &
-            attribution cookies to record landing page, referrer, and UTM parameters when you
-            accept them in the cookie banner.
-          </p>
-
-          <div className="overflow-x-auto rounded-xl border border-neutral-200">
-            <table className="min-w-full divide-y divide-neutral-200 text-left text-sm">
-              <thead className="bg-neutral-50">
-                <tr>
-                  <th className="px-4 py-3 font-medium text-neutral-900">Cookie</th>
-                  <th className="px-4 py-3 font-medium text-neutral-900">Category</th>
-                  <th className="px-4 py-3 font-medium text-neutral-900">Purpose</th>
-                  <th className="px-4 py-3 font-medium text-neutral-900">Duration</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-200 bg-white">
-                {COOKIE_ROWS.map((row) => (
-                  <tr key={row.name}>
-                    <td className="px-4 py-3 font-mono text-xs text-neutral-900">{row.name}</td>
-                    <td className="px-4 py-3">{row.category}</td>
-                    <td className="px-4 py-3">{row.purpose}</td>
-                    <td className="px-4 py-3">{row.duration}</td>
-                  </tr>
+            <div className="scheme-border mt-8 border-t border-white/12 pt-7">
+              <h3 className="scheme-text-inverse-muted text-sm font-semibold uppercase tracking-[0.14em]">
+                {LEGAL_PAGE_COPY.privacy.commitmentsTitle}
+              </h3>
+              <ul className="scheme-text-inverse-body mt-4 space-y-3 text-sm leading-7">
+                {LEGAL_PAGE_COPY.privacy.commitments.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
-              </tbody>
-            </table>
+              </ul>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/contact" className="home-btn-primary">
+                Contact team
+              </Link>
+              <Link href="/downloads" className="home-btn-secondary">
+                Open Resource Desk
+              </Link>
+            </div>
+          </aside>
+
+          <div className="scheme-panel scheme-border rounded-[2rem] border p-7 md:p-9">
+            <div className="space-y-6">
+              {LEGAL_PAGE_COPY.privacy.intro.map((paragraph) => (
+                <p key={paragraph} className="page-copy scheme-text-body">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className="scheme-border mt-10 grid gap-8 border-t pt-10 md:grid-cols-2">
+              <article className="space-y-4">
+                <h2 className="typ-card scheme-text-strong">How we use your information</h2>
+                <p className="page-copy-sm scheme-text-body">
+                  We use submitted information to respond to quote requests, follow up on workspace
+                  enquiries, improve service quality, and maintain internal records of sales and
+                  support conversations.
+                </p>
+                <p className="page-copy-sm scheme-text-body">
+                  We do not sell your personal information. We may disclose information when
+                  required by law, to investigate misuse, or to maintain and secure our services.
+                </p>
+              </article>
+
+              <article className="space-y-4">
+                <h2 className="typ-card scheme-text-strong">Links and security</h2>
+                <p className="page-copy-sm scheme-text-body">
+                  Our website may link to external websites. Their privacy practices are separate
+                  from ours, so you should review their policies before sharing information there.
+                </p>
+                <p className="page-copy-sm scheme-text-body">
+                  We use reasonable technical and organisational measures to protect the information
+                  we collect. No system can guarantee absolute security, but we take steps to
+                  reduce risk and restrict unnecessary access.
+                </p>
+              </article>
+            </div>
+
+            <div className="scheme-panel-soft scheme-border mt-10 overflow-hidden rounded-[1.75rem] border">
+              <div className="px-6 py-6 md:px-8">
+                <h2 className="typ-card scheme-text-strong">
+                  Cookies, tags, and similar technologies
+                </h2>
+                <p className="page-copy-sm scheme-text-body mt-3">
+                  We use one essential cookie to remember your consent choice and optional analytics
+                  and attribution cookies to record landing page, referrer, and UTM parameters when
+                  you accept them in the cookie banner.
+                </p>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-neutral-200 text-left text-sm">
+                  <thead className="bg-white/70">
+                    <tr>
+                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Cookie</th>
+                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Category</th>
+                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Purpose</th>
+                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-neutral-200 bg-white/90">
+                    {COOKIE_ROWS.map((row) => (
+                      <tr key={row.name}>
+                        <td className="px-6 py-3 text-xs font-medium tracking-ui-001 text-neutral-900 md:px-8">
+                          {row.name}
+                        </td>
+                        <td className="px-6 py-3 text-neutral-700 md:px-8">{row.category}</td>
+                        <td className="px-6 py-3 text-neutral-700 md:px-8">{row.purpose}</td>
+                        <td className="px-6 py-3 text-neutral-700 md:px-8">{row.duration}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="scheme-border mt-10 flex flex-col gap-4 border-t pt-8 md:flex-row md:items-center md:justify-between">
+              <div>
+                <h2 className="typ-card scheme-text-strong">Questions about privacy?</h2>
+                <p className="page-copy-sm scheme-text-body mt-2">
+                  For privacy questions or requests, email{" "}
+                  <a
+                    href={`mailto:${SITE_CONTACT.salesEmail}`}
+                    className="font-semibold text-primary transition-colors hover:text-primary-hover"
+                  >
+                    {SITE_CONTACT.salesEmail}
+                  </a>
+                  . The latest version of this policy will always be published on this page.
+                </p>
+              </div>
+              <Link href="/contact" className="btn-outline">
+                Contact support
+              </Link>
+            </div>
           </div>
-
-          <h2 className="mt-8 text-xl font-medium text-neutral-900">
-            Links to other websites
-          </h2>
-          <p>
-            Our website may link to external websites. Their privacy practices are separate from
-            ours, so you should review their policies before sharing information there.
-          </p>
-
-          <h2 className="mt-8 text-xl font-medium text-neutral-900">
-            How we protect information
-          </h2>
-          <p>
-            We use reasonable technical and organisational measures to protect the information we
-            collect. No system can guarantee absolute security, but we take steps to reduce risk
-            and restrict unnecessary access.
-          </p>
-
-          <h2 className="mt-8 text-xl font-medium text-neutral-900">Contact</h2>
-          <p>
-            For privacy questions or requests, email{" "}
-            <a
-              href="mailto:sales@oando.co.in"
-              className="font-medium text-primary hover:underline"
-            >
-              sales@oando.co.in
-            </a>
-            .
-          </p>
-
-          <h2 className="mt-8 text-xl font-medium text-neutral-900">
-            Changes to this policy
-          </h2>
-          <p>
-            We may update this privacy policy from time to time. The latest version will always be
-            published on this page.
-          </p>
         </div>
       </section>
+
+      <ContactTeaser />
     </section>
   );
 }

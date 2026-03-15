@@ -71,7 +71,7 @@ export function Hero({
   return (
     <section
       ref={containerRef}
-      className={`relative w-full overflow-hidden group bg-neutral-900 hero-section ${getHeightClass()}${isSmall ? " page-hero" : ""}`}
+      className={`scheme-panel-dark relative w-full overflow-hidden group hero-section ${getHeightClass()}${isSmall ? " page-hero" : ""}`}
     >
       {/* Parallax Background */}
       <motion.div
@@ -100,12 +100,11 @@ export function Hero({
             priority
           />
         ) : (
-          <div className="w-full h-full bg-neutral-800" />
+          <div className="w-full h-full" />
         )}
 
-        {/* Overlays */}
-        <div className="absolute inset-0 bg-neutral-900/40" />
-        <div className="absolute inset-0 bg-linear-to-t from-neutral-900 via-transparent to-neutral-900/30" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/72 via-transparent to-black/28" />
       </motion.div>
 
       {/* Content Container */}
@@ -119,12 +118,12 @@ export function Hero({
           >
             <motion.div variants={titleVariants} className="overflow-hidden">
               <h1
-                className={`${isSmall ? "text-4xl md:text-6xl" : "text-[56px] sm:text-[72px] md:text-[96px]"} font-light text-white leading-[1.05] tracking-tight`}
+                className={`hero-title ${isSmall ? "text-4xl md:text-6xl" : "text-ui-56 sm:text-ui-72 md:text-ui-96"} scheme-text-inverse`}
               >
                 {title || (
                   <>
                     Create your <br />
-                    <span className="text-white/80 italic font-light">
+                    <span className="hero-accent scheme-text-inverse-muted">
                       best work.
                     </span>
                   </>
@@ -135,7 +134,7 @@ export function Hero({
             {subtitle && (
               <motion.p
                 variants={titleVariants}
-                className="text-lg md:text-xl lg:text-2xl text-neutral-300 max-w-2xl font-light leading-relaxed"
+                className="hero-subtitle scheme-text-inverse-muted max-w-2xl"
               >
                 {subtitle}
               </motion.p>
@@ -147,7 +146,7 @@ export function Hero({
                   href={buttonLink}
                   className="group inline-flex items-center justify-center gap-4 bg-primary px-10 py-5 text-white transition-all hover:bg-primary-hover hover:shadow-xl"
                 >
-                  <span className="text-sm font-bold uppercase tracking-[0.2em]">
+                  <span className="text-sm font-bold uppercase tracking-ui-020">
                     {buttonText}
                   </span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
@@ -172,7 +171,7 @@ export function Hero({
             className="absolute inset-0 w-full h-1/2 bg-primary"
           />
         </div>
-        <span className="text-[10px] uppercase tracking-[0.4em] text-white/50 origin-center rotate-90 translate-y-8">
+        <span className="text-ui-10 uppercase tracking-ui-040 scheme-text-inverse-subtle origin-center rotate-90 translate-y-8">
           Scroll
         </span>
       </motion.div>

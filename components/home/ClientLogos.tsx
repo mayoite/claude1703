@@ -32,7 +32,7 @@ export function ClientLogos() {
     <section>
       <div className="container mx-auto px-6 lg:px-12 pt-24 pb-12">
         <div className="max-w-4xl mb-16">
-          <p className="text-sm tracking-[0.3em] uppercase text-neutral-400 mb-4">
+          <p className="scheme-text-muted text-sm tracking-[0.3em] uppercase mb-4">
             Why choose us
           </p>
           <h2 className="font-slogan text-5xl mb-6 text-neutral-900">

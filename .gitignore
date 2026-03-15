@@ -55,6 +55,10 @@ local.env
 .lh-chrome-manual/
 .lh-profiles/
 .lh-temp/
+.playwright-cli/
+.vscode/
+.swc/
+/0
 playwright-report/
 test-results/
 .netlify/

@@ -9,7 +9,7 @@ const features = [
     icon: Activity,
     title: "Performance-Graded Components",
     description:
-      "Every system is rated for sustained enterprise use — tested for load, cycle, and ergonomic compliance.",
+      "Every system is selected for sustained enterprise use, with attention to load, cycle, and ergonomic performance.",
   },
   {
     icon: ShieldCheck,
@@ -21,40 +21,37 @@ const features = [
     icon: Leaf,
     title: "Sustainable Engineering",
     description:
-      "Low-emission materials, recycled substrates, and responsible supply chains — engineered for a net-positive future.",
+      "Low-emission materials, recycled substrates, and responsible supply chains support a longer-life workspace strategy.",
   },
   {
     icon: Zap,
     title: "Scalable System Design",
     description:
-      "Modular by design. Configure for 5 or 500 workpoints without retrofitting — engineered to scale with you.",
+      "Modular by design, so teams can scale from pilot zones to large rollouts without rebuilding the whole specification.",
   },
-];
+] as const;
 
 export function WhyChooseUs() {
   const { ref, isVisible } = useInViewOnce();
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
-        {/* Header */}
+    <section className="scheme-section-soft scheme-border w-full border-y py-18 md:py-22">
+      <div className="container px-6 2xl:px-0">
         <div
           ref={ref}
-          className={`mb-16 max-w-3xl reveal-on-scroll ${isVisible ? "visible" : ""}`}
+          className={`mb-12 max-w-3xl reveal-on-scroll ${isVisible ? "visible" : ""}`}
         >
-          <p className="text-xs font-bold tracking-[0.25em] uppercase text-neutral-400 mb-4">
-            Why One &amp; Only
-          </p>
-          <h2 className="text-3xl md:text-4xl text-neutral-900 tracking-tight mb-6">
-            We engineer workspace systems
+          <p className="typ-label scheme-text-body mb-4">Why One &amp; Only</p>
+          <h2 className="typ-section scheme-text-strong mb-5">
+            We engineer workspace systems,
             <br />
-            <span className="italic text-primary">not just furniture.</span>
+            <span className="scheme-text-brand italic">not just furniture.</span>
           </h2>
-          <p className="text-lg text-neutral-500 leading-relaxed">
-            We engineer workspace systems that improve productivity, health, and
-            scalability — trusted by corporate, government, and institutional
-            clients across Bihar and beyond.
+          <p className="page-copy scheme-text-body max-w-2xl">
+            We build planning-led furniture systems that improve usability, durability, and rollout
+            confidence for corporate, government, and institutional teams across Bihar and beyond.
           </p>
+
           <ul className="mt-8 flex flex-wrap gap-4">
             {[
               "Performance-graded components",
@@ -63,35 +60,32 @@ export function WhyChooseUs() {
             ].map((bullet) => (
               <li
                 key={bullet}
-                className="flex items-center gap-2 px-4 py-2 bg-neutral-50 border border-neutral-200 rounded-full text-sm text-neutral-700 font-medium"
+                className="scheme-panel scheme-border scheme-text-body flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium"
               >
-                <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 {bullet}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-neutral-200">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
           {features.map((feature, index) => (
             <motion.div
-              key={index}
+              key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="p-8 border-b lg:border-b-0 lg:border-r border-neutral-200 hover:bg-neutral-50 transition-colors last:border-r-0 group"
+              className="scheme-panel scheme-border group rounded-[1.5rem] border p-8 transition-colors hover:border-neutral-400"
             >
-              <div className="mb-6 text-neutral-900 group-hover:text-primary transition-colors">
-                <feature.icon className="w-8 h-8" strokeWidth={1} />
+              <div className="mb-6 text-neutral-900 transition-colors group-hover:text-primary">
+                <feature.icon className="h-8 w-8" strokeWidth={1} />
               </div>
-              <h3 className="text-xl font-medium text-neutral-900 mb-3 tracking-tight">
+              <h3 className="mb-3 text-xl font-medium tracking-tight text-neutral-900">
                 {feature.title}
               </h3>
-              <p className="text-[15px] text-neutral-500 leading-relaxed font-light">
-                {feature.description}
-              </p>
+              <p className="page-copy-sm scheme-text-body">{feature.description}</p>
             </motion.div>
           ))}
         </div>

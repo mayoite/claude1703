@@ -1,0 +1,914 @@
+{
+  "generatedAt": "2026-03-15T14:17:19.165Z",
+  "mode": "apply",
+  "offset": 50,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "dd5e6254-462f-4f6c-905d-71d00c5f2ead",
+      "slug": "oando-seating--sway",
+      "name": "Sway",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Sway is a mesh chair designed for posture support and comfort.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Shaping your daily rhythm, Where motion meets intention."
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "Armrest length: 250 mm.; Seat height till ground: 430 mm.; Total length: 1010 mm.; Seat base width (including wheels): 660 mm.; Seat backrest width: 465 mm.; Overall height: 1180 mm.; Armrest height till seat: 300 mm.; Armrest width: 95 mm.; Headrest width: 320 mm.; Headrest length: 170 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO",
+          "BIFMA - SWAY"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Shaping your daily rhythm, Where motion meets intention.",
+            "body": "Sway is crafted for those who thrive on fluidity and focus. Its agile design empowers seamless transitions between tasks, offering dependable ease and elegant responsiveness. More than just a chair—it’s a rhythm partner for your workday."
+          },
+          {
+            "heading": "",
+            "body": "A supple frame and tailored adjustments keep your form aligned, easing physical effort and allowing mental clarity to take the lead"
+          },
+          {
+            "heading": "",
+            "body": "Sway’s multidirectional arm platforms adapt to your preferred angle and elevation, minimizing pressure on upper limbs and enhancing ease"
+          },
+          {
+            "heading": "",
+            "body": "Engineered with a contouring back zone that adjusts to your curvature, Sway encourages an upright stance and mitigates tension near the spine"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Armrest length: 250 mm.",
+              "Seat height till ground: 430 mm.",
+              "Total length: 1010 mm.",
+              "Seat base width (including wheels): 660 mm.",
+              "Seat backrest width: 465 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1180 mm.",
+              "Armrest height till seat: 300 mm.",
+              "Armrest width: 95 mm.",
+              "Headrest width: 320 mm.",
+              "Headrest length: 170 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO",
+          "BIFMA - SWAY"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": true,
+        "warrantyYears": 10,
+        "ai_alt_text": "Sway Mesh Chair",
+        "sourceSlug": "sway"
+      },
+      "alt_text": "Sway Mesh Chair",
+      "sourceSlug": "sway",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e795d6969b05d2baab2fe5_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e7960b8fb066143d9976a8_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e7967804d095163e39c2c6_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e796af8a0345f3fee45498_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e796c75521524de0d38ca2_SECTION%203-SCROLL%20IMAGES%20CHAIR%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO",
+        "BIFMA - SWAY"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--sway/image-1.jpg",
+        "/images/catalog/oando-seating--sway/image-2.jpg",
+        "/images/catalog/oando-seating--sway/image-3.jpg",
+        "/images/catalog/oando-seating--sway/image-4.jpg",
+        "/images/catalog/oando-seating--sway/image-5.jpg"
+      ]
+    },
+    {
+      "id": "7bf099c8-f632-4e48-b3ff-4cc906d165d0",
+      "slug": "oando-seating--toro",
+      "name": "Toro",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Toro is a mesh chair designed for durability and comfort.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Toro Mesh Chair",
+        "sourceSlug": "toro"
+      },
+      "alt_text": "Toro Mesh Chair",
+      "sourceSlug": "toro",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": []
+    },
+    {
+      "id": "593198de-3182-4503-bfac-2327a90f35f7",
+      "slug": "oando-seating--wing",
+      "name": "Wing",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Wing is a cafe chair designed for posture support and daily comfort.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Wing Cafe Chair",
+        "sourceSlug": "wing"
+      },
+      "alt_text": "Wing Cafe Chair",
+      "sourceSlug": "wing",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [],
+      "sourceDocs": [],
+      "sourceCertifications": [],
+      "localImages": []
+    },
+    {
+      "id": "cc7f0ee3-38d3-40bc-ae50-4f05a5468362",
+      "slug": "oando-seating--x-mesh",
+      "name": "X-Mesh",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "X-Mesh is a mesh chair designed for breathability and comfort.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Intelligent Spine Support"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Intelligent Spine Support",
+            "body": "The X Mess chair is crafted for ultimate comfort with a high quality PU moulded cushion and support that enhances posture and reduces strain."
+          },
+          {
+            "heading": "",
+            "body": "Designed for extended work hours, the chair features a breathable mesh back and adjustable armrests for personalized comfort. With its sleek design and durable construction, X Mess is a perfect fit for modern, high performance workspaces."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "X-Mesh Mesh Chair",
+        "sourceSlug": "x-mesh"
+      },
+      "alt_text": "X-Mesh Mesh Chair",
+      "sourceSlug": "x-mesh",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6968977f1b160ac124929802_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6968979217ee51d40ceebb0c_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/696897aafdc11a6c5e96f336_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/696897bf937e8f1a3655f586_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--x-mesh/image-1.jpg",
+        "/images/catalog/oando-seating--x-mesh/image-2.jpg",
+        "/images/catalog/oando-seating--x-mesh/image-3.jpg",
+        "/images/catalog/oando-seating--x-mesh/image-4.jpg"
+      ]
+    },
+    {
+      "id": "542941de-0ae6-4222-ba00-f2d972eca38b",
+      "slug": "oando-seating--zilo",
+      "name": "Zilo",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Zilo is a cafe chair designed for flexible and stylish workspaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Classic Essential"
+        ],
+        "materials": [],
+        "dimensions": "Height: 800mm.; Width: 550 mm.; Depth: 440 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Classic Essential",
+            "body": "The Zilo Café Chair reflects modern simplicity with its clean, confident form. Its ergonomically shaped seat offers comfortable support, making it suitable for long hours of use. Designed with contemporary appeal, it blends seamlessly into café, dining, and social environments."
+          },
+          {
+            "heading": "",
+            "body": "Lightweight and highly versatile, the Flare Café Chair performs effortlessly in both indoor and outdoor spaces. Its durable construction ensures reliable everyday use while maintaining a sleek, minimal aesthetic. Practical yet stylish, it fits perfectly into a variety of modern settings."
+          },
+          {
+            "heading": "",
+            "body": "The gently curved backrest supports the spine for comfortable, upright seating, while its wide surface ensures balanced comfort for longer use."
+          },
+          {
+            "heading": "",
+            "body": "The polished metal legs offer strong stability with a clean, modern look. Their slim tubular form keeps the chair lightweight and easy to move without sacrificing durability, making them ideal for long-lasting performance in both home and commercial spaces."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Zilo",
+            "lines": [
+              "Height: 800mm.",
+              "Width: 550 mm.",
+              "Depth: 440 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Zilo Cafe Chair",
+        "sourceSlug": "zilo"
+      },
+      "alt_text": "Zilo Cafe Chair",
+      "sourceSlug": "zilo",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af0713d9e608442789fb2_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af08385f137c0d9fdac33_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af0956cdd7e8bcb48a58a_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692af0aa85f137c0d9fdb603_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--zilo/image-1.jpg",
+        "/images/catalog/oando-seating--zilo/image-2.jpg",
+        "/images/catalog/oando-seating--zilo/image-3.jpg",
+        "/images/catalog/oando-seating--zilo/image-4.jpg"
+      ]
+    },
+    {
+      "id": "63a148c1-c26e-4cc1-af04-8991dbe5b4a4",
+      "slug": "oando-soft-seating--accent",
+      "name": "Accent",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Accent is a lounge designed for modern design and functional workspaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Effortless Modernity"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Width (Front View): 870 mm Overall Depth (Side View): 860 mm Overall Height: 820 mm Seat Height: 410 mm‍",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Effortless Modernity",
+            "body": "The Accent blends contemporary elegance with exceptional comfort, featuring a sleek, sculpted silhouette and plush brown upholstery. Its refined form adds sophistication to any office, lounge, or collaborative space. Designed to create a welcoming atmosphere, it pairs style with effortless ease."
+          },
+          {
+            "heading": "",
+            "body": "Supported by sturdy black metal legs, the chair offers reliable stability while maintaining a modern, lightweight look. Its durable structure ensures long-lasting performance in high-use environments. Perfect for relaxation or casual meetings, it delivers a balance of comfort, functionality, and visual appeal."
+          },
+          {
+            "heading": "",
+            "body": "The wide, softly curved backrest and arm integration create a cocoon-like form that supports the body naturally, offering exceptional comfort for long sitting sessions."
+          },
+          {
+            "heading": "",
+            "body": "The double-layered seat with plush, high-density cushioning provides superior softness and resilience, ensuring lasting comfort and an elevated luxe feel."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Accent",
+            "lines": [
+              "Overall Width (Front View): 870 mm Overall Depth (Side View): 860 mm Overall Height: 820 mm Seat Height: 410 mm‍"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Accent Lounge",
+        "sourceSlug": "accent"
+      },
+      "alt_text": "Accent Lounge",
+      "sourceSlug": "accent",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6928218f38966bbe8aff5176_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692821b23c414ee98bcedd85_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692821cda1382544b1a047c6_IMG%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--accent/image-1.jpg",
+        "/images/catalog/oando-soft-seating--accent/image-2.jpg",
+        "/images/catalog/oando-soft-seating--accent/image-3.jpg"
+      ]
+    },
+    {
+      "id": "e2aad7b5-cf88-41b9-8870-4a68e1e42f89",
+      "slug": "oando-soft-seating--adam",
+      "name": "Adam",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Adam is a lounge designed for modern workspaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Elegant Comfort"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 900 mm Seat Height: 450 mm; Overall Width (Top View): 550 mm Overall Depth (Top View): 600 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Elegant Comfort",
+            "body": "Adam Soft Seating features a seamless flowing seat to arm design that invites relaxation while maintaining a contemporary, elegant presence. Its sculpted form enhances comfort and adds sophistication to modern lounges, collaborative areas, and reception spaces. Designed to create a warm, inviting atmosphere, it blends beauty with ease."
+          },
+          {
+            "heading": "",
+            "body": "Supported by different base—customizable with different finish options—the chair offers both durability and visual refinement."
+          },
+          {
+            "heading": "",
+            "body": "The smoothly curved backrest and integrated arm design offer a snug, ergonomic hold that supports natural posture and enhances comfort during prolonged sitting."
+          },
+          {
+            "heading": "",
+            "body": "The rich, woven fabric and leather adds warmth and tactility, while delivering durability and a refined aesthetic suitable for premium cafés, lounges, and collaborative spaces."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Adam",
+            "lines": [
+              "Overall Height: 900 mm Seat Height: 450 mm",
+              "Overall Width (Top View): 550 mm Overall Depth (Top View): 600 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Adam Lounge",
+        "sourceSlug": "adam"
+      },
+      "alt_text": "Adam Lounge",
+      "sourceSlug": "adam",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1f263fc3b1f818e9eb54_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1f379755e85f9ddc615a_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1f61a7d00137e40232bd_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1f79aa26e8c8a8e90b76_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1f8ad5e000f286b57655_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1fa1d5e000f286b588f8_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--adam/image-1.jpg",
+        "/images/catalog/oando-soft-seating--adam/image-2.jpg",
+        "/images/catalog/oando-soft-seating--adam/image-3.jpg",
+        "/images/catalog/oando-soft-seating--adam/image-4.jpg",
+        "/images/catalog/oando-soft-seating--adam/image-5.jpg",
+        "/images/catalog/oando-soft-seating--adam/image-6.jpg"
+      ]
+    },
+    {
+      "id": "ec91839f-eb1d-4ede-bc58-e5787019d3f5",
+      "slug": "oando-soft-seating--alonzo",
+      "name": "Alonzo",
+      "category_id": "soft-seating",
+      "series_name": "Sofa",
+      "description": "Alonzo is a sofa designed for comfort and modern interiors.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Sofa",
+        "features": [
+          "Crafted for Modern Focus and Elevated Comfort"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "01 SEATER Size - 850 X800 X450-750 H MM; 02 SEATER Size - 1500 X800 X450-750 H MM; 03 SEATER Size - 2000 X800 X450-750 H MM",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Crafted for Modern Focus and Elevated Comfort",
+            "body": "Alonzo blends modern comfort with a distinctive channelled silhouette and wraparound design, creating natural boundaries for focused work or relaxed collaboration. Its form brings both style and purpose to contemporary spaces."
+          },
+          {
+            "heading": "",
+            "body": "The precise vertical tufting adds visual texture while offering ergonomic support. Integrated side tables enhance functionality, extending usability without disrupting its clean, refined aesthetic."
+          },
+          {
+            "heading": "",
+            "body": "Expertly detailed stitching delivers a classic, enduring appeal while reinforcing durability, ensuring the design remains elegant and intact through years of everyday use."
+          },
+          {
+            "heading": "",
+            "body": "The precisely executed vertical tufting adds depth and structure to the upholstery, creating a refined visual rhythm. Beyond aesthetics, it enhances back support and maintains fabric integrity over time, delivering a clean, tailored look that elevates any modern workspace or lounge setting."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Alonzo",
+            "lines": [
+              "01 SEATER Size - 850 X800 X450-750 H MM",
+              "02 SEATER Size - 1500 X800 X450-750 H MM",
+              "03 SEATER Size - 2000 X800 X450-750 H MM"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Sofa",
+        "subcategoryId": "sofa",
+        "subcategoryLabel": "Sofa",
+        "subcategory_slug": "sofa",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Alonzo Sofa",
+        "sourceSlug": "alonzo"
+      },
+      "alt_text": "Alonzo Sofa",
+      "sourceSlug": "alonzo",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Sofa",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d496179279441f70caf1f_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d497bf5e74e4fcd575454_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d498dec81a2f1510244d3_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d49a961d28656a6bb7cec_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d49b8ca85dbf3fb78b686_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d49c62ed461aa40feb5ab_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--alonzo/image-1.jpg",
+        "/images/catalog/oando-soft-seating--alonzo/image-2.jpg",
+        "/images/catalog/oando-soft-seating--alonzo/image-3.jpg",
+        "/images/catalog/oando-soft-seating--alonzo/image-4.jpg",
+        "/images/catalog/oando-soft-seating--alonzo/image-5.jpg",
+        "/images/catalog/oando-soft-seating--alonzo/image-6.jpg"
+      ]
+    },
+    {
+      "id": "acfc5d9e-8313-4e8e-9c24-f3461ca357b0",
+      "slug": "oando-soft-seating--arcana",
+      "name": "Arcana",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Arcana is a lounge designed for executive spaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Essential Form"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 790 Seat Height: 450; Seat Width(Front View): 500 Seat Depth (Top View): 490",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Essential Form",
+            "body": "Arcana Soft Seating is defined by its precise curves and perfectly balanced proportions, creating a silhouette that feels both modern and inviting. Its slim frame supports a generously upholstered seat and back, achieving a look that is lightweight in form yet substantial in comfort."
+          },
+          {
+            "heading": "",
+            "body": "Built for versatility, it transitions effortlessly across settings. From informal meetings to dining and lounge spaces, it offers substantial comfort in every environment."
+          },
+          {
+            "heading": "",
+            "body": "The semi-curved back with padded side wings offers a gentle embrace, delivering improved lateral support and a relaxed seating feel ideal for long conversations."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Arcana",
+            "lines": [
+              "Overall Height: 790 Seat Height: 450",
+              "Seat Width(Front View): 500 Seat Depth (Top View): 490"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Arcana Lounge",
+        "sourceSlug": "arcana"
+      },
+      "alt_text": "Arcana Lounge",
+      "sourceSlug": "arcana",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1c25fc428ef29ae77430_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1bd2a7d00137e4007f2b_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1be44e83419f10bb3494_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1bf55b31e825a52e870c_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1c16ce98c9d29b550a06_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--arcana/image-1.jpg",
+        "/images/catalog/oando-soft-seating--arcana/image-2.jpg",
+        "/images/catalog/oando-soft-seating--arcana/image-3.jpg",
+        "/images/catalog/oando-soft-seating--arcana/image-4.jpg",
+        "/images/catalog/oando-soft-seating--arcana/image-5.jpg"
+      ]
+    },
+    {
+      "id": "f214f703-ff09-4a19-83ad-a7f4261c10b5",
+      "slug": "oando-soft-seating--arco",
+      "name": "Arco",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Arco is a lounge designed for stylish and functional workspaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Elegant Comfort"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height (Side View): 750 mm Seat Height: 458 mm Overall Seat + Back Height (Front): 615 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Elegant Comfort",
+            "body": "Arco Soft Seating offers a seamless fusion of style and comfort with its flowing seat to arm design that naturally invites relaxation. The smooth, sculpted form creates a welcoming presence, making it ideal for modern lounges and sophisticated interior settings. Its balanced proportions enhance both visual appeal and user ease."
+          },
+          {
+            "heading": "",
+            "body": "Supported by an elegant wooden base—customizable in a range of finishes—Arco combines durability with premium craftsmanship. The twin stitched backrest adds both strength and a refined, artisanal touch."
+          },
+          {
+            "heading": "",
+            "body": "The deep, curved backrest offers an enveloping feel, giving superior comfort and a premium lounge experience ideal for relaxed seating spaces."
+          },
+          {
+            "heading": "",
+            "body": "The generously padded, double-cushioned seat enhances softness and maintains shape over time, delivering long-lasting comfort and durability for high-traffic environments."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "ARCO",
+            "lines": [
+              "Overall Height (Side View): 750 mm Seat Height: 458 mm Overall Seat + Back Height (Front): 615 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Arco Lounge",
+        "sourceSlug": "arco"
+      },
+      "alt_text": "Arco Lounge",
+      "sourceSlug": "arco",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bee1f4fce2f9b95524eb4_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bee35dca1de679d55d122_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bee4c6a25c5e0dd5dce78_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bee655a5ea772fd0bd07d_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--arco/image-1.jpg",
+        "/images/catalog/oando-soft-seating--arco/image-2.jpg",
+        "/images/catalog/oando-soft-seating--arco/image-3.jpg",
+        "/images/catalog/oando-soft-seating--arco/image-4.jpg"
+      ]
+    }
+  ],
+  "unmatched": []
+}

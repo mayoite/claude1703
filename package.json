@@ -31,7 +31,11 @@
     "audit:nhost:backup": "npx tsx scripts/audit_nhost_backup.ts",
     "supabase:backfill:canonical": "npx tsx scripts/backfill_canonical_catalog_metadata.ts",
     "nhost:sync": "npx tsx scripts/sync_nhost_backup.ts",
-    "assets:audit:thirdparty": "python scripts/audit_external_asset_hosts.py --fail-on-hit"
+    "assets:audit:thirdparty": "python scripts/audit_external_asset_hosts.py --fail-on-hit",
+    "recovery:snapshot": "node scripts/recovery-state.mjs",
+    "recovery:watch": "node scripts/recovery-state.mjs --watch --interval=45",
+    "recovery:chat-snapshot": "node scripts/chat-snapshot.mjs",
+    "recovery:handover": "node scripts/recovery-handover.mjs"
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.12",

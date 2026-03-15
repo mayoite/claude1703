@@ -108,6 +108,7 @@ export function buildFilterUrl(pathname: string, filters: ActiveFilters): string
 export function countActiveFilters(filters: ActiveFilters): number {
   let count = 0;
   if (filters.series !== DEFAULT_FILTERS.series) count++;
+  if (filters.query.trim()) count++;
   count += filters.subcategory.length;
   count += filters.priceRange.length;
   count += filters.material.length;

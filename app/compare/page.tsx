@@ -5,6 +5,8 @@ import {
   getCatalogCategoryLabel,
   normalizeRequestedCategoryId,
 } from "@/lib/catalogCategories";
+import { COMPARE_ROUTE_COPY } from "@/data/site/routeCopy";
+import { CompareColumnActions } from "@/components/products/CompareColumnActions";
 
 type CompareItem = {
   productUrlKey: string;
@@ -129,15 +131,29 @@ export default async function ComparePage({
       <div className="container px-6 py-14 2xl:px-0">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="typ-label mb-3 text-neutral-700">Product comparison</p>
-            <h1 className="typ-section text-neutral-950">Compare workstation and storage options</h1>
+            <p className="typ-label mb-3 text-neutral-700">{COMPARE_ROUTE_COPY.kicker}</p>
+            <h1 className="typ-section text-neutral-950">{COMPARE_ROUTE_COPY.title}</h1>
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-neutral-600">
+              {COMPARE_ROUTE_COPY.description}
+            </p>
+            {items.length > 0 ? (
+              <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-neutral-600">
+                <span className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1">
+                  {COMPARE_ROUTE_COPY.countLabel.replace("{count}", String(items.length))}
+                </span>
+                <span>{COMPARE_ROUTE_COPY.mobileHint}</span>
+              </div>
+            ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href="/configurator" className="btn-outline">
-              Open 2D configurator
+            <Link href="/products" className="btn-outline">
+              {COMPARE_ROUTE_COPY.browseCta}
             </Link>
-            <Link href="/contact" className="btn-primary">
-              Request quote
+            <Link href="/downloads" className="btn-outline">
+              {COMPARE_ROUTE_COPY.resourceDeskCta}
+            </Link>
+            <Link href="/contact?intent=quote&source=compare" className="btn-primary">
+              {COMPARE_ROUTE_COPY.primaryCta}
             </Link>
           </div>
         </div>
@@ -145,14 +161,17 @@ export default async function ComparePage({
         {items.length === 0 ? (
           <div className="rounded-xl border border-neutral-300 bg-neutral-50 p-8">
             <p className="text-lg text-neutral-800">
-              No products selected yet. Add products to compare from category listings or product pages.
+              {COMPARE_ROUTE_COPY.emptyTitle}
+            </p>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
+              {COMPARE_ROUTE_COPY.emptyDescription}
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link href="/products/workstations" className="btn-outline">
-                Browse workstations
+              <Link href="/products" className="btn-outline">
+                {COMPARE_ROUTE_COPY.emptyPrimaryCta}
               </Link>
-              <Link href="/products/storages" className="btn-outline">
-                Browse storages
+              <Link href="/downloads" className="btn-outline">
+                {COMPARE_ROUTE_COPY.emptySecondaryCta}
               </Link>
             </div>
           </div>
@@ -187,6 +206,14 @@ export default async function ComparePage({
                           </div>
                           <p className="text-sm font-semibold text-neutral-950">{item.product.name}</p>
                         </Link>
+                        <CompareColumnActions
+                          productId={item.product.slug || item.product.id}
+                          productName={item.product.name}
+                          productHref={productHref}
+                          image={image}
+                          viewLabel={COMPARE_ROUTE_COPY.viewProductCta}
+                          addLabel={COMPARE_ROUTE_COPY.addToQuoteCta}
+                        />
                       </th>
                     );
                   })}

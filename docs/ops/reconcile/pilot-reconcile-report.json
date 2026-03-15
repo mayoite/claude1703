@@ -29,7 +29,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship": "/images/afc/oando-seating--fluid-x/image-1.webp",
+        "flagship": "/images/catalog/oando-seating--fluid-x/image-1.webp",
         "imagesCount": 7,
         "sceneImagesCount": 3
       }
@@ -55,7 +55,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship": "/images/afc/oando-tables--apex/image-1.webp",
+        "flagship": "/images/catalog/oando-tables--apex/image-1.webp",
         "imagesCount": 7,
         "sceneImagesCount": 3
       }
@@ -81,7 +81,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship": "/images/afc/oando-workstations--adaptable/image-1.webp",
+        "flagship": "/images/catalog/oando-workstations--adaptable/image-1.webp",
         "imagesCount": 7,
         "sceneImagesCount": 3
       }

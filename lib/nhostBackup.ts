@@ -1,6 +1,14 @@
 import "server-only";
 
 import type { BusinessStats } from "@/lib/types/businessStats";
+import postgres from "postgres";
+
+export type NhostBusinessStatsSource = "nhost-graphql" | "nhost-sql";
+
+export interface NhostBusinessStatsResult {
+  stats: BusinessStats;
+  source: NhostBusinessStatsSource;
+}
 
 type NhostStatsRow = {
   projects_delivered?: number | null;
@@ -20,6 +28,17 @@ function toSafeDate(value: unknown, fallback: string): string {
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) return fallback;
   return parsed.toISOString().slice(0, 10);
+}
+
+function toBusinessStats(row: NhostStatsRow, fallbackDate: string): BusinessStats {
+  return {
+    projectsDelivered: toSafeNumber(row.projects_delivered),
+    clientOrganisations: toSafeNumber(row.client_organisations),
+    sectorsServed: toSafeNumber(row.sectors_served),
+    locationsServed: toSafeNumber(row.locations_served),
+    yearsExperience: toSafeNumber(row.years_experience),
+    asOfDate: toSafeDate(row.as_of_date, fallbackDate),
+  };
 }
 
 function buildEndpointCandidates(rawEndpoint: string): string[] {
@@ -47,7 +66,7 @@ function isSchemaUnavailable(errors: Array<{ message?: string }>): boolean {
 
 export async function fetchNhostBusinessStats(
   fallbackDate: string,
-): Promise<BusinessStats | null> {
+): Promise<NhostBusinessStatsResult | null> {
   if (process.env.NHOST_BACKUP_ENABLED !== "true") return null;
 
   const rawEndpoint =
@@ -56,9 +75,10 @@ export async function fetchNhostBusinessStats(
   const credential =
     process.env.NHOST_ADMIN_SECRET?.trim() ||
     process.env.NHOST_SERVICE_ROLE_KEY?.trim();
-  if (!rawEndpoint || !credential) return null;
-  const endpoints = buildEndpointCandidates(rawEndpoint);
-  if (endpoints.length === 0) return null;
+  const endpoints = rawEndpoint ? buildEndpointCandidates(rawEndpoint) : [];
+  if (!credential || endpoints.length === 0) {
+    return fetchNhostBusinessStatsViaSql(fallbackDate);
+  }
 
   const query = `
     query ActiveBusinessStats {
@@ -110,19 +130,15 @@ export async function fetchNhostBusinessStats(
             );
             if (denied) continue;
             if (isSchemaUnavailable(payload.errors)) continue;
-            return null;
+            return fetchNhostBusinessStatsViaSql(fallbackDate);
           }
 
           const row = payload.data?.business_stats_current?.[0];
-          if (!row) return null;
+          if (!row) return fetchNhostBusinessStatsViaSql(fallbackDate);
 
           return {
-            projectsDelivered: toSafeNumber(row.projects_delivered),
-            clientOrganisations: toSafeNumber(row.client_organisations),
-            sectorsServed: toSafeNumber(row.sectors_served),
-            locationsServed: toSafeNumber(row.locations_served),
-            yearsExperience: toSafeNumber(row.years_experience),
-            asOfDate: toSafeDate(row.as_of_date, fallbackDate),
+            stats: toBusinessStats(row, fallbackDate),
+            source: "nhost-graphql",
           };
         } finally {
           clearTimeout(timeoutId);
@@ -130,8 +146,48 @@ export async function fetchNhostBusinessStats(
       }
     }
 
-    return null;
+    return fetchNhostBusinessStatsViaSql(fallbackDate);
   } catch {
-    return null;
+    return fetchNhostBusinessStatsViaSql(fallbackDate);
+  }
+}
+
+async function fetchNhostBusinessStatsViaSql(
+  fallbackDate: string,
+): Promise<NhostBusinessStatsResult | null> {
+  const dbUrl = process.env.NHOST_DATABASE_URL?.trim();
+  if (!dbUrl) return null;
+
+  const sql = postgres(dbUrl, {
+    ssl: "require",
+    max: 1,
+    connect_timeout: 5,
+    idle_timeout: 10,
+  });
+
+  try {
+    const rows = await sql<NhostStatsRow[]>`
+      select
+        projects_delivered,
+        client_organisations,
+        sectors_served,
+        locations_served,
+        years_experience,
+        as_of_date
+      from public.business_stats_current
+      where is_active = true
+      order by updated_at desc nulls last, as_of_date desc
+      limit 1
+    `;
+
+    const row = rows[0];
+    if (!row) return null;
+
+    return {
+      stats: toBusinessStats(row, fallbackDate),
+      source: "nhost-sql",
+    };
+  } finally {
+    await sql.end({ timeout: 5 });
   }
 }

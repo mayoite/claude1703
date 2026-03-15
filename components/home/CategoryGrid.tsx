@@ -7,6 +7,7 @@ import {
   getCatalogCategoryHref,
   getCatalogCategoryLabel,
 } from "@/lib/catalogCategories";
+import { PRODUCTS_PAGE_COPY } from "@/data/site/routeCopy";
 
 const getCachedCatalog = unstable_cache(
   async () => getCatalog(),
@@ -22,11 +23,11 @@ export async function CategoryGrid() {
       <div className="container px-6 2xl:px-0">
         {/* Section header */}
         <div className="mb-12 md:mb-16 max-w-2xl">
-          <p className="text-[11px] font-semibold text-neutral-500 uppercase tracking-[0.22em] mb-3">
-            Product Range
+          <p className="typ-label scheme-text-muted mb-3">
+            {PRODUCTS_PAGE_COPY.rangeKicker}
           </p>
           <h2 className="text-4xl md:text-5xl font-light text-neutral-900 leading-[1] tracking-tight">
-            Explore products
+            {PRODUCTS_PAGE_COPY.rangeTitle}
           </h2>
         </div>
 
@@ -67,7 +68,7 @@ export async function CategoryGrid() {
                     </p>
                   </div>
                   <svg
-                    className="w-4 h-4 shrink-0 text-neutral-300 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300"
+                    className="scheme-text-subtle w-4 h-4 shrink-0 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

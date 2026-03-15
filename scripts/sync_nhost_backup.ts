@@ -81,6 +81,33 @@ const PAGE_SIZE = 1000;
 const MAX_RETRIES = 5;
 const BASE_RETRY_DELAY_MS = 800;
 
+function buildEndpointCandidates(rawEndpoint: string): string[] {
+  const trimmed = rawEndpoint.trim().replace(/\/+$/, "");
+  if (!trimmed) return [];
+  if (trimmed.endsWith("/v1/graphql")) {
+    const v1 = trimmed.replace(/\/v1\/graphql$/, "/v1");
+    return [trimmed, v1];
+  }
+  if (trimmed.endsWith("/v1")) {
+    return [`${trimmed}/graphql`, trimmed];
+  }
+  return [`${trimmed}/v1/graphql`, `${trimmed}/v1`, trimmed];
+}
+
+function getGraphqlHeaders(credential: string): Array<Record<string, string>> {
+  if (credential.includes(".")) {
+    return [
+      { "Content-Type": "application/json", Authorization: `Bearer ${credential}` },
+      { "Content-Type": "application/json", "x-hasura-admin-secret": credential },
+    ];
+  }
+
+  return [
+    { "Content-Type": "application/json", "x-hasura-admin-secret": credential },
+    { "Content-Type": "application/json", Authorization: `Bearer ${credential}` },
+  ];
+}
+
 function requiredEnv(name: string): string {
   const value = process.env[name]?.trim();
   if (!value) throw new Error(`Missing required env var: ${name}`);
@@ -137,49 +164,224 @@ async function fetchAllRows<T>(
   return rows;
 }
 
-async function verifyNhostGraphql() {
-  const endpoint =
+type VerificationInputs = {
+  sampleProductSlug: string;
+  sampleActiveAliasSlug: string | null;
+  expectedActiveBusinessStatsRows: number;
+};
+
+function summarizeError(error: unknown): string {
+  if (!error) return "unknown error";
+  if (error instanceof Error) return error.message;
+  return String(error);
+}
+
+async function runNhostGraphqlQuery<T>(
+  label: string,
+  query: string,
+  variables: Record<string, unknown> = {},
+): Promise<T> {
+  const rawEndpoint =
     process.env.NHOST_GRAPHQL_ENDPOINT?.trim() ||
     process.env.NHOST_GRAPHQL_URL?.trim();
-  const adminSecret =
+  const credential =
     process.env.NHOST_ADMIN_SECRET?.trim() ||
     process.env.NHOST_SERVICE_ROLE_KEY?.trim();
-
-  if (!endpoint || !adminSecret) {
-    console.warn("[verify] skipped GraphQL verification (missing endpoint/admin secret)");
-    return;
+  if (!rawEndpoint || !credential) {
+    throw new Error(
+      `[verify:graphql:${label}] missing NHOST_GRAPHQL_ENDPOINT/NHOST_GRAPHQL_URL or NHOST_ADMIN_SECRET/NHOST_SERVICE_ROLE_KEY`,
+    );
   }
 
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-hasura-admin-secret": adminSecret,
-    },
-    body: JSON.stringify({
-      query: `
-        query VerifyBackup {
-          products(limit: 1) { id slug }
+  const endpoints = buildEndpointCandidates(rawEndpoint);
+  const headerCandidates = getGraphqlHeaders(credential);
+  let lastError = "unknown GraphQL error";
+
+  for (const endpoint of endpoints) {
+    for (const headers of headerCandidates) {
+      try {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers,
+          body: JSON.stringify({ query, variables }),
+          cache: "no-store",
+        });
+
+        if (!response.ok) {
+          lastError = `http ${response.status}`;
+          continue;
+        }
+
+        const payload = (await response.json()) as {
+          data?: T;
+          errors?: Array<{ message?: string }>;
+        };
+
+        if (Array.isArray(payload.errors) && payload.errors.length > 0) {
+          lastError = payload.errors[0]?.message || "unknown GraphQL error";
+          continue;
+        }
+
+        if (!payload.data) {
+          lastError = "missing GraphQL data payload";
+          continue;
+        }
+
+        return payload.data;
+      } catch (error) {
+        lastError = summarizeError(error);
+      }
+    }
+  }
+
+  throw new Error(`[verify:graphql:${label}] ${lastError}`);
+}
+
+async function verifyNhostGraphqlReads(input: VerificationInputs) {
+  const productData = await runNhostGraphqlQuery<{ products?: Array<{ id: string; slug: string }> }>(
+    "product-by-slug",
+    `
+      query VerifyProductBySlug($slug: String!) {
+        products(where: { slug: { _eq: $slug } }, limit: 1) {
+          id
+          slug
+        }
+      }
+    `,
+    { slug: input.sampleProductSlug },
+  );
+  const productRows = productData.products ?? [];
+  if (productRows.length === 0) {
+    throw new Error(`[verify:graphql:product-by-slug] missing slug=${input.sampleProductSlug}`);
+  }
+
+  const statsData = await runNhostGraphqlQuery<{
+    business_stats_current?: Array<{ id: string; as_of_date: string; is_active: boolean }>;
+  }>(
+    "active-business-stats",
+    `
+      query VerifyActiveBusinessStats {
+        business_stats_current(where: { is_active: { _eq: true } }, limit: 1) {
+          id
+          as_of_date
+          is_active
+        }
+      }
+    `,
+  );
+  const statsRows = statsData.business_stats_current ?? [];
+  if (input.expectedActiveBusinessStatsRows > 0 && statsRows.length === 0) {
+    throw new Error("[verify:graphql:active-business-stats] missing active row");
+  }
+
+  if (input.sampleActiveAliasSlug) {
+    const aliasData = await runNhostGraphqlQuery<{
+      product_slug_aliases?: Array<{ alias_slug: string; canonical_slug: string }>;
+    }>(
+      "alias-lookup",
+      `
+        query VerifyAliasLookup($aliasSlug: String!) {
+          product_slug_aliases(
+            where: { alias_slug: { _eq: $aliasSlug }, is_active: { _eq: true } }
+            limit: 1
+          ) {
+            alias_slug
+            canonical_slug
+          }
         }
       `,
-    }),
-    cache: "no-store",
-  });
-
-  const payload = (await response.json()) as {
-    errors?: Array<{ message?: string }>;
-    data?: {
-      products?: Array<{ id: string; slug: string }>;
-    };
-  };
-
-  if (Array.isArray(payload.errors) && payload.errors.length > 0) {
-    throw new Error(`[nhost:graphql] ${payload.errors[0]?.message || "unknown error"}`);
+      { aliasSlug: input.sampleActiveAliasSlug },
+    );
+    const aliasRows = aliasData.product_slug_aliases ?? [];
+    if (aliasRows.length === 0) {
+      throw new Error(
+        `[verify:graphql:alias-lookup] missing alias_slug=${input.sampleActiveAliasSlug}`,
+      );
+    }
+  } else {
+    console.log("[verify] GraphQL alias lookup skipped (no active alias rows to verify)");
   }
 
   console.log(
-    `[verify] GraphQL products=${payload.data?.products?.length ?? 0}`,
+    `[verify] GraphQL reads ok: product-by-slug, active-business-stats${input.sampleActiveAliasSlug ? ", alias-lookup" : ""}`,
   );
+}
+
+async function verifyNhostSqlReads(sql: postgres.Sql, input: VerificationInputs) {
+  const productRows = await sql<Array<{ id: string; slug: string }>>`
+    select id, slug
+    from public.products
+    where slug = ${input.sampleProductSlug}
+    limit 1
+  `;
+  if (productRows.length === 0) {
+    throw new Error(`[verify:sql:product-by-slug] missing slug=${input.sampleProductSlug}`);
+  }
+
+  const statsRows = await sql<Array<{ id: string }>>`
+    select id
+    from public.business_stats_current
+    where is_active = true
+    order by updated_at desc nulls last, as_of_date desc
+    limit 1
+  `;
+  if (input.expectedActiveBusinessStatsRows > 0 && statsRows.length === 0) {
+    throw new Error("[verify:sql:active-business-stats] missing active row");
+  }
+
+  if (input.sampleActiveAliasSlug) {
+    const aliasRows = await sql<Array<{ alias_slug: string; canonical_slug: string }>>`
+      select alias_slug, canonical_slug
+      from public.product_slug_aliases
+      where alias_slug = ${input.sampleActiveAliasSlug}
+        and is_active = true
+      limit 1
+    `;
+    if (aliasRows.length === 0) {
+      throw new Error(`[verify:sql:alias-lookup] missing alias_slug=${input.sampleActiveAliasSlug}`);
+    }
+  } else {
+    console.log("[verify] SQL alias lookup skipped (no active alias rows to verify)");
+  }
+
+  console.log(
+    `[verify] SQL reads ok: product-by-slug, active-business-stats${input.sampleActiveAliasSlug ? ", alias-lookup" : ""}`,
+  );
+}
+
+async function verifyNhostCounts(
+  sql: postgres.Sql,
+  expectedCounts: Record<string, number>,
+) {
+  const rows = await sql<Array<Record<string, number>>>`
+    select
+      (select count(*)::int from public.catalog_products) as catalog_products,
+      (select count(*)::int from public.catalog_categories) as catalog_categories,
+      (select count(*)::int from public.catalog_product_specs) as catalog_product_specs,
+      (select count(*)::int from public.catalog_product_images) as catalog_product_images,
+      (select count(*)::int from public.catalog_product_slug_aliases) as catalog_product_slug_aliases,
+      (select count(*)::int from public.business_stats_current) as business_stats_current,
+      (select count(*)::int from public.products) as products,
+      (select count(*)::int from public.categories) as categories,
+      (select count(*)::int from public.product_specs) as product_specs,
+      (select count(*)::int from public.product_images) as product_images,
+      (select count(*)::int from public.product_slug_aliases) as product_slug_aliases
+  `;
+  const actual = rows[0] ?? {};
+  const mismatches: string[] = [];
+
+  for (const [table, expected] of Object.entries(expectedCounts)) {
+    const actualCount = Number(actual[table] ?? NaN);
+    if (!Number.isFinite(actualCount) || actualCount !== expected) {
+      mismatches.push(`${table}: expected=${expected}, actual=${String(actual[table])}`);
+    }
+  }
+
+  if (mismatches.length > 0) {
+    throw new Error(`[verify:counts] mismatch detected: ${mismatches.join("; ")}`);
+  }
+
+  console.log(`[verify] row counts matched=${JSON.stringify(actual)}`);
 }
 
 async function main() {
@@ -698,18 +900,45 @@ async function main() {
       `);
     });
 
-    const counts = await sql`
-      select
-        (select count(*)::int from public.catalog_products) as catalog_products,
-        (select count(*)::int from public.catalog_categories) as catalog_categories,
-        (select count(*)::int from public.catalog_product_specs) as catalog_product_specs,
-        (select count(*)::int from public.catalog_product_images) as catalog_product_images,
-        (select count(*)::int from public.catalog_product_slug_aliases) as catalog_product_slug_aliases,
-        (select count(*)::int from public.business_stats_current) as business_stats_current;
-    `;
-    console.log(`[sync] nhost counts=${JSON.stringify(counts[0])}`);
+    const sampleProductSlug = productPayload
+      .map((row) => String(row.slug || "").trim())
+      .find((value) => Boolean(value));
+    if (!sampleProductSlug) {
+      throw new Error("[verify] unable to select a product slug for post-sync verification");
+    }
 
-    await verifyNhostGraphql();
+    const sampleActiveAliasSlug =
+      aliasPayload
+        .map((row) => ({
+          alias_slug: String(row.alias_slug || "").trim(),
+          is_active: Boolean(row.is_active),
+        }))
+        .find((row) => row.is_active && row.alias_slug.length > 0)?.alias_slug ?? null;
+    const expectedActiveBusinessStatsRows = statsPayload.filter((row) => row.is_active).length;
+
+    await verifyNhostCounts(sql, {
+      catalog_products: productPayload.length,
+      catalog_categories: categoryPayload.length,
+      catalog_product_specs: specPayload.length,
+      catalog_product_images: imagePayload.length,
+      catalog_product_slug_aliases: aliasPayload.length,
+      business_stats_current: statsPayload.length,
+      products: productPayload.length,
+      categories: categoryPayload.length,
+      product_specs: specPayload.length,
+      product_images: imagePayload.length,
+      product_slug_aliases: aliasPayload.length,
+    });
+    await verifyNhostGraphqlReads({
+      sampleProductSlug,
+      sampleActiveAliasSlug,
+      expectedActiveBusinessStatsRows,
+    });
+    await verifyNhostSqlReads(sql, {
+      sampleProductSlug,
+      sampleActiveAliasSlug,
+      expectedActiveBusinessStatsRows,
+    });
     console.log("[sync] completed successfully");
   } finally {
     await sql.end({ timeout: 5 });

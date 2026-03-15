@@ -1,70 +1,71 @@
-import { Hero } from "@/components/home/Hero";
 import Link from "next/link";
+import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
-
-const NEWS_ITEMS = [
-  {
-    category: "Project update",
-    title: "Expanded enterprise delivery capacity across North and East India",
-    summary:
-      "Operational capacity and partner network upgrades to support larger phased workspace rollouts.",
-    date: "March 2026",
-  },
-  {
-    category: "Product focus",
-    title: "Ergonomic seating line updated with broader workstation compatibility",
-    summary:
-      "New configuration sets improve support for collaborative, executive, and task-based environments.",
-    date: "February 2026",
-  },
-  {
-    category: "Service update",
-    title: "After-sales support workflow standardized for faster issue closure",
-    summary:
-      "Response routing and warranty handling updates now provide clearer communication timelines.",
-    date: "January 2026",
-  },
-] as const;
+import { NEWS_PAGE_COPY } from "@/data/site/routeCopy";
 
 export default function NewsPage() {
   return (
-    <section className="flex min-h-screen flex-col items-center bg-white">
+    <section className="scheme-page flex min-h-screen flex-col items-center">
       <Hero
         variant="small"
-        title="News & Updates"
-        subtitle="Recent project, product, and service updates from One and Only Furniture."
+        title={NEWS_PAGE_COPY.heroTitle}
+        subtitle={NEWS_PAGE_COPY.heroSubtitle}
         showButton={false}
         backgroundImage="/hero/dmrc-hero.webp"
       />
 
-      <section className="w-full bg-white py-18 md:py-22">
-        <div className="container px-6 2xl:px-0">
-          <div className="mb-10">
-            <p className="typ-label mb-4 text-neutral-700">Latest coverage</p>
-            <h2 className="typ-section max-w-3xl text-neutral-950">
-              Updates that matter to workspace decision-makers.
+      <section className="container px-6 py-18 2xl:px-0 md:py-22">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <p className="typ-label scheme-text-body mb-4">{NEWS_PAGE_COPY.introKicker}</p>
+            <h2 className="typ-section scheme-text-strong max-w-3xl">
+              {NEWS_PAGE_COPY.introTitle}
             </h2>
+            <p className="page-copy scheme-text-body mt-5 max-w-2xl">
+              {NEWS_PAGE_COPY.introDescription}
+            </p>
           </div>
 
+          <div className="scheme-panel scheme-border rounded-[1.75rem] border p-6 md:p-8">
+            <p className="typ-label scheme-text-body mb-4">Route intent</p>
+            <p className="page-copy-sm scheme-text-body">
+              This page stays useful only if it remains grounded in real project themes, live support routes,
+              and current product/planning direction rather than synthetic newsroom content.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="scheme-section-soft scheme-border w-full border-y py-18 md:py-22">
+        <div className="container px-6 2xl:px-0">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {NEWS_ITEMS.map((item) => (
-              <article key={item.title} className="rounded-xl border border-neutral-300 bg-neutral-50 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
-                  {item.category}
-                </p>
-                <h3 className="mt-3 text-2xl font-light leading-tight tracking-tight text-neutral-950">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-neutral-800">{item.summary}</p>
-                <p className="mt-5 text-sm font-medium text-neutral-700">{item.date}</p>
+            {NEWS_PAGE_COPY.cards.map((item) => (
+              <article key={item.title} className="scheme-panel scheme-border rounded-2xl border p-6">
+                <p className="typ-label scheme-text-brand mb-3">{item.category}</p>
+                <h3 className="typ-h3 scheme-text-strong">{item.title}</h3>
+                <p className="page-copy-sm scheme-text-body mt-3">{item.summary}</p>
               </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-8">
-            <Link href="/social" className="link-arrow">
-              Follow on social channels
-            </Link>
+      <section className="container px-6 py-18 2xl:px-0 md:py-22">
+        <div className="scheme-panel-dark relative overflow-hidden rounded-[2rem] p-8 md:p-10">
+          <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top_right,rgba(13,45,180,0.16),transparent_58%)]" />
+          <div className="relative z-10 grid gap-6 lg:grid-cols-[1.1fr_auto] lg:items-end">
+            <div className="max-w-2xl">
+              <h2 className="typ-section text-white">{NEWS_PAGE_COPY.ctaTitle}</h2>
+              <p className="page-copy scheme-text-inverse-body mt-4">{NEWS_PAGE_COPY.ctaDescription}</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/downloads" className="btn-primary">
+                {NEWS_PAGE_COPY.primaryCta}
+              </Link>
+              <Link href="/contact" className="btn-outline-light">
+                {NEWS_PAGE_COPY.secondaryCta}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -73,4 +74,3 @@ export default function NewsPage() {
     </section>
   );
 }
-

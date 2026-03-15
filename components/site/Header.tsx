@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Search, Sparkles } from "lucide-react";
 import { OneAndOnlyLogo } from "@/components/ui/Logo";
@@ -45,8 +45,36 @@ interface NavSearchResult {
 
 type NavSearchMode = "ai" | "local" | "static-fallback";
 
+async function resolveSearchDestination(
+  query: string,
+  context: "header" | "mobile",
+  currentResults: NavSearchResult[],
+) {
+  if (currentResults[0]?.href) {
+    return currentResults[0].href;
+  }
+
+  if (query.length < 2) {
+    return "/products";
+  }
+
+  try {
+    const response = await fetch(
+      `/api/nav-search/?q=${encodeURIComponent(query)}&limit=1&context=${context}`,
+    );
+    if (!response.ok) {
+      return "/products";
+    }
+    const payload = (await response.json()) as { results?: NavSearchResult[] };
+    return payload.results?.[0]?.href || "/products";
+  } catch {
+    return "/products";
+  }
+}
+
 export function SiteHeader() {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMega, setActiveMega] = useState<string | null>(null);
@@ -184,20 +212,21 @@ export function SiteHeader() {
     setSearchQuery("");
   };
 
+  const submitSearch = async () => {
+    const query = searchQuery.trim();
+    const destination = await resolveSearchDestination(query, "header", searchResults);
+    router.push(destination);
+    setShowSearchPanel(false);
+    setSearchQuery("");
+  };
+
   const openGuidedPlanner = () => {
     window.dispatchEvent(new CustomEvent("oando-assistant:open"));
   };
 
   return (
     <>
-      <header
-        className={cn(
-          "fixed top-0 left-0 z-50 w-full border-b border-neutral-200/70 bg-white/90 backdrop-blur-xl transition-shadow duration-300",
-          scrolled
-            ? "shadow-[0_8px_32px_-12px_rgba(0,0,0,0.25)]"
-            : "shadow-none",
-        )}
-      >
+      <header className={cn("site-header", scrolled ? "site-header--scrolled" : "shadow-none")}>
         <div className="container-wide px-4 sm:px-6">
           <div
             className={cn(
@@ -206,17 +235,21 @@ export function SiteHeader() {
             )}
             aria-label="Utility navigation"
           >
-            <p className="text-xs font-normal tracking-[0.04em] text-neutral-400">
-              {SITE_BRAND.utilityTagline}
-            </p>
-            <div className="flex items-center gap-5 text-xs font-normal tracking-[0.04em] text-neutral-500">
-              <Link href="/service" className="hover:text-primary transition-colors">
+            {SITE_BRAND.utilityTagline ? (
+              <p className="shell-utility-copy">
+                {SITE_BRAND.utilityTagline}
+              </p>
+            ) : (
+              <span />
+            )}
+            <div className="shell-utility-links">
+              <Link href="/service" className="transition-colors hover:text-primary">
                 Service
               </Link>
-              <Link href="/showrooms" className="hover:text-primary transition-colors">
+              <Link href="/showrooms" className="transition-colors hover:text-primary">
                 Showrooms
               </Link>
-              <Link href="/contact" className="hover:text-primary transition-colors">
+              <Link href="/contact" className="transition-colors hover:text-primary">
                 Contact
               </Link>
             </div>
@@ -256,7 +289,7 @@ export function SiteHeader() {
                         aria-controls="products-mega-menu"
                         onFocus={() => setActiveMega(link.label)}
                         className={cn(
-                          "relative inline-flex items-center gap-1 rounded-lg px-3 py-2 text-base font-normal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                          "typ-nav relative inline-flex items-center gap-1 rounded-lg px-3 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                           isActive
                             ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
                             : activeMega === link.label
@@ -281,7 +314,7 @@ export function SiteHeader() {
                     key={link.label}
                     href={link.href}
                     className={cn(
-                      "relative rounded-lg px-3 py-2 text-base font-normal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      "typ-nav relative rounded-lg px-3 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                       isActive
                         ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
                         : "text-neutral-700 hover:text-primary",
@@ -296,7 +329,13 @@ export function SiteHeader() {
             {/* Right CTAs */}
             <div className="flex h-full items-center gap-2">
               <div ref={searchPanelRef} className="relative hidden xl:block">
-                <label className="ai-search-shell flex h-11 items-center gap-2.5 rounded-full px-4">
+                <form
+                  className="ai-search-shell flex h-11 items-center gap-2.5 rounded-full px-4"
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    void submitSearch();
+                  }}
+                >
                   <Search className="h-4 w-4 text-neutral-500" />
                   <input
                     value={searchQuery}
@@ -307,7 +346,10 @@ export function SiteHeader() {
                     aria-label="Search products with AI"
                   />
                   <Sparkles className="h-4 w-4 text-accent1" />
-                </label>
+                  <button type="submit" className="sr-only">
+                    Submit header search
+                  </button>
+                </form>
 
                 <AnimatePresence>
                   {showSearchPanel && (
@@ -316,12 +358,12 @@ export function SiteHeader() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute right-0 mt-2 w-[24rem] overflow-hidden rounded-3xl border border-neutral-200 bg-white p-4 shadow-[0_24px_55px_-30px_rgba(0,0,0,0.45)]"
+                      className="shell-search-panel"
                     >
-                      <div className="mb-2 flex items-center justify-between text-[11px] font-normal tracking-[0.04em] text-neutral-500">
+                      <div className="shell-search-meta">
                         <span>{searchSectionTitle}</span>
                         {searchSource && (
-                          <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px]">
+                          <span className="shell-search-badge">
                             {searchSource === "ai"
                               ? "AI ranked"
                               : searchSource === "static-fallback"
@@ -342,7 +384,7 @@ export function SiteHeader() {
                                 className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
                               >
                                 <span>{result.title}</span>
-                                <span className="text-[10px] uppercase tracking-[0.14em] text-neutral-400">
+                                <span className="shell-search-kind">
                                   {result.type}
                                 </span>
                               </Link>
@@ -420,7 +462,7 @@ export function SiteHeader() {
                 <div className="grid grid-cols-6 gap-4">
                   {groupedCategories.map((group) => (
                     <div key={group.groupId}>
-                      <p className="typ-label mb-2 text-neutral-400">
+                      <p className="typ-overline mb-2 text-neutral-500">
                         {group.groupLabel}
                       </p>
                       <ul className="space-y-1">

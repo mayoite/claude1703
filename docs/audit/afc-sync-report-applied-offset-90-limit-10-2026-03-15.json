@@ -1,0 +1,710 @@
+{
+  "generatedAt": "2026-03-15T14:17:59.393Z",
+  "mode": "apply",
+  "offset": 90,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "5a6ccb02-45b2-4ee1-b721-4e0ce36ab382",
+      "slug": "oando-soft-seating--plumb",
+      "name": "Plumb",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Plumb is a lounge designed for modern design and functional workspaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Effortless Elegance with Lasting Comfort"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Width (Top View): 750 mm Overall Depth (Side View): 800 mm; Overall Height: 730 mm Seat Height: 450 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Effortless Elegance with Lasting Comfort",
+            "body": "Plumb Soft Seating brings effortless elegance to contemporary interiors with its clean, sculpted lines and refined silhouette. Designed to enhance living rooms, offices, and reception areas, it adds a touch of modern charm to any environment. Its inviting form creates a warm and stylish presence."
+          },
+          {
+            "heading": "",
+            "body": "Built with thick, supportive cushioning and sturdy legs, plumb ensures long lasting comfort and dependable stability. Every sit down feels like a retreat, making it ideal for spaces that blend relaxation with sophistication. Durable and beautifully crafted, it elevates both comfort and aesthetics.."
+          },
+          {
+            "heading": "",
+            "body": "The smooth, curved back-and-arm design offers natural lateral support, creating a cozy, enclosed seating feel perfect for long work sessions."
+          },
+          {
+            "heading": "",
+            "body": "High-density cushioning delivers lasting comfort with a refined, luxe feel, while a wide selection of color and finish options ensures a perfect fit for any interior style or space."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Plumb",
+            "lines": [
+              "Overall Width (Top View): 750 mm Overall Depth (Side View): 800 mm",
+              "Overall Height: 730 mm Seat Height: 450 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Plumb Lounge",
+        "sourceSlug": "plumb"
+      },
+      "alt_text": "Plumb Lounge",
+      "sourceSlug": "plumb",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d349a472cd9b9a564b329_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d34ac470d8a9aa582c2c8_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d34b9ade66871243c7f11_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d34cbdb3450b9f9a2a6dd_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d34d82ed461aa40f6257d_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--plumb/image-1.jpg",
+        "/images/catalog/oando-soft-seating--plumb/image-2.jpg",
+        "/images/catalog/oando-soft-seating--plumb/image-3.jpg",
+        "/images/catalog/oando-soft-seating--plumb/image-4.jpg",
+        "/images/catalog/oando-soft-seating--plumb/image-5.jpg"
+      ]
+    },
+    {
+      "id": "6790c9f5-a33f-434e-816b-bd68411fa6be",
+      "slug": "oando-soft-seating--rattique",
+      "name": "Rattique",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Rattique is a lounge designed for comfort and contemporary appeal.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Woven to Welcome"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Width (Front View): 650 mm Seat Height: 440 mm; Overall Height (Rear View): 720 mm Base Width: 650 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Woven to Welcome",
+            "body": "Rattique Soft Seating blends solid hardwood with hand woven cane, creating a timeless circular form that feels both crafted and contemporary. Its curved backrest and smooth, rounded profile bring visual softness to any space. Designed with thoughtful detailing, it adds an inviting, organic character to modern interiors."
+          },
+          {
+            "heading": "",
+            "body": "Perfect for lounges, hospitality environments, and cozy corners, Rattique offers a harmonious balance of comfort, craftsmanship, and style. Versatile and welcoming, it enhances any setting with ease."
+          },
+          {
+            "heading": "",
+            "body": "The natural cane weave offers breathable comfort, a lightweight aesthetic, and a handcrafted charm that elevates any modern or traditional space."
+          },
+          {
+            "heading": "",
+            "body": "The soft, thick circular cushion provides superior sitting comfort while adding a refined, inviting look that enhances both style and usability."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Rattique",
+            "lines": [
+              "Overall Width (Front View): 650 mm Seat Height: 440 mm",
+              "Overall Height (Rear View): 720 mm Base Width: 650 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Rattique Lounge",
+        "sourceSlug": "rattique"
+      },
+      "alt_text": "Rattique Lounge",
+      "sourceSlug": "rattique",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf545585c2115caa30b00_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf5588981817b72336253_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf56aa5c7dd9ebcb7d311_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf580ca054238df230fbc_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--rattique/image-1.jpg",
+        "/images/catalog/oando-soft-seating--rattique/image-2.jpg",
+        "/images/catalog/oando-soft-seating--rattique/image-3.jpg",
+        "/images/catalog/oando-soft-seating--rattique/image-4.jpg"
+      ]
+    },
+    {
+      "id": "9cc1e4fd-18c1-4d02-a0ec-7ae8fbfa155c",
+      "slug": "oando-soft-seating--relax",
+      "name": "Relax",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Relax is a lounge designed for waiting areas and informal office spaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Swivel in Style"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Depth: 780 mm; Overall Height: 500 mm; Base Width: 620 mm; Overall Height: 820 mm; Seat Height: 450 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Swivel in Style",
+            "body": "The Relax Soft Seating chair features a smooth, sculpted shell that brings together modern aesthetics and inviting comfort. Its refined curves create a welcoming silhouette suitable for a variety of interiors. Designed to stand out while feeling effortless, it elevates any lounge or collaborative setting"
+          },
+          {
+            "heading": "",
+            "body": "The modern design of rela makes it ideal for guest seating, hospitality spaces, and dynamic work zones. Stylish, practical, and adaptable, Relax delivers comfort with contemporary sophistication."
+          },
+          {
+            "heading": "",
+            "body": "The gently rounded back and seat merge seamlessly to provide ergonomic support, creating a comfortable and visually clean silhouette for lounges and meeting areas."
+          },
+          {
+            "heading": "",
+            "body": "The soft, built-in cushioning ensures long-lasting comfort without compromising the chair’s sleek form, making it ideal for extended sitting in workspace or hospitality settings."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Relax",
+            "lines": [
+              "Overall Depth: 780 mm",
+              "Overall Height: 500 mm",
+              "Base Width: 620 mm",
+              "Overall Height: 820 mm",
+              "Seat Height: 450 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Relax Lounge",
+        "sourceSlug": "relax"
+      },
+      "alt_text": "Relax Lounge",
+      "sourceSlug": "relax",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c18715b31e825a52c0dfb_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c188a5b31e825a52c1d07_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c189ce1a3b5fe3ca3b994_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c18adce98c9d29b534c88_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--relax/image-1.jpg",
+        "/images/catalog/oando-soft-seating--relax/image-2.jpg",
+        "/images/catalog/oando-soft-seating--relax/image-3.jpg",
+        "/images/catalog/oando-soft-seating--relax/image-4.jpg"
+      ]
+    },
+    {
+      "id": "3b243285-4228-41c7-ae31-1a9f12ba3ff3",
+      "slug": "oando-seating--solace",
+      "name": "Solace",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Solace is a lounge designed for posture support and daily comfort.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Crafted Calm"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Width: 550 mm; Overall Height: 934 mm; Seat Width: 550 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Crafted Calm",
+            "body": "Solace Soft Seating is crafted with precision, balancing strength and serenity through its solid hardwood frame. The natural oil finish highlights the rich grain and character of the wood, adding warmth and sophistication to any setting. Designed with enduring durability, it brings authentic craftsmanship into modern spaces."
+          },
+          {
+            "heading": "",
+            "body": "Wrapped in plush, premium upholstery, Solace offers an inviting seating experience that encourages you to sink in and relax. Its serene, comforting presence makes it ideal for lounges, offices, and reading corners. Blending timeless elegance with exceptional comfort, Solace elevates every environment it inhabits."
+          },
+          {
+            "heading": "",
+            "body": "The precision-crafted slatted back adds visual lightness while ensuring strong structural support, giving the chair a refined mid-century aesthetic."
+          },
+          {
+            "heading": "",
+            "body": "The thick, soft seat and back cushions provide a luxurious lounging experience and can be easily removed for cleaning or repositioning."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "SOLACE",
+            "lines": [
+              "Overall Width: 550 mm",
+              "Overall Height: 934 mm",
+              "Seat Width: 550 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Solace Lounge",
+        "sourceSlug": "solace"
+      },
+      "alt_text": "Solace Lounge",
+      "sourceSlug": "solace",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69281e5771a5a2003317ed7d_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69281e6940e58c8912c2de3e_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69281e7c71a5a2003317f919_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69281e9f4371aa986e061870_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69281eb3378a20e28a5ae52e_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--solace/image-1.jpg",
+        "/images/catalog/oando-seating--solace/image-2.jpg",
+        "/images/catalog/oando-seating--solace/image-3.jpg",
+        "/images/catalog/oando-seating--solace/image-4.jpg",
+        "/images/catalog/oando-seating--solace/image-5.jpg"
+      ]
+    },
+    {
+      "id": "182cdcae-e8ed-4410-a496-0783f6492ad1",
+      "slug": "oando-soft-seating--spectrum",
+      "name": "Spectrum",
+      "category_id": "soft-seating",
+      "series_name": "Collaborative",
+      "description": "Spectrum is a collaborative designed for flexible workspaces. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Collaborative",
+        "features": [
+          "Adaptive Seating for Modern Workspaces"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Adaptive Seating for Modern Workspaces",
+            "body": "Spectrum is a highly flexible modular seating system designed to support collaborative workspaces, breakout zones, and focused meetings. Upholstered segmented units in calming tones, along with optional power integration and privacy screens, allow it to adapt effortlessly to evolving office needs."
+          },
+          {
+            "heading": "",
+            "body": "Ideal for informal lounges, brainstorming pods, and compact conference booths, SPECTRUM fits seamlessly into diverse settings. From reading and library zones to hybrid work nooks, it creates comfortable, functional environments that encourage focus, collaboration, and relaxation."
+          },
+          {
+            "heading": "",
+            "body": "Wooden planter elements paired with open shelf storage bring nature and organization together, enhancing aesthetics while keeping essentials within easy reach."
+          },
+          {
+            "heading": "",
+            "body": "Flexible laptop arm tables provide convenient personal work surfaces, supporting focused tasks and quick transitions between work modes."
+          },
+          {
+            "heading": "",
+            "body": "Built-in power options enable seamless connectivity for multiple devices, ensuring uninterrupted productivity in collaborative and individual settings."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple configurations, the system adapts effortlessly to diverse layouts and workstyles, supporting collaboration, focus, and seamless spatial planning."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Collaborative",
+        "subcategoryId": "collaborative",
+        "subcategoryLabel": "Collaborative",
+        "subcategory_slug": "collaborative",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Spectrum Collaborative",
+        "sourceSlug": "spectrum"
+      },
+      "alt_text": "Spectrum Collaborative",
+      "sourceSlug": "spectrum",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Collaborative",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942aad908f05e62d0b099ac_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942ab2bc2b542d1a466b7e3_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942ab3b16c571fa1197d0aa_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942ab4a08476e848dc6e486_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942ab58a00618f42af26a6b_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942ab65e6c35d0b2d57b90b_SECTION%203-SCROLL%20IMAGES%2011.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--spectrum/image-1.jpg",
+        "/images/catalog/oando-soft-seating--spectrum/image-2.jpg",
+        "/images/catalog/oando-soft-seating--spectrum/image-3.jpg",
+        "/images/catalog/oando-soft-seating--spectrum/image-4.jpg",
+        "/images/catalog/oando-soft-seating--spectrum/image-5.jpg",
+        "/images/catalog/oando-soft-seating--spectrum/image-6.jpg"
+      ]
+    },
+    {
+      "id": "ab257587-b46e-48ad-a730-5126be63b7a3",
+      "slug": "oando-soft-seating--tectara",
+      "name": "Tectara",
+      "category_id": "soft-seating",
+      "series_name": "Occasional Tables",
+      "description": "Tectara is a occasional table designed for efficient layouts.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Occasional Tables",
+        "features": [],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Occasional Tables",
+        "subcategoryId": "occasional-tables",
+        "subcategoryLabel": "Occasional Tables",
+        "subcategory_slug": "occasional-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Tectara Occasional Table",
+        "sourceSlug": "tectara"
+      },
+      "alt_text": "Tectara Occasional Table",
+      "sourceSlug": "tectara",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Occasional Tables",
+      "sourceImages": [],
+      "sourceDocs": [],
+      "sourceCertifications": [],
+      "localImages": []
+    },
+    {
+      "id": "53c16f7c-7b2c-44bd-9011-befe05003038",
+      "slug": "oando-soft-seating--twig",
+      "name": "Twig",
+      "category_id": "soft-seating",
+      "series_name": "Occasional Tables",
+      "description": "Twig is a occasional table designed for modern workspaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Occasional Tables",
+        "features": [],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Occasional Tables",
+        "subcategoryId": "occasional-tables",
+        "subcategoryLabel": "Occasional Tables",
+        "subcategory_slug": "occasional-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Twig Occasional Table",
+        "sourceSlug": "twig"
+      },
+      "alt_text": "Twig Occasional Table",
+      "sourceSlug": "twig",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Occasional Tables",
+      "sourceImages": [],
+      "sourceDocs": [],
+      "sourceCertifications": [],
+      "localImages": []
+    },
+    {
+      "id": "2094fb90-429b-472b-bfd8-c9338f314d51",
+      "slug": "oando-soft-seating--velto",
+      "name": "Velto",
+      "category_id": "soft-seating",
+      "series_name": "Sofa",
+      "description": "Velto is a sofa designed for posture support and productivity.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Sofa",
+        "features": [
+          "Purposeful Design for the Modern Workplace"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "01 SEATER Size - 900 X800 X450-750 H MM; 02 SEATER Size - 1500 X800 X450-750 H MM; 03 SEATER Size - 2000 X800 X450-750 H MM",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Purposeful Design for the Modern Workplace",
+            "body": "Velto is crafted for today’s fast paced workplace, where clarity, comfort, and utility come together. Its broad arms function as practical surfaces, enhancing usability without disrupting its clean form."
+          },
+          {
+            "heading": "",
+            "body": "With a low, structured silhouette, Velto anchors any environment with confidence. From casual meetings to focused solo work, it brings both presence and purpose to shared spaces."
+          },
+          {
+            "heading": "",
+            "body": "Clean-lined, sculpted armrests wrapped in premium upholstery provide ergonomic support while adding a refined, architectural character to the overall design.2: Where bold form meets effortless comfort."
+          },
+          {
+            "heading": "",
+            "body": "The bold V-shaped metal legs deliver exceptional stability and load-bearing strength while adding a sharp, modern design statement that elevates the overall silhouette."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Velto",
+            "lines": [
+              "01 SEATER Size - 900 X800 X450-750 H MM",
+              "02 SEATER Size - 1500 X800 X450-750 H MM",
+              "03 SEATER Size - 2000 X800 X450-750 H MM"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Sofa",
+        "subcategoryId": "sofa",
+        "subcategoryLabel": "Sofa",
+        "subcategory_slug": "sofa",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Velto Sofa",
+        "sourceSlug": "velto"
+      },
+      "alt_text": "Velto Sofa",
+      "sourceSlug": "velto",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Sofa",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d50606c2c0a9ca4b2eaee_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d50755c972333a9437588_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d50852b32785b7472310a_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d5097472cd9b9a56a57fe_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d50b46d4bbc226bf27aef_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d50c25c972333a943847e_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--velto/image-1.jpg",
+        "/images/catalog/oando-soft-seating--velto/image-2.jpg",
+        "/images/catalog/oando-soft-seating--velto/image-3.jpg",
+        "/images/catalog/oando-soft-seating--velto/image-4.jpg",
+        "/images/catalog/oando-soft-seating--velto/image-5.jpg",
+        "/images/catalog/oando-soft-seating--velto/image-6.jpg"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "soft-seating-collaborative-solace-pod",
+      "name": "Solace Pod",
+      "categoryId": "soft-seating"
+    },
+    {
+      "slug": "oando-soft-seating--trion",
+      "name": "Trion",
+      "categoryId": "soft-seating"
+    }
+  ]
+}

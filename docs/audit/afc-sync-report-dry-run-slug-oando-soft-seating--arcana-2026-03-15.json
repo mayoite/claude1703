@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-03-15T14:00:25.091Z",
+  "mode": "dry-run",
+  "offset": 0,
+  "limit": null,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 1,
+  "matched": [
+    {
+      "id": "acfc5d9e-8313-4e8e-9c24-f3461ca357b0",
+      "slug": "oando-soft-seating--arcana",
+      "name": "Arcana",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Arcana is a lounge designed for executive spaces.",
+      "specs": {
+        "source": "afcindia.in",
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Essential Form"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "OverallHeight: 790Seat Height: 450; Seat Width(Front View): 500Seat Depth (Top View): 490",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Essential Form",
+            "body": "Arcana Soft Seating is defined by its precise curves and perfectly balanced proportions, creating a silhouette that feels both modern and inviting. Its slim frame supports a generously upholstered seat and back, achieving a look that is lightweight in form yet substantial in comfort."
+          },
+          {
+            "heading": "",
+            "body": "Built for versatility, it transitions effortlessly across settings. From informal meetings to dining and lounge spaces, it offers substantial comfort in every environment."
+          },
+          {
+            "heading": "",
+            "body": "The semi-curved back with padded side wings offers a gentle embrace, delivering improved lateral support and a relaxed seating feel ideal for long conversations."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Arcana",
+            "lines": [
+              "OverallHeight: 790Seat Height: 450",
+              "Seat Width(Front View): 500Seat Depth (Top View): 490"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "source": "afcindia.in",
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Arcana Lounge",
+        "sourceSlug": "arcana"
+      },
+      "alt_text": "Arcana Lounge",
+      "sourceSlug": "arcana",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1c25fc428ef29ae77430_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1bd2a7d00137e4007f2b_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1be44e83419f10bb3494_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1bf55b31e825a52e870c_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1c16ce98c9d29b550a06_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": []
+    }
+  ],
+  "unmatched": []
+}

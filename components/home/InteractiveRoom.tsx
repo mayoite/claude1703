@@ -38,7 +38,7 @@ export function InteractiveRoom() {
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="text-xl text-neutral-400 font-light leading-relaxed">
+              <p className="scheme-text-muted text-xl font-light leading-relaxed">
                 Designing spaces that adapt to you. Explore our curated
                 configurations that support focus, collaboration, and everything
                 in between.

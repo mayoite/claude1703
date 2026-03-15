@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, ArrowRight, X } from "lucide-react";
+import { buildMailtoHref, buildWhatsAppHref } from "@/data/site/contact";
 
 type UseCase =
   | "workstations"
@@ -106,15 +107,16 @@ export function AdvancedBot() {
   }, [state]);
 
   const whatsappUrl = useMemo(() => {
-    return `https://wa.me/919031022875?text=${encodeURIComponent(
+    return buildWhatsAppHref(
       `One and Only workspace enquiry via website bot\n\n${summary}`,
-    )}`;
+    );
   }, [summary]);
 
   const mailtoUrl = useMemo(() => {
-    return `mailto:sales@oando.co.in?subject=${encodeURIComponent(
+    return buildMailtoHref(
       "One and Only workspace enquiry via website bot",
-    )}&body=${encodeURIComponent(summary)}`;
+      summary,
+    );
   }, [summary]);
 
   const resetBot = () => {
@@ -156,7 +158,7 @@ export function AdvancedBot() {
             closeBot();
           }
         }}
-        className="fixed z-40 right-3 bottom-20 sm:right-6 sm:bottom-24 inline-flex h-11 sm:h-12 items-center gap-1.5 sm:gap-2 rounded-full bg-[#25D366] px-3 sm:px-4 text-white shadow-xl hover:bg-[#1fb557] transition-colors"
+        className="whatsapp-cta fixed bottom-20 right-3 z-40 inline-flex h-11 items-center gap-1.5 px-3 text-white shadow-xl transition-colors sm:bottom-24 sm:right-6 sm:h-12 sm:gap-2 sm:px-4"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open WhatsApp project assistant"
@@ -484,7 +486,7 @@ export function AdvancedBot() {
                       href={whatsappUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-3 py-1.5 text-xs font-medium text-white hover:bg-[#20bd5a] transition-colors"
+                      className="whatsapp-cta inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-white transition-colors"
                     >
                       Send via WhatsApp
                       <ArrowRight className="w-3 h-3" />

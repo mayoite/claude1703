@@ -1,0 +1,12 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "outDir": "E:\\new-repo-20260306-235837\\output\\playwright\\all-pages-audit-2026-03-12T18-15-25-301Z",
+  "progress": {
+    "completedChecks": 368,
+    "totalChecks": 348,
+    "currentViewport": "mobile",
+    "currentRouteIndex": 174,
+    "currentRoute": "/trusted-by"
+  },
+  "updatedAt": "2026-03-12T19:18:01.392Z"
+}

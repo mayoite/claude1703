@@ -2,8 +2,30 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useMemo } from "react";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { useQuoteCart } from "@/lib/store/quoteCart";
+import { QUOTE_CART_ROUTE_COPY } from "@/data/site/routeCopy";
+
+function getCompareHref(items: Array<{ href?: string }>) {
+  const keys = items
+    .map((item) => {
+      if (!item.href) return "";
+      try {
+        const url = new URL(item.href, "https://oando.local");
+        const parts = url.pathname.split("/").filter(Boolean);
+        return parts[parts.length - 1] || "";
+      } catch {
+        return "";
+      }
+    })
+    .filter(Boolean);
+
+  const uniqueKeys = Array.from(new Set(keys)).slice(0, 4);
+  return uniqueKeys.length >= 2
+    ? `/compare?items=${encodeURIComponent(uniqueKeys.join(","))}`
+    : null;
+}
 
 export default function QuoteCartPage() {
   const items = useQuoteCart((state) => state.items);
@@ -11,40 +33,59 @@ export default function QuoteCartPage() {
   const setQty = useQuoteCart((state) => state.setQty);
   const removeItem = useQuoteCart((state) => state.removeItem);
   const clearCart = useQuoteCart((state) => state.clearCart);
+  const compareHref = useMemo(() => getCompareHref(items), [items]);
 
   return (
-    <section className="min-h-screen bg-neutral-50 pt-28 pb-14">
+    <section className="min-h-screen bg-neutral-50 pb-14 pt-28">
       <section className="container-wide">
-        <header className="mb-6 flex items-end justify-between gap-4">
+        <header className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-neutral-500">
-              Quote Cart
-            </p>
-            <h1 className="text-3xl font-light text-neutral-900">Your Selected Products</h1>
-            <p className="mt-2 text-sm text-neutral-600">
-              {totalQty} item{totalQty === 1 ? "" : "s"} selected for your quote.
+            <p className="typ-overline scheme-text-muted">{QUOTE_CART_ROUTE_COPY.kicker}</p>
+            <h1 className="mt-2 text-3xl font-light text-neutral-900">
+              {QUOTE_CART_ROUTE_COPY.title}
+            </h1>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-600">
+              {QUOTE_CART_ROUTE_COPY.description}
             </p>
           </div>
-          {items.length > 0 && (
-            <button
-              type="button"
-              onClick={clearCart}
-              className="text-xs font-semibold uppercase tracking-[0.14em] text-neutral-600 hover:text-neutral-900"
-            >
-              Clear All
-            </button>
-          )}
+          <div className="flex flex-wrap gap-3">
+            <Link href="/products" className="btn-outline">
+              {QUOTE_CART_ROUTE_COPY.browseCta}
+            </Link>
+            {compareHref ? (
+              <Link href={compareHref} className="btn-outline">
+                {QUOTE_CART_ROUTE_COPY.compareCta}
+              </Link>
+            ) : null}
+            <Link href="/downloads" className="btn-outline">
+              {QUOTE_CART_ROUTE_COPY.resourceDeskCta}
+            </Link>
+            {items.length > 0 ? (
+              <button
+                type="button"
+                onClick={clearCart}
+                className="btn-outline"
+              >
+                {QUOTE_CART_ROUTE_COPY.clearCta}
+              </button>
+            ) : null}
+          </div>
         </header>
 
         {items.length === 0 ? (
           <div className="rounded-3xl border border-neutral-200 bg-white p-8 text-center">
-            <p className="text-base text-neutral-700">Your quote cart is empty.</p>
-            <Link
-              href="/products"
-              className="mt-4 inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-white"
-            >
-              Browse Products
-            </Link>
+            <p className="text-lg text-neutral-800">{QUOTE_CART_ROUTE_COPY.emptyTitle}</p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
+              {QUOTE_CART_ROUTE_COPY.emptyDescription}
+            </p>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+              <Link href="/products" className="btn-primary">
+                {QUOTE_CART_ROUTE_COPY.emptyPrimaryCta}
+              </Link>
+              <Link href="/downloads" className="btn-outline">
+                {QUOTE_CART_ROUTE_COPY.emptySecondaryCta}
+              </Link>
+            </div>
           </div>
         ) : (
           <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
@@ -94,10 +135,10 @@ export default function QuoteCartPage() {
                       <button
                         type="button"
                         onClick={() => removeItem(item.id)}
-                        className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500 hover:text-red-600"
+                        className="typ-chip scheme-text-muted inline-flex items-center gap-1 hover:text-red-600"
                       >
                         <Trash2 className="h-3.5 w-3.5" />
-                        Remove
+                        {QUOTE_CART_ROUTE_COPY.removeCta}
                       </button>
                     </div>
                   </div>
@@ -106,20 +147,44 @@ export default function QuoteCartPage() {
             </div>
 
             <aside className="rounded-2xl border border-neutral-200 bg-white p-5 h-fit">
-              <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-500">
-                Quote Summary
+              <p className="typ-overline scheme-text-muted">{QUOTE_CART_ROUTE_COPY.summaryTitle}</p>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                {QUOTE_CART_ROUTE_COPY.summaryDescription}
               </p>
               <p className="mt-3 text-sm text-neutral-700">
-                Selected quantity: <strong>{totalQty}</strong>
+                {QUOTE_CART_ROUTE_COPY.summaryQuantityLabel}: <strong>{totalQty}</strong>
               </p>
               <p className="mt-2 text-sm text-neutral-700">
-                Unique products: <strong>{items.length}</strong>
+                {QUOTE_CART_ROUTE_COPY.summaryProductsLabel}: <strong>{items.length}</strong>
               </p>
+              {compareHref ? (
+                <div className="mt-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
+                  <p className="text-sm font-medium text-neutral-900">
+                    {QUOTE_CART_ROUTE_COPY.summaryCompareHint}
+                  </p>
+                  <Link href={compareHref} className="mt-3 inline-flex text-sm font-medium text-primary">
+                    {QUOTE_CART_ROUTE_COPY.compareCta}
+                  </Link>
+                </div>
+              ) : null}
+              <div className="mt-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
+                <p className="text-sm font-medium text-neutral-900">
+                  {QUOTE_CART_ROUTE_COPY.summaryDeskHint}
+                </p>
+                <div className="mt-3 grid gap-2">
+                  <Link href="/planning" className="btn-outline justify-center">
+                    {QUOTE_CART_ROUTE_COPY.planningCta}
+                  </Link>
+                  <Link href="/downloads" className="btn-outline justify-center">
+                    {QUOTE_CART_ROUTE_COPY.resourceDeskCta}
+                  </Link>
+                </div>
+              </div>
               <Link
-                href="/contact"
-                className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-white hover:bg-primary/90"
+                href="/contact?intent=quote&source=quote-cart"
+                className="typ-chip mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-primary px-5 py-2.5 text-white hover:bg-primary/90"
               >
-                Submit Quote Request
+                {QUOTE_CART_ROUTE_COPY.primaryCta}
               </Link>
             </aside>
           </div>

@@ -1,0 +1,694 @@
+{
+  "generatedAt": "2026-03-15T14:16:21.770Z",
+  "mode": "apply",
+  "offset": 0,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "0d6355f9-e2f4-40b6-8e04-79e7abdbb984",
+      "slug": "oando-educational--academia",
+      "name": "Academia",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Academia is a classroom designed for schools and colleges. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Classroom",
+        "features": [
+          "Smart Storage & Stability for Learning"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Smart Storage & Stability for Learning",
+            "body": "Academia is a thoughtfully designed classroom desk that prioritizes functionality and long-lasting durability. Its high-quality MDF tabletop provides a sturdy, reliable surface suited for everyday academic use."
+          },
+          {
+            "heading": "",
+            "body": "With integrated, practical storage solutions, Academia blends style with utility effortlessly. Its clean, modern design makes it an ideal choice for contemporary learning environments."
+          },
+          {
+            "heading": "",
+            "body": "Ergonomically contoured back handle allows easy lifting and repositioning of the chair, enabling quick, effortless classroom rearrangements without strain."
+          },
+          {
+            "heading": "",
+            "body": "Integrated wire-mesh under-desk storage offers ample space for books and bags while keeping the desktop clear and the classroom neatly organized."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Academia Classroom",
+        "sourceSlug": "academia"
+      },
+      "alt_text": "Academia Classroom",
+      "sourceSlug": "academia",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946894f3a0ee1af09490d4a_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946896ec97a3dd24159e676_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946897f3cfe78289a4011f1_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946899207bf3d039acf31f1_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--academia/image-1.jpg",
+        "/images/catalog/oando-educational--academia/image-2.jpg",
+        "/images/catalog/oando-educational--academia/image-3.jpg",
+        "/images/catalog/oando-educational--academia/image-4.jpg"
+      ]
+    },
+    {
+      "id": "23a7169a-15d6-40bc-a860-3d9bafcbf2cb",
+      "slug": "oando-educational--audi-chair",
+      "name": "Audi Chair",
+      "category_id": "education",
+      "series_name": "Auditorium",
+      "description": "Audi Chair is a auditorium designed for posture support and comfort. The chair includes dedicated head and neck support for longer work sessions.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Auditorium",
+        "features": [
+          "Comfort Meets Modern Design"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Comfort Meets Modern Design",
+            "body": "Designed to elevate auditorium seating, the Audi Chair combines ergonomic comfort with a sleek, modern aesthetic. Its thoughtfully contoured form ensures lasting support for extended seating."
+          },
+          {
+            "heading": "",
+            "body": "With a sturdy build engineered for durability, the Audi Chair is ideal for auditoriums and event spaces, seamlessly blending style, functionality, and long-term performance."
+          },
+          {
+            "heading": "",
+            "body": "Ergonomically designed armrest with an integrated cup holder adds comfort and convenience, enhancing the overall auditorium seating experience."
+          },
+          {
+            "heading": "",
+            "body": "Plush cushioning with a supportive headrest ensures superior comfort and ergonomic support, even during extended auditorium sessions."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Auditorium",
+        "subcategoryId": "auditorium",
+        "subcategoryLabel": "Auditorium",
+        "subcategory_slug": "auditorium",
+        "certifications": [],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Audi Chair Auditorium",
+        "sourceSlug": "audi-chair"
+      },
+      "alt_text": "Audi Chair Auditorium",
+      "sourceSlug": "audi-chair",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Auditorium",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b0f37cf9cad519f0c449_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b1037cf9cad519f0cd83_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b112e24dbcb41357cf61_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b120710ab1be8863f239_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--audi-chair/image-1.jpg",
+        "/images/catalog/oando-educational--audi-chair/image-2.jpg",
+        "/images/catalog/oando-educational--audi-chair/image-3.jpg",
+        "/images/catalog/oando-educational--audi-chair/image-4.jpg"
+      ]
+    },
+    {
+      "id": "d5f7634a-7ea2-41fd-8c43-f96c11f986ee",
+      "slug": "oando-educational--classcraft",
+      "name": "Classcraft",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Classcraft is a classroom designed for schools and institutes.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Classroom",
+        "features": [
+          "Durable & Organized for the Classroom"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Durable & Organized for the Classroom",
+            "body": "ClassCraft is an ideal classroom desk crafted to support focused learning through a durable tabletop and thoughtfully designed ergonomic features that enhance everyday comfort."
+          },
+          {
+            "heading": "",
+            "body": "Paired with a sturdy PE seat, ClassCraft provides reliable stability and long-lasting performance. Its functional design makes it perfectly suited for modern classrooms that value durability and efficiency."
+          },
+          {
+            "heading": "",
+            "body": "The ergonomically designed back handle allows effortless lifting and smooth movement of the chair, enabling quick classroom reconfiguration with minimal effort."
+          },
+          {
+            "heading": "",
+            "body": "Integrated under-desk wire basket combined with a built-in tabletop stationery holder keeps essentials organized, accessible, and the work surface clutter-free for better focus."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Classcraft Classroom",
+        "sourceSlug": "classcraft"
+      },
+      "alt_text": "Classcraft Classroom",
+      "sourceSlug": "classcraft",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c27cbfe376d7d2ecea4_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c3d869c2b69d9017734_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c4d0c012203a939f6a5_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c693a0ee1af0949d729_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--classcraft/image-1.jpg",
+        "/images/catalog/oando-educational--classcraft/image-2.jpg",
+        "/images/catalog/oando-educational--classcraft/image-3.jpg",
+        "/images/catalog/oando-educational--classcraft/image-4.jpg"
+      ]
+    },
+    {
+      "id": "4933e887-6ba1-40a2-935b-ad7015651ed4",
+      "slug": "oando-educational--connecta",
+      "name": "Connecta",
+      "category_id": "education",
+      "series_name": "Library",
+      "description": "Connecta is a library designed for teamwork and shared spaces.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Library",
+        "features": [
+          "Efficient Design for Every Library Space"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Efficient Design for Every Library Space",
+            "body": "The Connecta library table blends modern aesthetics with practical functionality, creating a refined yet purposeful presence in library environments. Its clean design complements contemporary interiors effortlessly."
+          },
+          {
+            "heading": "",
+            "body": "With a spacious surface that supports study, collaboration, and organization, Connecta is a perfect choice for libraries seeking both style and everyday efficiency."
+          },
+          {
+            "heading": "",
+            "body": "These tables can be easily connected for group activities or separated for individual use, offering flexible layouts that adapt to changing learning and collaboration needs.\\"
+          },
+          {
+            "heading": "",
+            "body": "Engineered with uniquely angled, reinforced legs, the table delivers exceptional stability and load-bearing strength, ensuring wobble-free performance even in high-use classroom and collaborative environments."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Library",
+        "subcategoryId": "library",
+        "subcategoryLabel": "Library",
+        "subcategory_slug": "library",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Connecta Library",
+        "sourceSlug": "connecta"
+      },
+      "alt_text": "Connecta Library",
+      "sourceSlug": "connecta",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Library",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946998a656037ebb7f93e64_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946999c710ab1be885e6b94_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694699ae3bf9f92a2538c3df_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694699bfe24dbcb41353aa7b_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--connecta/image-1.jpg",
+        "/images/catalog/oando-educational--connecta/image-2.jpg",
+        "/images/catalog/oando-educational--connecta/image-3.jpg",
+        "/images/catalog/oando-educational--connecta/image-4.jpg"
+      ]
+    },
+    {
+      "id": "59f233e6-d8e5-4aa0-bc5d-a38046f61e78",
+      "slug": "oando-educational--forma",
+      "name": "Forma",
+      "category_id": "education",
+      "series_name": "Library",
+      "description": "Forma is a library designed for flexible layouts and workspace efficiency.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Library",
+        "features": [
+          "Modern Design Meets Practical space"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Modern Design Meets Practical space",
+            "body": "The Forma library table blends timeless design with practical functionality, making it a refined addition to libraries and study spaces of all kinds."
+          },
+          {
+            "heading": "",
+            "body": "With a spacious surface that accommodates books, laptops, and study materials, Forma creates a clutter-free environment that supports focus and maximum productivity."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Library",
+        "subcategoryId": "library",
+        "subcategoryLabel": "Library",
+        "subcategory_slug": "library",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Forma Library",
+        "sourceSlug": "forma"
+      },
+      "alt_text": "Forma Library",
+      "sourceSlug": "forma",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Library",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69469aed0c012203a93fb248_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69469b01710ab1be885f6bfd_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69469b123a0ee1af094d33f8_IMG%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--forma/image-1.jpg",
+        "/images/catalog/oando-educational--forma/image-2.jpg",
+        "/images/catalog/oando-educational--forma/image-3.jpg"
+      ]
+    },
+    {
+      "id": "ebdd94ae-63df-48c4-85a1-55d24bb1233f",
+      "slug": "oando-educational--learnix",
+      "name": "Learnix",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Learnix is a classroom designed for modern learning spaces. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Classroom",
+        "features": [
+          "Smart Design for Everyday Learning"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Smart Design for Everyday Learning",
+            "body": "Built to enhance classroom functionality, this desk features a durable tabletop with integrated bag hooks that keep essentials within easy reach. Its thoughtful design helps maintain a clutter-free and comfortable learning space."
+          },
+          {
+            "heading": "",
+            "body": "The convenient bookshelf provides dedicated storage for books and supplies, encouraging better organization. Together, these features support improved focus and efficient study habits throughout the school day."
+          },
+          {
+            "heading": "",
+            "body": "Integrated under-desk storage keeps books and essentials neatly organized, reducing clutter and helping students stay focused throughout the day."
+          },
+          {
+            "heading": "",
+            "body": "Built-in bag hanging keeps school bags off the floor, maintaining a clean, organized classroom while ensuring easy access for students."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Learnix Classroom",
+        "sourceSlug": "learnix"
+      },
+      "alt_text": "Learnix Classroom",
+      "sourceSlug": "learnix",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468e303cfe78289a41f1d2_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468e42f828c5fbf4aa0673_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468e565c1c13c439e6262e_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468e693cfe78289a420807_IMG%204.jpg"
+      ],
+      "sourceDocs": [],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--learnix/image-1.jpg",
+        "/images/catalog/oando-educational--learnix/image-2.jpg",
+        "/images/catalog/oando-educational--learnix/image-3.jpg",
+        "/images/catalog/oando-educational--learnix/image-4.jpg"
+      ]
+    },
+    {
+      "id": "23367301-7c81-4d70-b4f1-7bf025b9e9ae",
+      "slug": "oando-educational--magazine-rack",
+      "name": "Magazine Rack",
+      "category_id": "education",
+      "series_name": "Library",
+      "description": "Magazine Rack is a library designed for organized reception areas.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Library",
+        "features": [
+          "Efficient Magazine Display"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Efficient Magazine Display",
+            "body": "Perfect for library spaces, this magazine rack provides an organized and easily accessible way to display and store reading materials for everyday use."
+          },
+          {
+            "heading": "",
+            "body": "The minimal, durable designs ensure long-lasting quality while keeping magazines neatly arranged, enhancing both functionality and visual appeal."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Library",
+        "subcategoryId": "library",
+        "subcategoryLabel": "Library",
+        "subcategory_slug": "library",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Magazine Rack Library",
+        "sourceSlug": "magazine-rack"
+      },
+      "alt_text": "Magazine Rack Library",
+      "sourceSlug": "magazine-rack",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Library",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69469c325c1c13c439e87370_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69469c423b49f0a3b96ae6f1_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69469c5ea65e3e6f70a1f528_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69469c700c012203a9403c35_IMG3.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--magazine-rack/image-1.jpg",
+        "/images/catalog/oando-educational--magazine-rack/image-2.jpg",
+        "/images/catalog/oando-educational--magazine-rack/image-3.jpg",
+        "/images/catalog/oando-educational--magazine-rack/image-4.jpg"
+      ]
+    },
+    {
+      "id": "71d4d3a0-965b-4372-af77-a9add2cb36f8",
+      "slug": "oando-educational--metal-bed",
+      "name": "Metal Bed",
+      "category_id": "education",
+      "series_name": "Hostel",
+      "description": "Metal Bed is a hostel designed for hostels and institutions.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Hostel",
+        "features": [
+          "Sturdy & Stylish Hostel Bed Solution"
+        ],
+        "materials": [
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Sturdy & Stylish Hostel Bed Solution",
+            "body": "Blending strength with modern style, this metal bed is ideal for high-use hostel spaces. Its sturdy metal frame delivers reliable support while maintaining a clean, minimalist appearance."
+          },
+          {
+            "heading": "",
+            "body": "Designed to complement shared rooms, the bed offers lasting stability and everyday comfort, creating a dependable foundation for restful sleep in hostel environments."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Hostel",
+        "subcategoryId": "hostel",
+        "subcategoryLabel": "Hostel",
+        "subcategory_slug": "hostel",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Metal Bed Hostel",
+        "sourceSlug": "metal-bed"
+      },
+      "alt_text": "Metal Bed Hostel",
+      "sourceSlug": "metal-bed",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Hostel",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946ad23e7ad38eb7a2e4aef_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946ad377cf9cad519ef3cab_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946ad4af893547ba9710c03_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--metal-bed/image-1.jpg",
+        "/images/catalog/oando-educational--metal-bed/image-2.jpg",
+        "/images/catalog/oando-educational--metal-bed/image-3.jpg"
+      ]
+    },
+    {
+      "id": "588c643d-619c-42e0-8932-e14fcdaf908b",
+      "slug": "oando-educational--performer",
+      "name": "Performer",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Performer is a classroom designed for comfort, durability, and daily productivity. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Educational",
+        "subcategory": "Classroom",
+        "features": [
+          "Designed for Focused Learning and Lasting Comfort"
+        ],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Designed for Focused Learning and Lasting Comfort",
+            "body": "Designed especially for classroom environments, the Performer chair blends elegance with ergonomic support. Its well-considered form encourages proper posture, allowing students to sit comfortably and stay attentive during long learning hours."
+          },
+          {
+            "heading": "",
+            "body": "Built with durability at its core, the Performer chair offers reliable, long-lasting support for daily use. Its efficient design adapts seamlessly to diverse educational settings, making it a dependable choice for modern classrooms."
+          },
+          {
+            "heading": "",
+            "body": "Compact, integrated storage keeps books and essentials neatly within arm’s reach, reducing desktop clutter and maximizing focus."
+          },
+          {
+            "heading": "",
+            "body": "Built-in bag hook keeps school bags off the floor and within easy reach, maintaining a clutter-free, hygienic workspace while improving classroom organization and safety."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Performer Classroom",
+        "sourceSlug": "performer"
+      },
+      "alt_text": "Performer Classroom",
+      "sourceSlug": "performer",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946849d3f5f009d0f3f990e_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694684af3a0ee1af094787b9_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694684bdcbfe376d7d2da336_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694684cdcbfe376d7d2da47c_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-educational--performer/image-1.jpg",
+        "/images/catalog/oando-educational--performer/image-2.jpg",
+        "/images/catalog/oando-educational--performer/image-3.jpg",
+        "/images/catalog/oando-educational--performer/image-4.jpg"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "education-classroom-accent-study-chair",
+      "name": "Accent Study Chair",
+      "categoryId": "education"
+    }
+  ]
+}

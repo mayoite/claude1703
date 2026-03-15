@@ -35,11 +35,11 @@ function normalizeAssetPath(path: string | null | undefined): string {
   if (!path) return "";
   let normalized = String(path).trim();
   if (!normalized) return "";
-  if (normalized.includes("/images/afc/")) {
-    normalized = normalized.replace("/images/afc/", "/images/catalog/");
+  if (/^\/images\/[^/]+\/oando-/.test(normalized)) {
+    normalized = normalized.replace(/^\/images\/[^/]+(?=\/oando-)/, "/images/catalog");
   }
-  if (normalized.includes("/products/afc/")) {
-    normalized = normalized.replace("/products/afc/", "/products/catalog/");
+  if (/^\/products\/[^/]+\//.test(normalized)) {
+    normalized = normalized.replace(/^\/products\/[^/]+(?=\/)/, "/products/catalog");
   }
   return normalized;
 }

@@ -1,0 +1,464 @@
+{
+  "generatedAt": "2026-03-15T14:17:52.356Z",
+  "mode": "apply",
+  "offset": 80,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "b1a961c0-ae6a-4968-9951-a8d98f4cd246",
+      "slug": "oando-soft-seating--luxar",
+      "name": "Luxar",
+      "category_id": "soft-seating",
+      "series_name": "Occasional Tables",
+      "description": "Luxar is a occasional table designed for premium comfort.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Occasional Tables",
+        "features": [],
+        "materials": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Occasional Tables",
+        "subcategoryId": "occasional-tables",
+        "subcategoryLabel": "Occasional Tables",
+        "subcategory_slug": "occasional-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Luxar Occasional Table",
+        "sourceSlug": "luxar"
+      },
+      "alt_text": "Luxar Occasional Table",
+      "sourceSlug": "luxar",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Occasional Tables",
+      "sourceImages": [],
+      "sourceDocs": [],
+      "sourceCertifications": [],
+      "localImages": []
+    },
+    {
+      "id": "63c41788-3608-4013-ab6a-c27a69b24bef",
+      "slug": "oando-soft-seating--margas",
+      "name": "Margas",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Margas is a lounge designed for flexible layouts and workspace efficiency.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "A Statement Piece"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Width (Front View): 750 mm Seat Height: 450 mm; Overall Depth (Side View): 730 mm Overall Height (Side View): 800 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "A Statement Piece",
+            "body": "The Margas Soft Seating chair features a fully upholstered shell paired with a sturdy leg base, creating a blend of comfort and refined elegance. Its high back design offers excellent support, making it ideal for living rooms, lounges, and quiet reading corners."
+          },
+          {
+            "heading": "",
+            "body": "Available in a variety of fabric and wood finishes, Margas can be customized to complement both modern and classic spaces. It can also be paired with a matching ottoman for enhanced relaxation, making it perfect for extended comfort."
+          },
+          {
+            "heading": "",
+            "body": "The wide, flowing backrest gently curves around the user, creating a cozy, enveloping seating experience that enhances comfort and adds a premium lounge aesthetic."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple finishes to match any interior palette and design mood."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Margas",
+            "lines": [
+              "Overall Width (Front View): 750 mm Seat Height: 450 mm",
+              "Overall Depth (Side View): 730 mm Overall Height (Side View): 800 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Margas Lounge",
+        "sourceSlug": "margas"
+      },
+      "alt_text": "Margas Lounge",
+      "sourceSlug": "margas",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c00a5020996a0d0d41941_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c00b8a6cf1cf1474f708f_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c00c944924ee23b9cef5b_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c00db6a25c5e0dd645c44_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--margas/image-1.jpg",
+        "/images/catalog/oando-soft-seating--margas/image-2.jpg",
+        "/images/catalog/oando-soft-seating--margas/image-3.jpg",
+        "/images/catalog/oando-soft-seating--margas/image-4.jpg"
+      ]
+    },
+    {
+      "id": "4f3fd1b5-69de-45fe-96dc-dfc037d2e1a8",
+      "slug": "oando-soft-seating--nook",
+      "name": "Nook",
+      "category_id": "soft-seating",
+      "series_name": "Occasional Tables",
+      "description": "Nook is a occasional table designed for waiting areas and informal spaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Occasional Tables",
+        "features": [
+          "Natural Harmony"
+        ],
+        "materials": [],
+        "dimensions": "Overall Height (top to floor): 500mm; Top Thickness: 25 mm; Dia: 450 / 600 / 750 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Natural Harmony",
+            "body": "Nook offers a fresh, contemporary take on the classic nesting table. Its slender, tapered legs and rounded tops create a light, balanced silhouette that fits seamlessly into modern interiors."
+          },
+          {
+            "heading": "",
+            "body": "Available in various finishes, Nook’s paired forms can be used together or individually. Their adaptable design makes it easy to shift layouts, meeting the changing needs of any space."
+          },
+          {
+            "heading": "",
+            "body": "The round table's pared-back esthetic blends gentle curves with the natural beauty of wood. Offered in four distinct shades."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Nook",
+            "lines": [
+              "Overall Height (top to floor): 500mm",
+              "Top Thickness: 25 mm",
+              "Dia: 450 / 600 / 750 mm"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Occasional Tables",
+        "subcategoryId": "occasional-tables",
+        "subcategoryLabel": "Occasional Tables",
+        "subcategory_slug": "occasional-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Nook Occasional Table",
+        "sourceSlug": "nook"
+      },
+      "alt_text": "Nook Occasional Table",
+      "sourceSlug": "nook",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Occasional Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee1bce0440c2048ea22a8_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee35df78ca85d77bab32e_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee1de0182cb493f03cc6b_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee2f99c7b33c785587c83_IMG%201.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--nook/image-1.jpg",
+        "/images/catalog/oando-soft-seating--nook/image-2.jpg",
+        "/images/catalog/oando-soft-seating--nook/image-3.jpg",
+        "/images/catalog/oando-soft-seating--nook/image-4.jpg"
+      ]
+    },
+    {
+      "id": "5c4f31d4-251e-4289-95ac-b522d5b7c97d",
+      "slug": "oando-soft-seating--nuvora",
+      "name": "Nuvora",
+      "category_id": "soft-seating",
+      "series_name": "Collaborative",
+      "description": "Nuvora is a collaborative designed for offices.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Collaborative",
+        "features": [
+          "Designed for Focused Collaboration"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Designed for Focused Collaboration",
+            "body": "Nuvora is crafted for today’s focused and flexible workstyles, blending simplicity with structural strength. Every surface and angle is purpose-driven, shaping calm and efficient spaces that support clear thinking and effortless collaboration."
+          },
+          {
+            "heading": "",
+            "body": "A convergence of privacy, focus, and teamwork, Nuvora balances openness with intimacy. Its thoughtful design embraces duality, supporting deep work while enabling spontaneous interactions through a seamless blend of function and form."
+          },
+          {
+            "heading": "",
+            "body": "Precision aluminium extrusions with an anodised finish deliver a sleek, durable framework that balances strength with modern aesthetics."
+          },
+          {
+            "heading": "",
+            "body": "Built-in power options support multiple devices, enabling uninterrupted work, collaboration, and digital connectivity."
+          },
+          {
+            "heading": "",
+            "body": "High upholstered panels reduce sound transfer, creating a quieter, more focused environment for effective conversations and deep work."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple configurations, the system adapts effortlessly to diverse layouts and workstyles, supporting collaboration, focus, and seamless spatial planning."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Collaborative",
+        "subcategoryId": "collaborative",
+        "subcategoryLabel": "Collaborative",
+        "subcategory_slug": "collaborative",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Nuvora Collaborative",
+        "sourceSlug": "nuvora"
+      },
+      "alt_text": "Nuvora Collaborative",
+      "sourceSlug": "nuvora",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Collaborative",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942a764b0008403a41c852c_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942a779a5463b2dcded5925_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942a78a070a09161afe2ca4_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942a799070a09161afe3c99_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942a7a986b7b8ced3a658fd_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6942a7b6c2a74c08964be197_SECTION%203-SCROLL%20IMAGES%2011.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--nuvora/image-1.jpg",
+        "/images/catalog/oando-soft-seating--nuvora/image-2.jpg",
+        "/images/catalog/oando-soft-seating--nuvora/image-3.jpg",
+        "/images/catalog/oando-soft-seating--nuvora/image-4.jpg",
+        "/images/catalog/oando-soft-seating--nuvora/image-5.jpg",
+        "/images/catalog/oando-soft-seating--nuvora/image-6.jpg"
+      ]
+    },
+    {
+      "id": "b08e15f9-5ef8-49f4-97d5-e1c3ecd08974",
+      "slug": "oando-soft-seating--padora",
+      "name": "Padora",
+      "category_id": "soft-seating",
+      "series_name": "Collaborative",
+      "description": "Padora is a collaborative designed for comfort and durability.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Collaborative",
+        "features": [
+          "Elevated privacy, effortless comfort."
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Elevated privacy, effortless comfort.",
+            "body": "PADORA is a thoughtfully crafted collaborative soft-seating system that elevates user experience in evolving workplaces. It seamlessly blends comfort, aesthetics, and utility to create modular seating islands, booths, and breakout zones."
+          },
+          {
+            "heading": "",
+            "body": "Adaptable to diverse workstyles, PADORA transitions effortlessly between open lounges for collaboration, enclosed setups for focused work, and clustered arrangements for team zones. Integrated nook seating offers dedicated spaces for solo tasks or casual breaks."
+          },
+          {
+            "heading": "",
+            "body": "Freestanding or seamlessly integrated side tables provide convenient surfaces for devices, notes, or essentials, enhancing everyday usability without disrupting the seating layout."
+          },
+          {
+            "heading": "",
+            "body": "Thoughtfully placed hooks offer a simple solution for hanging bags or coats, keeping the space organized, clutter-free, and user-centric."
+          },
+          {
+            "heading": "",
+            "body": "Built-in electrical options ensure easy access to power, supporting seamless device usage and uninterrupted productivity in collaborative and focused settings."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple configurations, the system adapts effortlessly to diverse layouts and workstyles, supporting collaboration, focus, and seamless spatial planning."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Collaborative",
+        "subcategoryId": "collaborative",
+        "subcategoryLabel": "Collaborative",
+        "subcategory_slug": "collaborative",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Padora Collaborative",
+        "sourceSlug": "padora"
+      },
+      "alt_text": "Padora Collaborative",
+      "sourceSlug": "padora",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Collaborative",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69427ed06a1d239796c0a474_SECTION%203-SCROLL%20IMAGES%2011.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69427ee161736810a6555726_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69427ef70bba43a8e7ddf4dc_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69427f0a6eb493ccbb55244c_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69427f189b111f8b12916000_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69427f2aad65b5c361795c96_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--padora/image-1.jpg",
+        "/images/catalog/oando-soft-seating--padora/image-2.jpg",
+        "/images/catalog/oando-soft-seating--padora/image-3.jpg",
+        "/images/catalog/oando-soft-seating--padora/image-4.jpg",
+        "/images/catalog/oando-soft-seating--padora/image-5.jpg",
+        "/images/catalog/oando-soft-seating--padora/image-6.jpg"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "oando-soft-seating--luna",
+      "name": "Luna",
+      "categoryId": "soft-seating"
+    },
+    {
+      "slug": "oando-soft-seating--lura",
+      "name": "Lura",
+      "categoryId": "soft-seating"
+    },
+    {
+      "slug": "oando-soft-seating--moon",
+      "name": "Moon",
+      "categoryId": "soft-seating"
+    },
+    {
+      "slug": "oando-soft-seating--opera",
+      "name": "Opera",
+      "categoryId": "soft-seating"
+    },
+    {
+      "slug": "oando-soft-seating--orb",
+      "name": "Orb",
+      "categoryId": "soft-seating"
+    }
+  ]
+}

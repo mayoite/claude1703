@@ -14,6 +14,9 @@ This folder holds non-runtime material that should stay out of the main app stru
   - current example: duplicate `cisco-sans` font folder
 - `test-artifacts/`
   - archived local test output such as `test-results`
+- `trashfiles-review/`
+  - preserved residue moved out of the old `trashfiles/` area during folder normalization
+  - keeps superseded doc copies and duplicate salvage dumps available for provenance review without competing with `unused/`
 
 ## Notes
 

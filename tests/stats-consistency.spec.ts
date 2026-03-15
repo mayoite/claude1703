@@ -6,7 +6,7 @@ type BusinessStatsResponse = {
     clientOrganisations: number;
     sectorsServed: number;
   };
-  source: "supabase" | "nhost-backup" | "stale-cache" | "safe-default";
+  source: "supabase" | "nhost-graphql" | "nhost-sql" | "stale-cache" | "safe-default";
 };
 
 function plus(value: number) {
@@ -19,7 +19,7 @@ test.describe("KPI consistency", () => {
     expect(apiResponse.status()).toBe(200);
 
     const payload = (await apiResponse.json()) as BusinessStatsResponse;
-    expect(["supabase", "nhost-backup", "stale-cache", "safe-default"]).toContain(
+    expect(["supabase", "nhost-graphql", "nhost-sql", "stale-cache", "safe-default"]).toContain(
       payload.source,
     );
 

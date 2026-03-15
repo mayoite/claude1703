@@ -1,0 +1,58 @@
+RECOVERY FOLDER GUIDE
+
+TOP-LEVEL FILES
+
+- `WORLD-CLASS-PLAN.md`
+  Main long-form recovery plan.
+
+- `NEXT-PLAN.md`
+  Single active implementation block.
+
+- `RECOVERY-CHECKLIST.md`
+  Active done/not-done status.
+
+- `DECISIONS.md`
+  Locked cross-session decisions.
+
+- `HOLDS.md`
+  Protected, deferred, or unresolved clusters.
+
+- `DOCUMENT-SOURCE-GAP.md`
+  Notes for the bounded document-source gap.
+
+- `MASTER-OBJECTIVE.md`
+  Short recovery charter.
+
+- `RECOVERY-ROADMAP.md`
+  Short phase map.
+
+- `WORKSTREAM-STRUCTURE.md`
+  Short repo-structure map.
+
+- `latest.md`
+  Latest recovery snapshot.
+
+- `README.md`
+  Minimal reading-order note.
+
+- `RECOVERY-CHAT-FLOW.txt`
+  Handoff command and new-chat command.
+
+SUBFOLDERS
+
+- `handover/`
+  Resume package for a new chat.
+
+- `snapshots/`
+  Recovery-state history.
+
+- `chat-snapshots/`
+  Chat-summary history.
+
+READING ORDER
+
+1. `WORLD-CLASS-PLAN.md`
+2. `NEXT-PLAN.md`
+3. `RECOVERY-CHECKLIST.md`
+4. `DECISIONS.md`
+5. `latest.md`

@@ -48,7 +48,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship_image": "/images/afc/oando-seating--fluid-x/image-1.webp",
+        "flagship_image": "/images/catalog/oando-seating--fluid-x/image-1.webp",
         "images_count": 7,
         "scene_images_count": 3
       }
@@ -98,7 +98,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship_image": "/images/afc/oando-seating--fluid-x/image-1.webp",
+        "flagship_image": "/images/catalog/oando-seating--fluid-x/image-1.webp",
         "images_count": 0,
         "scene_images_count": 0
       }
@@ -146,7 +146,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship_image": "/images/afc/oando-seating--halo/image-1.webp",
+        "flagship_image": "/images/catalog/oando-seating--halo/image-1.webp",
         "images_count": 7,
         "scene_images_count": 3
       }
@@ -194,7 +194,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship_image": "/images/afc/oando-seating--logica/image-1.webp",
+        "flagship_image": "/images/catalog/oando-seating--logica/image-1.webp",
         "images_count": 7,
         "scene_images_count": 3
       }
@@ -242,7 +242,7 @@
         "profilePass": true
       },
       "mediaCheck": {
-        "flagship_image": "/images/afc/oando-seating--x-mesh/image-1.webp",
+        "flagship_image": "/images/catalog/oando-seating--x-mesh/image-1.webp",
         "images_count": 7,
         "scene_images_count": 3
       }

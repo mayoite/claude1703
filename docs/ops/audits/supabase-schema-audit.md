@@ -1,6 +1,6 @@
 # Supabase Schema Audit
 
-- Generated at: 2026-03-09T10:48:55.275Z
+- Generated at: 2026-03-15T12:41:48.922Z
 - Supabase host: erpweaiypimorcunaimz.supabase.co
 
 ## Table Probes
@@ -8,9 +8,9 @@
 - products: present, rows=145
 - product_specs: present, rows=145
 - product_images: present, rows=1478
-- product_slug_aliases: present, rows=704
+- product_slug_aliases: present, rows=716
 - business_stats_current: present, rows=1
-- customer_queries: present, rows=0
+- customer_queries: present, rows=2
 - catalog_categories: present, rows=0
 - catalog_products: present, rows=0
 - catalog_product_specs: present, rows=0
@@ -36,7 +36,7 @@
 - missing alt text: 145
 - missing primary image: 1
 - duplicate normalized name keys by category: 2
-- alias rows: 704
+- alias rows: 716
 - blank alias rows: 0
 - self alias rows: 0
 - missing business stats rows: 0

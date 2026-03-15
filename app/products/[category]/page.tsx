@@ -16,6 +16,7 @@ import {
 } from "@/lib/catalogCategories";
 import { SITE_URL } from "@/lib/siteUrl";
 import { CATEGORY_ROUTE_COPY } from "@/data/site/routeCopy";
+import { buildBreadcrumbJsonLd, buildPageJsonLd, buildPageMetadata } from "@/data/site/seo";
 
 const BASE_URL = SITE_URL;
 
@@ -41,13 +42,11 @@ export async function generateMetadata({
     "{category}",
     displayName.toLowerCase(),
   )}`;
-  const url = `${BASE_URL}/products/${canonicalCategoryId}`;
-  return {
+  return buildPageMetadata(BASE_URL, {
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website" },
-  };
+    path: `/products/${canonicalCategoryId}`,
+  });
 }
 
 export async function generateStaticParams() {
@@ -130,9 +129,29 @@ export default async function CategoryPage({
     firstProductWithImage?.images?.[0] ||
     firstProductWithImage?.flagshipImage ||
     "/images/hero/hero-1.webp";
+  const categoryPath = `/products/${canonicalCategoryId}`;
+  const categoryJsonLd = buildPageJsonLd(BASE_URL, {
+    path: categoryPath,
+    title: `${normalizedCategory.name} | ${CATEGORY_ROUTE_COPY.metadataSuffix}`,
+    description: normalizedCategory.description,
+    pageType: "CollectionPage",
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(BASE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: normalizedCategory.name, path: categoryPath },
+  ]);
 
   return (
     <div className="flex min-h-screen flex-col items-center bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Hero
         variant="small"
         title={normalizedCategory.name}

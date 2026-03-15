@@ -20,6 +20,33 @@ export const SITE_CTA_LINKS = [
   { label: "View Products", href: "/products", variant: "outline" as const },
 ] as const;
 
+export const SITE_NAV_FEATURED_CARDS = [
+  {
+    title: "Ergonomic Seating",
+    description: "Mesh chairs and premium seating for long working hours.",
+    href: "/products/seating",
+    image: "/images/products/imported/fluid/image-1.webp",
+  },
+  {
+    title: "Modular Workstations",
+    description: "Scalable desking systems for growing teams.",
+    href: "/products/workstations",
+    image: "/images/products/imported/cabin/image-1.webp",
+  },
+  {
+    title: "Need Help Choosing?",
+    description: "Use AI-assisted search to find the right furniture faster.",
+    href: "/products",
+    image: "/images/products/imported/cocoon/image-1.webp",
+  },
+] as const;
+
+export const SITE_NAV_SEARCH_FALLBACK_LINKS = [
+  { href: "/products", label: "All Products" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/projects", label: "Projects" },
+] as const;
+
 const productLinks = [
   { href: "/products", label: "All Products" },
   ...buildCatalogCategoryNav(Catalog_CATEGORY_ORDER),
@@ -57,9 +84,9 @@ export const SITE_FOOTER_NAV = [
     links: [
       { href: "/contact", label: "Contact Us" },
       { href: "/configurator", label: "2D Configurator" },
-      { href: "/contact", label: "Get Quote" },
-      { href: "/refund-and-return-policy", label: "Refund Policy" },
-      { href: "/privacy", label: "Privacy Policy" },
+      { href: "/planning", label: "Planning Service" },
+      { href: "/downloads", label: "Resource Desk" },
+      { href: "/showrooms", label: "Showrooms" },
     ],
   },
 ] as const;

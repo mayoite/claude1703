@@ -1,16 +1,17 @@
 export function normalizeAssetPath(path: string | null | undefined): string {
   if (!path) return "";
-  let normalized = String(path).trim();
-  if (!normalized) return "";
+  const normalized = String(path).trim();
+  const lower = normalized.toLowerCase();
+  const hasImageExtension = /\.(webp|png|jpe?g|gif|avif|svg)$/i.test(normalized);
 
-  if (normalized.includes("/images/afc/")) {
-    normalized = normalized.replace("/images/afc/", "/images/catalog/");
+  // Legacy catalog exports referenced `/images/afc/*`; assets now live under `/images/catalog/*`.
+  if (lower.startsWith("/images/afc/")) {
+    return `/images/catalog/${normalized.slice("/images/afc/".length)}`;
   }
-  if (normalized.includes("/products/afc/")) {
-    normalized = normalized.replace("/products/afc/", "/products/catalog/");
-  }
-  if (normalized.includes("/afc-logo")) {
-    normalized = normalized.replace("/afc-logo", "/catalog-logo");
+
+  // Legacy homepage content used `/products/*.webp` while static files are under `/images/products/*`.
+  if (hasImageExtension && lower.startsWith("/products/")) {
+    return `/images/products/${normalized.slice("/products/".length)}`;
   }
 
   return normalized;

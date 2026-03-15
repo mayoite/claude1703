@@ -1,7 +1,8 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
+import { CONTACT_FORM_CONTEXT_COPY } from "@/data/site/routeCopy";
 
 type PreferredContact = "any" | "email" | "whatsapp" | "phone";
 
@@ -34,12 +35,26 @@ const initialState: FormState = {
 const PRIMARY_QUOTE_PHONE_DISPLAY = "+91 98356 30940";
 const PRIMARY_QUOTE_PHONE_LINK = "tel:+919835630940";
 
-export function CustomerQueryForm() {
+type CustomerQueryFormProps = {
+  intent?: string | null;
+  source?: string | null;
+};
+
+export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
   const pathname = usePathname();
   const [form, setForm] = useState<FormState>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [result, setResult] = useState<SubmitResult | null>(null);
+  const contextCopy =
+    intent === "quote" && source === "compare"
+      ? CONTACT_FORM_CONTEXT_COPY.quote.compare
+      : intent === "quote" && source === "quote-cart"
+        ? CONTACT_FORM_CONTEXT_COPY.quote["quote-cart"]
+        : null;
+  const sourcePath = useMemo(() => {
+    return contextCopy ? `${pathname}?intent=${intent}&source=${source}` : pathname;
+  }, [contextCopy, intent, pathname, source]);
 
   const canSubmit = useMemo(() => {
     return (
@@ -48,6 +63,15 @@ export function CustomerQueryForm() {
       (form.email.trim().length > 0 || form.phone.trim().length > 0)
     );
   }, [form]);
+
+  useEffect(() => {
+    if (!contextCopy) return;
+    setForm((current) =>
+      current.message.trim().length > 0
+        ? current
+        : { ...current, message: contextCopy.seededMessage },
+    );
+  }, [contextCopy]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -66,8 +90,9 @@ export function CustomerQueryForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          source: "website-contact",
-          sourcePath: pathname,
+          requirement: contextCopy?.requirement,
+          source: contextCopy ? `website-contact-${source}` : "website-contact",
+          sourcePath,
         }),
       });
 
@@ -91,6 +116,15 @@ export function CustomerQueryForm() {
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
+      {contextCopy ? (
+        <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
+          <p className="typ-label text-primary">{contextCopy.eyebrow}</p>
+          <p className="mt-2 text-base font-medium text-neutral-900">{contextCopy.title}</p>
+          <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+            {contextCopy.description}
+          </p>
+        </div>
+      ) : null}
       <p className="text-sm text-neutral-600">
         Fields marked <span className="font-semibold text-primary">*</span> are required. Share
         either email or phone and we will respond within 1 business day.

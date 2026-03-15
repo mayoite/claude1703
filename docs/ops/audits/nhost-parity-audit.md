@@ -1,6 +1,6 @@
 # Nhost Parity Audit
 
-- Generated at: 2026-03-09T10:49:22.258Z
+- Generated at: 2026-03-12T21:36:21.877Z
 - Supabase host: erpweaiypimorcunaimz.supabase.co
 - Nhost DB host: bggcbrfwssqgflkuhgkg.db.ap-south-1.nhost.run:5432
 
@@ -19,7 +19,7 @@
 
 ## GraphQL Checks
 - products: ok (ok)
-- product_slug_aliases: fail (field 'product_slug_aliases' not found in type: 'query_root')
+- product_slug_aliases: ok (ok)
 - business_stats_current: ok (ok)
 
 ## Sampled Canonical Slug Checks

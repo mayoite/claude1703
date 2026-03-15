@@ -20,13 +20,13 @@ export function CollaborationSection() {
         </div>
 
         {/* Text panel */}
-        <div className="w-full lg:w-[45%] bg-[#040C18] flex flex-col justify-center px-8 md:px-16 py-16 lg:py-20">
-          <p className="typ-label mb-6 text-cyan-300/60">Workspace Solutions</p>
+        <div className="section-ink flex w-full flex-col justify-center px-8 py-16 md:px-16 lg:w-[45%] lg:py-20">
+          <p className="typ-label scheme-text-inverse-muted mb-6">Workspace Solutions</p>
           <h2 className="typ-section text-white mb-6 leading-tight">
             Space for{" "}
-            <em className="italic text-cyan-200/80">collaboration.</em>
+            <em className="italic scheme-text-inverse-muted">collaboration.</em>
           </h2>
-          <p className="text-base leading-relaxed text-white/60 font-light max-w-sm mb-10">
+          <p className="scheme-text-inverse-body text-base leading-relaxed font-light max-w-sm mb-10">
             Plan breakout, meeting and lounge zones that help teams connect,
             discuss and decide faster — without leaving the building.
           </p>

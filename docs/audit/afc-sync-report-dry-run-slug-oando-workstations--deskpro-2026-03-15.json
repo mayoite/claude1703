@@ -1,0 +1,158 @@
+{
+  "generatedAt": "2026-03-15T14:00:25.108Z",
+  "mode": "dry-run",
+  "offset": 0,
+  "limit": null,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 1,
+  "matched": [
+    {
+      "id": "9aea071d-f393-4243-aa8e-8efcdbafcfc2",
+      "slug": "oando-workstations--deskpro",
+      "name": "DeskPro",
+      "category_id": "workstations",
+      "series_name": "Desking Series",
+      "description": "DeskPro is a workstation system designed for efficient layouts. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "source": "afcindia.in",
+        "category": "Workstations",
+        "subcategory": "Desking Series",
+        "features": [
+          "A workstation built for productivity, crafted to deliver balance and clarity."
+        ],
+        "materials": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey"
+        ],
+        "dimensions": "L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600; D2 - 600; HT - 1150 / 1200; L1 - 1500; L2 - 1200 / 1350 /1500; D1 - 600; D2 - 600; HT - 1150 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 1150 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 1150 / 1200",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Deskpro",
+          "SCS GOLD",
+          "BIFMA DESK PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "A workstation built for productivity, crafted to deliver balance and clarity.",
+            "body": "An efficient and dependable workstation, designed with clean simplicity and adaptability to suit diverse workplace needs."
+          },
+          {
+            "heading": "",
+            "body": "From single desks to cluster arrangements, DeskPro ensures flexibility that supports both focused work and collaborative energy."
+          },
+          {
+            "heading": "",
+            "body": "Personalize your workspace with customizable leg caps, beams, and levelers. DeskPro offers a range of color accents that bring character, style, and flexibility to modern office interiors"
+          },
+          {
+            "heading": "",
+            "body": "Stay organized with multiple storage choices, including hanging pedestals, mobile pedestals, and add-on accessories designed to keep essentials within easy reach."
+          },
+          {
+            "heading": "",
+            "body": "Flexible access to power and data through the work surface or power beam, keeping the workspace clean and clutter-free."
+          },
+          {
+            "heading": "",
+            "body": "The workstation comes with adaptable elements like legs and pedestals, allowing you to choose colors, materials, and finishes that seamlessly blend with your workspace vibe."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Desking 120° Cluster",
+            "lines": [
+              "L1 - 1050 / 1200",
+              "L2 - 1050 / 1200",
+              "D1 - 600",
+              "D2 - 600",
+              "HT - 1150 / 1200"
+            ]
+          },
+          {
+            "heading": "Desking L-Shape Cluster",
+            "lines": [
+              "L1 - 1500",
+              "L2 - 1200 / 1350 /1500",
+              "D1 - 600",
+              "D2 - 600",
+              "HT - 1150 / 1200"
+            ]
+          },
+          {
+            "heading": "Desking Linear Cluster",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 1150 / 1200"
+            ]
+          },
+          {
+            "heading": "Desking Non-Sharing Cluster",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 1150 / 1200"
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "source": "afcindia.in",
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Desking Series",
+        "subcategoryId": "desking",
+        "subcategoryLabel": "Desking Series",
+        "subcategory_slug": "desking-series",
+        "certifications": [
+          "Deskpro",
+          "SCS GOLD",
+          "BIFMA DESK PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": true,
+        "warrantyYears": 10,
+        "ai_alt_text": "DeskPro workstation system",
+        "sourceSlug": "deskpro"
+      },
+      "alt_text": "DeskPro workstation system",
+      "sourceSlug": "deskpro",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Desking Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6920638ce0df7db66ff51dcc_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68aeb2d8fd6f3ece39467861_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68aeb39247ca6265d5103da6_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6920630e2a0c96f040d24c3b_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692062b7bd3d498f1169cef3_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68aeb46bf3f89c779f4a58e0_SECTION%203-SCROLL%20IMAGES%2011.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Deskpro",
+        "SCS GOLD",
+        "BIFMA DESK PRO"
+      ]
+    }
+  ],
+  "unmatched": []
+}

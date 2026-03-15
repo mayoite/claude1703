@@ -1,0 +1,914 @@
+{
+  "generatedAt": "2026-03-15T14:16:44.472Z",
+  "mode": "apply",
+  "offset": 20,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "7a582060-a7d1-43fd-9e29-334d7e50d54d",
+      "slug": "oando-seating--dive",
+      "name": "Dive",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Dive is a cafe chair designed for teamwork and shared spaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Fluid Modernity"
+        ],
+        "materials": [],
+        "dimensions": "Height: 750mm.; Width: 480 mm.; Depth: 480 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Fluid Modernity",
+            "body": "The Dive Chair features a sleek, modern profile that adapts effortlessly to cafés, dining rooms, offices, and lounges. Its clean lines and smooth contours give it a versatile look that blends seamlessly with a wide range of interior styles. Designed to feel inviting, it adds a touch of contemporary simplicity to any space."
+          },
+          {
+            "heading": "",
+            "body": "Lightweight yet supportive, the Crotch Café Chair delivers ergonomic comfort ideal for extended seating. Its balanced proportions and thoughtfully shaped seat ensure ease whether used for work, dining, or casual relaxation."
+          },
+          {
+            "heading": "",
+            "body": "The wide, angled backrest offers strong support with a clean, modern look. Its smooth moulded form keeps posture comfortable, while the bold colour adds a stylish visual touch to any space."
+          },
+          {
+            "heading": "",
+            "body": "The smooth, tapered wooden legs add warmth and balance to the modern frame. Sturdy yet light in appearance, they offer reliable support while elevating the chair’s refined look."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Dive",
+            "lines": [
+              "Height: 750mm.",
+              "Width: 480 mm.",
+              "Depth: 480 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Dive Cafe Chair",
+        "sourceSlug": "dive"
+      },
+      "alt_text": "Dive Cafe Chair",
+      "sourceSlug": "dive",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6928163de5a83b562171e39d_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69281652d2af3126c0059f47_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6928166855ee1d364b5dbfa7_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6928167b3b72c085132f7756_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69281693e31b9d60a3c4a747_IMG%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--dive/image-1.jpg",
+        "/images/catalog/oando-seating--dive/image-2.jpg",
+        "/images/catalog/oando-seating--dive/image-3.jpg",
+        "/images/catalog/oando-seating--dive/image-4.jpg",
+        "/images/catalog/oando-seating--dive/image-5.jpg"
+      ]
+    },
+    {
+      "id": "d6a32300-b2b1-4f57-aa27-4955331c06fb",
+      "slug": "oando-seating--ember",
+      "name": "Ember",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Ember is a cafe chair designed for premium leadership spaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Timeless Simplicity"
+        ],
+        "materials": [],
+        "dimensions": "Height: 762mm.; Width: 635 mm.; Height of Seat: 445 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Timeless Simplicity",
+            "body": "The Ember Café Chair is defined by its clean lines, sculpted form, and timeless materiality. Crafted from solid hardwood, it showcases an angular silhouette that blends strength with visual lightness. Its open frame backrest adds an airy, inviting feel suited for modern café environments."
+          },
+          {
+            "heading": "",
+            "body": "An upholstered seat introduces comfort and a soft tactile contrast to the wooden frame. Thoughtfully designed, the Ember Café Chair complements both contemporary interiors and classic spaces with understated elegance. Its balanced proportions make it versatile for dining, lounging, or social settings."
+          },
+          {
+            "heading": "",
+            "body": "The back of this chair features a smoothly sculpted wooden form with elegant, flowing curves. Its seamless joinery and natural grain highlight fine craftsmanship, offering both support and refined visual appeal."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Ember Cafe Chair",
+            "lines": [
+              "Height: 762mm.",
+              "Width: 635 mm.",
+              "Height of Seat: 445 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Ember Cafe Chair",
+        "sourceSlug": "ember"
+      },
+      "alt_text": "Ember Cafe Chair",
+      "sourceSlug": "ember",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692568af7ab8958c1aa3dff0_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692568ccd0f00020c7385b5e_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692568e07ab8958c1aa41ba9_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692568f0ff1ffbe9749af552_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69256908d0f00020c7388fd3_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--ember/image-1.jpg",
+        "/images/catalog/oando-seating--ember/image-2.jpg",
+        "/images/catalog/oando-seating--ember/image-3.jpg",
+        "/images/catalog/oando-seating--ember/image-4.jpg",
+        "/images/catalog/oando-seating--ember/image-5.jpg"
+      ]
+    },
+    {
+      "id": "a3800dab-a569-4555-a806-02d704cf9141",
+      "slug": "oando-seating--flare",
+      "name": "Flare",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Flare is a cafe chair built for commercial interiors. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Sleek Minimalism"
+        ],
+        "materials": [],
+        "dimensions": "Height: 790mm.; Width: 460 mm.; Depth: 540 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Sleek Minimalism",
+            "body": "The Flare Café Chair embodies sleek minimalism with its clean, modern silhouette. Its contoured seat offers comfortable support, while the ventilated backrest enhances airflow for a cooler sitting experience. Designed with subtle elegance, it fits effortlessly into contemporary café and dining settings."
+          },
+          {
+            "heading": "",
+            "body": "Built to be stackable and lightweight, the Flare Café Chair is perfect for both compact interiors and hightraffic spaces. Its practical design ensures easy handling without compromising on style or durability. Versatile and refined, it brings everyday functionality together with modern appeal."
+          },
+          {
+            "heading": "",
+            "body": "The backrest’s vertical slits promote airflow for cool comfort, while its gentle curve provides natural lumbar support. Lightweight yet durable, it offers practical comfort with a clean, contemporary look."
+          },
+          {
+            "heading": "",
+            "body": "The sleek, tapered legs deliver a clean, minimalist look with strong, stable support. Moulded for durability without excess weight, they make the chair easy to move, while their seamless connection to the seat enhances its modern, sculpted appeal."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Flare",
+            "lines": [
+              "Height: 790mm.",
+              "Width: 460 mm.",
+              "Depth: 540 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Flare Cafe Chair",
+        "sourceSlug": "flare"
+      },
+      "alt_text": "Flare Cafe Chair",
+      "sourceSlug": "flare",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeea9c94f04f50bd79bf1_5.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeebc07459fa9540a6d69_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeed2e42881c134c53c5f_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692aeeea11e33e59fa4f6b92_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--flare/image-1.jpg",
+        "/images/catalog/oando-seating--flare/image-2.jpg",
+        "/images/catalog/oando-seating--flare/image-3.jpg",
+        "/images/catalog/oando-seating--flare/image-4.jpg"
+      ]
+    },
+    {
+      "id": "48ca6e67-43b2-40ec-b290-91aeed213643",
+      "slug": "oando-seating--flex",
+      "name": "Flex",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Flex is a mesh chair designed for adaptable workspaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Minimal effort. Maximum support. Built to keep things simple—and strong"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "Armrest length: 280 mm.; Seat height till ground: 400 mm.; Seat base width (including wheels): 540 mm.; Overall height: 910 mm.; Seat width: 470 mm.; Seat backrest width: 420 mm.; Armrest height till seat: 220 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Minimal effort. Maximum support. Built to keep things simple—and strong",
+            "body": "Flex offers a streamlined seating experience with essential ergonomic elements. Designed for durability and everyday ease, it delivers consistent support without the need for adjustments—ideal for focused, no-fuss work environments."
+          },
+          {
+            "heading": "",
+            "body": "With a strong back structure and balanced recline, Flex helps you maintain a steady, supported position through the entire workday"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Armrest length: 280 mm.",
+              "Seat height till ground: 400 mm.",
+              "Seat base width (including wheels): 540 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 910 mm.",
+              "Seat width: 470 mm.",
+              "Seat backrest width: 420 mm.",
+              "Armrest height till seat: 220 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Flex Mesh Chair",
+        "sourceSlug": "flex"
+      },
+      "alt_text": "Flex Mesh Chair",
+      "sourceSlug": "flex",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e9ee2b87a6c159ab7bae79_MAIN%20IMAGE-min.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e9f0199128c7a428ccf878_SCROLL%20IMAGE%201-min.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e9ede7e7187cdd7186b4f1_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e9f0608878e745beb4e81f_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--flex/image-1.jpg",
+        "/images/catalog/oando-seating--flex/image-2.jpg",
+        "/images/catalog/oando-seating--flex/image-3.jpg",
+        "/images/catalog/oando-seating--flex/image-4.jpg"
+      ]
+    },
+    {
+      "id": "8d9d85a1-5c0f-4527-bb42-6df9d342bb94",
+      "slug": "oando-seating--flip",
+      "name": "Flip",
+      "category_id": "seating",
+      "series_name": "Training Chair",
+      "description": "Flip is a training chair designed for flexible learning spaces. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Training Chair",
+        "features": [
+          "Smart Design"
+        ],
+        "materials": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Smart Design",
+            "body": "Flip Training Chairs feature a breathable mesh back and cushioned seat for cool, long lasting comfort. The ergonomic design supports proper posture, boosting focus during training sessions."
+          },
+          {
+            "heading": "",
+            "body": "With a lightweight, stackable structure, they offer easy storage and flexible space use. Durable and versatile, they’re ideal for dynamic classrooms and modern learning environments."
+          },
+          {
+            "heading": "",
+            "body": "Experience superior airflow and adaptive spinal support. The flexible mesh weave keeps you cool, while the durable frame provides reliable comfort for extended use."
+          },
+          {
+            "heading": "",
+            "body": "Effortless mobility meets space-saving design. With its smooth flip-up mechanism and easy-roll casters, this chair is built for dynamic, multipurpose spaces."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Training Chair",
+        "subcategoryId": "study",
+        "subcategoryLabel": "Training Chair",
+        "subcategory_slug": "training-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Flip Training Chair",
+        "sourceSlug": "flip"
+      },
+      "alt_text": "Flip Training Chair",
+      "sourceSlug": "flip",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Training Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c2cd4a7d00137e4085989_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c2d97748f084c5e5c127c_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c2da83fc3b1f818f3b064_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c2dc0314c66480cff890c_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--flip/image-1.jpg",
+        "/images/catalog/oando-seating--flip/image-2.jpg",
+        "/images/catalog/oando-seating--flip/image-3.jpg",
+        "/images/catalog/oando-seating--flip/image-4.jpg"
+      ]
+    },
+    {
+      "id": "5ba6825d-a499-43c6-82e0-660858b1e515",
+      "slug": "oando-seating--fluid",
+      "name": "Fluid",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Fluid is a mesh chair designed for posture support and productivity. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Balancing work and wellbeing. Work-ready comfort, refined"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5"
+        ],
+        "dimensions": "Overall height: 1035 mm; Seat height (from floor): 450 mm; Seat depth: 500 mm; Armrest length: 250 mm; Overall height (from armrest to ground): 650 mm; Seat width: 475 mm; Arm width: 95 mm; Armrest length: 250 mm; Backrest width (top): 460 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO",
+          "BIFMA - FLUID"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Balancing work and wellbeing. Work-ready comfort, refined",
+            "body": "Fluid is designed to keep you in motion without distraction. With intuitive ergonomics and responsive adjustments, it supports your body through every shift in task—offering ease, balance, and lasting comfort"
+          },
+          {
+            "heading": "",
+            "body": "With a body-responsive recline and supportive design, Fluid reduces tension across key pressure points—helping you stay focused, not fatigued"
+          },
+          {
+            "heading": "",
+            "body": "Easily reposition the armrests to suit your preferred height and angle—reducing shoulder load and supporting better posture"
+          },
+          {
+            "heading": "",
+            "body": "A responsive lumbar zone flexes to support your lower back, helping maintain healthy alignment throughout the day"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions",
+            "lines": [
+              "Overall height: 1035 mm",
+              "Seat height (from floor): 450 mm",
+              "Seat depth: 500 mm",
+              "Armrest length: 250 mm"
+            ]
+          },
+          {
+            "heading": "Front View Dimensions",
+            "lines": [
+              "Overall height (from armrest to ground): 650 mm",
+              "Seat width: 475 mm",
+              "Arm width: 95 mm",
+              "Armrest length: 250 mm",
+              "Backrest width (top): 460 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO",
+          "BIFMA - FLUID"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": true,
+        "warrantyYears": 10,
+        "ai_alt_text": "Fluid Mesh Chair",
+        "sourceSlug": "fluid"
+      },
+      "alt_text": "Fluid Mesh Chair",
+      "sourceSlug": "fluid",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e88f68fe33ee88d4b44eb5_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8903e2bf3bec402e0a217_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e890a61e44479a0e73f8aa_SECTION%203-SCROLL%20IMAGES.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e89003436b651ebdd90c92_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO",
+        "BIFMA - FLUID"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--fluid/image-1.jpg",
+        "/images/catalog/oando-seating--fluid/image-2.jpg",
+        "/images/catalog/oando-seating--fluid/image-3.jpg",
+        "/images/catalog/oando-seating--fluid/image-4.jpg"
+      ]
+    },
+    {
+      "id": "7d0868fd-89e2-483e-933f-4d6159a9cf79",
+      "slug": "fluid-x",
+      "name": "Fluid X",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Fluid X is a mesh chair designed for posture support and comfort. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Designed for seamless support. Comfort that flows with every move"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "Overall height (including headrest): 1300 mm; Seat height (from floor): 450 mm; Headrest height: 170 mm; Armrest width: 250 mm.; Headrest width: 280 mm.; Overall height: 1020 mm; Seat headrest width : 420 mm; Overall width (base including wheels): 660 mm; Seat width: 500 mm.; Armrest width: 100 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Designed for seamless support. Comfort that flows with every move",
+            "body": "Fluid X is built for those who need their chair to keep up. With smooth adjustability and responsive features, it follows your posture—not the other way around—offering comfort that adapts with you from the first task to the last"
+          },
+          {
+            "heading": "",
+            "body": "From neck to lower back, Fluid X adapts to your body’s shape and movement—minimizing tension so your mind stays sharp"
+          },
+          {
+            "heading": "",
+            "body": "Shift the armrests to match your ideal working angle—offering relief for your arms and better alignment for your upper body"
+          },
+          {
+            "heading": "",
+            "body": "The backrest includes targeted lumbar reinforcement that adapts to your spine’s curve, reducing pressure and improving seated posture"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Overall height (including headrest): 1300 mm",
+              "Seat height (from floor): 450 mm",
+              "Headrest height: 170 mm",
+              "Armrest width: 250 mm.",
+              "Headrest width: 280 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1020 mm",
+              "Seat headrest width : 420 mm",
+              "Overall width (base including wheels): 660 mm",
+              "Seat width: 500 mm.",
+              "Armrest width: 100 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Fluid X Mesh Chair",
+        "sourceSlug": "fluid-x"
+      },
+      "alt_text": "Fluid X Mesh Chair",
+      "sourceSlug": "fluid-x",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2c179eab7b0118d4b60_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2faf7da5d71f48bda8c_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a357fa22351df0f1a207_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a39d44f677337b4be24e_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/fluid-x/image-1.jpg",
+        "/images/catalog/fluid-x/image-2.jpg",
+        "/images/catalog/fluid-x/image-3.jpg",
+        "/images/catalog/fluid-x/image-4.jpg"
+      ]
+    },
+    {
+      "id": "86ef7b3e-ed97-45f5-981e-a6cab2d437d4",
+      "slug": "oando-seating--fluid-x",
+      "name": "Fluid X",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Fluid X is a mesh chair designed for posture support and comfort. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Designed for seamless support. Comfort that flows with every move"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "Overall height (including headrest): 1300 mm; Seat height (from floor): 450 mm; Headrest height: 170 mm; Armrest width: 250 mm.; Headrest width: 280 mm.; Overall height: 1020 mm; Seat headrest width : 420 mm; Overall width (base including wheels): 660 mm; Seat width: 500 mm.; Armrest width: 100 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Designed for seamless support. Comfort that flows with every move",
+            "body": "Fluid X is built for those who need their chair to keep up. With smooth adjustability and responsive features, it follows your posture—not the other way around—offering comfort that adapts with you from the first task to the last"
+          },
+          {
+            "heading": "",
+            "body": "From neck to lower back, Fluid X adapts to your body’s shape and movement—minimizing tension so your mind stays sharp"
+          },
+          {
+            "heading": "",
+            "body": "Shift the armrests to match your ideal working angle—offering relief for your arms and better alignment for your upper body"
+          },
+          {
+            "heading": "",
+            "body": "The backrest includes targeted lumbar reinforcement that adapts to your spine’s curve, reducing pressure and improving seated posture"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Overall height (including headrest): 1300 mm",
+              "Seat height (from floor): 450 mm",
+              "Headrest height: 170 mm",
+              "Armrest width: 250 mm.",
+              "Headrest width: 280 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1020 mm",
+              "Seat headrest width : 420 mm",
+              "Overall width (base including wheels): 660 mm",
+              "Seat width: 500 mm.",
+              "Armrest width: 100 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Fluid X Mesh Chair",
+        "sourceSlug": "fluid-x"
+      },
+      "alt_text": "Fluid X Mesh Chair",
+      "sourceSlug": "fluid-x",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2c179eab7b0118d4b60_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2faf7da5d71f48bda8c_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a357fa22351df0f1a207_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a39d44f677337b4be24e_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--fluid-x/image-1.jpg",
+        "/images/catalog/oando-seating--fluid-x/image-2.jpg",
+        "/images/catalog/oando-seating--fluid-x/image-3.jpg",
+        "/images/catalog/oando-seating--fluid-x/image-4.jpg"
+      ]
+    },
+    {
+      "id": "3fa7c7be-286b-4b3b-9df9-a780e1c9a4e5",
+      "slug": "oando-seating--fusion",
+      "name": "Fusion",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Fusion is a cafe chair designed for flexible layouts and efficient workspace planning. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Fluid Modernity"
+        ],
+        "materials": [],
+        "dimensions": "Height: 1000mm.; Width: 480 mm.; Depth: 490 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Fluid Modernity",
+            "body": "The Fusion High Café Chair features a slightly curved high backrest designed to offer thorough lumbar support, ensuring a comfortable seating experience even for long durations. Its sleek, contemporary form makes it a standout piece in café settings, bars, and modern interiors."
+          },
+          {
+            "heading": "",
+            "body": "Crafted with a stylish PU seat, the Fusion High Café Chair delivers both comfort and durability for everyday use. Built from high quality materials, it performs effortlessly in both home and commercial spaces. Combining modern aesthetics with longlasting strength, it offers versatile seating with a premium feel."
+          },
+          {
+            "heading": "",
+            "body": "The woven strap design backrest offers ergonomic support for comfortable seating. Durable and visually striking, it combines modern craftsmanship with contemporary style."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Fusion",
+            "lines": [
+              "Height: 1000mm.",
+              "Width: 480 mm.",
+              "Depth: 490 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Fusion Cafe Chair",
+        "sourceSlug": "fusion"
+      },
+      "alt_text": "Fusion Cafe Chair",
+      "sourceSlug": "fusion",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692afbeae23e9fe1b84af8bd_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692afbfc9b6435da64da7415_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692afc0d160b1e5d33ae7ae5_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692afc27b716f614a5bf11ba_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--fusion/image-1.jpg",
+        "/images/catalog/oando-seating--fusion/image-2.jpg",
+        "/images/catalog/oando-seating--fusion/image-3.jpg",
+        "/images/catalog/oando-seating--fusion/image-4.jpg"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "seating-study-fluid-task",
+      "name": "Fluid Task",
+      "categoryId": "seating"
+    }
+  ]
+}
