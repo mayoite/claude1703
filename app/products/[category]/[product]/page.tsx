@@ -34,6 +34,24 @@ type CategoryResolutionRow = {
   flagship_image?: string | null;
 };
 
+function getSourceSlug(row: Pick<CategoryResolutionRow, "metadata">): string {
+  const metadataRecord =
+    row.metadata && typeof row.metadata === "object"
+      ? (row.metadata as Record<string, unknown>)
+      : null;
+  return metadataRecord && typeof metadataRecord.sourceSlug === "string"
+    ? metadataRecord.sourceSlug.trim()
+    : "";
+}
+
+function canonicalPriority(row: Pick<CategoryResolutionRow, "slug">): number {
+  const slug = typeof row.slug === "string" ? row.slug.trim() : "";
+  let score = 0;
+  if (slug.startsWith("oando-")) score += 4;
+  if (slug.includes("--")) score += 2;
+  return score;
+}
+
 function resolveRequestedCategoryId(
   row: CategoryResolutionRow,
   fallbackCategoryId?: string,
@@ -69,14 +87,7 @@ async function resolvePreferredProductSlug(
   row: CategoryResolutionRow,
 ): Promise<string | null> {
   const currentSlug = typeof row.slug === "string" ? row.slug.trim() : "";
-  const metadataRecord =
-    row.metadata && typeof row.metadata === "object"
-      ? (row.metadata as Record<string, unknown>)
-      : null;
-  const sourceSlug =
-    metadataRecord && typeof metadataRecord.sourceSlug === "string"
-      ? metadataRecord.sourceSlug.trim()
-      : "";
+  const sourceSlug = getSourceSlug(row);
   const categoryId = typeof row.category_id === "string" ? row.category_id.trim() : "";
   const productName = typeof row.name === "string" ? row.name.trim() : "";
 
@@ -97,14 +108,7 @@ async function resolvePreferredProductSlug(
   const canonicalMatch = (candidates ?? []).find((candidate) => {
     const candidateSlug =
       typeof candidate.slug === "string" ? candidate.slug.trim() : "";
-    const candidateMetadata =
-      candidate.metadata && typeof candidate.metadata === "object"
-        ? (candidate.metadata as Record<string, unknown>)
-        : null;
-    const candidateSourceSlug =
-      candidateMetadata && typeof candidateMetadata.sourceSlug === "string"
-        ? candidateMetadata.sourceSlug.trim()
-        : "";
+    const candidateSourceSlug = getSourceSlug(candidate);
     const candidateName = typeof candidate.name === "string" ? candidate.name.trim() : "";
 
     return (
@@ -132,9 +136,40 @@ export async function generateStaticParams() {
 
   const seen = new Set<string>();
   const params: Array<{ category: string; product: string }> = [];
+  const preferredSlugBySourceKey = new Map<string, string>();
+
   for (const row of data ?? []) {
     if (!row.slug) continue;
     const category = resolveRequestedCategoryId(row);
+    const sourceSlug = getSourceSlug(row);
+    if (!sourceSlug) continue;
+    const name = typeof row.name === "string" ? row.name.trim() : "";
+    const sourceKey = `${category}::${name}::${sourceSlug}`;
+    const currentPreferredSlug = preferredSlugBySourceKey.get(sourceKey);
+    if (!currentPreferredSlug) {
+      preferredSlugBySourceKey.set(sourceKey, row.slug);
+      continue;
+    }
+
+    const existingRow = (data ?? []).find((item) => item.slug === currentPreferredSlug);
+    if (
+      existingRow &&
+      canonicalPriority(row) > canonicalPriority(existingRow)
+    ) {
+      preferredSlugBySourceKey.set(sourceKey, row.slug);
+    }
+  }
+
+  for (const row of data ?? []) {
+    if (!row.slug) continue;
+    const category = resolveRequestedCategoryId(row);
+    const sourceSlug = getSourceSlug(row);
+    const name = typeof row.name === "string" ? row.name.trim() : "";
+    if (sourceSlug) {
+      const sourceKey = `${category}::${name}::${sourceSlug}`;
+      const preferredSlug = preferredSlugBySourceKey.get(sourceKey);
+      if (preferredSlug && preferredSlug !== row.slug) continue;
+    }
     const key = `${category}::${row.slug}`;
     if (seen.has(key)) continue;
     seen.add(key);
