@@ -169,4 +169,3 @@ Environment variables required:
 - `SUPABASE_SERVICE_ROLE_KEY` (recommended for updates)
 - `OPENAI_API_KEY` (optional; fallback generation is used when missing)
 
-# 26022026
