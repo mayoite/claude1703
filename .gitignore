@@ -92,3 +92,5 @@ oando_website/99_bundles/archive/*.zip
 oando_website/99_bundles/_tmp_*
 docs/ops/generated-artifacts-*.zip
 docs/ops/~$*.xlsx
+
+.vercel
