@@ -30,6 +30,11 @@ export function normalizeDimensionText(value: string): string {
     .trim();
 }
 
+export function filterMeaningfulDimensionText(value: string): string {
+  const normalized = normalizeDimensionText(value);
+  return /\d/.test(normalized) ? normalized : "";
+}
+
 const GENERIC_MATERIAL_TOKENS = new Set([
   "fabric",
   "foam",

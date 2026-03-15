@@ -5,7 +5,10 @@ import {
   getCatalogCategoryLabel,
   normalizeRequestedCategoryId,
 } from "@/lib/catalogCategories";
-import { filterMeaningfulMaterialList, normalizeDimensionText } from "@/lib/displayText";
+import {
+  filterMeaningfulDimensionText,
+  filterMeaningfulMaterialList,
+} from "@/lib/displayText";
 import { COMPARE_ROUTE_COPY } from "@/data/site/routeCopy";
 import { CompareColumnActions } from "@/components/products/CompareColumnActions";
 
@@ -59,7 +62,7 @@ function specValue(item: CompareItem, key: string): string {
     return item.product.series_name || "";
   }
   if (key === "dimensions") {
-    return normalizeDimensionText(
+    return filterMeaningfulDimensionText(
       toText(specs.dimensions) || toText(specs.dimension) || "",
     );
   }

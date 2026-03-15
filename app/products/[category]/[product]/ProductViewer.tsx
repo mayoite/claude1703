@@ -24,8 +24,8 @@ import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
 import {
   sanitizeDisplayText as normalizeDisplayText,
+  filterMeaningfulDimensionText,
   filterMeaningfulMaterialList,
-  normalizeDimensionText,
 } from "@/lib/displayText";
 import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
 
@@ -200,7 +200,7 @@ export function ProductViewer({
   const overview = normalizeDisplayText(
     product.detailedInfo?.overview || product.description || "",
   );
-  const dimensions = normalizeDimensionText(
+  const dimensions = filterMeaningfulDimensionText(
     toText(rawSpecs.dimensions) ||
       toText(rawSpecs.dimension) ||
       product.detailedInfo?.dimensions ||

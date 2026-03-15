@@ -42,7 +42,7 @@ import {
 } from "@/lib/productFilters";
 import {
   sanitizeDisplayText,
-  normalizeDimensionText,
+  filterMeaningfulDimensionText,
   filterMeaningfulMaterialList,
 } from "@/lib/displayText";
 import { CATEGORY_ROUTE_COPY } from "@/data/site/routeCopy";
@@ -129,12 +129,13 @@ function getDisplayDimensions(product: FlatProduct): string {
     ? (product.specs as Record<string, unknown>)
     : {};
   const specDimensions = typeof specs.dimensions === "string" ? specs.dimensions : "";
-  if (specDimensions.trim()) return toInlineSpec(normalizeDimensionText(specDimensions), 68);
+  const normalizedSpecDimensions = filterMeaningfulDimensionText(specDimensions);
+  if (normalizedSpecDimensions) return toInlineSpec(normalizedSpecDimensions, 68);
 
   const detailed = typeof product.detailedInfo?.dimensions === "string"
     ? product.detailedInfo.dimensions
     : "";
-  return toInlineSpec(normalizeDimensionText(detailed), 68);
+  return toInlineSpec(filterMeaningfulDimensionText(detailed), 68);
 }
 
 function getDisplayMaterials(product: FlatProduct): string {
