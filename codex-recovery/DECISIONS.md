@@ -4,6 +4,53 @@ Use this file to record recovery decisions that should not be re-litigated in ev
 
 ## Current Decisions
 
+### 2026-03-16 Seating Image Warning Lane Closure And Deployment-Hardening Rotation
+
+- Decision: Close the residual seating image optimizer warning lane and rotate the active frontier to bounded deployment/environment hardening.
+- Why:
+  - The warning source was stale Phoenix WEBP references that were not repo-backed.
+  - `lib/assetPaths.ts` now maps valid Phoenix indices to existing JPG files and drops invalid overflow indices.
+  - Verification after the fix is green:
+    - `npm run test:e2e:filters`: pass
+    - `npm run build`: pass
+    - `npm test`: pass
+- Impact:
+  - `NEXT-PLAN.md` now marks automated verification hardening as closed.
+  - `RECOVERY-CHECKLIST.md` records warning-lane closure.
+  - `latest.md` now points to deployment/environment hardening as the single active frontier.
+
+### 2026-03-16 Automated Verification Hardening Baseline Locked
+
+- Decision: Lock the automated verification baseline as green and keep the active frontier narrowed to residual runtime warning cleanup.
+- Why:
+  - Core checks now pass in one bounded pass:
+    - `npm test`
+    - `npm run test:e2e:nav`
+    - `npm run test:e2e:filters`
+    - `npm run test:e2e:stats-consistency`
+    - `npm run test:a11y`
+    - `npm run lint`
+    - `npm run build`
+  - Remaining noise is now runtime warning-level (`next/image` optimizer warnings for some seating image paths), not test-failing regressions.
+- Impact:
+  - `NEXT-PLAN.md` now tracks automated verification hardening as the active block with warning cleanup as the next explicit step.
+  - Phase 10 automated verification checkboxes in `WORLD-CLASS-PLAN.md` are now marked complete for unit and targeted E2E suites.
+  - Recovery sequencing stays bounded and does not reopen design or catalog-repair scope.
+
+### 2026-03-16 Trust-Copy/Alt-Text Lane Closure And Verification-Hardening Rotation
+
+- Decision: Close the bounded trust-sensitive copy and alt-text hardening lane and rotate the active frontier to automated verification hardening.
+- Why:
+  - High-impact trust-copy and alt-text gaps were addressed without widening scope: shared hero background images now use correct decorative treatment, product/category/PDP/gallery alt fallbacks are more descriptive, and high-risk sustainability/PDP fallback copy was rewritten to repo-backed language.
+  - Verification for the lane is sufficient:
+    - `npm run lint`: pass
+    - `npm run build`: pass
+  - The next blocking quality gap is verification reliability, not public copy structure.
+- Impact:
+  - `NEXT-PLAN.md` closure markers are now complete for the trust-copy lane.
+  - `RECOVERY-CHECKLIST.md` records trust-copy lane closure and fresh verification.
+  - `WORLD-CLASS-PLAN.md` now marks alt-text/trust-copy quality as completed and sets automated verification hardening as the active frontier.
+
 ### 2026-03-15 Footer Closure And Trust-Copy Frontier Rotation
 
 - Decision: Close the bounded footer and global contact-surface hardening lane and rotate the active frontier to a bounded trust-sensitive copy and alt-text quality pass.

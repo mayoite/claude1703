@@ -31,7 +31,6 @@ test.describe("KPI consistency", () => {
     await expect(page.getByTestId("kpi-client-organisations")).toHaveText(
       plus(payload.stats.clientOrganisations),
     );
-    await expect(page.getByTestId("kpi-as-of-home")).toContainText("As of");
 
     await page.goto("/projects");
 

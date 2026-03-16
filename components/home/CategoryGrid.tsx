@@ -53,7 +53,10 @@ export async function CategoryGrid() {
               >
                 {/* Uniform square image */}
                 <div className="relative aspect-square overflow-hidden bg-neutral-100">
-                  <CategoryImage src={flagshipImage} alt={categoryName} />
+                  <CategoryImage
+                    src={flagshipImage}
+                    alt={`${categoryName} product category preview`}
+                  />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/8 transition-colors duration-500" />
                 </div>
 

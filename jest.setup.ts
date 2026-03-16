@@ -1,9 +1,25 @@
 import '@testing-library/jest-dom';
 import 'whatwg-fetch';
 import dotenv from 'dotenv';
+import { TextDecoder, TextEncoder } from 'util';
 
 // Load environment variables for tests
 dotenv.config({ path: '.env.local' });
+
+if (!global.TextEncoder) {
+    // Required by Next.js server stream helpers imported in unit tests.
+    global.TextEncoder = TextEncoder as typeof global.TextEncoder;
+}
+
+if (!global.TextDecoder) {
+    global.TextDecoder = TextDecoder as typeof global.TextDecoder;
+}
+
+jest.mock('next/cache', () => ({
+    unstable_cache: (fn: (...args: unknown[]) => unknown) => (...args: unknown[]) => fn(...args),
+    revalidatePath: jest.fn(),
+    revalidateTag: jest.fn(),
+}));
 
 // ── Browser APIs not in jsdom ─────────────────────────────────────────────────
 

@@ -52,7 +52,9 @@ Everything else in `codex-recovery/` is either generated state, handover mirrors
 - The bounded quote/contact flow hardening lane is implemented and verified.
 - The bounded SEO and structured-data ownership lane is implemented and verified.
 - The bounded footer and global contact-surface hardening lane is implemented and verified.
-- The active execution frontier is now a bounded trust-sensitive copy and alt-text hardening lane focused on public content quality.
+- The bounded trust-sensitive copy and alt-text hardening lane is implemented and verification-closed.
+- The bounded automated verification hardening lane is implemented and verification-closed.
+- The active execution frontier is now a bounded deployment and environment hardening lane focused on hosted runtime reliability.
 - The detailed archive recovery plan is explicitly deferred to the late-stage archive slot after core live-route work is stable.
 - This lane must keep `missing_documents` visible as a real content-ingestion requirement and keep `oando-soft-seating--luna` explicitly deferred unless repo-backed media evidence appears.
 
@@ -86,7 +88,7 @@ Completed in the current frontend lane:
 - `/support-ivr`
 
 Current next step:
-- audit trust-sensitive public copy and alt-text ownership on the highest-impact public routes before implementing one bounded content-quality pass
+- validate deployment env expectations and hosted asset-path behavior, then capture bounded residual risks
 
 ## Locked Rules
 
@@ -570,8 +572,8 @@ Make the site authoritative, credible, and conversion-competent.
 - [x] improve trusted-by, projects, contact, and product trust surfaces
 - [x] improve CTA hierarchy and quote/contact flow
 - [x] improve business identity and proof presentation
-- [ ] improve alt text and trust-sensitive copy quality
-- [ ] ensure footer and global contact surfaces support conversion clearly
+- [x] improve alt text and trust-sensitive copy quality
+- [x] ensure footer and global contact surfaces support conversion clearly
 
 ### Exit Criteria
 - [ ] metadata ownership is clean
@@ -594,10 +596,10 @@ Finish with a site that is premium and verifiably robust.
 #### Automated Verification
 - [x] `npm run lint`
 - [x] `npm run build`
-- [ ] `npm test`
-- [ ] `npm run test:e2e:nav`
-- [ ] `npm run test:e2e:filters`
-- [ ] `npm run test:e2e:stats-consistency`
+- [x] `npm test`
+- [x] `npm run test:e2e:nav`
+- [x] `npm run test:e2e:filters`
+- [x] `npm run test:e2e:stats-consistency`
 - [x] `npm run test:a11y`
 - [x] `npm run audit:supabase:catalog`
 - [x] `npm run audit:slug-id`

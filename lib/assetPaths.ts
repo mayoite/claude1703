@@ -34,6 +34,15 @@ export function normalizeAssetPath(path: string | null | undefined): string {
     return applyAssetBase(`/images/products/${normalized.slice("/products/".length)}`);
   }
 
+  // Phoenix seating assets are currently repo-backed as JPG files only.
+  // Map stale WEBP references to valid local JPG paths and drop non-existent overflow indices.
+  if (lower.startsWith("/images/catalog/oando-seating--phoenix/image-") && lower.endsWith(".webp")) {
+    const match = lower.match(/image-(\d+)\.webp$/);
+    const imageIndex = match ? Number.parseInt(match[1], 10) : Number.NaN;
+    if (Number.isNaN(imageIndex) || imageIndex < 1 || imageIndex > 3) return "";
+    return applyAssetBase(`/images/catalog/oando-seating--phoenix/image-${imageIndex}.jpg`);
+  }
+
   return applyAssetBase(normalized);
 }
 

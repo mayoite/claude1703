@@ -298,6 +298,7 @@ describe('getCategoryIds()', () => {
 
     test('returns empty array on query error', async () => {
         mockOrder.mockResolvedValueOnce({ data: null, error: { message: 'No access' } });
+        mockFetchNhostProducts.mockResolvedValueOnce([]);
 
         const ids = await getCategoryIds();
         expect(ids).toEqual([]);

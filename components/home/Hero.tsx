@@ -93,7 +93,8 @@ export function Hero({
         ) : backgroundImage ? (
           <Image
             src={backgroundImage}
-            alt="Hero Background"
+            alt=""
+            aria-hidden="true"
             fill
             sizes="100vw"
             className="object-cover scale-105"

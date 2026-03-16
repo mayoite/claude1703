@@ -203,7 +203,9 @@ interface FilterResponse {
 }
 
 function fallbackAltText(productName: string, categoryName: string): string {
-  return sanitizeDisplayText(`${productName} ${categoryName}`).slice(0, 140);
+  return sanitizeDisplayText(
+    `Product image of ${productName} in ${categoryName} category`,
+  ).slice(0, 140);
 }
 
 function getProductRouteKey(product: Pick<FlatProduct, "slug" | "id">): string {

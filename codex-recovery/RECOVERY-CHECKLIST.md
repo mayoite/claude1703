@@ -88,6 +88,15 @@ Update this file as recovery work progresses. Keep exactly one active frontier i
 - [x] Footer and global contact-surface hardening is implemented and verified: duplicate footer contact paths were reduced, footer contact ownership is clearer, and the footer conversion panel no longer repeats on routes that already carry a dedicated conversion surface
 - [x] Fresh footer-lane verification rerun captured on 2026-03-15: `npm run lint` pass and `npm run build` pass
 - [x] The next bounded frontend frontier is now trust-sensitive copy and alt-text hardening
+- [x] Trust-sensitive copy and alt-text hardening is implemented and verification-closed on 2026-03-16: shared hero alt handling is corrected, high-traffic product/category/PDP/gallery alt fallbacks are more descriptive, and high-risk sustainability/PDP fallback copy is now repo-truth aligned.
+- [x] Fresh trust-copy verification rerun captured on 2026-03-16: `npm run lint` pass and `npm run build` pass
+- [x] The next bounded frontend frontier is now automated verification hardening (`npm test` and targeted E2E stability)
+- [x] Automated verification hardening slice is green on 2026-03-16: `npm test`, `npm run test:e2e:nav`, `npm run test:e2e:filters`, `npm run test:e2e:stats-consistency`, and `npm run test:a11y` all pass
+- [x] Fresh hardening rerun captured on 2026-03-16: `npm run lint` pass and `npm run build` pass after test fixes
+- [x] The current bounded frontier remains automated verification hardening, narrowed to residual runtime warning cleanup (seating image optimizer warnings)
+- [x] Seating image optimizer warning lane is patched on 2026-03-16: stale `/images/catalog/oando-seating--phoenix/*.webp` references are mapped to repo-backed JPG assets and invalid overflow indices are dropped
+- [x] Post-warning verification rerun captured on 2026-03-16: `npm run test:e2e:filters` pass, `npm run build` pass, and `npm test` pass
+- [x] The next bounded frontend frontier is deployment and environment hardening
 
 ## Whole-Site Recovery Frame
 

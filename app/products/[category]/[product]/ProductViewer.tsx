@@ -108,7 +108,7 @@ export function ProductViewer({
     (product as unknown as { altText?: string }).altText ||
     (product.metadata as Record<string, unknown> | undefined)?.ai_alt_text?.toString() ||
     (product.metadata as Record<string, unknown> | undefined)?.aiAltText?.toString() ||
-    `${displayName} in ${categoryName}`;
+    `Product image of ${displayName} in ${categoryName} category`;
   const metadataRecord = product.metadata as Record<string, unknown> | undefined;
 
   useEffect(() => {
@@ -401,7 +401,7 @@ export function ProductViewer({
 
   return (
     <section className="bg-white min-h-screen pb-24 sm:pb-28 lg:pb-0">
-      {/* ── BREADCRUMB BAR ── */}
+      {/* Breadcrumb bar */}
       <div className="border-b border-neutral-100 bg-white/90 backdrop-blur-sm sticky top-16 z-10">
         <div className="pdp-breadcrumb container flex h-10 items-center gap-1.5 px-6 2xl:px-0">
           <Link
@@ -425,7 +425,7 @@ export function ProductViewer({
       </div>
 
       <div className="flex flex-col lg:flex-row min-h-[calc(100vh-112px)]">
-        {/* ── LEFT: IMAGE GALLERY ── */}
+        {/* Left: image gallery */}
         <div className="w-full lg:w-[58%] xl:w-[62%] flex flex-col pt-0 lg:pt-8 bg-neutral-100">
           <div className="flex-1 w-full max-w-[800px] mx-auto p-4 lg:p-8">
             <ProductGallery
@@ -521,7 +521,7 @@ export function ProductViewer({
           )}
         </div>
 
-        {/* ── RIGHT: DETAILS PANEL ── */}
+        {/* Right: details panel */}
         <div className="w-full lg:w-[42%] xl:w-[38%] lg:sticky lg:top-[112px] lg:h-[calc(100vh-112px)] overflow-y-auto px-6 sm:px-10 lg:px-12 py-10 border-l border-neutral-100 scrollbar-hide">
           <div className="max-w-sm mx-auto lg:max-w-none">
             {/* Title block */}

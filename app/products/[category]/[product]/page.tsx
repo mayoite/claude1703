@@ -317,7 +317,9 @@ async function ProductContent({
   const deterministicAlt =
     p.alt_text ||
     p.metadata?.ai_alt_text ||
-    `${p.name} ${resolvedCategoryId.replace(/-/g, " ")}`.replace(/\s+/g, " ").trim();
+    `Product image of ${p.name} in ${resolvedCategoryId.replace(/-/g, " ")} category`
+      .replace(/\s+/g, " ")
+      .trim();
   const variantList: ProductVariant[] = Array.isArray(p.variants)
     ? p.variants
         .map((variant, idx) => {

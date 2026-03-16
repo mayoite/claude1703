@@ -1,24 +1,24 @@
 # Recovery State
 
-- Timestamp: 2026-03-15T17:35:00
+- Timestamp: 2026-03-16T10:41:00
 - Branch: main
 
 ## Operator Note
-Footer and global contact-surface hardening is implemented and verified. Next active frontier: bounded trust-sensitive copy and alt-text hardening.
+Automated verification hardening is verification-closed, including the seating image warning fix lane. Next active frontier: bounded deployment and environment hardening.
 
 ## Suggested Current Focus
-- Audit trust-sensitive public copy and alt-text ownership before editing
-- Keep public language credible and specific without inventing unsupported claims
-- Leave archive and release-hardening work outside this bounded lane
+- Validate production env expectations for hosted builds
+- Confirm asset-path behavior remains correct across local and hosted runtimes
+- Keep scope bounded to deployment and environment hardening only
 
 ## Next 45 Minutes Plan
-- Audit trust-sensitive public copy and alt-text pathways on the highest-impact public routes
-- Fix only the highest-impact content-quality issues found
-- Re-run `npm run lint` and `npm run build` after the content-quality pass
+- Verify required runtime env vars and fallback behavior for hosted builds
+- Recheck hosted asset-path handling and image optimization behavior
+- Capture residual deployment risks with one bounded remediation step
 
 ## Next Explicit Step
 
-- Audit trust-sensitive public copy and alt-text ownership on the highest-impact public routes before editing the next bounded content-quality lane.
+- Run a bounded deployment-environment audit and fix the first confirmed env/runtime gap.
 
 ## Git Status
 ```text

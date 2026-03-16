@@ -57,11 +57,11 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
                 ? "border-neutral-900 opacity-100"
                 : "border-transparent opacity-60 hover:opacity-100 hover:border-neutral-300",
             )}
-            title={`View image ${idx + 1}`}
+            title={`View ${productName} image ${idx + 1}`}
           >
             <Image
               src={img}
-              alt={`${productName} thumbnail ${idx + 1}`}
+              alt={`${productName} product photo ${idx + 1}`}
               fill
               sizes="(max-width: 768px) 18vw, 80px"
               style={{ objectFit: "contain" }}
@@ -75,7 +75,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
       <div className="order-1 md:order-2 relative bg-neutral-100 w-full min-h-[50vw] md:min-h-125 lg:min-h-0 flex-1 flex items-center justify-center p-4">
         <Image
           src={currentImage}
-          alt={productName}
+          alt={`Primary product photo of ${productName}`}
           fill
           sizes="(max-width: 768px) 100vw, 70vw"
           style={{ objectFit: "contain" }}

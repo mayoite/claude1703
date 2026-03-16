@@ -409,13 +409,13 @@ export const SOLUTIONS_DELIVERY_STEPS = [
 ] as const;
 
 export const SUSTAINABILITY_PAGE_COPY = {
-  heroTitle: "Thinking Green.",
+  heroTitle: "Sustainability in practice.",
   heroSubtitle:
-    "Sustainability is deeply rooted in our corporate philosophy. For us, sustainable action means thinking about tomorrow, today.",
-  introTitleLead: "Our Responsibility for the ",
-  introTitleEmphasis: "Future.",
+    "We focus on durable workspace systems, practical material choices, and lower rework across planning and delivery.",
+  introTitleLead: "Our approach for ",
+  introTitleEmphasis: "long-life workspaces.",
   introDescription:
-    "Sustainable furniture construction starts with the selection of materials and does not end with production. We take a holistic view of our ecological footprint.",
+    "Sustainability in office projects depends on material choice, maintainability, and planning discipline from specification to after-sales support.",
   introKicker: "Sustainability in practice",
   introTitle: "Long-life workspace systems with lower lifecycle waste.",
   introPoints: [
@@ -425,63 +425,63 @@ export const SUSTAINABILITY_PAGE_COPY = {
   ],
   pillars: [
     {
-      title: "Eco-friendly materials",
+      title: "Material-aware specification",
       detail:
-        "We use responsibly sourced wood and low-emission materials that reduce impact without compromising durability.",
+        "We prioritize options with clearer material information and stronger service-life fit for each use case.",
       icon: "leaf",
     },
     {
-      title: "Circular economy",
+      title: "Repair and replacement mindset",
       detail:
-        "Our products are designed to be disassembled and recycled. Up to 98% of materials can return to the cycle in a closed-loop system.",
+        "We prefer categories and configurations that can be maintained, repaired, or reconfigured instead of replaced early.",
       icon: "recycle",
     },
     {
-      title: "Energy efficiency",
+      title: "Planning that reduces waste",
       detail:
-        "Our production workflow prioritizes efficient energy use and cleaner power sources across operations.",
+        "Clear quantity planning and fit checks help reduce mismatch, returns, and avoidable on-site rework.",
       icon: "lightbulb",
     },
   ],
   ecoScoreTitle: "Our Eco-Score System",
   ecoScoreDescription:
-    "Transparency is the foundation of structural change. We use an Eco-Score rating (1 to 10) for every product in our catalog. This metric evaluates the complete lifecycle of our furniture systems.",
+    "Where score data is available, Eco-Score (1 to 10) is used as a directional planning signal alongside specifications and use-case fit.",
   ecoScoreItems: [
     {
       index: "1",
       title: "Materials",
       detail:
-        "Preference for recycled aluminum, responsibly sourced woods, and post-consumer plastics.",
+        "Material composition, recycled-content signals, and durability-related fit where data is available.",
     },
     {
       index: "2",
       title: "Manufacturing",
       detail:
-        "Partnering with local factories to reduce transit emissions significantly.",
+        "Manufacturing and sourcing context captured in current product records or partner documentation.",
     },
     {
       index: "3",
       title: "Longevity",
       detail:
-        "Heavy-duty construction and verified quality benchmarks help keep products out of landfills for longer.",
+        "Expected service life, maintenance practicality, and replacement risk in active use.",
     },
   ],
   badges: [
     {
       title: "Eco-Score: 8+",
       detail:
-        "Products in this range use a majority of recycled or renewable materials, are produced with lower freight impact, and are designed for long service life.",
+        "Higher-scoring products generally show stronger lifecycle signals in the current catalog data.",
     },
     {
       title: "Eco-Score: 5-7",
       detail:
-        "These products meet core environmental baselines with selected sustainable inputs, safer adhesives, and replaceable wear components.",
+        "Mid-range scores indicate partial sustainability signals and should be reviewed with full technical context.",
     },
   ],
-  verifiedTitle: "Verified sustainability",
+  verifiedTitle: "Sustainability signals",
   verifiedDescription:
-    "Our sustainability program is tracked with independent benchmarks and regular internal quality audits.",
-  verifiedLabels: ["Low emission", "Responsible source", "Long life"],
+    "We present catalog-backed sustainability signals and avoid unsupported certification or impact claims.",
+  verifiedLabels: ["Catalog-backed", "Data reviewed", "Long-life focus"],
   commitmentsKicker: "What we prioritize",
   commitmentsTitle: "Practical commitments over generic claims.",
   commitments: [
@@ -1189,7 +1189,7 @@ export const QUOTE_CART_ROUTE_COPY = {
 } as const;
 
 export const PDP_ROUTE_COPY = {
-  fallbackDescription: "{name} - premium office furniture from One and Only Furniture.",
+  fallbackDescription: "{name} from One and Only Furniture.",
   productBrand: "One and Only Furniture",
   summary: {
     title: "Decision snapshot",
@@ -1213,10 +1213,10 @@ export const PDP_ROUTE_COPY = {
   },
   trustBadges: {
     madeInIndia: "Made in India",
-    madeInIndiaDescription: "Engineered locally to global standards.",
-    certificationFallback: "Certification available by model",
-    certificationDescription: "Certified for extended use.",
-    warrantyDescription: "Guaranteed durability and performance.",
+    madeInIndiaDescription: "Local manufacturing details are shared by model where available.",
+    certificationFallback: "Certification details by model",
+    certificationDescription: "Certification details are shown where provided.",
+    warrantyDescription: "Warranty terms vary by model and proposal.",
   },
   ctas: {
     addToQuote: "Add to Quote Cart",

@@ -66,7 +66,7 @@ export default function ProductsPage() {
           <div className="scheme-border relative aspect-[4/3] overflow-hidden rounded-2xl border">
             <Image
               src="/images/catalog/oando-workstations--deskpro/image-1.webp"
-              alt="Workspace product category showcase"
+              alt="Deskpro workstation setup used as category planning preview"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
