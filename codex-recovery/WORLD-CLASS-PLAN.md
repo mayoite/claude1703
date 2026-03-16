@@ -90,7 +90,7 @@ Completed in the current frontend lane:
 - `/support-ivr`
 
 Current next step:
-- begin Phase 4 token/primitives unification for cross-route desktop/mobile visual consistency
+- continue the active Phase 4 route-consistency pass after the shared token/primitive baseline, keeping focus on remaining trust and PDP surfaces
 
 ## Locked Rules
 
@@ -344,10 +344,10 @@ Build one premium, differentiated, production-grade visual system.
 ### Checklist
 
 #### System Foundation
-- [ ] unify color, type, spacing, surface, control, and motion tokens
-- [ ] normalize buttons, cards, panels, nav, footer, hero, and section primitives
-- [ ] replace repeated hardcoded visual values with shared tokens
-- [ ] define clear component-state behavior for hover, focus, active, disabled
+- [x] unify color, type, spacing, surface, control, and motion tokens
+- [x] normalize buttons, cards, panels, nav, footer, hero, and section primitives
+- [x] replace repeated hardcoded visual values with shared tokens
+- [x] define clear component-state behavior for hover, focus, active, disabled
 
 #### Typography
 - [ ] define world-class display type

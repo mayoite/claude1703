@@ -47,7 +47,7 @@ export function Footer() {
           <div className="md:col-span-1 flex flex-col gap-6">
             <Link href="/" prefetch={false} className="block">
               <span className="text-xl font-semibold tracking-tight text-white">
-                One and Only
+                One&Only
               </span>
               <span className="text-xs text-neutral-500 block mt-0.5 tracking-widest uppercase">
                 Furniture
@@ -138,7 +138,7 @@ export function Footer() {
             </Link>
           </div>
           <div suppressHydrationWarning>
-            &copy; {new Date().getFullYear()} One and Only Furniture. All rights
+            &copy; {new Date().getFullYear()} One&Only. All rights
             reserved.
           </div>
         </div>

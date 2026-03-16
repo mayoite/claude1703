@@ -4,7 +4,7 @@ import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { LEGAL_PAGE_COPY } from "@/data/site/routeCopy";
 
 export const metadata = {
-  title: `${LEGAL_PAGE_COPY.refund.metadataTitle} | One and Only Furniture`,
+  title: LEGAL_PAGE_COPY.refund.metadataTitle,
   description: LEGAL_PAGE_COPY.refund.metadataDescription,
 };
 

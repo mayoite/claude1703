@@ -4,6 +4,21 @@ Use this file to record recovery decisions that should not be re-litigated in ev
 
 ## Current Decisions
 
+### 2026-03-16 Phase 4 Shared-System Baseline Locked
+
+- Decision: Keep Phase 4 as the single active frontier, but treat the first shared-system baseline as implemented and verified before continuing into the remaining route-consistency pass.
+- Why:
+  - The shared token layer now carries explicit semantic radii, shadows, motion, control-size, and surface tokens instead of relying on scattered one-off values.
+  - The active shared visual primitives were tightened in one bounded wave across `scheme-*` surfaces, primary/outline/dark-surface button states, header/search shells, footer conversion, contact cards, and category-discovery cards.
+  - The desktop header-search Enter submit path was reverified after the shared-shell changes; targeted verification is green:
+    - `npm run lint`
+    - `npm run build`
+    - `PLAYWRIGHT_BASE_URL=http://localhost:3000 npx playwright test tests/homepage.spec.ts tests/dynamic-filters.spec.ts tests/product-tools.spec.ts --workers=1`
+- Impact:
+  - `NEXT-PLAN.md` now marks Slice 1, shared-system portions of Slice 2, and verification as complete while leaving one active next step only: continue the remaining route-consistency pass.
+  - `RECOVERY-CHECKLIST.md`, `latest.md`, and handover mirrors must continue pointing to Phase 4 rather than rotating to a new lane.
+  - No catalog truth, archive reintegration, or route-ownership scope was reopened during this slice.
+
 ### 2026-03-16 Phase 10 Verification Closure And Phase 4 Rotation
 
 - Decision: Close the bounded Phase 10 live-experience verification lane and rotate the single active frontier to Phase 4 design-system/token and visual-consistency unification.

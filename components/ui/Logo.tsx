@@ -18,7 +18,7 @@ export function OneAndOnlyLogo({ className, variant = "orange" }: LogoProps) {
     <div className={cn("relative flex items-center", className)}>
       <Image
         src={ONE_AND_ONLY_LOGO_SRC[variant]}
-        alt="One and Only Furniture"
+        alt="One&Only"
         width={1024}
         height={263}
         priority

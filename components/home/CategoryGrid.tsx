@@ -19,14 +19,14 @@ export async function CategoryGrid() {
   const requestedCatalog = buildRequestedCategoryCatalog(await getCachedCatalog());
 
   return (
-    <section className="w-full bg-white py-20 md:py-28">
+    <section className="scheme-page w-full py-20 md:py-28">
       <div className="container px-6 2xl:px-0">
         {/* Section header */}
         <div className="mb-12 md:mb-16 max-w-2xl">
           <p className="typ-label scheme-text-muted mb-3">
             {PRODUCTS_PAGE_COPY.rangeKicker}
           </p>
-          <h2 className="text-4xl md:text-5xl font-light text-neutral-900 leading-[1] tracking-tight">
+          <h2 className="typ-section scheme-text-strong max-w-xl">
             {PRODUCTS_PAGE_COPY.rangeTitle}
           </h2>
         </div>
@@ -49,10 +49,10 @@ export async function CategoryGrid() {
               <Link
                 key={category.id}
                 href={categoryHref}
-                className="group relative bg-white block overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="group scheme-panel scheme-border relative block overflow-hidden rounded-[1.75rem] border transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Uniform square image */}
-                <div className="relative aspect-square overflow-hidden bg-neutral-100">
+                <div className="scheme-section-soft scheme-border relative aspect-square overflow-hidden border-b">
                   <CategoryImage
                     src={flagshipImage}
                     alt={`${categoryName} product category preview`}
@@ -61,12 +61,12 @@ export async function CategoryGrid() {
                 </div>
 
                 {/* Card text */}
-                <div className="px-5 py-5 border-t border-neutral-100 flex items-center justify-between gap-4">
+                <div className="flex items-center justify-between gap-4 px-5 py-5 md:px-6 md:py-6">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-light leading-[0.95] text-neutral-900 group-hover:text-primary transition-colors duration-200">
+                    <h3 className="text-[clamp(1.8rem,2.4vw,2.5rem)] font-light leading-[0.95] text-neutral-900 transition-colors duration-200 group-hover:text-primary">
                       {categoryName}
                     </h3>
-                    <p className="text-sm text-neutral-600 mt-1">
+                    <p className="page-copy-sm scheme-text-body mt-1">
                       {allProducts.length} products
                     </p>
                   </div>

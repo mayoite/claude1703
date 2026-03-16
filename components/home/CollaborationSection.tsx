@@ -12,7 +12,7 @@ export function CollaborationSection() {
         <div className="relative w-full lg:w-[55%] aspect-[16/10] lg:aspect-auto overflow-hidden bg-neutral-200">
           <Image
             src="/images/hero/tvs-patna-hq.webp"
-            alt="Collaborative office workspace designed by One and Only Furniture"
+            alt="Collaborative office workspace designed by One&Only"
             fill
             sizes="(max-width: 1024px) 100vw, 55vw"
             className="object-cover"

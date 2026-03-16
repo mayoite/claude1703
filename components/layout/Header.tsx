@@ -103,7 +103,7 @@ export function Header() {
           >
             <div className="container-wide flex justify-end items-center gap-6 text-[11px] uppercase tracking-widest font-bold text-neutral-400">
               <span className="hidden md:inline mr-auto text-neutral-500 font-medium">
-                One and Only Furniture
+                One&Only
               </span>
               <Link
                 href="/service"
@@ -149,7 +149,7 @@ export function Header() {
                 href="/"
                 prefetch={false}
                 className="flex items-center py-2"
-                aria-label="One and Only Home"
+                aria-label="One&Only Home"
               >
                 <OneAndOnlyLogo
                   className="h-8 md:h-10 lg:h-[52px]"

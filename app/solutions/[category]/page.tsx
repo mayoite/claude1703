@@ -48,19 +48,19 @@ export async function generateMetadata({
 
   if (!entry) {
     return {
-      title: "Solutions | One and Only Furniture",
+      title: "Solutions",
       description: "Tailored furniture solutions for every industry.",
     };
   }
 
   return {
-    title: `${entry.title} | One and Only Furniture`,
+    title: entry.title,
     description: `${entry.description} Built for offices in Patna, Bihar and across India.`,
     alternates: {
       canonical: `/solutions/${category}`,
     },
     openGraph: {
-      title: `${entry.title} | One and Only Furniture`,
+      title: entry.title,
       description: entry.description,
       type: "website",
       url: `/solutions/${category}`,

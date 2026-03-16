@@ -104,6 +104,9 @@ Update this file as recovery work progresses. Keep exactly one active frontier i
 - [x] Phase 10 live experience verification and release-hardening closeout is verification-closed on 2026-03-16: hosted route matrix, keyboard/focus checks, and core nav/tools/a11y/filter/stats suites all pass
 - [x] Recovery/handover drift is resolved on 2026-03-16: `NEXT-PLAN.md`, `RECOVERY-CHECKLIST.md`, `DECISIONS.md`, `latest.md`, and handover mirrors now point to the same single active frontier
 - [x] The next bounded frontend frontier is Phase 4 design-system/token and visual-consistency unification
+- [x] Phase 4 shared-system baseline is implemented and verified on 2026-03-16: semantic tokens, `scheme-*` surfaces, CTA/button states, and shared header/footer/card shells are more consistent across homepage, products, category discovery, contact teaser, and career-card surfaces
+- [x] Fresh Phase 4 verification rerun captured on 2026-03-16: `npm run lint` pass, `npm run build` pass, and `PLAYWRIGHT_BASE_URL=http://localhost:3000 npx playwright test tests/homepage.spec.ts tests/dynamic-filters.spec.ts tests/product-tools.spec.ts --workers=1` pass
+- [x] The active Phase 4 frontier remains open, narrowed to the remaining route-consistency pass on `/products/[category]/[product]`, `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions`
 
 ## Whole-Site Recovery Frame
 

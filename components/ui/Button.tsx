@@ -21,16 +21,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase tracking-wide",
+          "inline-flex items-center justify-center whitespace-nowrap disabled:pointer-events-none disabled:opacity-50",
           {
-            "bg-primary text-white hover:bg-primary/90": variant === "primary",
-            "border border-neutral-300 bg-transparent text-neutral-900 hover:border-neutral-700 hover:bg-neutral-50": variant === "outline",
-            "hover:bg-neutral-100 hover:text-neutral-900": variant === "ghost",
+            "btn-primary": variant === "primary",
+            "btn-outline": variant === "outline",
+            "rounded-full px-4 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2": variant === "ghost",
             "text-primary underline-offset-4 hover:underline": variant === "link",
-            "h-10 px-5 py-2": size === "default",
-            "h-9 px-4 text-xs": size === "sm",
-            "h-12 px-8 text-base": size === "lg",
-            "h-10 w-10 p-0": size === "icon",
+            "text-sm": size === "default",
+            "min-h-[var(--control-height-sm)] px-4 text-xs": size === "sm",
+            "min-h-[var(--control-height-lg)] px-8 text-base": size === "lg",
+            "h-10 w-10 rounded-full p-0": size === "icon",
           },
           className,
         )}

@@ -49,7 +49,7 @@ export function ContactTeaser() {
                   type="button"
                   onClick={openGuidedPlanner}
                   aria-label="Open guided planner"
-                  className="inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
+                  className="home-btn-primary"
                 >
                   <MessageSquareText className="h-4 w-4" />
                   {HOMEPAGE_CONTACT_CONTENT.plannerCta}

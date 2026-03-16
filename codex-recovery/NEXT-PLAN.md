@@ -1,65 +1,72 @@
-# Phase 10 Experience Verification And Release Hardening
-# Objective: Run a bounded live-route verification matrix, capture only bounded residual risks, and close release-hardening gaps without reopening design or catalog scope.
+# Phase 4 Design-System/Token And Visual-Consistency Unification
+# Objective: Unify the shared visual foundation across live routes so the site feels like one premium system on desktop and mobile, without reopening catalog-truth or archive-reintegration scope.
 
 ## Current Block
 
-- `Phase 10 Experience Verification And Release Hardening (verification-closed)`
+- `Phase 4 Design-System/Token And Visual-Consistency Unification (active)`
 
 ## Baseline Entering This Block
 
 - Deployment/environment hardening is verification-closed.
-- Hosted runtime/env baseline is verified (`npx vercel env ls` and hosted smoke checks).
-- Hosted production deploy is current (`npx vercel --prod --yes`).
+- Phase 10 live experience verification is verification-closed.
+- Core route stack is already live and verified.
+- The remaining gap is cross-route visual consistency, token discipline, and UI primitive cohesion.
 
 ## Execution Charter
 
-- Keep this block bounded to verification and release hardening only.
-- Do not reopen broad catalog repair, homepage redesign, or archive reintegration.
-- Keep `missing_documents` visible as a source-gap truth.
+- Keep this block bounded to shared visual foundations and route-level consistency only.
+- Do not reopen broad catalog repair, homepage truth rewrites, or archive reintegration.
+- Normalize tokens and primitives before making isolated route-level styling moves.
+- Preserve `missing_documents` as a visible source-gap truth.
 - Keep `/downloads` as a request-based `Resource Desk`.
 - Keep `fluid-x` as the only accepted legacy-slug exception.
 - Keep `oando-soft-seating--luna` explicitly deferred unless repo-backed media evidence appears.
 
 ## Detailed Checklist
 
-### Slice 1: Live Route Matrix
+### Slice 1: Token And Primitive Audit
 
-- [x] Verify homepage desktop/mobile on hosted production
-- [x] Verify category listing desktop/mobile on hosted production
-- [x] Verify product detail desktop/mobile on hosted production
-- [x] Verify configurator desktop/mobile on hosted production
-- [x] Verify compare flow on hosted production
-- [x] Verify quote/contact flow on hosted production
-- [x] Verify trust/projects surfaces on hosted production
+- [x] Audit active token sources across `app/theme-tokens.css`, `app/typography.css`, `app/custom-components.css`, and live route components
+- [x] Identify duplicated hardcoded values for type, spacing, radius, border, and surface treatment
+- [x] Define the active primitive set for buttons, cards, panels, chips, labels, and section shells
+- [x] Remove stale or conflicting visual patterns from active-route usage
 
-### Slice 2: Accessibility And Interaction
+### Slice 2: Shared System Unification
 
-- [x] Verify core keyboard navigation and visible focus behavior across key routes
-- [x] Re-run `npm run test:a11y`
-- [x] Re-run `npm run test:e2e:nav`
-- [x] Re-run `npm run test:e2e:filters`
+- [x] Normalize typography scale and label usage across hero, section, card, and metadata patterns
+- [x] Normalize surface styles, border logic, corner radii, and panel density
+- [x] Normalize CTA/button states across primary, secondary, ghost, and dark-surface contexts
+- [ ] Normalize spacing rhythm and container behavior across desktop and mobile
 
-### Slice 3: Release Closeout
+### Slice 3: Core Route Consistency Pass
 
-- [x] Capture bounded residual risks only (no scope expansion)
-- [x] Confirm no stale recovery docs override current decisions
-- [x] Update `RECOVERY-CHECKLIST.md`, `DECISIONS.md`, and `latest.md`
-- [x] Leave one next explicit step only
+- [x] Recheck `/`, `/products`, and `/products/[category]` for token/primitive drift and patch the shared CTA/card/header surfaces
+- [ ] Recheck `/products/[category]/[product]` for token/primitive drift
+- [ ] Recheck `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions` for shell/layout drift
+- [x] Remove visibly low-quality repeated UI patterns that break cohesion
+- [x] Verify parity on both desktop and mobile for the updated shared system on the touched routes/components
+
+### Slice 4: Verification
+
+- [x] Run `npm run lint`
+- [x] Run `npm run build`
+- [x] Run targeted Playwright checks on the touched routes/components
+- [x] Update `RECOVERY-CHECKLIST.md`, `DECISIONS.md`, `latest.md`, and handover mirrors after the slice closes
 
 ## Completion Markers
 
-- [x] Live route matrix is complete for desktop/mobile critical flows
-- [x] Keyboard/focus/accessibility verification is complete
-- [x] Residual risks are bounded and explicit
-- [x] Recovery docs and handover mirrors are consistent
+- [x] Shared visual tokens are materially more consistent
+- [x] Shared UI primitives behave consistently across the touched core routes
+- [x] Desktop/mobile parity is verified on touched surfaces
+- [x] Recovery docs point to the same active frontier with no drift
 
 ## Not In This Block
 
 - [ ] Do not reopen broad catalog repair.
-- [ ] Do not reopen homepage/layout redesign.
-- [ ] Do not start archive reintegration.
-- [ ] Do not fabricate external assets or unsupported claims.
+- [ ] Do not reopen archive reintegration.
+- [ ] Do not fabricate product data or unsupported claims.
+- [ ] Do not start a new structural route-ownership wave.
 
 ## Next Explicit Step
 
-- Start the next bounded world-class lane: design-system/token and visual-consistency unification (Phase 4), with mobile/desktop parity and no catalog-scope reopening.
+- Continue the Phase 4 route-consistency pass on `/products/[category]/[product]`, `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions`, tightening spacing rhythm and section-shell parity without reopening catalog or archive scope.

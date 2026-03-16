@@ -16,7 +16,7 @@ const PILLAR_ICONS = {
 } as const;
 
 export const metadata: Metadata = buildPageMetadata(SITE_URL, {
-  title: "Workspace products | One and Only Furniture",
+  title: "Workspace products",
   description: PRODUCTS_PAGE_COPY.heroSubtitle,
   path: "/products",
   image: "/images/catalog/oando-workstations--deskpro/image-1.webp",
@@ -25,7 +25,7 @@ export const metadata: Metadata = buildPageMetadata(SITE_URL, {
 export default function ProductsPage() {
   const productsJsonLd = buildPageJsonLd(SITE_URL, {
     path: "/products",
-    title: "Workspace products | One and Only Furniture",
+    title: "Workspace products",
     description: PRODUCTS_PAGE_COPY.heroSubtitle,
     pageType: "CollectionPage",
   });

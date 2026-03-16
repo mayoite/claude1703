@@ -7,7 +7,7 @@ import { getProducts } from "@/lib/getProducts";
 import { SOCIAL_PAGE_COPY, SOCIAL_PAGE_POSTS } from "@/data/site/routeCopy";
 
 export const metadata = {
-  title: "Social Highlights | One and Only Furniture",
+  title: "Social Highlights",
   description:
     "Project inspiration and product-linked social highlights grounded in the live catalog and planning routes.",
 };

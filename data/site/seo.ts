@@ -38,7 +38,7 @@ export function buildSiteMetadata(siteUrl: string): Metadata {
       "ergonomic chairs India",
       "modular workstations Patna",
       "office furniture Bihar",
-      "One and Only Furniture",
+      "One&Only",
       "oando furniture",
       "office chairs Patna",
       "meeting tables Bihar",

@@ -24,7 +24,7 @@ export default function AboutPage() {
           <div className="scheme-border relative aspect-16/11 overflow-hidden rounded-2xl border">
             <Image
               src="/images/hero/hero-2.webp"
-              alt="Workspace delivery by One and Only Furniture"
+              alt="Workspace delivery by One&Only"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

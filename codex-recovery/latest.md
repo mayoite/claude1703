@@ -1,28 +1,24 @@
 # Recovery State
 
-- Timestamp: 2026-03-16T19:35:51+05:30
+- Timestamp: 2026-03-16T21:04:58+05:30
 - Branch: main
 
 ## Operator Note
-Deployment/environment hardening and Phase 10 live experience verification are verification-closed. Active frontier is now Phase 4 design-system/token and visual-consistency unification.
+Phase 4 design-system/token and visual-consistency unification remains the single active frontier. The shared-system baseline is now implemented and verified; the next work stays inside the remaining route-consistency pass.
 
 ## Completed In This Slice
-- Completed hosted route matrix and interaction checks on `https://workingoando.vercel.app` for homepage, category, PDP, configurator, compare, quote/contact intent, trust, and projects surfaces.
-- Completed keyboard/focus verification across core public routes.
-- Completed hosted verification suite reruns:
-  - `npm run test:e2e:nav`
-  - `npx playwright test tests/product-tools.spec.ts`
-  - `npm run test:a11y`
-  - `npx playwright test tests/homepage-visual-qa.spec.ts`
-  - `npx playwright test tests/dynamic-filters.spec.ts`
-  - `npm run test:e2e:stats-consistency`
-  - `npx playwright test tests/homepage.spec.ts`
-- Recorded closure evidence in `codex-recovery/artifacts/audits/PHASE10-LIVE-VERIFICATION-2026-03-16.md`.
+- Added semantic Phase 4 tokens for radii, shadows, motion, control sizing, and surface treatments in the shared theme layer.
+- Unified the active shared visual primitives across `scheme-*` surfaces, CTA/button states, header/search shells, footer conversion, contact cards, and category-discovery cards.
+- Moved the most visible drifted components back onto the shared system: hero CTA, homepage contact teaser CTA, category grid cards, reusable button ownership, and career cards.
+- Verified the slice cleanly:
+  - `npm run lint`
+  - `npm run build`
+  - `PLAYWRIGHT_BASE_URL=http://localhost:3000 npx playwright test tests/homepage.spec.ts tests/dynamic-filters.spec.ts tests/product-tools.spec.ts --workers=1`
 
 ## Bounded Residual Risks
-- Hosted smoke gates remain sample-based rather than exhaustive full-crawl coverage.
-- `_next/image` sampled URLs still return `404` under intentional unoptimized-hosted behavior; direct catalog image paths are green and are the runtime truth.
-- Full 3D fallback behavior remains out of the closed Phase 10 slice and should be validated inside the later dedicated 3D lane.
+- Spacing rhythm and shell parity still need one more bounded pass on `/products/[category]/[product]`, `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions`.
+- Phase 4 has not yet closed; this slice established the shared baseline but did not finish every route-level consistency check.
+- Full 3D fallback behavior remains out of scope for this design-system slice and still belongs to the later dedicated 3D lane.
 
 ## Next Explicit Step
-- Start Phase 4 by unifying visual tokens and shared UI primitives (typography, spacing, surfaces, controls, states) with desktop/mobile parity and no catalog-scope reopening.
+- Continue the Phase 4 route-consistency pass on `/products/[category]/[product]`, `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions`, tightening spacing rhythm and section-shell parity without reopening catalog or archive scope.

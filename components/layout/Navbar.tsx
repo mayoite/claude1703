@@ -298,7 +298,7 @@ export function Navbar() {
         />
         <div className="container-wide relative">
           <div className="nav-shell flex h-20 items-center justify-between px-3 sm:px-4">
-            <Link href="/" aria-label="One and Only Furniture Home" className="shrink-0">
+            <Link href="/" aria-label="One&Only Home" className="shrink-0">
               <OneAndOnlyLogo className="h-9 md:h-10 lg:h-11" variant="orange" />
             </Link>
 

@@ -18,7 +18,7 @@ export function HomepageHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero/titan-patna-hq.webp"
-          alt="Ergonomic seating and workstations expertly installed at Titan Patna HQ by One and Only Furniture"
+          alt="Ergonomic seating and workstations installed at Titan Patna HQ by One&Only"
           fill
           priority
           sizes="100vw"

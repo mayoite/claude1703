@@ -58,7 +58,7 @@
   }
 
   .site-footer {
-    background-color: var(--color-footer-bg);
+    background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--color-footer-bg) 100%);
     color: var(--color-footer-muted);
   }
 
@@ -92,36 +92,40 @@
   }
 
   .scheme-page {
-    background-color: var(--surface-page);
+    background: linear-gradient(180deg, var(--surface-page) 0%, #fcfdff 100%);
     color: var(--text-body);
   }
 
   .scheme-section-soft {
-    background-color: var(--surface-soft);
+    background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface-page) 100%);
   }
 
   .scheme-section-muted {
-    background-color: var(--surface-muted);
+    background: linear-gradient(180deg, var(--surface-muted) 0%, var(--surface-soft) 100%);
   }
 
   .scheme-section-inverse {
-    background-color: var(--surface-inverse);
+    background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
     color: var(--text-inverse);
   }
 
   .scheme-panel {
-    background-color: var(--surface-panel);
+    background: linear-gradient(180deg, var(--surface-panel-strong) 0%, var(--surface-panel-soft) 100%);
     border-color: var(--border-soft);
+    box-shadow: var(--shadow-soft);
   }
 
   .scheme-panel-soft {
-    background-color: var(--surface-soft);
+    background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface-panel-strong) 100%);
     border-color: var(--border-soft);
+    box-shadow: var(--shadow-soft);
   }
 
   .scheme-panel-dark {
-    background-color: var(--surface-inverse);
+    background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
     color: var(--text-inverse);
+    border-color: var(--border-inverse);
+    box-shadow: var(--shadow-inverse);
   }
 
   .scheme-text-heading {
@@ -173,7 +177,7 @@
   }
 
   .scheme-border-brand-soft {
-    border-color: var(--ref-color-037);
+    border-color: var(--border-accent);
   }
 
   .scheme-border-inverse {

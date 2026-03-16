@@ -7,7 +7,7 @@ import { buildWhatsAppHref, SUPPORT_PHONE_DIGITS } from "@/data/site/contact";
 export function WhatsAppBot() {
   const openWhatsApp = () => {
     const href = buildWhatsAppHref(
-      "Hi, I'm interested in One and Only Furniture solutions. Please assist me with my inquiry.",
+      "Hi, I'm interested in One&Only solutions. Please assist me with my inquiry.",
       SUPPORT_PHONE_DIGITS,
     );
     window.open(href, "_blank");

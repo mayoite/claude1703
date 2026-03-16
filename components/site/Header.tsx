@@ -260,7 +260,7 @@ export function SiteHeader() {
             {/* Logo */}
             <Link
               href="/"
-              aria-label="One and Only Furniture - home"
+              aria-label="One&Only - home"
               className="inline-flex h-full shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
             >
               <OneAndOnlyLogo className="h-8 md:h-9" variant="orange" />

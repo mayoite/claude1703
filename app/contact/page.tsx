@@ -9,7 +9,7 @@ import { buildPageJsonLd, buildPageMetadata } from "@/data/site/seo";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = buildPageMetadata(SITE_URL, {
-  title: "Contact us | One and Only Furniture",
+  title: "Contact us",
   description: CONTACT_PAGE_COPY.heroSubtitle,
   path: "/contact",
   image: "/images/hero/tvs-patna-enhanced.webp",
@@ -30,7 +30,7 @@ export default async function ContactPage({
   const source = firstValue(resolvedSearchParams.source);
   const contactJsonLd = buildPageJsonLd(SITE_URL, {
     path: "/contact",
-    title: "Contact us | One and Only Furniture",
+    title: "Contact us",
     description: CONTACT_PAGE_COPY.heroSubtitle,
     pageType: "ContactPage",
   });

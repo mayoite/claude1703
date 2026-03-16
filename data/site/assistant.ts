@@ -35,7 +35,7 @@ export const AI_ADVISOR_SAMPLE_QUERIES = [
 ] as const;
 
 export const AI_ADVISOR_COPY = {
-  subtitle: "Powered by One and Only x ChatGPT 5.4",
+  subtitle: "Powered by One&Only x ChatGPT 5.4",
   intro:
     "Describe your workspace project - team size, industry, location, and budget - and I will engineer a curated system recommendation from our live catalog.",
   surpriseLabel: "Try a sample",

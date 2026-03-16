@@ -179,7 +179,7 @@ async function aiRank(
     apiKey,
     defaultHeaders: {
       "HTTP-Referer": SITE_URL,
-      "X-Title": "One and Only Furniture Navigation Search",
+      "X-Title": "One&Only Navigation Search",
     },
   });
 

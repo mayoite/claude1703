@@ -145,7 +145,7 @@ export function Hero({
               <motion.div variants={titleVariants} className="pt-8">
                 <Link
                   href={buttonLink}
-                  className="group inline-flex items-center justify-center gap-4 bg-primary px-10 py-5 text-white transition-all hover:bg-primary-hover hover:shadow-xl"
+                  className="btn-primary group px-8 py-4 md:px-10"
                 >
                   <span className="text-sm font-bold uppercase tracking-ui-020">
                     {buttonText}

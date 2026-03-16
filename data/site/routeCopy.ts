@@ -134,7 +134,7 @@ export const TRUSTED_BY_PAGE_COPY = {
   sectorsDescription:
     "From government procurement and banking operations to manufacturing offices and NGO programs, the shared requirement is the same: durable products, accountable delivery, and support after handover.",
   rosterKicker: "Selected organisations",
-  rosterTitle: "Clients who rely on One and Only Furniture.",
+  rosterTitle: "Clients who rely on One&Only.",
 } as const;
 
 export const PROJECTS_PAGE_COPY = {
@@ -362,7 +362,7 @@ export const SHOWROOMS_HIGHLIGHTS = [
 export const SOLUTIONS_PAGE_COPY = {
   metadataTitle: "Workspace Planning Approach",
   metadataDescription:
-    "See how One and Only Furniture plans, specifies, and delivers workspace projects from brief to after-sales support.",
+    "See how One&Only plans, specifies, and delivers workspace projects from brief to after-sales support.",
   heroTitle: "How we deliver workspace projects",
   heroSubtitle:
     "A structured approach for planning, procurement alignment, execution, and support.",
@@ -852,7 +852,7 @@ export const SERVICE_PAGE_CHANNELS = [
 ] as const;
 
 export const DOWNLOADS_PAGE_COPY = {
-  metadataTitle: "Resource Desk | One and Only Furniture",
+  metadataTitle: "Resource Desk",
   metadataDescription:
     "Request product catalogs, technical sheets, and planning references tailored to your workspace brief.",
   heroTitle: "Resource Desk",
@@ -936,7 +936,7 @@ export const LEGAL_PAGE_COPY = {
     overviewDescription:
       "We collect only the information needed to respond to project requests, route support conversations, and maintain service records around active client relationships.",
     intro: [
-      "One and Only Furniture Private Limited (\"OOFPL\") operates oando.co.in. This policy explains what personal data we collect, how we use it, and what cookies we set when you browse our website or submit an enquiry.",
+      "One&Only is operated by One and Only Furniture Private Limited (\"OOFPL\"). This policy explains what personal data we collect, how we use it, and what cookies we set when you browse our website or submit an enquiry.",
       "Personal information includes data that can identify or contact you, such as your name, company, email address, phone number, IP address, and any enquiry details you share through our forms.",
     ],
     commitmentsTitle: "What this policy covers",
@@ -949,7 +949,7 @@ export const LEGAL_PAGE_COPY = {
   terms: {
     title: "Terms & Conditions",
     heroSubtitle:
-      "Website, enquiry, quotation, delivery, warranty, and support terms for One and Only Furniture.",
+      "Website, enquiry, quotation, delivery, warranty, and support terms for One&Only.",
     overviewKicker: "Commercial terms",
     overviewTitle: "The operating terms behind quotations, orders, delivery, and support.",
     overviewDescription:
@@ -957,7 +957,7 @@ export const LEGAL_PAGE_COPY = {
     sections: [
       {
         heading: "General Terms and Conditions",
-        body: "These Terms and Conditions govern the use of this website and all commercial dealings with One and Only Furniture, including product enquiries, quotations, supply, and support services.",
+        body: "These Terms and Conditions govern the use of this website and all commercial dealings with One&Only, including product enquiries, quotations, supply, and support services.",
       },
       {
         heading: "1. Scope",
@@ -984,7 +984,7 @@ export const LEGAL_PAGE_COPY = {
   imprint: {
     title: "Imprint",
     heroSubtitle:
-      "Business identity, representative details, and official contact information for One and Only Furniture.",
+      "Business identity, representative details, and official contact information for One&Only.",
     overviewKicker: "Business information",
     overviewTitle: "Official company and contact details.",
     overviewDescription:
@@ -1010,7 +1010,7 @@ export const LEGAL_PAGE_COPY = {
   },
   refund: {
     metadataTitle: "Refund and Return Policy",
-    metadataDescription: "Refund, return, replacement, and cancellation policy for One and Only Furniture.",
+    metadataDescription: "Refund, return, replacement, and cancellation policy for One&Only.",
     heroTitle: "Refund and return policy",
     heroSubtitle: "Terms for returns, replacements, cancellations, and refunds.",
     overviewKicker: "Returns and replacement terms",
@@ -1113,7 +1113,7 @@ export const PRODUCTS_PAGE_COPY = {
 } as const;
 
 export const CATEGORY_ROUTE_COPY = {
-  metadataSuffix: "One and Only Furniture",
+  metadataSuffix: "One&Only",
   metadataTail: "Browse our full range of {category} for practical office planning and delivery.",
   browseAllCta: "Browse all categories",
   resourceDeskCta: "Open Resource Desk",
@@ -1189,8 +1189,8 @@ export const QUOTE_CART_ROUTE_COPY = {
 } as const;
 
 export const PDP_ROUTE_COPY = {
-  fallbackDescription: "{name} from One and Only Furniture.",
-  productBrand: "One and Only Furniture",
+  fallbackDescription: "{name} from One&Only.",
+  productBrand: "One&Only",
   summary: {
     title: "Decision snapshot",
     description:

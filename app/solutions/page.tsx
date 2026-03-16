@@ -6,7 +6,7 @@ import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { SOLUTIONS_DELIVERY_STEPS, SOLUTIONS_PAGE_COPY } from "@/data/site/routeCopy";
 
 export const metadata: Metadata = {
-  title: `${SOLUTIONS_PAGE_COPY.metadataTitle} | One and Only Furniture`,
+  title: SOLUTIONS_PAGE_COPY.metadataTitle,
   description: SOLUTIONS_PAGE_COPY.metadataDescription,
 };
 

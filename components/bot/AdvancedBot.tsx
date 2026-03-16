@@ -67,7 +67,7 @@ export function AdvancedBot() {
 
   const summary = useMemo(() => {
     const lines = [];
-    lines.push("Enquiry for One and Only via Website Bot");
+    lines.push("Enquiry for One&Only via Website Bot");
     if (state.useCase) {
       const labels: Record<UseCase, string> = {
         workstations: "Workstations",
@@ -108,13 +108,13 @@ export function AdvancedBot() {
 
   const whatsappUrl = useMemo(() => {
     return buildWhatsAppHref(
-      `One and Only workspace enquiry via website bot\n\n${summary}`,
+      `One&Only workspace enquiry via website bot\n\n${summary}`,
     );
   }, [summary]);
 
   const mailtoUrl = useMemo(() => {
     return buildMailtoHref(
-      "One and Only workspace enquiry via website bot",
+      "One&Only workspace enquiry via website bot",
       summary,
     );
   }, [summary]);

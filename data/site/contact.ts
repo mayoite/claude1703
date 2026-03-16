@@ -5,7 +5,7 @@ export type SiteSocialLink = {
 };
 
 export const SITE_CONTACT = {
-  brandName: "One and Only Furniture",
+  brandName: "One&Only",
   salesPhone: "+91 98356 30940",
   supportPhone: "+91 90310 22875",
   salesEmail: "sales@oando.co.in",

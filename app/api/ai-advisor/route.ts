@@ -27,7 +27,7 @@ function createOpenRouterClient(apiKey: string) {
     apiKey,
     defaultHeaders: {
       "HTTP-Referer": SITE_URL,
-      "X-Title": "One and Only Furniture",
+      "X-Title": "One&Only",
     },
   });
 }

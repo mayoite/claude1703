@@ -1,5 +1,5 @@
 # Recovery Handover
-- Timestamp: 2026-03-16T19:46:36
+- Timestamp: 2026-03-16T21:04:58
 ## Next Chat Prompt
 ```text
 Read `/e:/new-repo-20260306-235837/codex-recovery/handover/latest-handover.md` first.
@@ -8,23 +8,23 @@ Continue from the single active frontier only.
 ```
 
 ## Next 45 Minutes Plan
-# Phase 10 Experience Verification And Release Hardening
-# Objective: Run a bounded live-route verification matrix, capture only bounded residual risks, and close release-hardening gaps without reopening design or catalog scope.
+# Phase 4 Design-System/Token And Visual-Consistency Unification
+# Objective: Continue the remaining route-consistency pass after the shared-system baseline so the site reads as one premium visual system across core trust and PDP routes.
 
 ## Current Block
 
-- `Phase 10 Experience Verification And Release Hardening (verification-closed)`
+- `Phase 4 Design-System/Token And Visual-Consistency Unification (active)`
 
 ## Baseline Entering This Block
 
-- Deployment/environment hardening is verification-closed.
-- Hosted runtime/env baseline is verified (`npx vercel env ls` and hosted smoke checks).
-- Hosted production deploy is current (`npx vercel --prod --yes`).
+- Phase 10 verification and deployment hardening are already verification-closed.
+- The shared-system baseline is implemented and verified across tokens, scheme surfaces, CTA states, header/search shells, footer conversion, and category discovery cards.
+- The remaining gap is route-level spacing and shell parity on the still-drifting trust/PDP surfaces.
 
 ## Execution Charter
 
-- Keep this block bounded to verification and release hardening only.
-- Do not reopen broad catalog repair, homepage redesign, or archive reintegration.
+- Keep this block bounded to Phase 4 route consistency only.
+- Do not reopen broad catalog repair, homepage truth rewrites, or archive reintegration.
 - Keep `missing_documents` visible as a source-gap truth.
 - Keep `/downloads` as a request-based `Resource Desk`.
 - Keep `fluid-x` as the only accepted legacy-slug exception.
@@ -32,85 +32,67 @@ Continue from the single active frontier only.
 
 ## Detailed Checklist
 
-### Slice 1: Live Route Matrix
+### Slice 1: Shared Baseline (completed)
 
-- [x] Verify homepage desktop/mobile on hosted production
-- [x] Verify category listing desktop/mobile on hosted production
-- [x] Verify product detail desktop/mobile on hosted production
-- [x] Verify configurator desktop/mobile on hosted production
-- [x] Verify compare flow on hosted production
-- [x] Verify quote/contact flow on hosted production
-- [x] Verify trust/projects surfaces on hosted production
+- [x] Add semantic tokens for radii, shadows, motion, controls, and surfaces
+- [x] Unify `scheme-*` surfaces and CTA/button states
+- [x] Unify header/search, footer conversion, contact-card, and category-card shell behavior
 
-### Slice 2: Accessibility And Interaction
+### Slice 2: Remaining Route Pass
 
-- [x] Verify core keyboard navigation and visible focus behavior across key routes
-- [x] Re-run `npm run test:a11y`
-- [x] Re-run `npm run test:e2e:nav`
-- [x] Re-run `npm run test:e2e:filters`
-
-### Slice 3: Release Closeout
-
-- [x] Capture bounded residual risks only (no scope expansion)
-- [x] Confirm no stale recovery docs override current decisions
-- [x] Update `RECOVERY-CHECKLIST.md`, `DECISIONS.md`, and `latest.md`
-- [x] Leave one next explicit step only
+- [ ] Recheck `/products/[category]/[product]` for token/primitive drift
+- [ ] Recheck `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions` for shell/layout drift
+- [ ] Tighten spacing rhythm and section-shell parity on remaining drifted routes
+- [ ] Re-run the same targeted verification set after the remaining route pass
 
 ## Completion Markers
 
-- [x] Live route matrix is complete for desktop/mobile critical flows
-- [x] Keyboard/focus/accessibility verification is complete
-- [x] Residual risks are bounded and explicit
+- [x] Shared-system baseline is verified
+- [ ] Remaining route-consistency pass is complete
+- [ ] Desktop/mobile parity is reverified on the remaining touched routes
 - [x] Recovery docs and handover mirrors are consistent
 
 ## Not In This Block
 
 - [ ] Do not reopen broad catalog repair.
-- [ ] Do not reopen homepage/layout redesign.
-- [ ] Do not start archive reintegration.
+- [ ] Do not reopen archive reintegration.
+- [ ] Do not start a new structural route-ownership wave.
 - [ ] Do not fabricate external assets or unsupported claims.
 
 ## Next Explicit Step
 
-- Start the next bounded world-class lane: design-system/token and visual-consistency unification (Phase 4), with mobile/desktop parity and no catalog-scope reopening.
+- Continue the Phase 4 route-consistency pass on `/products/[category]/[product]`, `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions`.
 
 ## Latest Recovery State
 # Recovery State
 
-- Timestamp: 2026-03-16T19:35:51+05:30
+- Timestamp: 2026-03-16T21:04:58+05:30
 - Branch: main
 
 ## Operator Note
-Deployment/environment hardening and Phase 10 live experience verification are verification-closed. Active frontier is now Phase 4 design-system/token and visual-consistency unification.
+Phase 4 design-system/token and visual-consistency unification remains the single active frontier. The shared-system baseline is now implemented and verified.
 
 ## Completed In This Slice
-- Completed hosted route matrix and interaction checks on `https://workingoando.vercel.app` for homepage, category, PDP, configurator, compare, quote/contact intent, trust, and projects surfaces.
-- Completed keyboard/focus verification across core public routes.
-- Completed hosted verification suite reruns:
-  - `npm run test:e2e:nav`
-  - `npx playwright test tests/product-tools.spec.ts`
-  - `npm run test:a11y`
-  - `npx playwright test tests/homepage-visual-qa.spec.ts`
-  - `npx playwright test tests/dynamic-filters.spec.ts`
-  - `npm run test:e2e:stats-consistency`
-  - `npx playwright test tests/homepage.spec.ts`
-- Recorded closure evidence in `codex-recovery/artifacts/audits/PHASE10-LIVE-VERIFICATION-2026-03-16.md`.
+- Added semantic tokens for radii, shadows, motion, control sizing, and surface treatments.
+- Unified `scheme-*` surfaces, CTA/button states, header/search shells, footer conversion, and category-discovery cards.
+- Verified with `npm run lint`, `npm run build`, and `PLAYWRIGHT_BASE_URL=http://localhost:3000 npx playwright test tests/homepage.spec.ts tests/dynamic-filters.spec.ts tests/product-tools.spec.ts --workers=1`.
 
 ## Bounded Residual Risks
-- Hosted smoke gates remain sample-based rather than exhaustive full-crawl coverage.
-- `_next/image` sampled URLs still return `404` under intentional unoptimized-hosted behavior; direct catalog image paths are green and are the runtime truth.
-- Full 3D fallback behavior remains out of the closed Phase 10 slice and should be validated inside the later dedicated 3D lane.
+- Remaining route-level spacing and shell parity still need one bounded pass on `/products/[category]/[product]`, `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions`.
+- Full 3D fallback behavior remains out of scope for this Phase 4 slice.
 
 ## Next Explicit Step
-- Start Phase 4 by unifying visual tokens and shared UI primitives (typography, spacing, surfaces, controls, states) with desktop/mobile parity and no catalog-scope reopening.
+- Continue the remaining Phase 4 route-consistency pass without reopening catalog or archive scope.
 
 ## Latest Chat Snapshot
 # Chat Snapshot
 
-- Timestamp: 2026-03-15T14:53:06
+- Timestamp: 2026-03-16T21:04:58+05:30
 
 ## Summary
-_No chat summary was provided._
+- Phase 4 shared-system baseline is implemented and verified.
+- Shared tokens, scheme surfaces, CTA states, header/search shells, footer conversion, and category-discovery cards were unified without reopening catalog or archive scope.
+- Verification is green for this slice: `npm run lint`, `npm run build`, and `PLAYWRIGHT_BASE_URL=http://localhost:3000 npx playwright test tests/homepage.spec.ts tests/dynamic-filters.spec.ts tests/product-tools.spec.ts --workers=1`.
 
 ## Resume From
 - `codex-recovery/latest.md`

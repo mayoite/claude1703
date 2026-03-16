@@ -14,7 +14,7 @@ This handover file exists only as the fast-resume mirror inside the handover pac
 
 ## Current Next Explicit Step
 
-- Start with a bounded token/primitives audit and unify shared visual foundations (type, spacing, surfaces, controls, states) across core routes with desktop/mobile parity.
+- Continue the remaining Phase 4 route-consistency pass on `/products/[category]/[product]`, `/about`, `/trusted-by`, `/sustainability`, `/contact`, and `/solutions` after the shared-system baseline.
 
 ## Locked Truths To Preserve While Executing
 
