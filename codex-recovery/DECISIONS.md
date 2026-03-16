@@ -4,6 +4,26 @@ Use this file to record recovery decisions that should not be re-litigated in ev
 
 ## Current Decisions
 
+### 2026-03-16 Phase 10 Verification Closure And Phase 4 Rotation
+
+- Decision: Close the bounded Phase 10 live-experience verification lane and rotate the single active frontier to Phase 4 design-system/token and visual-consistency unification.
+- Why:
+  - Live hosted verification matrix was completed on `https://workingoando.vercel.app` across homepage, category, PDP, configurator, compare, quote/contact intent routes, and trust/projects routes.
+  - Keyboard navigation and visible focus checks were rerun across core routes and passed.
+  - Targeted test suites are green in hosted mode:
+    - `npm run test:e2e:nav`
+    - `npx playwright test tests/product-tools.spec.ts`
+    - `npm run test:a11y`
+    - `npx playwright test tests/homepage-visual-qa.spec.ts`
+    - `npx playwright test tests/dynamic-filters.spec.ts`
+    - `npm run test:e2e:stats-consistency`
+    - `npx playwright test tests/homepage.spec.ts`
+  - Verification evidence is captured in `codex-recovery/artifacts/audits/PHASE10-LIVE-VERIFICATION-2026-03-16.md`.
+- Impact:
+  - `NEXT-PLAN.md` now treats Phase 10 as verification-closed and leaves one explicit next step: begin Phase 4 design-system unification.
+  - Recovery mirrors (`latest.md`, handover `CURRENT-PLAN.md`, and handover `CURRENT-CHECKLIST.md`) must remain aligned to Phase 4 as the only active frontier.
+  - No catalog-scope reopening was introduced during the closure.
+
 ### 2026-03-16 Deployment/Environment Hardening Verification Closure
 
 - Decision: Close the bounded deployment/environment hardening lane after live hosted verification and production deploy, then rotate to Phase 10 live experience verification.

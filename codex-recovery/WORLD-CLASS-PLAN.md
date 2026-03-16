@@ -54,7 +54,9 @@ Everything else in `codex-recovery/` is either generated state, handover mirrors
 - The bounded footer and global contact-surface hardening lane is implemented and verified.
 - The bounded trust-sensitive copy and alt-text hardening lane is implemented and verification-closed.
 - The bounded automated verification hardening lane is implemented and verification-closed.
-- The active execution frontier is now a bounded deployment and environment hardening lane focused on hosted runtime reliability.
+- The bounded deployment and environment hardening lane is verification-closed.
+- The bounded Phase 10 live experience verification and release-hardening lane is verification-closed.
+- The active execution frontier is now Phase 4 design-system/token and visual-consistency unification.
 - The detailed archive recovery plan is explicitly deferred to the late-stage archive slot after core live-route work is stable.
 - This lane must keep `missing_documents` visible as a real content-ingestion requirement and keep `oando-soft-seating--luna` explicitly deferred unless repo-backed media evidence appears.
 
@@ -88,7 +90,7 @@ Completed in the current frontend lane:
 - `/support-ivr`
 
 Current next step:
-- validate deployment env expectations and hosted asset-path behavior, then capture bounded residual risks
+- begin Phase 4 token/primitives unification for cross-route desktop/mobile visual consistency
 
 ## Locked Rules
 
@@ -606,22 +608,22 @@ Finish with a site that is premium and verifiably robust.
 - [x] `npm run audit:nhost:backup`
 
 #### Experience Verification
-- [ ] verify homepage desktop/mobile
-- [ ] verify category listing desktop/mobile
+- [x] verify homepage desktop/mobile
+- [x] verify category listing desktop/mobile
 - [x] verify product detail desktop/mobile
-- [ ] verify configurator desktop/mobile
-- [ ] verify compare flow
-- [ ] verify quote/contact flow
-- [ ] verify trust/projects surfaces
+- [x] verify configurator desktop/mobile
+- [x] verify compare flow
+- [x] verify quote/contact flow
+- [x] verify trust/projects surfaces
 - [ ] verify 3D fallback behavior
-- [ ] verify core keyboard and focus behavior
+- [x] verify core keyboard and focus behavior
 
 #### Final Hardening
-- [ ] validate deployment env expectations
-- [ ] confirm core asset paths are valid
-- [ ] confirm no stale recovery docs override final decisions
-- [ ] record only bounded residual risks
-- [ ] produce handoff-ready recovery state
+- [x] validate deployment env expectations
+- [x] confirm core asset paths are valid
+- [x] confirm no stale recovery docs override final decisions
+- [x] record only bounded residual risks
+- [x] produce handoff-ready recovery state
 
 ### Release Gate
 - [ ] all core checks pass

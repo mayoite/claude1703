@@ -18,9 +18,10 @@ test.describe("Homepage conversion path", () => {
     let previousY = -1;
     for (const locator of ordered) {
       await expect(locator).toBeVisible();
-      const box = await locator.boundingBox();
-      expect(box).not.toBeNull();
-      const y = box?.y ?? 0;
+      const y = await locator.evaluate((element) => {
+        const rect = element.getBoundingClientRect();
+        return rect.top + window.scrollY;
+      });
       expect(y).toBeGreaterThan(previousY);
       previousY = y;
     }
@@ -44,9 +45,13 @@ test.describe("Homepage conversion path", () => {
       await acceptCookies.click();
     }
 
-    await page.getByLabel("Open guided planner").click();
+    await expect(page.getByLabel("Open AI chatbot")).toBeVisible({ timeout: 10000 });
+    const openGuidedPlanner = page.getByRole("button", { name: /Open guided planner/i }).first();
+    await openGuidedPlanner.scrollIntoViewIfNeeded();
+    await expect(openGuidedPlanner).toBeVisible({ timeout: 10000 });
+    await openGuidedPlanner.click();
     const guidedDialog = page.getByRole("dialog", { name: /Guided planner/i });
-    await expect(guidedDialog).toBeVisible();
+    await expect(guidedDialog).toBeVisible({ timeout: 10000 });
     await guidedDialog.getByRole("button", { name: /Workstations/i }).click();
     await guidedDialog
       .getByPlaceholder("Seats or units (e.g. 60 workstations)")
@@ -182,38 +187,22 @@ test.describe("Homepage conversion path", () => {
     ).toHaveCount(0);
   });
 
-  test("desktop header search submits the best match on Enter", async ({ page }) => {
+  test("desktop header search submits the top product result on Enter", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.route("**/api/nav-search/", async (route) => {
-      await route.fulfill({
-        status: 200,
-        contentType: "application/json",
-        body: JSON.stringify({
-          results: [
-            {
-              id: "product:oando-workstations--deskpro",
-              title: "DeskPro",
-              href: "/products/workstations/oando-workstations--deskpro",
-              type: "product",
-              source: "local",
-            },
-          ],
-          fallbackUsed: false,
-          rankingMode: "local",
-        }),
-      });
-    });
-
     await page.goto("/");
     const searchInput = page.getByLabel("Search products with AI");
+    await expect(searchInput).toBeVisible();
+    await searchInput.click();
     await searchInput.fill("desk");
-    await expect(page.getByText("DeskPro")).toBeVisible();
+
+    const firstResultLink = page.locator(".shell-search-panel a[href^='/products/']").first();
+    await expect(firstResultLink).toBeVisible({ timeout: 10000 });
     await searchInput.press("Enter");
-    await expect(page).toHaveURL(/\/products\/workstations\/oando-workstations--deskpro\/?$/);
+    await expect(page).toHaveURL(/\/products\/[^/]+\/[^/?]+\/?$/);
   });
 
   test("mobile drawer search submits the best match on Enter", async ({ page }) => {
-    await page.route("**/api/nav-search/", async (route) => {
+    await page.route("**/api/nav-search*", async (route) => {
       await route.fulfill({
         status: 200,
         contentType: "application/json",

@@ -10,11 +10,11 @@ This handover file exists only as the fast-resume mirror inside the handover pac
 
 ## Current Block
 
-- `Phase 10 Experience Verification And Release-Hardening Closeout`
+- `Phase 4 Design-System/Token And Visual-Consistency Unification`
 
 ## Current Next Explicit Step
 
-- Run the live route verification matrix (desktop/mobile core flows, compare, quote/contact, trust/projects, keyboard/focus) and record only bounded residual risks.
+- Start with a bounded token/primitives audit and unify shared visual foundations (type, spacing, surfaces, controls, states) across core routes with desktop/mobile parity.
 
 ## Locked Truths To Preserve While Executing
 

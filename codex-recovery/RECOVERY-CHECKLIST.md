@@ -101,6 +101,9 @@ Update this file as recovery work progresses. Keep exactly one active frontier i
 - [x] Hosted runtime smoke command added and verified: `npm run audit:hosted:runtime -- --url=https://workingoando.vercel.app` passes with direct catalog image checks green
 - [x] Production deployment hardening applied on 2026-03-16 via `npx vercel --prod --yes`; hosted alias updated and deployment lane is verification-closed
 - [x] The next bounded frontend frontier is Phase 10 live experience verification and release-hardening closeout
+- [x] Phase 10 live experience verification and release-hardening closeout is verification-closed on 2026-03-16: hosted route matrix, keyboard/focus checks, and core nav/tools/a11y/filter/stats suites all pass
+- [x] Recovery/handover drift is resolved on 2026-03-16: `NEXT-PLAN.md`, `RECOVERY-CHECKLIST.md`, `DECISIONS.md`, `latest.md`, and handover mirrors now point to the same single active frontier
+- [x] The next bounded frontend frontier is Phase 4 design-system/token and visual-consistency unification
 
 ## Whole-Site Recovery Frame
 

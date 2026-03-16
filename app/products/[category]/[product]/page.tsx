@@ -409,7 +409,6 @@ async function ProductContent({
       />
       <ProductViewer
         product={compatProduct}
-        seriesName={p.series_name}
         categoryRoute={categoryRoute}
         categoryId={resolvedCategoryId}
         categoryName={getCatalogCategoryLabel(resolvedCategoryId, resolvedCategoryId)}

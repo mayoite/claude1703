@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Fuse from "fuse.js";
 import { buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
 import { getCatalog, type CompatProduct } from "@/lib/getProducts";
+import { hasVerifiedHeadrest } from "@/lib/productTraits";
 import {
   PRICE_RANGES,
   parseEcoMin,
@@ -184,8 +185,7 @@ function buildFacets(
   const ecoMin = ecoScores.length > 0 ? Math.min(...ecoScores) : 0;
   const ecoMax = ecoScores.length > 0 ? Math.max(...ecoScores) : 10;
 
-  const total = products.length;
-  const withHeadrest = products.filter((product) => Boolean(product.metadata?.hasHeadrest)).length;
+  const withHeadrest = products.filter((product) => hasVerifiedHeadrest(product)).length;
   const withHeightAdj = products.filter((product) => Boolean(product.metadata?.isHeightAdjustable)).length;
   const withBifma = products.filter((product) => Boolean(product.metadata?.bifmaCertified)).length;
   const withStackable = products.filter((product) => Boolean(product.metadata?.isStackable)).length;
@@ -197,10 +197,10 @@ function buildFacets(
     priceRange,
     ecoMin: { min: ecoMin, max: ecoMax },
     featureAvailability: {
-      hasHeadrest: withHeadrest > 0 && withHeadrest < total,
-      isHeightAdjustable: withHeightAdj > 0 && withHeightAdj < total,
-      bifmaCertified: withBifma > 0 && withBifma < total,
-      isStackable: withStackable > 0 && withStackable < total,
+      hasHeadrest: withHeadrest > 0,
+      isHeightAdjustable: withHeightAdj > 0,
+      bifmaCertified: withBifma > 0,
+      isStackable: withStackable > 0,
     },
   };
 }
@@ -250,7 +250,7 @@ function applyFilters(
   }
 
   if (filters.headrest) {
-    list = list.filter((product) => Boolean(product.metadata?.hasHeadrest));
+    list = list.filter((product) => hasVerifiedHeadrest(product));
   }
   if (filters.heightAdj) {
     list = list.filter((product) => Boolean(product.metadata?.isHeightAdjustable));

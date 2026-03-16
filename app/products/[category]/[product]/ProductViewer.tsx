@@ -31,7 +31,6 @@ import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
 
 interface ProductViewerProps {
   product: Product;
-  seriesName: string;
   categoryRoute: string;
   categoryId?: string;
   categoryName: string;
@@ -55,7 +54,6 @@ function sanitizeDisplayList(values: string[]): string[] {
 
 export function ProductViewer({
   product,
-  seriesName,
   categoryRoute,
   categoryId,
   categoryName,
@@ -337,28 +335,10 @@ export function ProductViewer({
     return entries.slice(0, 16);
   })();
 
-  const seriesShort = normalizeDisplayText(seriesName.replace(/ Series$/i, ""));
   const hasReturnContext = Boolean(encodedFrom);
   const returnLabel = hasReturnContext
     ? PDP_ROUTE_COPY.ctas.returnToResults
     : PDP_ROUTE_COPY.ctas.returnToCategory;
-  const imageCount = uniqueImages.length > 0 ? uniqueImages.length : 1;
-  const visualCoverageText = PDP_ROUTE_COPY.summary.visualCoverage.replace(
-    "{count}",
-    String(imageCount),
-  );
-  const modelStatusText = (() => {
-    if (!hasModelPath) return PDP_ROUTE_COPY.summary.galleryOnly;
-    if (isCheckingModel) return PDP_ROUTE_COPY.ctas.modelChecking;
-    if (isModelAvailable) return PDP_ROUTE_COPY.summary.modelReady;
-    return PDP_ROUTE_COPY.summary.modelConditional;
-  })();
-  const categoryLabel = normalizeDisplayText(categoryName);
-  const headlineFacts = [
-    { label: "Series", value: seriesShort },
-    { label: "Category", value: categoryLabel },
-    { label: "Configuration", value: quickConfig },
-  ].filter((fact) => fact.value);
   const useCasePreview = useCases.slice(0, 4);
   const materialPreview = materials.slice(0, 3).join(", ");
   const finishPreview = finishOptions.slice(0, 3).join(", ");
@@ -433,19 +413,6 @@ export function ProductViewer({
               productName={displayName}
             />
           </div>
-
-          <div className="border-t border-neutral-200 bg-white/70 px-4 py-4 sm:px-6 lg:px-8">
-            <div className="mx-auto flex w-full max-w-[800px] flex-wrap gap-2">
-              <span className="pdp-chip pdp-chip--white">
-                {visualCoverageText}
-              </span>
-              <span className="pdp-chip pdp-chip--white">
-                {modelStatusText}
-              </span>
-              <span className="pdp-chip pdp-chip--white">{categoryLabel}</span>
-            </div>
-          </div>
-
           {/* 3D viewer toggle wrapper */}
           {hasModelPath && (
             <div className="w-full aspect-video bg-neutral-50 border-t border-neutral-200 relative group">
@@ -533,12 +500,6 @@ export function ProductViewer({
                 <ArrowLeft className="h-3.5 w-3.5" />
                 {returnLabel}
               </Link>
-              <div className="mb-4 flex flex-wrap items-center gap-2">
-                <span className="pdp-chip pdp-chip--soft">
-                  {seriesShort}
-                </span>
-                <span className="pdp-chip pdp-chip--soft">{categoryLabel}</span>
-              </div>
               <p className="pdp-section-label mb-3">Product overview</p>
               <h1 className="text-4xl sm:text-5xl font-light text-neutral-900 tracking-tight leading-[1.05] mb-5">
                 {displayName}
@@ -566,29 +527,6 @@ export function ProductViewer({
                 )}
               </div>
               <div className="rounded-3xl border border-neutral-200 bg-neutral-50/80 p-5 sm:p-6">
-                <div className="mb-5 flex flex-wrap gap-2">
-                  <span className="pdp-chip pdp-chip--white">
-                    {visualCoverageText}
-                  </span>
-                  <span className="pdp-chip pdp-chip--white">
-                    {modelStatusText}
-                  </span>
-                </div>
-                {headlineFacts.length > 0 ? (
-                  <div className="mb-5 grid gap-3 border-b border-neutral-200 pb-5">
-                    {headlineFacts.map((fact) => (
-                      <div
-                        key={fact.label}
-                        className="flex items-start justify-between gap-4 rounded-2xl border border-neutral-200 bg-white px-4 py-3"
-                      >
-                        <p className="pdp-card-label">{fact.label}</p>
-                        <p className="text-right text-sm leading-relaxed text-neutral-800">
-                          {fact.value}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
                 {summaryCards.length > 0 ? (
                   <>
                     <p className="mb-2 text-sm font-medium text-neutral-900">

@@ -2,7 +2,7 @@ import type { ClientBadgeData } from "@/components/ClientBadge";
 import { buildWhatsAppHref } from "@/data/site/contact";
 
 export const ABOUT_PAGE_COPY = {
-  heroTitle: "About One and Only Furniture",
+  heroTitle: "About One&Only",
   heroSubtitle:
     "We design and deliver workspace systems that stay practical, durable, and scalable as teams grow.",
   sectionKicker: "Who we are",

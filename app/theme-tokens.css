@@ -198,10 +198,10 @@
   padding-inline: 1.5rem;
 
   @media (min-width: 768px) {
-    padding-inline: 3rem;
+    padding-inline: 2.5rem;
   }
 
-  max-width: 1800px;
+  max-width: 1680px;
 }
 
 @utility content-extra-wide {
@@ -442,7 +442,14 @@
 }
 
 @utility container-wide {
-  @apply container;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+
+  max-width: 1940px;
 }
 
 @utility u-aspect-16-10 { aspect-ratio: 16 / 10; }

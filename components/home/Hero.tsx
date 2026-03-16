@@ -158,24 +158,6 @@ export function Hero({
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-10 right-10 hidden lg:flex flex-col items-center gap-4 z-20"
-      >
-        <div className="w-px h-20 bg-white/20 relative overflow-hidden">
-          <motion.div
-            animate={{ y: ["-100%", "100%"] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 w-full h-1/2 bg-primary"
-          />
-        </div>
-        <span className="text-ui-10 uppercase tracking-ui-040 scheme-text-inverse-subtle origin-center rotate-90 translate-y-8">
-          Scroll
-        </span>
-      </motion.div>
     </section>
   );
 }

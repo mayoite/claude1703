@@ -32,6 +32,8 @@ import { useQuoteCart } from "@/lib/store/quoteCart";
 import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
 import {
+  DEFAULT_FILTERS,
+  PRICE_RANGES,
   SUSTAINABILITY_THRESHOLDS,
   buildFilterParams,
   buildFilterUrl,
@@ -40,6 +42,7 @@ import {
   type ActiveFilters,
   type SortOption,
 } from "@/lib/productFilters";
+import { hasVerifiedHeadrest } from "@/lib/productTraits";
 import {
   sanitizeDisplayText,
   filterMeaningfulDimensionText,
@@ -169,7 +172,7 @@ function getDisplayUseCase(product: FlatProduct): string {
 function getProductSignals(product: FlatProduct): string[] {
   const signals: string[] = [];
 
-  if (product.metadata?.hasHeadrest) signals.push("With headrest");
+  if (hasVerifiedHeadrest(product)) signals.push("With headrest");
   if (product.metadata?.isHeightAdjustable) signals.push("Height adjustable");
   if (product.metadata?.isStackable) signals.push("Stackable");
   if (Array.isArray(product.variants) && product.variants.length > 1) {
@@ -247,6 +250,11 @@ function buildFallbackFacets(
   categoryId: string,
   products: FlatProduct[],
 ): FilterResponse["facets"] {
+  const specsRecord = (product: FlatProduct): Record<string, unknown> =>
+    product.specs && typeof product.specs === "object" && !Array.isArray(product.specs)
+      ? (product.specs as Record<string, unknown>)
+      : {};
+
   const uniqueSorted = (values: string[]) =>
     Array.from(
       new Set(
@@ -256,11 +264,52 @@ function buildFallbackFacets(
       ),
     ).sort((a, b) => a.localeCompare(b));
 
+  const subcategoryValues = products
+    .map((product) =>
+      sanitizeDisplayText(
+        String(
+          product.metadata?.subcategory ||
+            specsRecord(product).subcategory ||
+            "",
+        ),
+      ),
+    )
+    .filter(Boolean);
+
+  const materialValues = products.flatMap((product) => {
+    const metadataMaterials = Array.isArray(product.metadata?.material)
+      ? product.metadata?.material.map((value) => sanitizeDisplayText(String(value)))
+      : [];
+    if (metadataMaterials.length > 0) return metadataMaterials.filter(Boolean);
+
+    const rawSpecsMaterials = specsRecord(product).materials;
+    return Array.isArray(rawSpecsMaterials)
+      ? rawSpecsMaterials
+          .map((value) => sanitizeDisplayText(String(value)))
+          .filter(Boolean)
+      : [];
+  });
+
+  const priceRangeSet = new Set(
+    products
+      .map((product) => {
+        const specs = specsRecord(product);
+        return String(
+          product.metadata?.priceRange ||
+            specs.priceRange ||
+            specs.price_range ||
+            "",
+        )
+          .trim()
+          .toLowerCase();
+      })
+      .filter((value) => PRICE_RANGES.includes(value as (typeof PRICE_RANGES)[number])),
+  );
+
   const ecoScores = products
     .map((product) => product.metadata?.sustainabilityScore)
     .filter((score): score is number => typeof score === "number");
-  const total = products.length;
-  const hasHeadrestCount = products.filter((product) => product.metadata?.hasHeadrest).length;
+  const hasHeadrestCount = products.filter((product) => hasVerifiedHeadrest(product)).length;
   const heightAdjCount = products.filter(
     (product) => product.metadata?.isHeightAdjustable,
   ).length;
@@ -272,20 +321,18 @@ function buildFallbackFacets(
       categoryId === "seating"
         ? []
         : uniqueSorted(products.map((product) => product.seriesName)),
-    subcategory: [],
-    material: uniqueSorted(
-      products.flatMap((product) => product.metadata?.material || []),
-    ),
-    priceRange: [],
+    subcategory: uniqueSorted(subcategoryValues),
+    material: uniqueSorted(materialValues),
+    priceRange: PRICE_RANGES.filter((range) => priceRangeSet.has(range)),
     ecoMin: {
       min: ecoScores.length > 0 ? Math.min(...ecoScores) : 0,
       max: ecoScores.length > 0 ? Math.max(...ecoScores) : 10,
     },
     featureAvailability: {
-      hasHeadrest: hasHeadrestCount > 0 && hasHeadrestCount < total,
-      isHeightAdjustable: heightAdjCount > 0 && heightAdjCount < total,
-      bifmaCertified: bifmaCount > 0 && bifmaCount < total,
-      isStackable: stackableCount > 0 && stackableCount < total,
+      hasHeadrest: hasHeadrestCount > 0,
+      isHeightAdjustable: heightAdjCount > 0,
+      bifmaCertified: bifmaCount > 0,
+      isStackable: stackableCount > 0,
     },
   };
 }
@@ -630,6 +677,12 @@ function ActiveChips({
   }
   if (filters.series !== "all")
     chips.push({ label: `Series: ${filters.series}`, key: "series" });
+  filters.subcategory.forEach((v) =>
+    chips.push({ label: `Subcategory: ${v}`, key: "subcategory", value: v }),
+  );
+  filters.priceRange.forEach((v) =>
+    chips.push({ label: `Price: ${v}`, key: "priceRange", value: v }),
+  );
   filters.material.forEach((v) =>
     chips.push({ label: v, key: "material", value: v }),
   );
@@ -703,11 +756,7 @@ function AdvancedFilterGridInner({
   );
   const isSeriesEnabled = categoryId !== "seating";
   const effectiveFilters = useMemo(
-    () => ({
-      ...(isSeriesEnabled ? filters : { ...filters, series: "all" }),
-      subcategory: [],
-      priceRange: [],
-    }),
+    () => (isSeriesEnabled ? filters : { ...filters, series: "all" }),
     [filters, isSeriesEnabled],
   );
   const debouncedSearch = useDebouncedValue(searchInput, 250);
@@ -842,8 +891,8 @@ function AdvancedFilterGridInner({
 
   const clearAll = useCallback(() => {
     setSearchInput("");
-    router.push(pathname, { scroll: false });
-  }, [router, pathname]);
+    updateFilters(DEFAULT_FILTERS, { replace: true });
+  }, [updateFilters]);
 
   const activeCount = countActiveFilters(effectiveFilters);
   const compareHref = compareQuery
@@ -974,6 +1023,34 @@ function AdvancedFilterGridInner({
       )}
 
       {/* Material */}
+      {options.subcategory.length > 0 && (
+        <AccordionSection
+          title="Subcategory"
+          count={filters.subcategory.length}
+          defaultOpen={filters.subcategory.length > 0}
+        >
+          <CheckList
+            options={options.subcategory}
+            selected={filters.subcategory}
+            onToggle={(v) => toggleArray("subcategory", v)}
+          />
+        </AccordionSection>
+      )}
+
+      {options.priceRange.length > 0 && (
+        <AccordionSection
+          title="Price Range"
+          count={filters.priceRange.length}
+          defaultOpen={filters.priceRange.length > 0}
+        >
+          <CheckList
+            options={options.priceRange}
+            selected={filters.priceRange}
+            onToggle={(v) => toggleArray("priceRange", v)}
+          />
+        </AccordionSection>
+      )}
+
       {options.material.length > 1 && (
         <AccordionSection
           title="Material"

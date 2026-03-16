@@ -29,15 +29,17 @@ Deliver a world-class production site from the local repo with explicit platform
 - Footer/global contact-surface lane: closed.
 - Trust-sensitive copy and alt-text lane: closed.
 - Automated verification hardening lane (including seating image warning fix): closed.
+- Deployment/environment hardening lane: verification-closed.
+- Phase 10 live experience verification and release-hardening lane: verification-closed.
 
 ## Single Active Frontier (Now)
 
-Phase 10 experience verification and release-hardening closeout.
+Phase 4 design-system/token and visual-consistency unification.
 
 Primary next actions:
-- Verify live route experience quality on desktop/mobile for key flows.
-- Verify compare, quote/contact, trust/projects, and keyboard/focus behavior.
-- Capture only bounded residual risks and keep release gate explicit.
+- Unify visual tokens and component primitives without reopening catalog scope.
+- Improve cross-route visual consistency and hierarchy on desktop/mobile.
+- Keep changes bounded, reversible, and verification-driven.
 
 ## Deployment Hardening Checklist (Completed)
 
@@ -60,9 +62,8 @@ Primary next actions:
 
 ## Remaining Plan Surface (High-Level)
 
-- Phase 10 live experience verification matrix completion.
-- Final Phase 10 experience checks still open on some routes/flows (manual desktop/mobile and conversion-surface checks).
-- Final release hardening and residual-risk capture.
+- Phase 4 design-system/token unification and route-level visual consistency.
+- Downstream world-class UX lanes (homepage/category/PDP/configurator deep polish) after design-system alignment.
 
 ## Mirror Status
 

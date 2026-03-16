@@ -17,7 +17,8 @@ This handover file exists only as the fast-resume mirror inside the handover pac
 - [x] Automated verification hardening is verification-closed on 2026-03-16 (`npm test`, targeted e2e, `lint`, and `build` all green).
 - [x] Seating image optimizer warning lane is patched and verified on 2026-03-16.
 - [x] Deployment/environment hardening is verification-closed on 2026-03-16 (Vercel env baseline verified, hosted route/API smoke green, production redeploy complete, hosted smoke command added).
-- [x] The active frontier has rotated to Phase 10 live experience verification and release-hardening closeout.
+- [x] Phase 10 live experience verification and release-hardening closeout is verification-closed on 2026-03-16 (hosted route matrix, keyboard/focus checks, and core nav/tools/a11y/filter/stats suites all green).
+- [x] The active frontier has rotated to Phase 4 design-system/token and visual-consistency unification.
 - [x] Slug and deep-ID policy is recorded as implementation-ready.
 
 ## Current Explicit Holds
