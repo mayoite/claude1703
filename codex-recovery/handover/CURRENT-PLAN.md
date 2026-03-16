@@ -10,11 +10,11 @@ This handover file exists only as the fast-resume mirror inside the handover pac
 
 ## Current Block
 
-- `Homepage Visual QA And Residual Polish`
+- `Deployment And Environment Hardening`
 
 ## Current Next Explicit Step
 
-- Audit the rendered homepage on desktop and mobile to confirm the new close, trust-strip placement, and footer transition hold up visually before rotating to a new route frontier.
+- Validate production env vars, confirm hosted asset-path behavior, and record bounded residual deployment/runtime risks.
 
 ## Locked Truths To Preserve While Executing
 

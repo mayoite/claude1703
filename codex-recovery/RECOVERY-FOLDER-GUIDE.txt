@@ -14,20 +14,8 @@ TOP-LEVEL FILES
 - `DECISIONS.md`
   Locked cross-session decisions.
 
-- `HOLDS.md`
-  Protected, deferred, or unresolved clusters.
-
 - `DOCUMENT-SOURCE-GAP.md`
   Notes for the bounded document-source gap.
-
-- `MASTER-OBJECTIVE.md`
-  Short recovery charter.
-
-- `RECOVERY-ROADMAP.md`
-  Short phase map.
-
-- `WORKSTREAM-STRUCTURE.md`
-  Short repo-structure map.
 
 - `latest.md`
   Latest recovery snapshot.
@@ -48,6 +36,15 @@ SUBFOLDERS
 
 - `chat-snapshots/`
   Chat-summary history.
+
+- `artifacts/audits/`
+  Route-level and quality audit writeups not needed in the active control root.
+
+- `artifacts/visual-qa/`
+  Captured visual QA screenshots and full-page reference images.
+
+- `retired/old-plans-checklists/`
+  Retired planning/checklist docs moved out of top-level active control files.
 
 READING ORDER
 
