@@ -16,7 +16,8 @@ This handover file exists only as the fast-resume mirror inside the handover pac
 - [x] Trust/legal/proof, utility/support, homepage/discovery, category discovery, PDP, configurator, homepage closure, compare/quote-cart, quote/contact, SEO, footer, and trust-copy lanes are all closed and recorded.
 - [x] Automated verification hardening is verification-closed on 2026-03-16 (`npm test`, targeted e2e, `lint`, and `build` all green).
 - [x] Seating image optimizer warning lane is patched and verified on 2026-03-16.
-- [x] The active frontier has rotated to bounded deployment and environment hardening.
+- [x] Deployment/environment hardening is verification-closed on 2026-03-16 (Vercel env baseline verified, hosted route/API smoke green, production redeploy complete, hosted smoke command added).
+- [x] The active frontier has rotated to Phase 10 live experience verification and release-hardening closeout.
 - [x] Slug and deep-ID policy is recorded as implementation-ready.
 
 ## Current Explicit Holds

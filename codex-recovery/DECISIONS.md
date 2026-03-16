@@ -4,6 +4,24 @@ Use this file to record recovery decisions that should not be re-litigated in ev
 
 ## Current Decisions
 
+### 2026-03-16 Deployment/Environment Hardening Verification Closure
+
+- Decision: Close the bounded deployment/environment hardening lane after live hosted verification and production deploy, then rotate to Phase 10 live experience verification.
+- Why:
+  - Vercel Production and Development env vars were verified present (`npx vercel env ls`) for core runtime keys including Supabase and site URL values.
+  - Live hosted runtime checks were verified green for core routes and catalog APIs:
+    - `/`, `/products/`, `/contact/`: `200`
+    - `/api/categories/`, `/api/nav-categories/`: `200` with non-empty JSON payloads
+  - A repeatable hosted smoke gate now exists:
+    - `npm run audit:hosted:runtime -- --url=https://workingoando.vercel.app`
+  - Production was redeployed with hardening config applied:
+    - `npx vercel --prod --yes`
+  - Hosted direct catalog asset checks are green; `_next/image` sampled URLs now return `404` under intentional unoptimized-hosted behavior.
+- Impact:
+  - `next.config.js` now treats Vercel-hosted runtime detection more robustly (`VERCEL`, `VERCEL_URL`, `VERCEL_ENV`) before deciding unoptimized-hosted image mode.
+  - `NEXT-PLAN.md` is now aligned to deployment-hardening closure with one next explicit step for Phase 10 experience verification.
+  - `RECOVERY-CHECKLIST.md` and `latest.md` now record this closure and frontier rotation.
+
 ### 2026-03-16 Seating Image Warning Lane Closure And Deployment-Hardening Rotation
 
 - Decision: Close the residual seating image optimizer warning lane and rotate the active frontier to bounded deployment/environment hardening.

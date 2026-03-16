@@ -32,6 +32,7 @@
     "supabase:backfill:canonical": "npx tsx scripts/backfill_canonical_catalog_metadata.ts",
     "nhost:sync": "npx tsx scripts/sync_nhost_backup.ts",
     "assets:audit:thirdparty": "python scripts/audit_external_asset_hosts.py --fail-on-hit",
+    "audit:hosted:runtime": "node scripts/audit-hosted-runtime.mjs",
     "recovery:snapshot": "node scripts/recovery-state.mjs",
     "recovery:watch": "node scripts/recovery-state.mjs --watch --interval=45",
     "recovery:chat-snapshot": "node scripts/chat-snapshot.mjs",

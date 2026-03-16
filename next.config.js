@@ -14,10 +14,14 @@ const parsedAssetBaseUrl = (() => {
     return null;
   }
 })();
+const isHostedVercelRuntime =
+  Boolean(process.env.VERCEL) ||
+  Boolean(process.env.VERCEL_URL) ||
+  Boolean(process.env.VERCEL_ENV);
 const useUnoptimizedImages =
   process.env.NEXT_IMAGE_UNOPTIMIZED === "1" ||
   process.env.NEXT_IMAGE_UNOPTIMIZED === "true" ||
-  Boolean(process.env.VERCEL);
+  isHostedVercelRuntime;
 const firstPartyAssetHost = process.env.NEXT_PUBLIC_ASSET_HOSTNAME?.trim();
 
 const imageRemotePatterns = [

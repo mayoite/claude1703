@@ -97,6 +97,10 @@ Update this file as recovery work progresses. Keep exactly one active frontier i
 - [x] Seating image optimizer warning lane is patched on 2026-03-16: stale `/images/catalog/oando-seating--phoenix/*.webp` references are mapped to repo-backed JPG assets and invalid overflow indices are dropped
 - [x] Post-warning verification rerun captured on 2026-03-16: `npm run test:e2e:filters` pass, `npm run build` pass, and `npm test` pass
 - [x] The next bounded frontend frontier is deployment and environment hardening
+- [x] Deployment/environment hardening baseline verified on 2026-03-16: Vercel Production+Development env vars confirmed via `npx vercel env ls`; hosted `/`, `/products/`, `/contact/`, `/api/categories/`, and `/api/nav-categories/` return `200`
+- [x] Hosted runtime smoke command added and verified: `npm run audit:hosted:runtime -- --url=https://workingoando.vercel.app` passes with direct catalog image checks green
+- [x] Production deployment hardening applied on 2026-03-16 via `npx vercel --prod --yes`; hosted alias updated and deployment lane is verification-closed
+- [x] The next bounded frontend frontier is Phase 10 live experience verification and release-hardening closeout
 
 ## Whole-Site Recovery Frame
 

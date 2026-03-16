@@ -32,22 +32,22 @@ Deliver a world-class production site from the local repo with explicit platform
 
 ## Single Active Frontier (Now)
 
-Bounded deployment and environment hardening for hosted runtime reliability.
+Phase 10 experience verification and release-hardening closeout.
 
 Primary next actions:
-- Validate production runtime env expectations for hosted builds.
-- Confirm hosted asset-path and image behavior remain correct.
-- Capture only bounded residual deployment/runtime risks.
+- Verify live route experience quality on desktop/mobile for key flows.
+- Verify compare, quote/contact, trust/projects, and keyboard/focus behavior.
+- Capture only bounded residual risks and keep release gate explicit.
 
-## Current Checklist (Active Frontier)
+## Deployment Hardening Checklist (Completed)
 
-- [ ] Validate required production env vars are present and correctly scoped for hosted runtime.
-- [ ] Verify hosted build/runtime behavior for catalog fetch paths (no missing-env runtime failures).
-- [ ] Verify hosted `/` and core product routes resolve without middleware/static 404 regressions.
-- [ ] Verify hosted image and asset paths use repo/cloud-backed sources only and resolve correctly.
-- [ ] Record any residual deployment risk as bounded items only (no scope expansion).
-- [ ] Update `NEXT-PLAN.md`, `RECOVERY-CHECKLIST.md`, `DECISIONS.md`, and `latest.md` after each completed slice.
-- [ ] Keep locked exceptions unchanged: `missing_documents`, `/downloads` Resource Desk, `fluid-x` exception, `luna` defer.
+- [x] Validate required production env vars are present and correctly scoped for hosted runtime.
+- [x] Verify hosted build/runtime behavior for catalog fetch paths (no missing-env runtime failures).
+- [x] Verify hosted `/` and core product routes resolve without middleware/static 404 regressions.
+- [x] Verify hosted image and asset paths use repo/cloud-backed sources only and resolve correctly.
+- [x] Record any residual deployment risk as bounded items only (no scope expansion).
+- [x] Update `NEXT-PLAN.md`, `RECOVERY-CHECKLIST.md`, `DECISIONS.md`, and `latest.md` after each completed slice.
+- [x] Keep locked exceptions unchanged: `missing_documents`, `/downloads` Resource Desk, `fluid-x` exception, `luna` defer.
 
 ## Locked Rules And Exceptions To Preserve
 
@@ -60,10 +60,10 @@ Primary next actions:
 
 ## Remaining Plan Surface (High-Level)
 
-- Deployment env/runtime hardening completion.
+- Phase 10 live experience verification matrix completion.
 - Final Phase 10 experience checks still open on some routes/flows (manual desktop/mobile and conversion-surface checks).
 - Final release hardening and residual-risk capture.
 
 ## Mirror Status
 
-`handover/CURRENT-PLAN.md` and `handover/CURRENT-CHECKLIST.md` are now synchronized to the active deployment/environment hardening frontier.
+`handover/CURRENT-PLAN.md` and `handover/CURRENT-CHECKLIST.md` are synchronized with the current active frontier and deployment-hardening closure state.

@@ -10,11 +10,11 @@ This handover file exists only as the fast-resume mirror inside the handover pac
 
 ## Current Block
 
-- `Deployment And Environment Hardening`
+- `Phase 10 Experience Verification And Release-Hardening Closeout`
 
 ## Current Next Explicit Step
 
-- Validate production env vars, confirm hosted asset-path behavior, and record bounded residual deployment/runtime risks.
+- Run the live route verification matrix (desktop/mobile core flows, compare, quote/contact, trust/projects, keyboard/focus) and record only bounded residual risks.
 
 ## Locked Truths To Preserve While Executing
 
