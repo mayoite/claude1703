@@ -3,6 +3,17 @@ const resolvedSiteUrl =
   process.env.SITE_URL ||
   process.env.URL ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+const configuredAssetBaseUrl =
+  process.env.NEXT_PUBLIC_ASSET_BASE_URL ||
+  process.env.ASSET_BASE_URL ||
+  "";
+const parsedAssetBaseUrl = (() => {
+  try {
+    return configuredAssetBaseUrl ? new URL(configuredAssetBaseUrl) : null;
+  } catch {
+    return null;
+  }
+})();
 const firstPartyAssetHost = process.env.NEXT_PUBLIC_ASSET_HOSTNAME?.trim();
 
 const imageRemotePatterns = [
@@ -21,9 +32,20 @@ if (firstPartyAssetHost) {
   });
 }
 
+if (parsedAssetBaseUrl) {
+  const normalizedBasePath = parsedAssetBaseUrl.pathname.replace(/\/+$/, "");
+  imageRemotePatterns.push({
+    protocol: parsedAssetBaseUrl.protocol.replace(":", ""),
+    hostname: parsedAssetBaseUrl.hostname,
+    pathname: `${normalizedBasePath || ""}/**`,
+  });
+}
+
 const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: resolvedSiteUrl,
+    NEXT_PUBLIC_ASSET_BASE_URL:
+      process.env.NEXT_PUBLIC_ASSET_BASE_URL || process.env.ASSET_BASE_URL || "",
   },
   trailingSlash: true,
   async redirects() {
