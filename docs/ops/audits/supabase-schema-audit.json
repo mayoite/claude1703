@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T12:41:48.922Z",
+  "generatedAt": "2026-03-16T03:00:07.438Z",
   "supabaseHost": "erpweaiypimorcunaimz.supabase.co",
   "tables": [
     {
@@ -23,7 +23,7 @@
     {
       "table": "product_images",
       "exists": true,
-      "rowCount": 1478,
+      "rowCount": 635,
       "error": null
     },
     {
@@ -118,8 +118,8 @@
     "blankSlugs": 0,
     "duplicateSlugs": [],
     "missingCategoryIds": 0,
-    "missingSubcategorySlug": 0,
-    "missingAltText": 145,
+    "missingSubcategorySlug": 2,
+    "missingAltText": 18,
     "missingPrimaryImage": 1,
     "duplicateNameKeysByCategory": [
       {
@@ -132,12 +132,21 @@
         ]
       },
       {
-        "category_id": "storages",
-        "normalized_name_key": "prelam",
+        "category_id": "soft-seating",
+        "normalized_name_key": "casca",
         "count": 2,
         "slugs": [
-          "oando-storage--pedestal",
-          "oando-storage--prelam-storage"
+          "oando-seating--casca",
+          "oando-soft-seating--casca"
+        ]
+      },
+      {
+        "category_id": "soft-seating",
+        "normalized_name_key": "halo",
+        "count": 2,
+        "slugs": [
+          "oando-seating--halo",
+          "oando-soft-seating--halo"
         ]
       }
     ],

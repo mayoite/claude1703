@@ -27,7 +27,8 @@ const customJestConfig = {
   },
   // Only run Jest unit/integration tests – Playwright handles *.spec.ts
   testMatch: ['**/tests/**/?(*.)+(test).[jt]s?(x)', '**/__tests__/**/?(*.)+(test).[jt]s?(x)'],
-  testPathIgnorePatterns: ['\\.spec\\.ts$', '/node_modules/', '/.next/'],
+  testPathIgnorePatterns: ['\\.spec\\.ts$', '/node_modules/', '/.next/', '/\\.netlify/'],
+  modulePathIgnorePatterns: ['<rootDir>/.netlify/', '<rootDir>/.next/'],
   // Coverage configuration — scoped to files that have active Jest unit/integration tests.
   // Playwright e2e covers the rest (pages, server components).
   collectCoverageFrom: [

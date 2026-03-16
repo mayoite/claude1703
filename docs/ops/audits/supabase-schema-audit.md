@@ -1,13 +1,13 @@
 # Supabase Schema Audit
 
-- Generated at: 2026-03-15T12:41:48.922Z
+- Generated at: 2026-03-16T03:00:07.438Z
 - Supabase host: erpweaiypimorcunaimz.supabase.co
 
 ## Table Probes
 - categories: present, rows=6
 - products: present, rows=145
 - product_specs: present, rows=145
-- product_images: present, rows=1478
+- product_images: present, rows=635
 - product_slug_aliases: present, rows=716
 - business_stats_current: present, rows=1
 - customer_queries: present, rows=2
@@ -32,10 +32,10 @@
 - blank slugs: 0
 - duplicate slugs: 0
 - missing category IDs: 0
-- missing subcategory slug/id: 0
-- missing alt text: 145
+- missing subcategory slug/id: 2
+- missing alt text: 18
 - missing primary image: 1
-- duplicate normalized name keys by category: 2
+- duplicate normalized name keys by category: 3
 - alias rows: 716
 - blank alias rows: 0
 - self alias rows: 0
@@ -44,4 +44,5 @@
 
 ## Duplicate Name Keys By Category
 - seating / fluid-x: 2 (fluid-x, oando-seating--fluid-x)
-- storages / prelam: 2 (oando-storage--pedestal, oando-storage--prelam-storage)
+- soft-seating / casca: 2 (oando-seating--casca, oando-soft-seating--casca)
+- soft-seating / halo: 2 (oando-seating--halo, oando-soft-seating--halo)

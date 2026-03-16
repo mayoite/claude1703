@@ -14,6 +14,10 @@ const parsedAssetBaseUrl = (() => {
     return null;
   }
 })();
+const useUnoptimizedImages =
+  process.env.NEXT_IMAGE_UNOPTIMIZED === "1" ||
+  process.env.NEXT_IMAGE_UNOPTIMIZED === "true" ||
+  Boolean(process.env.VERCEL);
 const firstPartyAssetHost = process.env.NEXT_PUBLIC_ASSET_HOSTNAME?.trim();
 
 const imageRemotePatterns = [
@@ -144,6 +148,7 @@ const nextConfig = {
   },
   images: {
     qualities: [75, 95, 100],
+    unoptimized: useUnoptimizedImages,
     remotePatterns: imageRemotePatterns,
   },
   experimental: {

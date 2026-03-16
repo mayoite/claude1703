@@ -1,61 +1,69 @@
 # Product Quality Audit
 
-- Audited at: 2026-03-15T12:41:46.008Z
+- Audited at: 2026-03-16T03:00:04.818Z
 - Products audited: 145
-- Total issue rows: 148
+- Total issue rows: 1463
 
 ## Issues by type
+- invalid_gallery_image_path: 853
 - missing_documents: 145
-- legacy_slug_format: 1
+- missing_warranty: 137
+- missing_sustainability_score: 137
+- missing_materials: 115
+- missing_dimensions: 46
+- legacy_slug_format: 12
+- missing_features: 8
+- invalid_primary_image_path: 6
+- missing_subcategory: 2
 - missing_primary_image: 1
 - missing_gallery_images: 1
 
 ## Products by category
 - education: 13
-- seating: 44
-- soft-seating: 48
+- seating: 42
+- soft-seating: 46
 - storages: 9
-- tables: 23
-- workstations: 8
+- tables: 28
+- workstations: 7
 
 ## First 40 issue rows
+- seating/oando-seating--arvo: invalid_gallery_image_path (high)
+- seating/oando-seating--arvo: invalid_gallery_image_path (high)
+- seating/oando-seating--arvo: invalid_gallery_image_path (high)
+- seating/oando-seating--arvo: invalid_gallery_image_path (high)
+- seating/oando-seating--arvo: invalid_gallery_image_path (high)
+- seating/oando-seating--arvo: invalid_gallery_image_path (high)
+- seating/oando-seating--arvo: invalid_gallery_image_path (high)
+- seating/oando-seating--arvo: missing_materials (high)
+- seating/oando-seating--arvo: missing_warranty (medium)
+- seating/oando-seating--arvo: missing_sustainability_score (medium)
 - seating/oando-seating--arvo: missing_documents (medium)
+- seating/oando-seating--breeze: invalid_gallery_image_path (high)
+- seating/oando-seating--breeze: invalid_gallery_image_path (high)
+- seating/oando-seating--breeze: invalid_gallery_image_path (high)
+- seating/oando-seating--breeze: invalid_gallery_image_path (high)
+- seating/oando-seating--breeze: invalid_gallery_image_path (high)
+- seating/oando-seating--breeze: invalid_gallery_image_path (high)
+- seating/oando-seating--breeze: invalid_gallery_image_path (high)
+- seating/oando-seating--breeze: missing_dimensions (high)
+- seating/oando-seating--breeze: missing_materials (high)
+- seating/oando-seating--breeze: missing_warranty (medium)
+- seating/oando-seating--breeze: missing_sustainability_score (medium)
 - seating/oando-seating--breeze: missing_documents (medium)
+- seating/oando-seating--canaret: invalid_gallery_image_path (high)
+- seating/oando-seating--canaret: invalid_gallery_image_path (high)
+- seating/oando-seating--canaret: invalid_gallery_image_path (high)
+- seating/oando-seating--canaret: invalid_gallery_image_path (high)
+- seating/oando-seating--canaret: invalid_gallery_image_path (high)
+- seating/oando-seating--canaret: invalid_gallery_image_path (high)
+- seating/oando-seating--canaret: invalid_gallery_image_path (high)
+- seating/oando-seating--canaret: missing_dimensions (high)
+- seating/oando-seating--canaret: missing_materials (high)
+- seating/oando-seating--canaret: missing_warranty (medium)
+- seating/oando-seating--canaret: missing_sustainability_score (medium)
 - seating/oando-seating--canaret: missing_documents (medium)
-- seating/oando-seating--caneva: missing_documents (medium)
-- seating/oando-seating--caneva-high: missing_documents (medium)
-- seating/oando-seating--casca: missing_documents (medium)
-- seating/oando-seating--crox: missing_documents (medium)
-- seating/oando-seating--dive: missing_documents (medium)
-- seating/oando-seating--ember: missing_documents (medium)
-- seating/oando-seating--flare: missing_documents (medium)
-- seating/oando-seating--flex: missing_documents (medium)
-- seating/oando-seating--flip: missing_documents (medium)
-- seating/oando-seating--fluid: missing_documents (medium)
-- seating/oando-seating--fluid-x: missing_documents (medium)
-- seating/oando-seating--fusion: missing_documents (medium)
-- seating/oando-seating--halo: missing_documents (medium)
-- seating/oando-seating--leaf: missing_documents (medium)
-- seating/oando-seating--lexus: missing_documents (medium)
-- seating/oando-seating--lisbo: missing_documents (medium)
-- seating/oando-seating--logica: missing_documents (medium)
-- seating/oando-seating--moonlight: missing_documents (medium)
-- seating/oando-seating--myel: missing_documents (medium)
-- seating/oando-seating--nordic: missing_documents (medium)
-- seating/oando-seating--nuvic: missing_documents (medium)
-- seating/oando-seating--orbit: missing_documents (medium)
-- seating/oando-seating--phoenix: missing_documents (medium)
-- seating/oando-seating--pinnacle: missing_documents (medium)
-- seating/oando-seating--revoq: missing_documents (medium)
-- seating/oando-seating--rider: missing_documents (medium)
-- seating/oando-seating--rio: missing_documents (medium)
-- seating/oando-seating--rock: missing_documents (medium)
-- seating/oando-seating--cafe-sleek: missing_documents (medium)
-- seating/oando-seating--smile: missing_documents (medium)
-- seating/oando-seating--solace: missing_documents (medium)
-- seating/oando-seating--spino: missing_documents (medium)
-- seating/oando-seating--sullion: missing_documents (medium)
-- seating/oando-seating--sway: missing_documents (medium)
-- seating/oando-seating--toro: missing_documents (medium)
-- seating/oando-seating--wing: missing_documents (medium)
-- seating/oando-seating--x-mesh: missing_documents (medium)
+- seating/oando-seating--caneva: invalid_gallery_image_path (high)
+- seating/oando-seating--caneva: invalid_gallery_image_path (high)
+- seating/oando-seating--caneva: invalid_gallery_image_path (high)
+- seating/oando-seating--caneva: invalid_gallery_image_path (high)
+- seating/oando-seating--caneva: invalid_gallery_image_path (high)

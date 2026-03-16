@@ -4,6 +4,8 @@ const baseURL = process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000";
 
 export default defineConfig({
   testDir: "./tests",
+  testMatch: ["**/*.spec.ts", "**/*.spec.tsx"],
+  testIgnore: ["**/*.test.ts", "**/*.test.tsx"],
   fullyParallel: true,
   retries: 0,
   reporter: "list",
@@ -27,4 +29,3 @@ export default defineConfig({
           reuseExistingServer: true,
         },
 });
-

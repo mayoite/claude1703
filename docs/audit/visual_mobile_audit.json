@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-15T13:01:05.908Z",
+  "generatedAt": "2026-03-16T03:02:11.386Z",
   "baseUrl": "http://127.0.0.1:3200",
   "totals": {
-    "audited_routes": 198,
-    "failure_routes": 155,
+    "audited_routes": 153,
+    "failure_routes": 118,
     "issue_breakdown": {
-      "missing_h1": 139,
+      "missing_h1": 103,
       "text_sparse": 15,
-      "request_failed": 1
+      "console_error": 1
     }
   },
   "failures": [
@@ -31,30 +31,6 @@
         "horizontalOverflow": false,
         "hasMain": true,
         "ctaCount": 47
-      }
-    },
-    {
-      "route": "/imprint",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/imprint/",
-      "navError": null,
-      "issues": [
-        "request_failed"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [
-        "http://127.0.0.1:3200/contact/?_rsc=1rp3d :: net::ERR_ABORTED"
-      ],
-      "metrics": {
-        "title": "One and Only Furniture | Premium Office Solutions",
-        "h1Count": 1,
-        "textLength": 1012,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 58
       }
     },
     {
@@ -93,7 +69,7 @@
       "metrics": {
         "title": "",
         "h1Count": 0,
-        "textLength": 31876,
+        "textLength": 31856,
         "imagesMissingAlt": 0,
         "brokenImages": 0,
         "horizontalOverflow": false,
@@ -696,648 +672,10 @@
       }
     },
     {
-      "route": "/products/seating/fluid-x",
+      "route": "/products/soft-seating/oando-seating--solace",
       "viewport": "mobile",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/fluid-x/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fluid X | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--arvo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--arvo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Arvo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--breeze",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--breeze/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Breeze | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--cafe-sleek",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--cafe-sleek/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Sleek Cafe | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--caneva-high",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--caneva-high/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Caneva-High | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--casca",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--casca/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Casca | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--crox",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--crox/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Crox | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--dive",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--dive/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Dive | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--ember",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--ember/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Ember | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--flare",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--flare/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Flare | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--flex",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--flex/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Flex | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--flip",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--flip/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Flip | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--fluid-x",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--fluid-x/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fluid X | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--fusion",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--fusion/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fusion | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--halo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--halo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Halo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--leaf",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--leaf/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Leaf | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--lisbo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--lisbo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Lisbo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--moonlight",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--moonlight/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Moonlight | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--myel",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--myel/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Myel | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--nordic",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--nordic/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Nordic | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--nuvic",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--nuvic/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Nuvic | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--orbit",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--orbit/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Orbit | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--phoenix",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--phoenix/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Phoenix | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--pinnacle",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--pinnacle/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Pinnacle | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--revoq",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--revoq/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Revoq | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--rider",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--rider/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Rider | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--rio",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--rio/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Rio | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--rock",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--rock/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Rock | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--smile",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--smile/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Smile | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--solace",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--solace/",
+      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-seating--solace/",
       "navError": null,
       "issues": [
         "missing_h1"
@@ -1356,10 +694,10 @@
       }
     },
     {
-      "route": "/products/seating/oando-seating--spino",
+      "route": "/products/soft-seating/oando-soft-seating--accent",
       "viewport": "mobile",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--spino/",
+      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--accent/",
       "navError": null,
       "issues": [
         "missing_h1"
@@ -1367,7 +705,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Spino | One and Only Furniture | One and Only Furniture",
+        "title": "Accent | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -1378,10 +716,10 @@
       }
     },
     {
-      "route": "/products/seating/oando-seating--sullion",
+      "route": "/products/soft-seating/oando-soft-seating--adam",
       "viewport": "mobile",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--sullion/",
+      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--adam/",
       "navError": null,
       "issues": [
         "missing_h1"
@@ -1389,139 +727,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Sullion | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--sway",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--sway/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Sway | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--toro",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--toro/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Toro | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--wing",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--wing/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Wing | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--x-mesh",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--x-mesh/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "X Mesh | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--zilo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--zilo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Zilo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/seating-leather-classy-executive",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/seating-leather-classy-executive/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Classy Executive | One and Only Furniture | One and Only Furniture",
+        "title": "Adam | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -1610,28 +816,6 @@
       "failedRequests": [],
       "metrics": {
         "title": "Armora | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/soft-seating/oando-soft-seating--brim",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--brim/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Brim | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -1780,9 +964,12 @@
       "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--cove/",
       "navError": null,
       "issues": [
+        "console_error",
         "missing_h1"
       ],
-      "consoleErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
       "failedRequests": [],
       "metrics": {
         "title": "Cove | One and Only Furniture | One and Only Furniture",
@@ -1928,50 +1115,6 @@
       }
     },
     {
-      "route": "/products/soft-seating/oando-soft-seating--fynn",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--fynn/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fynn | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/soft-seating/oando-soft-seating--grace",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--grace/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Grace | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
       "route": "/products/soft-seating/oando-soft-seating--halo",
       "viewport": "mobile",
       "status": 200,
@@ -1984,28 +1127,6 @@
       "failedRequests": [],
       "metrics": {
         "title": "Halo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/soft-seating/oando-soft-seating--high-cafe",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--high-cafe/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "High Cafe | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -2434,28 +1555,6 @@
       }
     },
     {
-      "route": "/products/soft-seating/oando-soft-seating--verka",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--verka/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Verka | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
       "route": "/products/soft-seating/oando-soft-seating--virello",
       "viewport": "mobile",
       "status": 200,
@@ -2577,7 +1676,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Heavy Dut | One and Only Furniture | One and Only Furniture",
+        "title": "Heavy Duty Racks | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -2643,7 +1742,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Metal | One and Only Furniture | One and Only Furniture",
+        "title": "Metal Storages | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -2665,7 +1764,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Prelam | One and Only Furniture | One and Only Furniture",
+        "title": "Prelam Pedestal | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -2709,7 +1808,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Prelam | One and Only Furniture | One and Only Furniture",
+        "title": "Prelam Storage | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -2732,6 +1831,94 @@
       "failedRequests": [],
       "metrics": {
         "title": "Mobile Pedestal 3-Drawer | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-seating--cafe-sleek",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-seating--cafe-sleek/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Sleek Cafe | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-seating--crox",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-seating--crox/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Crox | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-soft-seating--high-cafe",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-soft-seating--high-cafe/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "High-Cafe | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-soft-seating--verka",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-soft-seating--verka/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Verka | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -2863,7 +2050,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Curvivo | One and Only Furniture | One and Only Furniture",
+        "title": "Curvivo-Meet | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -2973,7 +2160,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Letz | One and Only Furniture | One and Only Furniture",
+        "title": "Letz Think | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -3171,7 +2358,29 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "X Meet | One and Only Furniture | One and Only Furniture",
+        "title": "X-Meet | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-workstations--trio-2",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-workstations--trio-2/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Trio | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -3380,28 +2589,6 @@
       }
     },
     {
-      "route": "/products/workstations/oando-workstations--trio-2",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/workstations/oando-workstations--trio-2/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Trio | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
       "route": "/products/workstations/oando-workstations--x-bench",
       "viewport": "mobile",
       "status": 200,
@@ -3413,7 +2600,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "X Bench | One and Only Furniture | One and Only Furniture",
+        "title": "X-Bench | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -3524,7 +2711,7 @@
         "brokenImages": 0,
         "horizontalOverflow": false,
         "hasMain": true,
-        "ctaCount": 61
+        "ctaCount": 63
       }
     },
     {
@@ -3608,26 +2795,6 @@
       }
     },
     {
-      "route": "/configurator",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/configurator/",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "One and Only Furniture | Premium Office Solutions",
-        "h1Count": 1,
-        "textLength": 3167,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 77
-      }
-    },
-    {
       "route": "/downloads",
       "viewport": "mobile",
       "status": 200,
@@ -3648,18 +2815,34 @@
       }
     },
     {
+      "route": "/gallery",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/gallery/",
+      "navError": null,
+      "issues": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "One and Only Furniture | Premium Office Solutions",
+        "h1Count": 1,
+        "textLength": 891,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 56
+      }
+    },
+    {
       "route": "/imprint",
       "viewport": "mobile",
       "status": 200,
       "finalUrl": "http://127.0.0.1:3200/imprint/",
       "navError": null,
-      "issues": [
-        "request_failed"
-      ],
+      "issues": [],
       "consoleErrors": [],
-      "failedRequests": [
-        "http://127.0.0.1:3200/contact/?_rsc=1rp3d :: net::ERR_ABORTED"
-      ],
+      "failedRequests": [],
       "metrics": {
         "title": "One and Only Furniture | Premium Office Solutions",
         "h1Count": 1,
@@ -3892,26 +3075,6 @@
       }
     },
     {
-      "route": "/workstations/configurator",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/configurator/?type=workstations",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "One and Only Furniture | Premium Office Solutions",
-        "h1Count": 1,
-        "textLength": 3167,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 77
-      }
-    },
-    {
       "route": "/robots.txt",
       "viewport": "mobile",
       "status": 200,
@@ -3947,7 +3110,7 @@
       "metrics": {
         "title": "",
         "h1Count": 0,
-        "textLength": 31876,
+        "textLength": 31856,
         "imagesMissingAlt": 0,
         "brokenImages": 0,
         "horizontalOverflow": false,
@@ -4096,7 +3259,7 @@
         "brokenImages": 0,
         "horizontalOverflow": false,
         "hasMain": true,
-        "ctaCount": 53
+        "ctaCount": 55
       }
     },
     {
@@ -4116,7 +3279,7 @@
         "brokenImages": 0,
         "horizontalOverflow": false,
         "hasMain": true,
-        "ctaCount": 55
+        "ctaCount": 53
       }
     },
     {
@@ -4810,748 +3973,10 @@
       }
     },
     {
-      "route": "/products/seating/fluid-x",
+      "route": "/products/soft-seating/oando-seating--solace",
       "viewport": "mobile",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/fluid-x/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fluid X | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--arvo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--arvo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Arvo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--breeze",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--breeze/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Breeze | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--cafe-sleek",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--cafe-sleek/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Sleek Cafe | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--canaret",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--canaret/",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Canaret | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 2126,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 57
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--caneva",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--caneva/",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Caneva | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 2123,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 57
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--caneva-high",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--caneva-high/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Caneva-High | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--casca",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--casca/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Casca | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--crox",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--crox/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Crox | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--dive",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--dive/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Dive | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--ember",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--ember/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Ember | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--flare",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--flare/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Flare | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--flex",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--flex/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Flex | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--flip",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--flip/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Flip | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--fluid",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--fluid/",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fluid | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 2205,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 57
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--fluid-x",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--fluid-x/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fluid X | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--fusion",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--fusion/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fusion | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--halo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--halo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Halo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--leaf",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--leaf/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Leaf | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--lexus",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--lexus/",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Lexus | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 2118,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 57
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--lisbo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--lisbo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Lisbo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--logica",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--logica/",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Logica | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 2112,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 57
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--moonlight",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--moonlight/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Moonlight | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--myel",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--myel/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Myel | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--nordic",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--nordic/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Nordic | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--nuvic",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--nuvic/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Nuvic | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--orbit",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--orbit/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Orbit | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--phoenix",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--phoenix/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Phoenix | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--pinnacle",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--pinnacle/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Pinnacle | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--revoq",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--revoq/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Revoq | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--rider",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--rider/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Rider | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--rio",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--rio/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Rio | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--rock",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--rock/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Rock | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--smile",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--smile/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Smile | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--solace",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--solace/",
+      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-seating--solace/",
       "navError": null,
       "issues": [
         "missing_h1"
@@ -5570,219 +3995,25 @@
       }
     },
     {
-      "route": "/products/seating/oando-seating--spino",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--spino/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Spino | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--sullion",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--sullion/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Sullion | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--sway",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--sway/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Sway | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--toro",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--toro/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Toro | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--wing",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--wing/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Wing | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--x-mesh",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--x-mesh/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "X Mesh | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/oando-seating--zilo",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/oando-seating--zilo/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Zilo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/seating-leather-classy-executive",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/seating-leather-classy-executive/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Classy Executive | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/seating/seating-study-fluid-task",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/seating/seating-study-fluid-task/",
-      "navError": null,
-      "issues": [],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fluid Task | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 1781,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 57
-      }
-    },
-    {
       "route": "/products/soft-seating/oando-soft-seating--accent",
       "viewport": "mobile",
       "status": 200,
       "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--accent/",
       "navError": null,
-      "issues": [],
+      "issues": [
+        "missing_h1"
+      ],
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
         "title": "Accent | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 2119,
+        "h1Count": 0,
+        "textLength": 738,
         "imagesMissingAlt": 0,
         "brokenImages": 0,
         "horizontalOverflow": false,
         "hasMain": true,
-        "ctaCount": 58
+        "ctaCount": 47
       }
     },
     {
@@ -5791,18 +4022,20 @@
       "status": 200,
       "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--adam/",
       "navError": null,
-      "issues": [],
+      "issues": [
+        "missing_h1"
+      ],
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
         "title": "Adam | One and Only Furniture | One and Only Furniture",
-        "h1Count": 1,
-        "textLength": 2072,
+        "h1Count": 0,
+        "textLength": 738,
         "imagesMissingAlt": 0,
         "brokenImages": 0,
         "horizontalOverflow": false,
         "hasMain": true,
-        "ctaCount": 57
+        "ctaCount": 47
       }
     },
     {
@@ -5884,28 +4117,6 @@
       "failedRequests": [],
       "metrics": {
         "title": "Armora | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/soft-seating/oando-soft-seating--brim",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--brim/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Brim | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -6054,9 +4265,12 @@
       "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--cove/",
       "navError": null,
       "issues": [
+        "console_error",
         "missing_h1"
       ],
-      "consoleErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
       "failedRequests": [],
       "metrics": {
         "title": "Cove | One and Only Furniture | One and Only Furniture",
@@ -6202,50 +4416,6 @@
       }
     },
     {
-      "route": "/products/soft-seating/oando-soft-seating--fynn",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--fynn/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Fynn | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/soft-seating/oando-soft-seating--grace",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--grace/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Grace | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
       "route": "/products/soft-seating/oando-soft-seating--halo",
       "viewport": "mobile",
       "status": 200,
@@ -6258,28 +4428,6 @@
       "failedRequests": [],
       "metrics": {
         "title": "Halo | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
-      "route": "/products/soft-seating/oando-soft-seating--high-cafe",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--high-cafe/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "High Cafe | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -6708,28 +4856,6 @@
       }
     },
     {
-      "route": "/products/soft-seating/oando-soft-seating--verka",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/soft-seating/oando-soft-seating--verka/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Verka | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
       "route": "/products/soft-seating/oando-soft-seating--virello",
       "viewport": "mobile",
       "status": 200,
@@ -6851,7 +4977,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Heavy Dut | One and Only Furniture | One and Only Furniture",
+        "title": "Heavy Duty Racks | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -6917,7 +5043,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Metal | One and Only Furniture | One and Only Furniture",
+        "title": "Metal Storages | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -6939,7 +5065,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Prelam | One and Only Furniture | One and Only Furniture",
+        "title": "Prelam Pedestal | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -6983,7 +5109,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Prelam | One and Only Furniture | One and Only Furniture",
+        "title": "Prelam Storage | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -7006,6 +5132,94 @@
       "failedRequests": [],
       "metrics": {
         "title": "Mobile Pedestal 3-Drawer | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-seating--cafe-sleek",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-seating--cafe-sleek/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Sleek Cafe | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-seating--crox",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-seating--crox/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Crox | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-soft-seating--high-cafe",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-soft-seating--high-cafe/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "High-Cafe | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-soft-seating--verka",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-soft-seating--verka/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Verka | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -7137,7 +5351,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Curvivo | One and Only Furniture | One and Only Furniture",
+        "title": "Curvivo-Meet | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -7247,7 +5461,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "Letz | One and Only Furniture | One and Only Furniture",
+        "title": "Letz Think | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -7445,7 +5659,29 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "X Meet | One and Only Furniture | One and Only Furniture",
+        "title": "X-Meet | One and Only Furniture | One and Only Furniture",
+        "h1Count": 0,
+        "textLength": 738,
+        "imagesMissingAlt": 0,
+        "brokenImages": 0,
+        "horizontalOverflow": false,
+        "hasMain": true,
+        "ctaCount": 47
+      }
+    },
+    {
+      "route": "/products/tables/oando-workstations--trio-2",
+      "viewport": "mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3200/products/tables/oando-workstations--trio-2/",
+      "navError": null,
+      "issues": [
+        "missing_h1"
+      ],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "metrics": {
+        "title": "Trio | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
@@ -7654,28 +5890,6 @@
       }
     },
     {
-      "route": "/products/workstations/oando-workstations--trio-2",
-      "viewport": "mobile",
-      "status": 200,
-      "finalUrl": "http://127.0.0.1:3200/products/workstations/oando-workstations--trio-2/",
-      "navError": null,
-      "issues": [
-        "missing_h1"
-      ],
-      "consoleErrors": [],
-      "failedRequests": [],
-      "metrics": {
-        "title": "Trio | One and Only Furniture | One and Only Furniture",
-        "h1Count": 0,
-        "textLength": 738,
-        "imagesMissingAlt": 0,
-        "brokenImages": 0,
-        "horizontalOverflow": false,
-        "hasMain": true,
-        "ctaCount": 47
-      }
-    },
-    {
       "route": "/products/workstations/oando-workstations--x-bench",
       "viewport": "mobile",
       "status": 200,
@@ -7687,7 +5901,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "metrics": {
-        "title": "X Bench | One and Only Furniture | One and Only Furniture",
+        "title": "X-Bench | One and Only Furniture | One and Only Furniture",
         "h1Count": 0,
         "textLength": 738,
         "imagesMissingAlt": 0,
