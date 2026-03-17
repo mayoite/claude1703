@@ -246,7 +246,7 @@ export const CONFIGURATOR_COPY = {
   reviewTitle: "Final review and submission",
   reviewDescription:
     "Confirm the planning snapshot, add project contacts, and send a quote-ready brief.",
-  plannerSecondaryCta: "Open guided planner",
+  plannerSecondaryCta: "Guided Planner",
   matchingProductsCta: "View matching products",
   reviewCta: "Jump to review",
   quickNotesLabel: "More detail for the team",

@@ -58,7 +58,7 @@ export const ABOUT_PAGE_COPY = {
   supportTitle: "Need planning or documentation before you decide?",
   supportDescription:
     "Use the planning or Resource Desk lanes when your team needs layout guidance, category packs, technical sheets, or a clearer next step before procurement.",
-  supportPrimaryCta: "Request planning call",
+  supportPrimaryCta: "Guided Planner",
   supportSecondaryCta: "Open Resource Desk",
 } as const;
 
@@ -78,7 +78,7 @@ export const CONTACT_PAGE_COPY = {
   quickDeskDescription:
     "Planning discussions, document requests, and quote conversations move faster when the request reaches the right team first.",
   quickDeskPrimaryCta: "Open Resource Desk",
-  quickDeskSecondaryCta: "Request planning call",
+  quickDeskSecondaryCta: "Guided Planner",
   offices: [
     {
       title: "Corporate office",
@@ -382,7 +382,7 @@ export const SOLUTIONS_PAGE_COPY = {
   planningTitle: "Discuss your project brief with our planning team.",
   planningDescription:
     "Share site details, timelines, and seat count. We will suggest a practical approach for products, layout, and execution.",
-  planningPrimaryCta: "Request planning call",
+  planningPrimaryCta: "Guided Planner",
   planningSecondaryCta: "Browse product categories",
   planningTertiaryCta: "Open Resource Desk",
 } as const;
@@ -505,7 +505,7 @@ export const SUSTAINABILITY_PAGE_COPY = {
   routeNoteDescription:
     "Ask for the current product pack or planning support when you need material guidance, category recommendations, or project-fit clarification.",
   routeNotePrimaryCta: "Open Resource Desk",
-  routeNoteSecondaryCta: "Request planning call",
+  routeNoteSecondaryCta: "Guided Planner",
 } as const;
 
 export const CAREER_PAGE_COPY = {
@@ -762,7 +762,7 @@ export const PLANNING_PAGE_COPY = {
   deskTitle: "Bring documents, plans, and product questions into one workflow.",
   deskDescription:
     "If your team needs category packs, technical sheets, or layout references before the planning call, start at the Resource Desk and we will route the right material into the same discussion.",
-  primaryCta: "Request planning call",
+  primaryCta: "Guided Planner",
   secondaryCta: "View products",
   tertiaryCta: "Open Resource Desk",
 } as const;
@@ -1170,7 +1170,7 @@ export const QUOTE_CART_ROUTE_COPY = {
   browseCta: "Browse products",
   compareCta: "Compare selected",
   resourceDeskCta: "Open Resource Desk",
-  planningCta: "Request planning call",
+  planningCta: "Guided Planner",
   primaryCta: "Submit quote request",
   summaryTitle: "Request summary",
   summaryDescription:
@@ -1224,7 +1224,7 @@ export const PDP_ROUTE_COPY = {
     addedToCompare: "Added To Compare",
     requestQuote: "Request Quote",
     consultation: "Book a Consultation",
-    planning: "Open Planning Service",
+    planning: "Guided Planner",
     resourceDesk: "Open Resource Desk",
     returnToResults: "Return to filtered results",
     returnToCategory: "Back to category",

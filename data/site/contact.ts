@@ -45,7 +45,7 @@ export const FOOTER_CONVERSION_PANEL = {
     "Use the planning route for layout guidance, the Resource Desk for packs and technical sheets, or contact sales when your team is ready to discuss scope and commercials.",
   actions: [
     {
-      label: "Request planning call",
+      label: "Guided Planner",
       href: "/planning",
       variant: "primary" as const,
     },

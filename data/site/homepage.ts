@@ -118,7 +118,7 @@ export const HOMEPAGE_PROCESS_CONTENT = {
   titleLead: "A clear",
   titleAccent: "delivery system.",
   description: "",
-  cta: { label: "Start your project brief", href: "/contact" },
+  cta: { label: "Guided Planner", href: "/contact" },
   steps: [
     {
       title: "Scope",

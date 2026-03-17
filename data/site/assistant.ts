@@ -94,6 +94,6 @@ export const AI_CHATBOT_COPY = {
 
 export const MOBILE_ASSISTANT_COPY = {
   launcher: "Workspace assistant",
-  planner: "Open Guided Planner",
+  planner: "Guided Planner",
   chatbot: "Open AI Chatbot",
 } as const;
