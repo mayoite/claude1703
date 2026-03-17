@@ -47,11 +47,16 @@ export default async function Home() {
       </SectionReveal>
 
       <SectionReveal>
-        <ProcessSection />
-      </SectionReveal>
-
-      <SectionReveal>
-        <TrustStrip stats={stats} />
+        <section className="home-section home-section--sand py-10 md:py-12">
+          <div className="home-shell">
+            <div className="home-frame home-frame--standard">
+              <ProcessSection embedded />
+              <div className="mt-10 border-t border-neutral-200 pt-10 md:mt-12 md:pt-12">
+                <TrustStrip stats={stats} embedded showLogos={false} />
+              </div>
+            </div>
+          </div>
+        </section>
       </SectionReveal>
 
       <SectionReveal>

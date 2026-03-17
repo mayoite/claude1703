@@ -15,7 +15,6 @@ import {
   ChevronUp,
   ChevronRight,
   Filter,
-  ShoppingCart,
   GitCompareArrows,
 } from "lucide-react";
 import {
@@ -28,7 +27,6 @@ import {
 } from "react";
 import clsx from "clsx";
 import { useQuery } from "@tanstack/react-query";
-import { useQuoteCart } from "@/lib/store/quoteCart";
 import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
 import {
@@ -46,7 +44,6 @@ import { hasVerifiedHeadrest } from "@/lib/productTraits";
 import {
   sanitizeDisplayText,
   filterMeaningfulDimensionText,
-  filterMeaningfulMaterialList,
 } from "@/lib/displayText";
 import { CATEGORY_ROUTE_COPY } from "@/data/site/routeCopy";
 
@@ -116,11 +113,6 @@ function buildImageCandidates(product: Pick<FlatProduct, "images" | "flagshipIma
   return preferred.length > 0 ? preferred : unique;
 }
 
-function toTextList(value: unknown): string[] {
-  if (!Array.isArray(value)) return [];
-  return value.map((item) => String(item || "").trim()).filter(Boolean);
-}
-
 function toInlineSpec(value: string, max = 72): string {
   const normalized = sanitizeDisplayText(value);
   if (!normalized) return "";
@@ -139,34 +131,6 @@ function getDisplayDimensions(product: FlatProduct): string {
     ? product.detailedInfo.dimensions
     : "";
   return toInlineSpec(filterMeaningfulDimensionText(detailed), 68);
-}
-
-function getDisplayMaterials(product: FlatProduct): string {
-  const specs = product.specs && typeof product.specs === "object" && !Array.isArray(product.specs)
-    ? (product.specs as Record<string, unknown>)
-    : {};
-  const sourceMaterials = filterMeaningfulMaterialList(toTextList(specs.materials));
-  if (sourceMaterials.length > 0) {
-    return toInlineSpec(sourceMaterials.slice(0, 2).join(", "), 68);
-  }
-
-  const detailed = filterMeaningfulMaterialList(toTextList(product.detailedInfo?.materials));
-  return toInlineSpec(detailed.slice(0, 2).join(", "), 68);
-}
-
-function getDisplayUseCase(product: FlatProduct): string {
-  const metadataUseCase = Array.isArray(product.metadata?.useCase)
-    ? product.metadata?.useCase
-    : [];
-  if (metadataUseCase.length > 0) {
-    return toInlineSpec(metadataUseCase.slice(0, 2).join(", "), 68);
-  }
-
-  const specs = product.specs && typeof product.specs === "object" && !Array.isArray(product.specs)
-    ? (product.specs as Record<string, unknown>)
-    : {};
-  const specsUseCase = toTextList(specs.use_case);
-  return toInlineSpec(specsUseCase.slice(0, 2).join(", "), 68);
 }
 
 function getProductSignals(product: FlatProduct): string[] {
@@ -502,7 +466,6 @@ function ProductCard({
   categoryName: string;
   contextQueryString: string;
 }) {
-  const addItem = useQuoteCart((state) => state.addItem);
   const compareItems = useProductCompare((state) => state.items);
   const toggleCompareItem = useProductCompare((state) => state.toggleItem);
   const imageCandidates = buildImageCandidates(product);
@@ -527,16 +490,19 @@ function ProductCard({
     fallbackAltText(displayName, categoryName);
   const categoryLabel = toInlineSpec(categoryName, 40);
   const dimensions = getDisplayDimensions(product);
-  const materials = getDisplayMaterials(product);
-  const useCase = getDisplayUseCase(product);
   const productSignals = getProductSignals(product);
   const description = sanitizeDisplayText(product.description || "");
+  const conciseDescription = (() => {
+    if (!description) return "";
+    const sentence = description.match(/^[^.!?]+[.!?]?/)?.[0]?.trim() || description;
+    return sentence.length > 120 ? `${sentence.slice(0, 120).trim()}...` : sentence;
+  })();
   const factRows = [
-    { label: "Series", value: sanitizeDisplayText(product.seriesName) },
-    { label: "Use", value: useCase },
-    { label: "Dimensions", value: dimensions },
-    { label: "Materials", value: materials },
+    { label: "Dimensions", value: toInlineSpec(dimensions, 92) },
   ].filter((row) => row.value);
+  const enquiryHref = `/contact?intent=quote&source=products&product=${encodeURIComponent(
+    displayName,
+  )}&ref=${encodeURIComponent(productHref)}`;
 
   return (
     <article className="catalog-card group">
@@ -600,9 +566,9 @@ function ProductCard({
             <h3 className="catalog-card__title">
               {displayName}
             </h3>
-            {description ? (
+            {conciseDescription ? (
               <p className="catalog-card__description line-clamp-3">
-                {description}
+                {conciseDescription}
               </p>
             ) : null}
           </div>
@@ -632,22 +598,9 @@ function ProductCard({
         </div>
       </Link>
       <div className="px-5 pb-5 pt-0">
-        <button
-          type="button"
-          onClick={() =>
-            addItem({
-              id: `quote-${product.slug || product.id}`,
-              name: displayName,
-              image: imgSrc,
-              href: productHref,
-              qty: 1,
-            })
-          }
-          className="btn-outline w-full text-xs"
-        >
-          <ShoppingCart className="h-3.5 w-3.5" />
-          Add to Quote
-        </button>
+        <Link href={enquiryHref} className="btn-outline w-full text-xs">
+          Add to Enquiry
+        </Link>
       </div>
     </article>
   );

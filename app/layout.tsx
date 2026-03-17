@@ -2,6 +2,7 @@
 import "./globals.css";
 import { SiteHeader } from "@/components/site/Header";
 import { SiteFooter } from "@/components/site/Footer";
+import { FooterLogoMarquee } from "@/components/site/FooterLogoMarquee";
 import { CookieConsentBar } from "@/components/site/CookieConsentBar";
 import dynamic from "next/dynamic";
 import QueryProvider from "@/app/providers/QueryProvider";
@@ -41,6 +42,7 @@ export default function RootLayout({
         <QueryProvider>
           <SiteHeader />
           <main id="main-content">{children}</main>
+          <FooterLogoMarquee />
           <SiteFooter />
           <CookieConsentBar />
           <DynamicBotWrapper />

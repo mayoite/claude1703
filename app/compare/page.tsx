@@ -216,10 +216,8 @@ export default async function ComparePage({
                           <p className="text-sm font-semibold text-neutral-950">{item.product.name}</p>
                         </Link>
                         <CompareColumnActions
-                          productId={item.product.slug || item.product.id}
                           productName={item.product.name}
                           productHref={productHref}
-                          image={image}
                           viewLabel={COMPARE_ROUTE_COPY.viewProductCta}
                           addLabel={COMPARE_ROUTE_COPY.addToQuoteCta}
                         />

@@ -1154,7 +1154,7 @@ export const COMPARE_ROUTE_COPY = {
   resourceDeskCta: "Open Resource Desk",
   primaryCta: "Request quote",
   viewProductCta: "View product",
-  addToQuoteCta: "Add to quote cart",
+  addToQuoteCta: "Add to enquiry",
   emptyTitle: "No products selected yet.",
   emptyDescription:
     "Add up to 4 products from category listings or product pages, then return here to compare the details side by side.",
@@ -1205,7 +1205,7 @@ export const PDP_ROUTE_COPY = {
     supportTitle: "Planning and documentation support",
     supportDescription:
       "Use Planning for layout guidance and the Resource Desk for technical sheets, finish options, and category packs where available.",
-    supportQuote: "Add this model to your quote cart to keep procurement options together.",
+    supportQuote: "Add this model to enquiry to keep procurement options together.",
     supportPlanning: "Use Planning when seat count, layout density, or workstation mix still needs work.",
     supportResources:
       "Use the Resource Desk when your team needs technical sheets, finish references, or documentation support.",
@@ -1219,7 +1219,7 @@ export const PDP_ROUTE_COPY = {
     warrantyDescription: "Warranty terms vary by model and proposal.",
   },
   ctas: {
-    addToQuote: "Add to Quote Cart",
+    addToQuote: "Add to Enquiry",
     addToCompare: "Add To Compare",
     addedToCompare: "Added To Compare",
     requestQuote: "Request Quote",

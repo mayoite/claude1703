@@ -1,27 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart } from "lucide-react";
-import { useQuoteCart } from "@/lib/store/quoteCart";
+import { MessageSquare } from "lucide-react";
 
 interface CompareColumnActionsProps {
-  productId: string;
   productName: string;
   productHref: string;
-  image: string;
   viewLabel: string;
   addLabel: string;
 }
 
 export function CompareColumnActions({
-  productId,
   productName,
   productHref,
-  image,
   viewLabel,
   addLabel,
 }: CompareColumnActionsProps) {
-  const addItem = useQuoteCart((state) => state.addItem);
+  const enquiryHref = `/contact?intent=quote&source=compare&product=${encodeURIComponent(
+    productName,
+  )}&ref=${encodeURIComponent(productHref)}`;
 
   return (
     <div className="mt-4 grid gap-2">
@@ -31,23 +28,14 @@ export function CompareColumnActions({
       >
         {viewLabel}
       </Link>
-      <button
-        type="button"
-        onClick={() =>
-          addItem({
-            id: `quote-${productId}`,
-            name: productName,
-            image,
-            href: productHref,
-            qty: 1,
-          })
-        }
+      <Link
+        href={enquiryHref}
         aria-label={`${addLabel} ${productName}`}
         className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-primary px-3 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
       >
-        <ShoppingCart className="h-4 w-4" />
+        <MessageSquare className="h-4 w-4" />
         {addLabel}
-      </button>
+      </Link>
     </div>
   );
 }

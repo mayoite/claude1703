@@ -10,7 +10,7 @@ import {
   ArrowLeft,
   ChevronRight,
   Share2,
-  ShoppingCart,
+  MessageSquare,
   GitCompareArrows,
 } from "lucide-react";
 import Link from "next/link";
@@ -19,7 +19,6 @@ import clsx from "clsx";
 import ThreeViewer from "@/components/ThreeViewer";
 import { Reviews } from "@/components/Reviews";
 import { ProductGallery } from "@/components/ProductGallery";
-import { useQuoteCart } from "@/lib/store/quoteCart";
 import { useProductCompare } from "@/lib/store/productCompare";
 import { CompareDock } from "@/components/products/CompareDock";
 import {
@@ -59,7 +58,6 @@ export function ProductViewer({
   categoryName,
   productRoute,
 }: ProductViewerProps) {
-  const addItem = useQuoteCart((state) => state.addItem);
   const compareItems = useProductCompare((state) => state.items);
   const toggleCompareItem = useProductCompare((state) => state.toggleItem);
   const searchParams = useSearchParams();
@@ -189,6 +187,9 @@ export function ProductViewer({
   const productRouteWithContext = encodedFrom
     ? `${productRoute}?from=${encodedFrom}`
     : productRoute;
+  const enquiryHref = `/contact?intent=quote&source=product&product=${encodeURIComponent(
+    displayName,
+  )}&ref=${encodeURIComponent(productRouteWithContext)}`;
 
   const rawSpecs =
     product.specs && typeof product.specs === "object" && !Array.isArray(product.specs)
@@ -361,14 +362,6 @@ export function ProductViewer({
     certificationText ? { label: "Certification", value: certificationText } : null,
     sustainabilityText ? { label: "Sustainability", value: sustainabilityText } : null,
   ].filter(Boolean) as Array<{ label: string; value: string }>;
-  const handleAddToQuote = () =>
-    addItem({
-      id: `quote-${product.slug || product.id}`,
-      name: displayName,
-      image: uniqueImages[0],
-      href: productRouteWithContext,
-      qty: 1,
-    });
   const handleCompareToggle = () =>
     toggleCompareItem({
       id: compareId,
@@ -646,19 +639,18 @@ export function ProductViewer({
                   Take the next step
                 </p>
                 <p className="mb-4 text-sm leading-relaxed text-neutral-600">
-                  Build a shortlist, request a quote, or move into planning support
+                  Start with one enquiry, compare options, and move into planning support
                   depending on where your team is in the decision.
                 </p>
-                <button
-                  type="button"
-                  onClick={handleAddToQuote}
+                <Link
+                  href={enquiryHref}
                   className="group mb-2 flex w-full items-center justify-between rounded-2xl border border-primary px-6 py-4 text-primary transition-colors hover:bg-primary hover:text-white"
                 >
                   <span className="pdp-action-label">
                     {PDP_ROUTE_COPY.ctas.addToQuote}
                   </span>
-                  <ShoppingCart className="w-4 h-4" />
-                </button>
+                  <MessageSquare className="w-4 h-4" />
+                </Link>
                 {routeKey ? (
                   <button
                     type="button"

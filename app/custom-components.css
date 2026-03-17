@@ -697,7 +697,7 @@
   }
 
   .catalog-card__fact {
-    @apply flex min-h-[78px] flex-col justify-between px-1 py-3;
+    @apply flex min-h-[78px] flex-col justify-between rounded-2xl border border-neutral-200 bg-neutral-50/80 px-3.5 py-3;
   }
 
   .catalog-card__fact-label {
@@ -706,12 +706,6 @@
 
   .catalog-card__fact-value {
     @apply text-sm leading-snug text-neutral-900;
-  }
-
-  @media (min-width: 1280px) {
-    .catalog-card__fact-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
   }
 
   .catalog-card__actions {
@@ -1300,6 +1294,11 @@
   .site-footer__social,
   .site-footer__legal {
     @apply rounded transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+
+  .footer-logo-marquee__track {
+    @apply flex w-max items-center gap-10 md:gap-14;
+    will-change: transform;
   }
 
   .footer-conversion {
