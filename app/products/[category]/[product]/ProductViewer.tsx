@@ -176,7 +176,16 @@ export function ProductViewer({
     return sanitizeDisplayList(value.map((item) => String(item)));
   };
   const routeKey = (product.slug || product.id || "").trim();
-  const isWorkstationsCategory = categoryId === "workstations";
+  const isDeskBasedWorkstation =
+    categoryId === "workstations" &&
+    /\b(desk|desking|bench|panel|workstation)\b/i.test(
+      [
+        product.slug || "",
+        product.name || "",
+        String(product.metadata?.subcategory || ""),
+        String(product.metadata?.subcategoryId || ""),
+      ].join(" "),
+    );
   const workstationSizeText =
     "Available in sizes 900mm, 1050mm, 1200mm, 1500mm and more.";
   const compareId = `compare-${categoryId || "products"}-${routeKey}`;
@@ -258,8 +267,8 @@ export function ProductViewer({
     overview && shortOverview && overview !== shortOverview ? overview : "";
   const specRows = [
     {
-      label: isWorkstationsCategory ? "Sizes" : "Dimensions",
-      value: isWorkstationsCategory ? workstationSizeText : dimensions,
+      label: isDeskBasedWorkstation ? "Sizes" : "Dimensions",
+      value: isDeskBasedWorkstation ? workstationSizeText : dimensions,
     },
     ...(materials.length > 0
       ? [
@@ -353,8 +362,8 @@ export function ProductViewer({
     { label: PDP_ROUTE_COPY.summary.bestFor, value: useCasePreview.join(", ") },
     { label: PDP_ROUTE_COPY.ctas.configuration, value: quickConfig },
     {
-      label: isWorkstationsCategory ? "Sizes" : PDP_ROUTE_COPY.summary.dimensions,
-      value: isWorkstationsCategory ? workstationSizeText : dimensions,
+      label: isDeskBasedWorkstation ? "Sizes" : PDP_ROUTE_COPY.summary.dimensions,
+      value: isDeskBasedWorkstation ? workstationSizeText : dimensions,
     },
     {
       label:

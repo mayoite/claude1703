@@ -497,13 +497,24 @@ function ProductCard({
     const sentence = description.match(/^[^.!?]+[.!?]?/)?.[0]?.trim() || description;
     return sentence.length > 120 ? `${sentence.slice(0, 120).trim()}...` : sentence;
   })();
+  const isDeskBasedWorkstation =
+    categoryId === "workstations" &&
+    /\b(desk|desking|bench|panel|workstation)\b/i.test(
+      [
+        product.slug || "",
+        product.name || "",
+        product.seriesName || "",
+        String(product.metadata?.subcategory || ""),
+        String(product.metadata?.subcategoryId || ""),
+      ].join(" "),
+    );
   const workstationSizeText =
     "Available in sizes 900mm, 1050mm, 1200mm, 1500mm and more.";
   const factRows = [
     {
-      label: categoryId === "workstations" ? "Sizes" : "Dimensions",
+      label: isDeskBasedWorkstation ? "Sizes" : "Dimensions",
       value:
-        categoryId === "workstations"
+        isDeskBasedWorkstation
           ? workstationSizeText
           : toInlineSpec(dimensions, 92),
     },
