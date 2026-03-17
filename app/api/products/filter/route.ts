@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import Fuse from "fuse.js";
 import { buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
-import { getCatalog, type CompatProduct } from "@/lib/getProducts";
+import { fetchCompatCatalogForApi } from "@/lib/catalogApiData";
+import type { CompatProduct } from "@/lib/getProducts";
 import { hasVerifiedHeadrest } from "@/lib/productTraits";
 import {
   PRICE_RANGES,
@@ -306,7 +307,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const catalog = buildRequestedCategoryCatalog(await getCatalog());
+    const catalog = buildRequestedCategoryCatalog(await fetchCompatCatalogForApi());
     const category = catalog.find((entry) => entry.id === filters.category);
 
     if (!category) {

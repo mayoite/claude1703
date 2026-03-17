@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import Fuse from "fuse.js";
-import { getCatalog } from "@/lib/getProducts";
 import { buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
+import { fetchCompatCatalogForApi } from "@/lib/catalogApiData";
 import { rateLimit } from "@/lib/rateLimit";
 import { SITE_URL } from "@/lib/siteUrl";
 
@@ -66,7 +66,7 @@ async function buildSearchIndex(): Promise<SearchIndexEntry[]> {
     return cache.entries;
   }
 
-  const baseCatalog = await getCatalog();
+  const baseCatalog = await fetchCompatCatalogForApi();
   const requestedCatalog = buildRequestedCategoryCatalog(baseCatalog);
   const entries: SearchIndexEntry[] = [];
 

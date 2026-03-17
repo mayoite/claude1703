@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
+import { fetchCompatCatalogForApi } from "@/lib/catalogApiData";
 import type { CompatProduct } from "@/lib/getProducts";
-import { getCatalog } from "@/lib/getProducts";
 import {
   Catalog_CATEGORY_ORDER,
   Catalog_SUBCATEGORY_LABELS,
@@ -21,7 +21,7 @@ type FlattenedProduct = {
 
 export async function GET() {
   try {
-    const baseCatalog = await getCatalog();
+    const baseCatalog = await fetchCompatCatalogForApi();
     const flat: FlattenedProduct[] = [];
 
     for (const category of baseCatalog) {

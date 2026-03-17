@@ -1,12 +1,11 @@
 /**
  * tests/get-products.test.ts
  * Unit tests for lib/getProducts.ts helper functions.
- * Supabase is mocked so these run without a real DB connection.
  */
 import { getProducts, getProductsByCategory, getProductBySlug, getCatalog, getCategoryIds } from '../lib/getProducts';
 import { fetchNhostProducts } from '../lib/nhostCatalog';
+import { normalizeAssetList } from '../lib/assetPaths';
 
-// ── Mock Supabase ──────────────────────────────────────────────────────────────
 const mockSelect = jest.fn();
 const mockOrder = jest.fn();
 const mockEq = jest.fn();
@@ -20,7 +19,6 @@ const chainMock: any = {
     single: mockSingle,
 };
 
-// Chainable builder: each method returns the chain object
 mockSelect.mockReturnValue(chainMock);
 mockOrder.mockReturnValue(chainMock);
 mockEq.mockReturnValue(chainMock);
@@ -51,8 +49,6 @@ function resetSupabaseChain() {
     mockSingle.mockReturnValue(chainMock);
 }
 
-// ── Sample data fixtures ───────────────────────────────────────────────────────
-
 const MOCK_PRODUCTS = [
     {
         id: 'prod-1',
@@ -82,8 +78,6 @@ const MOCK_PRODUCTS = [
     },
 ];
 
-// ── Tests ──────────────────────────────────────────────────────────────────────
-
 describe('getProducts()', () => {
     beforeEach(() => {
         jest.clearAllMocks();
@@ -100,7 +94,7 @@ describe('getProducts()', () => {
 
         expect(products).toHaveLength(2);
         expect(products[0].name).toBe('Ergo Chair');
-        expect(products[0].images).toEqual(['/images/ergo-chair-1.webp', '/images/ergo-chair-2.webp']);
+        expect(products[0].images).toEqual(normalizeAssetList(MOCK_PRODUCTS[0].images));
     });
 
     test('returns empty array on Supabase error', async () => {
@@ -147,7 +141,7 @@ describe('getProductsByCategory()', () => {
     });
 
     test('filters products by category_id', async () => {
-        const seatingProducts = MOCK_PRODUCTS.filter(p => p.category_id === 'oando-seating');
+        const seatingProducts = MOCK_PRODUCTS.filter((p) => p.category_id === 'oando-seating');
         mockOrder.mockResolvedValueOnce({ data: seatingProducts, error: null });
 
         const products = await getProductsByCategory('oando-seating');
@@ -163,12 +157,12 @@ describe('getProductsByCategory()', () => {
         expect(products).toHaveLength(0);
     });
 
-    test('preserves images array from DB row', async () => {
+    test('normalizes images array from DB row', async () => {
         mockOrder.mockResolvedValueOnce({ data: [MOCK_PRODUCTS[0]], error: null });
 
         const products = await getProductsByCategory('oando-seating');
         expect(Array.isArray(products[0].images)).toBe(true);
-        expect(products[0].images.length).toBeGreaterThan(0);
+        expect(products[0].images).toEqual(normalizeAssetList(MOCK_PRODUCTS[0].images));
     });
 });
 
@@ -209,12 +203,7 @@ describe('getCatalog()', () => {
         jest.clearAllMocks();
         resetSupabaseChain();
         mockFetchNhostProducts.mockResolvedValue([]);
-        mockFrom.mockImplementation((table: string) => {
-            if (table === 'categories') {
-                return chainMock;
-            }
-            return chainMock;
-        });
+        mockFrom.mockImplementation(() => chainMock);
         chainMock.data = undefined;
         chainMock.error = undefined;
     });
