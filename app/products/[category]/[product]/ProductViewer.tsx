@@ -486,14 +486,6 @@ export function ProductViewer({
           <div className="max-w-sm mx-auto lg:max-w-none">
             {/* Title block */}
             <div className="mb-8">
-              <Link
-                href={categoryRouteWithContext}
-                className="pdp-action-label mb-4 inline-flex items-center gap-2 text-neutral-500 transition-colors hover:text-neutral-900"
-              >
-                <ArrowLeft className="h-3.5 w-3.5" />
-                {returnLabel}
-              </Link>
-              <p className="pdp-section-label mb-3">Product overview</p>
               <h1 className="text-4xl sm:text-5xl font-light text-neutral-900 tracking-tight leading-[1.05] mb-5">
                 {displayName}
               </h1>
@@ -711,6 +703,13 @@ export function ProductViewer({
                     <Share2 className="w-3.5 h-3.5" />
                     {PDP_ROUTE_COPY.ctas.copyLink}
                   </button>
+                  <Link
+                    href={categoryRouteWithContext}
+                    className="pdp-action-label mt-3 inline-flex items-center gap-2 text-neutral-500 transition-colors hover:text-neutral-900"
+                  >
+                    <ArrowLeft className="h-3.5 w-3.5" />
+                    {returnLabel}
+                  </Link>
                 </div>
               </div>
             </div>
