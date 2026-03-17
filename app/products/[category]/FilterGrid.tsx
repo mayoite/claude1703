@@ -497,8 +497,16 @@ function ProductCard({
     const sentence = description.match(/^[^.!?]+[.!?]?/)?.[0]?.trim() || description;
     return sentence.length > 120 ? `${sentence.slice(0, 120).trim()}...` : sentence;
   })();
+  const workstationSizeText =
+    "Available in sizes 900mm, 1050mm, 1200mm, 1500mm and more.";
   const factRows = [
-    { label: "Dimensions", value: toInlineSpec(dimensions, 92) },
+    {
+      label: categoryId === "workstations" ? "Sizes" : "Dimensions",
+      value:
+        categoryId === "workstations"
+          ? workstationSizeText
+          : toInlineSpec(dimensions, 92),
+    },
   ].filter((row) => row.value);
   const enquiryHref = `/contact?intent=quote&source=products&product=${encodeURIComponent(
     displayName,

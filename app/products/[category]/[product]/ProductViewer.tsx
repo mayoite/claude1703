@@ -176,6 +176,9 @@ export function ProductViewer({
     return sanitizeDisplayList(value.map((item) => String(item)));
   };
   const routeKey = (product.slug || product.id || "").trim();
+  const isWorkstationsCategory = categoryId === "workstations";
+  const workstationSizeText =
+    "Available in sizes 900mm, 1050mm, 1200mm, 1500mm and more.";
   const compareId = `compare-${categoryId || "products"}-${routeKey}`;
   const inCompare = compareItems.some((item) => item.id === compareId);
   const rawFrom = searchParams.get("from");
@@ -254,7 +257,10 @@ export function ProductViewer({
   const fullOverview =
     overview && shortOverview && overview !== shortOverview ? overview : "";
   const specRows = [
-    { label: "Dimensions", value: dimensions },
+    {
+      label: isWorkstationsCategory ? "Sizes" : "Dimensions",
+      value: isWorkstationsCategory ? workstationSizeText : dimensions,
+    },
     ...(materials.length > 0
       ? [
           {
@@ -346,7 +352,10 @@ export function ProductViewer({
   const summaryCards = [
     { label: PDP_ROUTE_COPY.summary.bestFor, value: useCasePreview.join(", ") },
     { label: PDP_ROUTE_COPY.ctas.configuration, value: quickConfig },
-    { label: PDP_ROUTE_COPY.summary.dimensions, value: dimensions },
+    {
+      label: isWorkstationsCategory ? "Sizes" : PDP_ROUTE_COPY.summary.dimensions,
+      value: isWorkstationsCategory ? workstationSizeText : dimensions,
+    },
     {
       label:
         materials.length > 0
