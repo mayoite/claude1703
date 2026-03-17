@@ -183,7 +183,7 @@ export const HOMEPAGE_SOLUTIONS_CONTENT = {
 
 export const HOMEPAGE_PARTNERSHIP_CONTENT = {
   image: {
-    src: "/catalog-logo-sharp.webp",
+    src: "/catalog-logo-sharp.svg",
     alt: "AFC - Authorized Franchise Partner",
   },
   title: ["Authorized Franchise", "Partner"],
