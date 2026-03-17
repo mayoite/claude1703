@@ -38,19 +38,13 @@ export function Projects() {
               <div className="projects-card__media">
                 <Image
                   src={project.image}
-                  alt={`${project.companyName} - ${project.sector}`}
+                  alt={project.companyName}
                   fill
                   className="projects-card__image"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="projects-card__body">
-                <div className="projects-card__meta">
-                  <span className="projects-card__category">
-                    {project.sector}
-                  </span>
-                  <div className="projects-card__line"></div>
-                </div>
                 <h3 className="projects-card__title">{project.companyName}</h3>
               </div>
             </div>

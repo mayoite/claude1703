@@ -462,9 +462,13 @@ export function SiteHeader() {
                 <div className="grid grid-cols-6 gap-4">
                   {groupedCategories.map((group) => (
                     <div key={group.groupId}>
-                      <p className="typ-overline mb-2 text-neutral-500">
+                      <Link
+                        href={group.items[0]?.href || `/products/${group.groupId}`}
+                        onClick={() => setActiveMega(null)}
+                        className="typ-overline mb-2 inline-flex text-neutral-500 transition-colors hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      >
                         {group.groupLabel}
-                      </p>
+                      </Link>
                       <ul className="space-y-1">
                         {group.items.map((item) => (
                           <li key={item.id}>

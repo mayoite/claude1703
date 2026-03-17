@@ -1,95 +1,194 @@
 "use client";
 
-import { ArrowUpRight, MessageSquareText, Phone } from "lucide-react";
+import { FormEvent, useState } from "react";
+import { ArrowUpRight, MessageCircle, MessageSquareText, Phone } from "lucide-react";
 import { buildWhatsAppHref, SITE_CONTACT, toTelHref } from "@/data/site/contact";
 import { HOMEPAGE_CONTACT_CONTENT } from "@/data/site/homepage";
 
 export function ContactTeaser() {
+  const [name, setName] = useState("");
+  const [city, setCity] = useState("");
+  const [contact, setContact] = useState("");
+  const [brief, setBrief] = useState("");
+  const [timeline, setTimeline] = useState("Within 1-3 months");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({ type: "idle", message: "" });
+
   const directActions = HOMEPAGE_CONTACT_CONTENT.directActions.map((action) => ({
     ...action,
     href:
       action.type === "whatsapp"
         ? buildWhatsAppHref("Need a direct workspace response for my project brief.")
         : toTelHref(SITE_CONTACT.supportPhone),
-    icon: Phone,
+    icon: action.type === "whatsapp" ? MessageCircle : Phone,
     external: action.type === "whatsapp",
   }));
 
-  function openGuidedPlanner() {
-    window.dispatchEvent(new CustomEvent("oando-assistant:open"));
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (isSubmitting) return;
+
+    const trimmedContact = contact.trim();
+    const isEmail = trimmedContact.includes("@");
+    const payload = {
+      name: name.trim(),
+      email: isEmail ? trimmedContact : "",
+      phone: isEmail ? "" : trimmedContact,
+      message: `${brief.trim()}\nCity: ${city.trim()}`,
+      requirement: "Workspace planning",
+      timeline: timeline.trim(),
+      preferredContact: isEmail ? "email" : "phone",
+      source: "homepage-quick-brief",
+      sourcePath: window.location.pathname,
+    };
+
+    setIsSubmitting(true);
+    setFormStatus({ type: "idle", message: "" });
+    try {
+      const response = await fetch("/api/customer-queries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const result = (await response.json()) as { error?: string };
+      if (!response.ok) {
+        throw new Error(result.error || "Unable to submit now.");
+      }
+
+      setName("");
+      setCity("");
+      setContact("");
+      setBrief("");
+      setTimeline("Within 1-3 months");
+      setFormStatus({ type: "success", message: "Brief received. Our team will contact you shortly." });
+    } catch (error) {
+      setFormStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Unable to submit now.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
-    <section className="home-section home-section--soft scheme-border border-t py-16 md:py-22">
+    <section className="home-section home-section--soft scheme-border border-t py-14 md:py-18">
       <div className="home-shell">
         <div className="contact-teaser home-frame home-frame--standard">
-          <div className="contact-teaser__layout grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="contact-teaser__primary">
-              <p className="typ-label scheme-text-body mb-4">
-                {HOMEPAGE_CONTACT_CONTENT.eyebrow}
-              </p>
-              <h2 className="typ-section scheme-text-strong mb-4 max-w-xl">
-                {HOMEPAGE_CONTACT_CONTENT.titleLead}{" "}
-                <span className="home-heading__accent">{HOMEPAGE_CONTACT_CONTENT.titleAccent}</span>
+          <div className="contact-teaser__stack">
+            <div className="contact-teaser__intro">
+              <p className="contact-teaser__support-kicker">{HOMEPAGE_CONTACT_CONTENT.titleLead}</p>
+              <h2 className="typ-section scheme-text-strong max-w-2xl">
+                {HOMEPAGE_CONTACT_CONTENT.titleAccent}
+                {" "}
+                <span className="home-heading__accent">{HOMEPAGE_CONTACT_CONTENT.description}</span>
               </h2>
-              <p className="page-copy scheme-text-body max-w-xl">
-                {HOMEPAGE_CONTACT_CONTENT.description}
-              </p>
-
-              <div className="contact-teaser__brief-points mt-6 flex flex-wrap gap-2.5">
-                {HOMEPAGE_CONTACT_CONTENT.plannerPoints.map((item) => (
-                  <span key={item} className="contact-teaser__brief-chip">
-                    {item}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                <button
-                  type="button"
-                  onClick={openGuidedPlanner}
-                  aria-label="Open guided planner"
-                  className="home-btn-primary"
-                >
-                  <MessageSquareText className="h-4 w-4" />
-                  {HOMEPAGE_CONTACT_CONTENT.plannerCta}
-                </button>
-              </div>
             </div>
 
-            <div className="contact-teaser__secondary scheme-border grid gap-5 border-t pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-              <div>
-                <p className="typ-label scheme-text-body mb-3">
-                  {HOMEPAGE_CONTACT_CONTENT.directTitle}
-                </p>
-                <p className="page-copy-sm scheme-text-body max-w-md">
-                  {HOMEPAGE_CONTACT_CONTENT.directDescription}
-                </p>
-              </div>
-              <div className="grid gap-3">
-                {directActions.map((action) => {
-                  const Icon = action.icon;
-                  return (
-                    <a
-                      key={action.label}
-                      href={action.href}
-                      target={action.external ? "_blank" : undefined}
-                      rel={action.external ? "noopener noreferrer" : undefined}
-                      className="contact-teaser__action"
+            <form className="contact-teaser__form" onSubmit={handleSubmit}>
+                <div className="contact-teaser__mini-grid">
+                  <label className="contact-teaser__field">
+                    <span className="contact-teaser__field-label">Name</span>
+                    <input
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                      className="contact-teaser__input"
+                      type="text"
+                      required
+                      maxLength={180}
+                      placeholder="Your name"
+                    />
+                  </label>
+                  <label className="contact-teaser__field">
+                    <span className="contact-teaser__field-label">City</span>
+                    <input
+                      value={city}
+                      onChange={(event) => setCity(event.target.value)}
+                      className="contact-teaser__input"
+                      type="text"
+                      required
+                      maxLength={120}
+                      placeholder="Project city"
+                    />
+                  </label>
+                  <label className="contact-teaser__field">
+                    <span className="contact-teaser__field-label">Phone or Email</span>
+                    <input
+                      value={contact}
+                      onChange={(event) => setContact(event.target.value)}
+                      className="contact-teaser__input"
+                      type="text"
+                      required
+                      maxLength={180}
+                      placeholder="Phone or email"
+                    />
+                  </label>
+                  <label className="contact-teaser__field">
+                    <span className="contact-teaser__field-label">Timeline</span>
+                    <select
+                      value={timeline}
+                      onChange={(event) => setTimeline(event.target.value)}
+                      className="contact-teaser__input"
                     >
-                      <span className="contact-teaser__action-icon">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <span className="contact-teaser__action-copy">
-                        <span className="contact-teaser__action-label">{action.label}</span>
-                        <span className="contact-teaser__action-detail">{action.detail}</span>
-                      </span>
-                      <ArrowUpRight className="contact-teaser__action-arrow h-4 w-4" />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+                      <option>Immediate</option>
+                      <option>Within 1-3 months</option>
+                      <option>Within 3-6 months</option>
+                      <option>Exploring</option>
+                    </select>
+                  </label>
+                </div>
+                <label className="contact-teaser__field mt-3">
+                  <span className="contact-teaser__field-label">Brief</span>
+                  <textarea
+                    value={brief}
+                    onChange={(event) => setBrief(event.target.value)}
+                    className="contact-teaser__input contact-teaser__input--textarea"
+                    rows={3}
+                    required
+                    maxLength={5000}
+                    placeholder="Share scope, team size, or key requirements."
+                  />
+                </label>
+
+                <div className="contact-teaser__actions mt-5">
+                  <p className="contact-teaser__footer-chip">Business-day response</p>
+                  <button type="submit" disabled={isSubmitting} className="home-btn-primary">
+                    <MessageSquareText className="h-4 w-4" />
+                    {isSubmitting ? "Sending..." : "Send Brief"}
+                  </button>
+                </div>
+
+                <div className="contact-teaser__support-row mt-4">
+                  {directActions.map((action) => {
+                    const Icon = action.icon;
+                    return (
+                      <a
+                        key={action.label}
+                        href={action.href}
+                        target={action.external ? "_blank" : undefined}
+                        rel={action.external ? "noopener noreferrer" : undefined}
+                        className="contact-teaser__support-link"
+                      >
+                        <span className="contact-teaser__support-link-icon">
+                          <Icon className="h-4 w-4" />
+                        </span>
+                        <span>{action.label}</span>
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                    );
+                  })}
+                </div>
+
+                {formStatus.type !== "idle" ? (
+                  <p className={`contact-teaser__status contact-teaser__status--${formStatus.type}`} role="status">
+                    {formStatus.message}
+                  </p>
+                ) : null}
+            </form>
           </div>
         </div>
       </div>

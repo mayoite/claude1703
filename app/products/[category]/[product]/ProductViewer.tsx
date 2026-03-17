@@ -415,10 +415,10 @@ export function ProductViewer({
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row min-h-[calc(100vh-112px)]">
+      <div className="flex flex-col lg:flex-row u-minh-vh-112">
         {/* Left: image gallery */}
-        <div className="w-full lg:w-[58%] xl:w-[62%] flex flex-col pt-0 lg:pt-8 bg-neutral-100">
-          <div className="flex-1 w-full max-w-[800px] mx-auto p-4 lg:p-8">
+        <div className="flex w-full flex-col bg-neutral-100 pt-0 lg:u-w-58p lg:pt-8 xl:u-w-62p">
+          <div className="mx-auto flex-1 w-full max-w-200 p-4 lg:p-8">
             <ProductGallery
               images={uniqueImages}
               productName={displayName}
@@ -500,11 +500,11 @@ export function ProductViewer({
         </div>
 
         {/* Right: details panel */}
-        <div className="w-full lg:w-[42%] xl:w-[38%] lg:sticky lg:top-[112px] lg:h-[calc(100vh-112px)] overflow-y-auto px-6 sm:px-10 lg:px-12 py-10 border-l border-neutral-100 scrollbar-hide">
+        <div className="w-full overflow-y-auto border-l border-neutral-100 px-6 py-10 scrollbar-hide sm:px-10 lg:sticky lg:top-[112px] lg:u-h-vh-112 lg:u-w-42p lg:px-12 xl:u-w-38p">
           <div className="max-w-sm mx-auto lg:max-w-none">
             {/* Title block */}
             <div className="mb-8">
-              <h1 className="text-4xl sm:text-5xl font-light text-neutral-900 tracking-tight leading-[1.05] mb-5">
+              <h1 className="mb-5 text-4xl font-light leading-ui-105 tracking-tight text-neutral-900 sm:text-5xl">
                 {displayName}
               </h1>
               {shortOverview ? (

@@ -32,7 +32,7 @@ export function TrustStrip({ stats, embedded = false, showLogos = true }: TrustS
 
   const content = (
     <>
-      <div className="stats-block grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className={`stats-block grid grid-cols-2 gap-4 md:grid-cols-4 ${embedded ? "stats-block--embedded" : ""}`}>
         {kpis.map(({ value, label, testId }) => (
           <div key={label} className="scheme-panel scheme-border rounded-2xl border p-6 text-center">
             <p data-testid={testId} className="typ-stat text-primary">

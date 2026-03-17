@@ -51,7 +51,7 @@ export default async function Home() {
           <div className="home-shell">
             <div className="home-frame home-frame--standard">
               <ProcessSection embedded />
-              <div className="mt-10 border-t border-neutral-200 pt-10 md:mt-12 md:pt-12">
+              <div className="mt-8 md:mt-10">
                 <TrustStrip stats={stats} embedded showLogos={false} />
               </div>
             </div>

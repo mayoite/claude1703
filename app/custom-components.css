@@ -153,6 +153,12 @@
     border-radius: var(--radius-default);
   }
 
+  .stats-block--embedded {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
   .stats-block__value {
     font-size: var(--ref-size-024);
     font-weight: 275;
@@ -460,22 +466,22 @@
   }
 
   .contact-teaser__action {
-    @apply flex items-center gap-4 border px-4 py-4 transition-colors;
+    @apply flex items-center gap-3 border px-4 py-2.5 transition-colors;
     border-radius: var(--radius-lg);
-    background: linear-gradient(180deg, var(--surface-panel-strong) 0%, var(--surface-panel-soft) 100%);
-    border-color: var(--border-soft);
-    box-shadow: 0 16px 34px -28px var(--ref-color-029);
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 24px -28px rgba(15, 23, 42, 0.22);
   }
 
   .contact-teaser__action:hover {
     border-color: var(--color-primary);
-    background-color: var(--surface-accent-wash);
-    box-shadow: var(--shadow-soft);
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 14px 28px -26px rgba(15, 23, 42, 0.2);
   }
 
   .contact-teaser__action-icon {
-    @apply flex h-10 w-10 items-center justify-center rounded-full;
-    background-color: var(--surface-accent-wash);
+    @apply flex h-8 w-8 items-center justify-center rounded-full;
+    background-color: rgba(13, 45, 180, 0.06);
     color: var(--color-primary);
   }
 
@@ -485,8 +491,8 @@
 
   .contact-teaser__action-label {
     color: var(--text-strong);
-    font-size: var(--ref-size-012);
-    font-weight: 450;
+    font-size: var(--ref-size-009);
+    font-weight: 425;
     letter-spacing: var(--type-letter-copy);
     line-height: 1.25;
   }
@@ -494,7 +500,7 @@
   .contact-teaser__action-detail {
     @apply mt-1;
     color: var(--text-muted);
-    font-size: var(--ref-size-007);
+    font-size: var(--ref-size-006);
     line-height: 1.4;
   }
 
@@ -503,24 +509,101 @@
   }
 
   .contact-teaser {
+    @apply overflow-hidden border;
     background:
-      radial-gradient(circle at top right, rgba(13, 45, 180, 0.06), transparent 32%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+      radial-gradient(circle at top left, rgba(13, 45, 180, 0.06), transparent 28%),
+      linear-gradient(180deg, var(--color-surface-muted) 0%, var(--surface-muted) 100%);
+    border-radius: var(--radius-xl);
+    border-color: var(--ref-color-035);
+    box-shadow: 0 28px 80px -56px var(--ref-color-057);
   }
 
   .contact-teaser__layout {
-    align-items: end;
+    align-items: start;
+    @apply gap-8 lg:gap-9;
   }
 
-  .contact-teaser__primary {
+  .contact-teaser__stack {
+    @apply mx-auto flex w-full max-w-5xl flex-col gap-6;
+  }
+
+  .contact-teaser__intro {
     @apply max-w-2xl;
   }
 
-  .contact-teaser__brief-chip {
-    @apply inline-flex min-h-9 items-center rounded-full border px-4 text-xs font-semibold uppercase tracking-[0.14em];
-    border-color: rgba(13, 45, 180, 0.16);
-    background: rgba(255, 255, 255, 0.88);
-    color: var(--color-primary);
+  .contact-teaser__support-kicker {
+    @apply mb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-neutral-500;
+  }
+
+  .contact-teaser__form {
+    @apply w-full rounded-[1.75rem] border bg-white px-3.5 py-2.5 md:px-4 md:py-3;
+    border-color: var(--ref-color-038);
+    box-shadow: 0 20px 48px -40px rgba(15, 23, 42, 0.22);
+  }
+
+  .contact-teaser__mini-grid {
+    @apply grid gap-2.5 md:grid-cols-2;
+  }
+
+  .contact-teaser__field {
+    @apply flex flex-col gap-1;
+  }
+
+  .contact-teaser__field-label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-600;
+  }
+
+  .contact-teaser__input {
+    @apply min-h-11 w-full rounded-xl border border-neutral-200 bg-white px-3.5 py-2.5 text-sm text-neutral-900 outline-none transition-colors;
+  }
+
+  .contact-teaser__input:focus {
+    border-color: color-mix(in srgb, var(--color-primary) 55%, white);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 12%, transparent);
+  }
+
+  .contact-teaser__input--textarea {
+    @apply min-h-20 resize-y;
+  }
+
+  .contact-teaser__actions {
+    @apply flex flex-col gap-2 rounded-[1.15rem] border border-neutral-200 bg-neutral-50/80 px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between;
+  }
+
+  .contact-teaser__support-row {
+    @apply flex flex-wrap gap-2.5;
+  }
+
+  .contact-teaser__support-link {
+    @apply inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-2 text-sm text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-950;
+  }
+
+  .contact-teaser__support-link-icon {
+    @apply inline-flex h-7 w-7 items-center justify-center rounded-full bg-neutral-50 text-primary;
+  }
+
+  .contact-teaser .typ-section {
+    margin-bottom: 0.85rem;
+  }
+
+  .contact-teaser__footer-chip {
+    @apply inline-flex items-center rounded-full border border-primary/12 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-600;
+  }
+
+  .contact-teaser__inline-link {
+    @apply inline-flex min-h-10 items-center rounded-full px-4 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-100 hover:text-neutral-950;
+  }
+
+  .contact-teaser__status {
+    @apply mt-3 text-sm;
+  }
+
+  .contact-teaser__status--success {
+    color: #0f7a41;
+  }
+
+  .contact-teaser__status--error {
+    color: #b81f1f;
   }
 
   .quick-contact-fab {
@@ -911,20 +994,8 @@
     color: var(--color-accent-green);
   }
 
-  .contact-teaser {
-    @apply overflow-hidden border bg-white;
-    border-radius: var(--radius-xl);
-    border-color: var(--ref-color-035);
-    box-shadow: 0 28px 80px -56px var(--ref-color-057);
-  }
-
   .contact-teaser__grid {
     @apply grid grid-cols-1 lg:u-grid-105-095;
-  }
-
-  .contact-teaser__secondary {
-    @apply px-6 py-10 md:px-10;
-    background: linear-gradient(180deg, var(--ref-color-041), var(--ref-color-044));
   }
 
   .contact-teaser__divider,
@@ -1294,6 +1365,24 @@
   .site-footer__social,
   .site-footer__legal {
     @apply rounded transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+
+  .footer-logo-marquee {
+    @apply relative overflow-hidden transition-colors duration-500;
+  }
+
+  .footer-logo-marquee::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.02) 0%, rgba(255, 255, 255, 0) 24%, rgba(255, 255, 255, 0) 76%, rgba(15, 23, 42, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 500ms ease;
+    pointer-events: none;
+  }
+
+  .footer-logo-marquee:hover::before {
+    opacity: 1;
   }
 
   .footer-logo-marquee__track {

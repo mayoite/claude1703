@@ -14,6 +14,18 @@ export const HOMEPAGE_TRUST_CONTENT = {
     { name: "Tata Motors", src: "/ClientLogos/TataMotors.jpg" },
     { name: "Maruti Suzuki", src: "/ClientLogos/MarutiSuzuki.png" },
     { name: "HDFC", src: "/ClientLogos/HDFCLogo.jpg" },
+    { name: "Canara Bank", src: "/ClientLogos/CanaraBank.jpg" },
+    { name: "Franklin Templeton", src: "/ClientLogos/FranklinTempleton.jpg" },
+    { name: "Hyundai", src: "/ClientLogos/HyundaiLogo.jpg" },
+    { name: "IDBI Bank", src: "/ClientLogos/IDBIBankLogo.png" },
+    { name: "Usha", src: "/ClientLogos/USHA.png" },
+    { name: "Bihar Government", src: "/ClientLogos/BiharGovernment.jpg" },
+    { name: "SAIL", src: "/ClientLogos/SAIL.png" },
+    { name: "BIS", src: "/ClientLogos/BIS.jpg" },
+    { name: "Sonalika", src: "/ClientLogos/Sonalika.jpg" },
+    { name: "Survey of India", src: "/ClientLogos/SurveyofIndia.jpg" },
+    { name: "CRI Pumps", src: "/ClientLogos/CRIPumps.jpg" },
+    { name: "MECON", src: "/ClientLogos/MECON.jpg" },
   ],
   projectsCta: "View projects",
 } as const;
@@ -91,10 +103,10 @@ export const HOMEPAGE_PROJECTS_CONTENT = {
 } as const;
 
 export const HOMEPAGE_CONTACT_CONTENT = {
-  eyebrow: "Planning-led close",
+  eyebrow: "",
   titleLead: "Start with one",
   titleAccent: "clear brief.",
-  description: "Share the brief, timeline, and city. We will guide the right next step.",
+  description: "Share your city, timeline, and brief. We will route the right next step.",
   plannerPoints: ["Brief and city", "Timeline and scope", "Human response"],
   plannerCta: "Guided Planner",
   directTitle: "Direct line if the brief is ready",
@@ -183,7 +195,7 @@ export const HOMEPAGE_SOLUTIONS_CONTENT = {
 
 export const HOMEPAGE_PARTNERSHIP_CONTENT = {
   image: {
-    src: "/catalog-logo-sharp.svg",
+    src: "/catalog-logo-sharp.webp",
     alt: "AFC - Authorized Franchise Partner",
   },
   title: ["Authorized Franchise", "Partner"],
