@@ -1,6 +1,6 @@
 # Nhost Runtime Fallback Audit
 
-- Generated at: 2026-03-12T21:36:21.877Z
+- Generated at: 2026-03-17T10:04:35.569Z
 
 ## GraphQL Checks
 - products: ok (ok)

@@ -1,6 +1,6 @@
 # Supabase Schema Audit
 
-- Generated at: 2026-03-16T03:00:07.438Z
+- Generated at: 2026-03-17T10:04:35.031Z
 - Supabase host: erpweaiypimorcunaimz.supabase.co
 
 ## Table Probes

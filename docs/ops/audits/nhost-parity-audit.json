@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-12T21:36:21.877Z",
+  "generatedAt": "2026-03-17T10:04:35.569Z",
   "supabaseHost": "erpweaiypimorcunaimz.supabase.co",
   "nhostDbHost": "bggcbrfwssqgflkuhgkg.db.ap-south-1.nhost.run:5432",
   "supabaseCounts": {
     "categories": 6,
     "products": 145,
     "product_specs": 145,
-    "product_images": 1478,
-    "product_slug_aliases": 704,
+    "product_images": 635,
+    "product_slug_aliases": 716,
     "business_stats_current": 1
   },
   "nhostCounts": {
@@ -44,15 +44,15 @@
     },
     {
       "table": "product_images -> product_images",
-      "supabase": 1478,
+      "supabase": 635,
       "nhost": 1478,
-      "diff": 0
+      "diff": 843
     },
     {
       "table": "product_slug_aliases -> product_slug_aliases",
-      "supabase": 704,
+      "supabase": 716,
       "nhost": 704,
-      "diff": 0
+      "diff": -12
     },
     {
       "table": "business_stats_current -> business_stats_current",
@@ -80,15 +80,15 @@
     },
     {
       "table": "product_images -> catalog_product_images",
-      "supabase": 1478,
+      "supabase": 635,
       "nhost": 1478,
-      "diff": 0
+      "diff": 843
     },
     {
       "table": "product_slug_aliases -> catalog_product_slug_aliases",
-      "supabase": 704,
+      "supabase": 716,
       "nhost": 704,
-      "diff": 0
+      "diff": -12
     }
   ],
   "graphqlChecks": [
@@ -110,39 +110,9 @@
   ],
   "sampledSlugChecks": [
     {
-      "slug": "accent-study",
-      "canonicalInNhost": true,
-      "aliasInNhost": false
-    },
-    {
-      "slug": "cabin-60x30",
-      "canonicalInNhost": true,
-      "aliasInNhost": false
-    },
-    {
-      "slug": "cabin-l-shape",
-      "canonicalInNhost": true,
-      "aliasInNhost": false
-    },
-    {
-      "slug": "classy-executive",
-      "canonicalInNhost": true,
-      "aliasInNhost": false
-    },
-    {
-      "slug": "cocoon-lounge",
-      "canonicalInNhost": true,
-      "aliasInNhost": false
-    },
-    {
-      "slug": "conference-8-seater",
-      "canonicalInNhost": true,
-      "aliasInNhost": false
-    },
-    {
-      "slug": "fluid-task",
-      "canonicalInNhost": true,
-      "aliasInNhost": false
+      "slug": "education-classroom-accent-study-chair",
+      "canonicalInNhost": false,
+      "aliasInNhost": true
     },
     {
       "slug": "fluid-x",
@@ -150,12 +120,42 @@
       "aliasInNhost": false
     },
     {
-      "slug": "oando-collaborative--cocoon-pod",
+      "slug": "oando-educational--academia",
       "canonicalInNhost": true,
       "aliasInNhost": false
     },
     {
-      "slug": "oando-collaborative--solace-pod",
+      "slug": "oando-educational--audi-chair",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-educational--classcraft",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-educational--connecta",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-educational--forma",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-educational--learnix",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-educational--magazine-rack",
+      "canonicalInNhost": true,
+      "aliasInNhost": false
+    },
+    {
+      "slug": "oando-educational--metal-bed",
       "canonicalInNhost": true,
       "aliasInNhost": false
     }

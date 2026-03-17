@@ -1,6 +1,6 @@
 # Nhost Parity Audit
 
-- Generated at: 2026-03-12T21:36:21.877Z
+- Generated at: 2026-03-17T10:04:35.569Z
 - Supabase host: erpweaiypimorcunaimz.supabase.co
 - Nhost DB host: bggcbrfwssqgflkuhgkg.db.ap-south-1.nhost.run:5432
 
@@ -8,14 +8,14 @@
 - categories -> categories: supabase=6, nhost=6, diff=0
 - products -> products: supabase=145, nhost=145, diff=0
 - product_specs -> product_specs: supabase=145, nhost=145, diff=0
-- product_images -> product_images: supabase=1478, nhost=1478, diff=0
-- product_slug_aliases -> product_slug_aliases: supabase=704, nhost=704, diff=0
+- product_images -> product_images: supabase=635, nhost=1478, diff=843
+- product_slug_aliases -> product_slug_aliases: supabase=716, nhost=704, diff=-12
 - business_stats_current -> business_stats_current: supabase=1, nhost=1, diff=0
 - categories -> catalog_categories: supabase=6, nhost=6, diff=0
 - products -> catalog_products: supabase=145, nhost=145, diff=0
 - product_specs -> catalog_product_specs: supabase=145, nhost=145, diff=0
-- product_images -> catalog_product_images: supabase=1478, nhost=1478, diff=0
-- product_slug_aliases -> catalog_product_slug_aliases: supabase=704, nhost=704, diff=0
+- product_images -> catalog_product_images: supabase=635, nhost=1478, diff=843
+- product_slug_aliases -> catalog_product_slug_aliases: supabase=716, nhost=704, diff=-12
 
 ## GraphQL Checks
 - products: ok (ok)
@@ -23,16 +23,16 @@
 - business_stats_current: ok (ok)
 
 ## Sampled Canonical Slug Checks
-- accent-study: canonicalInNhost=yes, aliasInNhost=no
-- cabin-60x30: canonicalInNhost=yes, aliasInNhost=no
-- cabin-l-shape: canonicalInNhost=yes, aliasInNhost=no
-- classy-executive: canonicalInNhost=yes, aliasInNhost=no
-- cocoon-lounge: canonicalInNhost=yes, aliasInNhost=no
-- conference-8-seater: canonicalInNhost=yes, aliasInNhost=no
-- fluid-task: canonicalInNhost=yes, aliasInNhost=no
+- education-classroom-accent-study-chair: canonicalInNhost=no, aliasInNhost=yes
 - fluid-x: canonicalInNhost=yes, aliasInNhost=no
-- oando-collaborative--cocoon-pod: canonicalInNhost=yes, aliasInNhost=no
-- oando-collaborative--solace-pod: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--academia: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--audi-chair: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--classcraft: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--connecta: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--forma: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--learnix: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--magazine-rack: canonicalInNhost=yes, aliasInNhost=no
+- oando-educational--metal-bed: canonicalInNhost=yes, aliasInNhost=no
 
 ## Sampled Alias Checks
 - education-classroom-academia -> oando-educational--academia: resolvesInNhost=yes
