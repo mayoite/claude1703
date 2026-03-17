@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-03-15T15:00:13.452Z",
+  "mode": "dry-run",
+  "offset": 0,
+  "limit": null,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 1,
+  "matched": [
+    {
+      "id": "df761f64-d564-4ce3-886b-d75bc5e96504",
+      "slug": "oando-seating--crox",
+      "name": "Crox",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "Crox is a cafe table designed for offices and lounges. The cross-base layout keeps the table steady through daily use.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [
+          "Refined Simplicity"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Refined Simplicity",
+            "body": "The Crox Café Table adds a fresh, modern touch to any café or collaborative space. Its sleek tabletop paired with a sturdy cross-base design delivers the perfect balance of style and stability for daily use."
+          },
+          {
+            "heading": "",
+            "body": "Crafted with quality detailing, it enhances comfort and visual appeal during casual meetings, coffee breaks, or shared conversations. A chic blend of modern style and inviting warmth, ideal for lively everyday settings."
+          },
+          {
+            "heading": "",
+            "body": "This product offers multiple tabletop designs and material finishes, making it highly customizable to suit various interior styles. The variety ensures you can select a top that perfectly matches your aesthetic, whether for a café, office, or home setting."
+          },
+          {
+            "heading": "",
+            "body": "The base features a simple, yet stylish, criss-cross metal base frame that provides sturdy support for the round wooden tabletop. Its open wire design ensures structural stability while maintaining a visually light and modern aesthetic."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Crox Cafe Table",
+        "sourceSlug": "crox"
+      },
+      "alt_text": "Crox Cafe Table",
+      "sourceSlug": "crox",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d309aa403d9a23a236e45_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30ab2ed461aa40f4fb81_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30ba2ed461aa40f5009d_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30cd968b318bc2b6b0fb_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30e31e966055d3ed936f_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d310a44d7b98e2e8b45e9_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ]
+    }
+  ],
+  "unmatched": []
+}

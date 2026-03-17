@@ -1,0 +1,338 @@
+[
+  {
+    "name": "Myel",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a5ea1e27650a56b2eca017_myel.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e6c8d1f0c9ec3a36402e_myel_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Flip",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_6899a8d08871a2e0d561e8c1_image_(2).png",
+      "/images/catalog/assets_placeholder.60f9b1840c.svg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Nordic",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31b13bfe5e60313f47ce4_nordic_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31b177c1f6e1027de894f_nordic_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Grace",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_694b91752b9659cee7897a61_grace_landing_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_694b917ae8eb928ca73aa6c9_grace_landing_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Sway",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a5eab3fd8ab056401d2236_sway.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e6b469d0d522d9374f4e_sway_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Snap",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_6899a84498d87ab3c05725e1_image_(1).png",
+      "/images/catalog/assets_placeholder.60f9b1840c.svg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Arvo",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_6925776c61a4fc592515c2e5_arvo_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_6925777061a4fc592515c69c_arvo_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Pinnacle",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_694bb9f48a852e39b5a472b2_pinnacle_landing_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_694bb9f7264029dae3e10e56_pinnacle_landing_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Phoenix",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68abd8ecbc2d755cc85f9227_phoenix.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e6942c6850b874c9f3dd_phoenix_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Ember",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31bd60123c0be151febb6_ember_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31bdad76c4ad32301e349_ember_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Moonlight",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_694bc1c696a177177806618c_moonlight_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_694bc1cb4c86a76f8dfce0e1_moonlight_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Fluid",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_689e5f75d028b4ddc4653dab_image_(3).png",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e6728f8548f856924b1c_fluid_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Caneva",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_69271912dc242830c5bd192e_caneva.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_69271916dc242830c5bd1bd3_caneva_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Rider",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_694bcf7d264029dae3e7d634_rider_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_694bcf8096a17717780b2a15_rider_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Fluid X",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_689e5fb9a9c228d092378d58_image_(4).png",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e6541579aa1f426713a8_fluid_x_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Crotch",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31bfd7ae2b79c77edd90d_crotch_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31c0c177dc57b2d3e9aca_crotch_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Spino",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_689e5ff19b0e0bcabb6e48ef_image_(5).png",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e631a392c76e4cdacb47_spino_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Smile",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31c34280fbf0752b6078d_smile_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31c387045f35ec944a8b0_smile_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Revoq",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_689e60898abba7a1a8d3c46c_image_(6).png",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e613667e031c13ffc64a_revoq_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Rio",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31c6cafa3213899ab816a_rio_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31c6fd9ec04942e277f9b_rio_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Flex",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_689e6149bc6ce0dfcc87218c_image_(7).png",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e5f9ae1623fcafd8f52a_flex_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Canaret",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31c938f8548f856a7f6a1_canaret_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31c96d894469092d7693c_canaret_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Logica",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_689e6183b6b2ad870cbb12d5_image_(8).png",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a2e5dabb1b4a667224668c_logica_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Brim",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_69280b87ff297e69976d3ab6_brim_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_69280b8ae5a83b56217012b6_brim_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Sullion",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a3187ab4a82e5395e600e1_sullion.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a3187fadfc2439348d8514_sullion_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Dive",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31cc1478c76ab43d196ef_dive_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31cc53600e311453077bb_dive_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Nuvic",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a318cdbbc6bed952aadb99_nuvic.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a318d3d9ec04942e25c33e_nuvic_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Wing",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31cf0d7ec67119f64d16d_wing_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31cf31ae614368cd23141_wing_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Rock",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31900c133220d935bc837_rock.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a319051c705d568f054edd_rock_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Copse",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_6928192e4a6d007934d4b4bf_copse_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_6928194c60fd57a56a6f657c_copse_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Breeze",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a3193d56916b83fc69b8e7_breeze.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31942172e85cd6ddd61e5_breeze_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Leaf",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31d2456916b83fc6b424c_leaf_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31d2741014346c6585d9d_leaf_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "X-Mesh",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a319c7adfc2439348dfc41_x_mesh.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a319ccd1f18c21d25a787f_x_mesh_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Lexus",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_692aeb4277a173215bea0157_lexus_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_692aeb4707459fa95409abb2_lexus_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Orbit",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a319f5dafd6cd106ec5943_orbit.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a319f94efd22af34df6e61_orbit_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Flare",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31d89957f8dd43671be6d_flare_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31d8c1b8d8744c7be292e_flare_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Toro",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31a2e940b87db21c355cf_toro.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31a31b454908c4aaf87de_toro_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Zilo",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31db490f077faa2376637_zilo_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31db7a0f7151158d75a52_zilo_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Fynn",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_692af3dff014edab0a0eab6d_fynn.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_692af3e311e33e59fa4fc9a6_fynn_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Caneva-High",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_692af83816126cc8ec1b69b6_caneva_h_1.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_692af717336420a74d899c14_caneva_h_2.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Lisbo",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31eb7223f7db62e3d5a4f_lisbo.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31eb7223f7db62e3d5a4f_lisbo.webp"
+    ],
+    "description": null
+  },
+  {
+    "name": "Fusion",
+    "images": [
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31eefb54dafe0b542c697_fusion.webp",
+      "/images/catalog/686d3b55385e7b905b01d3a5_68a31eefb54dafe0b542c697_fusion.webp"
+    ],
+    "description": null
+  }
+]

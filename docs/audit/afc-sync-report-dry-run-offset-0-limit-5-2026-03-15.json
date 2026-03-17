@@ -1,0 +1,302 @@
+{
+  "generatedAt": "2026-03-16T15:00:35.989Z",
+  "mode": "dry-run",
+  "offset": 0,
+  "limit": 5,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 5,
+  "matched": [
+    {
+      "id": "0d6355f9-e2f4-40b6-8e04-79e7abdbb984",
+      "slug": "oando-educational--academia",
+      "name": "Academia",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Academia is a classroom designed for schools and colleges. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "features": [
+          "Smart Storage & Stability for Learning"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Smart Storage & Stability for Learning",
+            "body": "Academia is a thoughtfully designed classroom desk that prioritizes functionality and long-lasting durability. Its high-quality MDF tabletop provides a sturdy, reliable surface suited for everyday academic use."
+          },
+          {
+            "heading": "",
+            "body": "With integrated, practical storage solutions, Academia blends style with utility effortlessly. Its clean, modern design makes it an ideal choice for contemporary learning environments."
+          },
+          {
+            "heading": "",
+            "body": "Ergonomically contoured back handle allows easy lifting and repositioning of the chair, enabling quick, effortless classroom rearrangements without strain."
+          },
+          {
+            "heading": "",
+            "body": "Integrated wire-mesh under-desk storage offers ample space for books and bags while keeping the desktop clear and the classroom neatly organized."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Academia Classroom",
+        "sourceSlug": "academia"
+      },
+      "alt_text": "Academia Classroom",
+      "sourceSlug": "academia",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946894f3a0ee1af09490d4a_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946896ec97a3dd24159e676_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946897f3cfe78289a4011f1_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946899207bf3d039acf31f1_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": []
+    },
+    {
+      "id": "23a7169a-15d6-40bc-a860-3d9bafcbf2cb",
+      "slug": "oando-educational--audi-chair",
+      "name": "Audi Chair",
+      "category_id": "education",
+      "series_name": "Auditorium",
+      "description": "Audi Chair is a auditorium designed for posture support and comfort. The chair includes dedicated head and neck support for longer work sessions.",
+      "specs": {
+        "features": [
+          "Comfort Meets Modern Design"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Comfort Meets Modern Design",
+            "body": "Designed to elevate auditorium seating, the Audi Chair combines ergonomic comfort with a sleek, modern aesthetic. Its thoughtfully contoured form ensures lasting support for extended seating."
+          },
+          {
+            "heading": "",
+            "body": "With a sturdy build engineered for durability, the Audi Chair is ideal for auditoriums and event spaces, seamlessly blending style, functionality, and long-term performance."
+          },
+          {
+            "heading": "",
+            "body": "Ergonomically designed armrest with an integrated cup holder adds comfort and convenience, enhancing the overall auditorium seating experience."
+          },
+          {
+            "heading": "",
+            "body": "Plush cushioning with a supportive headrest ensures superior comfort and ergonomic support, even during extended auditorium sessions."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Auditorium",
+        "subcategoryId": "auditorium",
+        "subcategoryLabel": "Auditorium",
+        "subcategory_slug": "auditorium",
+        "certifications": [],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Audi Chair Auditorium",
+        "sourceSlug": "audi-chair"
+      },
+      "alt_text": "Audi Chair Auditorium",
+      "sourceSlug": "audi-chair",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Auditorium",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b0f37cf9cad519f0c449_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b1037cf9cad519f0cd83_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b112e24dbcb41357cf61_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946b120710ab1be8863f239_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": []
+    },
+    {
+      "id": "d5f7634a-7ea2-41fd-8c43-f96c11f986ee",
+      "slug": "oando-educational--classcraft",
+      "name": "Classcraft",
+      "category_id": "education",
+      "series_name": "Classroom",
+      "description": "Classcraft is a classroom designed for schools and institutes.",
+      "specs": {
+        "features": [
+          "Durable & Organized for the Classroom"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Durable & Organized for the Classroom",
+            "body": "ClassCraft is an ideal classroom desk crafted to support focused learning through a durable tabletop and thoughtfully designed ergonomic features that enhance everyday comfort."
+          },
+          {
+            "heading": "",
+            "body": "Paired with a sturdy PE seat, ClassCraft provides reliable stability and long-lasting performance. Its functional design makes it perfectly suited for modern classrooms that value durability and efficiency."
+          },
+          {
+            "heading": "",
+            "body": "The ergonomically designed back handle allows effortless lifting and smooth movement of the chair, enabling quick classroom reconfiguration with minimal effort."
+          },
+          {
+            "heading": "",
+            "body": "Integrated under-desk wire basket combined with a built-in tabletop stationery holder keeps essentials organized, accessible, and the work surface clutter-free for better focus."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Classroom",
+        "subcategoryId": "classroom",
+        "subcategoryLabel": "Classroom",
+        "subcategory_slug": "classroom",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Classcraft Classroom",
+        "sourceSlug": "classcraft"
+      },
+      "alt_text": "Classcraft Classroom",
+      "sourceSlug": "classcraft",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Classroom",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c27cbfe376d7d2ecea4_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c3d869c2b69d9017734_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c4d0c012203a939f6a5_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69468c693a0ee1af0949d729_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": []
+    },
+    {
+      "id": "4933e887-6ba1-40a2-935b-ad7015651ed4",
+      "slug": "oando-educational--connecta",
+      "name": "Connecta",
+      "category_id": "education",
+      "series_name": "Library",
+      "description": "Connecta is a library designed for teamwork and shared spaces.",
+      "specs": {
+        "features": [
+          "Efficient Design for Every Library Space"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Efficient Design for Every Library Space",
+            "body": "The Connecta library table blends modern aesthetics with practical functionality, creating a refined yet purposeful presence in library environments. Its clean design complements contemporary interiors effortlessly."
+          },
+          {
+            "heading": "",
+            "body": "With a spacious surface that supports study, collaboration, and organization, Connecta is a perfect choice for libraries seeking both style and everyday efficiency."
+          },
+          {
+            "heading": "",
+            "body": "These tables can be easily connected for group activities or separated for individual use, offering flexible layouts that adapt to changing learning and collaboration needs.\\"
+          },
+          {
+            "heading": "",
+            "body": "Engineered with uniquely angled, reinforced legs, the table delivers exceptional stability and load-bearing strength, ensuring wobble-free performance even in high-use classroom and collaborative environments."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Educational",
+        "categoryIdCanonical": "education",
+        "subcategory": "Library",
+        "subcategoryId": "library",
+        "subcategoryLabel": "Library",
+        "subcategory_slug": "library",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Connecta Library",
+        "sourceSlug": "connecta"
+      },
+      "alt_text": "Connecta Library",
+      "sourceSlug": "connecta",
+      "sourceCategory": "Educational",
+      "sourceSubcategory": "Library",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946998a656037ebb7f93e64_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6946999c710ab1be885e6b94_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694699ae3bf9f92a2538c3df_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694699bfe24dbcb41353aa7b_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/689568ddcdc38c8173d24f01_678900682dc19791b6282378_EDUCATIONAL%20CATALOGUE%20-%20AFC.pdf"
+        }
+      ],
+      "sourceCertifications": []
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "education-classroom-accent-study-chair",
+      "name": "Accent Study Chair",
+      "categoryId": "education"
+    }
+  ]
+}

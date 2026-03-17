@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-03-15T13:54:57.000Z",
+  "mode": "dry-run",
+  "offset": 0,
+  "limit": null,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 1,
+  "matched": [
+    {
+      "id": "86ef7b3e-ed97-45f5-981e-a6cab2d437d4",
+      "slug": "oando-seating--fluid-x",
+      "name": "Fluid X",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Fluid X is a mesh chair designed for posture support and comfort. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "source": "afcindia.in",
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Designed for seamless support. Comfort that flows with every move"
+        ],
+        "materials": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "Overall height (including headrest): 1300 mm; Seat height (from floor): 450 mm; Headrest height: 170 mm; Armrest width: 250 mm.; Headrest width: 280 mm.; Overall height: 1020 mm; Seat headrest width : 420 mm; Overall width (base including wheels): 660 mm; Seat width: 500 mm.; Armrest width: 100 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Designed for seamless support. Comfort that flows with every move",
+            "body": "Fluid X is built for those who need their chair to keep up. With smooth adjustability and responsive features, it follows your posture—not the other way around—offering comfort that adapts with you from the first task to the last"
+          },
+          {
+            "heading": "",
+            "body": "From neck to lower back, Fluid X adapts to your body’s shape and movement—minimizing tension so your mind stays sharp"
+          },
+          {
+            "heading": "",
+            "body": "Shift the armrests to match your ideal working angle—offering relief for your arms and better alignment for your upper body"
+          },
+          {
+            "heading": "",
+            "body": "The backrest includes targeted lumbar reinforcement that adapts to your spine’s curve, reducing pressure and improving seated posture"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Overall height (including headrest): 1300 mm",
+              "Seat height (from floor): 450 mm",
+              "Headrest height: 170 mm",
+              "Armrest width: 250 mm.",
+              "Headrest width: 280 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1020 mm",
+              "Seat headrest width : 420 mm",
+              "Overall width (base including wheels): 660 mm",
+              "Seat width: 500 mm.",
+              "Armrest width: 100 mm."
+            ]
+          }
+        ],
+        "warranty_text": "Backed by our comprehensive upto 10 year warranty, ensuring lasting quality and peace of mind with every purchase.",
+        "sustainability_text": "Crafted with eco-friendly materials and sustainable practices to minimize environmental impact while maximizing durability."
+      },
+      "metadata": {
+        "source": "afcindia.in",
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": 10,
+        "ai_alt_text": "Fluid X Mesh Chair",
+        "sourceSlug": "fluid-x"
+      },
+      "alt_text": "Fluid X Mesh Chair",
+      "sourceSlug": "fluid-x",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2c179eab7b0118d4b60_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a2faf7da5d71f48bda8c_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a357fa22351df0f1a207_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8a39d44f677337b4be24e_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ]
+    }
+  ],
+  "unmatched": []
+}

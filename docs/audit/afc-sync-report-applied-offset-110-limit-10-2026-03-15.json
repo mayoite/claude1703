@@ -1,0 +1,902 @@
+{
+  "generatedAt": "2026-03-15T14:58:01.589Z",
+  "mode": "apply",
+  "offset": 110,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "b608865e-45c7-4d74-946c-89351009c4c9",
+      "slug": "oando-tables--apex",
+      "name": "Apex",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Apex is a cabin table designed for professional and corporate cabins.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "The Pinnacle of Power"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "1350 L X 450 D X 600 HT (With Top 1650 L); 1500 L X 450 D X 600 HT (With Top 1950 L); 1650 L X 450 D X 600 HT (With Top 2100 L); L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H – 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "The Pinnacle of Power",
+            "body": "Apex embodies the summit of executive design, merging architectural form with purposeful functionality. Its strong proportions and refined materials command attention, creating a workspace that radiates confidence and presence"
+          },
+          {
+            "heading": "",
+            "body": "Engineered with precision to integrate technology and tools seamlessly, Apex is crafted for leaders who value both performance and prestige—turning every decision into a statement of authority and vision"
+          },
+          {
+            "heading": "",
+            "body": "Adjustable height settings enable effortless sit-stand transitions, enhancing posture, comfort, and productivity"
+          },
+          {
+            "heading": "",
+            "body": "Streamlined cable organization keeps your workspace neat, efficient, and easy to maintain"
+          },
+          {
+            "heading": "",
+            "body": "A sleek yet sturdy leg structure built for strength, style, and lasting performance in modern executive environments"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side/Rear Storage",
+            "lines": [
+              "1350 L X 450 D X 600 HT (With Top 1650 L)",
+              "1500 L X 450 D X 600 HT (With Top 1950 L)",
+              "1650 L X 450 D X 600 HT (With Top 2100 L)"
+            ]
+          },
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "L1 – 1500/ 1650 / 1800 / 1950 / 2100",
+              "D1- 600 / 750 / 900",
+              "L2 - 900/ 1050/ 1200",
+              "D2 – 450 / 600",
+              "H – 750"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Apex Cabin Table",
+        "sourceSlug": "apex"
+      },
+      "alt_text": "Apex Cabin Table",
+      "sourceSlug": "apex",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690211e2436a9869471cdbf9_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690212109731ea7c38ab905d_SCROLL%20IMAGE%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--apex/image-1.webp",
+        "/images/catalog/oando-tables--apex/image-2.webp"
+      ]
+    },
+    {
+      "id": "dde10387-56a0-4d9f-8a73-cbde24e2356b",
+      "slug": "oando-tables--consulate",
+      "name": "Consulate",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Consulate is a cabin table designed for cabins and leadership spaces. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "Deﬁned Presence"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "1500 L X 450 D X 750 HT (With Top 1950 L); 1650 L X 450 D X 750 HT (With Top 2100 L); L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H - 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Deﬁned Presence",
+            "body": "Consulate defines modern leadership through bold contrasts and precise geometry. Deep charcoal tones meet warm wood accents, creating a commanding visual balance that reflects strength and sophistication"
+          },
+          {
+            "heading": "",
+            "body": "With integrated storage and purposeful design, it embodies clarity, confidence, and control—crafted for leaders who believe presence is as powerful as performance"
+          },
+          {
+            "heading": "",
+            "body": "Thoughtfully designed compartments keep essentials within reach, ensuring effortless organization"
+          },
+          {
+            "heading": "",
+            "body": "Integrated power access for seamless connectivity and uninterrupted workflow"
+          },
+          {
+            "heading": "",
+            "body": "Multiple finish choices to personalize your workspace with elegance and authority"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side/Rear Storage",
+            "lines": [
+              "1500 L X 450 D X 750 HT (With Top 1950 L)",
+              "1650 L X 450 D X 750 HT (With Top 2100 L)"
+            ]
+          },
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "L1 – 1500/ 1650 / 1800 / 1950 / 2100",
+              "D1- 600 / 750 / 900",
+              "L2 - 900/ 1050/ 1200",
+              "D2 – 450 / 600",
+              "H - 750"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Consulate Cabin Table",
+        "sourceSlug": "consulate"
+      },
+      "alt_text": "Consulate Cabin Table",
+      "sourceSlug": "consulate",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69021190cced328ab36fe26b_CONSULATE%20VIEW%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69021170c45aa5002b950d9a_CONSULATE%20VIEW%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690211b2b12828e7805b3017_FEATURE%20IMAGE%20TABLE.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--consulate/image-1.webp",
+        "/images/catalog/oando-tables--consulate/image-2.webp",
+        "/images/catalog/oando-tables--consulate/image-3.webp"
+      ]
+    },
+    {
+      "id": "75a70cf3-878f-48d7-a3b0-69fa10c48af9",
+      "slug": "oando-tables--convene",
+      "name": "Convene",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "Convene is a cafe table designed for conference rooms.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [
+          "Functional Style"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Functional Style",
+            "body": "The Convene Table is a versatile pick for offices, cafés, and home workspaces. Its clean, modern design pairs seamlessly with any setting, offering a functional surface for meetings, casual discussions, or everyday tasks."
+          },
+          {
+            "heading": "",
+            "body": "Built with a sturdy pole base that sits flush with the floor, it ensures stability while preventing trip hazards. This thoughtful design blends safety with style, making it a practical and elegant addition to any environment."
+          },
+          {
+            "heading": "",
+            "body": "The tables are supported by a range of stylish bases, including clean, square metallic pedestals and minimalist, four-point star-shaped metallic feet, offering exceptional stability and a modern industrial or contemporary look."
+          },
+          {
+            "heading": "",
+            "body": "Choose from a variety of tabletop designs, including round, square, and rectangular shapes, available in diverse finishes like light wood, dark wood, white, solid colors, and patterned marble effect."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Convene Cafe Table",
+        "sourceSlug": "convene"
+      },
+      "alt_text": "Convene Cafe Table",
+      "sourceSlug": "convene",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ab90b8d1f1ca10c476b4a_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ab9220cfcf9cc156c52e4_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ab9371b29812a12dec1ba_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ab94bdfd44f46a83ce962_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--convene/image-1.webp",
+        "/images/catalog/oando-tables--convene/image-2.webp",
+        "/images/catalog/oando-tables--convene/image-3.webp",
+        "/images/catalog/oando-tables--convene/image-4.webp"
+      ]
+    },
+    {
+      "id": "28b502b8-8c93-447c-bbfa-b4d36b19ca0a",
+      "slug": "oando-tables--convesso",
+      "name": "Convesso",
+      "category_id": "tables",
+      "series_name": "Meeting Tables",
+      "description": "Convesso is a meeting table designed for meeting rooms.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Meeting Tables",
+        "features": [
+          "Strength in Simplicity"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "BOARDROOMTABLE (Gable End Based); L : 3150/4300/4500/4800/5400; D : 1200/1500; H : 750; MEETING TABLE(Gable End Based); L : 1500/1800/2400; D :1050/1200; H : 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Strength in Simplicity",
+            "body": "AFC’s Convesso conference table redefines balance with its bold gable-end base and streamlined design. The structure exudes confidence, blending stability with a refined modern aesthetic that commands attention."
+          },
+          {
+            "heading": "",
+            "body": "Crafted for dynamic discussions and decision-making, its robust build ensures long-lasting performance. Convesso transforms every meeting space into a zone of focus, collaboration, and understated sophistication."
+          },
+          {
+            "heading": "",
+            "body": "Parallel square legs ensure superior strength, stability, and ample legroom for a comfortable meeting experience."
+          },
+          {
+            "heading": "",
+            "body": "Smart fliptop access keeps cables tidy and hidden, maintaining a clean, professional workspace."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Convesso",
+            "lines": [
+              "BOARDROOMTABLE (Gable End Based)",
+              "L : 3150/4300/4500/4800/5400",
+              "D : 1200/1500",
+              "H : 750",
+              "MEETING TABLE(Gable End Based)",
+              "L : 1500/1800/2400",
+              "D :1050/1200",
+              "H : 750"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Meeting Tables",
+        "subcategoryId": "meeting",
+        "subcategoryLabel": "Meeting Tables",
+        "subcategory_slug": "meeting-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Convesso Meeting Table",
+        "sourceSlug": "convesso"
+      },
+      "alt_text": "Convesso Meeting Table",
+      "sourceSlug": "convesso",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Meeting Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b3627f3cd865d0076ea9_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b37f5f3479964611a6af_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b3975f3479964611baae_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b3b2af989cafc35d7f87_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b3c8230e5b5a166fc59f_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--convesso/image-1.webp",
+        "/images/catalog/oando-tables--convesso/image-2.webp",
+        "/images/catalog/oando-tables--convesso/image-3.webp",
+        "/images/catalog/oando-tables--convesso/image-4.webp",
+        "/images/catalog/oando-tables--convesso/image-5.webp"
+      ]
+    },
+    {
+      "id": "b54d96dd-6c81-4127-ab92-0e6ec7d5cc11",
+      "slug": "oando-tables--crest",
+      "name": "Crest",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Crest is a cabin table designed for leadership spaces. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "Modern Gravitas"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "2250 x 600 x 600 H; 2400 x 600 x 600 H; 2400 x 600 x 600 H; 2100 x 1050 x 750 H; 2250 x 1200 x 750 H; 2400 x 1200 x 750 H",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Modern Gravitas",
+            "body": "Crest brings together modern design and practical functionality with effortless poise. Its asymmetric leg and extended side storage create a distinctive silhouette that exudes both strength and elegance"
+          },
+          {
+            "heading": "",
+            "body": "Thoughtfully integrated with a spacious credenza, Crest offers seamless organization while its wooden top and subtle finishes add warmth and sophistication to the contemporary executive space"
+          },
+          {
+            "heading": "",
+            "body": "A bold and sturdy structure that stands out, combining design aesthetics with executive strength"
+          },
+          {
+            "heading": "",
+            "body": "Integrated smartly within the tabletop for a clutter-free and efficient workspace"
+          },
+          {
+            "heading": "",
+            "body": "Thoughtfully designed side and back units provide generous space for essentials, keeping the workspace neat and organized"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "SIDE UNIT",
+            "lines": [
+              "2250 x 600 x 600 H",
+              "2400 x 600 x 600 H",
+              "2400 x 600 x 600 H"
+            ]
+          },
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "2100 x 1050 x 750 H",
+              "2250 x 1200 x 750 H",
+              "2400 x 1200 x 750 H"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Crest Cabin Table",
+        "sourceSlug": "crest"
+      },
+      "alt_text": "Crest Cabin Table",
+      "sourceSlug": "crest",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690328ba065f0cb48ac6382b_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690328db536768940a06714e_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690328fa2061a0b2ae32cab3_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--crest/image-1.webp",
+        "/images/catalog/oando-tables--crest/image-2.webp",
+        "/images/catalog/oando-tables--crest/image-3.webp"
+      ]
+    },
+    {
+      "id": "df761f64-d564-4ce3-886b-d75bc5e96504",
+      "slug": "oando-seating--crox",
+      "name": "Crox",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "Crox is a cafe table designed for offices and lounges. The cross-base layout keeps the table steady through daily use.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [
+          "Refined Simplicity"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Refined Simplicity",
+            "body": "The Crox Café Table adds a fresh, modern touch to any café or collaborative space. Its sleek tabletop paired with a sturdy cross-base design delivers the perfect balance of style and stability for daily use."
+          },
+          {
+            "heading": "",
+            "body": "Crafted with quality detailing, it enhances comfort and visual appeal during casual meetings, coffee breaks, or shared conversations. A chic blend of modern style and inviting warmth, ideal for lively everyday settings."
+          },
+          {
+            "heading": "",
+            "body": "This product offers multiple tabletop designs and material finishes, making it highly customizable to suit various interior styles. The variety ensures you can select a top that perfectly matches your aesthetic, whether for a café, office, or home setting."
+          },
+          {
+            "heading": "",
+            "body": "The base features a simple, yet stylish, criss-cross metal base frame that provides sturdy support for the round wooden tabletop. Its open wire design ensures structural stability while maintaining a visually light and modern aesthetic."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Crox Cafe Table",
+        "sourceSlug": "crox"
+      },
+      "alt_text": "Crox Cafe Table",
+      "sourceSlug": "crox",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d309aa403d9a23a236e45_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30ab2ed461aa40f4fb81_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30ba2ed461aa40f5009d_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30cd968b318bc2b6b0fb_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d30e31e966055d3ed936f_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d310a44d7b98e2e8b45e9_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--crox/image-1.webp",
+        "/images/catalog/oando-seating--crox/image-2.webp",
+        "/images/catalog/oando-seating--crox/image-3.webp",
+        "/images/catalog/oando-seating--crox/image-4.webp",
+        "/images/catalog/oando-seating--crox/image-5.webp",
+        "/images/catalog/oando-seating--crox/image-6.webp"
+      ]
+    },
+    {
+      "id": "028deec5-f057-4c2d-b714-ba682a25eb46",
+      "slug": "oando-tables--curvivo-meet",
+      "name": "Curvivo-Meet",
+      "category_id": "tables",
+      "series_name": "Meeting Tables",
+      "description": "Curvivo-Meet is a meeting table designed for offices and training rooms.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Meeting Tables",
+        "features": [
+          "Contemporary Form"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "DISCUSSIONTABLE; Dia – 900 /1050 / 1200; H - 750; MEETINGTABLE; L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250; D – 600 /750 / 900 / 1050 / 1200; H - 750; CONFERENCETABLE; L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750; D - 1200 /1500; H - 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Curvivo",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Contemporary Form",
+            "body": "The Curvivo series is engineered to deliver both strength and visual appeal, offering a dependable foundation for any workspace. Its robust construction ensures long-lasting performance and everyday stability."
+          },
+          {
+            "heading": "",
+            "body": "With its distinctive bridge-style design, Curvivo becomes a striking focal point in modern office settings. Blending structure with elegance, it enhances the overall aesthetic while supporting a high-functioning work environment."
+          },
+          {
+            "heading": "",
+            "body": "Strong, elegant legs that ensure reliable support and a refined look."
+          },
+          {
+            "heading": "",
+            "body": "Keeps cables concealed and organized for a clean, efficient workspace."
+          },
+          {
+            "heading": "",
+            "body": "Smooth, stylish edges that elevate comfort and add a modern visual appeal."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "CURVIVO MEET 3",
+            "lines": [
+              "DISCUSSIONTABLE",
+              "Dia – 900 /1050 / 1200",
+              "H - 750"
+            ]
+          },
+          {
+            "heading": "CURVIVO MEET 2",
+            "lines": [
+              "MEETINGTABLE",
+              "L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250",
+              "D – 600 /750 / 900 / 1050 / 1200",
+              "H - 750"
+            ]
+          },
+          {
+            "heading": "CURVIVO MEET 1",
+            "lines": [
+              "CONFERENCETABLE",
+              "L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750",
+              "D - 1200 /1500",
+              "H - 750"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Meeting Tables",
+        "subcategoryId": "meeting",
+        "subcategoryLabel": "Meeting Tables",
+        "subcategory_slug": "meeting-tables",
+        "certifications": [
+          "Curvivo",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Curvivo-Meet Meeting Table",
+        "sourceSlug": "curvivo-meet"
+      },
+      "alt_text": "Curvivo-Meet Meeting Table",
+      "sourceSlug": "curvivo-meet",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Meeting Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcf6400c58169232975b7_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcf7afd00c989971ef806_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcf8bfd00c989971f0642_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcf9c92bb3d483c328be5_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bcfaf00c581692329a49d_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a710aa7030e6306ec1acb_SCROLL%20IMAGE%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Curvivo",
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--curvivo-meet/image-1.webp",
+        "/images/catalog/oando-tables--curvivo-meet/image-2.webp",
+        "/images/catalog/oando-tables--curvivo-meet/image-3.webp",
+        "/images/catalog/oando-tables--curvivo-meet/image-4.webp",
+        "/images/catalog/oando-tables--curvivo-meet/image-5.webp",
+        "/images/catalog/oando-tables--curvivo-meet/image-6.webp"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "tables-meeting-cabin-60-30",
+      "name": "Cabin 60×30",
+      "categoryId": "tables"
+    },
+    {
+      "slug": "tables-meeting-cabin-l-shape",
+      "name": "Cabin L-Shape",
+      "categoryId": "tables"
+    },
+    {
+      "slug": "tables-meeting-conference-table-8-seater",
+      "name": "Conference Table 8-Seater",
+      "categoryId": "tables"
+    }
+  ]
+}

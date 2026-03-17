@@ -1,0 +1,978 @@
+{
+  "generatedAt": "2026-03-15T14:57:17.994Z",
+  "mode": "apply",
+  "offset": 70,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "789c4f7d-aaae-4296-8dba-56e18e3b8dba",
+      "slug": "oando-soft-seating--cove",
+      "name": "Cove",
+      "category_id": "soft-seating",
+      "series_name": "Collaborative",
+      "description": "Cove is a collaborative designed for waiting areas and offices.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Collaborative",
+        "features": [
+          "Versatile Seating for Dynamic Spaces"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Versatile Seating for Dynamic Spaces",
+            "body": "The COVE collection presents a modular seating landscape designed for effortless customization. With versatile upholstery combinations and modern aesthetics, it enables dynamic lounge, waiting, and work environments across co-working spaces, libraries, and public areas."
+          },
+          {
+            "heading": "",
+            "body": "Designed with smart functionality, select modules include electrifiable side tables for device charging. Options with casters, handles, and integrated writing tablets allow easy movement and seamless collaboration in evolving work settings."
+          },
+          {
+            "heading": "",
+            "body": "Small easy chairs and sofas with single or dual-colour upholstery offer a customised look and enhanced comfort, while adaptable configurations allow both compact and expansive seating arrangements to suit diverse space requirements."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Collaborative",
+        "subcategoryId": "collaborative",
+        "subcategoryLabel": "Collaborative",
+        "subcategory_slug": "collaborative",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Cove Collaborative",
+        "sourceSlug": "cove"
+      },
+      "alt_text": "Cove Collaborative",
+      "sourceSlug": "cove",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Collaborative",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467c313a0ee1af094605f3_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467c448c6d39641af4ea92_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467c54581b5f851c42c312_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467c6307bf3d039acdc14e_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467c70581b5f851c42cf55_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69467c7ee8b446e8f7962e28_SECTION%203-SCROLL%20IMAGES%2011.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--cove/image-1.webp",
+        "/images/catalog/oando-soft-seating--cove/image-2.webp",
+        "/images/catalog/oando-soft-seating--cove/image-3.webp",
+        "/images/catalog/oando-soft-seating--cove/image-4.webp",
+        "/images/catalog/oando-soft-seating--cove/image-5.webp",
+        "/images/catalog/oando-soft-seating--cove/image-6.webp"
+      ]
+    },
+    {
+      "id": "310d70b7-6b03-4d9d-bf44-06e6d75d4175",
+      "slug": "oando-soft-seating--covea",
+      "name": "Covea",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Covea is a lounge designed for offices.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Sculpted Simplicity with Balanced Comfort"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 820 mm Seat Height: 450 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Sculpted Simplicity with Balanced Comfort",
+            "body": "Covea distils the lounge chair to its purest form, defined by clean contours and measured proportions. Its sculpted shell creates a smooth, enveloping shape that blends comfort seamlessly with modern design. Ideal for both quiet corners and active environments, it brings refined simplicity to any space."
+          },
+          {
+            "heading": "",
+            "body": "Its thoughtful structure ensures comfort without compromising elegance, making it suitable for private offices, collaborative zones, and lounge settings. Designed for versatility, it elevates any interior with understated sophistication."
+          },
+          {
+            "heading": "",
+            "body": "The flowing silhouette merges the armrests and backrest into one continuous, contoured form that supports the body naturally and enhances comfort during long sitting."
+          },
+          {
+            "heading": "",
+            "body": "High-density cushioning delivers lasting comfort with a refined, luxe feel, while a wide selection of color and finish options ensures a perfect fit for any interior style or space."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Covea",
+            "lines": [
+              "Overall Height: 820 mm Seat Height: 450 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Covea Lounge",
+        "sourceSlug": "covea"
+      },
+      "alt_text": "Covea Lounge",
+      "sourceSlug": "covea",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d3863268465e2cbdd4f11_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d387aec81a2f15100784e_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d39cbb51e3bee223d54a4_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d39dc935bc1386be9d7fd_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d39eaec81a2f15100f880_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d39f8ec81a2f15100fdd5_IMG%207.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--covea/image-1.webp",
+        "/images/catalog/oando-soft-seating--covea/image-2.webp",
+        "/images/catalog/oando-soft-seating--covea/image-3.webp",
+        "/images/catalog/oando-soft-seating--covea/image-4.webp",
+        "/images/catalog/oando-soft-seating--covea/image-5.webp",
+        "/images/catalog/oando-soft-seating--covea/image-6.webp"
+      ]
+    },
+    {
+      "id": "713521ea-af2c-4a99-88be-f641ada9a642",
+      "slug": "oando-soft-seating--cozy",
+      "name": "Cozy",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Cozy is a lounge designed for relaxed office spaces and waiting areas.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Sculpted Comfort with Inviting Warmth"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Depth (Side View): 840 mm Seat Height: 450 mm; Overall Width (Front View): 850 mm Overall Height: 1050 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Sculpted Comfort with Inviting Warmth",
+            "body": "The Cozy Soft Seating chair blends sculpted curves with plush upholstery to create a warm, welcoming silhouette. Its enveloping form offers generous comfort, making it an ideal retreat for relaxation. Designed to be both stylish and inviting, it enhances the ambiance of modern and classic interiors alike."
+          },
+          {
+            "heading": "",
+            "body": "Paired with a matching ottoman, Cozy encourages complete relaxation, allowing users to unwind effortlessly. The combination of supportive cushioning and a harmonious, flowing form adds a refined touch to lounges, reading nooks, and premium living spaces."
+          },
+          {
+            "heading": "",
+            "body": "The dramatic sculpted back wraps around the user, creating a private, cocoon-like seating experience that enhances comfort and visual impact in any space."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Cozy",
+            "lines": [
+              "Overall Depth (Side View): 840 mm Seat Height: 450 mm",
+              "Overall Width (Front View): 850 mm Overall Height: 1050 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Cozy Lounge",
+        "sourceSlug": "cozy"
+      },
+      "alt_text": "Cozy Lounge",
+      "sourceSlug": "cozy",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d3c822ed461aa40fb818b_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d3c94469e703371a87c8e_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d3ca6ec81a2f151017e30_IMG1.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d3cb4b07ab3b08c0f640d_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d3cc4add050d7813d12b0_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--cozy/image-1.webp",
+        "/images/catalog/oando-soft-seating--cozy/image-2.webp",
+        "/images/catalog/oando-soft-seating--cozy/image-3.webp",
+        "/images/catalog/oando-soft-seating--cozy/image-4.webp",
+        "/images/catalog/oando-soft-seating--cozy/image-5.webp"
+      ]
+    },
+    {
+      "id": "0f0d00a4-3bc2-4a79-b450-cb064b929a0e",
+      "slug": "oando-soft-seating--crossa",
+      "name": "Crossa",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Crossa is a lounge built for commercial interiors. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Timeless Warmth"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Width (Front View): 650 mm; Seat Width (Clear): 600 mm; Seat Height: 400 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Timeless Warmth",
+            "body": "Crossa Soft Seating blends timeless craftsmanship with clean, modern simplicity. Its solid wood frame, smooth lines, and tapered legs introduce natural warmth and elegance to any interior. The design balances form and function, making it a refined addition to both contemporary and casual spaces."
+          },
+          {
+            "heading": "",
+            "body": "Featuring signature cross hatch rope detailing, Crossa adds a tactile, handcrafted appeal that enhances its visual character. Plush upholstered cushions provide inviting comfort, perfect for relaxed moments or collaborative settings. Versatile and welcoming, it transitions effortlessly between lounges, work zones, and social spaces."
+          },
+          {
+            "heading": "",
+            "body": "The intricate rope lattice adds a unique artisanal character while offering flexible lumbar support, creating a perfect blend of style and comfort."
+          },
+          {
+            "heading": "",
+            "body": "The thick, soft seat and back cushions deliver exceptional comfort, with removable upholstery that makes cleaning and maintenance effortless."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "CROSSA",
+            "lines": [
+              "Overall Width (Front View): 650 mm",
+              "Seat Width (Clear): 600 mm",
+              "Seat Height: 400 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Crossa Lounge",
+        "sourceSlug": "crossa"
+      },
+      "alt_text": "Crossa Lounge",
+      "sourceSlug": "crossa",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf0a7e6a944a94d86501c_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf0b9ca054238df20b115_img%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf0cb8981817b7231305a_img%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf0dbe6a944a94d866e7c_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bf1ad38eacb9d0489938c_IMG%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--crossa/image-1.webp",
+        "/images/catalog/oando-soft-seating--crossa/image-2.webp",
+        "/images/catalog/oando-soft-seating--crossa/image-3.webp",
+        "/images/catalog/oando-soft-seating--crossa/image-4.webp",
+        "/images/catalog/oando-soft-seating--crossa/image-5.webp"
+      ]
+    },
+    {
+      "id": "e2d0ba62-12b0-40ca-8dc8-bb03ad311e93",
+      "slug": "oando-soft-seating--eclips",
+      "name": "Eclips",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Eclips is a lounge designed for premium workspaces. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Posture Perfect"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Width (Top View): 806 mm Overall Depth (Side View): 780 mm Seat Depth: 450 mm; Overall Height: 780 mm Seat Height: 450 mm; Base Width:560 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Posture Perfect",
+            "body": "Eclipse Soft Seating is designed with an ergonomic backrest that provides excellent lumbar support, helping maintain proper posture throughout long sitting periods. Its thoughtfully contoured shape reduces strain and enhances overall comfort, making it ideal for workspaces, lounges, and collaborative zones."
+          },
+          {
+            "heading": "",
+            "body": "With plush cushioned seating and a soft, supportive backrest, Eclipse ensures long lasting comfort for extended use."
+          },
+          {
+            "heading": "",
+            "body": "The rounded, enveloping seat design hugs the body, providing exceptional ergonomic comfort and a relaxed lounge experience."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple finishes to match any interior palette and design mood."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Eclipse",
+            "lines": [
+              "Overall Width (Top View): 806 mm Overall Depth (Side View): 780 mm Seat Depth: 450 mm",
+              "Overall Height: 780 mm Seat Height: 450 mm",
+              "Base Width:560 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Eclips Lounge",
+        "sourceSlug": "eclips"
+      },
+      "alt_text": "Eclips Lounge",
+      "sourceSlug": "eclips",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bfdaba3e23ef9ba693092_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bfdbb6a25c5e0dd632da3_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bfdca9fac24339bd91a24_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693bfd91ca054238df25c620_IMG%201.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--eclips/image-1.webp",
+        "/images/catalog/oando-soft-seating--eclips/image-2.webp",
+        "/images/catalog/oando-soft-seating--eclips/image-3.webp",
+        "/images/catalog/oando-soft-seating--eclips/image-4.webp"
+      ]
+    },
+    {
+      "id": "3d8f1253-0663-4af3-9ad7-70938dd3857a",
+      "slug": "oando-soft-seating--embrace",
+      "name": "Embrace",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Embrace is a lounge designed for teamwork and shared workspaces. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Tailored Ergonomics"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height (Front View): 750 mm Seat Height: 450 mm; Overall Height (Side View): 600 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Tailored Ergonomics",
+            "body": "Embrace Soft Seating features a beautifully sculpted silhouette designed to deliver both style and ergonomic performance. Its contoured backrest provides natural lumbar support, ensuring comfort during long periods of sitting."
+          },
+          {
+            "heading": "",
+            "body": "Refined detailing and a sleek modern frame allow Embrace to fit seamlessly across workspaces, lounges, and collaborative zones. Lightweight in appearance yet supportive in function, it transitions effortlessly between settings."
+          },
+          {
+            "heading": "",
+            "body": "The armrests flow seamlessly into the seat shell, offering natural arm support while creating a warm, inviting silhouette ideal for lounges and breakout spaces."
+          },
+          {
+            "heading": "",
+            "body": "The PU mould, rounded cushion provides exceptional sitting comfort with long-lasting foam resilience, making it perfect for extended use without fatigue."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Embrace",
+            "lines": [
+              "Overall Height (Front View): 750 mm Seat Height: 450 mm",
+              "Overall Height (Side View): 600 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Embrace Lounge",
+        "sourceSlug": "embrace"
+      },
+      "alt_text": "Embrace Lounge",
+      "sourceSlug": "embrace",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c08498423b1bfbc8c056a_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c085ea6eeb2ed21ce9cbb_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c0873585c2115caa644ea_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c0883e2942f393d68a44d_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c089857a7aad3782e2efd_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--embrace/image-1.webp",
+        "/images/catalog/oando-soft-seating--embrace/image-2.webp",
+        "/images/catalog/oando-soft-seating--embrace/image-3.webp",
+        "/images/catalog/oando-soft-seating--embrace/image-4.webp",
+        "/images/catalog/oando-soft-seating--embrace/image-5.webp"
+      ]
+    },
+    {
+      "id": "13f1cbda-1359-458b-9e0b-6ca413841b7f",
+      "slug": "oando-soft-seating--esmor",
+      "name": "Esmor",
+      "category_id": "soft-seating",
+      "series_name": "Sofa",
+      "description": "Esmor is a sofa designed for stylish and functional workspaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Sofa",
+        "features": [
+          "Bold Geometry with Modular Flexibility"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Bold Geometry with Modular Flexibility",
+            "body": "Esmor’s modular seating brings a bold, structured look defined by crisp geometry and tactile fabric finishes. Its sleek profile adds a refined, contemporary edge to any interior setting."
+          },
+          {
+            "heading": "",
+            "body": "Supported by slim metal framing, Esmor adapts easily to different spatial needs. Its versatile layout transitions effortlessly across collaborative zones, reception areas, and informal meeting spaces.."
+          },
+          {
+            "heading": "",
+            "body": "High-quality upholstery paired with precise, timeless stitching delivers a sophisticated finish and long-lasting durability. The fine detailing enhances both comfort and visual appeal, maintaining a premium look even with everyday use."
+          },
+          {
+            "heading": "",
+            "body": "Crafted with robust metal legs, the design ensures excellent stability and strength while adding a sleek, contemporary touch. The elevated form enhances durability and complements modern workspace and lounge aesthetics."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Sofa",
+        "subcategoryId": "sofa",
+        "subcategoryLabel": "Sofa",
+        "subcategory_slug": "sofa",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Esmor Sofa",
+        "sourceSlug": "esmor"
+      },
+      "alt_text": "Esmor Sofa",
+      "sourceSlug": "esmor",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Sofa",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d4c26f38159f3d8094942_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d4c4c1a4847eadd03f8e4_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d4c5c25857ada2eff6662_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d4c6e343726cfdf7ea09b_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d4c86469e703371aca5a0_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--esmor/image-1.webp",
+        "/images/catalog/oando-soft-seating--esmor/image-2.webp",
+        "/images/catalog/oando-soft-seating--esmor/image-3.webp",
+        "/images/catalog/oando-soft-seating--esmor/image-4.webp",
+        "/images/catalog/oando-soft-seating--esmor/image-5.webp"
+      ]
+    },
+    {
+      "id": "462e0cd8-3e16-436d-86b5-0346c7d1971d",
+      "slug": "oando-soft-seating--halo",
+      "name": "Halo",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Halo is a lounge designed for superior comfort and posture support.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Geometric Balance"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 800 mm Seat Height: 450 mm; Overall Depth (Side View): 800 mm Backrest Height (Side): 592 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Geometric Balance",
+            "body": "Halo Soft Seating is defined by its smooth, rounded silhouette and clean geometric form, creating a calming visual identity. Its enveloping shell shapes space with a subtle, quiet presence while offering a sense of comfort and containment"
+          },
+          {
+            "heading": "",
+            "body": "With its open, accessible form, Halo encourages natural movement and relaxed posture, making it ideal for collaborative interactions as well as retreat-style settings."
+          },
+          {
+            "heading": "",
+            "body": "The smooth, wraparound shell offers a cozy, supportive seating experience, naturally hugging the user for enhanced comfort in lounge and meeting settings."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Halo",
+            "lines": [
+              "Overall Height: 800 mm Seat Height: 450 mm",
+              "Overall Depth (Side View): 800 mm Backrest Height (Side): 592 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Halo Lounge",
+        "sourceSlug": "halo"
+      },
+      "alt_text": "Halo Lounge",
+      "sourceSlug": "halo",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c10663ea391d1f1c12919_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1077fece0edee8f1ebaf_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c108ea6a91836cde1b45d_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c109da6a91836cde1bf50_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c10b0247cba5916e3191b_IMG%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--halo/image-1.webp",
+        "/images/catalog/oando-soft-seating--halo/image-2.webp",
+        "/images/catalog/oando-soft-seating--halo/image-3.webp",
+        "/images/catalog/oando-soft-seating--halo/image-4.webp",
+        "/images/catalog/oando-soft-seating--halo/image-5.webp"
+      ]
+    },
+    {
+      "id": "3b3827c9-36b3-4021-a969-018ae1061886",
+      "slug": "oando-seating--halo",
+      "name": "Halo",
+      "category_id": "soft-seating",
+      "series_name": "Lounge",
+      "description": "Halo is a lounge designed for superior comfort and posture support.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "features": [
+          "Geometric Balance"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 800 mm Seat Height: 450 mm; Overall Depth (Side View): 800 mm Backrest Height (Side): 592 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Geometric Balance",
+            "body": "Halo Soft Seating is defined by its smooth, rounded silhouette and clean geometric form, creating a calming visual identity. Its enveloping shell shapes space with a subtle, quiet presence while offering a sense of comfort and containment"
+          },
+          {
+            "heading": "",
+            "body": "With its open, accessible form, Halo encourages natural movement and relaxed posture, making it ideal for collaborative interactions as well as retreat-style settings."
+          },
+          {
+            "heading": "",
+            "body": "The smooth, wraparound shell offers a cozy, supportive seating experience, naturally hugging the user for enhanced comfort in lounge and meeting settings."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Halo",
+            "lines": [
+              "Overall Height: 800 mm Seat Height: 450 mm",
+              "Overall Depth (Side View): 800 mm Backrest Height (Side): 592 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Lounge",
+        "subcategoryId": "lounge",
+        "subcategoryLabel": "Lounge",
+        "subcategory_slug": "lounge",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Halo Lounge",
+        "sourceSlug": "halo"
+      },
+      "alt_text": "Halo Lounge",
+      "sourceSlug": "halo",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Lounge",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c10663ea391d1f1c12919_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c1077fece0edee8f1ebaf_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c108ea6a91836cde1b45d_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c109da6a91836cde1bf50_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693c10b0247cba5916e3191b_IMG%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--halo/image-1.webp",
+        "/images/catalog/oando-seating--halo/image-2.webp",
+        "/images/catalog/oando-seating--halo/image-3.webp",
+        "/images/catalog/oando-seating--halo/image-4.webp",
+        "/images/catalog/oando-seating--halo/image-5.webp"
+      ]
+    },
+    {
+      "id": "49be7f1d-908f-4bf9-b77c-c8c65a9caf6b",
+      "slug": "oando-soft-seating--hush",
+      "name": "Hush",
+      "category_id": "soft-seating",
+      "series_name": "Sofa",
+      "description": "Hush is a sofa designed for privacy and focused workspaces.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Sofa",
+        "features": [
+          "Subtle Statement"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "01 SEATER Size - 850 X800 X450-750 H MM; 02 SEATER Size - 1500 X800 X450-750 H MM; 03 SEATER Size - 2000 X800 X450-750 H MM",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Subtle Statement",
+            "body": "Hush brings refined simplicity to modern workspaces with its precisely tufted backrest and clean architectural lines. Designed for focused work as well as casual collaboration, it introduces a sense of calm productivity to any environment."
+          },
+          {
+            "heading": "",
+            "body": "Its premium build and thoughtful proportions ensure comfort and durability in high use commercial settings. With a balanced blend of style and function, Hush offers lasting performance across contemporary office and lounge spaces."
+          },
+          {
+            "heading": "",
+            "body": "The sofa set features a classic tufted back paired with clean, straight arms, giving it a refined mid-century aesthetic. Its structured silhouette adds sophistication while blending seamlessly into modern interiors."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Hush",
+            "lines": [
+              "01 SEATER Size - 850 X800 X450-750 H MM",
+              "02 SEATER Size - 1500 X800 X450-750 H MM",
+              "03 SEATER Size - 2000 X800 X450-750 H MM"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Sofa",
+        "subcategoryId": "sofa",
+        "subcategoryLabel": "Sofa",
+        "subcategory_slug": "sofa",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Hush Sofa",
+        "sourceSlug": "hush"
+      },
+      "alt_text": "Hush Sofa",
+      "sourceSlug": "hush",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Sofa",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d533f6d4bbc226bf39e84_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d5354472cd9b9a56ae18a_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d5363472cd9b9a56ae38d_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693d5380056b78eab7ea78f3_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--hush/image-1.webp",
+        "/images/catalog/oando-soft-seating--hush/image-2.webp",
+        "/images/catalog/oando-soft-seating--hush/image-3.webp",
+        "/images/catalog/oando-soft-seating--hush/image-4.webp"
+      ]
+    }
+  ],
+  "unmatched": []
+}

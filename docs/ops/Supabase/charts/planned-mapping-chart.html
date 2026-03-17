@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planned Mapping Chart</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f8fafc; }
+    h1 { margin: 0 0 12px; font-size: 20px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+  </style>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, theme: "default", securityLevel: "loose" });
+  </script>
+</head>
+<body>
+  <h1>Planned Mapping (Python-Driven Redo)</h1>
+  <div class="card">
+    <pre class="mermaid">
+flowchart TB
+  subgraph CANON["Canonical Inputs (Priority)"]
+    C1["1) AFC backups JSON (authoritative corrections)"]
+    C2["2) seed_data.sql (fill missing specs/media)"]
+    C3["3) schema contracts (required fields)"]
+  end
+
+  subgraph NORMALIZE["Python Normalize + Resolve"]
+    N1["Parse all sources"]
+    N2["Key by slug"]
+    N3{"Conflict on same field?"}
+    N4["Resolve: AFC backup wins"]
+    N5["Log diff by slug+field"]
+  end
+
+  subgraph FIELD_LANES["Field-Level Mapping Lanes"]
+    F1["Core: slug,name,description,category_id"]
+    F2["Series: series_id,series_name"]
+    F3["Metadata: subcategory,subcategory_slug,bifma,warranty"]
+    F4["Specs: dimensions,materials,features,sustainability_score"]
+    F5["Media: flagship_image,images[],scene_images[] + order"]
+  end
+
+  subgraph CATEGORY_BRANCH["Category-wise Rules"]
+    K1["Seating lane"]
+    K2["Tables lane"]
+    K3["Workstations lane"]
+    K4["Soft-seating lane"]
+    K5["Storages lane"]
+    K6["Education lane"]
+  end
+
+  subgraph QA_GATE["Validation Gates"]
+    Q1{"Required fields complete?"}
+    Q2{"Unique slug + category mapping valid?"}
+    Q3{"Specs coverage threshold met?"}
+    Q4{"Image URL reachable + ordered?"}
+    Q5{"Category branch constraints valid?"}
+  end
+
+  subgraph DEPLOY["Promotion"]
+    D1["Build staging dataset"]
+    D2["Run full product/page audit"]
+    D3{"Audit clean?"}
+    D4["Transactional production upsert"]
+    D5["Publish report + lock mapping snapshot"]
+    D6["Rollback to backup snapshot"]
+  end
+
+  C1 --> N1
+  C2 --> N1
+  C3 --> N1
+  N1 --> N2 --> N3
+  N3 -->|"No"| F1
+  N3 -->|"Yes"| N4 --> N5 --> F1
+  F1 --> F2 --> F3 --> F4 --> F5
+  F5 --> K1
+  F5 --> K2
+  F5 --> K3
+  F5 --> K4
+  F5 --> K5
+  F5 --> K6
+
+  K1 --> Q1
+  K2 --> Q1
+  K3 --> Q1
+  K4 --> Q1
+  K5 --> Q1
+  K6 --> Q1
+
+  Q1 --> Q2 --> Q3 --> Q4 --> Q5
+  Q5 --> D1 --> D2 --> D3
+  D3 -->|"Yes"| D4 --> D5
+  D3 -->|"No"| D6
+    </pre>
+  </div>
+</body>
+</html>

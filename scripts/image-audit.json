@@ -1,0 +1,856 @@
+[
+  {
+    "name": "Curvivo",
+    "category": "workstations",
+    "slug": "curvivo",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Adaptable",
+    "category": "workstations",
+    "slug": "adaptable",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "DeskPro",
+    "category": "workstations",
+    "slug": "deskpro",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Sleek",
+    "category": "workstations",
+    "slug": "sleek",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Trio",
+    "category": "workstations",
+    "slug": "trio-2",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Panel Pro",
+    "category": "workstations",
+    "slug": "panel-pro",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "X Bench",
+    "category": "workstations",
+    "slug": "x-bench",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Fenix",
+    "category": "workstations",
+    "slug": "fenix",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Exquisite",
+    "category": "tables",
+    "slug": "exquisite",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "NexTable",
+    "category": "tables",
+    "slug": "nextable",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Impulse",
+    "category": "tables",
+    "slug": "impulse",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Crest",
+    "category": "tables",
+    "slug": "crest",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Opus",
+    "category": "tables",
+    "slug": "opus-2",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Convesso",
+    "category": "tables",
+    "slug": "convesso",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Uniflip",
+    "category": "tables",
+    "slug": "uniflip",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Sleek-Meet",
+    "category": "tables",
+    "slug": "sleek-meet",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Convene",
+    "category": "tables",
+    "slug": "convene",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Desk-Meet",
+    "category": "tables",
+    "slug": "desk-meet",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Modulus",
+    "category": "tables",
+    "slug": "modulus",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Presidency",
+    "category": "tables",
+    "slug": "presidency",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Curvivo",
+    "category": "tables",
+    "slug": "curvivo-meet",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Stake",
+    "category": "tables",
+    "slug": "stake",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Inox",
+    "category": "tables",
+    "slug": "inox",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Consulate",
+    "category": "tables",
+    "slug": "consulate",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "X Meet",
+    "category": "tables",
+    "slug": "x-meet",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Sleek",
+    "category": "tables",
+    "slug": "sleek-tab",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Letz",
+    "category": "tables",
+    "slug": "letz-think",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Apex",
+    "category": "tables",
+    "slug": "apex",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Wooden",
+    "category": "storage",
+    "slug": "prelam-locker",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Prelam",
+    "category": "storage",
+    "slug": "pedestal",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Metal Pedestal",
+    "category": "storage",
+    "slug": "metal-pedestal",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Compactor",
+    "category": "storage",
+    "slug": "compactor",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Metal Locker",
+    "category": "storage",
+    "slug": "metal-locker",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Prelam",
+    "category": "storage",
+    "slug": "prelam-storage",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Metal",
+    "category": "storage",
+    "slug": "metal-storages",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Heavy Dut",
+    "category": "storage",
+    "slug": "heavy-duty-racks",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Verka",
+    "category": "soft seating",
+    "slug": "verka",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "High Cafe",
+    "category": "soft seating",
+    "slug": "high-cafe",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Grace",
+    "category": "soft seating",
+    "slug": "grace",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Brim",
+    "category": "soft seating",
+    "slug": "brim",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Fynn",
+    "category": "soft seating",
+    "slug": "fynn",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Accent",
+    "category": "soft seating",
+    "slug": "accent",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Como",
+    "category": "soft seating",
+    "slug": "como",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Padora",
+    "category": "soft seating",
+    "slug": "padora",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Trion",
+    "category": "soft seating",
+    "slug": "trion",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Luna",
+    "category": "soft seating",
+    "slug": "luna",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Armora",
+    "category": "soft seating",
+    "slug": "armora",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Nuvora",
+    "category": "soft seating",
+    "slug": "nuvora",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Nook",
+    "category": "soft seating",
+    "slug": "nook",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Opera",
+    "category": "soft seating",
+    "slug": "opera",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Crossa",
+    "category": "soft seating",
+    "slug": "crossa",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Alonzo",
+    "category": "soft seating",
+    "slug": "alonzo",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Spectrum",
+    "category": "soft seating",
+    "slug": "spectrum",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Virello",
+    "category": "soft seating",
+    "slug": "virello",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Arco",
+    "category": "soft seating",
+    "slug": "arco",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Esmor",
+    "category": "soft seating",
+    "slug": "esmor",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Cirq",
+    "category": "soft seating",
+    "slug": "cirq",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Orb",
+    "category": "soft seating",
+    "slug": "orb",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Tectara",
+    "category": "soft seating",
+    "slug": "tectara",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Velto",
+    "category": "soft seating",
+    "slug": "velto",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Cocoon",
+    "category": "soft seating",
+    "slug": "cocoon",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Moon",
+    "category": "soft seating",
+    "slug": "moon",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Cone",
+    "category": "soft seating",
+    "slug": "cone",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Rattique",
+    "category": "soft seating",
+    "slug": "rattique",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Cove",
+    "category": "soft seating",
+    "slug": "cove",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Luxar",
+    "category": "soft seating",
+    "slug": "luxar",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Ceda",
+    "category": "soft seating",
+    "slug": "ceda",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Hush",
+    "category": "soft seating",
+    "slug": "hush",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Eclips",
+    "category": "soft seating",
+    "slug": "eclips",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Twig",
+    "category": "soft seating",
+    "slug": "twig",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Margas",
+    "category": "soft seating",
+    "slug": "margas",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Lura",
+    "category": "soft seating",
+    "slug": "lura",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Embrace",
+    "category": "soft seating",
+    "slug": "embrace",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Halo",
+    "category": "soft seating",
+    "slug": "halo",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Relax",
+    "category": "soft seating",
+    "slug": "relax",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Arcana",
+    "category": "soft seating",
+    "slug": "arcana",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Plumb",
+    "category": "soft seating",
+    "slug": "plumb",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Casca",
+    "category": "soft seating",
+    "slug": "casca",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Adam",
+    "category": "soft seating",
+    "slug": "adam",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Cozy",
+    "category": "soft seating",
+    "slug": "cozy",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Covea",
+    "category": "soft seating",
+    "slug": "covea",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Sleek Cafe",
+    "category": "seating",
+    "slug": "cafe-sleek",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Crox",
+    "category": "seating",
+    "slug": "crox",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Myel",
+    "category": "seating",
+    "slug": "myel",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Flip",
+    "category": "seating",
+    "slug": "flip",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Nordic",
+    "category": "seating",
+    "slug": "nordic",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Sway",
+    "category": "seating",
+    "slug": "sway",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Halo",
+    "category": "seating",
+    "slug": "halo",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Arvo",
+    "category": "seating",
+    "slug": "arvo",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Pinnacle",
+    "category": "seating",
+    "slug": "pinnacle",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Phoenix",
+    "category": "seating",
+    "slug": "phoenix",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Ember",
+    "category": "seating",
+    "slug": "ember",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Moonlight",
+    "category": "seating",
+    "slug": "moonlight",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Fluid",
+    "category": "seating",
+    "slug": "fluid",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Caneva",
+    "category": "seating",
+    "slug": "caneva",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Rider",
+    "category": "seating",
+    "slug": "rider",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Fluid X",
+    "category": "seating",
+    "slug": "fluid-x",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Solace",
+    "category": "seating",
+    "slug": "solace",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Spino",
+    "category": "seating",
+    "slug": "spino",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Smile",
+    "category": "seating",
+    "slug": "smile",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Revoq",
+    "category": "seating",
+    "slug": "revoq",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Rio",
+    "category": "seating",
+    "slug": "rio",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Flex",
+    "category": "seating",
+    "slug": "flex",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Canaret",
+    "category": "seating",
+    "slug": "canaret",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Logica",
+    "category": "seating",
+    "slug": "logica",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Sullion",
+    "category": "seating",
+    "slug": "sullion",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Dive",
+    "category": "seating",
+    "slug": "dive",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Nuvic",
+    "category": "seating",
+    "slug": "nuvic",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Wing",
+    "category": "seating",
+    "slug": "wing",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Rock",
+    "category": "seating",
+    "slug": "rock",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Casca",
+    "category": "seating",
+    "slug": "casca",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Breeze",
+    "category": "seating",
+    "slug": "breeze",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Leaf",
+    "category": "seating",
+    "slug": "leaf",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "X Mesh",
+    "category": "seating",
+    "slug": "x-mesh",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Lexus",
+    "category": "seating",
+    "slug": "lexus",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Orbit",
+    "category": "seating",
+    "slug": "orbit",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Flare",
+    "category": "seating",
+    "slug": "flare",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Toro",
+    "category": "seating",
+    "slug": "toro",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Zilo",
+    "category": "seating",
+    "slug": "zilo",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Caneva-High",
+    "category": "seating",
+    "slug": "caneva-high",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Lisbo",
+    "category": "seating",
+    "slug": "lisbo",
+    "imagesNeeded": 7,
+    "currentImages": []
+  },
+  {
+    "name": "Fusion",
+    "category": "seating",
+    "slug": "fusion",
+    "imagesNeeded": 7,
+    "currentImages": []
+  }
+]

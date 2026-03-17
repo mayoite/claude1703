@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-03-16T03:00:04.459Z",
+  "totals": {
+    "products": 145,
+    "missingCanonicalCategoryId": 0,
+    "missingCanonicalSubcategoryId": 0,
+    "missingCanonicalSlugV2": 0,
+    "missingCanonicalSeriesId": 0,
+    "aliasCoverageMissing": 27,
+    "canonicalSlugConflicts": 3
+  },
+  "missingCanonicalFields": [],
+  "aliasCoverageMissing": [
+    {
+      "currentSlug": "oando-soft-seating--brim",
+      "expectedCanonicalSlug": "seating-cafe-brim"
+    },
+    {
+      "currentSlug": "oando-seating--dive",
+      "expectedCanonicalSlug": "seating-cafe-dive"
+    },
+    {
+      "currentSlug": "oando-soft-seating--fynn",
+      "expectedCanonicalSlug": "seating-cafe-fynn"
+    },
+    {
+      "currentSlug": "oando-soft-seating--grace",
+      "expectedCanonicalSlug": "seating-leather-grace"
+    },
+    {
+      "currentSlug": "oando-seating--leaf",
+      "expectedCanonicalSlug": "seating-cafe-leaf"
+    },
+    {
+      "currentSlug": "oando-seating--lisbo",
+      "expectedCanonicalSlug": "seating-cafe-lisbo"
+    },
+    {
+      "currentSlug": "oando-soft-seating--cone",
+      "expectedCanonicalSlug": "soft-seating-occasional-tables-cone"
+    },
+    {
+      "currentSlug": "oando-soft-seating--embrace",
+      "expectedCanonicalSlug": "soft-seating-lounge-embrace"
+    },
+    {
+      "currentSlug": "oando-soft-seating--luxar",
+      "expectedCanonicalSlug": "soft-seating-occasional-tables-luxar"
+    },
+    {
+      "currentSlug": "oando-soft-seating--nook",
+      "expectedCanonicalSlug": "soft-seating-occasional-tables-nook"
+    },
+    {
+      "currentSlug": "oando-seating--solace",
+      "expectedCanonicalSlug": "soft-seating-lounge-solace"
+    },
+    {
+      "currentSlug": "oando-soft-seating--tectara",
+      "expectedCanonicalSlug": "soft-seating-occasional-tables-tectara"
+    },
+    {
+      "currentSlug": "oando-soft-seating--twig",
+      "expectedCanonicalSlug": "soft-seating-occasional-tables-twig"
+    },
+    {
+      "currentSlug": "oando-soft-seating--virello",
+      "expectedCanonicalSlug": "soft-seating-occasional-tables-virello"
+    },
+    {
+      "currentSlug": "oando-storage--heavy-duty-racks",
+      "expectedCanonicalSlug": "storages-metal-heavy-duty-racks"
+    },
+    {
+      "currentSlug": "oando-storage--metal-storages",
+      "expectedCanonicalSlug": "storages-metal-metal-storages"
+    },
+    {
+      "currentSlug": "oando-storage--pedestal",
+      "expectedCanonicalSlug": "storages-prelam-prelam-pedestal"
+    },
+    {
+      "currentSlug": "oando-storage--prelam-storage",
+      "expectedCanonicalSlug": "storages-prelam-prelam-storage"
+    },
+    {
+      "currentSlug": "oando-seating--crox",
+      "expectedCanonicalSlug": "tables-cafe-crox"
+    },
+    {
+      "currentSlug": "oando-tables--curvivo-meet",
+      "expectedCanonicalSlug": "tables-meeting-curvivo-meet"
+    },
+    {
+      "currentSlug": "oando-soft-seating--high-cafe",
+      "expectedCanonicalSlug": "tables-cafe-high-cafe"
+    },
+    {
+      "currentSlug": "oando-tables--letz-think",
+      "expectedCanonicalSlug": "tables-meeting-letz-think"
+    },
+    {
+      "currentSlug": "oando-tables--opus-2",
+      "expectedCanonicalSlug": "tables-cabin-opus"
+    },
+    {
+      "currentSlug": "oando-tables--sleek-tab",
+      "expectedCanonicalSlug": "tables-cabin-sleek"
+    },
+    {
+      "currentSlug": "oando-seating--cafe-sleek",
+      "expectedCanonicalSlug": "tables-cafe-sleek-cafe"
+    },
+    {
+      "currentSlug": "oando-workstations--trio-2",
+      "expectedCanonicalSlug": "tables-cabin-trio"
+    },
+    {
+      "currentSlug": "oando-soft-seating--verka",
+      "expectedCanonicalSlug": "tables-cafe-verka"
+    }
+  ],
+  "canonicalConflicts": [
+    {
+      "canonicalSlug": "seating-mesh-fluid-x",
+      "legacySlugs": [
+        "fluid-x",
+        "oando-seating--fluid-x"
+      ]
+    },
+    {
+      "canonicalSlug": "soft-seating-lounge-casca",
+      "legacySlugs": [
+        "oando-seating--casca",
+        "oando-soft-seating--casca"
+      ]
+    },
+    {
+      "canonicalSlug": "soft-seating-lounge-halo",
+      "legacySlugs": [
+        "oando-seating--halo",
+        "oando-soft-seating--halo"
+      ]
+    }
+  ]
+}

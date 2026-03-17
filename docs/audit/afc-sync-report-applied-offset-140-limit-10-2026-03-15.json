@@ -1,0 +1,798 @@
+{
+  "generatedAt": "2026-03-15T14:58:35.710Z",
+  "mode": "apply",
+  "offset": 140,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 5,
+  "matched": [
+    {
+      "id": "9aea071d-f393-4243-aa8e-8efcdbafcfc2",
+      "slug": "oando-workstations--deskpro",
+      "name": "DeskPro",
+      "category_id": "workstations",
+      "series_name": "Desking Series",
+      "description": "DeskPro is a workstation system designed for efficient layouts. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Workstations",
+        "subcategory": "Desking Series",
+        "features": [
+          "A workstation built for productivity, crafted to deliver balance and clarity."
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600; D2 - 600; HT - 1150 / 1200; L1 - 1500; L2 - 1200 / 1350 /1500; D1 - 600; D2 - 600; HT - 1150 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 1150 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 1150 / 1200",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Deskpro",
+          "SCS GOLD",
+          "BIFMA DESK PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "A workstation built for productivity, crafted to deliver balance and clarity.",
+            "body": "An efficient and dependable workstation, designed with clean simplicity and adaptability to suit diverse workplace needs."
+          },
+          {
+            "heading": "",
+            "body": "From single desks to cluster arrangements, DeskPro ensures flexibility that supports both focused work and collaborative energy."
+          },
+          {
+            "heading": "",
+            "body": "Personalize your workspace with customizable leg caps, beams, and levelers. DeskPro offers a range of color accents that bring character, style, and flexibility to modern office interiors"
+          },
+          {
+            "heading": "",
+            "body": "Stay organized with multiple storage choices, including hanging pedestals, mobile pedestals, and add-on accessories designed to keep essentials within easy reach."
+          },
+          {
+            "heading": "",
+            "body": "Flexible access to power and data through the work surface or power beam, keeping the workspace clean and clutter-free."
+          },
+          {
+            "heading": "",
+            "body": "The workstation comes with adaptable elements like legs and pedestals, allowing you to choose colors, materials, and finishes that seamlessly blend with your workspace vibe."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Desking 120° Cluster",
+            "lines": [
+              "L1 - 1050 / 1200",
+              "L2 - 1050 / 1200",
+              "D1 - 600",
+              "D2 - 600",
+              "HT - 1150 / 1200"
+            ]
+          },
+          {
+            "heading": "Desking L-Shape Cluster",
+            "lines": [
+              "L1 - 1500",
+              "L2 - 1200 / 1350 /1500",
+              "D1 - 600",
+              "D2 - 600",
+              "HT - 1150 / 1200"
+            ]
+          },
+          {
+            "heading": "Desking Linear Cluster",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 1150 / 1200"
+            ]
+          },
+          {
+            "heading": "Desking Non-Sharing Cluster",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 1150 / 1200"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Desking Series",
+        "subcategoryId": "desking",
+        "subcategoryLabel": "Desking Series",
+        "subcategory_slug": "desking-series",
+        "certifications": [
+          "Deskpro",
+          "SCS GOLD",
+          "BIFMA DESK PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": true,
+        "warrantyYears": null,
+        "ai_alt_text": "DeskPro workstation system",
+        "sourceSlug": "deskpro"
+      },
+      "alt_text": "DeskPro workstation system",
+      "sourceSlug": "deskpro",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Desking Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6920638ce0df7db66ff51dcc_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68aeb2d8fd6f3ece39467861_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68aeb39247ca6265d5103da6_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6920630e2a0c96f040d24c3b_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692062b7bd3d498f1169cef3_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68aeb46bf3f89c779f4a58e0_SECTION%203-SCROLL%20IMAGES%2011.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Deskpro",
+        "SCS GOLD",
+        "BIFMA DESK PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--deskpro/image-1.webp",
+        "/images/catalog/oando-workstations--deskpro/image-2.webp",
+        "/images/catalog/oando-workstations--deskpro/image-3.webp",
+        "/images/catalog/oando-workstations--deskpro/image-4.webp",
+        "/images/catalog/oando-workstations--deskpro/image-5.webp",
+        "/images/catalog/oando-workstations--deskpro/image-6.webp"
+      ]
+    },
+    {
+      "id": "498b16eb-c6ef-4fc2-8ece-f381ae448990",
+      "slug": "oando-workstations--fenix",
+      "name": "Fenix",
+      "category_id": "workstations",
+      "series_name": "Desking Series",
+      "description": "Fenix is a workstation system designed for durability and ergonomic comfort.",
+      "specs": {
+        "category": "Workstations",
+        "subcategory": "Desking Series",
+        "features": [
+          "Composed Function"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200; L1 - 1500; L2 - 1350 /1500; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 / 1050 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 / 1050 / 1200; L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Fenix",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Composed Function",
+            "body": "FENIX features a strong 40x40 leg framework that pairs durability with a sleek, minimal profile. Its modular adaptability supports the changing needs of contemporary teams."
+          },
+          {
+            "heading": "",
+            "body": "Whether for individual focus or collective energy, Fenix creates a balanced environment that elevates daily work. A timeless design language sets it apart in any workspace."
+          },
+          {
+            "heading": "",
+            "body": "The Beam and Mast system is engineered to handle all types of wiring, keeping cables safely organized, concealed, and protected for everyday use."
+          },
+          {
+            "heading": "",
+            "body": "Designed for efficiency, the workstation maintains a tidy underside by neatly routing and hiding cables, ensuring a seamless, hazard-free workspace."
+          },
+          {
+            "heading": "",
+            "body": "The workstation comes with customizable elements like legs and pedestals, allowing you to choose colors, materials, and finishes that seamlessly blend with your workspace vibe."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Fenix 120° Cluster",
+            "lines": [
+              "L1 - 1050 / 1200",
+              "L2 - 1050 / 1200",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Fenix L-Shape Cluster",
+            "lines": [
+              "L1 - 1500",
+              "L2 - 1350 /1500",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 / 1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Fenix B2B Cluster",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 750 / 900 / 1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Fenix Non-Sharing Cluster",
+            "lines": [
+              "L1 - 900 / 1050/1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Desking Series",
+        "subcategoryId": "desking",
+        "subcategoryLabel": "Desking Series",
+        "subcategory_slug": "desking-series",
+        "certifications": [
+          "Fenix",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Fenix workstation system",
+        "sourceSlug": "fenix"
+      },
+      "alt_text": "Fenix workstation system",
+      "sourceSlug": "fenix",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Desking Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693aa27791ca656dda83d75a_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693aa28d203f48ea364839fb_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693aa29edb6885ac10f32b03_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693aa2b6eee1b393f7aecc8a_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693aa2c691ca656dda83fca1_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Fenix",
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--fenix/image-1.webp",
+        "/images/catalog/oando-workstations--fenix/image-2.webp",
+        "/images/catalog/oando-workstations--fenix/image-3.webp",
+        "/images/catalog/oando-workstations--fenix/image-4.webp",
+        "/images/catalog/oando-workstations--fenix/image-5.webp"
+      ]
+    },
+    {
+      "id": "efe78be9-2484-4991-ba85-f50883110d88",
+      "slug": "oando-workstations--panel-pro",
+      "name": "Panel Pro",
+      "category_id": "workstations",
+      "series_name": "Panel Series",
+      "description": "Panel Pro is a workstation system designed for modular layouts and space division.",
+      "specs": {
+        "category": "Workstations",
+        "subcategory": "Panel Series",
+        "features": [
+          "A workstation for modern simplicity, one that embraces choice and color"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 4",
+          "Fabric 3"
+        ],
+        "dimensions": "L1 - 1200 / 1350 / 1500; L2 - 1200 / 1350 / 1500; D1 - 600 / 750; D2 - 600 / 750; HT - 1200; L1 – 1050/ 1200; L2 - 1050/ 1200; D1 - 600; D2 - 600; HT - 1200; L1 - 900 / 1050 /1200 / 1350 / 1500 (750+750)); D1 - 600; HT - 1200; L1 - 900 / 1050 /1200 / 1350 / 1500 (750+750)); D1 - 600; HT - 1200",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD"
+        ],
+        "overview_sections": [
+          {
+            "heading": "A workstation for modern simplicity, one that embraces choice and color",
+            "body": "With multiple panel thicknesses and finishes, PanelPro transforms offices into dynamic, adaptable environments"
+          },
+          {
+            "heading": "",
+            "body": "With varied panel sizes and finishes, it creates tailored layouts that balance privacy with collaboration, bringing structure and style to modern offices."
+          },
+          {
+            "heading": "",
+            "body": "Precision-engineered joineries allow multiple partition combinations, ensuring seamless alignment and a polished finish in every configuration"
+          },
+          {
+            "heading": "",
+            "body": "Designed for flexibility, the screen doubles as a privacy panel and writing board, adapting to diverse workplace needs."
+          },
+          {
+            "heading": "",
+            "body": "An integrated wire management system provides easy access and organization, keeping workstations clutter-free and functional."
+          },
+          {
+            "heading": "",
+            "body": "The workstation features panel such as the Screen and powder coating, whose color, material and finishes can be customized to match the vibe of the workplace"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Panel Based L-Shape Workstation",
+            "lines": [
+              "L1 - 1200 / 1350 / 1500",
+              "L2 - 1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "D2 - 600 / 750",
+              "HT - 1200"
+            ]
+          },
+          {
+            "heading": "Panel Based 1200 Workstation",
+            "lines": [
+              "L1 – 1050/ 1200",
+              "L2 - 1050/ 1200",
+              "D1 - 600",
+              "D2 - 600",
+              "HT - 1200"
+            ]
+          },
+          {
+            "heading": "Panel Based Back-to-Back Linear Workstation",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500 (750+750))",
+              "D1 - 600",
+              "HT - 1200"
+            ]
+          },
+          {
+            "heading": "Panel Based Non-Sharing Linear Workstation",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500 (750+750))",
+              "D1 - 600",
+              "HT - 1200"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Panel Series",
+        "subcategoryId": "panel",
+        "subcategoryLabel": "Panel Series",
+        "subcategory_slug": "panel-series",
+        "certifications": [
+          "SCS GOLD"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Panel Pro workstation system",
+        "sourceSlug": "panel-pro"
+      },
+      "alt_text": "Panel Pro workstation system",
+      "sourceSlug": "panel-pro",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Panel Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af449a223fd46c2c27cdf7_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af44dba87f9133ac3a396d_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af4517f3d6ad3b1abf1252_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af4538223fd46c2c28273f_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af4574d71cb8282ec316fb_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--panel-pro/image-1.webp",
+        "/images/catalog/oando-workstations--panel-pro/image-2.webp",
+        "/images/catalog/oando-workstations--panel-pro/image-3.webp",
+        "/images/catalog/oando-workstations--panel-pro/image-4.webp",
+        "/images/catalog/oando-workstations--panel-pro/image-5.webp"
+      ]
+    },
+    {
+      "id": "2997196e-457f-4c4f-8944-abf21dd04e9e",
+      "slug": "oando-workstations--sleek",
+      "name": "Sleek",
+      "category_id": "workstations",
+      "series_name": "Desking Series",
+      "description": "Sleek is a workstation system designed for stylish and functional workspaces. Cable-routing support keeps workstation layouts cleaner and easier to maintain.",
+      "specs": {
+        "category": "Workstations",
+        "subcategory": "Desking Series",
+        "features": [
+          "A workstation that blends modern elegance with lasting strength"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200; L1 - 900 / 1050 /1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 / 1050 / 1200; L1 - 1500; L2 - 1350 /1500; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 / 1050 / 1200; L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Sleek",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "A workstation that blends modern elegance with lasting strength",
+            "body": "Sleek Series embodies refined craftsmanship and versatile functionality, making it a perfect fit for contemporary workspaces."
+          },
+          {
+            "heading": "",
+            "body": "From compact single setups to expansive cluster configurations, the Sleek Series offers a seamless balance of durability and design, supporting both focused work and collaborative synergy."
+          },
+          {
+            "heading": "",
+            "body": "A smart cable management system keeps wires organized and hidden, delivering a clutter-free surface and a smoother work experience."
+          },
+          {
+            "heading": "",
+            "body": "A perfect blend of elegance and strength, offering lasting stability with a modern architectural touch"
+          },
+          {
+            "heading": "",
+            "body": "From individual workstations to discussion and meeting tables, the Sleek Series adapts effortlessly to different workspace formats, making it a truly multifunctional solution."
+          },
+          {
+            "heading": "",
+            "body": "The workstation comes with adaptable elements like legs and pedestals, allowing you to choose colors, materials, and finishes that seamlessly blend with your workspace vibe."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Sleek Non-Sharing Cluster",
+            "lines": [
+              "L1 - 900 / 1050/1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Sleek B2B Cluster",
+            "lines": [
+              "L1 - 900 / 1050 /1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 750 / 900 / 1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Sleek L-Shape Cluster",
+            "lines": [
+              "L1 - 1500",
+              "L2 - 1350 /1500",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 / 1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Sleek 120° Cluster",
+            "lines": [
+              "L1 - 1050 / 1200",
+              "L2 - 1050 / 1200",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Desking Series",
+        "subcategoryId": "desking",
+        "subcategoryLabel": "Desking Series",
+        "subcategory_slug": "desking-series",
+        "certifications": [
+          "Sleek",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Sleek workstation system",
+        "sourceSlug": "sleek"
+      },
+      "alt_text": "Sleek workstation system",
+      "sourceSlug": "sleek",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Desking Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692065f0f502a718c8755250_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af150019f65adf589bd545_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af151dd9e061a054509c55_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af153b00c655b0860ca559_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692065cb866b7196e9709d00_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692065b4dd7789bb7dda4d60_SCROLL%20IMAGE%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Sleek",
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--sleek/image-1.webp",
+        "/images/catalog/oando-workstations--sleek/image-2.webp",
+        "/images/catalog/oando-workstations--sleek/image-3.webp",
+        "/images/catalog/oando-workstations--sleek/image-4.webp",
+        "/images/catalog/oando-workstations--sleek/image-5.webp",
+        "/images/catalog/oando-workstations--sleek/image-6.webp"
+      ]
+    },
+    {
+      "id": "5cd136df-1936-49d5-a01d-da7473d1622b",
+      "slug": "oando-workstations--x-bench",
+      "name": "X-Bench",
+      "category_id": "workstations",
+      "series_name": "Desking Series",
+      "description": "X-Bench is a workstation system designed for collaborative offices.",
+      "specs": {
+        "category": "Workstations",
+        "subcategory": "Desking Series",
+        "features": [
+          "A workstation for strength and collaboration, one that embraces versatility and purpose"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200; L1 - 900 / 1050/1200 / 1350 / 1500; D1 - 600 / 750; HT - 750 / 900 /1050 / 1200; L1 - 1500; L2 - 1350 /1500; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200; L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "X-Bench",
+          "SCS GOLD"
+        ],
+        "overview_sections": [
+          {
+            "heading": "A workstation for strength and collaboration, one that embraces versatility and purpose",
+            "body": "A dynamic and robust solution, adaptable to open offices and team-oriented workspaces"
+          },
+          {
+            "heading": "",
+            "body": "The workstation offers versatile configurations, from single desks to shared clusters, ensuring efficiency for both focused work and team interaction"
+          },
+          {
+            "heading": "",
+            "body": "Polished screen edges add a sleek finish while ensuring safety and long-term durability"
+          },
+          {
+            "heading": "",
+            "body": "Customizable screens with options for materials, pin-up strips, and accessory rails, designed to support both function and creativity"
+          },
+          {
+            "heading": "",
+            "body": "Engineered for stability, the unique leg and beam system with advanced shoe and leveller design handles heavy loads and floor unevenness with ease, all while maintaining a clean, minimal look"
+          },
+          {
+            "heading": "",
+            "body": "The workstation comes with adaptable elements like legs and pedestals, allowing you to choose colors, materials, and finishes that seamlessly blend with your workspace vibe"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "X-Bench Non-Sharing Cluster",
+            "lines": [
+              "L1 - 900 / 1050/1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "X-Bench B2B Cluster",
+            "lines": [
+              "L1 - 900 / 1050/1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "X-Bench L-Shape Cluster",
+            "lines": [
+              "L1 - 1500",
+              "L2 - 1350 /1500",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "X-Bench 120° Cluster",
+            "lines": [
+              "L1 - 1050 / 1200",
+              "L2 - 1050 / 1200",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Desking Series",
+        "subcategoryId": "desking",
+        "subcategoryLabel": "Desking Series",
+        "subcategory_slug": "desking-series",
+        "certifications": [
+          "X-Bench",
+          "SCS GOLD"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "X-Bench workstation system",
+        "sourceSlug": "x-bench"
+      },
+      "alt_text": "X-Bench workstation system",
+      "sourceSlug": "x-bench",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Desking Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af2ee11800c97df4d01746_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692589099e9b267c7aac79cd_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692589239e9b267c7aac8e20_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af2f11a907c8d53afbc77e_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af2f35e93f3af2d1489299_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "X-Bench",
+        "SCS GOLD"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--x-bench/image-1.webp",
+        "/images/catalog/oando-workstations--x-bench/image-2.webp",
+        "/images/catalog/oando-workstations--x-bench/image-3.webp",
+        "/images/catalog/oando-workstations--x-bench/image-4.webp",
+        "/images/catalog/oando-workstations--x-bench/image-5.webp"
+      ]
+    }
+  ],
+  "unmatched": []
+}

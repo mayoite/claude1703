@@ -1,0 +1,1134 @@
+{
+  "generatedAt": "2026-03-15T14:58:22.936Z",
+  "mode": "apply",
+  "offset": 130,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "9f78b4c0-9f2c-4769-93b3-c59f52cd189a",
+      "slug": "oando-tables--sleek-tab",
+      "name": "Sleek",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Sleek is a cabin table designed for offices. Cable-routing support keeps workstation layouts cleaner and easier to maintain.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "The Simplicity of Power"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White",
+          "Fabric 4",
+          "Fabric 3"
+        ],
+        "dimensions": "W: 1050 / 1200 / 1350 / 1600 / 2100 / 2400; D: 400 / 450; H: 2100; 1500 L X 450 D X 750 HT (With Top 1950 L); 1650 L X 450 D X 750 HT (With Top 2100 L); L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H – 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "The Simplicity of Power",
+            "body": "Sleek Cabin Tables redefine executive minimalism with clean lines and purposeful design. Their refined form and integrated features create an environment that feels both organized and effortlessly elegant"
+          },
+          {
+            "heading": "",
+            "body": "Equipped with smart storage, cable management, and a distinctive designer leg, they balance aesthetics with durability, crafted for modern leaders who appreciate clarity, control, and contemporary sophistication"
+          },
+          {
+            "heading": "",
+            "body": "Built-in access points keep devices powered seamlessly, ensuring uninterrupted workflow and a clutter-free setup"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Full Height Storage",
+            "lines": [
+              "W: 1050 / 1200 / 1350 / 1600 / 2100 / 2400",
+              "D: 400 / 450",
+              "H: 2100"
+            ]
+          },
+          {
+            "heading": "Side/Rear Storage",
+            "lines": [
+              "1500 L X 450 D X 750 HT (With Top 1950 L)",
+              "1650 L X 450 D X 750 HT (With Top 2100 L)"
+            ]
+          },
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "L1 – 1500/ 1650 / 1800 / 1950 / 2100",
+              "D1- 600 / 750 / 900",
+              "L2 - 900/ 1050/ 1200",
+              "D2 – 450 / 600",
+              "H – 750"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Sleek Cabin Table",
+        "sourceSlug": "sleek-tab"
+      },
+      "alt_text": "Sleek Cabin Table",
+      "sourceSlug": "sleek-tab",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69021245a5c6d5405039d9c9_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6902126ac009f1c45bd3845d_SCROLL%20IMAGE%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--sleek-tab/image-1.webp",
+        "/images/catalog/oando-tables--sleek-tab/image-2.webp"
+      ]
+    },
+    {
+      "id": "246e75c0-17ea-4872-aa6b-c17c17d1e633",
+      "slug": "oando-seating--cafe-sleek",
+      "name": "Sleek Cafe",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "Sleek Cafe is a cafe table designed for cafes and office pantries.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [
+          "Elevated Conversation"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Elevated Conversation",
+            "body": "The Sleek Café Table features a slim-profile surface combined with a strong metal frame, creating a balance of lightness and stability. Its clean lines give it a modern appeal that fits effortlessly into any café or collaborative area."
+          },
+          {
+            "heading": "",
+            "body": "Designed with generous proportions, it supports easy movement and open interaction. Perfect for quick breaks, casual meetings, or shared work sessions, it enhances both comfort and connection in everyday spaces."
+          },
+          {
+            "heading": "",
+            "body": "The sleek leg design offers a clean, modern aesthetic while maintaining durability—perfect for café, breakout, and collaborative settings."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Sleek Cafe Cafe Table",
+        "sourceSlug": "cafe-sleek"
+      },
+      "alt_text": "Sleek Cafe Cafe Table",
+      "sourceSlug": "cafe-sleek",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693986087ddab899e18ac603_img%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693986377f3d8be99c11d35e_img%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6939867b3cdae13ef3a84ba5_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69398621d375c0edf668d01f_img%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--cafe-sleek/image-1.webp",
+        "/images/catalog/oando-seating--cafe-sleek/image-2.webp",
+        "/images/catalog/oando-seating--cafe-sleek/image-3.webp",
+        "/images/catalog/oando-seating--cafe-sleek/image-4.webp"
+      ]
+    },
+    {
+      "id": "cc69434a-5b2b-449e-9ef8-f85992a1f91e",
+      "slug": "oando-tables--sleek-meet",
+      "name": "Sleek-Meet",
+      "category_id": "tables",
+      "series_name": "Meeting Tables",
+      "description": "Sleek-Meet is a meeting table designed for modern meeting rooms.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Meeting Tables",
+        "features": [
+          "Collaborative Flexibility"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "DISCUSSIONTABLE; Dia – 900 /1050 / 1200; H - 750; MEETINGTABLE; L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250; D – 600 /750 / 900 / 1050 / 1200; H - 750; CONFERENCETABLE; L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750; D - 1200 /1500; H - 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Sleek",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Collaborative Flexibility",
+            "body": "The Sleek Meet series is crafted for today’s dynamic work environments, allowing effortless transitions between configurations. Its adaptable design encourages flexibility and teamwork in every setting."
+          },
+          {
+            "heading": "",
+            "body": "Combining modern aesthetics with smart functionality, Sleek Meet transforms any space into a vibrant hub of collaboration, creativity, and innovation."
+          },
+          {
+            "heading": "",
+            "body": "Keeps cables neatly concealed for a clean, organized, and efficient workspace."
+          },
+          {
+            "heading": "",
+            "body": "Blends modern aesthetics with sturdy support, adding style and strength to any meeting space."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Sleek-Meet",
+            "lines": [
+              "DISCUSSIONTABLE",
+              "Dia – 900 /1050 / 1200",
+              "H - 750"
+            ]
+          },
+          {
+            "heading": "Sleek-Meet",
+            "lines": [
+              "MEETINGTABLE",
+              "L – 1200 /1350 / 1500 / 1650 / 1800 / 1950 / 2100 / 2250",
+              "D – 600 /750 / 900 / 1050 / 1200",
+              "H - 750"
+            ]
+          },
+          {
+            "heading": "Sleek-Meet",
+            "lines": [
+              "CONFERENCETABLE",
+              "L - 2400 /3000 / 3300 / 3600 / 4500 / 4800 / 5400 / 6000 / 6600 / 6750",
+              "D - 1200 /1500",
+              "H - 750"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Meeting Tables",
+        "subcategoryId": "meeting",
+        "subcategoryLabel": "Meeting Tables",
+        "subcategory_slug": "meeting-tables",
+        "certifications": [
+          "Sleek",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Sleek-Meet Meeting Table",
+        "sourceSlug": "sleek-meet"
+      },
+      "alt_text": "Sleek-Meet Meeting Table",
+      "sourceSlug": "sleek-meet",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Meeting Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b4f9f40280cfddc18a81_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b527cb2942d3ccb34b76_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b53e7f3cd865d007e608_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6921b5517f3cd865d007ee95_SCROLL%20IMAGE%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Sleek",
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--sleek-meet/image-1.webp",
+        "/images/catalog/oando-tables--sleek-meet/image-2.webp",
+        "/images/catalog/oando-tables--sleek-meet/image-3.webp",
+        "/images/catalog/oando-tables--sleek-meet/image-4.webp"
+      ]
+    },
+    {
+      "id": "70632935-93d7-4f5e-b426-8182eb8554dd",
+      "slug": "oando-tables--stake",
+      "name": "Stake",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "Stake is a cafe table designed for daily workstations and meetings.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [
+          "Natural Elegance"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Natural Elegance",
+            "body": "The Stake Table blends minimalist elegance with practical functionality, making it ideal for offices, cafés, and collaborative zones. Its sleek top paired with warm wooden elements creates a modern aesthetic suited for shared spaces."
+          },
+          {
+            "heading": "",
+            "body": "Part of the STAKE collection, it offers crisp, clean design options in different finishes. With adaptable shapes and a wide colour palette, it fits effortlessly into both large and compact settings, ensuring versatility in any environment."
+          },
+          {
+            "heading": "",
+            "body": "Crafted with solid wooden legs, the table brings warmth and a contemporary touch to any café or collaborative space, enhancing both style and comfort."
+          },
+          {
+            "heading": "",
+            "body": "Its refined, high-quality surface offers a clean, elegant look that’s easy to maintain, ensuring long-lasting appeal in everyday settings. Available in multiple configurations of square, round etc."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Stake Cafe Table",
+        "sourceSlug": "stake"
+      },
+      "alt_text": "Stake Cafe Table",
+      "sourceSlug": "stake",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ac7b6354935be5fd0f8ae_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ac7d57e71c68a4211f4bc_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ac8a3ce4b6cda9eaf708a_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ad09d46f5203e42c4c07c_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ad0b10f54fe8c4ebb3f4b_IMG%203%20555.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--stake/image-1.webp",
+        "/images/catalog/oando-tables--stake/image-2.webp",
+        "/images/catalog/oando-tables--stake/image-3.webp",
+        "/images/catalog/oando-tables--stake/image-4.webp",
+        "/images/catalog/oando-tables--stake/image-5.webp"
+      ]
+    },
+    {
+      "id": "ae27c24b-eee6-4592-aede-e02a973f0fc8",
+      "slug": "oando-workstations--trio-2",
+      "name": "Trio",
+      "category_id": "tables",
+      "series_name": "Cabin Tables",
+      "description": "Trio is a cabin table designed for long working hours.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cabin Tables",
+        "features": [
+          "Flexible Command"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "L1 – 1500/ 1650 / 1800 / 1950 / 2100; D1- 600 / 750 / 900; L2 - 900/ 1050/ 1200; D2 – 450 / 600; H – 750",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Trio",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Flexible Command",
+            "body": "Trio reimagines executive efficiency with a modular design that evolves with changing workspace needs. Its open-frame desk paired with an integrated credenza creates a natural distinction between focus and function"
+          },
+          {
+            "heading": "",
+            "body": "Blending clean metal frames with rich wood finishes, Trio strikes the perfect balance between modern aesthetics and professional strength, offering flexibility, order, and timeless presence"
+          },
+          {
+            "heading": "",
+            "body": "A bold structural frame that ensures strength, stability, and a refined executive presence"
+          },
+          {
+            "heading": "",
+            "body": "Seamlessly built-in power access for effortless connectivity and uninterrupted workflow"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "CABIN TABLE",
+            "lines": [
+              "L1 – 1500/ 1650 / 1800 / 1950 / 2100",
+              "D1- 600 / 750 / 900",
+              "L2 - 900/ 1050/ 1200",
+              "D2 – 450 / 600",
+              "H – 750"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cabin Tables",
+        "subcategoryId": "cabin",
+        "subcategoryLabel": "Cabin Tables",
+        "subcategory_slug": "cabin-tables",
+        "certifications": [
+          "Trio",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Trio Cabin Table",
+        "sourceSlug": "trio"
+      },
+      "alt_text": "Trio Cabin Table",
+      "sourceSlug": "trio",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cabin Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901f2aa8bfc1d5455e14eb3_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901f2e6e7512d87038eda73_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901f301311a517d0a23d0dd_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Trio",
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--trio-2/image-1.webp",
+        "/images/catalog/oando-workstations--trio-2/image-2.webp",
+        "/images/catalog/oando-workstations--trio-2/image-3.webp"
+      ]
+    },
+    {
+      "id": "9e0dc775-b14d-46b7-a2ba-4e1f108ca230",
+      "slug": "oando-soft-seating--verka",
+      "name": "Verka",
+      "category_id": "tables",
+      "series_name": "Cafe Tables",
+      "description": "Verka is a cafe table designed for receptions and breakout areas.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Cafe Tables",
+        "features": [],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "",
+            "body": "With a variety of colors and finishes available, it adapts effortlessly to different décor themes. The inviting design encourages conversation, making every space more functional and engaging."
+          },
+          {
+            "heading": "",
+            "body": "The broad, knot-detailed hardwood surface brings a warm, natural aesthetic with high durability—perfect for both work and casual settings."
+          },
+          {
+            "heading": "",
+            "body": "The slim, uninterrupted profile creates a modern, airy look that blends into any space while still offering a spacious and functional surface."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Cafe Tables",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Tables",
+        "subcategory_slug": "cafe-tables",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Verka Cafe Table",
+        "sourceSlug": "verka"
+      },
+      "alt_text": "Verka Cafe Table",
+      "sourceSlug": "verka",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Cafe Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69398183ec233520af5faacc_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69398199bcf1aafb75b34d9d_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693981abc1016a9dc551fb27_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693981be7a5780aaef254356_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--verka/image-1.webp",
+        "/images/catalog/oando-soft-seating--verka/image-2.webp",
+        "/images/catalog/oando-soft-seating--verka/image-3.webp",
+        "/images/catalog/oando-soft-seating--verka/image-4.webp"
+      ]
+    },
+    {
+      "id": "5fb4d890-42aa-4a1f-b5e5-5c2abd6c5783",
+      "slug": "oando-tables--x-meet",
+      "name": "X-Meet",
+      "category_id": "tables",
+      "series_name": "Meeting Tables",
+      "description": "X-Meet is a meeting table designed for boardrooms and offices.",
+      "specs": {
+        "category": "Tables",
+        "subcategory": "Meeting Tables",
+        "features": [
+          "Built for Powerful Collaboration"
+        ],
+        "materials": [
+          "Afromosia Oak",
+          "American Walnut Crown",
+          "Natural Oak Brown"
+        ],
+        "finish_options": [
+          "Black",
+          "Dyed ash Silver Crown",
+          "Natural Teak",
+          "Teak Crown",
+          "White Oak",
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "X-Bench",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Built for Powerful Collaboration",
+            "body": "X-Meet delivers a robust meeting solution crafted for modern collaborative environments. Its strong construction ensures durability while supporting seamless team interactions in everyday work settings"
+          },
+          {
+            "heading": "",
+            "body": "With versatile configuration options, X-Meet adapts effortlessly to open offices and team-oriented spaces. It enables dynamic layouts that encourage discussion, alignment, and productivity across teams."
+          },
+          {
+            "heading": "",
+            "body": "The integrated wire management option keeps cables neatly concealed, reducing clutter and maintaining a clean, efficient, and professional workspace."
+          },
+          {
+            "heading": "",
+            "body": "A unique modern leg structure enhances visual appeal while delivering strong, stable support for everyday performance."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Tables",
+        "categoryIdCanonical": "tables",
+        "subcategory": "Meeting Tables",
+        "subcategoryId": "meeting",
+        "subcategoryLabel": "Meeting Tables",
+        "subcategory_slug": "meeting-tables",
+        "certifications": [
+          "X-Bench",
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "X-Meet Meeting Table",
+        "sourceSlug": "x-meet"
+      },
+      "alt_text": "X-Meet Meeting Table",
+      "sourceSlug": "x-meet",
+      "sourceCategory": "Tables",
+      "sourceSubcategory": "Meeting Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a7b7324e893f20759abaa_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a7b830b14878f649e8173_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a7b9c891d6cad265f60d9_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a7bb424e893f20759b3e3_SCROLL%20IMAGE%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6901eee3e7512d87038d5dd6_AFC%20TABLE%20SERIES.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "X-Bench",
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-tables--x-meet/image-1.webp",
+        "/images/catalog/oando-tables--x-meet/image-2.webp",
+        "/images/catalog/oando-tables--x-meet/image-3.webp",
+        "/images/catalog/oando-tables--x-meet/image-4.webp"
+      ]
+    },
+    {
+      "id": "388a7402-1a0d-43bf-b3d7-38c6ed0370c8",
+      "slug": "oando-workstations--adaptable",
+      "name": "Adaptable",
+      "category_id": "workstations",
+      "series_name": "Height Adjustable Series",
+      "description": "Adaptable is a workstation system designed for flexible workstations, modern offices, and collaborative spaces. Cable-routing support keeps workstation layouts cleaner and easier to maintain.",
+      "specs": {
+        "category": "Workstations",
+        "subcategory": "Height Adjustable Series",
+        "features": [
+          "A workstation for movement and comfort, one that embraces flexibility and well-being"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 7",
+          "Fabric 5",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "L1 - 1200 / 1350; L2 - 1200 / 1350; D1 - 600; D2 - 600; HT - 580-1210; L1 - 1350 / 1500; L2 - 1350 / 1500; D1 - 600; D2 - 600; HT - 580-1210; L1 - 1200 / 1350 / 1500 / 1650 / 1800; D1 - 600 / 750 / 800; HT - 580-1210; L1 - 1200 / 1350 / 1500 / 1650 / 1800; D1 - 600 / 750 / 800; HT - 580-1210",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Adaptable",
+          "SCS GOLD",
+          "BIFMA ADAPTABLE"
+        ],
+        "overview_sections": [
+          {
+            "heading": "A workstation for movement and comfort, one that embraces flexibility and well-being",
+            "body": "Switch seamlessly between sitting and standing, promoting healthier posture and active workdays"
+          },
+          {
+            "heading": "",
+            "body": "The desk transitions seamlessly between sitting and standing positions, supporting healthier postures and dynamic workflows throughout the day."
+          },
+          {
+            "heading": "",
+            "body": "An integrated controller with memory presets makes height adjustment simple, intuitive, and customized to individual needs."
+          },
+          {
+            "heading": "",
+            "body": "Built-in cable management keeps cords neatly organized, ensuring a clean and efficient workspace."
+          },
+          {
+            "heading": "",
+            "body": "Equipped with an intelligent safety feature that halts movement when an obstacle is detected, preventing damage and ensuring user safety."
+          },
+          {
+            "heading": "",
+            "body": "The Adaptable offers flexibility in frame colors, finishes, and configurations, allowing you to create a setup that blends seamlessly with your office design while meeting ergonomic needs."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Desking 120° Cluster",
+            "lines": [
+              "L1 - 1200 / 1350",
+              "L2 - 1200 / 1350",
+              "D1 - 600",
+              "D2 - 600",
+              "HT - 580-1210"
+            ]
+          },
+          {
+            "heading": "Desking L-Shape Cluster",
+            "lines": [
+              "L1 - 1350 / 1500",
+              "L2 - 1350 / 1500",
+              "D1 - 600",
+              "D2 - 600",
+              "HT - 580-1210"
+            ]
+          },
+          {
+            "heading": "HAT Back-to-Back Cluster",
+            "lines": [
+              "L1 - 1200 / 1350 / 1500 / 1650 / 1800",
+              "D1 - 600 / 750 / 800",
+              "HT - 580-1210"
+            ]
+          },
+          {
+            "heading": "HAT Single Cluster",
+            "lines": [
+              "L1 - 1200 / 1350 / 1500 / 1650 / 1800",
+              "D1 - 600 / 750 / 800",
+              "HT - 580-1210"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Height Adjustable Series",
+        "subcategoryId": "height-adjustable",
+        "subcategoryLabel": "Height Adjustable Series",
+        "subcategory_slug": "height-adjustable-series",
+        "certifications": [
+          "Adaptable",
+          "SCS GOLD",
+          "BIFMA ADAPTABLE"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": true,
+        "warrantyYears": null,
+        "ai_alt_text": "Adaptable workstation system",
+        "sourceSlug": "adaptable"
+      },
+      "alt_text": "Adaptable workstation system",
+      "sourceSlug": "adaptable",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Height Adjustable Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a63016dd950471ad6a5e6_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a632abd5349aabe3293ce_SCROLL%20IMAGE%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6962566ed63da74f8d88733e_SCROLL%20IMAGE%207.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68afca833946eef4af806988_SCROLL%20IMAGE%203B.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a631d0b36ee02f26a4687_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a633cfbc608395405250b_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694a634f0b36ee02f26a6847_SCROLL%20IMAGE%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        },
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/699049f6ff1b709215a505a0_HAT%20ADAPTABLE%20CATALOGUE%202MB.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Adaptable",
+        "SCS GOLD",
+        "BIFMA ADAPTABLE"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--adaptable/image-1.webp",
+        "/images/catalog/oando-workstations--adaptable/image-2.webp",
+        "/images/catalog/oando-workstations--adaptable/image-3.webp",
+        "/images/catalog/oando-workstations--adaptable/image-4.webp",
+        "/images/catalog/oando-workstations--adaptable/image-5.webp",
+        "/images/catalog/oando-workstations--adaptable/image-6.webp",
+        "/images/catalog/oando-workstations--adaptable/image-7.webp"
+      ]
+    },
+    {
+      "id": "8c71fd5d-8460-428b-9b20-4af238b3589a",
+      "slug": "oando-workstations--curvivo",
+      "name": "Curvivo",
+      "category_id": "workstations",
+      "series_name": "Desking Series",
+      "description": "Curvivo is a workstation system designed for modern interiors and comfort. The form is suited to quieter breakout and focused collaboration zones.",
+      "specs": {
+        "category": "Workstations",
+        "subcategory": "Desking Series",
+        "features": [
+          "A workstation for enhanced efficiency, one that embraces fluidity and harmony"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White",
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4"
+        ],
+        "dimensions": "Curvivo 120° Cluster; L1 - 1050 / 1200; L2 - 1050 / 1200; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 /1050 / 1200; Curvivo L-Shape Cluster; L1 - 1500; L2 - 1350 /1500; D1 - 600 / 550; D2 - 600 / 550; HT - 750 / 900 / 1050 / 1200; Curvivo B2 B Cluster; L1 - 900 / 1050 / 1200 / 1350 / 1500; D1 - 600 / 750; HT – 750/ 900/ 1050 / 1200; Curvivo non-sharing cluster; L1 - 900 / 1050 / 1200 / 1350 / 1500; D1 - 600 / 750; HT – 750/ 900/ 1050 / 1200",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "Curvivo",
+          "SCS GOLD"
+        ],
+        "overview_sections": [
+          {
+            "heading": "A workstation for enhanced efficiency, one that embraces fluidity and harmony",
+            "body": "A dynamic and innovative workstation, that is adaptable to different workspaces"
+          },
+          {
+            "heading": "",
+            "body": "The workstation features acoustic dividers, that help the user work with focus and collaborate with team members whenever needed"
+          },
+          {
+            "heading": "",
+            "body": "The curved edges of the planter boxes align with Curvivo’s design, creating a cohesive and visually striking workspace."
+          },
+          {
+            "heading": "",
+            "body": "The Curvivo Mobile Pedestal integrates seamlessly into the design, featuring the same elegant curved edges as the entire collection"
+          },
+          {
+            "heading": "",
+            "body": "Unique curved chamfered edge design that matches the visual language of Curvivo, blending aesthetics with functionality"
+          },
+          {
+            "heading": "",
+            "body": "The workstation comes with adaptable elements like legs and pedestals, allowing you to choose colors, materials, and finishes that seamlessly blend with your workspace vibe."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Curvivo 120° Cluster",
+            "lines": [
+              "Curvivo 120° Cluster",
+              "L1 - 1050 / 1200",
+              "L2 - 1050 / 1200",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Curvivo L-Shape Cluster",
+            "lines": [
+              "Curvivo L-Shape Cluster",
+              "L1 - 1500",
+              "L2 - 1350 /1500",
+              "D1 - 600 / 550",
+              "D2 - 600 / 550",
+              "HT - 750 / 900 / 1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Curvivo B2B Cluster",
+            "lines": [
+              "Curvivo B2 B Cluster",
+              "L1 - 900 / 1050 / 1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT – 750/ 900/ 1050 / 1200"
+            ]
+          },
+          {
+            "heading": "Curvivo non-sharing cluster",
+            "lines": [
+              "Curvivo non-sharing cluster",
+              "L1 - 900 / 1050 / 1200 / 1350 / 1500",
+              "D1 - 600 / 750",
+              "HT – 750/ 900/ 1050 / 1200"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Workstations",
+        "categoryIdCanonical": "workstations",
+        "subcategory": "Desking Series",
+        "subcategoryId": "desking",
+        "subcategoryLabel": "Desking Series",
+        "subcategory_slug": "desking-series",
+        "certifications": [
+          "Curvivo",
+          "SCS GOLD"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Curvivo workstation system",
+        "sourceSlug": "curvivo"
+      },
+      "alt_text": "Curvivo workstation system",
+      "sourceSlug": "curvivo",
+      "sourceCategory": "Workstations",
+      "sourceSubcategory": "Desking Series",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af20e8c57d3736e2e58a66_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af215d144e1299a77f331a_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af2198b2a5da3179f83cd1_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af21e4bd53d875a07ef078_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68af22051284e68cb5cc634f_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f42c1f851c84db775df4c_WORKSTATIONS%20INDIVIDUAL%20(SPREAD%20SHEET)-compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "Curvivo",
+        "SCS GOLD"
+      ],
+      "localImages": [
+        "/images/catalog/oando-workstations--curvivo/image-1.webp",
+        "/images/catalog/oando-workstations--curvivo/image-2.webp",
+        "/images/catalog/oando-workstations--curvivo/image-3.webp",
+        "/images/catalog/oando-workstations--curvivo/image-4.webp",
+        "/images/catalog/oando-workstations--curvivo/image-5.webp"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "oando-tables--uniflip",
+      "name": "Uniflip",
+      "categoryId": "tables"
+    }
+  ]
+}

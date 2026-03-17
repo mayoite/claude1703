@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-03-09T10:48:40.116Z",
+  "productsUpdated": 145,
+  "aliasesInserted": 141,
+  "aliasConflictsSkipped": [
+    {
+      "aliasSlug": "seating-mesh-fluid-x",
+      "legacySlugs": [
+        "fluid-x",
+        "oando-seating--fluid-x"
+      ]
+    },
+    {
+      "aliasSlug": "storages-prelam-prelam",
+      "legacySlugs": [
+        "oando-storage--prelam-storage",
+        "oando-storage--pedestal"
+      ]
+    }
+  ]
+}

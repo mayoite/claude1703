@@ -1,0 +1,883 @@
+{
+  "generatedAt": "2026-03-15T14:57:47.748Z",
+  "mode": "apply",
+  "offset": 100,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "c68f6262-c35d-4bd4-99f7-47da149f965b",
+      "slug": "oando-soft-seating--virello",
+      "name": "Virello",
+      "category_id": "soft-seating",
+      "series_name": "Occasional Tables",
+      "description": "Virello is a occasional table designed for comfort and durability.",
+      "specs": {
+        "category": "Soft Seating",
+        "subcategory": "Occasional Tables",
+        "features": [
+          "Modern Elegance"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "Overall Height: 450mm; Dia: 450 / 600 / 750 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Modern Elegance",
+            "body": "The Virello Table blends simplicity with refined elegance, featuring a smooth round wooden top. Its clean, modern form makes it a stylish addition to any interior."
+          },
+          {
+            "heading": "",
+            "body": "A sleek black metal wireframe base adds durability while enhancing its contemporary appeal. Perfect for living rooms, lounges, or offices, Virello brings a balanced and modern touch to every space."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Virello",
+            "lines": [
+              "Overall Height: 450mm",
+              "Dia: 450 / 600 / 750 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Soft Seating",
+        "categoryIdCanonical": "soft-seating",
+        "subcategory": "Occasional Tables",
+        "subcategoryId": "occasional-tables",
+        "subcategoryLabel": "Occasional Tables",
+        "subcategory_slug": "occasional-tables",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Virello Occasional Table",
+        "sourceSlug": "virello"
+      },
+      "alt_text": "Virello Occasional Table",
+      "sourceSlug": "virello",
+      "sourceCategory": "Soft Seating",
+      "sourceSubcategory": "Occasional Tables",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee71a3b5120e57e47f130_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee740aa1fa063c845abba_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee7905e0e8f3c97e8fb5c_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/693ee7aef2e59bb3c87e7ab7_IMG%2011.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-soft-seating--virello/image-1.webp",
+        "/images/catalog/oando-soft-seating--virello/image-2.webp",
+        "/images/catalog/oando-soft-seating--virello/image-3.webp",
+        "/images/catalog/oando-soft-seating--virello/image-4.webp"
+      ]
+    },
+    {
+      "id": "28bce7ed-425e-4643-8988-208751c6bf29",
+      "slug": "oando-storage--compactor",
+      "name": "Compactor",
+      "category_id": "storages",
+      "series_name": "Compactor Storage",
+      "description": "Compactor is a compactor storage designed for files and documents. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Storage",
+        "subcategory": "Compactor Storage",
+        "features": [
+          "Storage That Works Smarter"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "SIZE:- 2745 L x 450 D x 2200 H; SIZE:- 1830 L x 450 D x 2200 H; SIZE:- 915 L x 900 D x 2200 H",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Storage That Works Smarter",
+            "body": "The Compactor offers versatile storage solutions designed to optimize space in offices and warehouses. Its modular configuration adapts to varying storage needs, ensuring efficient use of every square foot."
+          },
+          {
+            "heading": "",
+            "body": "Built with a robust and durable construction, the Compactor is designed to withstand daily use in demanding environments. Its user-friendly operation allows smooth access to stored items, improving efficiency and convenience."
+          },
+          {
+            "heading": "",
+            "body": "The integrated name tag holder allows clear identification of each locker or storage unit, making organization effortless and retrieval quicker. It enhances usability in shared spaces while maintaining a clean, professional appearance."
+          },
+          {
+            "heading": "",
+            "body": "The heavy-duty steering wheel handle ensures smooth and controlled movement of the compactor, even under full load. Designed for effortless operation, it enhances safety, precision, and user comfort during access."
+          },
+          {
+            "heading": "",
+            "body": "The compactor locker offers flexible storage configurations to accommodate files, documents, and office essentials with ease. Its modular layout adapts to varying storage needs, maximizing capacity while keeping everything systematically organized."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "3-BAY COMPACTOR",
+            "lines": [
+              "SIZE:- 2745 L x 450 D x 2200 H"
+            ]
+          },
+          {
+            "heading": "2-BAY COMPACTOR",
+            "lines": [
+              "SIZE:- 1830 L x 450 D x 2200 H"
+            ]
+          },
+          {
+            "heading": "1-BAY COMPACTOR",
+            "lines": [
+              "SIZE:- 915 L x 900 D x 2200 H"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Storage",
+        "categoryIdCanonical": "storages",
+        "subcategory": "Compactor Storage",
+        "subcategoryId": "compactor",
+        "subcategoryLabel": "Compactor Storage",
+        "subcategory_slug": "compactor-storage",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Compactor Compactor Storage",
+        "sourceSlug": "compactor"
+      },
+      "alt_text": "Compactor Compactor Storage",
+      "sourceSlug": "compactor",
+      "sourceCategory": "Storage",
+      "sourceSubcategory": "Compactor Storage",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6948fcab4d7c2a35124bb5bf_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6948fcba3323a41db4cb83ec_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6948fccded5036ba1f7cd530_IMG%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692178117f3cd865d0ff4a93_AFC%20STORAGE%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-storage--compactor/image-1.webp",
+        "/images/catalog/oando-storage--compactor/image-2.webp",
+        "/images/catalog/oando-storage--compactor/image-3.webp"
+      ]
+    },
+    {
+      "id": "47b886dd-dd5c-4e10-a5e9-3818762f3c75",
+      "slug": "oando-storage--heavy-duty-racks",
+      "name": "Heavy Duty Racks",
+      "category_id": "storages",
+      "series_name": "Metal Storage",
+      "description": "Heavy Duty Racks is a metal storage designed for organized workspaces. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Storage",
+        "subcategory": "Metal Storage",
+        "features": [
+          "Build Up. Store Smart."
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Build Up. Store Smart.",
+            "body": "These durable racks are designed to maximize vertical space, offering efficient storage without increasing the footprint. Their sturdy construction supports organized and clutter-free environments."
+          },
+          {
+            "heading": "",
+            "body": "With customizable shelving options, they adapt easily to store everything from lightweight items to heavy equipment. Ideal for spaces that demand flexibility, strength, and smart organization."
+          },
+          {
+            "heading": "",
+            "body": "Adjustable shelving allows this rack system to be configured as per storage requirements, from small boxes to bulky items. Designed to adapt easily as needs evolve, ensuring efficient and organized storage."
+          },
+          {
+            "heading": "",
+            "body": "Generously sized shelves provide ample space to store bulky cartons and materials with ease. Built for strength and stability, the rack keeps storage organized without crowding the floor area."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Storage",
+        "categoryIdCanonical": "storages",
+        "subcategory": "Metal Storage",
+        "subcategoryId": "metal",
+        "subcategoryLabel": "Metal Storage",
+        "subcategory_slug": "metal-storage",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Heavy Duty Racks Metal Storage",
+        "sourceSlug": "heavy-duty-racks"
+      },
+      "alt_text": "Heavy Duty Racks Metal Storage",
+      "sourceSlug": "heavy-duty-racks",
+      "sourceCategory": "Storage",
+      "sourceSubcategory": "Metal Storage",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69490220ed5036ba1f8090f2_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6949023a6c7db334f06d27af_RACK-RENDER-4.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69490251702a3fa39614f872_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694902654d7c2a35124d7b83_RACK-RENDER-3.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692178117f3cd865d0ff4a93_AFC%20STORAGE%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-storage--heavy-duty-racks/image-1.webp",
+        "/images/catalog/oando-storage--heavy-duty-racks/image-2.webp",
+        "/images/catalog/oando-storage--heavy-duty-racks/image-3.webp",
+        "/images/catalog/oando-storage--heavy-duty-racks/image-4.webp"
+      ]
+    },
+    {
+      "id": "fd33ce26-2eca-4a98-a7ce-ad81a4bef27e",
+      "slug": "oando-storage--metal-locker",
+      "name": "Metal Locker",
+      "category_id": "storages",
+      "series_name": "Locker",
+      "description": "Metal Locker is a locker designed for offices and institutions. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Storage",
+        "subcategory": "Locker",
+        "features": [
+          "Secure Storage. Smarter Spaces."
+        ],
+        "materials": [],
+        "finish_options": [
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "locker unit 6 shutter with leveller; Size: 400 X450 X1950; locker unit 4 shutterwith leveller; Size: 400 X450 X1800; locker unit 2shutter with leveller; Size: 400 X450 X1800",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Secure Storage. Smarter Spaces.",
+            "body": "Designed for efficiency and security, these locker units provide organized storage for personal belongings, helping maintain a clean, clutter-free environment. Their thoughtful layout makes them ideal for everyday use in high-traffic shared spaces."
+          },
+          {
+            "heading": "",
+            "body": "Built with robust construction, the lockers ensure long-term durability and reliable performance. The practical, user-friendly design makes them well suited for gyms, offices, and locker rooms where strength and functionality matter most."
+          },
+          {
+            "heading": "",
+            "body": "Integrated label holders on each locker door allow quick and easy identification, ensuring smooth access and organized usage. Ideal for shared environments where clarity, accountability, and efficiency matter most."
+          },
+          {
+            "heading": "",
+            "body": "Different locking mechanism options ensures quick access and secure storage, reducing confusion in shared environments. Designed for ease, reliability, and smooth daily operation."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Locker (6 Shutter)",
+            "lines": [
+              "locker unit 6 shutter with leveller",
+              "Size: 400 X450 X1950"
+            ]
+          },
+          {
+            "heading": "Locker (4 Shutter)",
+            "lines": [
+              "locker unit 4 shutterwith leveller",
+              "Size: 400 X450 X1800"
+            ]
+          },
+          {
+            "heading": "Locker (2 Shutter)",
+            "lines": [
+              "locker unit 2shutter with leveller",
+              "Size: 400 X450 X1800"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Storage",
+        "categoryIdCanonical": "storages",
+        "subcategory": "Locker",
+        "subcategoryId": "locker",
+        "subcategoryLabel": "Locker",
+        "subcategory_slug": "locker",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Metal Locker Locker",
+        "sourceSlug": "metal-locker"
+      },
+      "alt_text": "Metal Locker Locker",
+      "sourceSlug": "metal-locker",
+      "sourceCategory": "Storage",
+      "sourceSubcategory": "Locker",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694931c94d7c2a35125bd0e1_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694931d9ef852b6b8777d1f8_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694931eaefa7cf384c67e45d_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694931fb30d9576ea2bf02ca_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69493209ef852b6b8777e79a_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694932184c7c7bc46d1a54d2_IMG%207.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692178117f3cd865d0ff4a93_AFC%20STORAGE%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-storage--metal-locker/image-1.webp",
+        "/images/catalog/oando-storage--metal-locker/image-2.webp",
+        "/images/catalog/oando-storage--metal-locker/image-3.webp",
+        "/images/catalog/oando-storage--metal-locker/image-4.webp",
+        "/images/catalog/oando-storage--metal-locker/image-5.webp",
+        "/images/catalog/oando-storage--metal-locker/image-6.webp"
+      ]
+    },
+    {
+      "id": "92ea5252-b25f-4f9a-a889-866f7c63dfd9",
+      "slug": "oando-storage--metal-pedestal",
+      "name": "Metal Pedestal",
+      "category_id": "storages",
+      "series_name": "Metal Storage",
+      "description": "Metal Pedestal is a metal storage designed for desks and workstations. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Storage",
+        "subcategory": "Metal Storage",
+        "features": [
+          "Strength That Organises Your Day"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "Top Supported Prelam Pedestal 4 Equal Drawers With Leveller; Size: 400 W X 450 D X 550 H; Prelam Pedestal (2d+1f) Drawer With Castor/ Leveller; Size: 400 W X 450 D X 550 H; Prelam Pedestal (1d+1f) Drawer With Castor/ Leveller; Size: 400 W X 450 D X 550 H; Prelam Pedestal 2 Equal Drawer With Castor/ Leveller; Size: 400 WX 450 D X 550 H",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Strength That Organises Your Day",
+            "body": "Built in metal for everyday durability, this pedestal keeps essentials neatly within reach. Clean lines, smooth drawers, and a compact form make it a quiet workhorse for focused, clutter-free workspaces."
+          },
+          {
+            "heading": "",
+            "body": "Designed with a reliable locking system and ample storage capacity, it ensures seamless organization and long-lasting performance for daily office use."
+          },
+          {
+            "heading": "",
+            "body": "Available with different locking systems to suit varied workplace needs, this pedestal ensures secure storage with convenient access. Designed to offer reliability, safety, and ease of use in everyday office environments."
+          },
+          {
+            "heading": "",
+            "body": "Designed with ample internal space, this pedestal accommodates files and essentials with ease, keeping the workspace clutter-free. Smooth drawer operation ensures convenient access and efficient daily use."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Pedestal",
+            "lines": [
+              "Top Supported Prelam Pedestal 4 Equal Drawers With Leveller",
+              "Size: 400 W X 450 D X 550 H"
+            ]
+          },
+          {
+            "heading": "Pedestal (2D+1F)",
+            "lines": [
+              "Prelam Pedestal (2d+1f) Drawer With Castor/ Leveller",
+              "Size: 400 W X 450 D X 550 H"
+            ]
+          },
+          {
+            "heading": "Pedestal (1D+1F)",
+            "lines": [
+              "Prelam Pedestal (1d+1f) Drawer With Castor/ Leveller",
+              "Size: 400 W X 450 D X 550 H"
+            ]
+          },
+          {
+            "heading": "Pedestal",
+            "lines": [
+              "Prelam Pedestal 2 Equal Drawer With Castor/ Leveller",
+              "Size: 400 WX 450 D X 550 H"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Storage",
+        "categoryIdCanonical": "storages",
+        "subcategory": "Metal Storage",
+        "subcategoryId": "metal",
+        "subcategoryLabel": "Metal Storage",
+        "subcategory_slug": "metal-storage",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Metal Pedestal Metal Storage",
+        "sourceSlug": "metal-pedestal"
+      },
+      "alt_text": "Metal Pedestal Metal Storage",
+      "sourceSlug": "metal-pedestal",
+      "sourceCategory": "Storage",
+      "sourceSubcategory": "Metal Storage",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694951da695d222609f35820_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694951efe6437d00767188ee_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694952052e192ad72f2a8df8_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6949521c12452afa7e5c1a77_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6949522f2efb3b6fe48f5d34_IMG%207.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694952782302b9942706cb6d_IMG%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692178117f3cd865d0ff4a93_AFC%20STORAGE%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-storage--metal-pedestal/image-1.webp",
+        "/images/catalog/oando-storage--metal-pedestal/image-2.webp",
+        "/images/catalog/oando-storage--metal-pedestal/image-3.webp",
+        "/images/catalog/oando-storage--metal-pedestal/image-4.webp",
+        "/images/catalog/oando-storage--metal-pedestal/image-5.webp",
+        "/images/catalog/oando-storage--metal-pedestal/image-6.webp"
+      ]
+    },
+    {
+      "id": "b8e604f1-8382-42e8-9901-9dfb9ba64680",
+      "slug": "oando-storage--metal-storages",
+      "name": "Metal Storages",
+      "category_id": "storages",
+      "series_name": "Metal Storage",
+      "description": "Metal Storages is a metal storage designed for workspace organization. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Storage",
+        "subcategory": "Metal Storage",
+        "features": [
+          "Built to Endure, Designed to Perform"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Light Blue",
+          "Sea Green",
+          "Orange",
+          "Graphite Grey",
+          "Misty Grey",
+          "White"
+        ],
+        "dimensions": "Openable Storage; W: 600 / 750 / 900 / 1050 /1200 / 1350; D: 400 / 450; H: 750; Metal Filing Cabinet; W: 450; D: 450; H: 800 / 1200 / 1600; Openable Medium Height Storage; W: 600 / 750 / 900; D: 450; H: 900 /1050 / 1200; Openable Full Height Storage; W: 600 / 750 / 900; D: 450; H: 1950",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Built to Endure, Designed to Perform",
+            "body": "Metal storage units are engineered for strength and long-term use in demanding office environments. Their robust construction ensures durability, security, and reliability, making them ideal for daily storage of files, supplies, and personal essentials."
+          },
+          {
+            "heading": "",
+            "body": "With clean lines and efficient layouts, metal storage keeps workspaces organised without visual clutter. Multiple configurations and finishes allow it to integrate seamlessly into contemporary offices while supporting smooth, distraction-free productivity."
+          },
+          {
+            "heading": "",
+            "body": "Scalable Storage Solutions Available in multiple size options ranging from low-height units to full-height cabinets, metal storage adapts easily to different office layouts while offering durable, secure, and efficient organisation."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side Unit",
+            "lines": [
+              "Openable Storage",
+              "W: 600 / 750 / 900 / 1050 /1200 / 1350",
+              "D: 400 / 450",
+              "H: 750"
+            ]
+          },
+          {
+            "heading": "Filing Cabinet",
+            "lines": [
+              "Metal Filing Cabinet",
+              "W: 450",
+              "D: 450",
+              "H: 800 / 1200 / 1600"
+            ]
+          },
+          {
+            "heading": "Medium Height Storage",
+            "lines": [
+              "Openable Medium Height Storage",
+              "W: 600 / 750 / 900",
+              "D: 450",
+              "H: 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "full Height Storage",
+            "lines": [
+              "Openable Full Height Storage",
+              "W: 600 / 750 / 900",
+              "D: 450",
+              "H: 1950"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Storage",
+        "categoryIdCanonical": "storages",
+        "subcategory": "Metal Storage",
+        "subcategoryId": "metal",
+        "subcategoryLabel": "Metal Storage",
+        "subcategory_slug": "metal-storage",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Metal Storages Metal Storage",
+        "sourceSlug": "metal-storages"
+      },
+      "alt_text": "Metal Storages Metal Storage",
+      "sourceSlug": "metal-storages",
+      "sourceCategory": "Storage",
+      "sourceSubcategory": "Metal Storage",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69495937695d222609f63414_6IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694959492e192ad72f2d3744_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6949595bc6e4241daedd18d7_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6949596de6437d007673a865_img%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69495985b18ff3dec9c1b226_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694959974cb8243f856e232b_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694959a6a990494104fc96c7_IMG%207.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692178117f3cd865d0ff4a93_AFC%20STORAGE%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-storage--metal-storages/image-1.webp",
+        "/images/catalog/oando-storage--metal-storages/image-2.webp",
+        "/images/catalog/oando-storage--metal-storages/image-3.webp",
+        "/images/catalog/oando-storage--metal-storages/image-4.webp",
+        "/images/catalog/oando-storage--metal-storages/image-5.webp",
+        "/images/catalog/oando-storage--metal-storages/image-6.webp",
+        "/images/catalog/oando-storage--metal-storages/image-7.webp"
+      ]
+    },
+    {
+      "id": "edb5b61a-1680-4a28-808a-0524309fca9d",
+      "slug": "oando-storage--pedestal",
+      "name": "Prelam Pedestal",
+      "category_id": "storages",
+      "series_name": "Prelam Storage",
+      "description": "Prelam Pedestal is a prelam storage designed for organized workstations. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Storage",
+        "subcategory": "Prelam Storage",
+        "features": [
+          "Style Meets Smart Storage."
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White"
+        ],
+        "dimensions": "Top Supported Prelam Pedestal 4 Equal Drawers With Leveller; Size: 400 W X 450 D X 550 H; Prelam Pedestal (2d+1f) Drawer With Castor/ Leveller; Size: 400 W X 450 D X 550 H; Prelam Pedestal (1d+1f) Drawer With Castor/ Leveller; Size: 400 W X 450 D X 550 H; Prelam Pedestal 2 Equal Drawer With Castor/ Leveller; Size: 400 WX 450 D X 550 H",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Style Meets Smart Storage.",
+            "body": "The wooden pedestal combines a sleek design with practical functionality, making it a smart addition to contemporary offices. Its compact form enhances the workspace while maintaining a clean, professional look."
+          },
+          {
+            "heading": "",
+            "body": "With optimized storage capacity and customizable security options, it delivers both style and everyday utility. Designed to keep essentials organized, it supports efficient and clutter-free work environments."
+          },
+          {
+            "heading": "",
+            "body": "This wooden pedestal offers different locking options to suit varied workspace needs, ensuring secure storage with convenient access."
+          },
+          {
+            "heading": "",
+            "body": "This wooden pedestal offers efficient storage in a compact form, keeping documents and essentials neatly organized. Designed for everyday use, it combines smooth drawer operation with durable construction for long-term performance."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Pedestal",
+            "lines": [
+              "Top Supported Prelam Pedestal 4 Equal Drawers With Leveller",
+              "Size: 400 W X 450 D X 550 H"
+            ]
+          },
+          {
+            "heading": "Pedestal (2D+1F)",
+            "lines": [
+              "Prelam Pedestal (2d+1f) Drawer With Castor/ Leveller",
+              "Size: 400 W X 450 D X 550 H"
+            ]
+          },
+          {
+            "heading": "Pedestal (1D+1F)",
+            "lines": [
+              "Prelam Pedestal (1d+1f) Drawer With Castor/ Leveller",
+              "Size: 400 W X 450 D X 550 H"
+            ]
+          },
+          {
+            "heading": "Pedestal",
+            "lines": [
+              "Prelam Pedestal 2 Equal Drawer With Castor/ Leveller",
+              "Size: 400 WX 450 D X 550 H"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Storage",
+        "categoryIdCanonical": "storages",
+        "subcategory": "Prelam Storage",
+        "subcategoryId": "prelam",
+        "subcategoryLabel": "Prelam Storage",
+        "subcategory_slug": "prelam-storage",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Prelam Pedestal Prelam Storage",
+        "sourceSlug": "pedestal"
+      },
+      "alt_text": "Prelam Pedestal Prelam Storage",
+      "sourceSlug": "pedestal",
+      "sourceCategory": "Storage",
+      "sourceSubcategory": "Prelam Storage",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69493a8dca0422c49eb62f3d_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69493b0dc60baa1dd0089433_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69493b1ec60baa1dd0089a49_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69493b2fd6c9fbe429e4caad_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69493b41a3290adbcdb82fe5_IMG%206.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69493b5197d024f3f9c424d3_IMG%201.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692178117f3cd865d0ff4a93_AFC%20STORAGE%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-storage--pedestal/image-1.webp",
+        "/images/catalog/oando-storage--pedestal/image-2.webp",
+        "/images/catalog/oando-storage--pedestal/image-3.webp",
+        "/images/catalog/oando-storage--pedestal/image-4.webp",
+        "/images/catalog/oando-storage--pedestal/image-5.webp",
+        "/images/catalog/oando-storage--pedestal/image-6.webp"
+      ]
+    },
+    {
+      "id": "58795e21-20e8-4e71-a116-529ca02bd471",
+      "slug": "oando-storage--prelam-storage",
+      "name": "Prelam Storage",
+      "category_id": "storages",
+      "series_name": "Prelam Storage",
+      "description": "Prelam Storage is a prelam storage designed for organized workspaces. The layout supports organized day-to-day storage and easier access to essentials.",
+      "specs": {
+        "category": "Storage",
+        "subcategory": "Prelam Storage",
+        "features": [
+          "Flexible Storage. Timeless Design."
+        ],
+        "materials": [],
+        "finish_options": [
+          "Moldau Acacia Dark",
+          "Elegant Teak",
+          "Thansau Maple",
+          "Highland Pine",
+          "Slate Grey",
+          "Gothic Grey",
+          "Frosty White"
+        ],
+        "dimensions": "Openable Storage; W: 600 / 750 / 900 / 1050 /1200 / 1350; D: 400 / 450; H: 750; Openable Medium Height Storage; W: 600 / 750 / 900; D: 450; H: 900 /1050 / 1200; Openable Full Height Storage; W: 600 / 750 / 900; D: 450; H: 1950",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Flexible Storage. Timeless Design.",
+            "body": "Wooden storage units combine versatility with a sleek design, offering a practical solution for organized and secure workspaces. Their clean aesthetics enhance the overall look while keeping essentials neatly arranged."
+          },
+          {
+            "heading": "",
+            "body": "With customizable compartments and flexible locking options, these units adapt effortlessly to changing office needs. Designed for functionality and ease, they support efficient and clutter-free environments."
+          },
+          {
+            "heading": "",
+            "body": "Available in multiple configurations and sizes, from compact low-height units to full-height storage, designed to adapt effortlessly to diverse workspace needs."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side Unit",
+            "lines": [
+              "Openable Storage",
+              "W: 600 / 750 / 900 / 1050 /1200 / 1350",
+              "D: 400 / 450",
+              "H: 750"
+            ]
+          },
+          {
+            "heading": "Medium Height Storage",
+            "lines": [
+              "Openable Medium Height Storage",
+              "W: 600 / 750 / 900",
+              "D: 450",
+              "H: 900 /1050 / 1200"
+            ]
+          },
+          {
+            "heading": "full Height Storage",
+            "lines": [
+              "Openable Full Height Storage",
+              "W: 600 / 750 / 900",
+              "D: 450",
+              "H: 1950"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Storage",
+        "categoryIdCanonical": "storages",
+        "subcategory": "Prelam Storage",
+        "subcategoryId": "prelam",
+        "subcategoryLabel": "Prelam Storage",
+        "subcategory_slug": "prelam-storage",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Prelam Storage Prelam Storage",
+        "sourceSlug": "prelam-storage"
+      },
+      "alt_text": "Prelam Storage Prelam Storage",
+      "sourceSlug": "prelam-storage",
+      "sourceCategory": "Storage",
+      "sourceSubcategory": "Prelam Storage",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494c1cc60baa1dd00faa1b_6IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494c2fcfc2778ea079d12d_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494c41760c991de7b97afe_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494c55a3290adbcdc06849_img%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494c6836e10d1f664ed94f_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494c82c56e3e5f70656302_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494c95c60baa1dd00ffeca_IMG%207.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69494ca6760c991de7b97f30_IMG%208.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/692178117f3cd865d0ff4a93_AFC%20STORAGE%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-storage--prelam-storage/image-1.webp",
+        "/images/catalog/oando-storage--prelam-storage/image-2.webp",
+        "/images/catalog/oando-storage--prelam-storage/image-3.webp",
+        "/images/catalog/oando-storage--prelam-storage/image-4.webp",
+        "/images/catalog/oando-storage--prelam-storage/image-5.webp",
+        "/images/catalog/oando-storage--prelam-storage/image-6.webp",
+        "/images/catalog/oando-storage--prelam-storage/image-7.webp",
+        "/images/catalog/oando-storage--prelam-storage/image-8.webp"
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "slug": "storages-prelam-mobile-pedestal-3-drawer",
+      "name": "Mobile Pedestal 3-Drawer",
+      "categoryId": "storages"
+    },
+    {
+      "slug": "oando-storage--prelam-locker",
+      "name": "Wooden",
+      "categoryId": "storages"
+    }
+  ]
+}

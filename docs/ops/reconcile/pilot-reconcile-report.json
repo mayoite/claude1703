@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-03-07T09:06:35.796Z",
+  "pilotSlugs": [
+    "oando-seating--fluid-x",
+    "oando-tables--apex",
+    "oando-workstations--adaptable"
+  ],
+  "found": 3,
+  "missing": [],
+  "results": [
+    {
+      "slug": "oando-seating--fluid-x",
+      "name": "Fluid X",
+      "category_id": "seating",
+      "overrideApplied": true,
+      "overrideSource": "seating-manual-20260228193939.json",
+      "metadataDiff": {},
+      "specsCheck": {
+        "dimensions": true,
+        "materialsCount": 3,
+        "featuresCount": 3,
+        "materials": true,
+        "features": true,
+        "requiredProfile": [
+          "dimensions",
+          "materials",
+          "features"
+        ],
+        "profilePass": true
+      },
+      "mediaCheck": {
+        "flagship": "/images/catalog/oando-seating--fluid-x/image-1.webp",
+        "imagesCount": 7,
+        "sceneImagesCount": 3
+      }
+    },
+    {
+      "slug": "oando-tables--apex",
+      "name": "Apex",
+      "category_id": "tables",
+      "overrideApplied": true,
+      "overrideSource": "tables-manual-20260228194442.json",
+      "metadataDiff": {},
+      "specsCheck": {
+        "dimensions": true,
+        "materialsCount": 3,
+        "featuresCount": 2,
+        "materials": true,
+        "features": true,
+        "requiredProfile": [
+          "dimensions",
+          "materials",
+          "features"
+        ],
+        "profilePass": true
+      },
+      "mediaCheck": {
+        "flagship": "/images/catalog/oando-tables--apex/image-1.webp",
+        "imagesCount": 7,
+        "sceneImagesCount": 3
+      }
+    },
+    {
+      "slug": "oando-workstations--adaptable",
+      "name": "Adaptable",
+      "category_id": "workstations",
+      "overrideApplied": true,
+      "overrideSource": "full-catalog-map-20260228194713.json",
+      "metadataDiff": {},
+      "specsCheck": {
+        "dimensions": true,
+        "materialsCount": 3,
+        "featuresCount": 2,
+        "materials": true,
+        "features": true,
+        "requiredProfile": [
+          "dimensions",
+          "materials",
+          "features"
+        ],
+        "profilePass": true
+      },
+      "mediaCheck": {
+        "flagship": "/images/catalog/oando-workstations--adaptable/image-1.webp",
+        "imagesCount": 7,
+        "sceneImagesCount": 3
+      }
+    }
+  ]
+}

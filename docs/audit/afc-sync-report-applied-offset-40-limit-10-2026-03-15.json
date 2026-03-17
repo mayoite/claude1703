@@ -1,0 +1,1068 @@
+{
+  "generatedAt": "2026-03-15T14:56:35.974Z",
+  "mode": "apply",
+  "offset": 40,
+  "limit": 10,
+  "totalLocalProducts": 145,
+  "totalAfcProducts": 133,
+  "selectedProducts": 10,
+  "matched": [
+    {
+      "id": "21845817-fcdd-40f6-8c9d-787d1bb0fd21",
+      "slug": "oando-seating--orbit",
+      "name": "Orbit",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Orbit is a mesh chair designed for posture support and comfort.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Balanced Comfort"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Overall Height: 1040 mm; Overall Width: 660 mm; Overall Depth: 660 mm; Seat Width: 460 mm; Seat Depth: 470 mm",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Balanced Comfort",
+            "body": "The Orbit chair combines ergonomic comfort with advanced functionality, featuring a breathable mesh backrest that promotes airflow and keeps you cool during long sitting hours."
+          },
+          {
+            "heading": "",
+            "body": "Designed with a light, simple appearance, Orbit offers optimal comfort and support. Ideal for modern workspaces, it delivers ventilation, flexibility, and reliable performance without compromising on style."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Orbit",
+            "lines": [
+              "Overall Height: 1040 mm",
+              "Overall Width: 660 mm",
+              "Overall Depth: 660 mm",
+              "Seat Width: 460 mm",
+              "Seat Depth: 470 mm"
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Orbit Mesh Chair",
+        "sourceSlug": "orbit"
+      },
+      "alt_text": "Orbit Mesh Chair",
+      "sourceSlug": "orbit",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/696899d7bd6f6c007aeae532_img%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/696899eeb30a93732a3128a1_img%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69689a00b30a93732a3131e7_img%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69689a14cc66e1567df7e9b1_img%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69689a24b30a93732a3146e9_img%206.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--orbit/image-1.webp",
+        "/images/catalog/oando-seating--orbit/image-2.webp",
+        "/images/catalog/oando-seating--orbit/image-3.webp",
+        "/images/catalog/oando-seating--orbit/image-4.webp",
+        "/images/catalog/oando-seating--orbit/image-5.webp"
+      ]
+    },
+    {
+      "id": "3477ff18-b24d-4e0c-96bb-6007b243d5fa",
+      "slug": "oando-seating--phoenix",
+      "name": "Phoenix",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Phoenix is a mesh chair designed for durability and ergonomic support. The chair includes dedicated head and neck support for longer work sessions.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Balancing work and wellbeing. Precision in posture. Comfort in motion"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Armrest width: 300 mm.; Armrest to seat height: 300 mm.; Seat width: 450 mm.; Backrest to seat height: 700 mm.; Seat base width (including wheels): 660 mm.; Overall height: 1250 mm.; Seat width: 510 mm.; Seat base width (including wheels): 660 mm.; Armrest length: 250 mm.; Headrest length: 200 mm.; Headrest width: 340 mm; Seat to ground height: 450 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Balancing work and wellbeing. Precision in posture. Comfort in motion",
+            "body": "Phoenix is designed to energize your workflow with refined support and adaptive comfort. Every detail is engineered to promote a focused, upright experience—whether you're deep in thought or on the move."
+          },
+          {
+            "heading": "",
+            "body": "A supportive headrest and fluid motion system help reduce muscle strain, keeping your body at ease and your mind engaged during long hours at your desk"
+          },
+          {
+            "heading": "",
+            "body": "Easily modify the armrests in multiple directions to match your ideal height and angle, reducing shoulder tension and promoting ergonomic ease"
+          },
+          {
+            "heading": "",
+            "body": "An integrated lumbar system contours to your lower back, helping maintain healthy alignment and relieving daily pressure buildup"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Back View Dimensions without headrest (in mm)",
+            "lines": [
+              "Armrest width: 300 mm.",
+              "Armrest to seat height: 300 mm.",
+              "Seat width: 450 mm.",
+              "Backrest to seat height: 700 mm.",
+              "Seat base width (including wheels): 660 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions with headrest (in mm)",
+            "lines": [
+              "Overall height: 1250 mm.",
+              "Seat width: 510 mm.",
+              "Seat base width (including wheels): 660 mm.",
+              "Armrest length: 250 mm.",
+              "Headrest length: 200 mm.",
+              "Headrest width: 340 mm",
+              "Seat to ground height: 450 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "SCS GOLD",
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Phoenix Mesh Chair",
+        "sourceSlug": "phoenix"
+      },
+      "alt_text": "Phoenix Mesh Chair",
+      "sourceSlug": "phoenix",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e7b3db903dcea85c6f3649_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e7b41f24296a6ec566db42_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e7b43a0726712f70e497bd_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "SCS GOLD",
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--phoenix/image-1.webp",
+        "/images/catalog/oando-seating--phoenix/image-2.webp",
+        "/images/catalog/oando-seating--phoenix/image-3.webp"
+      ]
+    },
+    {
+      "id": "d5a26f6b-51f8-4dab-ac95-7eb4246b5fb5",
+      "slug": "oando-seating--pinnacle",
+      "name": "Pinnacle",
+      "category_id": "seating",
+      "series_name": "Leather Chair",
+      "description": "Pinnacle is a leather chair designed for premium leadership spaces.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "features": [
+          "Executive Luxury with Timeless Appeal"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Executive Luxury with Timeless Appeal",
+            "body": "This premium leather ergonomic chair is crafted to bring sophistication and authority to executive spaces. Rich upholstery, plush cushioning, and refined contours create a commanding presence without compromising on comfort."
+          },
+          {
+            "heading": "",
+            "body": "Designed for long hours of focused leadership, the chair offers structured back support and smooth reclining comfort. Its balanced ergonomics ensure stability, ease of movement, and lasting performance throughout the workday."
+          },
+          {
+            "heading": "",
+            "body": "Generously cushioned L-shaped armrests wrapped in premium leather provide enhanced forearm support, reducing strain while adding a soft, executive touch to the chair’s profile."
+          },
+          {
+            "heading": "",
+            "body": "The tall, well-padded backrest is designed to support the spine and shoulders, enabling relaxed reclining comfort during long working hours or reflective moments."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Leather Chair",
+        "subcategoryId": "leather",
+        "subcategoryLabel": "Leather Chair",
+        "subcategory_slug": "leather-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Pinnacle Leather Chair",
+        "sourceSlug": "pinnacle"
+      },
+      "alt_text": "Pinnacle Leather Chair",
+      "sourceSlug": "pinnacle",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Leather Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bba908a852e39b5a4b2e6_IMG%201%20(1).jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bbb03e8eb928ca7465584_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bbb14668a51786608cbe9_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bbb22592e10cb64183722_IMG%203B.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bbb34cb9b3e5fd7fc76f2_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bbb43868191103364090a_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--pinnacle/image-1.webp",
+        "/images/catalog/oando-seating--pinnacle/image-2.webp",
+        "/images/catalog/oando-seating--pinnacle/image-3.webp",
+        "/images/catalog/oando-seating--pinnacle/image-4.webp",
+        "/images/catalog/oando-seating--pinnacle/image-5.webp",
+        "/images/catalog/oando-seating--pinnacle/image-6.webp"
+      ]
+    },
+    {
+      "id": "da795b94-771a-459f-b0bf-2548493f5dbc",
+      "slug": "oando-seating--revoq",
+      "name": "Revoq",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Revoq is a mesh chair designed for comfort and productivity. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Designed for everyday agility. Comfort that adapts as fast as you do"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Seat height till ground : 430 mm; Overall width (base including wheels): 660 mm; Seat width: 520 mm.; Armrest length: 250 mm.; Headrest width: 320 mm.; Armrest width: 100 mm.; Overall height: 10800 mm; Seat height till ground: 635 mm.; Seat to width: 465 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Designed for everyday agility. Comfort that adapts as fast as you do",
+            "body": "Revoq brings dynamic support to the modern workspace. With fluid adjustability and a responsive build, it encourages better movement, upright posture, and day-long ease—no matter how your workflow shifts."
+          },
+          {
+            "heading": "",
+            "body": "Built to move with you, Revoq reduces pressure across key areas—helping you stay comfortable, alert, and productive without strain."
+          },
+          {
+            "heading": "",
+            "body": "Multi-directional armrests adjust to your working style, helping ease pressure on shoulders and support relaxed upper body alignment."
+          },
+          {
+            "heading": "",
+            "body": "The lumbar area contours to your lower back, promoting better spinal positioning and reducing daily fatigue"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions with headrest (in mm)",
+            "lines": [
+              "Seat height till ground : 430 mm",
+              "Overall width (base including wheels): 660 mm",
+              "Seat width: 520 mm.",
+              "Armrest length: 250 mm.",
+              "Headrest width: 320 mm."
+            ]
+          },
+          {
+            "heading": "Side View Dimensions without headrest (in mm)",
+            "lines": [
+              "Armrest width: 100 mm.",
+              "Overall height: 10800 mm",
+              "Seat height till ground: 635 mm.",
+              "Seat to width: 465 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Revoq Mesh Chair",
+        "sourceSlug": "revoq"
+      },
+      "alt_text": "Revoq Mesh Chair",
+      "sourceSlug": "revoq",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8f0ce6762a4d6d940305e_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8f0f53433a63c2a73e14f_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8f118a6137034a0651a31_SECTION%203-SCROLL%20IMAGES%20CHAIR%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8f1395aa25cde5442d908_SECTION%203-SCROLL%20IMAGES%20CHAIR%204.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--revoq/image-1.webp",
+        "/images/catalog/oando-seating--revoq/image-2.webp",
+        "/images/catalog/oando-seating--revoq/image-3.webp",
+        "/images/catalog/oando-seating--revoq/image-4.webp"
+      ]
+    },
+    {
+      "id": "7fc0f7a4-b3fd-4dd4-8cf9-59e3c993c84b",
+      "slug": "oando-seating--rider",
+      "name": "Rider",
+      "category_id": "seating",
+      "series_name": "Leather Chair",
+      "description": "Rider is a leather chair designed for comfort, posture support, and productivity. The chair includes dedicated head and neck support for longer work sessions.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "features": [
+          "Contoured Elegance for Executive Spaces"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Contoured Elegance for Executive Spaces",
+            "body": "This premium leather ergonomic chair features a gracefully sculpted profile with layered cushioning that enhances both visual depth and seating comfort. Its refined form adds warmth and authority to modern leadership environments."
+          },
+          {
+            "heading": "",
+            "body": "Engineered to support natural posture, the chair offers smooth recline functionality and balanced cushioning for extended work hours. Finished in high-quality leather with precise detailing, it delivers comfort that feels as premium as it looks."
+          },
+          {
+            "heading": "",
+            "body": "The softly padded headrest is designed to cradle the neck and upper spine, offering added comfort during long hours of sitting."
+          },
+          {
+            "heading": "",
+            "body": "Rich, high-quality leather with refined stitching delivers a plush seating feel while enhancing the chair’s executive appeal."
+          }
+        ],
+        "dimension_sections": [],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Leather Chair",
+        "subcategoryId": "leather",
+        "subcategoryLabel": "Leather Chair",
+        "subcategory_slug": "leather-chair",
+        "certifications": [],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Rider Leather Chair",
+        "sourceSlug": "rider"
+      },
+      "alt_text": "Rider Leather Chair",
+      "sourceSlug": "rider",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Leather Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bcfa97e6f6f64f1099e58_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bcfb8264029dae3e7e519_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bcfc90f0426ee5d841f97_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bcfdeb63021deafa6aa29_SCROLL%20IMAGE%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/694bcfeb3a26796b4988b68a_SCROLL%20IMAGE%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--rider/image-1.webp",
+        "/images/catalog/oando-seating--rider/image-2.webp",
+        "/images/catalog/oando-seating--rider/image-3.webp",
+        "/images/catalog/oando-seating--rider/image-4.webp",
+        "/images/catalog/oando-seating--rider/image-5.webp"
+      ]
+    },
+    {
+      "id": "d032563f-1b5b-49dd-8ad2-eb524814f1b0",
+      "slug": "oando-seating--rio",
+      "name": "Rio",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Rio is a cafe chair designed for modern and functional workspaces. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Sculpted Simplicity"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "Height: 770mm.; Width: 480 mm.; Depth: 510 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Sculpted Simplicity",
+            "body": "The Rio Chair combines clean, contemporary contours with a light, easy presence. Its open style backrest creates a sense of space while maintaining a crisp, modern profile ideal for cafés and dining areas. Designed with thoughtful proportions, it blends visual simplicity with practical style."
+          },
+          {
+            "heading": "",
+            "body": "Shaped with ergonomic intent, the Crotch Café Chair provides supportive seating suited for extended use. Its durable construction ensures long lasting comfort in high traffic environments such as restaurants, collaborative zones, and home dining settings."
+          },
+          {
+            "heading": "",
+            "body": "The chair’s backrest features a wide, gently curved design that offers natural lumbar support while enhancing comfort. Its seamless, one-piece structure provides stability without adding bulk, creating a clean, modern silhouette."
+          },
+          {
+            "heading": "",
+            "body": "The chair’s backrest is crafted with a smooth, continuous curve that provides balanced support while maintaining a clean, modern look. Its one-piece moulded form adds durability and stability, making it ideal for everyday use."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Rio",
+            "lines": [
+              "Height: 770mm.",
+              "Width: 480 mm.",
+              "Depth: 510 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Rio Cafe Chair",
+        "sourceSlug": "rio"
+      },
+      "alt_text": "Rio Cafe Chair",
+      "sourceSlug": "rio",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f0ce7c697f105fe86953_IM%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f0e3f48616456724479b_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f0f6969ab30d3066a756_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f1085f825e7756b669fa_IMG%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f11a34397722fe58a155_IMG%205.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--rio/image-1.webp",
+        "/images/catalog/oando-seating--rio/image-2.webp",
+        "/images/catalog/oando-seating--rio/image-3.webp",
+        "/images/catalog/oando-seating--rio/image-4.webp",
+        "/images/catalog/oando-seating--rio/image-5.webp"
+      ]
+    },
+    {
+      "id": "430d2912-47cf-4ff2-ba18-8ea60d9cda90",
+      "slug": "oando-seating--rock",
+      "name": "Rock",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Rock is a mesh chair designed for durability and comfort.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Made to move with you. Support that shifts as you do"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Seat backrest width: 490 mm.; Overall height: 960 mm; Seat height till ground: 290 mm.; Headrest width: 490 mm.; Overall height: 1110 mm; Seat height till ground: 450 mm.; Seat width: 470 mm.; Headrest height: 150 mm.; Armrest height till seat: 290 mm.; Seat base width (including wheels): 680 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Made to move with you. Support that shifts as you do",
+            "body": "Rock is built for flexibility—designed to follow your posture, respond to your movements, and keep your body aligned throughout the day. Whether you're leaning in or reclining back, Rock adjusts in all the right places."
+          },
+          {
+            "heading": "",
+            "body": "Engineered for comfort through motion, Rock adapts to your form and flow—reducing pressure and encouraging natural posture without distractions."
+          },
+          {
+            "heading": "",
+            "body": "Easily adjust the height and angle of the armrests to support your arms in any position, reducing shoulder tension throughout the day"
+          },
+          {
+            "heading": "",
+            "body": "Customize the seat depth to suit your body’s proportions—promoting better leg support and posture from the ground up."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Front View Dimensions without headrest (in mm)",
+            "lines": [
+              "Seat backrest width: 490 mm.",
+              "Overall height: 960 mm",
+              "Seat height till ground: 290 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions with headrest (in mm)",
+            "lines": [
+              "Headrest width: 490 mm.",
+              "Overall height: 1110 mm",
+              "Seat height till ground: 450 mm.",
+              "Seat width: 470 mm.",
+              "Headrest height: 150 mm.",
+              "Armrest height till seat: 290 mm.",
+              "Seat base width (including wheels): 680 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Rock Mesh Chair",
+        "sourceSlug": "rock"
+      },
+      "alt_text": "Rock Mesh Chair",
+      "sourceSlug": "rock",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea312decda432274cbf140_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea316f803952bcf8ef7574_SCROLL%20IMAGE%203.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea30e90650b13462ed12ba_SCROLL%20IMAGE%201.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--rock/image-1.webp",
+        "/images/catalog/oando-seating--rock/image-2.webp",
+        "/images/catalog/oando-seating--rock/image-3.webp"
+      ]
+    },
+    {
+      "id": "0ea7d021-1b86-4b90-a900-6e1ee4cd929e",
+      "slug": "oando-seating--smile",
+      "name": "Smile",
+      "category_id": "seating",
+      "series_name": "Cafe Chair",
+      "description": "Smile is a cafe chair designed for comfort and modern appeal.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Cafe Chair",
+        "features": [
+          "Casual Comfort"
+        ],
+        "materials": [],
+        "finish_options": [],
+        "dimensions": "Height: 770mm.; Width: 440 mm.; Depth: 520 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [],
+        "overview_sections": [
+          {
+            "heading": "Casual Comfort",
+            "body": "The Chair brings a warm, inviting presence to any café or dining setting with its clean, contemporary lines. Designed with a supportive backrest, it maintains a balanced silhouette that enhances both comfort and style."
+          },
+          {
+            "heading": "",
+            "body": "With a thoughtfully shaped seat and ergonomic design, the Crotch Café Chair ensures comfort even during long seating durations. Its sturdy build and subtle curves offer a supportive experience, making it a practical and stylish choice for busy commercial spaces or home dining environments."
+          },
+          {
+            "heading": "",
+            "body": "The chair’s curved wraparound backrest offers a supportive, hugged in feel while maintaining a sleek, modern look. Its smooth, molded design and evenly spaced spindles provide stability without adding bulk."
+          },
+          {
+            "heading": "",
+            "body": "The chair’s backrest features slim, evenly spaced spindles that create an open, airy look while offering reliable support. Its smooth, curved seat edge connects seamlessly with the back, enhancing comfort and visual balance."
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Smile",
+            "lines": [
+              "Height: 770mm.",
+              "Width: 440 mm.",
+              "Depth: 520 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Cafe Chair",
+        "subcategoryId": "cafe",
+        "subcategoryLabel": "Cafe Chair",
+        "subcategory_slug": "cafe-chair",
+        "certifications": [],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Smile Cafe Chair",
+        "sourceSlug": "smile"
+      },
+      "alt_text": "Smile Cafe Chair",
+      "sourceSlug": "smile",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Cafe Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f51095492b732284cdbb_IMG%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f526378a20e28a4813e9_IMG%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f53b95492b732284f1e8_IMG%204.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f55495492b73228500c5_IMG%205.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6927f56495492b7322850a9c_IMG3.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f4158f8d9883dd188c2ec_SOFT%20SEATING%20FINAL%20INDIVIDUAL%20BROCHURE-compressed%20(1)_compressed.pdf"
+        }
+      ],
+      "sourceCertifications": [],
+      "localImages": [
+        "/images/catalog/oando-seating--smile/image-1.webp",
+        "/images/catalog/oando-seating--smile/image-2.webp",
+        "/images/catalog/oando-seating--smile/image-3.webp",
+        "/images/catalog/oando-seating--smile/image-4.webp",
+        "/images/catalog/oando-seating--smile/image-5.webp"
+      ]
+    },
+    {
+      "id": "165ed7ba-5259-494e-9a1c-c5f5a95e4ed1",
+      "slug": "oando-seating--spino",
+      "name": "Spino",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Spino is a mesh chair designed for daily comfort and productivity. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Built for better posture. Support that has your back."
+        ],
+        "materials": [],
+        "finish_options": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Seat base width (including wheels): 660 mm.; Armrest length: 250 mm.; Overall height: 1270 mm..; Headrest width: 280 mm.; Headrest height: 170 mm.; Overall height: 990 mm.; Armrest width: 85 mm.; Seat width: 490 mm.; Seat backrest width: 470 mm.; Armrest height till seat: 300 mm.; Seat height till ground: 450 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Built for better posture. Support that has your back.",
+            "body": "Spino is crafted for those who prioritize alignment without sacrificing ease. With posture-enhancing features and thoughtful adjustability, it encourages upright sitting while letting you move naturally through the day"
+          },
+          {
+            "heading": "",
+            "body": "Designed to reduce strain from top to bottom, Spino helps you maintain healthy posture—keeping your energy steady and your thoughts on track."
+          },
+          {
+            "heading": "",
+            "body": "Spino’s armrests shift smoothly to suit your desk setup—helping you reduce shoulder tension and find a more relaxed working angle"
+          },
+          {
+            "heading": "",
+            "body": "The chair’s lumbar zone adjusts to cradle the lower back, encouraging spinal alignment and relieving pressure through extended use"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Seat base width (including wheels): 660 mm.",
+              "Armrest length: 250 mm.",
+              "Overall height: 1270 mm..",
+              "Headrest width: 280 mm.",
+              "Headrest height: 170 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 990 mm.",
+              "Armrest width: 85 mm.",
+              "Seat width: 490 mm.",
+              "Seat backrest width: 470 mm.",
+              "Armrest height till seat: 300 mm.",
+              "Seat height till ground: 450 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": true,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Spino Mesh Chair",
+        "sourceSlug": "spino"
+      },
+      "alt_text": "Spino Mesh Chair",
+      "sourceSlug": "spino",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8eb9f8e68e3422358978b_SECTION%203-SCROLL%20IMAGES%20CHAIR%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68e8ebcc679a83cf71bd42f3_SECTION%203-SCROLL%20IMAGES%20CHAIR%202.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--spino/image-1.webp",
+        "/images/catalog/oando-seating--spino/image-2.webp"
+      ]
+    },
+    {
+      "id": "7d5e7e56-3fe5-4416-bac7-1ce38ae3bbbc",
+      "slug": "oando-seating--sullion",
+      "name": "Sullion",
+      "category_id": "seating",
+      "series_name": "Mesh Chair",
+      "description": "Sullion is a mesh chair designed for modern interiors. Integrated lumbar support helps maintain a steadier seated posture.",
+      "specs": {
+        "category": "Seating",
+        "subcategory": "Mesh Chair",
+        "features": [
+          "Refined function. Everyday ease. Comfort where it matters most"
+        ],
+        "materials": [],
+        "finish_options": [
+          "Silver Grey",
+          "Light Grey",
+          "Cadit Grey",
+          "Butter Scotch",
+          "Blue",
+          "Black",
+          "Fabric 10",
+          "Fabric 9",
+          "Fabric 8",
+          "Fabric 7",
+          "Fabric 6",
+          "Fabric 5",
+          "Fabric 4",
+          "Fabric 3",
+          "Fabric 2",
+          "Fabric 1"
+        ],
+        "dimensions": "Seat base width (including wheels): 660 mm.; Armrest length: 250 mm.; Seat height: 1270 mm..; Seat height till ground: 450 mm.; Overall height: 1650 mm.; Armrest width: 85 mm.; Seat width: 485 mm.; Seat backrest width: 490 mm.; Armrest height till seat: 300 mm.",
+        "documents": [],
+        "document_titles": [],
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "overview_sections": [
+          {
+            "heading": "Refined function. Everyday ease. Comfort where it matters most",
+            "body": "Sullion blends minimal design with essential ergonomic features to support the way you work. Whether you're leaning in or kicking back, it delivers the right balance of structure and softness—keeping you at ease without overcomplication"
+          },
+          {
+            "heading": "",
+            "body": "The armrests shift smoothly to match your ideal height and angle—helping ease shoulder tension and support a more relaxed upper body posture"
+          },
+          {
+            "heading": "",
+            "body": "A built-in adjustable lumbar contour promotes better spinal alignment, offering steady lower back support during long sitting sessions"
+          }
+        ],
+        "dimension_sections": [
+          {
+            "heading": "Side View Dimensions (in mm)",
+            "lines": [
+              "Seat base width (including wheels): 660 mm.",
+              "Armrest length: 250 mm.",
+              "Seat height: 1270 mm..",
+              "Seat height till ground: 450 mm."
+            ]
+          },
+          {
+            "heading": "Front View Dimensions (in mm)",
+            "lines": [
+              "Overall height: 1650 mm.",
+              "Armrest width: 85 mm.",
+              "Seat width: 485 mm.",
+              "Seat backrest width: 490 mm.",
+              "Armrest height till seat: 300 mm."
+            ]
+          }
+        ],
+        "warranty_text": "",
+        "sustainability_text": ""
+      },
+      "metadata": {
+        "category": "Seating",
+        "categoryIdCanonical": "seating",
+        "subcategory": "Mesh Chair",
+        "subcategoryId": "mesh",
+        "subcategoryLabel": "Mesh Chair",
+        "subcategory_slug": "mesh-chair",
+        "certifications": [
+          "GREEN PRO"
+        ],
+        "hasHeadrest": false,
+        "bifmaCertified": false,
+        "warrantyYears": null,
+        "ai_alt_text": "Sullion Mesh Chair",
+        "sourceSlug": "sullion"
+      },
+      "alt_text": "Sullion Mesh Chair",
+      "sourceSlug": "sullion",
+      "sourceCategory": "Seating",
+      "sourceSubcategory": "Mesh Chair",
+      "sourceImages": [
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea2e4a18ce118468edacdb_SCROLL%20IMAGE%201.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea2e6c70eead0659fa05ff_SCROLL%20IMAGE%202.jpg",
+        "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68ea2e94b3c55196817f9462_SCROLL%20IMAGE%203.jpg"
+      ],
+      "sourceDocs": [
+        {
+          "title": "",
+          "href": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/690f41b6a6a5f947ba078362_AFC%20SEATING%20CATALOGUE.pdf"
+        }
+      ],
+      "sourceCertifications": [
+        "GREEN PRO"
+      ],
+      "localImages": [
+        "/images/catalog/oando-seating--sullion/image-1.webp",
+        "/images/catalog/oando-seating--sullion/image-2.webp",
+        "/images/catalog/oando-seating--sullion/image-3.webp"
+      ]
+    }
+  ],
+  "unmatched": []
+}

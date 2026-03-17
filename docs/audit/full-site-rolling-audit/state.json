@@ -1,0 +1,12 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "outDir": "E:\\new-repo-20260306-235837\\docs\\audit\\full-site-rolling-audit",
+  "progress": {
+    "completedChecks": 314,
+    "totalChecks": 314,
+    "currentViewport": "mobile",
+    "currentRouteIndex": 157,
+    "currentRoute": "/trusted-by"
+  },
+  "updatedAt": "2026-03-15T12:55:27.572Z"
+}
