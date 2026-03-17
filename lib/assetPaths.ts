@@ -1,3 +1,6 @@
+import fs from "node:fs";
+import path from "node:path";
+
 const configuredAssetBaseUrl = (
   process.env.NEXT_PUBLIC_ASSET_BASE_URL ||
   process.env.ASSET_BASE_URL ||
@@ -14,6 +17,35 @@ function applyAssetBase(value: string): string {
   if (!configuredAssetBaseUrl) return value;
   if (!value.startsWith("/")) return value;
   return `${configuredAssetBaseUrl}${value}`;
+}
+
+function toPublicFsPath(assetPath: string): string {
+  const normalized = assetPath.replace(/^\/+/, "").split("/").join(path.sep);
+  return path.join(process.cwd(), "public", normalized);
+}
+
+function localAssetExists(assetPath: string): boolean {
+  if (!assetPath.startsWith("/")) return false;
+  try {
+    return fs.existsSync(toPublicFsPath(assetPath));
+  } catch {
+    return false;
+  }
+}
+
+function resolveLocalImageVariant(assetPath: string): string {
+  if (localAssetExists(assetPath)) return assetPath;
+
+  if (assetPath.toLowerCase().endsWith(".webp")) {
+    const jpgCandidate = assetPath.replace(/\.webp$/i, ".jpg");
+    if (localAssetExists(jpgCandidate)) return jpgCandidate;
+    const jpegCandidate = assetPath.replace(/\.webp$/i, ".jpeg");
+    if (localAssetExists(jpegCandidate)) return jpegCandidate;
+    const pngCandidate = assetPath.replace(/\.webp$/i, ".png");
+    if (localAssetExists(pngCandidate)) return pngCandidate;
+  }
+
+  return "";
 }
 
 export function normalizeAssetPath(path: string | null | undefined): string {
@@ -49,13 +81,12 @@ export function normalizeAssetPath(path: string | null | undefined): string {
     return applyAssetBase(`/images/catalog/oando-seating--phoenix/image-${imageIndex}.jpg`);
   }
 
-  // Keep normalization pure (no local filesystem checks) so serverless bundles
-  // do not trace the public asset tree.
+  // Catalog rows still contain stale WEBP references while repo assets are JPG-only for many products.
+  // Resolve to an existing local variant when possible and drop unresolved local image paths.
   if (candidatePath.startsWith("/images/") && hasImageExtension) {
-    if (candidateLower.endsWith(".webp")) {
-      return applyAssetBase(candidatePath.replace(/\.webp$/i, ".jpg"));
-    }
-    return applyAssetBase(candidatePath);
+    const resolvedVariant = resolveLocalImageVariant(candidatePath);
+    if (!resolvedVariant) return "";
+    return applyAssetBase(resolvedVariant);
   }
 
   return applyAssetBase(candidatePath);

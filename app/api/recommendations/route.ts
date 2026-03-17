@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getProducts, type Product } from "@/lib/getProducts";
 import { createSupabaseAdminClient } from "@/lib/supabaseAdmin";
 import { getCatalogProductHref } from "@/lib/catalogCategories";
-import { fetchCatalogRows } from "@/lib/catalogApiData";
 
 type RecommendationsPayload = {
   userId?: string;
@@ -115,18 +115,7 @@ export async function POST(req: NextRequest) {
     const userId = normalizeText(payload.userId);
     const limit = Math.min(Math.max(Number(payload.limit) || 4, 1), 8);
 
-    const products = (await fetchCatalogRows())
-      .map((row) => ({
-        id: typeof row.id === "string" ? row.id : "",
-        name: typeof row.name === "string" ? row.name : "",
-        slug: typeof row.slug === "string" ? row.slug : "",
-        category_id: typeof row.category_id === "string" ? row.category_id : "",
-        metadata:
-          row.metadata && typeof row.metadata === "object" && !Array.isArray(row.metadata)
-            ? (row.metadata as Product["metadata"])
-            : undefined,
-      }))
-      .filter((row) => Boolean(row.id && row.name && row.slug && row.category_id));
+    const products = await getProducts();
     if (products.length === 0) {
       return NextResponse.json({
         mode: "popular",
@@ -183,12 +172,3 @@ export async function POST(req: NextRequest) {
     );
   }
 }
-type Product = {
-  id: string;
-  name: string;
-  slug: string;
-  category_id: string;
-  metadata?: {
-    priceRange?: "budget" | "mid" | "premium" | "luxury";
-  };
-};

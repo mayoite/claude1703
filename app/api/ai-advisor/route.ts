@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
-import { createClient } from "@supabase/supabase-js";
+import { getProducts } from "@/lib/getProducts";
 import { createSupabaseAdminClient } from "@/lib/supabaseAdmin";
-import { fetchNhostProducts } from "@/lib/nhostCatalog";
+import { normalizeRequestedCategoryId } from "@/lib/catalogCategories";
 import { SITE_URL } from "@/lib/siteUrl";
 import {
   buildConfiguratorContextSummary,
@@ -13,20 +13,7 @@ import {
   type ConfiguratorAdvisorContext,
 } from "@/lib/aiAdvisor";
 
-type ProductLite = {
-  slug: string;
-  name: string;
-  description?: string;
-  category_id: string;
-  series_name?: string;
-  series?: string;
-  metadata?: {
-    tags?: string[];
-    subcategory?: string;
-    priceRange?: "budget" | "mid" | "premium" | "luxury";
-  };
-};
-
+type ProductLite = Awaited<ReturnType<typeof getProducts>>[number];
 type AdvisorClientConfig = {
   client: OpenAI;
   model: string;
@@ -81,123 +68,10 @@ function parsePayload(
 }
 
 function normalizeCategoryId(raw: string): string {
+  const canonical = normalizeRequestedCategoryId(raw);
+  if (canonical) return canonical;
   const stripped = raw.replace(/^oando-/, "").trim().toLowerCase();
-  if (stripped === "storage") return "storages";
-  if (stripped === "educational") return "education";
-  if (stripped === "collaborative") return "soft-seating";
-  if (stripped === "chairs" || stripped === "other-seating") return "seating";
-  if (stripped === "soft-seating") return "soft-seating";
-  if (stripped === "workstations") return "workstations";
-  if (stripped === "tables") return "tables";
-  if (stripped === "storages") return "storages";
-  if (stripped === "education") return "education";
   return stripped || "seating";
-}
-
-function createCatalogClient() {
-  const supabaseUrl =
-    process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ??
-    process.env.SUPABASE_URL?.trim() ??
-    "";
-  const supabaseKey =
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim() ??
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY?.trim() ??
-    process.env.SUPABASE_ANON_KEY?.trim() ??
-    process.env.SUPABASE_PUBLISHABLE_KEY?.trim() ??
-    process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ??
-    "";
-
-  if (!supabaseUrl || !supabaseKey) {
-    return null;
-  }
-
-  return createClient(supabaseUrl, supabaseKey, {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-      detectSessionInUrl: false,
-    },
-  });
-}
-
-async function fetchAdvisorProducts(): Promise<ProductLite[]> {
-  const client = createCatalogClient();
-  if (!client) {
-    const nhostProducts = await fetchNhostProducts();
-    if (!nhostProducts || nhostProducts.length === 0) return [];
-    return nhostProducts
-      .map((product) => ({
-        slug: product.slug,
-        name: product.name,
-        description: product.description,
-        category_id: product.category_id,
-        series_name: product.series_name,
-        series: product.series,
-        metadata: product.metadata
-          ? {
-              tags: Array.isArray(product.metadata.tags) ? product.metadata.tags : [],
-              subcategory:
-                typeof product.metadata.subcategory === "string"
-                  ? product.metadata.subcategory
-                  : undefined,
-              priceRange:
-                product.metadata.priceRange === "budget" ||
-                product.metadata.priceRange === "mid" ||
-                product.metadata.priceRange === "premium" ||
-                product.metadata.priceRange === "luxury"
-                  ? product.metadata.priceRange
-                  : undefined,
-            }
-          : undefined,
-      }))
-      .filter(
-        (product) => Boolean(product?.slug && product?.name && product?.category_id),
-      );
-  }
-
-  const { data, error } = await client
-    .from("products")
-    .select("slug, name, description, category_id, series_name, series, metadata")
-    .order("name", { ascending: true })
-    .limit(120);
-
-  if (error) {
-    console.error("[ai-advisor] products error:", error.message);
-    const nhostProducts = await fetchNhostProducts();
-    if (!nhostProducts || nhostProducts.length === 0) return [];
-    return nhostProducts
-      .map((product) => ({
-        slug: product.slug,
-        name: product.name,
-        description: product.description,
-        category_id: product.category_id,
-        series_name: product.series_name,
-        series: product.series,
-        metadata: product.metadata
-          ? {
-              tags: Array.isArray(product.metadata.tags) ? product.metadata.tags : [],
-              subcategory:
-                typeof product.metadata.subcategory === "string"
-                  ? product.metadata.subcategory
-                  : undefined,
-              priceRange:
-                product.metadata.priceRange === "budget" ||
-                product.metadata.priceRange === "mid" ||
-                product.metadata.priceRange === "premium" ||
-                product.metadata.priceRange === "luxury"
-                  ? product.metadata.priceRange
-                  : undefined,
-            }
-          : undefined,
-      }))
-      .filter(
-        (product) => Boolean(product?.slug && product?.name && product?.category_id),
-      );
-  }
-
-  return ((data ?? []) as ProductLite[]).filter(
-    (product) => Boolean(product?.slug && product?.name && product?.category_id),
-  );
 }
 
 function parsePriceRange(priceRange: string | undefined): string {
@@ -406,7 +280,7 @@ export async function POST(req: NextRequest) {
     }
     const { query, userId, context } = parsedBody;
 
-    const products = await fetchAdvisorProducts();
+    const products = await getProducts();
     if (!products || products.length === 0) {
       return NextResponse.json(
         {
