@@ -1,6 +1,6 @@
 export const HOMEPAGE_HERO_CONTENT = {
   title: ["Spaces that work", "as hard as your team.", ""],
-  description: "One accountable team from planning through support.",
+  description: "",
   primaryCta: { label: "Guided Planner", href: "/contact" },
   secondaryCta: { label: "View Products", href: "/products" },
 } as const;
