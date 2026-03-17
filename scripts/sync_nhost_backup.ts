@@ -479,7 +479,13 @@ async function main() {
       updated_at: row.updated_at ?? new Date().toISOString(),
     }));
 
-    const aliasPayload = aliases.map((row) => ({
+    const canonicalSlugSet = new Set(
+      productPayload
+        .map((row) => String(row.slug || "").trim())
+        .filter(Boolean),
+    );
+
+    const aliasPayloadRaw = aliases.map((row) => ({
       id: Number(row.id),
       alias_slug: row.alias_slug,
       canonical_slug: row.canonical_slug,
@@ -488,6 +494,16 @@ async function main() {
       created_at: row.created_at ?? new Date().toISOString(),
       updated_at: row.updated_at ?? new Date().toISOString(),
     }));
+
+    const aliasPayload = aliasPayloadRaw.filter((row) =>
+      canonicalSlugSet.has(String(row.canonical_slug || "").trim()),
+    );
+    const droppedAliasCount = aliasPayloadRaw.length - aliasPayload.length;
+    if (droppedAliasCount > 0) {
+      console.warn(
+        `[sync] dropping ${droppedAliasCount} alias rows with missing canonical_slug in products`,
+      );
+    }
 
     const statsPayload = stats.map((row) => ({
       id: row.id,

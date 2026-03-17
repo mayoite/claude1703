@@ -1,6 +1,6 @@
 # Nhost Runtime Fallback Audit
 
-- Generated at: 2026-03-17T10:04:35.569Z
+- Generated at: 2026-03-17T10:06:25.679Z
 
 ## GraphQL Checks
 - products: ok (ok)
@@ -10,7 +10,7 @@
 ## Sampled Alias Resolution
 - education-classroom-academia -> oando-educational--academia: ok
 - soft-seating-lounge-accent -> oando-soft-seating--accent: ok
-- education-classroom-accent-study-chair -> accent-study: ok
+- education-classroom-accent-study-chair -> accent-study: fail
 - soft-seating-lounge-adam -> oando-soft-seating--adam: ok
 - workstations-height-adjustable-adaptable -> oando-workstations--adaptable: ok
 - soft-seating-sofa-alonzo -> oando-soft-seating--alonzo: ok

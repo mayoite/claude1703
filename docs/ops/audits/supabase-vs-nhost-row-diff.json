@@ -20,14 +20,14 @@
   {
     "table": "product_images -> product_images",
     "supabase": 635,
-    "nhost": 1478,
-    "diff": 843
+    "nhost": 635,
+    "diff": 0
   },
   {
     "table": "product_slug_aliases -> product_slug_aliases",
     "supabase": 716,
-    "nhost": 704,
-    "diff": -12
+    "nhost": 698,
+    "diff": -18
   },
   {
     "table": "business_stats_current -> business_stats_current",
@@ -56,13 +56,13 @@
   {
     "table": "product_images -> catalog_product_images",
     "supabase": 635,
-    "nhost": 1478,
-    "diff": 843
+    "nhost": 635,
+    "diff": 0
   },
   {
     "table": "product_slug_aliases -> catalog_product_slug_aliases",
     "supabase": 716,
-    "nhost": 704,
-    "diff": -12
+    "nhost": 698,
+    "diff": -18
   }
 ]

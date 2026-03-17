@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T10:04:35.569Z",
+  "generatedAt": "2026-03-17T10:06:25.679Z",
   "supabaseHost": "erpweaiypimorcunaimz.supabase.co",
   "nhostDbHost": "bggcbrfwssqgflkuhgkg.db.ap-south-1.nhost.run:5432",
   "supabaseCounts": {
@@ -14,14 +14,14 @@
     "catalog_categories": 6,
     "catalog_products": 145,
     "catalog_product_specs": 145,
-    "catalog_product_images": 1478,
-    "catalog_product_slug_aliases": 704,
+    "catalog_product_images": 635,
+    "catalog_product_slug_aliases": 698,
     "business_stats_current": 1,
     "categories": 6,
     "products": 145,
     "product_specs": 145,
-    "product_images": 1478,
-    "product_slug_aliases": 704
+    "product_images": 635,
+    "product_slug_aliases": 698
   },
   "diffs": [
     {
@@ -45,14 +45,14 @@
     {
       "table": "product_images -> product_images",
       "supabase": 635,
-      "nhost": 1478,
-      "diff": 843
+      "nhost": 635,
+      "diff": 0
     },
     {
       "table": "product_slug_aliases -> product_slug_aliases",
       "supabase": 716,
-      "nhost": 704,
-      "diff": -12
+      "nhost": 698,
+      "diff": -18
     },
     {
       "table": "business_stats_current -> business_stats_current",
@@ -81,14 +81,14 @@
     {
       "table": "product_images -> catalog_product_images",
       "supabase": 635,
-      "nhost": 1478,
-      "diff": 843
+      "nhost": 635,
+      "diff": 0
     },
     {
       "table": "product_slug_aliases -> catalog_product_slug_aliases",
       "supabase": 716,
-      "nhost": 704,
-      "diff": -12
+      "nhost": 698,
+      "diff": -18
     }
   ],
   "graphqlChecks": [
@@ -111,8 +111,8 @@
   "sampledSlugChecks": [
     {
       "slug": "education-classroom-accent-study-chair",
-      "canonicalInNhost": false,
-      "aliasInNhost": true
+      "canonicalInNhost": true,
+      "aliasInNhost": false
     },
     {
       "slug": "fluid-x",
@@ -174,7 +174,7 @@
     {
       "alias_slug": "education-classroom-accent-study-chair",
       "canonical_slug": "accent-study",
-      "resolvesInNhost": true
+      "resolvesInNhost": false
     },
     {
       "alias_slug": "soft-seating-lounge-adam",
