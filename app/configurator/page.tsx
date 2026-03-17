@@ -24,7 +24,7 @@ export default async function ConfiguratorPage({
         title={CONFIGURATOR_PAGE_COPY.heroTitle}
         subtitle={CONFIGURATOR_PAGE_COPY.heroSubtitle}
         showButton={false}
-        backgroundImage="/images/catalog/oando-workstations--deskpro/image-1.webp"
+        backgroundImage="/images/catalog/oando-workstations--deskpro/image-1.jpg"
       />
 
       <section className="w-full border-y border-neutral-200 bg-neutral-50 py-12">

@@ -327,7 +327,7 @@ const RENDERABLE_ARCHIVE_GROUPS: RenderableArchiveGroup[] = [
         note: "Simple premium-motion image treatment for a future gallery pass.",
         element: (
           <ParallaxGallery
-            image="/images/about/hero-corridor.jpg"
+            image="/images/products/deskpro-workstation-1.webp"
             caption="Legacy parallax treatment"
           />
         ),
@@ -396,7 +396,7 @@ const RENDERABLE_ARCHIVE_GROUPS: RenderableArchiveGroup[] = [
             title="Archive content pacing block"
             subtitle="Reference-only"
             description="This preserved layout is useful for evaluating image-led storytelling rhythm, but its styling would need to be aligned with the live marketing system before reuse."
-            imageSrc="/images/about/hero-corridor.jpg"
+            imageSrc="/images/products/deskpro-workstation-1.webp"
             linkText="Open contact route"
             linkHref="/contact"
           />
@@ -421,7 +421,7 @@ const RENDERABLE_ARCHIVE_GROUPS: RenderableArchiveGroup[] = [
               name="Archive profile sample"
               title="Founder"
               bio="This old card still renders correctly and proves the dependency note was stale, but its presentation is too generic for the live trust system."
-              image="/images/about/hero-corridor.jpg"
+              image="/images/products/deskpro-workstation-1.webp"
             />
             <ScrollAnimate className="rounded-[1.75rem] border border-neutral-200 bg-neutral-50 p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-neutral-500">
@@ -504,14 +504,14 @@ const RENDERABLE_ARCHIVE_GROUPS: RenderableArchiveGroup[] = [
         element: (
           <div className="grid gap-6 px-6 py-8 md:px-8 lg:grid-cols-2">
             <Card
-              imageSrc="/images/about/hero-corridor.jpg"
+              imageSrc="/images/products/deskpro-workstation-1.webp"
               title="Overlay card pattern"
               subtitle="Archive reference"
               href="/projects"
               variant="overlay"
             />
             <Teaser
-              imageSrc="/images/about/hero-corridor.jpg"
+              imageSrc="/images/products/deskpro-workstation-1.webp"
               title="Teaser pattern"
               description="This preserved teaser still feels coherent, but it would need live-system typography and stronger interaction detail before reuse."
               href="/contact"
@@ -532,7 +532,7 @@ const RENDERABLE_ARCHIVE_GROUPS: RenderableArchiveGroup[] = [
           <div className="px-6 py-8 md:px-8">
             <div className="max-w-2xl">
               <ContactPerson
-                imageSrc="/images/about/hero-corridor.jpg"
+                imageSrc="/images/products/deskpro-workstation-1.webp"
                 name="Archive contact sample"
                 role="Workspace advisor"
                 phone="+91 98356 30940"

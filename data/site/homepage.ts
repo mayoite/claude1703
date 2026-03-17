@@ -46,7 +46,7 @@ export const HOMEPAGE_COLLECTIONS_CONTENT = {
     },
     {
       name: "Storage",
-      image: "/images/products/cabin electrical render .webp",
+      image: "/images/products/imported/storage/image-14.webp",
       href: "/products/storages",
     },
     {
@@ -155,14 +155,14 @@ export const HOMEPAGE_SOLUTIONS_CONTENT = {
       outcome:
         "Task and executive seating tuned for posture support, long-hour comfort, and dependable after-sales coverage.",
       href: "/products/seating",
-      image: "/images/catalog/oando-seating--fluid-x/image-1.webp",
+      image: "/images/catalog/oando-seating--fluid-x/image-1.jpg",
     },
     {
       title: "Scalable Workstations",
       outcome:
         "Modular systems that scale team by team with practical cable management and planning-friendly layouts.",
       href: "/products/workstations",
-      image: "/images/catalog/oando-workstations--deskpro/image-1.webp",
+      image: "/images/catalog/oando-workstations--deskpro/image-1.jpg",
     },
     {
       title: "Meeting Tables",
@@ -176,7 +176,7 @@ export const HOMEPAGE_SOLUTIONS_CONTENT = {
       outcome:
         "Lockers, pedestals, and cabinets built for secure daily use with efficient footprint planning.",
       href: "/products/storages",
-      image: "/images/catalog/oando-storage--metal-storages/image-1.webp",
+      image: "/images/catalog/oando-storage--metal-storages/image-1.jpg",
     },
   ],
 } as const;

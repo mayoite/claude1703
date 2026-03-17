@@ -108,7 +108,7 @@ export default async function ShowroomsPage() {
         description={SHOWROOMS_PAGE_COPY.sustainabilityDescription}
         linkText={SHOWROOMS_PAGE_COPY.sustainabilityCta}
         linkUrl="/sustainability"
-        imageSrc="/projects/OMC-Porbandar/IMG_3498.webp"
+        imageSrc="/projects/DMRC/IMG_20200612_145931.webp"
         imageAlt="Sustainable office furniture project"
         lightMode
       />

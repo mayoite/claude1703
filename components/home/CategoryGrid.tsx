@@ -11,7 +11,7 @@ import { PRODUCTS_PAGE_COPY } from "@/data/site/routeCopy";
 
 const getCachedCatalog = unstable_cache(
   async () => getCatalog(),
-  ["home-category-grid"],
+  ["home-category-grid-v2"],
   { revalidate: 3600, tags: ["catalog"] },
 );
 

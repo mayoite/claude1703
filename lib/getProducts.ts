@@ -196,7 +196,7 @@ async function fetchAllProductsLive(): Promise<Product[]> {
     }));
 }
 
-const getCachedProducts = unstable_cache(fetchAllProductsLive, ["catalog-products"], {
+const getCachedProducts = unstable_cache(fetchAllProductsLive, ["catalog-products-v2"], {
     revalidate: CATALOG_REVALIDATE_SECONDS,
     tags: ["catalog", "catalog-products"],
 });
@@ -237,7 +237,7 @@ async function fetchProductsByCategoryLive(categoryId: string): Promise<Product[
 
 const getCachedProductsByCategory = unstable_cache(
     async (categoryId: string) => fetchProductsByCategoryLive(categoryId),
-    ["catalog-products-by-category"],
+    ["catalog-products-by-category-v2"],
     {
         revalidate: CATALOG_REVALIDATE_SECONDS,
         tags: ["catalog", "catalog-products"],
@@ -282,7 +282,7 @@ async function fetchProductByUrlKeyLive(productUrlKey: string): Promise<Product 
 
 const getCachedProductByUrlKey = unstable_cache(
     async (productUrlKey: string) => fetchProductByUrlKeyLive(productUrlKey),
-    ["catalog-product-by-url-key"],
+    ["catalog-product-by-url-key-v2"],
     {
         revalidate: CATALOG_REVALIDATE_SECONDS,
         tags: ["catalog", "catalog-products"],
@@ -469,7 +469,7 @@ async function buildCatalogLive(): Promise<CompatCategory[]> {
     return result;
 }
 
-const getCachedCatalog = unstable_cache(buildCatalogLive, ["catalog-tree"], {
+const getCachedCatalog = unstable_cache(buildCatalogLive, ["catalog-tree-v2"], {
     revalidate: CATALOG_REVALIDATE_SECONDS,
     tags: ["catalog", "catalog-tree"],
 });

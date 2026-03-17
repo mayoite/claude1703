@@ -187,7 +187,7 @@ export const SERIES_SUGGESTIONS: Record<WorkstationSeries, SuggestedSystem[]> = 
     {
       name: "DeskPro",
       hint: "Modular desking for linear and cluster plans.",
-      image: "/images/catalog/oando-workstations--deskpro/image-1.webp",
+      image: "/images/catalog/oando-workstations--deskpro/image-1.jpg",
       href: "/products/workstations",
     },
     {

@@ -19,7 +19,7 @@ export const metadata: Metadata = buildPageMetadata(SITE_URL, {
   title: "Workspace products",
   description: PRODUCTS_PAGE_COPY.heroSubtitle,
   path: "/products",
-  image: "/images/catalog/oando-workstations--deskpro/image-1.webp",
+  image: "/images/catalog/oando-workstations--deskpro/image-1.jpg",
 });
 
 export default function ProductsPage() {
@@ -65,7 +65,7 @@ export default function ProductsPage() {
 
           <div className="scheme-border relative aspect-[4/3] overflow-hidden rounded-2xl border">
             <Image
-              src="/images/catalog/oando-workstations--deskpro/image-1.webp"
+              src="/images/catalog/oando-workstations--deskpro/image-1.jpg"
               alt="Deskpro workstation setup used as category planning preview"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

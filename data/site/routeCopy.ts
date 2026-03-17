@@ -392,19 +392,19 @@ export const SOLUTIONS_DELIVERY_STEPS = [
     title: "Brief and business requirements",
     detail:
       "We align on team structure, workflow priorities, budget range, and decision checkpoints.",
-    image: "/images/catalog/oando-workstations--deskpro/image-1.webp",
+    image: "/images/catalog/oando-workstations--deskpro/image-1.jpg",
   },
   {
     title: "Layout, specification, and BOQ",
     detail:
       "Design options are translated into practical category selections and quantity plans for approval.",
-    image: "/images/catalog/oando-tables--curvivo-meet/image-1.webp",
+    image: "/images/catalog/oando-tables--curvivo-meet/image-1.jpg",
   },
   {
     title: "Execution and handover support",
     detail:
       "Delivery, installation, and warranty onboarding are managed with clear communication and accountability.",
-    image: "/images/catalog/oando-soft-seating--accent/image-1.webp",
+    image: "/images/catalog/oando-soft-seating--accent/image-1.jpg",
   },
 ] as const;
 

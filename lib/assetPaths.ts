@@ -52,7 +52,20 @@ export function normalizeAssetPath(path: string | null | undefined): string {
   // Keep normalization pure (no local filesystem checks) so serverless bundles
   // do not trace the public asset tree.
   if (candidatePath.startsWith("/images/") && hasImageExtension) {
-    if (candidateLower.endsWith(".webp")) {
+    // Imported product image packs are WEBP-backed in this repository.
+    if (
+      candidateLower.startsWith("/images/products/imported/") &&
+      (candidateLower.endsWith(".jpg") || candidateLower.endsWith(".jpeg"))
+    ) {
+      return applyAssetBase(candidatePath.replace(/\.(jpe?g)$/i, ".webp"));
+    }
+
+    // Catalog exports in this repository are JPG-backed; preserve WEBP paths
+    // for all other image trees (for example /images/products/imported/*).
+    if (
+      candidateLower.startsWith("/images/catalog/") &&
+      candidateLower.endsWith(".webp")
+    ) {
       return applyAssetBase(candidatePath.replace(/\.webp$/i, ".jpg"));
     }
     return applyAssetBase(candidatePath);

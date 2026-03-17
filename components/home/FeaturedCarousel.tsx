@@ -11,14 +11,14 @@ const HERO_PRODUCTS = [
     id: "fluid-x",
     name: "Fluid X",
     category: "Ergonomic Seating",
-    image: "/images/catalog/oando-seating--fluid-x/image-1.webp",
+    image: "/images/catalog/oando-seating--fluid-x/image-1.jpg",
     link: "/products/seating/oando-seating--fluid-x",
   },
   {
     id: "deskpro",
     name: "DeskPro",
     category: "Workstations",
-    image: "/images/catalog/oando-workstations--deskpro/image-1.webp",
+    image: "/images/catalog/oando-workstations--deskpro/image-1.jpg",
     link: "/products/workstations/oando-workstations--deskpro",
   },
 ] as const;

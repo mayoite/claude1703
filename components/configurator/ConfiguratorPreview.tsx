@@ -10,7 +10,7 @@ const layoutImages: Record<string, string> = {
   "cluster-6": "/images/products/deskpro-workstation-2.webp",
   "l-shape": "/images/products/60x30-workstation-1.webp",
   "u-shape": "/images/products/60x30-workstation-2.webp",
-  "private-cabins": "/images/products/cabin electrical render .webp",
+  "private-cabins": "/images/products/cabin drawer close up render.webp",
   "hybrid-mix": "/images/products/deskpro-workstation-3.webp",
 };
 
