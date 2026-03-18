@@ -66,6 +66,9 @@ test-results/
 # Large local assets — not for version control
 dont touch oando_website.zip
 
+# Agent recovery state — local only
+codex-recovery/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

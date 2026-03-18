@@ -1,3 +1,0 @@
-Read `/e:/new-repo-20260306-235837/codex-recovery/handover/latest-handover.md` first.
-Then read `/e:/new-repo-20260306-235837/codex-recovery/handover/CURRENT-RULES.md`, `/e:/new-repo-20260306-235837/codex-recovery/handover/CURRENT-PLAN.md`, `/e:/new-repo-20260306-235837/codex-recovery/handover/CURRENT-CHECKLIST.md`, `/e:/new-repo-20260306-235837/codex-recovery/WORLD-CLASS-PLAN.md`, `/e:/new-repo-20260306-235837/codex-recovery/NEXT-PLAN.md`, `/e:/new-repo-20260306-235837/codex-recovery/RECOVERY-CHECKLIST.md`, `/e:/new-repo-20260306-235837/codex-recovery/DECISIONS.md`, and `/e:/new-repo-20260306-235837/codex-recovery/latest.md`.
-Continue from the single active frontier only.

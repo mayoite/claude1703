@@ -1,3 +1,0 @@
-HANDOVER COMMAND
-
-Finish the current bounded work slice. Update `WORLD-CLASS-PLAN.md` only if long-form plan truth changed. Update `NEXT-PLAN.md` if the active block or next step changed. Update `RECOVERY-CHECKLIST.md` with completed items, status changes, and fresh verification state. Generate the handover package and make sure `latest-handover.md`, `CURRENT-RULES.md`, `CURRENT-PLAN.md`, and `CURRENT-CHECKLIST.md` match the real repo state. End the chat only after the docs and handover files are aligned.
