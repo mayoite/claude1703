@@ -1065,7 +1065,7 @@ export const LEGAL_PAGE_COPY = {
 export const PRODUCTS_PAGE_COPY = {
   heroTitle: "Workspace Products",
   heroSubtitle:
-    "Furniture categories built for real office workflows, long-term durability, and long-term value.",
+    "Office furniture for Patna, Bihar, and Jharkhand — categories built for real workflows, long-term durability, and measurable value.",
   rangeKicker: "Category entry",
   rangeTitle: "Browse by workspace needs",
   strategyKicker: "Product strategy",

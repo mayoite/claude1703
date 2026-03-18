@@ -6,7 +6,7 @@ import { Hero } from "@/components/home/Hero";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { PRODUCTS_PAGE_COPY } from "@/data/site/routeCopy";
-import { buildPageJsonLd, buildPageMetadata } from "@/data/site/seo";
+import { buildBreadcrumbJsonLd, buildPageJsonLd, buildPageMetadata } from "@/data/site/seo";
 import { SITE_URL } from "@/lib/siteUrl";
 
 const PILLAR_ICONS = {
@@ -15,11 +15,29 @@ const PILLAR_ICONS = {
   shield: ShieldCheck,
 } as const;
 
+const CATEGORY_ITEMS = [
+  { name: "Seating", url: "/products/seating" },
+  { name: "Workstations", url: "/products/workstations" },
+  { name: "Tables", url: "/products/tables" },
+  { name: "Storage", url: "/products/storages" },
+  { name: "Soft Seating", url: "/products/soft-seating" },
+  { name: "Education", url: "/products/education" },
+];
+
 export const metadata: Metadata = buildPageMetadata(SITE_URL, {
   title: "Workspace Products",
   description: PRODUCTS_PAGE_COPY.heroSubtitle,
   path: "/products",
   image: "/images/catalog/oando-workstations--deskpro/image-1.jpg",
+  keywords: [
+    "office furniture Patna",
+    "office furniture Bihar",
+    "office furniture Jharkhand",
+    "workspace furniture India",
+    "ergonomic chairs Patna",
+    "modular workstations Bihar",
+    "meeting tables Jharkhand",
+  ],
 });
 
 export default function ProductsPage() {
@@ -30,11 +48,36 @@ export default function ProductsPage() {
     pageType: "CollectionPage",
   });
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(SITE_URL, [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+  ]);
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Workspace Product Categories",
+    itemListElement: CATEGORY_ITEMS.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: new URL(item.url, SITE_URL).toString(),
+    })),
+  };
+
   return (
     <section className="scheme-page flex min-h-screen flex-col items-center">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productsJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <Hero
         variant="small"
