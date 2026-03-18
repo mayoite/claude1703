@@ -80,6 +80,8 @@ backup/
 /docs/migrations/backups/
 supabase/.temp/
 .DONOTDELETE/
+# Full archive directory — legacy content, local only
+archive/
 archive/tool-state/
 archive/test-artifacts/
 archive/duplicate-assets/
