@@ -63,6 +63,9 @@ playwright-report/
 test-results/
 .netlify/
 
+# Large local assets — not for version control
+dont touch oando_website.zip
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
