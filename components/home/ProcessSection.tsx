@@ -47,6 +47,11 @@ export function ProcessSection({ embedded = false }: ProcessSectionProps) {
               <span className="home-chip home-chip--accent">{step.sla}</span>
               <span className="home-step-card__meta">{step.deliverable}</span>
             </div>
+            {step.description ? (
+              <p className="mt-3 text-sm text-neutral-500 leading-relaxed">
+                {step.description}
+              </p>
+            ) : null}
           </motion.div>
         ))}
       </div>

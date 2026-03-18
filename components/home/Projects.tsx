@@ -45,7 +45,13 @@ export function Projects() {
                 />
               </div>
               <div className="projects-card__body">
+                <span className="mb-1 block text-xs font-medium uppercase tracking-widest text-neutral-400">
+                  {project.sector}
+                </span>
                 <h3 className="projects-card__title">{project.companyName}</h3>
+                <p className="mt-1 text-sm text-neutral-300 leading-snug opacity-90">
+                  {project.outcome}
+                </p>
               </div>
             </div>
           ))}

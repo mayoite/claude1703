@@ -2,7 +2,7 @@ export const HOMEPAGE_HERO_CONTENT = {
   title: ["Spaces that work", "as hard as your team.", ""],
   description: "",
   primaryCta: { label: "Guided Planner", href: "/contact" },
-  secondaryCta: { label: "View Products", href: "/products" },
+  secondaryCta: { label: "Browse Seating", href: "/products/seating" },
 } as const;
 
 export const HOMEPAGE_TRUST_CONTENT = {
@@ -82,21 +82,25 @@ export const HOMEPAGE_PROJECTS_CONTENT = {
     {
       sector: "Government",
       companyName: "DMRC",
+      outcome: "Workstations and seating across operational zones",
       image: "/ClientPhotos/DMRC/hero.jpg",
     },
     {
       sector: "Corporate",
       companyName: "Titan Limited",
+      outcome: "Full-floor ergonomic rollout at Patna headquarters",
       image: "/ClientPhotos/Titan/hero.jpg",
     },
     {
       sector: "Automobile",
       companyName: "TVS Motors",
+      outcome: "Multi-seat workstation fit-out for regional office",
       image: "/ClientPhotos/TVS/hero.jpg",
     },
     {
       sector: "Institutional",
       companyName: "Usha Workspace",
+      outcome: "Integrated storage, seating, and collaboration zones",
       image: "/ClientPhotos/Usha/hero.jpg",
     },
   ],
@@ -136,21 +140,25 @@ export const HOMEPAGE_PROCESS_CONTENT = {
       title: "Scope",
       sla: "Day 1-2",
       deliverable: "Signed brief",
+      description: "Needs workshop, headcount, zones, and bill of materials.",
     },
     {
       title: "Design",
       sla: "Day 3-7",
       deliverable: "Approved layout",
+      description: "2D layout and material board submitted for sign-off.",
     },
     {
       title: "Deliver",
       sla: "As per approved schedule",
       deliverable: "Installed workspace",
+      description: "Factory-built, delivered, and installed to spec.",
     },
     {
       title: "Support",
       sla: "Ongoing",
       deliverable: "Service support",
+      description: "Warranty coverage and dedicated after-sales contact.",
     },
   ],
 } as const;
@@ -189,6 +197,58 @@ export const HOMEPAGE_SOLUTIONS_CONTENT = {
         "Lockers, pedestals, and cabinets built for secure daily use with efficient footprint planning.",
       href: "/products/storages",
       image: "/images/catalog/oando-storage--metal-storages/image-1.jpg",
+    },
+  ],
+} as const;
+
+export const HOMEPAGE_TESTIMONIALS_CONTENT = {
+  titleLead: "What",
+  titleAccent: "clients say.",
+  items: [
+    {
+      quote:
+        "The layout planning before production saved us significant rework. The team understood our floor constraints without us having to explain twice.",
+      author: "Facilities Head",
+      org: "Titan Limited, Patna",
+    },
+    {
+      quote:
+        "We needed a phased rollout across two floors with minimal downtime. The delivery and installation was coordinated well and completed on schedule.",
+      author: "Admin Manager",
+      org: "Government of Bihar",
+    },
+    {
+      quote:
+        "After-sales response time was faster than we expected. The warranty claim was resolved in one visit.",
+      author: "Office Manager",
+      org: "HDFC, Patna",
+    },
+  ],
+} as const;
+
+export const HOMEPAGE_FAQ_CONTENT = {
+  titleLead: "Common",
+  titleAccent: "questions.",
+  items: [
+    {
+      q: "Which cities do you serve?",
+      a: "We are based in Patna and serve Bihar, Jharkhand, and multi-city rollout briefs across India. Delivery logistics are handled directly — no third-party intermediaries.",
+    },
+    {
+      q: "How long does delivery and installation take?",
+      a: "Scope and design is completed within 7 working days of brief sign-off. Delivery and installation timelines depend on order volume and are agreed in writing before production begins.",
+    },
+    {
+      q: "Is installation included in the price?",
+      a: "Yes. All orders include delivery to site and supervised installation by our team. Post-installation snag support is also covered.",
+    },
+    {
+      q: "What warranty do you offer?",
+      a: "Products carry manufacturer warranty (typically 2–5 years depending on the range). After-sales support is managed by our Patna team directly.",
+    },
+    {
+      q: "Can you handle large or phased office rollouts?",
+      a: "Yes. We have executed government and corporate rollouts across multiple floors and sites. Use the Guided Planner to share your brief and we will route the right next step.",
     },
   ],
 } as const;
