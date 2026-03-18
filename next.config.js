@@ -49,13 +49,28 @@ if (parsedAssetBaseUrl) {
   });
 }
 
+const securityHeaders = [
+  // Remove server fingerprint
+  { key: "X-Powered-By", value: "" },
+  // Clickjack protection
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // XSS protection
+  { key: "X-XSS-Protection", value: "1; mode=block" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+];
+
 const nextConfig = {
+  poweredByHeader: false,
   env: {
     NEXT_PUBLIC_SITE_URL: resolvedSiteUrl,
     NEXT_PUBLIC_ASSET_BASE_URL:
       process.env.NEXT_PUBLIC_ASSET_BASE_URL || process.env.ASSET_BASE_URL || "",
   },
   trailingSlash: true,
+  async headers() {
+    return [{ source: "/(.*)", headers: securityHeaders }];
+  },
   async redirects() {
     return [
       {
