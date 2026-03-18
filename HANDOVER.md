@@ -1,6 +1,6 @@
 # Agent Handover Document
 
-> Last updated: 2026-03-18 15:45 IST | Update this file at the end of every session.
+> Last updated: 2026-03-18 18:30 IST | Update this file at the end of every session.
 
 ---
 
@@ -136,7 +136,31 @@ LFS is initialized and `.gitattributes` is committed. Always run `git lfs instal
 - [x] VSCode extensions recommended: Tailwind IntelliSense, ESLint, Prettier, GitLens, Error Lens, etc.
 - [x] Phase 4 Slice 3 route consistency pass complete — sustainability, contact, solutions, ProductViewer all aligned to token system
 - [x] **Homepage design improvements** — sector badges + outcome lines on project cards; micro-copy on process steps; FAQ accordion (ARIA-correct); testimonials strip (3-col); hero secondary CTA → "Browse Seating"
-- [x] **Repo cleanup** — removed `Rreeadme`, `dont touch oando_website.zip` (7.8MB), `codex-recovery/` (136 files), `archive/` (57 files) from git tracking; all gitignored; `docs/ops/CONTRIBUTING.md` created--
+- [x] **Repo cleanup** — removed `Rreeadme`, `dont touch oando_website.zip` (7.8MB), `codex-recovery/` (136 files), `archive/` (57 files) from git tracking; all gitignored; `docs/ops/CONTRIBUTING.md` created
+- [x] **Test fixes** — `contact-teaser.test.tsx` (added "Open Guided Planner" button with aria-label + CustomEvent dispatch); `images.test.ts` (dotenv loading in jest.config.js). All 31 tests now pass.
+- [x] **Security headers** — `poweredByHeader: false`, `X-Frame-Options: SAMEORIGIN`, `X-XSS-Protection`, `X-Content-Type-Options: nosniff`, `Referrer-Policy` added to `next.config.js`
+- [x] **Supabase env vars pushed to Vercel** — `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` — all set for Production and Development environments via Vercel CLI
+- [x] **100-issue audit of `/products/`** — full report covering technical, accessibility, content, SEO, visual, nav, data accuracy issues
+- [x] **20 content/copy fixes** (commit `55f9661`) — title case, "Storages"→"Storage", duplicate "brief", "scalable growth" removed, footer "Solutions"→"Workspace Types", "Projects"→"Case Studies", © symbol, hero CTA enabled, "Compare" link repositioned, a11y improvements (cookie dialog, marquee, form labels, autocomplete)
+- [x] **SEO fixes** (commit `0f80206`) — geo-keywords (Patna/Bihar/Jharkhand) in metadata + heroSubtitle, BreadcrumbList JSON-LD, ItemList JSON-LD for 6 categories
+
+### Pending / Next Steps
+
+- [ ] Hero section audit issues still open: category card images (Tables, Storage, Soft Seating appear blank), feature card icons look like placeholders — needs image/icon review
+- [ ] 80 remaining audit issues not yet addressed (see session conversation for full list)
+- [ ] Vercel Preview env vars not set (CLI bug prevents setting preview without branch — only affects PR/feature branches, not main deploys, so low priority)
+- [ ] Hero section copy per user's detailed brief (submitted during session — stored below)
+
+### User's Pending Hero Brief (from session)
+
+User submitted detailed hero redesign requirements mid-session (not yet implemented):
+- Keep headline "Spaces that work as hard as your team."
+- Add subheading about ergonomic seating and collaborative workstations
+- Replace "View Products" CTA → "Get Your Free Workspace Assessment"
+- Add secondary CTA "See Our Recent Projects"
+- Add trust badges: Authorized Franchise, 18+ Years, 500+ Organizations
+- Add location context: "Patna, Bihar, Jharkhand & surrounding regions since 2006"
+- Visual: blurred office photo with people, dark gradient overlay, specific typography specs
 
 ## 8. Known Issues / Watch Out For
 
