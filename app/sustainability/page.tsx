@@ -15,8 +15,8 @@ export default function SustainabilityPage() {
         backgroundImage="/images/products/imported/halo/image-1.webp"
       />
 
-      <section className="container px-6 py-24 2xl:px-0">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <section className="container px-6 py-18 2xl:px-0 md:py-22">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="typ-label scheme-text-body mb-4">{SUSTAINABILITY_PAGE_COPY.introKicker}</p>
             <h2 className="typ-section scheme-text-strong max-w-3xl">
@@ -34,7 +34,7 @@ export default function SustainabilityPage() {
             </h3>
             <ul className="mt-5 space-y-4">
               {SUSTAINABILITY_PAGE_COPY.introPoints.map((point) => (
-                <li key={point} className="page-copy-sm scheme-text-body border-b border-black/8 pb-4 last:border-b-0 last:pb-0">
+                <li key={point} className="page-copy-sm scheme-text-body border-b border-(--border-soft) pb-4 last:border-b-0 last:pb-0">
                   {point}
                 </li>
               ))}
@@ -51,7 +51,7 @@ export default function SustainabilityPage() {
           ))}
         </div>
 
-        <div className="mt-24 grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+        <div className="mt-20 grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div>
             <h2 className="typ-h2 scheme-text-heading mb-6">{SUSTAINABILITY_PAGE_COPY.ecoScoreTitle}</h2>
             <p className="page-copy scheme-text-body mb-6">
@@ -84,7 +84,7 @@ export default function SustainabilityPage() {
           </div>
         </div>
 
-        <div className="mt-24">
+        <div className="mt-20">
           <div className="mb-8 max-w-3xl">
             <p className="typ-label scheme-text-body mb-4">{SUSTAINABILITY_PAGE_COPY.commitmentsKicker}</p>
             <h2 className="typ-section scheme-text-strong">{SUSTAINABILITY_PAGE_COPY.commitmentsTitle}</h2>
@@ -102,7 +102,7 @@ export default function SustainabilityPage() {
           </div>
         </div>
 
-        <div className="scheme-panel-dark relative mt-24 overflow-hidden rounded-3xl p-12">
+        <div className="scheme-panel-dark relative mt-20 overflow-hidden rounded-[2rem] p-12">
           <div className="absolute -mr-32 -mt-32 h-64 w-64 rounded-full bg-primary/10 blur-3xl right-0 top-0" />
 
           <div className="relative z-10 flex flex-col items-center justify-between gap-12 md:flex-row">
@@ -125,7 +125,7 @@ export default function SustainabilityPage() {
           </div>
         </div>
 
-        <div className="scheme-panel scheme-border mt-24 rounded-[2rem] border p-8 md:p-10">
+        <div className="scheme-panel scheme-border mt-20 rounded-[2rem] border p-8 md:p-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="max-w-2xl">
               <h3 className="typ-section scheme-text-strong">
