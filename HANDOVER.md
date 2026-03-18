@@ -1,5 +1,5 @@
 # Agent Handover Document
-> Last updated: 2026-03-18 | Update this file at the end of every session.
+> Last updated: 2026-03-18 15:45 IST | Update this file at the end of every session.
 
 ---
 
@@ -89,8 +89,8 @@ d:/Claude1703/
 │   └── audit/              # Product/catalog audit HTML and JSON exports
 ├── output/                 # Playwright screenshots and visual QA output
 ├── reports/                # Generated audit reports (~11 MB)
-├── archive/                # Legacy code snapshots — do not touch (~113 MB)
-├── codex-recovery/         # Codex agent recovery files (~8 MB) — do not touch
+├── archive/                # Legacy code snapshots — local only, gitignored (~113 MB)
+├── codex-recovery/         # Codex agent recovery files — local only, gitignored
 ├── unused/                 # Deprecated components pending deletion (~548 KB)
 ├── tmp/                    # Temporary scratch files — not committed
 ├── CLAUDE.md               # Project rules — READ THIS FIRST every session
@@ -125,11 +125,49 @@ LFS is initialized and `.gitattributes` is committed. Always run `git lfs instal
 - [x] Full project pushed to `mayoite/claude1703`
 - [x] VSCode extensions recommended: Tailwind IntelliSense, ESLint, Prettier, GitLens, Error Lens, etc.
 - [x] Phase 4 Slice 3 route consistency pass complete — sustainability, contact, solutions, ProductViewer all aligned to token system
+- [x] **Homepage design improvements** — sector badges + outcome lines on project cards; micro-copy on process steps; FAQ accordion (ARIA-correct); testimonials strip (3-col); hero secondary CTA → "Browse Seating"
+- [x] **Repo cleanup** — removed `Rreeadme`, `dont touch oando_website.zip` (7.8MB), `codex-recovery/` (136 files), `archive/` (57 files) from git tracking; all gitignored; `docs/ops/CONTRIBUTING.md` created
+
+### Known Pre-Existing Test Failures (not caused by this session)
+
+Confirmed pre-existing by running `npm test` with all session changes stashed — same failures occurred.
+
+#### 1. `tests/contact-teaser.test.tsx` — 1 failure
+
+**Test:** `ContactTeaser › dispatches guided planner open event`
+
+**Error:**
+```
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name /open guided planner/i
+```
+
+**Root cause:** The test queries `getByRole("button", { name: /open guided planner/i })` but the ContactTeaser component does not render a button with accessible text matching "open guided planner". The component likely renders the button with label text "Guided Planner" (not "Open Guided Planner") or without an `aria-label`.
+
+**Fix options (pick one):**
+- Add `aria-label="Open Guided Planner"` to the trigger button in `components/shared/ContactTeaser.tsx`
+- Update the test query to match the actual button text: `getByRole("button", { name: /guided planner/i })`
+
+---
+
+#### 2. `tests/images.test.ts` — 5 failures
+
+**Tests:** All 5 under `Image Mismatches – Supabase Integration`
+
+**Error (all 5):**
+```
+Missing Supabase runtime env vars: NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL) and NEXT_PUBLIC_SUPABASE_ANON_KEY/NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+```
+
+**Root cause:** These integration tests connect to a live Supabase instance but Jest does not load `.env.local` automatically. The required env vars (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`) are present in `.env.local` but not visible to the test runner.
+
+**Fix options (pick one):**
+- Add `dotenv` loading to `jest.config.js`: `require('dotenv').config({ path: '.env.local' })`
+- Or install `jest-environment-jsdom` with a setup file that calls `dotenv.config()`
+- Or mark these tests as integration-only and skip in CI with `test.skip` / `--testPathIgnorePatterns`
 
 ### Pending / Next Steps
 - [ ] Vercel CLI not installed — run `npm i -g vercel` to unlock deploy skills
-- [ ] Brave Search replacement (DuckDuckGo) needs VSCode reload to activate
-- [ ] Perplexity Space set up for prompt refinement (user handles this)
+- [ ] Fix pre-existing test failures (`contact-teaser.test.tsx`, `images.test.ts`) if needed
 - [ ] Review CLAUDE.md for any outdated rules
 
 ---
