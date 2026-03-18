@@ -1,4 +1,5 @@
 # Agent Handover Document
+
 > Last updated: 2026-03-18 15:45 IST | Update this file at the end of every session.
 
 ---
@@ -21,19 +22,20 @@
 **Live URL (preview):** https://claude1703-cgh4x48yg-ayushs-projects-1.vercel.app
 **Vercel Project:** `ayushs-projects-1/claude1703`
 **Stack:** Next.js 16 + Tailwind CSS + Supabase + Nhost + Framer Motion + Radix UI + React Three Fiber + GSAP + TanStack Query
+
 > ⚠️ Stack list is incomplete — run a full audit when user asks before updating this line.
-**Repo:** `https://github.com/mayoite/claude1703` (primary, set as `origin`)
+> **Repo:** `https://github.com/mayoite/claude1703` (primary, set as `origin`)
 
 ---
 
 ## 3. Repository Remotes
 
-| Remote | URL | Purpose |
-|--------|-----|---------|
-| `origin` | `github.com/mayoite/claude1703` | **Primary — push here** |
-| `snapshot-origin` | `github.com/ayushonmicrosoft/oando.co.in-2026-03-09-0600` | Old snapshot, ignore |
-| `truth-origin` | `github.com/ayushonmicrosoft/oandov3` | Old v3, ignore |
-| `workingoando` | `github.com/ayushonmicrosoft/workingoando` | Old working copy, ignore |
+| Remote            | URL                                                       | Purpose                  |
+| ----------------- | --------------------------------------------------------- | ------------------------ |
+| `origin`          | `github.com/mayoite/claude1703`                           | **Primary — push here**  |
+| `snapshot-origin` | `github.com/ayushonmicrosoft/oando.co.in-2026-03-09-0600` | Old snapshot, ignore     |
+| `truth-origin`    | `github.com/ayushonmicrosoft/oandov3`                     | Old v3, ignore           |
+| `workingoando`    | `github.com/ayushonmicrosoft/workingoando`                | Old working copy, ignore |
 
 **Always push to `origin` (mayoite/claude1703) on `main` branch.**
 
@@ -42,26 +44,31 @@
 ## 4. Claude Code Setup (Agent Environment)
 
 ### MCP Servers (`~/.claude/mcp.json`)
-| Server | Purpose | Auth |
-|--------|---------|------|
-| `memory` | Persistent knowledge graph | None |
-| `fetch` | Read web pages/docs | None |
-| `filesystem` | Access `C:/Users/ayush` + `D:/Claude1703` | None |
-| `github` | GitHub API (repos, PRs, issues) | Token in mcp.json |
-| `ddg-search` | Web search via DuckDuckGo | None needed |
+
+| Server       | Purpose                                   | Auth              |
+| ------------ | ----------------------------------------- | ----------------- |
+| `memory`     | Persistent knowledge graph                | None              |
+| `fetch`      | Read web pages/docs                       | None              |
+| `filesystem` | Access `C:/Users/ayush` + `D:/Claude1703` | None              |
+| `github`     | GitHub API (repos, PRs, issues)           | Token in mcp.json |
+| `ddg-search` | Web search via DuckDuckGo                 | None needed       |
 
 ### Permissions (`~/.claude/settings.json`)
+
 - `git:*` — allowed without prompt
 - `gh:*` — allowed without prompt
 - Standard bash commands — allowed
 
 ### Key Plugins Active
+
 - `superpowers@claude-plugins-official` — brainstorm, write-plan, systematic-debugging skills
 - `vercel` plugin — deployment, env, marketplace skills
 - `figma` — design context tools
 
 ### User Preferences
+
 -No approval prompts for git/standard commands
+
 - Short, direct responses
 - Clickable file links in markdown format
 
@@ -98,6 +105,7 @@ d:/Claude1703/
 ```
 
 ### Key Rules (from CLAUDE.md)
+
 - **Do not break `/products/*` routing**
 - No user-visible debug/fallback text
 - Homepage must start with brand promise
@@ -109,6 +117,7 @@ d:/Claude1703/
 ## 6. Git LFS Setup
 
 Binary files tracked via Git LFS:
+
 - `*.webp`, `*.png`, `*.jpg`, `*.jpeg`, `*.gif`, `*.svg`, `*.pdf`
 
 LFS is initialized and `.gitattributes` is committed. Always run `git lfs install` if cloning fresh.
@@ -118,6 +127,7 @@ LFS is initialized and `.gitattributes` is committed. Always run `git lfs instal
 ## 7. Current State (as of 2026-03-18)
 
 ### Done This Session
+
 - [x] Set `origin` to `github.com/mayoite/claude1703`
 - [x] Git LFS initialized and binary assets tracked
 - [x] GitHub MCP server configured with auth token
@@ -126,51 +136,7 @@ LFS is initialized and `.gitattributes` is committed. Always run `git lfs instal
 - [x] VSCode extensions recommended: Tailwind IntelliSense, ESLint, Prettier, GitLens, Error Lens, etc.
 - [x] Phase 4 Slice 3 route consistency pass complete — sustainability, contact, solutions, ProductViewer all aligned to token system
 - [x] **Homepage design improvements** — sector badges + outcome lines on project cards; micro-copy on process steps; FAQ accordion (ARIA-correct); testimonials strip (3-col); hero secondary CTA → "Browse Seating"
-- [x] **Repo cleanup** — removed `Rreeadme`, `dont touch oando_website.zip` (7.8MB), `codex-recovery/` (136 files), `archive/` (57 files) from git tracking; all gitignored; `docs/ops/CONTRIBUTING.md` created
-
-### Known Pre-Existing Test Failures (not caused by this session)
-
-Confirmed pre-existing by running `npm test` with all session changes stashed — same failures occurred.
-
-#### 1. `tests/contact-teaser.test.tsx` — 1 failure
-
-**Test:** `ContactTeaser › dispatches guided planner open event`
-
-**Error:**
-```
-TestingLibraryElementError: Unable to find an accessible element with the role "button" and name /open guided planner/i
-```
-
-**Root cause:** The test queries `getByRole("button", { name: /open guided planner/i })` but the ContactTeaser component does not render a button with accessible text matching "open guided planner". The component likely renders the button with label text "Guided Planner" (not "Open Guided Planner") or without an `aria-label`.
-
-**Fix options (pick one):**
-- Add `aria-label="Open Guided Planner"` to the trigger button in `components/shared/ContactTeaser.tsx`
-- Update the test query to match the actual button text: `getByRole("button", { name: /guided planner/i })`
-
----
-
-#### 2. `tests/images.test.ts` — 5 failures
-
-**Tests:** All 5 under `Image Mismatches – Supabase Integration`
-
-**Error (all 5):**
-```
-Missing Supabase runtime env vars: NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL) and NEXT_PUBLIC_SUPABASE_ANON_KEY/NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-```
-
-**Root cause:** These integration tests connect to a live Supabase instance but Jest does not load `.env.local` automatically. The required env vars (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`) are present in `.env.local` but not visible to the test runner.
-
-**Fix options (pick one):**
-- Add `dotenv` loading to `jest.config.js`: `require('dotenv').config({ path: '.env.local' })`
-- Or install `jest-environment-jsdom` with a setup file that calls `dotenv.config()`
-- Or mark these tests as integration-only and skip in CI with `test.skip` / `--testPathIgnorePatterns`
-
-### Pending / Next Steps
-- [ ] Vercel CLI not installed — run `npm i -g vercel` to unlock deploy skills
-- [ ] Fix pre-existing test failures (`contact-teaser.test.tsx`, `images.test.ts`) if needed
-- [ ] Review CLAUDE.md for any outdated rules
-
----
+- [x] **Repo cleanup** — removed `Rreeadme`, `dont touch oando_website.zip` (7.8MB), `codex-recovery/` (136 files), `archive/` (57 files) from git tracking; all gitignored; `docs/ops/CONTRIBUTING.md` created--
 
 ## 8. Known Issues / Watch Out For
 
@@ -193,11 +159,11 @@ Missing Supabase runtime env vars: NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL) an
 
 ## 10. Contacts / Accounts
 
-| Service | Account |
-|---------|---------|
-| GitHub | `mayoite` |
-| VSCode | Local install, Windows 11 |
-| Perplexity | User's personal account |
+| Service    | Account                   |
+| ---------- | ------------------------- |
+| GitHub     | `mayoite`                 |
+| VSCode     | Local install, Windows 11 |
+| Perplexity | User's personal account   |
 
 ---
 
@@ -233,4 +199,4 @@ vercel logs
 
 ---
 
-*Edit this file freely. It exists to be updated — not preserved.*
+_Edit this file freely. It exists to be updated — not preserved._

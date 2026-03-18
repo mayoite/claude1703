@@ -160,6 +160,16 @@ export function ContactTeaser() {
                     <MessageSquareText className="h-4 w-4" />
                     {isSubmitting ? "Sending..." : "Send Brief"}
                   </button>
+                  <button
+                    type="button"
+                    aria-label="Open Guided Planner"
+                    className="home-btn-secondary"
+                    onClick={() =>
+                      window.dispatchEvent(new CustomEvent("oando-assistant:open"))
+                    }
+                  >
+                    Guided Planner
+                  </button>
                 </div>
 
                 <div className="contact-teaser__support-row mt-4">
