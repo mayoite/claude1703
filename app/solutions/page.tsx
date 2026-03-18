@@ -71,7 +71,7 @@ export default function SolutionsPage() {
                 key={step.title}
                 className="scheme-panel scheme-border overflow-hidden rounded-[1.5rem] border"
               >
-                <div className="relative aspect-16/10 border-b border-neutral-200">
+                <div className="relative aspect-16/10 border-b scheme-border">
                   <Image
                     src={step.image}
                     alt={step.title}
@@ -82,7 +82,7 @@ export default function SolutionsPage() {
                 </div>
                 <div className="p-6">
                   <p className="typ-label scheme-text-body mb-3">Phase {index + 1}</p>
-                  <h3 className="typ-h3 text-neutral-950">{step.title}</h3>
+                  <h3 className="typ-h3 scheme-text-strong">{step.title}</h3>
                   <p className="page-copy scheme-text-body mt-3">{step.detail}</p>
                 </div>
               </article>
