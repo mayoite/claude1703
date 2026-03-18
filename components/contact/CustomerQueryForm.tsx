@@ -115,7 +115,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
   }
 
   return (
-    <form className="space-y-6" onSubmit={handleSubmit}>
+    <form aria-label="Contact enquiry form" className="space-y-6" onSubmit={handleSubmit}>
       {contextCopy ? (
         <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
           <p className="typ-label text-primary">{contextCopy.eyebrow}</p>
@@ -136,6 +136,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
         <input
           id="name"
           type="text"
+          autoComplete="name"
           placeholder="Your Name"
           value={form.name}
           onChange={(event) => setForm({ ...form, name: event.target.value })}
@@ -164,6 +165,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
           <input
             id="email"
             type="email"
+            autoComplete="email"
             placeholder="your@email.com"
             value={form.email}
             onChange={(event) => setForm({ ...form, email: event.target.value })}
@@ -177,6 +179,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
           <input
             id="phone"
             type="tel"
+            autoComplete="tel"
             placeholder="+91..."
             value={form.phone}
             onChange={(event) => setForm({ ...form, phone: event.target.value })}

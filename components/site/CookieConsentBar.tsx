@@ -145,15 +145,17 @@ export function CookieConsentBar() {
     <section
       role="dialog"
       aria-live="polite"
-      aria-label="Cookie preferences"
+      aria-labelledby="cookie-dialog-title"
+      aria-describedby="cookie-dialog-desc"
       className="consent-bar"
     >
       <div className="container px-4 py-3 sm:px-6 md:py-4 2xl:px-0">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
-          <p className="consent-bar__copy">
+          <p id="cookie-dialog-desc" className="consent-bar__copy">
+            <span id="cookie-dialog-title" className="sr-only">Cookie preferences</span>
             We use essential cookies and optional analytics & attribution cookies to improve
             discoverability and user journeys. See our{" "}
-          <Link href="/privacy" className="font-semibold text-primary hover:underline">
+          <Link href="/privacy" prefetch={false} className="font-semibold text-primary hover:underline">
             Privacy Policy
           </Link>
             .
@@ -164,7 +166,7 @@ export function CookieConsentBar() {
               onClick={rejectOptional}
               className="consent-bar__action consent-bar__action--secondary"
             >
-              Reject Optional
+              Reject Non-Essential
             </button>
             <button
               type="button"

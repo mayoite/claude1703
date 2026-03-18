@@ -79,7 +79,7 @@ export function Collections() {
                     <h3 className="mb-2 translate-y-3 text-2xl font-light text-white transition-transform duration-500 group-hover:-translate-y-1">
                       {item.name}
                     </h3>
-                    <div className="flex h-12 w-12 translate-y-10 items-center justify-center rounded-full border border-white/20 bg-white/92 text-neutral-900 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    <div aria-hidden="true" className="flex h-12 w-12 translate-y-10 items-center justify-center rounded-full border border-white/20 bg-white/92 text-neutral-900 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </div>

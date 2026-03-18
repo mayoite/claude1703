@@ -137,7 +137,7 @@ export function SiteFooter() {
               Terms
             </Link>
           </div>
-          <div>Copyright {currentYear} One&Only. All rights reserved.</div>
+          <div>© {currentYear} One&Only. All rights reserved.</div>
         </div>
       </div>
     </footer>

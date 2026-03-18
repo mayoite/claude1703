@@ -89,7 +89,7 @@ export function ContactTeaser() {
               </h2>
             </div>
 
-            <form className="contact-teaser__form" onSubmit={handleSubmit}>
+            <form aria-label="Project brief enquiry" className="contact-teaser__form" onSubmit={handleSubmit}>
                 <div className="contact-teaser__mini-grid">
                   <label className="contact-teaser__field">
                     <span className="contact-teaser__field-label">Name</span>
@@ -98,6 +98,7 @@ export function ContactTeaser() {
                       onChange={(event) => setName(event.target.value)}
                       className="contact-teaser__input"
                       type="text"
+                      autoComplete="name"
                       required
                       maxLength={180}
                       placeholder="Your name"
@@ -110,6 +111,7 @@ export function ContactTeaser() {
                       onChange={(event) => setCity(event.target.value)}
                       className="contact-teaser__input"
                       type="text"
+                      autoComplete="address-level2"
                       required
                       maxLength={120}
                       placeholder="Project city"
@@ -122,6 +124,7 @@ export function ContactTeaser() {
                       onChange={(event) => setContact(event.target.value)}
                       className="contact-teaser__input"
                       type="text"
+                      autoComplete="off"
                       required
                       maxLength={180}
                       placeholder="Phone or email"
@@ -142,7 +145,12 @@ export function ContactTeaser() {
                   </label>
                 </div>
                 <label className="contact-teaser__field mt-3">
-                  <span className="contact-teaser__field-label">Brief</span>
+                  <div className="flex items-center justify-between">
+                    <span className="contact-teaser__field-label">Brief</span>
+                    <span className="text-xs text-neutral-400" aria-live="polite" aria-atomic="true">
+                      {brief.length}/5000
+                    </span>
+                  </div>
                   <textarea
                     value={brief}
                     onChange={(event) => setBrief(event.target.value)}
@@ -157,12 +165,11 @@ export function ContactTeaser() {
                 <div className="contact-teaser__actions mt-5">
                   <p className="contact-teaser__footer-chip">Business-day response</p>
                   <button type="submit" disabled={isSubmitting} className="home-btn-primary">
-                    <MessageSquareText className="h-4 w-4" />
+                    <MessageSquareText className="h-4 w-4" aria-hidden="true" />
                     {isSubmitting ? "Sending..." : "Send Brief"}
                   </button>
                   <button
                     type="button"
-                    aria-label="Open Guided Planner"
                     className="home-btn-secondary"
                     onClick={() =>
                       window.dispatchEvent(new CustomEvent("oando-assistant:open"))

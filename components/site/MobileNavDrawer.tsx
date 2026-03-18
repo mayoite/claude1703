@@ -6,32 +6,9 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Search, Sparkles, X } from "lucide-react";
 import { OneAndOnlyLogo } from "@/components/ui/Logo";
-import {
-  NAV_CATEGORY_GROUP_ORDER,
-  NAV_CATEGORY_GROUPS,
-  groupCategories,
-  type GroupedCategory,
-} from "@/lib/navigation";
+import { type GroupedCategory } from "@/lib/navigation";
 import { SITE_NAV_LINKS, SITE_CTA_LINKS } from "@/lib/siteNav";
 import { cn } from "@/lib/utils";
-
-function prettify(id: string): string {
-  return id
-    .split("-")
-    .map((chunk) => chunk.charAt(0).toUpperCase() + chunk.slice(1))
-    .join(" ");
-}
-
-const FALLBACK_CATEGORY_GROUPS: GroupedCategory[] = NAV_CATEGORY_GROUP_ORDER.map((groupId) => ({
-  groupId,
-  groupLabel: NAV_CATEGORY_GROUPS[groupId].label,
-  items: NAV_CATEGORY_GROUPS[groupId].ids.map((id) => ({
-    id,
-    name: prettify(id),
-    count: undefined,
-    href: `/products/${id}`,
-  })),
-}));
 
 interface NavSearchResult {
   id: string;
@@ -72,36 +49,18 @@ interface MobileNavDrawerProps {
   open: boolean;
   onClose: () => void;
   closeButtonRef: React.RefObject<HTMLButtonElement | null>;
+  groupedCategories: GroupedCategory[];
 }
 
-export function MobileNavDrawer({ open, onClose, closeButtonRef }: MobileNavDrawerProps) {
+export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategories }: MobileNavDrawerProps) {
   const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const [accordion, setAccordion] = useState<Record<string, boolean>>({});
-  const [groupedCategories, setGroupedCategories] = useState<GroupedCategory[]>(
-    FALLBACK_CATEGORY_GROUPS,
-  );
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<NavSearchResult[]>([]);
   const [searchLoading, setSearchLoading] = useState(false);
   const [showSearchPanel, setShowSearchPanel] = useState(false);
-
-  useEffect(() => {
-    fetch("/api/nav-categories/")
-      .then((res) => res.json())
-      .then((payload: { groups?: GroupedCategory[]; categories?: Array<{ id: string; name: string; count?: number }> }) => {
-        if (Array.isArray(payload.groups) && payload.groups.length > 0) {
-          setGroupedCategories(payload.groups);
-          return;
-        }
-        if (Array.isArray(payload.categories) && payload.categories.length > 0) {
-          setGroupedCategories(groupCategories(payload.categories));
-          return;
-        }
-      })
-      .catch(() => {});
-  }, []);
 
   useEffect(() => {
     if (!open) return;

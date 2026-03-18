@@ -55,7 +55,7 @@ export async function CategoryGrid() {
                 <div className="scheme-section-soft scheme-border relative aspect-square overflow-hidden border-b">
                   <CategoryImage
                     src={flagshipImage}
-                    alt={`${categoryName} product category preview`}
+                    alt=""
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/8 transition-colors duration-500" />
                 </div>

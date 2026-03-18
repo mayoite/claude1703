@@ -536,6 +536,7 @@ export function SiteHeader() {
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
         closeButtonRef={hamburgerRef}
+        groupedCategories={groupedCategories}
       />
     </>
   );

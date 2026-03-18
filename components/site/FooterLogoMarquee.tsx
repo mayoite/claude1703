@@ -5,7 +5,7 @@ export function FooterLogoMarquee() {
   const trackLogos = [...HOMEPAGE_TRUST_CONTENT.logos, ...HOMEPAGE_TRUST_CONTENT.logos];
 
   return (
-    <section className="footer-logo-marquee group w-full border-y border-neutral-200 bg-neutral-50 py-6 md:py-8">
+    <section aria-hidden="true" className="footer-logo-marquee group w-full border-y border-neutral-200 bg-neutral-50 py-6 md:py-8">
       <div className="relative overflow-hidden">
         <div
           className="footer-logo-marquee__track animate-marquee motion-reduce:animate-none"

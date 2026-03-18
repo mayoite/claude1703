@@ -15,7 +15,7 @@ export const Catalog_CATEGORY_LABELS: Record<RequestedCategoryId, string> = {
   seating: "Seating",
   workstations: "Workstations",
   tables: "Tables",
-  storages: "Storages",
+  storages: "Storage",
   "soft-seating": "Soft Seating",
   education: "Education",
 };

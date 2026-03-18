@@ -1063,11 +1063,11 @@ export const LEGAL_PAGE_COPY = {
 } as const;
 
 export const PRODUCTS_PAGE_COPY = {
-  heroTitle: "Workspace products",
+  heroTitle: "Workspace Products",
   heroSubtitle:
-    "Furniture categories built for real office workflows, long-term durability, and scalable growth.",
+    "Furniture categories built for real office workflows, long-term durability, and long-term value.",
   rangeKicker: "Category entry",
-  rangeTitle: "Browse by workspace need",
+  rangeTitle: "Browse by workspace needs",
   strategyKicker: "Product strategy",
   strategyTitle: "Products selected for performance, not just presentation.",
   strategyDescription:
@@ -1081,17 +1081,17 @@ export const PRODUCTS_PAGE_COPY = {
   whyKicker: "Selection model",
   whyTitle: "Category decisions tied to planning, delivery, and support.",
   consultKicker: "Need category guidance?",
-  consultTitle: "Share your brief and we will suggest the right category mix.",
+  consultTitle: "Tell us your scope and we'll suggest the right category mix.",
   consultDescription:
-    "Tell us your team size, workspace type, and timeline. We will respond with practical product options and implementation guidance.",
+    "Share your team size, workspace type, and timeline. We'll respond with practical product options and implementation guidance.",
   consultPrimaryCta: "Request product consultation",
   consultSecondaryCta: "Explore planning service",
-  consultTertiaryCta: "Open Resource Desk",
+  consultTertiaryCta: "Download Resources",
   confidenceKicker: "Selected organisations",
-  confidenceCta: "Compare selected products",
+  confidenceCta: "Compare products",
   pillars: [
     {
-      title: "Specification-led guidance",
+      title: "Practical specification guidance",
       detail:
         "We map headcount, usage patterns, and budget so product choices are practical from day one.",
       icon: "check-circle",

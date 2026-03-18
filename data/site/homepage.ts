@@ -110,7 +110,7 @@ export const HOMEPAGE_CONTACT_CONTENT = {
   eyebrow: "",
   titleLead: "Start with one",
   titleAccent: "clear brief.",
-  description: "Share your city, timeline, and brief. We will route the right next step.",
+  description: "Share your city, scope, and timeline. We'll route the right next step.",
   plannerPoints: ["Brief and city", "Timeline and scope", "Human response"],
   plannerCta: "Guided Planner",
   directTitle: "Direct line if the brief is ready",

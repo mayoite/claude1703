@@ -16,7 +16,7 @@ const PILLAR_ICONS = {
 } as const;
 
 export const metadata: Metadata = buildPageMetadata(SITE_URL, {
-  title: "Workspace products",
+  title: "Workspace Products",
   description: PRODUCTS_PAGE_COPY.heroSubtitle,
   path: "/products",
   image: "/images/catalog/oando-workstations--deskpro/image-1.jpg",
@@ -25,7 +25,7 @@ export const metadata: Metadata = buildPageMetadata(SITE_URL, {
 export default function ProductsPage() {
   const productsJsonLd = buildPageJsonLd(SITE_URL, {
     path: "/products",
-    title: "Workspace products",
+    title: "Workspace Products",
     description: PRODUCTS_PAGE_COPY.heroSubtitle,
     pageType: "CollectionPage",
   });
@@ -40,7 +40,9 @@ export default function ProductsPage() {
         variant="small"
         title={PRODUCTS_PAGE_COPY.heroTitle}
         subtitle={PRODUCTS_PAGE_COPY.heroSubtitle}
-        showButton={false}
+        showButton={true}
+        buttonText="Browse Categories"
+        buttonLink="#categories"
         backgroundImage="/images/products/60x30-workstation-1.webp"
       />
 
@@ -54,13 +56,14 @@ export default function ProductsPage() {
             <p className="page-copy scheme-text-body mt-4 max-w-2xl">
               {PRODUCTS_PAGE_COPY.strategyDescription}
             </p>
-            <div className="mt-6 space-y-3">
+            <ul className="mt-6 space-y-3 list-none pl-0">
               {PRODUCTS_PAGE_COPY.featureBullets.map((item) => (
-                <p key={item} className="page-copy-sm scheme-text-body">
-                  - {item}
-                </p>
+                <li key={item} className="page-copy-sm scheme-text-body flex items-start gap-2">
+                  <span aria-hidden="true" className="shrink-0 select-none">—</span>
+                  <span>{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div className="scheme-border relative aspect-[4/3] overflow-hidden rounded-2xl border">
@@ -86,10 +89,11 @@ export default function ProductsPage() {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {PRODUCTS_PAGE_COPY.pillars.map((pillar) => {
               const Icon = PILLAR_ICONS[pillar.icon];
+              const headingId = `pillar-${pillar.title.replace(/\s+/g, "-").toLowerCase()}`;
               return (
-              <article key={pillar.title} className="scheme-panel scheme-border rounded-xl border p-6">
-                <Icon className="h-6 w-6 text-primary" />
-                <h3 className="typ-h3 scheme-text-strong mt-4">{pillar.title}</h3>
+              <article key={pillar.title} aria-labelledby={headingId} className="scheme-panel scheme-border rounded-xl border p-6">
+                <Icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                <h3 id={headingId} className="typ-h3 scheme-text-strong mt-4">{pillar.title}</h3>
                 <p className="page-copy-sm scheme-text-body mt-3">{pillar.detail}</p>
               </article>
               );
@@ -125,12 +129,7 @@ export default function ProductsPage() {
 
       <section className="scheme-section-soft scheme-border w-full border-y py-14">
         <div className="container px-6 2xl:px-0">
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <p className="typ-label scheme-text-body">{PRODUCTS_PAGE_COPY.confidenceKicker}</p>
-            <Link href="/compare" className="link-arrow">
-              {PRODUCTS_PAGE_COPY.confidenceCta}
-            </Link>
-          </div>
+          <p className="typ-label scheme-text-body mb-5">{PRODUCTS_PAGE_COPY.confidenceKicker}</p>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-6">
             {PRODUCTS_PAGE_COPY.clients.map((client) => (
               <p
@@ -140,6 +139,11 @@ export default function ProductsPage() {
                 {client}
               </p>
             ))}
+          </div>
+          <div className="mt-5">
+            <Link href="/compare" className="link-arrow">
+              {PRODUCTS_PAGE_COPY.confidenceCta}
+            </Link>
           </div>
         </div>
       </section>
