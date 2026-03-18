@@ -49,7 +49,7 @@ export async function CategoryGrid() {
               <Link
                 key={category.id}
                 href={categoryHref}
-                className="group scheme-panel scheme-border relative block overflow-hidden rounded-[1.75rem] border transition-all duration-300 hover:-translate-y-1"
+                className="group scheme-panel scheme-border relative block overflow-hidden rounded-[1.75rem] border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.18)]"
               >
                 {/* Uniform square image */}
                 <div className="scheme-section-soft scheme-border relative aspect-square overflow-hidden border-b">

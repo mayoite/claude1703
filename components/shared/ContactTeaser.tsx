@@ -170,7 +170,7 @@ export function ContactTeaser() {
                   </button>
                   <button
                     type="button"
-                    className="home-btn-secondary"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors hover:border-neutral-400 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     onClick={() =>
                       window.dispatchEvent(new CustomEvent("oando-assistant:open"))
                     }

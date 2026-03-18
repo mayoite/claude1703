@@ -286,9 +286,19 @@
     backdrop-filter: blur(18px);
   }
 
+  @keyframes consent-slide-in {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+
   .consent-bar {
     @apply fixed inset-x-0 bottom-0 z-30 border-t border-neutral-200 bg-white/95 backdrop-blur;
     box-shadow: 0 -18px 40px -30px rgba(15, 23, 42, 0.35);
+    animation: consent-slide-in 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .consent-bar { animation: none; }
   }
 
   .consent-bar__copy {
@@ -1388,6 +1398,10 @@
   .footer-logo-marquee__track {
     @apply flex w-max items-center gap-10 md:gap-14;
     will-change: transform;
+  }
+
+  .footer-logo-marquee:hover .footer-logo-marquee__track {
+    animation-play-state: paused;
   }
 
   .footer-conversion {

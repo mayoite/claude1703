@@ -6,6 +6,7 @@ import { Hero } from "@/components/home/Hero";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { PRODUCTS_PAGE_COPY } from "@/data/site/routeCopy";
+import { HOMEPAGE_TRUST_CONTENT } from "@/data/site/homepage";
 import { buildBreadcrumbJsonLd, buildPageJsonLd, buildPageMetadata } from "@/data/site/seo";
 import { SITE_URL } from "@/lib/siteUrl";
 
@@ -135,7 +136,9 @@ export default function ProductsPage() {
               const headingId = `pillar-${pillar.title.replace(/\s+/g, "-").toLowerCase()}`;
               return (
               <article key={pillar.title} aria-labelledby={headingId} className="scheme-panel scheme-border rounded-xl border p-6">
-                <Icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/8 text-primary">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </span>
                 <h3 id={headingId} className="typ-h3 scheme-text-strong mt-4">{pillar.title}</h3>
                 <p className="page-copy-sm scheme-text-body mt-3">{pillar.detail}</p>
               </article>
@@ -173,14 +176,20 @@ export default function ProductsPage() {
       <section className="scheme-section-soft scheme-border w-full border-y py-14">
         <div className="container px-6 2xl:px-0">
           <p className="typ-label scheme-text-body mb-5">{PRODUCTS_PAGE_COPY.confidenceKicker}</p>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-6">
-            {PRODUCTS_PAGE_COPY.clients.map((client) => (
-              <p
-                key={client}
-                className="scheme-panel scheme-border rounded-md border px-3 py-2 text-center text-sm font-medium scheme-text-strong"
+          <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+            {HOMEPAGE_TRUST_CONTENT.logos.slice(0, 12).map((logo) => (
+              <div
+                key={logo.name}
+                className="flex min-h-14 items-center justify-center rounded-lg border border-neutral-100 bg-neutral-50 px-3 py-2"
               >
-                {client}
-              </p>
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto object-contain opacity-60 grayscale"
+                />
+              </div>
             ))}
           </div>
           <div className="mt-5">
