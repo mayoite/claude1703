@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site/Header";
 import { SiteFooter } from "@/components/site/Footer";
@@ -10,6 +10,7 @@ import { WhatsAppCTA } from "@/components/ui/WhatsAppCTA";
 import { ciscoSans } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/siteUrl";
 import { buildGlobalJsonLd, buildSiteMetadata } from "@/data/site/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const DynamicBotWrapper = dynamic(() => import("@/components/bot/DynamicBotWrapper"));
 
@@ -48,6 +49,7 @@ export default function RootLayout({
           <DynamicBotWrapper />
           <WhatsAppCTA />
         </QueryProvider>
+        <Analytics />
       </body>
     </html>
   );
