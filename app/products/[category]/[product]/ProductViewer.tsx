@@ -391,9 +391,9 @@ export function ProductViewer({
     });
 
   return (
-    <section className="bg-white min-h-screen pb-24 sm:pb-28 lg:pb-0">
+    <section className="bg-(--surface-page) min-h-screen pb-24 sm:pb-28 lg:pb-0">
       {/* Breadcrumb bar */}
-      <div className="border-b border-neutral-100 bg-white/90 backdrop-blur-sm sticky top-16 z-10">
+      <div className="border-b border-(--border-soft) bg-(--surface-glass-strong) backdrop-blur-sm sticky top-16 z-10">
         <div className="pdp-breadcrumb container flex h-10 items-center gap-1.5 px-6 2xl:px-0">
           <Link
             href="/products"
@@ -409,7 +409,7 @@ export function ProductViewer({
             {categoryName}
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-neutral-900 font-semibold">
+          <span className="scheme-text-strong font-semibold">
             {displayName}
           </span>
         </div>
@@ -417,7 +417,7 @@ export function ProductViewer({
 
       <div className="flex flex-col lg:flex-row u-minh-vh-112">
         {/* Left: image gallery */}
-        <div className="flex w-full flex-col bg-neutral-100 pt-0 lg:u-w-58p lg:pt-8 xl:u-w-62p">
+        <div className="flex w-full flex-col scheme-section-soft pt-0 lg:u-w-58p lg:pt-8 xl:u-w-62p">
           <div className="mx-auto flex-1 w-full max-w-200 p-4 lg:p-8">
             <ProductGallery
               images={uniqueImages}
@@ -426,7 +426,7 @@ export function ProductViewer({
           </div>
           {/* 3D viewer toggle wrapper */}
           {hasModelPath && (
-            <div className="w-full aspect-video bg-neutral-50 border-t border-neutral-200 relative group">
+            <div className="w-full aspect-video bg-(--surface-soft) border-t scheme-border relative group">
               <div className="absolute top-4 left-4 z-20 flex gap-2">
                 <button
                   type="button"
@@ -436,9 +436,9 @@ export function ProductViewer({
                   }}
                   disabled={!isModelAvailable}
                   className={clsx(
-                    "pdp-chip bg-white/90 px-3 py-1.5 backdrop-blur",
+                    "pdp-chip bg-(--surface-glass-strong) px-3 py-1.5 backdrop-blur",
                     isModelAvailable
-                      ? "text-neutral-800 hover:bg-neutral-900 hover:text-white transition-colors"
+                      ? "scheme-text-body hover:bg-neutral-900 hover:text-white transition-colors"
                       : "scheme-text-subtle cursor-not-allowed",
                   )}
                 >
@@ -447,14 +447,14 @@ export function ProductViewer({
               </div>
               {!isModelAvailable && !isCheckingModel && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
-                  <p className="typ-overline text-neutral-500">
+                  <p className="typ-overline scheme-text-muted">
                     {PDP_ROUTE_COPY.ctas.modelUnavailable}
                   </p>
                 </div>
               )}
               {isCheckingModel && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
-                  <p className="typ-overline text-neutral-500">
+                  <p className="typ-overline scheme-text-muted">
                     {PDP_ROUTE_COPY.ctas.modelChecking}
                   </p>
                 </div>
@@ -500,15 +500,15 @@ export function ProductViewer({
         </div>
 
         {/* Right: details panel */}
-        <div className="w-full overflow-y-auto border-l border-neutral-100 px-6 py-10 scrollbar-hide sm:px-10 lg:sticky lg:top-[112px] lg:u-h-vh-112 lg:u-w-42p lg:px-12 xl:u-w-38p">
+        <div className="w-full overflow-y-auto border-l border-(--border-soft) px-6 py-10 scrollbar-hide sm:px-10 lg:sticky lg:top-[112px] lg:u-h-vh-112 lg:u-w-42p lg:px-12 xl:u-w-38p">
           <div className="max-w-sm mx-auto lg:max-w-none">
             {/* Title block */}
             <div className="mb-8">
-              <h1 className="mb-5 text-4xl font-light leading-ui-105 tracking-tight text-neutral-900 sm:text-5xl">
+              <h1 className="mb-5 text-4xl font-light leading-ui-105 tracking-tight scheme-text-strong sm:text-5xl">
                 {displayName}
               </h1>
               {shortOverview ? (
-                <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-light mb-6 max-w-prose">
+                <p className="text-sm sm:text-base scheme-text-body leading-relaxed font-light mb-6 max-w-prose">
                   {shortOverview}
                 </p>
               ) : null}
@@ -529,13 +529,13 @@ export function ProductViewer({
                   </span>
                 )}
               </div>
-              <div className="rounded-3xl border border-neutral-200 bg-neutral-50/80 p-5 sm:p-6">
+              <div className="rounded-[2rem] scheme-border bg-(--surface-panel-soft) p-5 sm:p-6">
                 {summaryCards.length > 0 ? (
                   <>
-                    <p className="mb-2 text-sm font-medium text-neutral-900">
+                    <p className="mb-2 text-sm font-medium scheme-text-strong">
                       Product snapshot
                     </p>
-                    <p className="mb-4 text-sm leading-relaxed text-neutral-600">
+                    <p className="mb-4 text-sm leading-relaxed scheme-text-body">
                       The quickest way to judge fit before drawings, quantities,
                       and commercial follow-up.
                     </p>
@@ -543,12 +543,12 @@ export function ProductViewer({
                       {summaryCards.map((card) => (
                         <div
                           key={card.label}
-                          className="rounded-2xl border border-neutral-200 bg-white p-4"
+                          className="rounded-2xl scheme-border bg-white p-4"
                         >
                           <p className="pdp-card-label mb-2">
                             {card.label}
                           </p>
-                          <p className="text-sm leading-relaxed text-neutral-800">
+                          <p className="text-sm leading-relaxed scheme-text-body">
                             {card.value}
                           </p>
                         </div>
@@ -557,15 +557,15 @@ export function ProductViewer({
                   </>
                 ) : null}
                 {assuranceCards.length > 0 ? (
-                  <div className="mt-5 border-t border-neutral-200 pt-5">
+                  <div className="mt-5 border-t scheme-border pt-5">
                     <p className="pdp-card-label mb-3">Verified product facts</p>
                     <div className="grid gap-2">
                       {assuranceCards.map((item) => (
                         <div
                           key={item.label}
-                          className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm leading-relaxed text-neutral-700"
+                          className="rounded-2xl scheme-border bg-white px-4 py-3 text-sm leading-relaxed scheme-text-body"
                         >
-                          <span className="font-medium text-neutral-900">
+                          <span className="font-medium scheme-text-strong">
                             {item.label}:
                           </span>{" "}
                           {item.value}
@@ -579,7 +579,7 @@ export function ProductViewer({
 
             {/* Variant swatches */}
             {product.variants && product.variants.length > 0 && (
-              <div className="pt-7 border-t border-neutral-100 mb-8">
+              <div className="pt-7 border-t border-(--border-soft) mb-8">
                 <div className="flex items-center justify-between mb-4">
                   <p className="pdp-section-label">
                     {PDP_ROUTE_COPY.ctas.configuration}
@@ -601,7 +601,7 @@ export function ProductViewer({
                           "w-11 h-11 rounded-full overflow-hidden border-2 transition-all duration-200",
                           isSelected
                             ? "border-neutral-900 ring-2 ring-neutral-900 ring-offset-2 scale-110"
-                            : "border-neutral-200 hover:border-neutral-500 hover:scale-105",
+                            : "scheme-border hover:border-neutral-500 hover:scale-105",
                         )}
                       >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -632,8 +632,8 @@ export function ProductViewer({
                   })}
                 </div>
                 {selectedVariant && (
-                  <p className="text-xs text-neutral-500">
-                    <span className="font-semibold text-neutral-800">
+                  <p className="text-xs scheme-text-muted">
+                    <span className="font-semibold scheme-text-body">
                       Selected:
                     </span>{" "}
                     {selectedVariant.variantName}
@@ -644,11 +644,11 @@ export function ProductViewer({
 
             {/* CTA */}
             <div className="mb-8">
-              <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-5">
-                <p className="mb-2 text-sm font-medium text-neutral-900">
+              <div className="rounded-[2rem] scheme-border bg-white p-4 shadow-sm sm:p-5">
+                <p className="mb-2 text-sm font-medium scheme-text-strong">
                   Take the next step
                 </p>
-                <p className="mb-4 text-sm leading-relaxed text-neutral-600">
+                <p className="mb-4 text-sm leading-relaxed scheme-text-body">
                   Start with one enquiry, compare options, and move into planning support
                   depending on where your team is in the decision.
                 </p>
@@ -669,7 +669,7 @@ export function ProductViewer({
                       "group mb-2 flex w-full items-center justify-between rounded-2xl border px-6 py-4 transition-colors",
                       inCompare
                         ? "border-primary bg-primary text-white hover:bg-primary-hover"
-                        : "border-neutral-300 text-neutral-800 hover:border-primary hover:text-primary",
+                        : "scheme-border-soft scheme-text-body hover:border-primary hover:text-primary",
                     )}
                   >
                     <span className="pdp-action-label">
@@ -692,7 +692,7 @@ export function ProductViewer({
                 <div className="mt-2 grid gap-2 sm:grid-cols-2">
                   <Link
                     href="/planning"
-                    className="group flex items-center justify-between rounded-2xl border border-neutral-200 px-5 py-3.5 text-neutral-900 transition-colors hover:border-neutral-400"
+                    className="group flex items-center justify-between rounded-2xl scheme-border px-5 py-3.5 scheme-text-strong transition-colors hover:border-neutral-400"
                   >
                     <span className="pdp-action-label">
                       {PDP_ROUTE_COPY.ctas.planning}
@@ -701,7 +701,7 @@ export function ProductViewer({
                   </Link>
                   <Link
                     href="/downloads"
-                    className="group flex items-center justify-between rounded-2xl border border-neutral-200 px-5 py-3.5 text-neutral-900 transition-colors hover:border-neutral-400"
+                    className="group flex items-center justify-between rounded-2xl scheme-border px-5 py-3.5 scheme-text-strong transition-colors hover:border-neutral-400"
                   >
                     <span className="pdp-action-label">
                       {PDP_ROUTE_COPY.ctas.resourceDesk}
@@ -709,21 +709,21 @@ export function ProductViewer({
                     <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
-                <div className="mt-4 border-t border-neutral-200 pt-4">
+                <div className="mt-4 border-t scheme-border pt-4">
                   <button
                     type="button"
                     onClick={() => {
                       navigator.clipboard.writeText(window.location.href);
                     }}
                     aria-label={PDP_ROUTE_COPY.ctas.copyLink}
-                    className="pdp-copy-link inline-flex items-center gap-2 text-sm text-neutral-600 transition-colors hover:text-neutral-900"
+                    className="pdp-copy-link inline-flex items-center gap-2 text-sm scheme-text-body transition-colors hover:text-neutral-900"
                   >
                     <Share2 className="w-3.5 h-3.5" />
                     {PDP_ROUTE_COPY.ctas.copyLink}
                   </button>
                   <Link
                     href={categoryRouteWithContext}
-                    className="pdp-action-label mt-3 inline-flex items-center gap-2 text-neutral-500 transition-colors hover:text-neutral-900"
+                    className="pdp-action-label mt-3 inline-flex items-center gap-2 scheme-text-muted transition-colors hover:text-neutral-900"
                   >
                     <ArrowLeft className="h-3.5 w-3.5" />
                     {returnLabel}
@@ -733,15 +733,15 @@ export function ProductViewer({
             </div>
 
             {useCasePreview.length > 0 && (
-              <div className="mt-8 border-t border-neutral-100 pt-7">
-                <h2 className="mb-4 text-xl font-semibold text-neutral-900">
+              <div className="mt-8 border-t border-(--border-soft) pt-7">
+                <h2 className="mb-4 text-xl font-semibold scheme-text-strong">
                   {PDP_ROUTE_COPY.summary.useCases}
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {useCasePreview.map((useCase) => (
                     <span
                       key={useCase}
-                      className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-medium text-neutral-700"
+                      className="rounded-full scheme-border bg-white px-3 py-1.5 text-xs font-medium scheme-text-body"
                     >
                       {useCase}
                     </span>
@@ -751,20 +751,20 @@ export function ProductViewer({
             )}
 
             {/* Specifications */}
-            <div className="mt-8 border-t border-neutral-100 pt-7">
-              <h2 className="mb-4 text-xl font-semibold text-neutral-900">
+            <div className="mt-8 border-t border-(--border-soft) pt-7">
+              <h2 className="mb-4 text-xl font-semibold scheme-text-strong">
                 {PDP_ROUTE_COPY.ctas.specifications}
               </h2>
               <div className="mb-7 grid gap-3">
                 {specRows.map((row) => (
                   <div
                     key={row.label}
-                    className="rounded-2xl border border-neutral-200 bg-white p-4"
+                    className="rounded-2xl scheme-border bg-white p-4"
                   >
                     <span className="pdp-card-label mb-2 block">
                       {row.label}
                     </span>
-                    <span className="text-sm leading-relaxed text-neutral-700">
+                    <span className="text-sm leading-relaxed scheme-text-body">
                       {row.value}
                     </span>
                   </div>
@@ -773,14 +773,14 @@ export function ProductViewer({
 
               {features.length > 0 && (
                 <div>
-                  <p className="pdp-section-label mb-3 text-neutral-500">
+                  <p className="pdp-section-label mb-3 scheme-text-muted">
                     {PDP_ROUTE_COPY.ctas.keyFeatures}
                   </p>
                   <ul className="grid gap-3">
                     {features.slice(0, 8).map((f: string, i: number) => (
                       <li
                         key={i}
-                        className="flex min-h-full items-start gap-3 rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm leading-relaxed text-neutral-700"
+                        className="flex min-h-full items-start gap-3 rounded-2xl scheme-border bg-(--surface-soft) px-4 py-3 text-sm leading-relaxed scheme-text-body"
                       >
                         <span className="scheme-text-subtle mt-0.5 shrink-0">-</span>
                         <span>{f}</span>
@@ -791,20 +791,20 @@ export function ProductViewer({
               )}
 
               {inlineSpecs.length > 0 && (
-                <div className="mt-7 border-t border-neutral-100 pt-7">
-                  <h3 className="pdp-section-label mb-3 text-neutral-500">
+                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                  <h3 className="pdp-section-label mb-3 scheme-text-muted">
                     {PDP_ROUTE_COPY.ctas.technicalDetails}
                   </h3>
                   <div className="grid gap-3">
                     {inlineSpecs.map((row) => (
                       <div
                         key={row.label}
-                        className="rounded-2xl border border-neutral-200 bg-white p-4"
+                        className="rounded-2xl scheme-border bg-white p-4"
                       >
                         <span className="pdp-card-label mb-2 block">
                           {row.label}
                         </span>
-                        <span className="text-sm leading-relaxed text-neutral-700">
+                        <span className="text-sm leading-relaxed scheme-text-body">
                           {row.value}
                         </span>
                       </div>
@@ -814,22 +814,22 @@ export function ProductViewer({
               )}
 
               {fullOverview ? (
-                <div className="mt-7 border-t border-neutral-100 pt-7">
-                  <h3 className="pdp-section-label mb-3 text-neutral-500">Overview</h3>
-                  <div className="rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-4 text-sm leading-relaxed text-neutral-700">
+                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                  <h3 className="pdp-section-label mb-3 scheme-text-muted">Overview</h3>
+                  <div className="rounded-2xl scheme-border bg-(--surface-soft) px-4 py-4 text-sm leading-relaxed scheme-text-body">
                     {fullOverview}
                   </div>
                 </div>
               ) : null}
 
               {materials.length > 0 && (
-                <div className="mt-7 border-t border-neutral-100 pt-7">
-                  <h3 className="pdp-section-label mb-3 text-neutral-500">Materials</h3>
+                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                  <h3 className="pdp-section-label mb-3 scheme-text-muted">Materials</h3>
                   <div className="flex flex-wrap gap-2">
                     {materials.map((material) => (
                       <span
                         key={material}
-                        className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs text-neutral-700"
+                        className="rounded-full scheme-border bg-(--surface-soft) px-3 py-1.5 text-xs scheme-text-body"
                       >
                         {material}
                       </span>
@@ -839,13 +839,13 @@ export function ProductViewer({
               )}
 
               {finishOptions.length > 0 && (
-                <div className="mt-7 border-t border-neutral-100 pt-7">
-                  <h3 className="pdp-section-label mb-3 text-neutral-500">Finish Options</h3>
+                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                  <h3 className="pdp-section-label mb-3 scheme-text-muted">Finish Options</h3>
                   <div className="flex flex-wrap gap-2">
                     {finishOptions.map((finish) => (
                       <span
                         key={finish}
-                        className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs text-neutral-700"
+                        className="rounded-full scheme-border bg-(--surface-soft) px-3 py-1.5 text-xs scheme-text-body"
                       >
                         {finish}
                       </span>
