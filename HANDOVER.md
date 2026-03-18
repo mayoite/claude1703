@@ -75,10 +75,24 @@ d:/Claude1703/
 │   ├── (routes)/           # Page routes
 │   └── api/                # API routes
 ├── components/             # Shared React components
+├── data/                   # Static data files (product catalog, configs)
+├── lib/                    # Shared utilities and helpers
+├── hooks/                  # Custom React hooks
+├── scripts/                # One-off maintenance and audit scripts (tsx)
+├── supabase/               # Supabase migrations and config
+├── tests/                  # Playwright e2e + Jest unit tests
+├── __mocks__/              # Jest mocks (Three.js, R3F, next/image, etc.)
 ├── public/
 │   └── images/             # Product images (WebP, LFS tracked)
-├── docs/ops/               # Internal ops documentation
-├── output/playwright/      # Visual QA screenshots (LFS tracked)
+├── docs/
+│   ├── ops/                # Internal ops documentation and audit logs
+│   └── audit/              # Product/catalog audit HTML and JSON exports
+├── output/                 # Playwright screenshots and visual QA output
+├── reports/                # Generated audit reports (~11 MB)
+├── archive/                # Legacy code snapshots — do not touch (~113 MB)
+├── codex-recovery/         # Codex agent recovery files (~8 MB) — do not touch
+├── unused/                 # Deprecated components pending deletion (~548 KB)
+├── tmp/                    # Temporary scratch files — not committed
 ├── CLAUDE.md               # Project rules — READ THIS FIRST every session
 └── HANDOVER.md             # This file
 ```
@@ -110,6 +124,7 @@ LFS is initialized and `.gitattributes` is committed. Always run `git lfs instal
 - [x] DuckDuckGo MCP search server configured (replaced Brave)
 - [x] Full project pushed to `mayoite/claude1703`
 - [x] VSCode extensions recommended: Tailwind IntelliSense, ESLint, Prettier, GitLens, Error Lens, etc.
+- [x] Phase 4 Slice 3 route consistency pass complete — sustainability, contact, solutions, ProductViewer all aligned to token system
 
 ### Pending / Next Steps
 - [ ] Vercel CLI not installed — run `npm i -g vercel` to unlock deploy skills
