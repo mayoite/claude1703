@@ -8,7 +8,6 @@ import { Projects } from "@/components/home/Projects";
 import { HomeFAQ } from "@/components/home/HomeFAQ";
 import { TestimonialsStrip } from "@/components/home/TestimonialsStrip";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
-import { SectionReveal } from "@/components/shared/SectionReveal";
 import { SITE_BRAND } from "@/data/site/brand";
 import { buildPageJsonLd, buildPageMetadata } from "@/data/site/seo";
 import { getBusinessStats } from "@/lib/businessStats";
@@ -36,42 +35,28 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <HomepageHero />
-      <SectionReveal>
-        <PartnershipBanner />
-      </SectionReveal>
+      <PartnershipBanner />
 
-      <SectionReveal>
-        <Collections />
-      </SectionReveal>
+      <Collections />
 
-      <SectionReveal>
-        <Projects />
-      </SectionReveal>
+      <Projects />
 
-      <SectionReveal>
-        <TestimonialsStrip />
-      </SectionReveal>
+      <TestimonialsStrip />
 
-      <SectionReveal>
-        <section className="home-section home-section--sand py-10 md:py-12">
-          <div className="home-shell">
-            <div className="home-frame home-frame--standard">
-              <ProcessSection embedded />
-              <div className="mt-8 md:mt-10">
-                <TrustStrip stats={stats} embedded showLogos={false} />
-              </div>
+      <section className="home-section home-section--sand py-10 md:py-12">
+        <div className="home-shell">
+          <div className="home-frame home-frame--standard">
+            <ProcessSection embedded />
+            <div className="mt-8 md:mt-10">
+              <TrustStrip stats={stats} embedded showLogos={false} />
             </div>
           </div>
-        </section>
-      </SectionReveal>
+        </div>
+      </section>
 
-      <SectionReveal>
-        <HomeFAQ />
-      </SectionReveal>
+      <HomeFAQ />
 
-      <SectionReveal>
-        <ContactTeaser />
-      </SectionReveal>
+      <ContactTeaser />
     </div>
   );
 }

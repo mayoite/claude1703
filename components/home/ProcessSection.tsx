@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { HOMEPAGE_PROCESS_CONTENT } from "@/data/site/homepage";
@@ -31,28 +30,24 @@ export function ProcessSection({ embedded = false }: ProcessSectionProps) {
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {HOMEPAGE_PROCESS_CONTENT.steps.map((step, index) => (
-          <motion.div
+        {HOMEPAGE_PROCESS_CONTENT.steps.map((step) => (
+          <div
             key={step.title}
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ delay: index * 0.07, duration: 0.5, ease: "easeOut" }}
             className="home-step-card group"
           >
             <p className="mb-3 text-2xl font-light leading-tight tracking-tight text-neutral-950">
               {step.title}
             </p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <div className="mt-2 flex flex-wrap items-start gap-2">
               <span className="home-chip home-chip--accent">{step.sla}</span>
               <span className="home-step-card__meta">{step.deliverable}</span>
             </div>
             {step.description ? (
-              <p className="mt-3 text-sm text-neutral-500 leading-relaxed">
+              <p className="mt-3 text-sm leading-relaxed text-neutral-500">
                 {step.description}
               </p>
             ) : null}
-          </motion.div>
+          </div>
         ))}
       </div>
     </>

@@ -84,7 +84,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
 
         {/* Image count badge */}
         {images.length > 0 && (
-          <div className="product-gallery__count">
+          <div className="pointer-events-none absolute bottom-4 right-4 z-10 rounded-full border border-neutral-200 bg-white/92 px-3 py-1 text-sm font-bold tracking-widest text-neutral-800 shadow-sm backdrop-blur">
             {safeIndex + 1} / {images.length}
           </div>
         )}

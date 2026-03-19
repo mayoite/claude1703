@@ -161,9 +161,9 @@ export default async function ComparePage({
             <Link href="/downloads" className="btn-outline">
               {COMPARE_ROUTE_COPY.resourceDeskCta}
             </Link>
-            <Link href="/contact?intent=quote&source=compare" className="btn-primary">
+            <a href="/contact?intent=quote&source=compare" className="btn-primary">
               {COMPARE_ROUTE_COPY.primaryCta}
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -218,6 +218,7 @@ export default async function ComparePage({
                         <CompareColumnActions
                           productName={item.product.name}
                           productHref={productHref}
+                          productImage={image}
                           viewLabel={COMPARE_ROUTE_COPY.viewProductCta}
                           addLabel={COMPARE_ROUTE_COPY.addToQuoteCta}
                         />

@@ -15,7 +15,7 @@ export function ClientMarquee() {
   return (
     <section className="client-marquee w-full overflow-hidden py-10 md:py-12">
       <div className="container mb-6 px-6 2xl:px-0">
-        <p className="text-brand-slate-light text-left text-sm font-semibold tracking-ui-010 md:text-right">
+        <p className="text-brand-slate-light text-left text-sm font-semibold tracking-wide md:text-right">
           Clients we have delivered for
         </p>
       </div>

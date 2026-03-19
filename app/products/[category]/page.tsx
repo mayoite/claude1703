@@ -70,11 +70,11 @@ export async function generateStaticParams() {
 function GridSkeleton() {
   return (
     <div className="container-wide py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="animate-pulse bg-neutral-100 rounded-sm aspect-4/3"
+            className="aspect-4/3 animate-pulse rounded-[1.6rem] border scheme-border bg-white"
           />
         ))}
       </div>
@@ -102,13 +102,15 @@ export default async function CategoryPage({
 
   if (requestedCatalog.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-8 text-center bg-white">
-        <h1 className="text-2xl font-light mb-4 text-neutral-900">
+      <div className="scheme-page flex min-h-screen flex-col items-center justify-center p-8 text-center">
+        <div className="scheme-panel rounded-[1.8rem] border px-8 py-10">
+        <h1 className="mb-4 text-2xl font-light text-neutral-900">
           {CATEGORY_ROUTE_COPY.offlineTitle}
         </h1>
-        <p className="max-w-md text-neutral-500 mb-8">
+        <p className="mb-8 max-w-md text-neutral-500">
           {CATEGORY_ROUTE_COPY.offlineDescription}
         </p>
+        </div>
       </div>
     );
   }
@@ -143,7 +145,7 @@ export default async function CategoryPage({
   ]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center bg-white">
+    <div className="flex min-h-screen flex-col items-center scheme-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd) }}

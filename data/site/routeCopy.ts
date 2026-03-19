@@ -4,36 +4,35 @@ import { buildWhatsAppHref } from "@/data/site/contact";
 export const ABOUT_PAGE_COPY = {
   heroTitle: "About One&Only",
   heroSubtitle:
-    "We design and deliver workspace systems that stay practical, durable, and scalable as teams grow.",
+    "We provide office furniture and workspace solutions across India, offering durable designs, installation, and asset management.",
   sectionKicker: "Who we are",
   sectionTitle: "A planning-first furniture partner for modern offices.",
   paragraphs: [
-    "We combine workplace planning, product selection, and execution support so teams can move from concept to handover with fewer delays and better outcomes.",
-    "Our projects cover ergonomic seating, modular workstations, meeting environments, storage, and support services tailored to enterprise and institutional needs.",
-    "Every engagement is managed for clarity: documented scope, practical timelines, and accountable after-sales support.",
+    "One and Only Furniture provides office furniture and workspace solutions across India, offering durable designs, installation, and asset management. Serving hundreds of customers—from startups and SMEs to large enterprises—we deliver efficient, scalable solutions that improve workplace functionality and employee comfort.",
+    "We also support government and public sector projects with procurement, compliance, and institutional fit outs. Backed by a reliable partner and supplier network, One and Only Furniture combines quality, affordability, and prompt service.",
   ],
   confidenceKicker: "Client confidence",
   confidenceTitle: "Trusted by enterprise and institutional teams.",
   confidenceCta: "View all clients",
   modelKicker: "Operating model",
-  modelTitle: "One team from planning brief to post-installation support.",
+  modelTitle: "What One and Only Furniture delivers.",
   modelDescription:
     "We keep planning, sourcing, execution, and support connected so projects stay clear from early decisions through handover.",
   modelPillars: [
     {
-      title: "Planning-led recommendations",
+      title: "Best in class workspace solutions",
       detail:
-        "Category, budget, and layout decisions are tied to how teams actually use the space.",
+        "Durable, modern furniture and end to end services that give organisations confidence to run efficient, future ready workplaces.",
     },
     {
-      title: "Execution clarity",
+      title: "Centralised project delivery",
       detail:
-        "Commercial scope, timelines, delivery coordination, and installation readiness stay visible throughout the project.",
+        "A single partner for procurement, installation, asset management, and compliance for projects across India.",
     },
     {
-      title: "Support after handover",
+      title: "Expert support for complex requirements",
       detail:
-        "Warranty references, service routing, and follow-up support remain part of the same delivery relationship.",
+        "Guidance on government and institutional procurement, documentation, and regulatory needs so you can focus on your core business.",
     },
   ],
   processKicker: "How we work",

@@ -4,11 +4,14 @@ import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { SOLUTIONS_DELIVERY_STEPS, SOLUTIONS_PAGE_COPY } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
   title: SOLUTIONS_PAGE_COPY.metadataTitle,
   description: SOLUTIONS_PAGE_COPY.metadataDescription,
-};
+  path: "/solutions",
+});
 
 export default function SolutionsPage() {
   return (

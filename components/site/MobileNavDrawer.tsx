@@ -52,6 +52,25 @@ interface MobileNavDrawerProps {
   groupedCategories: GroupedCategory[];
 }
 
+const drawerSearchClass =
+  "flex items-center gap-2 rounded-[var(--radius-lg)] border px-3 py-2.5 [border-color:var(--border-soft)] [background:var(--surface-glass-strong)] [box-shadow:var(--shadow-soft)]";
+const drawerGroupLabelClass =
+  "px-3 pb-1 pt-2 text-neutral-500 [font-size:var(--type-body-size)] font-semibold uppercase tracking-[0.14em] [line-height:1.25]";
+const drawerLinkClass =
+  "flex min-h-12 items-center rounded-xl px-3 font-normal text-neutral-800 hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary [font-size:var(--type-body-size)]";
+const drawerSubtleLinkClass =
+  "flex min-h-11 items-center justify-between rounded-lg px-3 text-base text-neutral-700 hover:bg-white";
+const drawerSubcategoryLinkClass =
+  "flex min-h-9 items-center justify-between rounded-md px-2 py-1 text-sm text-neutral-600 hover:bg-white";
+const drawerCallLinkClass =
+  "mb-3 flex min-h-12 items-center justify-center rounded-lg border border-neutral-200 font-semibold text-primary transition-colors hover:border-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary [font-size:var(--type-body-size)] [letter-spacing:var(--type-letter-copy)] [line-height:1.6]";
+const drawerSearchNoteClass =
+  "text-neutral-600 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+const drawerCountClass =
+  "text-neutral-500 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+const drawerShellClass =
+  "border-l shadow-2xl [border-color:var(--border-soft)] [background:linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] [box-shadow:-22px_0_54px_-34px_rgba(10,14,51,0.1)]";
+
 export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategories }: MobileNavDrawerProps) {
   const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
@@ -202,7 +221,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.24, ease: "easeInOut" }}
-            className="drawer-shell fixed inset-y-0 right-0 z-[70] flex w-[92vw] max-w-md flex-col overflow-y-auto lg:hidden"
+            className={`${drawerShellClass} fixed inset-y-0 right-0 z-[70] flex w-[92vw] max-w-md flex-col overflow-y-auto lg:hidden`}
           >
             <div className="flex items-center justify-between border-b border-neutral-100 px-5 py-4">
               <OneAndOnlyLogo className="h-8" variant="orange" />
@@ -220,7 +239,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
             <nav className="flex-1 overflow-y-auto px-5 py-4" aria-label="Mobile primary navigation">
               <div className="mb-4">
                 <form
-                  className="drawer-search"
+                  className={drawerSearchClass}
                   onSubmit={(event) => {
                     event.preventDefault();
                     void submitSearch();
@@ -243,7 +262,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
 
                 {(showSearchPanel || searchQuery.trim().length >= 2) && (
                   <div className="mt-2 rounded-2xl border border-neutral-200 bg-neutral-50 p-3">
-                    <p className="shell-search-note">
+                    <p className={drawerSearchNoteClass}>
                       {searchLoading
                         ? "Searching"
                         : searchResults.length > 0
@@ -262,7 +281,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                               className="flex items-center justify-between rounded-lg bg-white px-3 py-2 text-sm text-neutral-700"
                             >
                               <span>{result.title}</span>
-                              <span className="shell-count">
+                              <span className={drawerCountClass}>
                                 {result.type}
                               </span>
                             </Link>
@@ -290,7 +309,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                           onClick={() =>
                             setAccordion((prev) => ({ ...prev, products: !prev.products }))
                           }
-                          className="drawer-link w-full justify-between"
+                          className={`${drawerLinkClass} w-full justify-between`}
                         >
                           {link.label}
                           <ChevronDown
@@ -306,14 +325,14 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                             <Link
                               href="/products"
                               onClick={handleClose}
-                              className="drawer-subtle-link text-primary"
+                              className={`${drawerSubtleLinkClass} text-primary`}
                             >
                               All Products
                             </Link>
 
                             {groupedCategories.map((group) => (
                               <div key={group.groupId}>
-                                <p className="drawer-group-label">
+                                <p className={drawerGroupLabelClass}>
                                   {group.groupLabel}
                                 </p>
                                 <ul className="space-y-1">
@@ -323,11 +342,11 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                                         <Link
                                           href={item.href}
                                           onClick={handleClose}
-                                          className="drawer-subtle-link"
+                                          className={drawerSubtleLinkClass}
                                         >
                                           <span>{item.name}</span>
                                           {typeof item.count === "number" && (
-                                            <span className="shell-count">{item.count}</span>
+                                            <span className={drawerCountClass}>{item.count}</span>
                                           )}
                                         </Link>
                                       )}
@@ -340,11 +359,11 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                                               <Link
                                                 href={subcategory.href}
                                                 onClick={handleClose}
-                                                className="drawer-subcategory-link"
+                                                className={drawerSubcategoryLinkClass}
                                               >
                                                 <span>{subcategory.name}</span>
                                                 {typeof subcategory.count === "number" && (
-                                                  <span className="shell-count">
+                                                  <span className={drawerCountClass}>
                                                     {subcategory.count}
                                                   </span>
                                                 )}
@@ -369,7 +388,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                       <Link
                         href={link.href}
                         onClick={handleClose}
-                        className="drawer-link"
+                        className={drawerLinkClass}
                       >
                         {link.label}
                       </Link>
@@ -383,7 +402,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
               <a
                 href="tel:+919835630940"
                 onClick={handleClose}
-                className="drawer-call-link"
+                className={drawerCallLinkClass}
                 aria-label="Call +91 98356 30940"
               >
                 Call +91 98356 30940

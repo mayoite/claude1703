@@ -37,20 +37,24 @@ test.describe("Homepage visual QA", () => {
           element: findSectionByHeading("Authorized Franchise Partner"),
         },
         {
-          label: "collections",
-          element: findSectionByHeading("Browse workspace categories"),
+          label: "trust",
+          element: document.querySelector("section[aria-label='Trust indicators']"),
+        },
+        {
+          label: "solutions",
+          element: findSectionByHeading("Start with the workspace requirement"),
         },
         {
           label: "projects",
           element: document.querySelector(".projects-section"),
         },
         {
-          label: "process",
-          element: findSectionByHeading("A clear delivery system"),
+          label: "collections",
+          element: findSectionByHeading("Browse product categories"),
         },
         {
-          label: "trust",
-          element: document.querySelector("section[aria-label='Trust indicators']"),
+          label: "process",
+          element: findSectionByHeading("A clear delivery system"),
         },
         {
           label: "close",

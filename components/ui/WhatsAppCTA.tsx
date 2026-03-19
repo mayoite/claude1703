@@ -56,6 +56,8 @@ export function WhatsAppCTA() {
       external: false,
     },
   ] as const;
+  const actionClass =
+    "group flex items-center gap-3 rounded-[var(--radius-lg)] border border-[color:color-mix(in_srgb,var(--surface-inverse)_8%,transparent)] bg-[color:color-mix(in_srgb,var(--surface-panel-strong)_72%,transparent)] px-4 py-3 shadow-[0_10px_24px_-28px_rgba(16,26,40,0.22)] transition-[transform,border-color,background-color,box-shadow] duration-[var(--motion-base)] ease-[var(--ease-standard)] hover:-translate-y-0.5 hover:border-(--color-primary) hover:bg-white hover:shadow-[var(--shadow-soft)]";
 
   return (
     <>
@@ -66,11 +68,10 @@ export function WhatsAppCTA() {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.25 }}
-        className={`quick-contact-fab fixed right-3 z-40 inline-flex h-12 min-w-12 items-center justify-center rounded-full sm:right-5 ${buttonOffset}`}
+        whileTap={{ scale: 0.96 }}
+        className={`fixed right-3 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full border border-(--color-primary) bg-(--color-primary) text-white shadow-[0_24px_48px_-28px_rgba(16,26,40,0.7)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-primary-hover) hover:shadow-[0_30px_54px_-28px_rgba(16,26,40,0.82)] sm:right-5 ${buttonOffset}`}
       >
-        <span className="quick-contact-fab__icon">
-          <MessageCircle className="h-5 w-5" />
-        </span>
+        {open ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
       </motion.button>
 
       <AnimatePresence>
@@ -80,7 +81,7 @@ export function WhatsAppCTA() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.96 }}
             transition={{ duration: 0.18 }}
-            className={`quick-contact-panel fixed right-3 z-40 w-[19rem] sm:right-5 ${panelOffset}`}
+            className={`fixed right-3 z-40 w-[19rem] rounded-[1.5rem] border p-4 [background-color:var(--surface-panel)] [border-color:var(--border-soft)] [box-shadow:var(--shadow-panel)] sm:right-5 ${panelOffset}`}
           >
             <div className="mb-4 flex items-start justify-between gap-4">
               <div>
@@ -106,23 +107,27 @@ export function WhatsAppCTA() {
                     href={action.href}
                     target={action.external ? "_blank" : undefined}
                     rel={action.external ? "noopener noreferrer" : undefined}
-                    className="contact-teaser__action"
+                    className={actionClass}
                   >
-                    <span className="contact-teaser__action-icon">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--color-primary)_8%,transparent)] text-(--color-primary)">
                       <Icon className="h-4 w-4" />
                     </span>
-                    <span className="contact-teaser__action-copy">
-                      <span className="contact-teaser__action-label">{action.label}</span>
-                      <span className="contact-teaser__action-detail">{action.detail}</span>
+                    <span className="flex min-w-0 flex-1 flex-col">
+                      <span className="text-[var(--type-body-size)] font-medium leading-[1.25] tracking-[var(--type-letter-copy)] text-(--text-strong)">
+                        {action.label}
+                      </span>
+                      <span className="mt-1 text-[var(--type-body-size)] leading-[1.4] text-(--text-muted)">
+                        {action.detail}
+                      </span>
                     </span>
-                    <ArrowUpRight className="contact-teaser__action-arrow h-4 w-4" />
+                    <ArrowUpRight className="h-4 w-4 text-(--color-primary) transition-transform duration-[var(--motion-fast)] ease-[var(--ease-standard)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </a>
                 );
               })}
 
               <Link
                 href="/contact"
-                className="quick-contact-panel__footer-link"
+                className="inline-flex items-center justify-center rounded-full px-3 py-2 text-sm font-medium text-primary transition-colors hover:text-primary-hover"
                 onClick={() => setOpen(false)}
               >
                 Open full contact page

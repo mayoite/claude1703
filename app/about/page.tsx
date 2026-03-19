@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
+import { HomeFAQ } from "@/components/home/HomeFAQ";
 import { ClientBadge } from "@/components/ClientBadge";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { ABOUT_PAGE_COPY } from "@/data/site/routeCopy";
@@ -10,7 +11,7 @@ export default function AboutPage() {
   const featuredClients = TRUSTED_BY_CLIENTS.slice(0, 8);
 
   return (
-    <section className="scheme-page flex min-h-screen flex-col items-center">
+    <main className="flex min-h-screen w-full flex-col items-center scheme-page">
       <Hero
         variant="small"
         title={ABOUT_PAGE_COPY.heroTitle}
@@ -19,9 +20,9 @@ export default function AboutPage() {
         backgroundImage="/images/hero/hero-1.webp"
       />
 
-      <section className="container px-6 py-18 2xl:px-0 md:py-22">
+      <section className="container mx-auto px-6 py-16 2xl:px-0 md:py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div className="scheme-border relative aspect-16/11 overflow-hidden rounded-2xl border">
+          <div className="relative aspect-[16/11] overflow-hidden rounded-[2rem] border scheme-border shadow-[0_24px_60px_-42px_rgba(18,48,66,0.18)]">
             <Image
               src="/images/hero/hero-2.webp"
               alt="Workspace delivery by One&Only"
@@ -31,108 +32,147 @@ export default function AboutPage() {
             />
           </div>
 
-          <div className="space-y-5">
-            <p className="typ-label scheme-text-body">{ABOUT_PAGE_COPY.sectionKicker}</p>
-            <h2 className="typ-section scheme-text-strong">{ABOUT_PAGE_COPY.sectionTitle}</h2>
-            {ABOUT_PAGE_COPY.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="page-copy scheme-text-body">
-                {paragraph}
+          <div className="flex flex-col gap-6">
+            <div>
+              <p className="typ-label mb-3 scheme-text-brand">
+                {ABOUT_PAGE_COPY.sectionKicker}
               </p>
-            ))}
+              <h2 className="typ-section scheme-text-strong">
+                {ABOUT_PAGE_COPY.sectionTitle}
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {ABOUT_PAGE_COPY.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="typ-lead scheme-text-body">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="scheme-section-soft scheme-border w-full border-y py-16">
-        <div className="container px-6 2xl:px-0">
-          <div className="stats-block grid grid-cols-2 gap-4 md:grid-cols-4">
+      <section className="w-full border-y scheme-border scheme-section-soft py-16 md:py-24">
+        <div className="container mx-auto px-6 2xl:px-0">
+          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
             {TRUSTED_BY_STATS.map((item) => (
               <div
                 key={item.label}
-                className="scheme-panel scheme-border rounded-2xl border p-6 text-center"
+                className="scheme-panel rounded-2xl border p-8 text-center"
               >
-                <p className="typ-stat text-primary">{item.value}</p>
-                <p className="stats-block__label mt-2">{item.label}</p>
+                <p className="text-4xl font-semibold tracking-tight scheme-text-heading md:text-5xl">
+                  {item.value}
+                </p>
+                <p className="typ-label mt-2 scheme-text-muted">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="container px-6 py-18 2xl:px-0 md:py-22">
-        <div className="mb-8 max-w-3xl">
-          <p className="typ-label scheme-text-body mb-4">{ABOUT_PAGE_COPY.modelKicker}</p>
-          <h2 className="typ-section scheme-text-strong">{ABOUT_PAGE_COPY.modelTitle}</h2>
-          <p className="page-copy scheme-text-body mt-5">
+      <section className="container mx-auto px-6 py-16 2xl:px-0 md:py-24">
+        <div className="mb-12 max-w-3xl">
+          <p className="typ-label mb-4 scheme-text-brand">
+            {ABOUT_PAGE_COPY.modelKicker}
+          </p>
+          <h2 className="typ-section scheme-text-strong">
+            {ABOUT_PAGE_COPY.modelTitle}
+          </h2>
+          <p className="typ-lead mt-5 scheme-text-body">
             {ABOUT_PAGE_COPY.modelDescription}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {ABOUT_PAGE_COPY.modelPillars.map((pillar) => (
-            <article key={pillar.title} className="scheme-panel scheme-border rounded-2xl border p-6">
+            <article key={pillar.title} className="scheme-panel rounded-2xl border p-8">
               <h3 className="typ-h3 scheme-text-strong">{pillar.title}</h3>
-              <p className="page-copy-sm scheme-text-body mt-3">{pillar.detail}</p>
+              <p className="mt-4 page-copy-sm scheme-text-body">{pillar.detail}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="scheme-section-soft scheme-border w-full border-y py-18 md:py-22">
-        <div className="container px-6 2xl:px-0">
-          <div className="mb-8 max-w-3xl">
-            <p className="typ-label scheme-text-body mb-4">{ABOUT_PAGE_COPY.processKicker}</p>
-            <h2 className="typ-section scheme-text-strong">{ABOUT_PAGE_COPY.processTitle}</h2>
+      <section className="w-full border-y scheme-border scheme-section-soft py-16 md:py-24">
+        <div className="container mx-auto px-6 2xl:px-0">
+          <div className="mb-12 max-w-3xl">
+            <p className="typ-label mb-4 scheme-text-brand">
+              {ABOUT_PAGE_COPY.processKicker}
+            </p>
+            <h2 className="typ-section scheme-text-strong text-balance">
+              {ABOUT_PAGE_COPY.processTitle}
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             {ABOUT_PAGE_COPY.processSteps.map((step, index) => (
               <article
                 key={step.title}
-                className="scheme-panel-soft scheme-border rounded-2xl border p-6"
+                className="scheme-panel flex flex-col rounded-2xl border p-8"
               >
-                <p className="typ-label scheme-text-brand mb-3">Step {index + 1}</p>
+                <p className="mb-4 inline-flex self-start rounded-full scheme-accent-wash px-3 py-1 text-xs font-semibold uppercase tracking-widest scheme-text-brand">
+                  Step {index + 1}
+                </p>
                 <h3 className="typ-h3 scheme-text-strong">{step.title}</h3>
-                <p className="page-copy-sm scheme-text-body mt-3">{step.detail}</p>
+                <p className="mt-4 page-copy-sm scheme-text-body">{step.detail}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="container px-6 py-18 2xl:px-0 md:py-22">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
-          <div>
-            <p className="typ-label scheme-text-body mb-3">{ABOUT_PAGE_COPY.confidenceKicker}</p>
-            <h2 className="typ-section scheme-text-strong">{ABOUT_PAGE_COPY.confidenceTitle}</h2>
+      <section className="container mx-auto px-6 py-16 2xl:px-0 md:py-24">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <p className="typ-label mb-4 scheme-text-brand">
+              {ABOUT_PAGE_COPY.confidenceKicker}
+            </p>
+            <h2 className="typ-section scheme-text-strong text-balance">
+              {ABOUT_PAGE_COPY.confidenceTitle}
+            </h2>
           </div>
-          <Link href="/trusted-by" className="btn-outline">
+          <Link 
+            href="/trusted-by" 
+            className="btn-outline"
+          >
             {ABOUT_PAGE_COPY.confidenceCta}
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {featuredClients.map((client) => (
             <ClientBadge key={client.name} {...client} />
           ))}
         </div>
       </section>
 
-      <section className="container px-6 pb-18 2xl:px-0 md:pb-22">
-        <div className="scheme-panel-dark relative overflow-hidden rounded-[2rem] p-8 md:p-10">
-          <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top_right,rgba(13,45,180,0.16),transparent_58%)]" />
-          <div className="relative z-10 grid gap-6 lg:grid-cols-[1.1fr_auto] lg:items-end">
+      <HomeFAQ />
+
+      <section className="container mx-auto px-6 pb-16 2xl:px-0 md:pb-24">
+        <div className="relative overflow-hidden rounded-[2.5rem] scheme-panel-dark p-8 md:p-14">
+          <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top_right,rgba(59,174,219,0.16),transparent_65%)]" />
+          <div className="relative z-10 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="max-w-2xl">
-              <h2 className="typ-section text-white">{ABOUT_PAGE_COPY.supportTitle}</h2>
-              <p className="page-copy scheme-text-inverse-body mt-4">
+              <h2 className="typ-section scheme-text-inverse text-balance">
+                {ABOUT_PAGE_COPY.supportTitle}
+              </h2>
+              <p className="mt-5 typ-lead scheme-text-inverse-body">
                 {ABOUT_PAGE_COPY.supportDescription}
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/planning" className="btn-primary">
+            <div className="flex flex-wrap gap-4">
+              <Link 
+                href="/planning" 
+                className="btn-primary"
+              >
                 {ABOUT_PAGE_COPY.supportPrimaryCta}
               </Link>
-              <Link href="/downloads" className="btn-outline-light">
+              <Link 
+                href="/downloads" 
+                className="btn-outline-light"
+              >
                 {ABOUT_PAGE_COPY.supportSecondaryCta}
               </Link>
             </div>
@@ -141,6 +181,6 @@ export default function AboutPage() {
       </section>
 
       <ContactTeaser />
-    </section>
+    </main>
   );
 }

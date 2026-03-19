@@ -1,218 +1,153 @@
+@theme {
+  --font-display: var(--font-cisco-sans), "Cisco Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-cisco-sans), "Cisco Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --type-label-size: 0.72rem;
+  --type-title-sm-size: clamp(1.12rem, 1.04rem + 0.24vw, 1.28rem);
+  --type-title-lg-size: clamp(2rem, 2.3vw, 2.8rem);
+  --type-display-size: clamp(4rem, 6.2vw, 5.6rem);
+  --type-body-size: 1rem;
+  --type-body-lg-size: clamp(1rem, 0.99rem + 0.14vw, 1.06rem);
+  --type-card-title-size: clamp(1.12rem, 1.05rem + 0.22vw, 1.28rem);
+  --type-project-title-size: clamp(1.24rem, 1.08rem + 0.44vw, 1.62rem);
+  --type-project-display-size: clamp(2.2rem, 3.2vw, 3.5rem);
+  --type-partner-title-size: clamp(1.95rem, 2.1vw, 2.65rem);
+  --type-letter-tight: -0.05em;
+  --type-letter-title: -0.04em;
+  --type-letter-copy: -0.008em;
+  --type-letter-label: 0.05em;
+  --type-letter-label-wide: 0.11em;
+}
+
 @layer components {
   .typ-h1,
-  .typ-display {
+  .typ-display,
+  .hero-title {
     font-family: var(--font-display);
     font-size: var(--type-display-size);
-    font-weight: 200;
-    font-style: italic;
-    letter-spacing: -0.035em;
-    line-height: 1.05;
+    font-weight: 275;
+    letter-spacing: var(--type-letter-tight);
+    line-height: 0.86;
     text-wrap: balance;
   }
 
   .typ-h2,
   .typ-section,
-  .home-heading {
+  .home-heading,
+  .section-title {
     font-family: var(--font-display);
     font-size: var(--type-title-lg-size);
-    font-weight: 300;
-    letter-spacing: -0.025em;
-    line-height: 1.15;
+    font-weight: 350;
+    letter-spacing: var(--type-letter-title);
+    line-height: 1;
     text-wrap: balance;
   }
 
   .typ-h3 {
+    font-family: var(--font-display);
     font-size: var(--type-title-sm-size);
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    line-height: 1.35;
-  }
-
-  .typ-eyebrow,
-  .projects-section__eyebrow,
-  .projects-card__category,
-  .partner-strip__label {
-    font-size: var(--type-label-size);
-    font-weight: 600;
-    letter-spacing: var(--type-letter-label-wide);
-    text-transform: uppercase;
-    line-height: 1.25;
-  }
-
-  .typ-cta {
-    font-size: var(--type-title-sm-size);
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .typ-nav {
-    font-size: var(--type-body-size);
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.4;
-  }
-
-  .typ-nav-sm,
-  .typ-micro {
-    font-size: var(--ref-size-003);
-    line-height: 1.35;
-  }
-
-  .typ-nav-sm {
-    font-weight: 400;
-    letter-spacing: 0.04em;
-  }
-
-  .typ-micro {
-    font-weight: 500;
-    letter-spacing: 0.04em;
+    font-weight: 350;
+    letter-spacing: -0.038em;
+    line-height: 1.02;
+    text-wrap: balance;
   }
 
   .typ-lead,
   .home-copy,
-  .partner-strip__copy {
+  .hero-subtitle,
+  .page-copy {
+    font-family: var(--font-sans);
     font-size: var(--type-body-lg-size);
-    font-weight: 350;
-    letter-spacing: -0.01em;
-    line-height: 1.58;
+    font-weight: 400;
+    letter-spacing: var(--type-letter-copy);
+    line-height: 1.48;
+  }
+
+  .page-copy-sm,
+  .typ-body-sm,
+  .contact-card__meta,
+  .catalog-card__description {
+    font-family: var(--font-sans);
+    font-size: var(--type-body-size);
+    font-weight: 400;
+    letter-spacing: var(--type-letter-copy);
+    line-height: 1.56;
+  }
+
+  .typ-nav,
+  .typ-nav-sm,
+  .typ-micro {
+    font-family: var(--font-sans);
+    font-size: var(--type-body-size);
+    line-height: 1.35;
+  }
+
+  .typ-nav {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  .typ-nav-sm {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .typ-micro {
+    font-weight: 600;
+    letter-spacing: 0.08em;
   }
 
   .typ-label,
+  .typ-eyebrow,
+  .typ-overline,
+  .typ-chip,
   .home-kicker,
   .contact-summary__eyebrow,
   .contact-card__title,
   .contact-channel__label,
-  .catalog-card__eyebrow,
-  .home-panel__kicker {
-    font-size: var(--type-label-size);
-    font-weight: 550;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    line-height: 1.25;
-  }
-
-  .typ-overline,
-  .typ-chip {
-    text-transform: uppercase;
-    line-height: 1.25;
-  }
-
-  .typ-overline {
-    font-size: var(--ref-size-003);
-    font-weight: 600;
-    letter-spacing: 0.14em;
-  }
-
-  .typ-chip {
-    font-size: var(--fs-100);
-    font-weight: 600;
-    letter-spacing: 0.12em;
-  }
-
-  .typ-stat {
-    font-size: var(--type-display-size);
-    font-weight: 250;
-    letter-spacing: -0.035em;
-    line-height: 1;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .home-proof-card__label {
+  .catalog-card__eyebrow {
+    font-family: var(--font-sans);
     font-size: var(--type-label-size);
     font-weight: 500;
+    letter-spacing: 0.11em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .typ-cta {
+    font-family: var(--font-sans);
+    font-size: var(--type-body-size);
+    font-weight: 600;
     letter-spacing: 0.04em;
-    line-height: 1.25;
-  }
-
-  .home-proof-card__value,
-  .home-panel__copy--dark {
-    font-size: var(--ref-size-011);
-    font-weight: 350;
-    letter-spacing: var(--type-letter-copy);
-    line-height: 1.58;
-  }
-
-  .contact-card__value {
-    font-size: var(--type-card-title-size);
-    font-weight: 350;
-    letter-spacing: -0.015em;
     line-height: 1.2;
   }
 
-  .projects-section__title {
+  .typ-stat {
     font-family: var(--font-display);
-    font-size: var(--type-project-display-size);
-    font-weight: 350;
-    letter-spacing: -0.04em;
-    line-height: 0.98;
-    text-wrap: balance;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 325;
+    letter-spacing: -0.06em;
+    line-height: 0.92;
+    font-variant-numeric: tabular-nums;
   }
 
-  .projects-card__title {
+  .contact-card__value {
     font-family: var(--font-display);
-    font-size: var(--type-project-title-size);
-    font-weight: 350;
+    font-size: var(--type-card-title-size);
+    font-weight: 400;
     letter-spacing: -0.03em;
-    line-height: 1.05;
+    line-height: 1.08;
   }
 
-  .partner-strip__title {
-    font-family: var(--font-display);
-    font-size: var(--type-partner-title-size);
-    font-weight: 300;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    text-wrap: balance;
-  }
-
-  .page-copy {
-    font-size: var(--type-body-lg-size);
+  .home-heading__accent {
+    color: var(--color-brand-muted);
+    font-style: normal;
     font-weight: 350;
-    letter-spacing: var(--type-letter-copy);
-    line-height: 1.7;
-  }
-
-  .page-copy-sm {
-    font-size: var(--type-body-size);
-    font-weight: 350;
-    line-height: 1.65;
-  }
-
-  .typ-body-sm {
-    font-size: var(--ref-size-007);
-    font-weight: 375;
-    letter-spacing: var(--type-letter-copy);
-    line-height: 1.6;
-  }
-
-  .hero-title {
-    font-family: var(--font-display);
-    font-weight: 200;
-    font-style: italic;
-    letter-spacing: -0.04em;
-    line-height: 1.04;
-    text-wrap: balance;
-  }
-
-  .hero-subtitle {
-    font-size: clamp(1rem, 0.96rem + 0.55vw, 1.45rem);
-    font-weight: 350;
-    letter-spacing: -0.01em;
-    line-height: 1.6;
+    letter-spacing: inherit;
   }
 
   .hero-accent {
-    font-style: italic;
-    font-weight: 200;
-  }
-
-  .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 1.7rem + 1.6vw, 3.2rem);
-    font-weight: 300;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    text-wrap: balance;
+    color: var(--color-brand-muted);
+    font-weight: 350;
   }
 }

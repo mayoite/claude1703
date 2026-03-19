@@ -11,12 +11,17 @@ export function HomeFAQ() {
     <section className="home-section home-section--white py-10 md:py-14">
       <div className="home-shell">
         <div className="home-frame home-frame--standard">
-          <div className="mb-8 md:mb-10">
+          <div className="mb-7 md:mb-8">
             <h2 className="home-heading">
-              {HOMEPAGE_FAQ_CONTENT.titleLead}{" "}
-              <span className="home-heading__accent">
-                {HOMEPAGE_FAQ_CONTENT.titleAccent}
-              </span>
+              {HOMEPAGE_FAQ_CONTENT.titleLead}
+              {HOMEPAGE_FAQ_CONTENT.titleAccent ? (
+                <>
+                  {" "}
+                  <span className="home-heading__accent">
+                    {HOMEPAGE_FAQ_CONTENT.titleAccent}
+                  </span>
+                </>
+              ) : null}
             </h2>
           </div>
 
@@ -27,7 +32,7 @@ export function HomeFAQ() {
               const isOpen = open === index;
 
               return (
-                <div key={index} className="py-4">
+                <div key={index} className="py-3.5 md:py-4">
                   <dt>
                     <button
                       type="button"
@@ -37,7 +42,7 @@ export function HomeFAQ() {
                       className="flex w-full items-center justify-between gap-4 text-left"
                       onClick={() => setOpen(isOpen ? null : index)}
                     >
-                      <span className="text-base font-medium text-neutral-950 md:text-lg">
+                      <span className="text-base font-medium text-neutral-950 md:text-[1.06rem]">
                         {item.q}
                       </span>
                       <ChevronDown
@@ -53,7 +58,7 @@ export function HomeFAQ() {
                     role="region"
                     aria-labelledby={btnId}
                     hidden={!isOpen}
-                    className="mt-3 text-base text-neutral-600 leading-relaxed"
+                    className="mt-2 text-base leading-relaxed text-neutral-600"
                   >
                     {item.a}
                   </dd>

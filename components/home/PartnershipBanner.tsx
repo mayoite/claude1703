@@ -5,9 +5,9 @@ import { HOMEPAGE_PARTNERSHIP_CONTENT } from "@/data/site/homepage";
 
 export function PartnershipBanner() {
   return (
-    <section className="scheme-section-soft py-10 md:py-12">
+    <section className="home-section home-section--soft py-10 md:py-12">
       <div className="home-shell">
-        <div className="home-frame home-frame--roomy flex flex-col items-center justify-between gap-10 md:flex-row">
+        <div className="home-frame home-frame--roomy flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="shrink-0 md:pl-2">
             <Image
               src={HOMEPAGE_PARTNERSHIP_CONTENT.image.src}
@@ -20,14 +20,14 @@ export function PartnershipBanner() {
             />
           </div>
 
-          <div className="max-w-2xl text-center md:text-right">
-            <h2 className="home-heading scheme-text-strong mb-6">
+          <div className="max-w-2xl">
+            <h2 className="home-heading scheme-text-strong mb-4">
               {HOMEPAGE_PARTNERSHIP_CONTENT.title[0]}{" "}
               <span className="home-heading__accent">
                 {HOMEPAGE_PARTNERSHIP_CONTENT.title[1]}
               </span>
             </h2>
-            <p className="scheme-text-body mb-8 max-w-lg text-base md:ml-auto">
+            <p className="scheme-text-body mb-6 max-w-lg text-base">
               {HOMEPAGE_PARTNERSHIP_CONTENT.description}
             </p>
             <Link href={HOMEPAGE_PARTNERSHIP_CONTENT.cta.href} className="link-arrow typ-label">

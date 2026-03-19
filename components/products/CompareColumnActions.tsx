@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { MessageSquare } from "lucide-react";
+import { useQuoteCart } from "@/lib/store/quoteCart";
 
 interface CompareColumnActionsProps {
   productName: string;
   productHref: string;
+  productImage?: string;
   viewLabel: string;
   addLabel: string;
 }
@@ -13,12 +15,11 @@ interface CompareColumnActionsProps {
 export function CompareColumnActions({
   productName,
   productHref,
+  productImage,
   viewLabel,
   addLabel,
 }: CompareColumnActionsProps) {
-  const enquiryHref = `/contact?intent=quote&source=compare&product=${encodeURIComponent(
-    productName,
-  )}&ref=${encodeURIComponent(productHref)}`;
+  const addItem = useQuoteCart((state) => state.addItem);
 
   return (
     <div className="mt-4 grid gap-2">
@@ -28,14 +29,22 @@ export function CompareColumnActions({
       >
         {viewLabel}
       </Link>
-      <Link
-        href={enquiryHref}
-        aria-label={`${addLabel} ${productName}`}
+      <button
+        type="button"
+        onClick={() =>
+          addItem({
+            id: `quote-${productHref.split("/").filter(Boolean).pop() || productName}`,
+            name: productName,
+            image: productImage,
+            href: productHref,
+          })
+        }
+        aria-label={`Add to quote cart ${productName}`}
         className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-primary px-3 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
       >
         <MessageSquare className="h-4 w-4" />
         {addLabel}
-      </Link>
+      </button>
     </div>
   );
 }

@@ -1,8 +1,20 @@
 export const HOMEPAGE_HERO_CONTENT = {
-  title: ["Spaces that work", "as hard as your team.", ""],
+  eyebrow: "One&Only workspace systems",
+  title: ["Workspaces", "that", "perform"],
   description: "",
   primaryCta: { label: "Guided Planner", href: "/contact" },
   secondaryCta: { label: "Browse Seating", href: "/products/seating" },
+  proofItems: [
+    { label: "Established", value: "2011" },
+    { label: "Projects", value: "500+" },
+    { label: "Response", value: "Business day" },
+  ],
+  sidePanel: {
+    stat: "Pan-India delivery",
+    title: "Planning first. Installation without drift.",
+    description:
+      "Furniture systems for offices, campuses, and operational environments with direct support from brief to handover.",
+  },
 } as const;
 
 export const HOMEPAGE_TRUST_CONTENT = {
@@ -83,25 +95,25 @@ export const HOMEPAGE_PROJECTS_CONTENT = {
       sector: "Government",
       companyName: "DMRC",
       outcome: "Workstations and seating across operational zones",
-      image: "/ClientPhotos/DMRC/hero.jpg",
+      image: "/ClientPhotos/DMRC/hero.webp",
     },
     {
       sector: "Corporate",
       companyName: "Titan Limited",
       outcome: "Full-floor ergonomic rollout at Patna headquarters",
-      image: "/ClientPhotos/Titan/hero.jpg",
+      image: "/ClientPhotos/Titan/hero.webp",
     },
     {
       sector: "Automobile",
       companyName: "TVS Motors",
       outcome: "Multi-seat workstation fit-out for regional office",
-      image: "/ClientPhotos/TVS/hero.jpg",
+      image: "/ClientPhotos/TVS/hero.webp",
     },
     {
       sector: "Institutional",
       companyName: "Usha Workspace",
       outcome: "Integrated storage, seating, and collaboration zones",
-      image: "/ClientPhotos/Usha/hero.jpg",
+      image: "/ClientPhotos/Usha/hero.webp",
     },
   ],
 } as const;
@@ -129,6 +141,13 @@ export const HOMEPAGE_CONTACT_CONTENT = {
   ],
 } as const;
 
+export const HOMEPAGE_STATS_CONTENT = [
+  { value: "14+", label: "Years delivering workspaces" },
+  { value: "500+", label: "Projects completed" },
+  { value: "50+", label: "Partner brands and product lines" },
+  { value: "24/7", label: "After-sales support routing" },
+] as const;
+
 export const HOMEPAGE_PROCESS_CONTENT = {
   kicker: "",
   titleLead: "A clear",
@@ -150,7 +169,7 @@ export const HOMEPAGE_PROCESS_CONTENT = {
     },
     {
       title: "Deliver",
-      sla: "As per approved schedule",
+      sla: "Approved schedule",
       deliverable: "Installed workspace",
       description: "Factory-built, delivered, and installed to spec.",
     },
@@ -166,6 +185,7 @@ export const HOMEPAGE_PROCESS_CONTENT = {
 export const HOMEPAGE_SOLUTIONS_CONTENT = {
   kicker: "Workspace routes",
   title: "Browse by workspace need.",
+  description: "Explore office furniture and workspace systems by category.",
   compareCta: "Compare product options",
   catalogCta: "Browse full catalog",
   mobileHint: "Swipe to browse categories",
@@ -227,12 +247,12 @@ export const HOMEPAGE_TESTIMONIALS_CONTENT = {
 } as const;
 
 export const HOMEPAGE_FAQ_CONTENT = {
-  titleLead: "Common",
-  titleAccent: "questions.",
+  titleLead: "FAQ",
+  titleAccent: "",
   items: [
     {
       q: "Which cities do you serve?",
-      a: "We are based in Patna and serve Bihar, Jharkhand, and multi-city rollout briefs across India. Delivery logistics are handled directly — no third-party intermediaries.",
+      a: "We are based in Patna and serve Bihar, Jharkhand, and multi-city rollout briefs across India. Delivery logistics are handled directly - no third-party intermediaries.",
     },
     {
       q: "How long does delivery and installation take?",
@@ -244,7 +264,7 @@ export const HOMEPAGE_FAQ_CONTENT = {
     },
     {
       q: "What warranty do you offer?",
-      a: "Products carry manufacturer warranty (typically 2–5 years depending on the range). After-sales support is managed by our Patna team directly.",
+      a: "Products carry manufacturer warranty (typically 2-5 years depending on the range). After-sales support is managed by our Patna team directly.",
     },
     {
       q: "Can you handle large or phased office rollouts?",

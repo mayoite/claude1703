@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site/Header";
 import { SiteFooter } from "@/components/site/Footer";
@@ -7,7 +7,7 @@ import { CookieConsentBar } from "@/components/site/CookieConsentBar";
 import dynamic from "next/dynamic";
 import QueryProvider from "@/app/providers/QueryProvider";
 import { WhatsAppCTA } from "@/components/ui/WhatsAppCTA";
-import { ciscoSans } from "@/lib/fonts";
+import { ciscoSans, helveticaNeue } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/siteUrl";
 import { buildGlobalJsonLd, buildSiteMetadata } from "@/data/site/seo";
 
@@ -23,7 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={`${ciscoSans.variable} scroll-smooth`}>
+    <html
+      lang="en-IN"
+      className={`${ciscoSans.variable} ${helveticaNeue.variable} scroll-smooth`}
+    >
       <head>
         <script
           type="application/ld+json"

@@ -72,6 +72,24 @@ async function resolveSearchDestination(
   }
 }
 
+const siteHeaderBaseClass =
+  "fixed top-0 left-0 z-50 w-full border-b border-neutral-200/70 backdrop-blur-xl transition-shadow [background-color:var(--surface-glass-strong)] [transition-duration:var(--motion-fast)] [transition-timing-function:var(--ease-standard)]";
+const siteHeaderScrolledClass = "[box-shadow:var(--shadow-panel)]";
+const headerUtilityCopyClass =
+  "text-neutral-500 [font-size:var(--type-body-size)] font-normal [letter-spacing:0.04em] [line-height:1.35]";
+const headerUtilityLinksClass =
+  "flex items-center gap-5 text-neutral-600 [font-size:var(--type-body-size)] font-normal [letter-spacing:0.04em] [line-height:1.35]";
+const headerSearchShellClass =
+  "border [border-color:var(--border-soft)] [background:var(--surface-glass-strong)] [box-shadow:var(--shadow-soft)] [backdrop-filter:blur(12px)]";
+const headerSearchPanelClass =
+  "absolute right-0 mt-2 w-[24rem] overflow-hidden border p-4 [border-radius:var(--radius-xl)] [border-color:var(--border-soft)] [background:var(--surface-glass-strong)] [box-shadow:var(--shadow-panel)] [backdrop-filter:blur(18px)]";
+const headerSearchMetaClass =
+  "mb-2 flex items-center justify-between text-neutral-600 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+const headerSearchBadgeClass =
+  "rounded-full bg-neutral-100 px-2 py-0.5 text-neutral-700 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+const headerSearchKindClass =
+  "text-neutral-500 [font-size:var(--type-body-size)] font-semibold uppercase [letter-spacing:0.14em] [line-height:1.25]";
+
 export function SiteHeader() {
   const pathname = usePathname();
   const router = useRouter();
@@ -226,49 +244,49 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className={cn("site-header", scrolled ? "site-header--scrolled" : "shadow-none")}>
+      <header className={cn(siteHeaderBaseClass, scrolled ? siteHeaderScrolledClass : "shadow-none")}>
         <div className="container-wide px-4 sm:px-6">
           <div
             className={cn(
-              "hidden lg:flex items-center justify-between overflow-hidden border-b border-neutral-100 transition-[max-height,opacity,padding] duration-300",
+              "hidden 2xl:flex items-center justify-between overflow-hidden border-b border-neutral-100 transition-[max-height,opacity,padding] duration-300",
               scrolled ? "max-h-0 opacity-0 py-0" : "max-h-10 opacity-100 py-2",
             )}
             aria-label="Utility navigation"
           >
             {SITE_BRAND.utilityTagline ? (
-              <p className="shell-utility-copy">
+              <p className={headerUtilityCopyClass}>
                 {SITE_BRAND.utilityTagline}
               </p>
             ) : (
               <span />
             )}
-            <div className="shell-utility-links">
-              <Link href="/service" className="transition-colors hover:text-primary">
+            <div className={headerUtilityLinksClass}>
+              <Link href="/service" className="whitespace-nowrap transition-colors hover:text-primary">
                 Service
               </Link>
-              <Link href="/showrooms" className="transition-colors hover:text-primary">
+              <Link href="/showrooms" className="whitespace-nowrap transition-colors hover:text-primary">
                 Showrooms
               </Link>
-              <Link href="/contact" className="transition-colors hover:text-primary">
+              <Link href="/contact" className="whitespace-nowrap transition-colors hover:text-primary">
                 Contact
               </Link>
             </div>
           </div>
 
-          <div className="flex h-16 items-center justify-between gap-4">
+          <div className="flex h-16 items-center justify-between gap-3">
 
             {/* Logo */}
             <Link
               href="/"
               aria-label="One&Only - home"
-              className="inline-flex h-full shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              className="inline-flex h-full shrink-0 items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
-              <OneAndOnlyLogo className="h-8 md:h-9" variant="orange" />
+              <OneAndOnlyLogo className="h-[1.875rem] md:h-[2.125rem] xl:h-9" variant="orange" />
             </Link>
 
             {/* Center nav — desktop only */}
             <nav
-              className="hidden h-full lg:flex items-center gap-1"
+              className="hidden h-full min-w-0 flex-1 items-center justify-center gap-0 lg:flex xl:gap-0.5"
               aria-label="Primary navigation"
             >
               {SITE_NAV_LINKS.map((link) => {
@@ -289,7 +307,7 @@ export function SiteHeader() {
                         aria-controls="products-mega-menu"
                         onFocus={() => setActiveMega(link.label)}
                         className={cn(
-                          "typ-nav relative inline-flex items-center gap-1 rounded-lg px-3 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                          "typ-nav relative inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-2 text-[0.95rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-2.5 xl:text-[1rem]",
                           isActive
                             ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
                             : activeMega === link.label
@@ -314,7 +332,7 @@ export function SiteHeader() {
                     key={link.label}
                     href={link.href}
                     className={cn(
-                      "typ-nav relative rounded-lg px-3 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      "typ-nav relative whitespace-nowrap rounded-lg px-2 py-2 text-[0.95rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-2.5 xl:text-[1rem]",
                       isActive
                         ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
                         : "text-neutral-700 hover:text-primary",
@@ -327,10 +345,10 @@ export function SiteHeader() {
             </nav>
 
             {/* Right CTAs */}
-            <div className="flex h-full items-center gap-2">
-              <div ref={searchPanelRef} className="relative hidden xl:block">
+            <div className="flex h-full shrink-0 items-center gap-1.5">
+              <div ref={searchPanelRef} className="relative hidden 2xl:block">
                 <form
-                  className="ai-search-shell flex h-11 items-center gap-2.5 rounded-full px-4"
+                  className={`${headerSearchShellClass} flex h-11 items-center gap-2.5 rounded-full px-4`}
                   onSubmit={(event) => {
                     event.preventDefault();
                     void submitSearch();
@@ -342,7 +360,7 @@ export function SiteHeader() {
                     onChange={(event) => setSearchQuery(event.target.value)}
                     onFocus={() => setShowSearchPanel(true)}
                     placeholder="AI search products..."
-                    className="w-52 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
+                    className="w-44 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
                     aria-label="Search products with AI"
                   />
                   <Sparkles className="h-4 w-4 text-accent1" />
@@ -358,12 +376,12 @@ export function SiteHeader() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.15 }}
-                      className="shell-search-panel"
+                      className={headerSearchPanelClass}
                     >
-                      <div className="shell-search-meta">
+                      <div className={headerSearchMetaClass}>
                         <span>{searchSectionTitle}</span>
                         {searchSource && (
-                          <span className="shell-search-badge">
+                          <span className={headerSearchBadgeClass}>
                             {searchSource === "ai"
                               ? "AI ranked"
                               : searchSource === "static-fallback"
@@ -384,7 +402,7 @@ export function SiteHeader() {
                                 className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
                               >
                                 <span>{result.title}</span>
-                                <span className="shell-search-kind">
+                                <span className={headerSearchKindClass}>
                                   {result.type}
                                 </span>
                               </Link>
@@ -424,7 +442,7 @@ export function SiteHeader() {
               <button
                 type="button"
                 onClick={openGuidedPlanner}
-                className="btn-nav-primary"
+                className="btn-nav-primary shrink-0 px-5 text-[0.92rem] xl:px-6 xl:text-[0.95rem]"
               >
                 Guided Planner
               </button>

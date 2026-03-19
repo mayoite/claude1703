@@ -92,6 +92,16 @@ function clearSeoCookies() {
   }
 }
 
+const consentBarClass =
+  "fixed inset-x-0 bottom-0 z-30 border-t border-neutral-200 bg-white/95 backdrop-blur [box-shadow:0_-18px_40px_-30px_rgba(15,23,42,0.35)] [animation:consent-slide-in_0.32s_cubic-bezier(0.22,1,0.36,1)_both] motion-reduce:[animation:none]";
+const consentCopyClass =
+  "max-w-3xl text-neutral-700 md:text-sm md:leading-relaxed [font-size:var(--type-body-size)] [font-weight:375] [letter-spacing:var(--type-letter-copy)] [line-height:1.6]";
+const consentActionBaseClass =
+  "min-h-10 rounded-full px-3 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:min-h-11 md:px-4 md:text-sm [font-size:var(--type-body-size)] [letter-spacing:var(--type-letter-copy)] [line-height:1.6]";
+const consentSecondaryActionClass =
+  "border border-neutral-300 text-neutral-700 hover:border-neutral-500 hover:text-neutral-900";
+const consentPrimaryActionClass = "bg-primary text-white hover:bg-primary/90";
+
 export function CookieConsentBar() {
   const [dismissed, setDismissed] = useState(false);
   const consent = useSyncExternalStore(
@@ -147,11 +157,11 @@ export function CookieConsentBar() {
       aria-live="polite"
       aria-labelledby="cookie-dialog-title"
       aria-describedby="cookie-dialog-desc"
-      className="consent-bar"
+      className={consentBarClass}
     >
       <div className="container px-4 py-3 sm:px-6 md:py-4 2xl:px-0">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
-          <p id="cookie-dialog-desc" className="consent-bar__copy">
+          <p id="cookie-dialog-desc" className={consentCopyClass}>
             <span id="cookie-dialog-title" className="sr-only">Cookie preferences</span>
             We use essential cookies and optional analytics & attribution cookies to improve
             discoverability and user journeys. See our{" "}
@@ -164,14 +174,14 @@ export function CookieConsentBar() {
             <button
               type="button"
               onClick={rejectOptional}
-              className="consent-bar__action consent-bar__action--secondary"
+              className={`${consentActionBaseClass} ${consentSecondaryActionClass}`}
             >
               Reject Non-Essential
             </button>
             <button
               type="button"
               onClick={acceptAll}
-              className="consent-bar__action consent-bar__action--primary"
+              className={`${consentActionBaseClass} ${consentPrimaryActionClass}`}
             >
               Accept All
             </button>

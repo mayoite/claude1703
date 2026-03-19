@@ -18,16 +18,16 @@ export function TestimonialsStrip() {
             {HOMEPAGE_TESTIMONIALS_CONTENT.items.map((item) => (
               <blockquote
                 key={item.org}
-                className="flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6"
+                className="flex h-full flex-col gap-5 rounded-xl border border-neutral-200 bg-white p-7"
               >
                 <p className="text-base leading-relaxed text-neutral-700">
                   &ldquo;{item.quote}&rdquo;
                 </p>
                 <footer className="mt-auto">
-                  <p className="text-sm font-medium text-neutral-950">
+                  <p className="text-sm font-semibold text-neutral-950">
                     {item.author}
                   </p>
-                  <p className="text-xs text-neutral-500">{item.org}</p>
+                  <p className="text-xs text-neutral-600">{item.org}</p>
                 </footer>
               </blockquote>
             ))}

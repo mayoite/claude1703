@@ -2,6 +2,7 @@
 
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { MOTION_EASE } from "@/lib/helpers/motion";
 
 interface RevealProps {
     children: React.ReactNode;
@@ -39,7 +40,7 @@ export function Reveal({
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration, delay, ease: "easeOut" }}
+                transition={{ duration, delay, ease: MOTION_EASE }}
             >
                 {children}
             </motion.div>

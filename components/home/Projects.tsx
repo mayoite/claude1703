@@ -25,7 +25,7 @@ export function Projects() {
             className="projects-section__cta group"
           >
             {HOMEPAGE_PROJECTS_CONTENT.cta.label}
-            <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="h-4 w-4 transform transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 
@@ -40,16 +40,18 @@ export function Projects() {
                   src={project.image}
                   alt={project.companyName}
                   fill
+                  priority
+                  loading="eager"
                   className="projects-card__image"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="projects-card__body">
-                <span className="mb-1 block text-xs font-medium uppercase tracking-widest text-neutral-400">
+                <span className="block text-xs font-medium uppercase tracking-[0.18em] text-neutral-500">
                   {project.sector}
                 </span>
                 <h3 className="projects-card__title">{project.companyName}</h3>
-                <p className="mt-1 text-sm text-neutral-300 leading-snug opacity-90">
+                <p className="max-w-[34ch] text-sm leading-relaxed text-neutral-600">
                   {project.outcome}
                 </p>
               </div>

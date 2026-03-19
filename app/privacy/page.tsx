@@ -164,7 +164,7 @@ export default function PrivacyPage() {
                   <tbody className="divide-y divide-neutral-200 bg-white/90">
                     {COOKIE_ROWS.map((row) => (
                       <tr key={row.name}>
-                        <td className="px-6 py-3 text-xs font-medium tracking-ui-001 text-neutral-900 md:px-8">
+                        <td className="px-6 py-3 text-xs font-medium tracking-wide text-neutral-900 md:px-8">
                           {row.name}
                         </td>
                         <td className="px-6 py-3 text-neutral-700 md:px-8">{row.category}</td>

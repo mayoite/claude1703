@@ -1,0 +1,29 @@
+/* 
+  One&Only Brand Colors
+  Based on provided color palettes. 
+  Converted PANTONE/CMYK to approximate HEX values for web use.
+*/
+
+:root {
+  /* Neutrals */
+  --color-neutral-01: #00a0ea; /* Bright Blue */
+  --color-neutral-02: #002c40; /* Deep Navy */
+  --color-neutral-03: #F2F5F9; /* Off-White/Light Gray */
+  --color-neutral-04: #FFFFFF; /* Pure White */
+
+  /* Primary */
+  --color-primary-01: #006695; /* Medium Blue */
+  --color-primary-02: #153947; /* Slate Navy */
+  --color-primary-03: #002c40; /* Deep Navy (Matches Neutral 02) */
+
+  /* Secondary */
+  
+  /* 1. PANTONE: 319 C | CYMK: 65, 0, 30, 0 */
+  --color-secondary-01: #2DC8D4; /* Approx HEX for Pantone 319 C (Cyan/Teal) */
+  
+  /* 2. PANTONE: 2935 C | CYMK: 100, 64, 0, 0 */
+  --color-secondary-02: #0055B8; /* Approx HEX for Pantone 2935 C (Royal Blue) */
+  
+  /* 3. PANTONE: 319 C | CYMK: 65, 0, 30, 0 */
+  --color-secondary-03: #2DC8D4; /* Duplicate of Secondary 01 */
+}

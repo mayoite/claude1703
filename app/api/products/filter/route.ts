@@ -5,11 +5,11 @@ import { getCatalog, type CompatProduct } from "@/lib/getProducts";
 import { hasVerifiedHeadrest } from "@/lib/productTraits";
 import {
   PRICE_RANGES,
+  resolveSortOption,
   parseEcoMin,
-  parseSortOption,
   normalizeOptionValue,
   type SortOption,
-} from "@/lib/productFilters";
+} from "@/lib/helpers/filters";
 
 export const dynamic = "force-dynamic";
 
@@ -157,7 +157,7 @@ function parseAppliedFilters(request: NextRequest): AppliedFilters {
     bifma: sp.get("bifma") === "1",
     stackable: sp.get("stackable") === "1",
     ecoMin: parseEcoMin(sp.get("ecoMin")),
-    sort: parseSortOption(sp.get("sort")),
+    sort: resolveSortOption(sp.get("sort")),
   };
 }
 

@@ -33,3 +33,7 @@ Every response must include:
 3. **Acceptance checklist** — criteria to verify the change is complete and correct
 
 If env vars are required, list them explicitly and explain failure modes.
+
+## Git Safety
+
+Do not push to any remote unless the user explicitly tells you to.

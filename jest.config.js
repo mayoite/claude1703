@@ -58,7 +58,7 @@ const customJestConfig = {
   },
   // Ignore heavy node_module binaries in transform
   transformIgnorePatterns: [
-    '/node_modules/(?!(yet-another-react-lightbox|swiper|embla-carousel|framer-motion)/)',
+    '/node_modules/(?!(yet-another-react-lightbox|embla-carousel|framer-motion)/)',
   ],
 }
 

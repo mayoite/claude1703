@@ -63,9 +63,9 @@ export function Hero({
   const isCinema = variant === "cinema";
 
   const getHeightClass = () => {
-    if (isSmall) return "h-[50vh] min-h-[400px]";
-    if (isCinema) return "h-[85vh] md:h-screen md:min-h-[1050px]";
-    return "h-[80vh] md:h-screen";
+    if (isSmall) return "h-[54vh] min-h-[420px]";
+    if (isCinema) return "h-[85vh] md:h-screen md:min-h-[980px]";
+    return "h-[78vh] md:h-screen";
   };
 
   return (
@@ -104,8 +104,8 @@ export function Hero({
           <div className="w-full h-full" />
         )}
 
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-linear-to-t from-black/72 via-transparent to-black/28" />
+        <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(12,34,48,0.9)_0%,rgba(12,34,48,0.72)_40%,rgba(12,34,48,0.28)_76%,rgba(12,34,48,0.14)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,174,219,0.15),transparent_40%)]" />
       </motion.div>
 
       {/* Content Container */}
@@ -115,11 +115,11 @@ export function Hero({
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-4xl space-y-8"
+            className="max-w-4xl space-y-7"
           >
             <motion.div variants={titleVariants} className="overflow-hidden">
               <h1
-                className={`hero-title ${isSmall ? "text-4xl md:text-6xl" : "text-ui-56 sm:text-ui-72 md:text-ui-96"} scheme-text-inverse`}
+                className={`hero-title scheme-text-inverse ${isSmall ? "max-w-[12ch] text-[clamp(2.6rem,5vw,4.7rem)]" : "max-w-[13ch] text-[clamp(3.25rem,6vw,5.8rem)]"}`}
               >
                 {title || (
                   <>
@@ -142,12 +142,12 @@ export function Hero({
             )}
 
             {showButton && (
-              <motion.div variants={titleVariants} className="pt-8">
+              <motion.div variants={titleVariants} className="pt-6">
                 <Link
                   href={buttonLink}
                   className="btn-primary group px-8 py-4 md:px-10"
                 >
-                  <span className="text-sm font-bold uppercase tracking-ui-020">
+                  <span className="text-sm font-bold uppercase tracking-wide">
                     {buttonText}
                   </span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />

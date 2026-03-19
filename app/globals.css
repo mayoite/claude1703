@@ -1,14 +1,20 @@
 @import "tailwindcss";
 @import "./theme-tokens.css";
+@import "./theme-utilities.css";
 @import "./typography.css";
 @import "./color-contrast.css";
+@import "./contact.css";
+@import "./product-viewer.css";
+@import "./catalog.css";
+@import "./configurator.css";
 @import "./custom-components.css";
+@import "./homepage.css";
 @import "./theme-overrides.css";
 
 @layer base {
   :root {
-    --background: var(--color-background);
-    --foreground: var(--color-foreground);
+    --background: var(--surface-page);
+    --foreground: var(--text-body);
   }
 
   html {
@@ -20,11 +26,15 @@
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
-    font-size: var(--ref-size-015);
-    line-height: 1.5;
+    font-size: var(--type-body-size);
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
   }
 
   a {

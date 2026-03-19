@@ -8,12 +8,12 @@ test.describe("Homepage conversion path", () => {
     const partnership = page.getByRole("heading", {
       name: /Authorized Franchise Partner/i,
     });
-    const deliveries = page.getByRole("heading", { name: /Recent projects/i });
-    const process = page.getByRole("heading", { name: /A clear delivery system/i });
     const trust = page.getByLabel("Trust indicators");
+    const deliveries = page.getByRole("heading", { name: /Recent project delivery/i });
+    const process = page.getByRole("heading", { name: /A clear delivery system/i });
     const contact = page.getByRole("heading", { name: /Start with one clear brief/i });
 
-    const ordered = [hero, partnership, deliveries, process, trust, contact];
+    const ordered = [hero, partnership, trust, deliveries, process, contact];
 
     let previousY = -1;
     for (const locator of ordered) {
@@ -46,7 +46,9 @@ test.describe("Homepage conversion path", () => {
     }
 
     await expect(page.getByLabel("Open AI chatbot")).toBeVisible({ timeout: 10000 });
-    const openGuidedPlanner = page.getByRole("button", { name: /Open guided planner/i }).first();
+    const openGuidedPlanner = page
+      .getByRole("button", { name: /Get Your Free Workspace Assessment/i })
+      .first();
     await openGuidedPlanner.scrollIntoViewIfNeeded();
     await expect(openGuidedPlanner).toBeVisible({ timeout: 10000 });
     await openGuidedPlanner.click();
@@ -76,7 +78,9 @@ test.describe("Homepage conversion path", () => {
     await page.goto("/");
 
     const projectsSection = page.locator(".projects-section");
-    await expect(projectsSection.getByRole("heading", { name: /Recent projects/i })).toBeVisible();
+    await expect(
+      projectsSection.getByRole("heading", { name: /Recent project delivery/i }),
+    ).toBeVisible();
     await expect(projectsSection.getByText("Corporate")).toBeVisible();
     await expect(projectsSection.getByText("Titan Limited")).toBeVisible();
     await expect(projectsSection.getByText("Patna, Bihar")).toHaveCount(0);
@@ -85,10 +89,10 @@ test.describe("Homepage conversion path", () => {
   });
 
   test("homepage chatbot uses global advisor context and supports reset", async ({ page }) => {
-    let advisorPayload: Record<string, unknown> | null = null;
+    let advisorPayload: any = null;
 
     await page.route("**/api/ai-advisor/**", async (route) => {
-      advisorPayload = (route.request().postDataJSON() as Record<string, unknown>) || null;
+      advisorPayload = route.request().postDataJSON() || null;
       await route.fulfill({
         status: 200,
         contentType: "application/json",
@@ -155,7 +159,7 @@ test.describe("Homepage conversion path", () => {
     });
     await processHeading.scrollIntoViewIfNeeded();
 
-    const styles = await page.locator(".home-step-card").first().evaluate((el) => {
+    const styles = await page.locator(".homepage-process-card").first().evaluate((el) => {
       const title = el.querySelector("p");
       return {
         background: getComputedStyle(el).backgroundColor,

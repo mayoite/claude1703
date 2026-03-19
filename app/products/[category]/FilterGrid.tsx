@@ -28,18 +28,19 @@ import {
 import clsx from "clsx";
 import { useQuery } from "@tanstack/react-query";
 import { useProductCompare } from "@/lib/store/productCompare";
+import { useQuoteCart } from "@/lib/store/quoteCart";
 import { CompareDock } from "@/components/products/CompareDock";
 import {
   DEFAULT_FILTERS,
   PRICE_RANGES,
   SUSTAINABILITY_THRESHOLDS,
-  buildFilterParams,
+  buildSearchParamsFromFilterState,
   buildFilterUrl,
-  countActiveFilters,
-  parseFiltersFromSearchParams,
+  getActiveFilterCount,
+  buildFilterStateFromSearchParams,
   type ActiveFilters,
   type SortOption,
-} from "@/lib/productFilters";
+} from "@/lib/helpers/filters";
 import { hasVerifiedHeadrest } from "@/lib/productTraits";
 import {
   sanitizeDisplayText,
@@ -316,10 +317,10 @@ function AccordionSection({
 }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="border-b border-neutral-100 last:border-0">
+    <div className="catalog-filter-section">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-between px-4 py-3 text-left group"
+        className="group flex w-full items-center justify-between px-4 py-3 text-left"
         aria-expanded={open}
       >
         <span className="filter-ui-heading group-hover:text-neutral-900 transition-colors flex items-center gap-2">
@@ -360,14 +361,14 @@ function CheckList({
     <ul className="space-y-1.5">
       {options.map((opt) => (
         <li key={opt}>
-          <label className="flex items-center gap-2.5 cursor-pointer group">
+          <label className="catalog-checklist__label group">
             <input
               type="checkbox"
               checked={selected.includes(opt)}
               onChange={() => onToggle(opt)}
-              className="w-3.5 h-3.5 accent-neutral-900"
+              className="h-3.5 w-3.5 accent-primary"
             />
-            <span className="text-sm text-neutral-600 group-hover:text-neutral-900 transition-colors capitalize">
+            <span className="catalog-checklist__copy">
               {opt}
             </span>
           </label>
@@ -390,10 +391,10 @@ function SustainabilityButtons({
         type="button"
         onClick={() => onSelect(null)}
         className={clsx(
-          "px-3 py-1.5 text-xs rounded-sm border transition-all font-medium",
+          "rounded-full border px-3 py-1.5 text-xs font-semibold transition-all",
           selected === null
-            ? "bg-accent1 border-accent1 text-neutral-900"
-            : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
+            ? "border-primary bg-primary text-white"
+            : "scheme-border bg-white scheme-text-body hover:border-primary hover:text-primary",
         )}
       >
         Any
@@ -404,10 +405,10 @@ function SustainabilityButtons({
           type="button"
           onClick={() => onSelect(threshold)}
           className={clsx(
-            "px-3 py-1.5 text-xs rounded-sm border transition-all font-medium",
+            "rounded-full border px-3 py-1.5 text-xs font-semibold transition-all",
             selected === threshold
-              ? "bg-accent1 border-accent1 text-neutral-900"
-              : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
+              ? "border-primary bg-primary text-white"
+              : "scheme-border bg-white scheme-text-body hover:border-primary hover:text-primary",
           )}
         >
           &gt;= {threshold}
@@ -429,8 +430,8 @@ function Toggle({
   onChange: (v: boolean) => void;
 }) {
   return (
-    <label className="flex items-center justify-between gap-3 cursor-pointer py-1">
-      <span className="text-sm text-neutral-600">{label}</span>
+    <label className="flex cursor-pointer items-center justify-between gap-3 py-1">
+      <span className="text-sm scheme-text-body">{label}</span>
       <button
         type="button"
         role="switch"
@@ -439,7 +440,7 @@ function Toggle({
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
-          checked ? "bg-accent1" : "bg-neutral-200",
+          checked ? "bg-primary" : "bg-neutral-200",
         )}
       >
         <span
@@ -468,6 +469,7 @@ function ProductCard({
 }) {
   const compareItems = useProductCompare((state) => state.items);
   const toggleCompareItem = useProductCompare((state) => state.toggleItem);
+  const addQuoteItem = useQuoteCart((state) => state.addItem);
   const imageCandidates = buildImageCandidates(product);
   const [imgIndex, setImgIndex] = useState(0);
   const imgSrc =
@@ -519,10 +521,6 @@ function ProductCard({
           : toInlineSpec(dimensions, 92),
     },
   ].filter((row) => row.value);
-  const enquiryHref = `/contact?intent=quote&source=products&product=${encodeURIComponent(
-    displayName,
-  )}&ref=${encodeURIComponent(productHref)}`;
-
   return (
     <article className="catalog-card group">
       <button
@@ -617,9 +615,21 @@ function ProductCard({
         </div>
       </Link>
       <div className="px-5 pb-5 pt-0">
-        <Link href={enquiryHref} className="btn-outline w-full text-xs">
-          Add to Enquiry
-        </Link>
+        <button
+          type="button"
+          onClick={() =>
+            addQuoteItem({
+              id: `quote-${routeKey}`,
+              name: displayName,
+              image: imgSrc,
+              href: productHref,
+            })
+          }
+          className="btn-outline w-full text-xs"
+          aria-label={`Add To Quote ${displayName}`}
+        >
+          Add To Quote
+        </button>
       </div>
     </article>
   );
@@ -670,7 +680,7 @@ function ActiveChips({
     chips.push({ label: `Eco >= ${filters.ecoMin}`, key: "ecoMin", value: filters.ecoMin });
 
   return (
-    <div className="border-b border-neutral-100 py-3">
+    <div className="catalog-active-chips border-b border-neutral-100 py-3">
       <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
         <span className="filter-ui-label">
           {CATEGORY_ROUTE_COPY.activeFiltersLabel}
@@ -685,7 +695,7 @@ function ActiveChips({
             key={`${chip.key}-${chip.value ?? ""}`}
             type="button"
             onClick={() => onRemove(chip.key, chip.value)}
-            className="flex items-center gap-1.5 bg-accent1 text-neutral-900 text-xs px-2.5 py-1 rounded-sm hover:bg-accent2 transition-colors"
+            className="catalog-active-chip"
           >
             <span className="capitalize">{chip.label}</span>
             <X className="w-3 h-3" />
@@ -723,7 +733,7 @@ function AdvancedFilterGridInner({
   const wasDrawerOpenRef = useRef(false);
 
   const filters = useMemo(
-    () => parseFiltersFromSearchParams(new URLSearchParams(searchParams.toString())),
+    () => buildFilterStateFromSearchParams(new URLSearchParams(searchParams.toString())),
     [searchParams],
   );
   const isSeriesEnabled = categoryId !== "seating";
@@ -763,7 +773,7 @@ function AdvancedFilterGridInner({
   );
 
   const filterQueryString = useMemo(
-    () => buildFilterParams(effectiveFilters).toString(),
+    () => buildSearchParamsFromFilterState(effectiveFilters).toString(),
     [effectiveFilters],
   );
   const hasFilterQuery = filterQueryString.length > 0;
@@ -866,7 +876,7 @@ function AdvancedFilterGridInner({
     updateFilters(DEFAULT_FILTERS, { replace: true });
   }, [updateFilters]);
 
-  const activeCount = countActiveFilters(effectiveFilters);
+  const activeCount = getActiveFilterCount(effectiveFilters);
   const compareHref = compareQuery
     ? `/compare?items=${encodeURIComponent(compareQuery)}`
     : "/compare";
@@ -933,10 +943,10 @@ function AdvancedFilterGridInner({
 
   // Sidebar content shared between desktop and drawer
   const renderSidebarContent = (uiOptions: { showHeaderClearAll: boolean }) => (
-    <div className="bg-white border border-neutral-200 rounded-sm overflow-hidden">
+    <div className="catalog-filter-shell">
       {/* Header */}
-      <div className="px-4 py-3 border-b border-neutral-100 flex items-center justify-between">
-        <span className="typ-label text-neutral-500 flex items-center gap-2">
+      <div className="catalog-filter-shell__header">
+        <span className="catalog-filter-shell__label typ-label">
           <Filter className="w-3.5 h-3.5" />
           Filters
           {activeCount > 0 && (
@@ -948,7 +958,7 @@ function AdvancedFilterGridInner({
         {uiOptions.showHeaderClearAll && activeCount > 0 && (
           <button
             onClick={clearAll}
-            className="typ-label text-primary hover:text-primary-hover transition-colors"
+            className="catalog-filter-shell__clear typ-label"
           >
             Clear all
           </button>
@@ -967,10 +977,10 @@ function AdvancedFilterGridInner({
               type="button"
               onClick={() => updateFilters({ series: "all" })}
               className={clsx(
-                "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
+                "catalog-filter-choice",
                 filters.series === "all"
-                  ? "bg-accent1 text-neutral-900 font-normal"
-                  : "text-neutral-600 hover:bg-neutral-50",
+                  ? "catalog-filter-choice--active"
+                  : "catalog-filter-choice--idle",
               )}
             >
               All Series
@@ -981,10 +991,10 @@ function AdvancedFilterGridInner({
                 type="button"
                 onClick={() => updateFilters({ series: seriesName })}
                 className={clsx(
-                  "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
+                  "catalog-filter-choice",
                   filters.series === seriesName
-                    ? "bg-accent1 text-neutral-900 font-normal"
-                    : "text-neutral-600 hover:bg-neutral-50",
+                    ? "catalog-filter-choice--active"
+                    : "catalog-filter-choice--idle",
                 )}
               >
                 {seriesName}
@@ -1097,15 +1107,15 @@ function AdvancedFilterGridInner({
 
   return (
     <section
-      className="w-full bg-neutral-50"
+      className="w-full scheme-section-soft"
       aria-label={`${category.name} product catalog`}
     >
-      <div className="w-full border-b border-neutral-200 bg-neutral-50">
-        <div className="container-wide flex flex-col gap-3 py-4 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-600">
+      <div className="catalog-summary-band">
+        <div className="container-wide catalog-summary-band__shell">
+          <div className="catalog-summary-band__meta">
             <Link
               href="/products"
-              className="font-medium text-neutral-800 transition-colors hover:text-primary"
+              className="catalog-summary-band__link"
             >
               {CATEGORY_ROUTE_COPY.browseAllCta}
             </Link>
@@ -1130,108 +1140,110 @@ function AdvancedFilterGridInner({
       </div>
 
       {/* Top toolbar */}
-      <div className="w-full bg-white border-b border-neutral-200 sticky top-16 z-20">
+      <div className="catalog-toolbar">
         <div className="container-wide py-4">
-          <div className="mb-3 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="typ-label text-neutral-500">{CATEGORY_ROUTE_COPY.filterSummaryTitle}</p>
-              <p className="mt-1 text-sm text-neutral-600">
-                {CATEGORY_ROUTE_COPY.filterSummaryDescription}
+          <div className="catalog-toolbar__panel">
+            <div className="catalog-toolbar__meta">
+              <div className="max-w-2xl">
+                <p className="catalog-toolbar__eyebrow">{CATEGORY_ROUTE_COPY.filterSummaryTitle}</p>
+                <p className="catalog-toolbar__copy">
+                  {CATEGORY_ROUTE_COPY.filterSummaryDescription}
+                </p>
+              </div>
+              <p className="catalog-toolbar__results">
+                {CATEGORY_ROUTE_COPY.resultsSummaryLabel
+                  .replace("{shown}", String(navigableProducts.length))
+                  .replace("{total}", String(allProducts))}
               </p>
             </div>
-            <p className="text-xs font-medium text-neutral-500">
-              {CATEGORY_ROUTE_COPY.resultsSummaryLabel
-                .replace("{shown}", String(navigableProducts.length))
-                .replace("{total}", String(allProducts))}
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            {/* Mobile filter button */}
-            <button
-              ref={drawerOpenButtonRef}
-              type="button"
-              onClick={() => setDrawerOpen(true)}
-              className="lg:hidden flex items-center gap-2 h-10 px-3 bg-white border border-neutral-200 rounded-sm text-sm text-neutral-700 hover:border-neutral-400 transition-colors shrink-0"
-              aria-label="Open filters"
-              aria-expanded={drawerOpen}
-              aria-controls="mobile-filter-drawer"
-            >
-              <SlidersHorizontal className="w-4 h-4" />
-              Filters
-              {activeCount > 0 && (
-                <span className="filter-ui-count">
-                  {activeCount}
-                </span>
-              )}
-            </button>
+            <div className="catalog-toolbar__controls">
+              {/* Mobile filter button */}
+              <button
+                ref={drawerOpenButtonRef}
+                type="button"
+                onClick={() => setDrawerOpen(true)}
+                className="btn-outline lg:hidden"
+                aria-label="Open filters"
+                aria-expanded={drawerOpen}
+                aria-controls="mobile-filter-drawer"
+              >
+                <SlidersHorizontal className="w-4 h-4" />
+                Filters
+                {activeCount > 0 && (
+                  <span className="filter-ui-count">
+                    {activeCount}
+                  </span>
+                )}
+              </button>
 
-            {/* Search */}
-            <div className="relative flex-1 w-full">
-              <SearchIcon className="scheme-text-muted absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" />
-              <input
-                type="text"
-                placeholder={`Search ${category.name.toLowerCase()}...`}
-                aria-label={`Search ${category.name}`}
-                className="w-full h-10 pl-9 pr-8 bg-white border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-primary transition-colors"
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-              />
-              {searchInput && (
-                <button
-                  type="button"
-                  onClick={() => setSearchInput("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2"
-                  aria-label="Clear search"
+              {/* Search */}
+              <div className="catalog-search">
+                <SearchIcon className="catalog-search__icon" />
+                <input
+                  type="text"
+                  placeholder={`Search ${category.name.toLowerCase()}...`}
+                  aria-label={`Search ${category.name}`}
+                  className="catalog-search__input"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                />
+                {searchInput && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchInput("")}
+                    className="catalog-search__clear"
+                    aria-label="Clear search"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                  </button>
+                )}
+              </div>
+
+              {/* Count + Sort */}
+              <div className="flex shrink-0 items-center gap-3">
+                <span
+                  aria-live="polite"
+                  aria-atomic="true"
+                  className="catalog-toolbar__results"
                 >
-                  <X className="scheme-text-muted hover:text-neutral-800 w-3.5 h-3.5" />
-                </button>
-              )}
+                  {isInitialFilteredLoad
+                    ? "Filtering products..."
+                    : CATEGORY_ROUTE_COPY.resultsSummaryLabel
+                        .replace("{shown}", String(navigableProducts.length))
+                        .replace("{total}", String(allProducts))}
+                </span>
+                <select
+                  aria-label="Sort products"
+                  className="catalog-sort"
+                  value={filters.sort}
+                  onChange={(e) =>
+                    updateFilters({ sort: e.target.value as SortOption })
+                  }
+                >
+                  <option value="az">Name A-Z</option>
+                  <option value="za">Name Z-A</option>
+                  <option value="ecoDesc">Eco Score High-Low</option>
+                  <option value="ecoAsc">Eco Score Low-High</option>
+                </select>
+              </div>
             </div>
 
-            {/* Count + Sort */}
-            <div className="flex items-center gap-3 shrink-0">
-              <span
-                aria-live="polite"
-                aria-atomic="true"
-                className="text-xs text-neutral-500 font-medium whitespace-nowrap"
-              >
-                {isInitialFilteredLoad
-                  ? "Filtering products..."
-                  : CATEGORY_ROUTE_COPY.resultsSummaryLabel
-                      .replace("{shown}", String(navigableProducts.length))
-                      .replace("{total}", String(allProducts))}
-              </span>
-              <select
-                aria-label="Sort products"
-                className="h-10 px-3 bg-white border border-neutral-200 rounded-sm text-sm text-neutral-700 focus:outline-none focus:border-neutral-800"
-                value={filters.sort}
-                onChange={(e) =>
-                  updateFilters({ sort: e.target.value as SortOption })
-                }
-              >
-                <option value="az">Name A-Z</option>
-                <option value="za">Name Z-A</option>
-                <option value="ecoDesc">Eco Score High-Low</option>
-                <option value="ecoAsc">Eco Score Low-High</option>
-              </select>
-            </div>
+            {/* Active filter chips */}
+            <ActiveChips
+              filters={effectiveFilters}
+              onRemove={removeChip}
+              onClearAll={clearAll}
+              total={activeCount}
+            />
+            {isFetching && (
+              <p className="scheme-text-muted pt-2 text-xs">Refreshing products...</p>
+            )}
+            {error && (
+              <p className="pt-2 text-xs text-red-600">
+                {CATEGORY_ROUTE_COPY.filterFallbackMessage}
+              </p>
+            )}
           </div>
-
-          {/* Active filter chips */}
-          <ActiveChips
-            filters={effectiveFilters}
-            onRemove={removeChip}
-            onClearAll={clearAll}
-            total={activeCount}
-          />
-          {isFetching && (
-            <p className="scheme-text-muted pt-2 text-xs">Refreshing products...</p>
-          )}
-          {error && (
-            <p className="pt-2 text-xs text-red-600">
-              {CATEGORY_ROUTE_COPY.filterFallbackMessage}
-            </p>
-          )}
         </div>
       </div>
 
@@ -1249,16 +1261,16 @@ function AdvancedFilterGridInner({
               {Array.from({ length: 6 }).map((_, index) => (
                 <div
                   key={`loading-${index}`}
-                  className="h-[24rem] rounded-sm border border-neutral-100 bg-white animate-pulse"
+                  className="h-[24rem] rounded-[1.6rem] border scheme-border bg-white animate-pulse"
                 />
               ))}
             </div>
           ) : navigableProducts.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-24 text-center">
-              <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center mb-4">
-                <SearchIcon className="scheme-text-muted w-5 h-5" />
+            <div className="catalog-empty-state">
+              <div className="catalog-empty-state__icon">
+                <SearchIcon className="h-5 w-5" />
               </div>
-              <p className="mb-1 text-base font-normal text-neutral-700">
+              <p className="mb-1 text-base font-normal scheme-text-strong">
                 {CATEGORY_ROUTE_COPY.emptyTitle}
               </p>
               <p className="scheme-text-muted text-sm mb-4">
@@ -1306,17 +1318,17 @@ function AdvancedFilterGridInner({
             aria-hidden="true"
           />
           {/* Panel */}
-          <div
+            <div
             ref={drawerRef}
             id="mobile-filter-drawer"
             tabIndex={-1}
-            className="fixed inset-y-0 left-0 z-[65] flex w-[88vw] max-w-sm flex-col overflow-y-auto bg-neutral-50 shadow-2xl lg:hidden"
+            className="fixed inset-y-0 left-0 z-[65] flex w-[88vw] max-w-sm flex-col overflow-y-auto border-l shadow-2xl [border-color:var(--border-soft)] [background:linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] [box-shadow:-22px_0_54px_-34px_rgba(10,14,51,0.1)] lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Filter products"
           >
-            <div className="flex items-center justify-between px-4 py-4 border-b border-neutral-200 bg-white">
-              <span className="text-sm font-normal text-neutral-900 flex items-center gap-2">
+            <div className="flex items-center justify-between border-b scheme-border bg-white/92 px-4 py-4 backdrop-blur">
+              <span className="flex items-center gap-2 text-sm font-medium scheme-text-strong">
                 <Filter className="w-4 h-4" />
                 Filters
                 {activeCount > 0 && (
@@ -1331,11 +1343,11 @@ function AdvancedFilterGridInner({
                 aria-label="Close filters"
                 className="min-h-11 min-w-11 inline-flex items-center justify-center"
               >
-                <X className="w-5 h-5 text-neutral-500 hover:text-neutral-900" />
+                <X className="h-5 w-5 text-neutral-500 hover:text-neutral-900" />
               </button>
             </div>
             <div className="p-4">{renderSidebarContent({ showHeaderClearAll: false })}</div>
-            <div className="sticky bottom-0 relative bg-white border-t border-neutral-100 p-4 flex gap-2">
+            <div className="sticky bottom-0 relative flex gap-2 border-t scheme-border bg-white p-4">
               <div className="absolute left-4 top-0 -translate-y-full rounded-t-md bg-white/95 px-3 py-2 text-xs text-neutral-500 shadow-sm">
                 {CATEGORY_ROUTE_COPY.drawerResultsHint}
               </div>
@@ -1346,7 +1358,7 @@ function AdvancedFilterGridInner({
                     clearAll();
                     setDrawerOpen(false);
                   }}
-                  className="flex-1 h-11 border border-neutral-200 text-sm text-neutral-700 rounded-sm hover:bg-neutral-50 transition-colors"
+                  className="flex-1 rounded-full border border-neutral-200 text-sm text-neutral-700 transition-colors hover:border-primary hover:bg-neutral-50"
                 >
                   Clear all
                 </button>
@@ -1354,7 +1366,7 @@ function AdvancedFilterGridInner({
               <button
                 type="button"
                 onClick={() => setDrawerOpen(false)}
-                className="flex-1 h-11 rounded-sm bg-neutral-900 text-sm font-normal text-white transition-colors hover:bg-neutral-700"
+                className="btn-primary flex-1 text-sm"
               >
                 {CATEGORY_ROUTE_COPY.drawerResultsCta.replace(
                   "{count}",

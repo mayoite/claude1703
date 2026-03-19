@@ -393,7 +393,7 @@ export function ProductViewer({
   return (
     <section className="bg-(--surface-page) min-h-screen pb-24 sm:pb-28 lg:pb-0">
       {/* Breadcrumb bar */}
-      <div className="border-b border-(--border-soft) bg-(--surface-glass-strong) backdrop-blur-sm sticky top-16 z-10">
+      <div className="pdp-breadcrumb-bar">
         <div className="pdp-breadcrumb container flex h-10 items-center gap-1.5 px-6 2xl:px-0">
           <Link
             href="/products"
@@ -415,9 +415,9 @@ export function ProductViewer({
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row u-minh-vh-112">
+      <div className="pdp-shell">
         {/* Left: image gallery */}
-        <div className="flex w-full flex-col scheme-section-soft pt-0 lg:u-w-58p lg:pt-8 xl:u-w-62p">
+        <div className="pdp-media-pane lg:w-[58%] xl:w-[62%]">
           <div className="mx-auto flex-1 w-full max-w-200 p-4 lg:p-8">
             <ProductGallery
               images={uniqueImages}
@@ -426,7 +426,7 @@ export function ProductViewer({
           </div>
           {/* 3D viewer toggle wrapper */}
           {hasModelPath && (
-            <div className="w-full aspect-video bg-(--surface-soft) border-t scheme-border relative group">
+            <div className="relative w-full aspect-video border-t scheme-border bg-(--surface-soft) group">
               <div className="absolute top-4 left-4 z-20 flex gap-2">
                 <button
                   type="button"
@@ -500,11 +500,11 @@ export function ProductViewer({
         </div>
 
         {/* Right: details panel */}
-        <div className="w-full overflow-y-auto border-l border-(--border-soft) px-6 py-10 scrollbar-hide sm:px-10 lg:sticky lg:top-[112px] lg:u-h-vh-112 lg:u-w-42p lg:px-12 xl:u-w-38p">
+        <div className="pdp-detail-pane lg:sticky lg:top-[112px] lg:h-[calc(100vh-112px)] lg:w-[42%] xl:w-[38%]">
           <div className="max-w-sm mx-auto lg:max-w-none">
             {/* Title block */}
             <div className="mb-8">
-              <h1 className="mb-5 text-4xl font-light leading-ui-105 tracking-tight scheme-text-strong sm:text-5xl">
+              <h1 className="mb-5 text-4xl font-light leading-[1.05] tracking-tight scheme-text-strong sm:text-5xl">
                 {displayName}
               </h1>
               {shortOverview ? (
@@ -529,7 +529,7 @@ export function ProductViewer({
                   </span>
                 )}
               </div>
-              <div className="rounded-[2rem] scheme-border bg-(--surface-panel-soft) p-5 sm:p-6">
+              <div className="pdp-card">
                 {summaryCards.length > 0 ? (
                   <>
                     <p className="mb-2 text-sm font-medium scheme-text-strong">
@@ -539,11 +539,11 @@ export function ProductViewer({
                       The quickest way to judge fit before drawings, quantities,
                       and commercial follow-up.
                     </p>
-                    <div className="grid gap-3">
+                    <div className="pdp-info-grid">
                       {summaryCards.map((card) => (
                         <div
                           key={card.label}
-                          className="rounded-2xl scheme-border bg-white p-4"
+                          className="pdp-info-row"
                         >
                           <p className="pdp-card-label mb-2">
                             {card.label}
@@ -559,11 +559,11 @@ export function ProductViewer({
                 {assuranceCards.length > 0 ? (
                   <div className="mt-5 border-t scheme-border pt-5">
                     <p className="pdp-card-label mb-3">Verified product facts</p>
-                    <div className="grid gap-2">
+                    <div className="pdp-info-grid">
                       {assuranceCards.map((item) => (
                         <div
                           key={item.label}
-                          className="rounded-2xl scheme-border bg-white px-4 py-3 text-sm leading-relaxed scheme-text-body"
+                          className="pdp-info-row text-sm leading-relaxed scheme-text-body"
                         >
                           <span className="font-medium scheme-text-strong">
                             {item.label}:
@@ -604,28 +604,12 @@ export function ProductViewer({
                             : "scheme-border hover:border-neutral-500 hover:scale-105",
                         )}
                       >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={
-                            variant.galleryImages?.[0] || product.flagshipImage
-                          }
+                        <Image
+                          src={variant.galleryImages?.[0] || product.flagshipImage || swatchFallbackImage || ""}
                           alt={variant.variantName}
-                          className="w-full h-full object-cover scale-150"
-                          onError={(e) => {
-                            const el = e.currentTarget as HTMLImageElement;
-                            if (!el.dataset.fallback) {
-                              el.dataset.fallback = "1";
-                              const originalSrc = el.getAttribute("src") || "";
-                              if (
-                                swatchFallbackImage &&
-                                swatchFallbackImage !== originalSrc
-                              ) {
-                                el.src = swatchFallbackImage;
-                              } else {
-                                el.style.visibility = "hidden";
-                              }
-                            }
-                          }}
+                          fill
+                          sizes="44px"
+                          className="object-cover scale-150"
                         />
                       </button>
                     );
@@ -644,7 +628,7 @@ export function ProductViewer({
 
             {/* CTA */}
             <div className="mb-8">
-              <div className="rounded-[2rem] scheme-border bg-white p-4 shadow-sm sm:p-5">
+              <div className="pdp-card pdp-card--plain">
                 <p className="mb-2 text-sm font-medium scheme-text-strong">
                   Take the next step
                 </p>
@@ -654,7 +638,7 @@ export function ProductViewer({
                 </p>
                 <Link
                   href={enquiryHref}
-                  className="group mb-2 flex w-full items-center justify-between rounded-2xl border border-primary px-6 py-4 text-primary transition-colors hover:bg-primary hover:text-white"
+                  className="pdp-cta-primary group mb-2"
                 >
                   <span className="pdp-action-label">
                     {PDP_ROUTE_COPY.ctas.addToQuote}
@@ -666,10 +650,10 @@ export function ProductViewer({
                     type="button"
                     onClick={handleCompareToggle}
                     className={clsx(
-                      "group mb-2 flex w-full items-center justify-between rounded-2xl border px-6 py-4 transition-colors",
+                      "mb-2 flex w-full items-center justify-between rounded-2xl border px-6 py-4 transition-colors",
                       inCompare
                         ? "border-primary bg-primary text-white hover:bg-primary-hover"
-                        : "scheme-border-soft scheme-text-body hover:border-primary hover:text-primary",
+                        : "scheme-border bg-white scheme-text-body hover:border-primary hover:text-primary",
                     )}
                   >
                     <span className="pdp-action-label">
@@ -682,7 +666,7 @@ export function ProductViewer({
                 ) : null}
                 <Link
                   href="/contact"
-                  className="group flex w-full items-center justify-between rounded-2xl bg-neutral-900 px-6 py-4 text-white transition-colors hover:bg-neutral-800"
+                  className="pdp-cta-dark group"
                 >
                   <span className="pdp-action-label">
                     {PDP_ROUTE_COPY.ctas.requestQuote}
@@ -692,7 +676,7 @@ export function ProductViewer({
                 <div className="mt-2 grid gap-2 sm:grid-cols-2">
                   <Link
                     href="/planning"
-                    className="group flex items-center justify-between rounded-2xl scheme-border px-5 py-3.5 scheme-text-strong transition-colors hover:border-neutral-400"
+                    className="pdp-cta-secondary group"
                   >
                     <span className="pdp-action-label">
                       {PDP_ROUTE_COPY.ctas.planning}
@@ -701,7 +685,7 @@ export function ProductViewer({
                   </Link>
                   <Link
                     href="/downloads"
-                    className="group flex items-center justify-between rounded-2xl scheme-border px-5 py-3.5 scheme-text-strong transition-colors hover:border-neutral-400"
+                    className="pdp-cta-secondary group"
                   >
                     <span className="pdp-action-label">
                       {PDP_ROUTE_COPY.ctas.resourceDesk}
@@ -737,11 +721,11 @@ export function ProductViewer({
                 <h2 className="mb-4 text-xl font-semibold scheme-text-strong">
                   {PDP_ROUTE_COPY.summary.useCases}
                 </h2>
-                <div className="flex flex-wrap gap-2">
+                <div className="pdp-inline-list">
                   {useCasePreview.map((useCase) => (
                     <span
                       key={useCase}
-                      className="rounded-full scheme-border bg-white px-3 py-1.5 text-xs font-medium scheme-text-body"
+                      className="pdp-inline-pill"
                     >
                       {useCase}
                     </span>
@@ -759,7 +743,7 @@ export function ProductViewer({
                 {specRows.map((row) => (
                   <div
                     key={row.label}
-                    className="rounded-2xl scheme-border bg-white p-4"
+                    className="pdp-info-row"
                   >
                     <span className="pdp-card-label mb-2 block">
                       {row.label}
@@ -799,7 +783,7 @@ export function ProductViewer({
                     {inlineSpecs.map((row) => (
                       <div
                         key={row.label}
-                        className="rounded-2xl scheme-border bg-white p-4"
+                        className="pdp-info-row"
                       >
                         <span className="pdp-card-label mb-2 block">
                           {row.label}
@@ -825,11 +809,11 @@ export function ProductViewer({
               {materials.length > 0 && (
                 <div className="mt-7 border-t border-(--border-soft) pt-7">
                   <h3 className="pdp-section-label mb-3 scheme-text-muted">Materials</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="pdp-inline-list">
                     {materials.map((material) => (
                       <span
                         key={material}
-                        className="rounded-full scheme-border bg-(--surface-soft) px-3 py-1.5 text-xs scheme-text-body"
+                        className="pdp-inline-pill"
                       >
                         {material}
                       </span>
@@ -841,11 +825,11 @@ export function ProductViewer({
               {finishOptions.length > 0 && (
                 <div className="mt-7 border-t border-(--border-soft) pt-7">
                   <h3 className="pdp-section-label mb-3 scheme-text-muted">Finish Options</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="pdp-inline-list">
                     {finishOptions.map((finish) => (
                       <span
                         key={finish}
-                        className="rounded-full scheme-border bg-(--surface-soft) px-3 py-1.5 text-xs scheme-text-body"
+                        className="pdp-inline-pill"
                       >
                         {finish}
                       </span>

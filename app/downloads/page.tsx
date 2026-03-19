@@ -4,11 +4,14 @@ import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { SITE_CONTACT, buildWhatsAppHref } from "@/data/site/contact";
 import { DOWNLOADS_PAGE_COPY, DOWNLOADS_RESOURCE_CATEGORIES } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
   title: DOWNLOADS_PAGE_COPY.metadataTitle,
   description: DOWNLOADS_PAGE_COPY.metadataDescription,
-};
+  path: "/downloads",
+});
 
 export default function DownloadsPage() {
   return (
@@ -105,7 +108,7 @@ export default function DownloadsPage() {
                 href={buildWhatsAppHref(
                   "Hi, I need a product catalog or technical sheet pack for my workspace project.",
                 )}
-                className="inline-flex min-h-12 items-center justify-center rounded-full border border-primary/20 bg-sky-50 px-6 py-3 text-sm font-semibold tracking-[0.08em] text-primary transition-colors hover:border-primary/40 hover:bg-sky-100"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-primary/20 bg-primary/[0.08] px-6 py-3 text-sm font-semibold tracking-[0.08em] text-primary transition-colors hover:border-primary/40 hover:bg-primary/[0.14]"
               >
                 {DOWNLOADS_PAGE_COPY.tertiaryCta}
               </Link>

@@ -32,7 +32,7 @@ export function WhyUs({ stats, asOfLabel }: WhyUsProps) {
     <section className="section-ink w-full py-20 md:py-28">
       <div className="container px-6 2xl:px-0">
         <div className="mb-14">
-          <p className="typ-label mb-4 text-cyan-300/50">Why teams choose us</p>
+          <p className="typ-label mb-4 text-(--color-accent-soft)">Why teams choose us</p>
           <h2 className="typ-section text-white">By the numbers</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">

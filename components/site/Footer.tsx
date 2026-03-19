@@ -46,6 +46,8 @@ const SOCIAL_ICON_MAP: Record<string, () => React.JSX.Element> = {
   facebook: FacebookIcon,
   youtube: YouTubeIcon,
 };
+const footerInteractiveClass =
+  "rounded transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -54,33 +56,33 @@ export function SiteFooter() {
     <footer className="site-footer w-full">
       <FooterConversionPanel />
 
-      <div className="container px-6 py-10 2xl:px-0 md:py-12">
+      <div className="container px-6 py-12 2xl:px-0 md:py-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-7">
-          <div className="flex flex-col gap-4 md:col-span-1">
-            <Link href="/" prefetch={false} className="site-footer__link block">
+          <div className="flex flex-col gap-5 md:col-span-1">
+            <Link href="/" prefetch={false} className={`site-footer__link ${footerInteractiveClass} block`}>
               <OneAndOnlyLogo variant="orange" className="h-10" />
             </Link>
 
-            <address className="site-footer__address typ-body-sm not-italic">
+            <address className="site-footer__address typ-body-sm whitespace-pre-line not-italic">
               {SITE_CONTACT.regionLine}
             </address>
 
-            <div className="site-footer__meta typ-body-sm space-y-3">
+            <div className="site-footer__meta typ-body-sm space-y-4">
               <div>
                 <p className="site-footer__heading typ-overline mb-1">Quotes and planning</p>
-                <a href={toTelHref(SITE_CONTACT.salesPhone)} className="site-footer__link block">
+                <a href={toTelHref(SITE_CONTACT.salesPhone)} className={`site-footer__link ${footerInteractiveClass} block`}>
                   {SITE_CONTACT.salesPhone}
                 </a>
               </div>
               <div>
                 <p className="site-footer__heading typ-overline mb-1">Support and enquiries</p>
-                <a href={toTelHref(SITE_CONTACT.supportPhone)} className="site-footer__link block">
+                <a href={toTelHref(SITE_CONTACT.supportPhone)} className={`site-footer__link ${footerInteractiveClass} block`}>
                   {SITE_CONTACT.supportPhone}
                 </a>
               </div>
               <div>
                 <p className="site-footer__heading typ-overline mb-1">Email</p>
-                <a href={buildMailtoHref()} className="site-footer__link block">
+                <a href={buildMailtoHref()} className={`site-footer__link ${footerInteractiveClass} block`}>
                   {SITE_CONTACT.salesEmail}
                 </a>
               </div>
@@ -96,7 +98,7 @@ export function SiteFooter() {
                     aria-label={social.label}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="site-footer__social"
+                    className={`site-footer__social ${footerInteractiveClass}`}
                   >
                     {Icon ? <Icon /> : null}
                   </a>
@@ -112,7 +114,7 @@ export function SiteFooter() {
                 <ul className="flex flex-col gap-2">
                   {col.links.map(({ href, label }) => (
                     <li key={`${href}-${label}`}>
-                      <Link href={href} prefetch={false} className="site-footer__link typ-body-sm">
+                      <Link href={href} prefetch={false} className={`site-footer__link ${footerInteractiveClass} typ-body-sm`}>
                         {label}
                       </Link>
                     </li>
@@ -124,20 +126,20 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="site-footer__divider border-t">
-        <div className="site-footer__legal-row typ-body-sm container flex flex-col items-center justify-between gap-3 px-6 py-4 sm:flex-row 2xl:px-0">
+      <div className="site-footer__divider mt-2 border-t">
+        <div className="site-footer__legal-row typ-body-sm container flex flex-col items-center justify-between gap-3 px-6 py-5 sm:flex-row 2xl:px-0">
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:justify-start">
-            <Link href="/refund-and-return-policy" prefetch={false} className="site-footer__legal">
+            <Link href="/refund-and-return-policy" prefetch={false} className={`site-footer__legal ${footerInteractiveClass}`}>
               Refund Policy
             </Link>
-            <Link href="/privacy" prefetch={false} className="site-footer__legal">
+            <Link href="/privacy" prefetch={false} className={`site-footer__legal ${footerInteractiveClass}`}>
               Privacy Policy
             </Link>
-            <Link href="/terms" prefetch={false} className="site-footer__legal">
+            <Link href="/terms" prefetch={false} className={`site-footer__legal ${footerInteractiveClass}`}>
               Terms
             </Link>
           </div>
-          <div>© {currentYear} One&Only. All rights reserved.</div>
+          <div>&copy; {currentYear} One&Only. All rights reserved.</div>
         </div>
       </div>
     </footer>

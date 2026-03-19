@@ -84,127 +84,128 @@ export function ContactTeaser() {
               <p className="contact-teaser__support-kicker">{HOMEPAGE_CONTACT_CONTENT.titleLead}</p>
               <h2 className="typ-section scheme-text-strong max-w-2xl">
                 {HOMEPAGE_CONTACT_CONTENT.titleAccent}
-                {" "}
-                <span className="home-heading__accent">{HOMEPAGE_CONTACT_CONTENT.description}</span>
               </h2>
+              <p className="home-copy mt-4 max-w-2xl text-neutral-600">
+                {HOMEPAGE_CONTACT_CONTENT.description}
+              </p>
             </div>
 
             <form aria-label="Project brief enquiry" className="contact-teaser__form" onSubmit={handleSubmit}>
-                <div className="contact-teaser__mini-grid">
-                  <label className="contact-teaser__field">
-                    <span className="contact-teaser__field-label">Name</span>
-                    <input
-                      value={name}
-                      onChange={(event) => setName(event.target.value)}
-                      className="contact-teaser__input"
-                      type="text"
-                      autoComplete="name"
-                      required
-                      maxLength={180}
-                      placeholder="Your name"
-                    />
-                  </label>
-                  <label className="contact-teaser__field">
-                    <span className="contact-teaser__field-label">City</span>
-                    <input
-                      value={city}
-                      onChange={(event) => setCity(event.target.value)}
-                      className="contact-teaser__input"
-                      type="text"
-                      autoComplete="address-level2"
-                      required
-                      maxLength={120}
-                      placeholder="Project city"
-                    />
-                  </label>
-                  <label className="contact-teaser__field">
-                    <span className="contact-teaser__field-label">Phone or Email</span>
-                    <input
-                      value={contact}
-                      onChange={(event) => setContact(event.target.value)}
-                      className="contact-teaser__input"
-                      type="text"
-                      autoComplete="off"
-                      required
-                      maxLength={180}
-                      placeholder="Phone or email"
-                    />
-                  </label>
-                  <label className="contact-teaser__field">
-                    <span className="contact-teaser__field-label">Timeline</span>
-                    <select
-                      value={timeline}
-                      onChange={(event) => setTimeline(event.target.value)}
-                      className="contact-teaser__input"
-                    >
-                      <option>Immediate</option>
-                      <option>Within 1-3 months</option>
-                      <option>Within 3-6 months</option>
-                      <option>Exploring</option>
-                    </select>
-                  </label>
-                </div>
-                <label className="contact-teaser__field mt-3">
-                  <div className="flex items-center justify-between">
-                    <span className="contact-teaser__field-label">Brief</span>
-                    <span className="text-xs text-neutral-400" aria-live="polite" aria-atomic="true">
-                      {brief.length}/5000
-                    </span>
-                  </div>
-                  <textarea
-                    value={brief}
-                    onChange={(event) => setBrief(event.target.value)}
-                    className="contact-teaser__input contact-teaser__input--textarea"
-                    rows={3}
+              <div className="contact-teaser__mini-grid">
+                <label className="contact-teaser__field">
+                  <span className="contact-teaser__field-label">Name</span>
+                  <input
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
+                    className="contact-teaser__input"
+                    type="text"
+                    autoComplete="name"
                     required
-                    maxLength={5000}
-                    placeholder="Share scope, team size, or key requirements."
+                    maxLength={180}
+                    placeholder="Your name"
                   />
                 </label>
-
-                <div className="contact-teaser__actions mt-5">
-                  <p className="contact-teaser__footer-chip">Business-day response</p>
-                  <button type="submit" disabled={isSubmitting} className="home-btn-primary">
-                    <MessageSquareText className="h-4 w-4" aria-hidden="true" />
-                    {isSubmitting ? "Sending..." : "Send Brief"}
-                  </button>
-                  <button
-                    type="button"
-                    className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition-colors hover:border-neutral-400 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    onClick={() =>
-                      window.dispatchEvent(new CustomEvent("oando-assistant:open"))
-                    }
+                <label className="contact-teaser__field">
+                  <span className="contact-teaser__field-label">City</span>
+                  <input
+                    value={city}
+                    onChange={(event) => setCity(event.target.value)}
+                    className="contact-teaser__input"
+                    type="text"
+                    autoComplete="address-level2"
+                    required
+                    maxLength={120}
+                    placeholder="Project city"
+                  />
+                </label>
+                <label className="contact-teaser__field">
+                  <span className="contact-teaser__field-label">Phone or Email</span>
+                  <input
+                    value={contact}
+                    onChange={(event) => setContact(event.target.value)}
+                    className="contact-teaser__input"
+                    type="text"
+                    autoComplete="off"
+                    required
+                    maxLength={180}
+                    placeholder="Phone or email"
+                  />
+                </label>
+                <label className="contact-teaser__field">
+                  <span className="contact-teaser__field-label">Timeline</span>
+                  <select
+                    value={timeline}
+                    onChange={(event) => setTimeline(event.target.value)}
+                    className="contact-teaser__input"
                   >
-                    Guided Planner
-                  </button>
+                    <option>Immediate</option>
+                    <option>Within 1-3 months</option>
+                    <option>Within 3-6 months</option>
+                    <option>Exploring</option>
+                  </select>
+                </label>
+              </div>
+              <label className="contact-teaser__field mt-3">
+                <div className="flex items-center justify-between">
+                  <span className="contact-teaser__field-label">Brief</span>
+                  <span className="text-xs text-neutral-400" aria-live="polite" aria-atomic="true">
+                    {brief.length}/5000
+                  </span>
                 </div>
+                <textarea
+                  value={brief}
+                  onChange={(event) => setBrief(event.target.value)}
+                  className="contact-teaser__input contact-teaser__input--textarea"
+                  rows={3}
+                  required
+                  maxLength={5000}
+                  placeholder="Share scope, team size, or key requirements."
+                />
+              </label>
 
-                <div className="contact-teaser__support-row mt-4">
-                  {directActions.map((action) => {
-                    const Icon = action.icon;
-                    return (
-                      <a
-                        key={action.label}
-                        href={action.href}
-                        target={action.external ? "_blank" : undefined}
-                        rel={action.external ? "noopener noreferrer" : undefined}
-                        className="contact-teaser__support-link"
-                      >
-                        <span className="contact-teaser__support-link-icon">
-                          <Icon className="h-4 w-4" />
-                        </span>
-                        <span>{action.label}</span>
-                        <ArrowUpRight className="h-3.5 w-3.5" />
-                      </a>
-                    );
-                  })}
-                </div>
+              <div className="contact-teaser__actions mt-5">
+                <p className="contact-teaser__footer-chip">Business-day response</p>
+                <button type="submit" disabled={isSubmitting} className="home-btn-primary">
+                  <MessageSquareText className="h-4 w-4" aria-hidden="true" />
+                  {isSubmitting ? "Sending..." : "Send Brief"}
+                </button>
+                <button
+                  type="button"
+                  className="home-btn-secondary"
+                  onClick={() =>
+                    window.dispatchEvent(new CustomEvent("oando-assistant:open"))
+                  }
+                >
+                  Guided Planner
+                </button>
+              </div>
 
-                {formStatus.type !== "idle" ? (
-                  <p className={`contact-teaser__status contact-teaser__status--${formStatus.type}`} role="status">
-                    {formStatus.message}
-                  </p>
-                ) : null}
+              <div className="contact-teaser__support-row mt-4">
+                {directActions.map((action) => {
+                  const Icon = action.icon;
+                  return (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      target={action.external ? "_blank" : undefined}
+                      rel={action.external ? "noopener noreferrer" : undefined}
+                      className="contact-teaser__support-link"
+                    >
+                      <span className="contact-teaser__support-link-icon">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span>{action.label}</span>
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  );
+                })}
+              </div>
+
+              {formStatus.type !== "idle" ? (
+                <p className={`contact-teaser__status contact-teaser__status--${formStatus.type}`} role="status">
+                  {formStatus.message}
+                </p>
+              ) : null}
             </form>
           </div>
         </div>

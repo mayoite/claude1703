@@ -24,7 +24,6 @@ async function runAxe(page: Page) {
   const build = () =>
     new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
-      .disableRules(["color-contrast"])
       .analyze();
 
   try {

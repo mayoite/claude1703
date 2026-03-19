@@ -1,27 +1,32 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function useScrollAnimation() {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (!ref.current) return;
+        const node = ref.current;
+        if (!node) return;
 
-        const animation = gsap.fromTo(ref.current,
-            { opacity: 0, y: 30 },
-            {
-                opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
-                scrollTrigger: { trigger: ref.current, start: 'top 85%' }
-            }
+        node.style.opacity = '0';
+        node.style.transform = 'translateY(30px)';
+        node.style.transition = 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry?.isIntersecting) return;
+                node.style.opacity = '1';
+                node.style.transform = 'translateY(0)';
+                observer.disconnect();
+            },
+            { threshold: 0.15, rootMargin: '0px 0px -10% 0px' },
         );
 
+        observer.observe(node);
+
         return () => {
-            animation.kill();
+            observer.disconnect();
         };
     }, []);
 

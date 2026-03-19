@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { getCatalog } from "@/lib/getProducts";
-import { CategoryImage } from "@/components/home/CategoryImage";
 import { unstable_cache } from "next/cache";
+import Link from "next/link";
+import { CategoryImage } from "@/components/home/CategoryImage";
+import { getCatalog } from "@/lib/getProducts";
 import {
   buildRequestedCategoryCatalog,
   getCatalogCategoryHref,
@@ -9,11 +9,10 @@ import {
 } from "@/lib/catalogCategories";
 import { PRODUCTS_PAGE_COPY } from "@/data/site/routeCopy";
 
-const getCachedCatalog = unstable_cache(
-  async () => getCatalog(),
-  ["home-category-grid-v2"],
-  { revalidate: 3600, tags: ["catalog"] },
-);
+const getCachedCatalog = unstable_cache(async () => getCatalog(), ["home-category-grid-v2"], {
+  revalidate: 3600,
+  tags: ["catalog"],
+});
 
 export async function CategoryGrid() {
   const requestedCatalog = buildRequestedCategoryCatalog(await getCachedCatalog());
@@ -21,24 +20,22 @@ export async function CategoryGrid() {
   return (
     <section className="scheme-page w-full py-20 md:py-28">
       <div className="container px-6 2xl:px-0">
-        {/* Section header */}
-        <div className="mb-12 md:mb-16 max-w-2xl">
-          <p className="typ-label scheme-text-muted mb-3">
+        <div className="mb-12 max-w-2xl md:mb-16">
+          <p className="typ-label mb-3 scheme-text-brand">
             {PRODUCTS_PAGE_COPY.rangeKicker}
           </p>
-          <h2 className="typ-section scheme-text-strong max-w-xl">
+          <h2 className="typ-section max-w-xl scheme-text-strong">
             {PRODUCTS_PAGE_COPY.rangeTitle}
           </h2>
         </div>
 
-        {/* Uniform 3-col grid — 1 col mobile / 2 col tablet / 3 col desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-100">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {requestedCatalog.map((category) => {
-            const allProducts = category.series.flatMap((s) => s.products);
+            const allProducts = category.series.flatMap((series) => series.products);
             const categoryName = getCatalogCategoryLabel(category.id, category.name);
             const categoryHref = getCatalogCategoryHref(category.id);
             const firstProductWithImage = allProducts.find(
-              (p) => (p.images && p.images.length > 0) || p.flagshipImage,
+              (product) => (product.images && product.images.length > 0) || product.flagshipImage,
             );
             const flagshipImage =
               firstProductWithImage?.images?.[0] ||
@@ -49,29 +46,24 @@ export async function CategoryGrid() {
               <Link
                 key={category.id}
                 href={categoryHref}
-                className="group scheme-panel scheme-border relative block overflow-hidden rounded-[1.75rem] border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.18)]"
+                className="group scheme-panel scheme-border relative block overflow-hidden rounded-[1.9rem] border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_-42px_rgba(18,48,66,0.24)]"
               >
-                {/* Uniform square image */}
                 <div className="scheme-section-soft scheme-border relative aspect-square overflow-hidden border-b">
-                  <CategoryImage
-                    src={flagshipImage}
-                    alt=""
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/8 transition-colors duration-500" />
+                  <CategoryImage src={flagshipImage} alt="" />
+                  <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/8" />
                 </div>
 
-                {/* Card text */}
                 <div className="flex items-center justify-between gap-4 px-5 py-5 md:px-6 md:py-6">
                   <div>
-                    <h3 className="text-[clamp(1.8rem,2.4vw,2.5rem)] font-light leading-[0.95] text-neutral-900 transition-colors duration-200 group-hover:text-primary">
+                    <h3 className="text-[clamp(1.8rem,2.4vw,2.5rem)] font-medium leading-[0.96] tracking-tight scheme-text-strong transition-colors duration-200 group-hover:text-primary">
                       {categoryName}
                     </h3>
-                    <p className="page-copy-sm scheme-text-body mt-1">
+                    <p className="page-copy-sm mt-1 scheme-text-body">
                       {allProducts.length} products
                     </p>
                   </div>
                   <svg
-                    className="scheme-text-subtle w-4 h-4 shrink-0 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300"
+                    className="h-4 w-4 shrink-0 scheme-text-subtle transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
