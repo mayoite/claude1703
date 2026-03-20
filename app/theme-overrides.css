@@ -1,33 +1,10 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* ── Keyframes ── */
 
 @keyframes fadein {
   from {
     opacity: 0;
     transform: translateY(6px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -38,31 +15,18 @@
   0% {
     transform: scale(1.02) translate3d(0, 0, 0);
   }
-
   50% {
     transform: scale(1.08) translate3d(-1.2%, -1%, 0);
   }
-
   100% {
     transform: scale(1.12) translate3d(-2%, -1.6%, 0);
   }
-}
-
-.animate-marquee {
-  animation: marquee-left 90s linear infinite;
-  will-change: transform;
-}
-
-.animate-marquee-reverse {
-  animation: marquee-right 90s linear infinite;
-  will-change: transform;
 }
 
 @keyframes marquee-left {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
   }
@@ -72,13 +36,33 @@
   0% {
     transform: translateX(-50%);
   }
-
   100% {
     transform: translateX(0);
   }
 }
 
-.animate-hero-pan {
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ── Animation utilities ── */
+
+@utility animate-marquee {
+  animation: marquee-left 90s linear infinite;
+  will-change: transform;
+}
+
+@utility animate-marquee-reverse {
+  animation: marquee-right 90s linear infinite;
+  will-change: transform;
+}
+
+@utility animate-hero-pan {
   animation: hero-pan 12s ease-in-out infinite alternate;
   will-change: transform;
 }
@@ -89,27 +73,15 @@
   }
 }
 
-/* Hover scale utility (Tailwind doesn't include scale-103 by default) */
+@utility animate-fadein {
+  animation: fadein 0.25s ease-out both;
+}
+
+/* scale-103 — Tailwind doesn't include this by default */
 .hover\:scale-103:hover {
   transform: scale(1.03);
 }
 
 .group:hover .group-hover\:scale-103 {
   transform: scale(1.03);
-}
-
-
-
-@keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-.animate-fadein {
-  animation: fadein 0.25s ease-out both;
 }

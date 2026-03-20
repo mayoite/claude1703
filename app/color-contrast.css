@@ -1,156 +1,169 @@
-@layer components {
-  .typ-subtle,
-  .typ-eyebrow,
-  .contact-summary__eyebrow,
-  .contact-card__title,
-  .contact-channel__label,
-  .catalog-card__eyebrow {
-    color: var(--text-muted);
-  }
+/* ── Color scheme utilities ── */
+/* These map design tokens to utility classes used site-wide (435+ uses across 50 files). */
+/* Using @utility so they integrate properly with Tailwind v4. */
 
-  .home-heading,
-  .contact-card__value {
-    color: var(--text-strong);
-  }
+/* ── Text shorthands (used alongside typ-* classes) ── */
+@utility typ-subtle {
+  color: var(--text-muted);
+}
 
-  .home-copy,
-  .contact-summary__copy {
-    color: var(--text-body);
-  }
+@utility typ-eyebrow {
+  color: var(--text-muted);
+}
 
-  .site-footer {
-    background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
-    color: var(--text-inverse-body);
-  }
+@utility catalog-card__eyebrow {
+  color: var(--text-muted);
+}
 
-  .site-footer__address,
-  .site-footer__meta {
-    color: var(--text-inverse-body);
-  }
+@utility home-heading {
+  color: var(--text-strong);
+}
 
-  .site-footer__heading,
-  .site-footer__social {
-    color: var(--text-inverse-body);
-  }
+@utility home-copy {
+  color: var(--text-body);
+}
 
-  .site-footer__link {
-    color: var(--text-inverse);
-  }
+/* ── Footer scheme ── */
+@utility site-footer {
+  background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
+  color: var(--text-inverse-body);
+}
 
-  .site-footer__link:hover,
-  .site-footer__social:hover,
-  .site-footer__legal:hover {
-    color: var(--text-inverse);
-  }
+@utility site-footer__address {
+  color: var(--text-inverse-body);
+}
 
-  .site-footer__divider {
-    border-color: var(--border-inverse);
-  }
+@utility site-footer__meta {
+  color: var(--text-inverse-body);
+}
 
-  .site-footer__legal-row,
-  .site-footer__legal {
-    color: var(--text-inverse-body);
-  }
+@utility site-footer__heading {
+  color: var(--text-inverse-body);
+}
 
-  .scheme-page {
-    background: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-hover) 100%);
-    color: var(--text-body);
-  }
+@utility site-footer__social {
+  color: var(--text-inverse-body);
+}
 
-  .scheme-section-soft {
-    background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface-page) 100%);
-  }
+@utility site-footer__link {
+  color: var(--text-inverse);
+}
 
-  .scheme-section-muted {
-    background: linear-gradient(180deg, var(--surface-muted) 0%, var(--surface-soft) 100%);
-  }
+@utility site-footer__divider {
+  border-color: var(--border-inverse);
+}
 
-  .scheme-section-inverse {
-    background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
-    color: var(--text-inverse);
-  }
+@utility site-footer__legal-row {
+  color: var(--text-inverse-body);
+}
 
-  .scheme-section-primary {
-    background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
-    color: var(--text-inverse);
-  }
+@utility site-footer__legal {
+  color: var(--text-inverse-body);
+}
 
-  .scheme-panel {
-    background: linear-gradient(180deg, var(--surface-panel-strong) 0%, var(--surface-panel-soft) 100%);
-    border-color: var(--border-soft);
-    box-shadow: var(--shadow-soft);
-  }
+/* ── Page & section schemes ── */
+@utility scheme-page {
+  background: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-hover) 100%);
+  color: var(--text-body);
+}
 
-  .scheme-panel-soft {
-    background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface-panel-strong) 100%);
-    border-color: var(--border-soft);
-    box-shadow: var(--shadow-soft);
-  }
+@utility scheme-section-soft {
+  background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface-page) 100%);
+}
 
-  .scheme-panel-dark {
-    background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
-    color: var(--text-inverse);
-    border-color: var(--border-inverse);
-    box-shadow: var(--shadow-inverse);
-  }
+@utility scheme-section-muted {
+  background: linear-gradient(180deg, var(--surface-muted) 0%, var(--surface-soft) 100%);
+}
 
-  .scheme-text-heading {
-    color: var(--text-heading);
-  }
+@utility scheme-section-inverse {
+  background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
+  color: var(--text-inverse);
+}
 
-  .scheme-text-strong {
-    color: var(--text-strong);
-  }
+@utility scheme-section-primary {
+  background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  color: var(--text-inverse);
+}
 
-  .scheme-text-body {
-    color: var(--text-body);
-  }
+/* ── Panel schemes ── */
+@utility scheme-panel {
+  background: linear-gradient(180deg, var(--surface-panel-strong) 0%, var(--surface-panel-soft) 100%);
+  border-color: var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
 
-  .scheme-text-muted {
-    color: var(--text-muted);
-  }
+@utility scheme-panel-soft {
+  background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface-panel-strong) 100%);
+  border-color: var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
 
-  .scheme-text-subtle {
-    color: var(--text-subtle);
-  }
+@utility scheme-panel-dark {
+  background: linear-gradient(180deg, var(--surface-inverse-soft) 0%, var(--surface-inverse) 100%);
+  color: var(--text-inverse);
+  border-color: var(--border-inverse);
+  box-shadow: var(--shadow-inverse);
+}
 
-  .scheme-text-brand {
-    color: var(--text-brand);
-  }
+/* ── Semantic text colors ── */
+@utility scheme-text-heading {
+  color: var(--text-heading);
+}
 
-  .scheme-text-inverse {
-    color: var(--text-inverse);
-  }
+@utility scheme-text-strong {
+  color: var(--text-strong);
+}
 
-  .scheme-text-inverse-body {
-    color: var(--text-inverse-body);
-  }
+@utility scheme-text-body {
+  color: var(--text-body);
+}
 
-  .scheme-text-inverse-muted {
-    color: var(--text-inverse-muted);
-  }
+@utility scheme-text-muted {
+  color: var(--text-muted);
+}
 
-  .scheme-text-inverse-subtle {
-    color: var(--text-inverse-subtle);
-  }
+@utility scheme-text-subtle {
+  color: var(--text-subtle);
+}
 
-  .scheme-border {
-    border-color: var(--border-soft);
-  }
+@utility scheme-text-brand {
+  color: var(--text-brand);
+}
 
-  .scheme-border-soft {
-    border-color: var(--border-muted);
-  }
+@utility scheme-text-inverse {
+  color: var(--text-inverse);
+}
 
-  .scheme-border-brand-soft {
-    border-color: var(--border-accent);
-  }
+@utility scheme-text-inverse-body {
+  color: var(--text-inverse-body);
+}
 
-  .scheme-border-inverse {
-    border-color: var(--border-inverse);
-  }
+@utility scheme-text-inverse-muted {
+  color: var(--text-inverse-muted);
+}
 
-  .scheme-accent-wash {
-    background-color: var(--surface-accent-wash);
-  }
+@utility scheme-text-inverse-subtle {
+  color: var(--text-inverse-subtle);
+}
+
+/* ── Semantic borders ── */
+@utility scheme-border {
+  border-color: var(--border-soft);
+}
+
+@utility scheme-border-soft {
+  border-color: var(--border-muted);
+}
+
+@utility scheme-border-brand-soft {
+  border-color: var(--border-accent);
+}
+
+@utility scheme-border-inverse {
+  border-color: var(--border-inverse);
+}
+
+/* ── Accent surfaces ── */
+@utility scheme-accent-wash {
+  background-color: var(--surface-accent-wash);
 }

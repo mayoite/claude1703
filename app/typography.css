@@ -19,135 +19,247 @@
   --type-letter-label-wide: 0.11em;
 }
 
-@layer components {
-  .typ-h1,
-  .typ-display,
-  .hero-title {
-    font-family: var(--font-display);
-    font-size: var(--type-display-size);
-    font-weight: 275;
-    letter-spacing: var(--type-letter-tight);
-    line-height: 0.86;
-    text-wrap: balance;
-  }
+/* ── Display / H1 ── */
+@utility typ-h1 {
+  font-family: var(--font-display);
+  font-size: var(--type-display-size);
+  font-weight: 275;
+  letter-spacing: var(--type-letter-tight);
+  line-height: 0.86;
+  text-wrap: balance;
+}
 
-  .typ-h2,
-  .typ-section,
-  .home-heading,
-  .section-title {
-    font-family: var(--font-display);
-    font-size: var(--type-title-lg-size);
-    font-weight: 350;
-    letter-spacing: var(--type-letter-title);
-    line-height: 1;
-    text-wrap: balance;
-  }
+@utility typ-display {
+  font-family: var(--font-display);
+  font-size: var(--type-display-size);
+  font-weight: 275;
+  letter-spacing: var(--type-letter-tight);
+  line-height: 0.86;
+  text-wrap: balance;
+}
 
-  .typ-h3 {
-    font-family: var(--font-display);
-    font-size: var(--type-title-sm-size);
-    font-weight: 350;
-    letter-spacing: -0.038em;
-    line-height: 1.02;
-    text-wrap: balance;
-  }
+@utility hero-title {
+  font-family: var(--font-display);
+  font-size: var(--type-display-size);
+  font-weight: 275;
+  letter-spacing: var(--type-letter-tight);
+  line-height: 0.86;
+  text-wrap: balance;
+}
 
-  .typ-lead,
-  .home-copy,
-  .hero-subtitle,
-  .page-copy {
-    font-family: var(--font-sans);
-    font-size: var(--type-body-lg-size);
-    font-weight: 400;
-    letter-spacing: var(--type-letter-copy);
-    line-height: 1.48;
-  }
+/* ── Section / H2 ── */
+@utility typ-h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-title-lg-size);
+  font-weight: 350;
+  letter-spacing: var(--type-letter-title);
+  line-height: 1;
+  text-wrap: balance;
+}
 
-  .page-copy-sm,
-  .typ-body-sm,
-  .contact-card__meta,
-  .catalog-card__description {
-    font-family: var(--font-sans);
-    font-size: var(--type-body-size);
-    font-weight: 400;
-    letter-spacing: var(--type-letter-copy);
-    line-height: 1.56;
-  }
+@utility typ-section {
+  font-family: var(--font-display);
+  font-size: var(--type-title-lg-size);
+  font-weight: 350;
+  letter-spacing: var(--type-letter-title);
+  line-height: 1;
+  text-wrap: balance;
+}
 
-  .typ-nav,
-  .typ-nav-sm,
-  .typ-micro {
-    font-family: var(--font-sans);
-    font-size: var(--type-body-size);
-    line-height: 1.35;
-  }
+@utility home-heading {
+  font-family: var(--font-display);
+  font-size: var(--type-title-lg-size);
+  font-weight: 350;
+  letter-spacing: var(--type-letter-title);
+  line-height: 1;
+  text-wrap: balance;
+}
 
-  .typ-nav {
-    font-weight: 500;
-    letter-spacing: 0.01em;
-  }
+@utility section-title {
+  font-family: var(--font-display);
+  font-size: var(--type-title-lg-size);
+  font-weight: 350;
+  letter-spacing: var(--type-letter-title);
+  line-height: 1;
+  text-wrap: balance;
+}
 
-  .typ-nav-sm {
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
+/* ── H3 ── */
+@utility typ-h3 {
+  font-family: var(--font-display);
+  font-size: var(--type-title-sm-size);
+  font-weight: 350;
+  letter-spacing: -0.038em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
 
-  .typ-micro {
-    font-weight: 600;
-    letter-spacing: 0.08em;
-  }
+/* ── Lead / body-lg ── */
+@utility typ-lead {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-lg-size);
+  font-weight: 400;
+  letter-spacing: var(--type-letter-copy);
+  line-height: 1.48;
+}
 
-  .typ-label,
-  .typ-eyebrow,
-  .typ-overline,
-  .typ-chip,
-  .home-kicker,
-  .contact-summary__eyebrow,
-  .contact-card__title,
-  .contact-channel__label,
-  .catalog-card__eyebrow {
-    font-family: var(--font-sans);
-    font-size: var(--type-label-size);
-    font-weight: 500;
-    letter-spacing: 0.11em;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
+@utility home-copy {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-lg-size);
+  font-weight: 400;
+  letter-spacing: var(--type-letter-copy);
+  line-height: 1.48;
+}
 
-  .typ-cta {
-    font-family: var(--font-sans);
-    font-size: var(--type-body-size);
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    line-height: 1.2;
-  }
+@utility hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-lg-size);
+  font-weight: 400;
+  letter-spacing: var(--type-letter-copy);
+  line-height: 1.48;
+}
 
-  .typ-stat {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4.2rem);
-    font-weight: 325;
-    letter-spacing: -0.06em;
-    line-height: 0.92;
-    font-variant-numeric: tabular-nums;
-  }
+@utility page-copy {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-lg-size);
+  font-weight: 400;
+  letter-spacing: var(--type-letter-copy);
+  line-height: 1.48;
+}
 
-  .contact-card__value {
-    font-family: var(--font-display);
-    font-size: var(--type-card-title-size);
-    font-weight: 400;
-    letter-spacing: -0.03em;
-    line-height: 1.08;
-  }
+/* ── Body small ── */
+@utility page-copy-sm {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  font-weight: 400;
+  letter-spacing: var(--type-letter-copy);
+  line-height: 1.56;
+}
 
-  .home-heading__accent {
-    color: var(--color-brand-muted);
-    font-style: normal;
-    font-weight: 350;
-    letter-spacing: inherit;
-  }
+@utility typ-body-sm {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  font-weight: 400;
+  letter-spacing: var(--type-letter-copy);
+  line-height: 1.56;
+}
 
-  .hero-accent {
-    color: var(--color-brand-muted);
-    font-weight: 350;
-  }
+@utility catalog-card__description {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  font-weight: 400;
+  letter-spacing: var(--type-letter-copy);
+  line-height: 1.56;
+}
+
+/* ── Nav ── */
+@utility typ-nav {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+@utility typ-nav-sm {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+@utility typ-micro {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+}
+
+/* ── Label / eyebrow ── */
+@utility typ-label {
+  font-family: var(--font-sans);
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@utility typ-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@utility typ-overline {
+  font-family: var(--font-sans);
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@utility typ-chip {
+  font-family: var(--font-sans);
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@utility home-kicker {
+  font-family: var(--font-sans);
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@utility catalog-card__eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--type-label-size);
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* ── CTA ── */
+@utility typ-cta {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+/* ── Stat ── */
+@utility typ-stat {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 325;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Accent styles ── */
+@utility home-heading__accent {
+  color: var(--color-brand-muted);
+  font-style: normal;
+  font-weight: 350;
+  letter-spacing: inherit;
+}
+
+@utility hero-accent {
+  color: var(--color-brand-muted);
+  font-weight: 350;
 }

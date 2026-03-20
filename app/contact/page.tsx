@@ -20,6 +20,12 @@ function firstValue(value: string | string[] | undefined): string | null {
   return value || null;
 }
 
+const cardStyle =
+  "border border-[var(--border-soft)] rounded-[var(--radius-lg)] p-5 md:p-6 bg-[linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] shadow-[var(--shadow-soft)]";
+
+const labelStyle =
+  "font-sans text-[length:var(--type-label-size)] font-medium tracking-[0.11em] uppercase leading-[1.2] text-[var(--text-muted)]";
+
 export default async function ContactPage({
   searchParams,
 }: {
@@ -48,12 +54,12 @@ export default async function ContactPage({
         showButton={false}
         backgroundImage="/images/hero/tvs-patna-enhanced.webp"
       />
-      <section className="contact-shell">
-        <div className="contact-summary">
-          <div className="contact-summary__intro section-divider">
-            <p className="contact-summary__eyebrow">{CONTACT_PAGE_COPY.sectionTitle}</p>
+      <section className="container grid gap-8 px-6 py-12 2xl:px-0 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:gap-12 md:py-16">
+        <div className="space-y-8">
+          <div className="section-divider border-b border-neutral-200 pb-6">
+            <p className={labelStyle}>{CONTACT_PAGE_COPY.sectionTitle}</p>
             <h2 className="typ-section mt-3 text-neutral-950">{CONTACT_PAGE_COPY.introTitle}</h2>
-            <p className="contact-summary__copy">
+            <p className="mt-3 max-w-prose text-base leading-relaxed text-neutral-700">
               {CONTACT_PAGE_COPY.introDescription}
             </p>
             <p className="mt-4 text-sm leading-7 text-neutral-700">
@@ -67,9 +73,9 @@ export default async function ContactPage({
 
           <div className="grid gap-4 sm:grid-cols-2">
             {CONTACT_PAGE_COPY.offices.map((office) => (
-              <div key={office.title} className="contact-card">
-                <p className="contact-card__title">{office.title}</p>
-                <div className="contact-card__value">
+              <div key={office.title} className={cardStyle}>
+                <p className={labelStyle}>{office.title}</p>
+                <div className="mt-3">
                   {office.lines.map((line) => (
                     <p key={`${office.title}-${line}`}>{line}</p>
                   ))}
@@ -78,43 +84,43 @@ export default async function ContactPage({
             ))}
           </div>
 
-          <div className="contact-card">
-            <div className="contact-channel">
-              <MapPin className="contact-channel__icon" />
+          <div className={cardStyle}>
+            <div className="flex items-start gap-4">
+              <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="contact-channel__label">Service region</p>
-                <p className="contact-card__meta">{SITE_CONTACT.regionLine}</p>
+                <p className={labelStyle}>Service region</p>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-600">{SITE_CONTACT.regionLine}</p>
               </div>
             </div>
-            <div className="contact-channel">
-              <Phone className="contact-channel__icon" />
+            <div className="flex items-start gap-4 border-t border-neutral-200 py-4">
+              <Phone className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="contact-channel__label">Quotes and planning</p>
+                <p className={labelStyle}>Quotes and planning</p>
                 <a
                   href={`tel:${SITE_CONTACT.salesPhone.replace(/\s+/g, "")}`}
-                  className="contact-channel__link"
+                  className="mt-1 inline-flex items-center text-base text-neutral-950 transition-colors hover:text-primary"
                 >
                   {SITE_CONTACT.salesPhone}
                 </a>
               </div>
             </div>
-            <div className="contact-channel">
-              <Phone className="contact-channel__icon" />
+            <div className="flex items-start gap-4 border-t border-neutral-200 py-4">
+              <Phone className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="contact-channel__label">Support and enquiries</p>
+                <p className={labelStyle}>Support and enquiries</p>
                 <a
                   href={`tel:${SITE_CONTACT.supportPhone.replace(/\s+/g, "")}`}
-                  className="contact-channel__link"
+                  className="mt-1 inline-flex items-center text-base text-neutral-950 transition-colors hover:text-primary"
                 >
                   {SITE_CONTACT.supportPhone}
                 </a>
               </div>
             </div>
-            <div className="contact-channel">
-              <Mail className="contact-channel__icon" />
+            <div className="flex items-start gap-4 border-t border-neutral-200 py-4 last:pb-0">
+              <Mail className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="contact-channel__label">Email</p>
-                <a href={`mailto:${SITE_CONTACT.salesEmail}`} className="contact-channel__link">
+                <p className={labelStyle}>Email</p>
+                <a href={`mailto:${SITE_CONTACT.salesEmail}`} className="mt-1 inline-flex items-center text-base text-neutral-950 transition-colors hover:text-primary">
                   {SITE_CONTACT.salesEmail}
                 </a>
               </div>
@@ -122,7 +128,7 @@ export default async function ContactPage({
           </div>
         </div>
 
-        <div className="contact-form-panel">
+        <div className="border border-[var(--border-soft)] rounded-[var(--radius-xl)] p-6 md:p-8 bg-[linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] shadow-[var(--shadow-panel)]">
           <div className="scheme-panel-dark mb-6 rounded-[1.5rem] p-6">
             <p className="typ-label scheme-text-inverse-muted">{CONTACT_PAGE_COPY.quickDeskKicker}</p>
             <h2 className="typ-section mt-3 text-white">{CONTACT_PAGE_COPY.quickDeskTitle}</h2>
