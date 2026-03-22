@@ -1,0 +1,156 @@
+[
+  {
+    "route": "/",
+    "viewport": "desktop",
+    "status": "ok",
+    "loadMs": 15605,
+    "headingCount": 18,
+    "ctaCount": 4,
+    "imageCount": 50,
+    "buttonCount": 15,
+    "error": null
+  },
+  {
+    "route": "/products",
+    "viewport": "desktop",
+    "status": "ok",
+    "loadMs": 4625,
+    "headingCount": 15,
+    "ctaCount": 6,
+    "imageCount": 54,
+    "buttonCount": 7,
+    "error": null
+  },
+  {
+    "route": "/products/seating",
+    "viewport": "desktop",
+    "status": "ok",
+    "loadMs": 6332,
+    "headingCount": 42,
+    "ctaCount": 45,
+    "imageCount": 80,
+    "buttonCount": 92,
+    "error": null
+  },
+  {
+    "route": "/about",
+    "viewport": "desktop",
+    "status": "ok",
+    "loadMs": 12218,
+    "headingCount": 22,
+    "ctaCount": 3,
+    "imageCount": 40,
+    "buttonCount": 13,
+    "error": null
+  },
+  {
+    "route": "/projects",
+    "viewport": "desktop",
+    "status": "ok",
+    "loadMs": 4606,
+    "headingCount": 64,
+    "ctaCount": 3,
+    "imageCount": 39,
+    "buttonCount": 7,
+    "error": null
+  },
+  {
+    "route": "/contact",
+    "viewport": "desktop",
+    "status": "ok",
+    "loadMs": 3495,
+    "headingCount": 3,
+    "ctaCount": 3,
+    "imageCount": 39,
+    "buttonCount": 7,
+    "error": null
+  },
+  {
+    "route": "/configurator",
+    "viewport": "desktop",
+    "status": "ok",
+    "loadMs": 3339,
+    "headingCount": 8,
+    "ctaCount": 3,
+    "imageCount": 40,
+    "buttonCount": 47,
+    "error": null
+  },
+  {
+    "route": "/",
+    "viewport": "mobile",
+    "status": "ok",
+    "loadMs": 6451,
+    "headingCount": 18,
+    "ctaCount": 4,
+    "imageCount": 50,
+    "buttonCount": 15,
+    "error": null
+  },
+  {
+    "route": "/products",
+    "viewport": "mobile",
+    "status": "ok",
+    "loadMs": 6653,
+    "headingCount": 15,
+    "ctaCount": 6,
+    "imageCount": 54,
+    "buttonCount": 7,
+    "error": null
+  },
+  {
+    "route": "/products/seating",
+    "viewport": "mobile",
+    "status": "ok",
+    "loadMs": 12555,
+    "headingCount": 42,
+    "ctaCount": 45,
+    "imageCount": 80,
+    "buttonCount": 92,
+    "error": null
+  },
+  {
+    "route": "/about",
+    "viewport": "mobile",
+    "status": "ok",
+    "loadMs": 5340,
+    "headingCount": 22,
+    "ctaCount": 3,
+    "imageCount": 40,
+    "buttonCount": 12,
+    "error": null
+  },
+  {
+    "route": "/projects",
+    "viewport": "mobile",
+    "status": "ok",
+    "loadMs": 7409,
+    "headingCount": 64,
+    "ctaCount": 3,
+    "imageCount": 39,
+    "buttonCount": 7,
+    "error": null
+  },
+  {
+    "route": "/contact",
+    "viewport": "mobile",
+    "status": "ok",
+    "loadMs": 3598,
+    "headingCount": 3,
+    "ctaCount": 3,
+    "imageCount": 39,
+    "buttonCount": 7,
+    "error": null
+  },
+  {
+    "route": "/configurator",
+    "viewport": "mobile",
+    "status": "ok",
+    "loadMs": 3243,
+    "headingCount": 8,
+    "ctaCount": 3,
+    "imageCount": 40,
+    "buttonCount": 47,
+    "error": null
+  }
+]
