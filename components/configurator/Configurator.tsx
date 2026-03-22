@@ -47,7 +47,6 @@ import type {
 } from "@/lib/planner/types";
 import {
   INR,
-  buildSeededWorkstations,
   clamp,
   createPlannerItem,
   createSceneFromPreset,
@@ -61,22 +60,22 @@ import {
 import { clearStoredScene, writeStoredScene } from "@/lib/planner/sceneStorage";
 
 export function Configurator() {
-  const initialScene = useMemo(() => createSceneFromPreset("compact-studio"), []);
+  const defaultRoomScene = useMemo(() => createSceneFromPreset("compact-studio"), []);
   const canvasRef = useRef<HTMLDivElement | null>(null);
   const contextMenuRef = useRef<HTMLDivElement | null>(null);
   const importSceneRef = useRef<HTMLInputElement | null>(null);
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
   const [unitSystem, setUnitSystem] = useState<"metric" | "imperial">("metric");
-  const [activePreset, setActivePreset] = useState("compact-studio");
-  const [room, setRoom] = useState(initialScene.room);
-  const [seatTarget, setSeatTarget] = useState(initialScene.seatTarget);
-  const [openings, setOpenings] = useState(initialScene.openings);
-  const [items, setItems] = useState<PlannerItem[]>(initialScene.items);
+  const [activePreset, setActivePreset] = useState("blank");
+  const [room, setRoom] = useState(defaultRoomScene.room);
+  const [seatTarget, setSeatTarget] = useState(defaultRoomScene.seatTarget);
+  const [openings, setOpenings] = useState<Opening[]>([]);
+  const [items, setItems] = useState<PlannerItem[]>([]);
   const [activeCategory, setActiveCategory] = useState<PlannerCategory>("workstations");
   const [catalogProductId, setCatalogProductId] = useState<string | null>(null);
   const [catalogSeatValue, setCatalogSeatValue] = useState<string>("all");
   const [catalogVariantId, setCatalogVariantId] = useState<string | null>(null);
-  const [selectedItemId, setSelectedItemId] = useState<string | null>(initialScene.items[0]?.id ?? null);
+  const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
   const [selectedOpeningId, setSelectedOpeningId] = useState<string | null>(null);
   const [queryAction, setQueryAction] = useState<QueryAction>("what-fits");
   const [shortlist, setShortlist] = useState<string[]>([]);
@@ -726,26 +725,48 @@ export function Configurator() {
     reader.readAsText(file);
   }
 
-  function resetCanvas() {
-    const nextScene = createSceneFromPreset("compact-studio");
+  function clearPlannerLayout(keepRoomState: boolean) {
+    const blankItems: PlannerItem[] = [];
+    const blankOpenings: Opening[] = [];
+    const blankWalls: InteriorWall[] = [];
+    const blankColumns: PlannerColumn[] = [];
+    const blankNotes: PlannerNote[] = [];
+
     historyRef.current = [];
     futureRef.current = [];
     isUndoRedoRef.current = true;
-    setRoom(nextScene.room);
-    setSeatTarget(nextScene.seatTarget);
-    setOpenings(nextScene.openings);
-    setItems(nextScene.items);
-    setSelectedItemId(nextScene.items[0]?.id ?? null);
+    prevItemsRef.current = blankItems;
+    prevOpeningsRef.current = blankOpenings;
+    prevWallsRef.current = blankWalls;
+    prevColumnsRef.current = blankColumns;
+    prevNotesRef.current = blankNotes;
+
+    if (!keepRoomState) {
+      const defaultScene = createSceneFromPreset("compact-studio");
+      setRoom(defaultScene.room);
+      setSeatTarget(defaultScene.seatTarget);
+      setActivePreset("blank");
+    }
+
+    setOpenings(blankOpenings);
+    setItems(blankItems);
+    setSelectedItemId(null);
     setSelectedOpeningId(null);
-    setInteriorWalls([]);
-    setColumns([]);
-    setNotes([]);
+    setInteriorWalls(blankWalls);
+    setColumns(blankColumns);
+    setNotes(blankNotes);
     setShortlist([]);
     setShowThreeD(false);
     setActiveTool("select");
     setSnapGuide(null);
     setWallDraftStart(null);
+    setDragGuides({ xMm: null, yMm: null });
+    setContextMenu((current) => ({ ...current, open: false }));
     clearStoredScene();
+  }
+
+  function resetCanvas() {
+    clearPlannerLayout(false);
   }
 
   function addProduct(productId: string, variantId?: string) {
@@ -1267,10 +1288,7 @@ export function Configurator() {
         }
         onSeatTargetChange={(value) => setSeatTarget(clamp(value, 4, 120))}
         onSeedLayout={() => {
-          const seeded = buildSeededWorkstations(seatTarget);
-          setItems(seeded);
-          setSelectedItemId(seeded[0]?.id ?? null);
-          setSelectedOpeningId(null);
+          clearPlannerLayout(true);
         }}
       />
 
@@ -3402,7 +3420,7 @@ export function Configurator() {
                 className="inline-flex min-h-9 items-center justify-center gap-2 rounded-full border border-soft bg-panel px-3 text-sm text-strong transition hover:border-primary/40"
               >
                 <RotateCw className="h-4 w-4" />
-                Rotate edge
+                Switch swing
               </button>
               <button
                 type="button"
@@ -3780,5 +3798,3 @@ export function Configurator() {
     </div>
   );
 }
-
-
