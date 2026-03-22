@@ -2,8 +2,6 @@ import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { LIBRARY } from "@/lib/planner/catalog";
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 /** Compact catalog snapshot sent in the system prompt */
 const CATALOG_SNAPSHOT = LIBRARY.map((p) => ({
   id: p.id,
@@ -50,6 +48,22 @@ Rules:
 - Respond ONLY with the JSON object, no markdown code fences, no extra text.`;
 
 export async function POST(req: NextRequest) {
+  const apiKey = process.env.OPENAI_API_KEY?.trim();
+  if (!apiKey) {
+    return new Response(
+      JSON.stringify({
+        error: "planner_suggest_unavailable",
+        message: "OPENAI_API_KEY is not configured for planner suggestions.",
+      }),
+      {
+        status: 503,
+        headers: { "Content-Type": "application/json" },
+      },
+    );
+  }
+
+  const client = new OpenAI({ apiKey });
+
   const body = await req.json() as {
     query: string;
     roomWidthMm: number;

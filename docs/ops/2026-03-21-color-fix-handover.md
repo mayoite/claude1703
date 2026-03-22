@@ -54,15 +54,15 @@ Tailwind v4 does NOT resolve CSS custom properties inside arbitrary value syntax
 
 ### Remaining `[var(--...)]` instances: 19 (all legitimate)
 These are NOT broken — they use arbitrary values for non-color properties that Tailwind handles correctly:
-- `rounded-[var(--radius-*)]` — border radius
-- `min-h-[var(--control-height-*)]` — control sizing
-- `text-[var(--type-*)]` / `tracking-[var(--type-*)]` — typography sizing
-- `duration-[var(--motion-*)]` / `ease-[var(--ease-*)]` — animation timing
-- `py-[var(--section-*)]` — section spacing
+- `rounded-var(--radius-token)` — border radius
+- `min-h-var(--control-height-token)` — control sizing
+- `text-var(--type-token)` / `tracking-var(--type-token)` — typography sizing
+- `duration-var(--motion-token)` / `ease-var(--ease-token)` — animation timing
+- `py-var(--section-token)` — section spacing
 - `bg-[linear-gradient(...)]` — complex gradients (work as arbitrary values)
 - `bg-[var(--raw-slate-900)]/30` — opacity modifier syntax
 - `ring-[var(--border-muted)]` — ring color (1 instance in ProductViewer)
-- `[border-color:var(...)]` / `[background:var(...)]` — explicit property syntax (works)
+- `border-color-var(--token)` / `background-var(--token)` — explicit property syntax (works)
 
 ### Build
 - `npm run build` -> Compiled successfully in 8.1s
