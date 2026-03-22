@@ -18,10 +18,11 @@ export function WhatsAppBot() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={openWhatsApp}
-      className="whatsapp-cta fixed bottom-6 right-6 z-1050 flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-colors"
+      className="whatsapp-cta fixed bottom-6 right-6 z-1050 flex h-14 w-14 items-center justify-center rounded-full text-inverse shadow-lg transition-colors"
       title="Chat with us on WhatsApp"
     >
       <MessageCircle className="w-7 h-7" />
     </motion.button>
   );
 }
+

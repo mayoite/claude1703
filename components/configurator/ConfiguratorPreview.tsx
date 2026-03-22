@@ -25,7 +25,7 @@ export function ConfiguratorPreview() {
   return (
     <div className="w-full max-w-2xl space-y-6">
       {/* Preview Image */}
-      <div className="relative aspect-[4/3] bg-white border border-neutral-200 overflow-hidden">
+      <div className="relative aspect-[4/3] bg-panel border border-soft overflow-hidden">
         <Image
           src={previewImage}
           alt="Workstation Preview"
@@ -35,10 +35,10 @@ export function ConfiguratorPreview() {
         />
         {/* Overlay Info */}
         {config.layout && (
-          <div className="absolute bottom-0 left-0 right-0 bg-neutral-900/90 backdrop-blur-sm text-white p-4">
+          <div className="absolute bottom-0 left-0 right-0 bg-inverse/90 backdrop-blur-sm text-inverse p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs uppercase tracking-wide text-neutral-400">
+                <p className="text-xs uppercase tracking-wide text-subtle">
                   Selected Layout
                 </p>
                 <p className="text-sm font-medium">
@@ -46,7 +46,7 @@ export function ConfiguratorPreview() {
                 </p>
               </div>
               <div className="text-right">
-                <p className="text-xs uppercase tracking-wide text-neutral-400">
+                <p className="text-xs uppercase tracking-wide text-subtle">
                   Capacity
                 </p>
                 <p className="text-sm font-medium">
@@ -59,32 +59,32 @@ export function ConfiguratorPreview() {
       </div>
 
       {/* Configuration Summary */}
-      <div className="bg-white border border-neutral-200 p-6 space-y-3">
-        <h3 className="text-sm font-medium uppercase tracking-wide text-neutral-400">
+      <div className="bg-panel border border-soft p-6 space-y-3">
+        <h3 className="text-sm font-medium uppercase tracking-wide text-subtle">
           Current Selection
         </h3>
         <div className="space-y-2 text-sm">
           <div className="flex justify-between">
-            <span className="text-neutral-600">Type:</span>
+            <span className="text-muted">Type:</span>
             <span className="font-medium capitalize">
               {config.furnitureType}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-neutral-600">Seating:</span>
+            <span className="text-muted">Seating:</span>
             <span className="font-medium capitalize">
               {config.seatingType} {config.seatingCount}-seater
             </span>
           </div>
           {config.topFinish && (
             <div className="flex justify-between">
-              <span className="text-neutral-600">Finish:</span>
+              <span className="text-muted">Finish:</span>
               <span className="font-medium">{config.topFinish}</span>
             </div>
           )}
           {config.hasReturnPartition && (
             <div className="flex justify-between">
-              <span className="text-neutral-600">Return Partition:</span>
+              <span className="text-muted">Return Partition:</span>
               <span className="font-medium">Yes</span>
             </div>
           )}
@@ -93,3 +93,4 @@ export function ConfiguratorPreview() {
     </div>
   );
 }
+

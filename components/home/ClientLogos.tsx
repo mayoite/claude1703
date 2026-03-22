@@ -35,10 +35,10 @@ export function ClientLogos() {
           <p className="scheme-text-muted text-sm tracking-[0.3em] uppercase mb-4">
             Why choose us
           </p>
-          <h2 className="font-slogan text-5xl mb-6 text-neutral-900">
+          <h2 className="font-slogan text-5xl mb-6 text-strong">
             We have the answers.
           </h2>
-          <p className="text-xl text-neutral-600 leading-relaxed max-w-2xl">
+          <p className="text-xl text-muted leading-relaxed max-w-2xl">
             As a leading name in the Indian office furniture industry, we offer
             innovative, functional and aesthetically pleasing products of
             outstanding quality — also as customized special solutions.
@@ -48,16 +48,16 @@ export function ClientLogos() {
 
       {/* Value pillars — 3 columns with top border like OandO */}
       <div className="container mx-auto px-6 lg:px-12 pt-16 pb-24">
-        <div className="grid md:grid-cols-3 gap-12 md:gap-0 md:divide-x divide-neutral-200">
+        <div className="grid md:grid-cols-3 gap-12 md:gap-0 md:divide-x divide-soft">
           {valuePillars.map((pillar) => (
             <div
               key={pillar.title}
               className="px-0 md:px-10 first:pl-0 last:pr-0 py-4"
             >
-              <h4 className="mb-4 text-3xl font-light text-neutral-900">
+              <h4 className="mb-4 text-3xl font-light text-strong">
                 {pillar.title}
               </h4>
-              <p className="text-xl text-neutral-600 leading-relaxed mb-6">
+              <p className="text-xl text-muted leading-relaxed mb-6">
                 {pillar.description}
               </p>
               <Link

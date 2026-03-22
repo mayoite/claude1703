@@ -87,41 +87,41 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
           transition={{ type: "tween", duration: 0.3, ease: "circOut" }}
-          className="fixed inset-0 bg-neutral-50 z-1100 flex flex-col overflow-hidden"
+          className="fixed inset-0 bg-hover z-1100 flex flex-col overflow-hidden"
         >
           {/* App-like Header */}
-          <div className="flex items-center justify-between px-6 h-16 bg-white border-b border-neutral-100 shrink-0">
+          <div className="flex items-center justify-between px-6 h-16 bg-panel border-b border-soft shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">O</span>
+                <span className="text-inverse font-bold text-sm">O</span>
               </div>
-              <span className="text-lg font-semibold text-neutral-900">
+              <span className="text-lg font-semibold text-strong">
                 Menu
               </span>
             </div>
             <button
               onClick={onClose}
-              className="w-11 h-11 flex items-center justify-center bg-white hover:bg-neutral-100 rounded-xl transition-colors shadow-sm"
+              className="w-11 h-11 flex items-center justify-center bg-panel hover:bg-hover rounded-xl transition-colors shadow-sm"
               aria-label="Close mobile menu"
               title="Close"
             >
-              <X className="w-5 h-5 text-neutral-700" />
+              <X className="w-5 h-5 text-body" />
             </button>
           </div>
 
           {/* Scrollable Content */}
-          <div className="flex-1 overflow-y-auto bg-white">
+          <div className="flex-1 overflow-y-auto bg-panel">
             <div className="flex flex-col min-h-full">
               {/* App-like Search Bar */}
               <div className="px-6 py-6">
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400">
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-subtle">
                     <Search className="w-full h-full" />
                   </div>
                   <input
                     type="text"
                     placeholder="Search furniture..."
-                    className="w-full h-12 pl-11 pr-4 bg-white border border-neutral-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 text-base"
+                    className="w-full h-12 pl-11 pr-4 bg-panel border border-soft rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 text-base"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
@@ -145,13 +145,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                           className="block group min-h-11 py-2"
                         >
                           <div className="flex items-center justify-between">
-                            <span className="text-2xl font-light text-neutral-900 group-hover:text-primary transition-colors">
+                            <span className="text-2xl font-light text-strong group-hover:text-primary transition-colors">
                               {link.label}
                             </span>
-                            <ChevronRight className="w-5 h-5 text-neutral-400 group-hover:text-primary transition-colors" />
+                            <ChevronRight className="w-5 h-5 text-subtle group-hover:text-primary transition-colors" />
                           </div>
                           {link.description && (
-                            <p className="text-sm text-neutral-500 mt-1">
+                            <p className="text-sm text-muted mt-1">
                               {link.description}
                             </p>
                           )}
@@ -172,7 +172,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       href={category.href}
                       prefetch={false}
                       onClick={onClose}
-                      className="text-sm text-neutral-700 hover:text-primary transition-colors min-h-11 py-2 flex items-center"
+                      className="text-sm text-body hover:text-primary transition-colors min-h-11 py-2 flex items-center"
                     >
                       {category.label}
                     </Link>
@@ -181,7 +181,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </div>
 
               {/* Divider with Logo Mark background idea if needed, otherwise simplified */}
-              <div className="h-px bg-neutral-100 mx-6 mb-8" />
+              <div className="border-t border-soft mx-6 mb-8" />
 
               {/* Secondary Navigation */}
               <nav className="px-6 pb-8">
@@ -197,7 +197,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                           href={link.href}
                           prefetch={false}
                           onClick={onClose}
-                          className="text-base text-neutral-600 hover:text-neutral-900 transition-colors min-h-11 flex items-center"
+                          className="text-base text-muted hover:text-strong transition-colors min-h-11 flex items-center"
                         >
                           {link.label}
                         </Link>
@@ -210,18 +210,18 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </div>
 
           {/* App-like Footer */}
-          <div className="bg-white border-t border-neutral-100 shrink-0 sticky bottom-0 z-50 px-6 py-4 flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+          <div className="bg-panel border-t border-soft shrink-0 sticky bottom-0 z-50 px-6 py-4 flex items-center justify-between shadow-[0_-4px_20px_var(--overlay-inverse-06)]">
             <Link
               href="/contact"
               prefetch={false}
               onClick={onClose}
-              className="bg-neutral-900 text-white font-semibold text-sm h-12 px-6 rounded-sm flex items-center justify-center hover:bg-neutral-800 transition-colors w-full sm:w-auto"
+              className="bg-inverse text-inverse font-semibold text-sm h-12 px-6 rounded-sm flex items-center justify-center hover:bg-inverse transition-colors w-full sm:w-auto"
             >
               Get Quote
             </Link>
-            <div className="hidden sm:flex items-center gap-4 text-neutral-500">
+            <div className="hidden sm:flex items-center gap-4 text-muted">
               <button
-                className="flex items-center gap-2 hover:text-neutral-900 transition-colors"
+                className="flex items-center gap-2 hover:text-strong transition-colors"
                 aria-label="Change language"
               >
                 <Globe className="w-4 h-4" />
@@ -234,4 +234,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     </AnimatePresence>
   );
 }
+
+
 

@@ -2,13 +2,10 @@
 @import "./theme-tokens.css";
 @import "./theme-utilities.css";
 @import "./typography.css";
-@import "./color-contrast.css";
-@import "./product-viewer.css";
-@import "./catalog.css";
-@import "./configurator.css";
-@import "./custom-components.css";
 @import "./homepage.css";
-@import "./theme-overrides.css";
+@import "./planner.css";
+@import "./products.css";
+@import "./secondary.css";
 
 @layer base {
   :root {
@@ -43,11 +40,5 @@
   :focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
-  }
-}
-
-@layer components {
-  .planner-input {
-    @apply w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-slate-900;
   }
 }

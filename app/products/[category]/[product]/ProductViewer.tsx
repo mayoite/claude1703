@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { createElement, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import type {
   CompatProduct as Product,
@@ -391,20 +391,20 @@ export function ProductViewer({
     });
 
   return (
-    <section className="bg-(--surface-page) min-h-screen pb-24 sm:pb-28 lg:pb-0">
+    <section className="pdp-page min-h-screen pb-24 sm:pb-28 lg:pb-0">
       {/* Breadcrumb bar */}
       <div className="pdp-breadcrumb-bar">
         <div className="pdp-breadcrumb container flex h-10 items-center gap-1.5 px-6 2xl:px-0">
           <Link
             href="/products"
-            className="hover:text-neutral-900 transition-colors"
+            className="hover:text-strong transition-colors"
           >
             Products
           </Link>
           <ChevronRight className="w-3 h-3" />
           <Link
             href={categoryRouteWithContext}
-            className="hover:text-neutral-900 transition-colors"
+            className="hover:text-strong transition-colors"
           >
             {categoryName}
           </Link>
@@ -417,7 +417,7 @@ export function ProductViewer({
 
       <div className="pdp-shell">
         {/* Left: image gallery */}
-        <div className="pdp-media-pane lg:w-[58%] xl:w-[62%]">
+        <div className="pdp-media-pane pdp-media-column">
           <div className="mx-auto flex-1 w-full max-w-200 p-4 lg:p-8">
             <ProductGallery
               images={uniqueImages}
@@ -426,7 +426,7 @@ export function ProductViewer({
           </div>
           {/* 3D viewer toggle wrapper */}
           {hasModelPath && (
-            <div className="relative w-full aspect-video border-t scheme-border bg-(--surface-soft) group">
+            <div className="pdp-viewer-shell group">
               <div className="absolute top-4 left-4 z-20 flex gap-2">
                 <button
                   type="button"
@@ -436,9 +436,9 @@ export function ProductViewer({
                   }}
                   disabled={!isModelAvailable}
                   className={clsx(
-                    "pdp-chip bg-(--surface-glass-strong) px-3 py-1.5 backdrop-blur",
+                    "pdp-chip pdp-chip--viewer-toggle px-3 py-1.5 backdrop-blur",
                     isModelAvailable
-                      ? "scheme-text-body hover:bg-neutral-900 hover:text-white transition-colors"
+                      ? "scheme-text-body hover:bg-inverse hover:text-inverse transition-colors"
                       : "scheme-text-subtle cursor-not-allowed",
                   )}
                 >
@@ -477,21 +477,15 @@ export function ProductViewer({
                     />
                   </div>
                   <div className="block md:hidden w-full h-full">
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: `
-                      <model-viewer
-                        src="${modelPath}"
-                        ar
-                        ios-src="${modelPath.replace(".glb", ".usdz")}"
-                        camera-controls
-                        shadow-intensity="1"
-                        alt="3D model of ${displayName}"
-                        style="width: 100%; height: 100%;"
-                      ></model-viewer>
-                    `,
-                      }}
-                    ></div>
+                    {createElement("model-viewer", {
+                      src: modelPath,
+                      ar: true,
+                      "ios-src": modelPath.replace(".glb", ".usdz"),
+                      "camera-controls": true,
+                      "shadow-intensity": "1",
+                      alt: `3D model of ${displayName}`,
+                      className: "pdp-model-viewer",
+                    })}
                   </div>
                 </div>
               ) : null}
@@ -500,11 +494,11 @@ export function ProductViewer({
         </div>
 
         {/* Right: details panel */}
-        <div className="pdp-detail-pane lg:sticky lg:top-[112px] lg:h-[calc(100vh-112px)] lg:w-[42%] xl:w-[38%]">
+        <div className="pdp-detail-pane pdp-detail-column">
           <div className="max-w-sm mx-auto lg:max-w-none">
             {/* Title block */}
             <div className="mb-8">
-              <h1 className="mb-5 text-4xl font-light leading-[1.05] tracking-tight scheme-text-strong sm:text-5xl">
+              <h1 className="pdp-title mb-5 scheme-text-strong">
                 {displayName}
               </h1>
               {shortOverview ? (
@@ -579,7 +573,7 @@ export function ProductViewer({
 
             {/* Variant swatches */}
             {product.variants && product.variants.length > 0 && (
-              <div className="pt-7 border-t border-(--border-soft) mb-8">
+              <div className="pdp-divider pt-7 mb-8">
                 <div className="flex items-center justify-between mb-4">
                   <p className="pdp-section-label">
                     {PDP_ROUTE_COPY.ctas.configuration}
@@ -598,10 +592,10 @@ export function ProductViewer({
                         onClick={() => handleVariantChange(variant)}
                         title={variant.variantName}
                         className={clsx(
-                          "w-11 h-11 rounded-full overflow-hidden border-2 transition-all duration-200",
+                          "pdp-swatch",
                           isSelected
-                            ? "border-neutral-900 ring-2 ring-neutral-900 ring-offset-2 scale-110"
-                            : "scheme-border hover:border-neutral-500 hover:scale-105",
+                            ? "pdp-swatch--active"
+                            : "pdp-swatch--idle",
                         )}
                       >
                         <Image
@@ -652,8 +646,8 @@ export function ProductViewer({
                     className={clsx(
                       "mb-2 flex w-full items-center justify-between rounded-2xl border px-6 py-4 transition-colors",
                       inCompare
-                        ? "border-primary bg-primary text-white hover:bg-primary-hover"
-                        : "scheme-border bg-white scheme-text-body hover:border-primary hover:text-primary",
+                        ? "border-primary bg-primary text-inverse hover:bg-primary-hover"
+                        : "scheme-border bg-panel scheme-text-body hover:border-primary hover:text-primary",
                     )}
                   >
                     <span className="pdp-action-label">
@@ -673,22 +667,13 @@ export function ProductViewer({
                   </span>
                   <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
                 </Link>
-                <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                <div className="mt-2 grid gap-2">
                   <Link
                     href="/planning"
                     className="pdp-cta-secondary group"
                   >
                     <span className="pdp-action-label">
                       {PDP_ROUTE_COPY.ctas.planning}
-                    </span>
-                    <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link
-                    href="/downloads"
-                    className="pdp-cta-secondary group"
-                  >
-                    <span className="pdp-action-label">
-                      {PDP_ROUTE_COPY.ctas.resourceDesk}
                     </span>
                     <ArrowLeft className="w-4 h-4 rotate-180 transition-transform group-hover:translate-x-1" />
                   </Link>
@@ -700,14 +685,14 @@ export function ProductViewer({
                       navigator.clipboard.writeText(window.location.href);
                     }}
                     aria-label={PDP_ROUTE_COPY.ctas.copyLink}
-                    className="pdp-copy-link inline-flex items-center gap-2 text-sm scheme-text-body transition-colors hover:text-neutral-900"
+                    className="pdp-copy-link inline-flex items-center gap-2 text-sm scheme-text-body transition-colors hover:text-strong"
                   >
                     <Share2 className="w-3.5 h-3.5" />
                     {PDP_ROUTE_COPY.ctas.copyLink}
                   </button>
                   <Link
                     href={categoryRouteWithContext}
-                    className="pdp-action-label mt-3 inline-flex items-center gap-2 scheme-text-muted transition-colors hover:text-neutral-900"
+                    className="pdp-action-label mt-3 inline-flex items-center gap-2 scheme-text-muted transition-colors hover:text-strong"
                   >
                     <ArrowLeft className="h-3.5 w-3.5" />
                     {returnLabel}
@@ -717,7 +702,7 @@ export function ProductViewer({
             </div>
 
             {useCasePreview.length > 0 && (
-              <div className="mt-8 border-t border-(--border-soft) pt-7">
+              <div className="mt-8 pdp-divider pt-7">
                 <h2 className="mb-4 text-xl font-semibold scheme-text-strong">
                   {PDP_ROUTE_COPY.summary.useCases}
                 </h2>
@@ -735,7 +720,7 @@ export function ProductViewer({
             )}
 
             {/* Specifications */}
-            <div className="mt-8 border-t border-(--border-soft) pt-7">
+            <div className="mt-8 pdp-divider pt-7">
               <h2 className="mb-4 text-xl font-semibold scheme-text-strong">
                 {PDP_ROUTE_COPY.ctas.specifications}
               </h2>
@@ -764,7 +749,7 @@ export function ProductViewer({
                     {features.slice(0, 8).map((f: string, i: number) => (
                       <li
                         key={i}
-                        className="flex min-h-full items-start gap-3 rounded-2xl scheme-border bg-(--surface-soft) px-4 py-3 text-sm leading-relaxed scheme-text-body"
+                        className="pdp-feature-item"
                       >
                         <span className="scheme-text-subtle mt-0.5 shrink-0">-</span>
                         <span>{f}</span>
@@ -775,7 +760,7 @@ export function ProductViewer({
               )}
 
               {inlineSpecs.length > 0 && (
-                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                <div className="mt-7 pdp-divider pt-7">
                   <h3 className="pdp-section-label mb-3 scheme-text-muted">
                     {PDP_ROUTE_COPY.ctas.technicalDetails}
                   </h3>
@@ -798,16 +783,16 @@ export function ProductViewer({
               )}
 
               {fullOverview ? (
-                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                <div className="mt-7 pdp-divider pt-7">
                   <h3 className="pdp-section-label mb-3 scheme-text-muted">Overview</h3>
-                  <div className="rounded-2xl scheme-border bg-(--surface-soft) px-4 py-4 text-sm leading-relaxed scheme-text-body">
+                  <div className="pdp-overview-panel">
                     {fullOverview}
                   </div>
                 </div>
               ) : null}
 
               {materials.length > 0 && (
-                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                <div className="mt-7 pdp-divider pt-7">
                   <h3 className="pdp-section-label mb-3 scheme-text-muted">Materials</h3>
                   <div className="pdp-inline-list">
                     {materials.map((material) => (
@@ -823,7 +808,7 @@ export function ProductViewer({
               )}
 
               {finishOptions.length > 0 && (
-                <div className="mt-7 border-t border-(--border-soft) pt-7">
+                <div className="mt-7 pdp-divider pt-7">
                   <h3 className="pdp-section-label mb-3 scheme-text-muted">Finish Options</h3>
                   <div className="pdp-inline-list">
                     {finishOptions.map((finish) => (
@@ -847,12 +832,8 @@ export function ProductViewer({
       </div>
       <CompareDock />
 
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `.scrollbar-hide::-webkit-scrollbar{display:none}.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}`,
-        }}
-      />
     </section>
   );
 }
+
 

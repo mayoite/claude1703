@@ -47,7 +47,7 @@ export function VideoSection({
   return (
     <section
       ref={containerRef}
-      className={`relative w-full py-16 md:py-20 overflow-hidden ${lightMode ? "bg-neutral-100" : "bg-neutral-900"}`}
+      className={`relative w-full py-16 md:py-20 overflow-hidden ${lightMode ? "bg-hover" : "bg-inverse"}`}
     >
       {/* Background Video or Image */}
       <div className="absolute inset-0 z-0">
@@ -72,7 +72,7 @@ export function VideoSection({
               aria-label="Play Video"
             >
               <div
-                className={`w-20 h-20 flex items-center justify-center rounded-full border-2 transition-all duration-300 transform group-hover:scale-110 ${lightMode ? "border-neutral-900 bg-white/20 hover:bg-neutral-900 text-neutral-900 hover:text-white" : "border-white bg-white/20 hover:bg-white text-white hover:text-neutral-900"}`}
+                className={`w-20 h-20 flex items-center justify-center rounded-full border-2 transition-all duration-300 transform group-hover:scale-110 ${lightMode ? "border-strong bg-panel/20 hover:bg-inverse text-strong hover:text-inverse" : "border-inverse bg-panel/20 hover:bg-panel text-inverse hover:text-strong"}`}
               >
                 <Play className="w-8 h-8 fill-current" />
               </div>
@@ -90,24 +90,24 @@ export function VideoSection({
         ) : (
           /* Fallback generic background if no video is provided yet */
           <div
-            className={`w-full h-full ${lightMode ? "bg-neutral-200" : "bg-neutral-800"} animate-pulse`}
+            className={`w-full h-full ${lightMode ? "bg-soft" : "bg-inverse"} animate-pulse`}
           />
         )}
         {/* Overlay Gradient */}
         <div
-          className={`absolute inset-0 ${lightMode ? "bg-white/45" : "bg-black/40"}`}
+          className={`absolute inset-0 ${lightMode ? "bg-panel/45" : "bg-overlay"}`}
         />
       </div>
 
       <div className="container relative z-10 px-6 2xl:px-0 h-full flex flex-col justify-center pt-10 md:pt-6 pointer-events-none">
         <div className="max-w-4xl space-y-6 pointer-events-auto">
           <h2
-            className={`text-sm md:text-sm lg:text-sm font-light leading-[1.08] tracking-tight text-balance ${lightMode ? "text-neutral-900" : "text-white"}`}
+            className={`text-sm md:text-sm lg:text-sm font-light leading-[1.08] tracking-tight text-balance ${lightMode ? "text-strong" : "text-inverse"}`}
           >
             {title}
           </h2>
           <p
-            className={`text-sm font-light leading-relaxed max-w-2xl ${lightMode ? "text-neutral-700" : "text-neutral-200"}`}
+            className={`text-sm font-light leading-relaxed max-w-2xl ${lightMode ? "text-body" : "text-inverse-body"}`}
           >
             {description}
           </p>
@@ -116,8 +116,8 @@ export function VideoSection({
             <Link
               href={buttonLink}
               className={`group inline-flex items-center gap-4 pb-2 border-b transition-colors ${lightMode
-                  ? "text-neutral-900 border-neutral-900 hover:text-primary hover:border-primary-hover"
-                  : "text-white border-white hover:text-primary hover:border-primary-hover"
+                  ? "text-strong border-strong hover:text-primary hover:border-primary-hover"
+                  : "text-inverse border-inverse hover:text-primary hover:border-primary-hover"
                 }`}
             >
               <span className="text-sm font-semibold uppercase tracking-wide">
@@ -133,3 +133,5 @@ export function VideoSection({
     </section>
   );
 }
+
+

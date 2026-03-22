@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { OneAndOnlyLogo } from "@/components/ui/Logo";
-import { FooterConversionPanel } from "@/components/site/FooterConversionPanel";
 import {
   buildMailtoHref,
   SITE_CONTACT,
@@ -54,8 +53,6 @@ export function SiteFooter() {
 
   return (
     <footer className="site-footer w-full">
-      <FooterConversionPanel />
-
       <div className="container px-6 py-12 2xl:px-0 md:py-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-7">
           <div className="flex flex-col gap-5 md:col-span-1">
@@ -69,16 +66,15 @@ export function SiteFooter() {
 
             <div className="site-footer__meta typ-body-sm space-y-4">
               <div>
-                <p className="site-footer__heading typ-overline mb-1">Quotes and planning</p>
-                <a href={toTelHref(SITE_CONTACT.salesPhone)} className={`site-footer__link ${footerInteractiveClass} block`}>
-                  {SITE_CONTACT.salesPhone}
-                </a>
-              </div>
-              <div>
-                <p className="site-footer__heading typ-overline mb-1">Support and enquiries</p>
-                <a href={toTelHref(SITE_CONTACT.supportPhone)} className={`site-footer__link ${footerInteractiveClass} block`}>
-                  {SITE_CONTACT.supportPhone}
-                </a>
+                <p className="site-footer__heading typ-overline mb-1">Sales and support</p>
+                <div className="flex flex-col gap-1">
+                  <a href={toTelHref(SITE_CONTACT.salesPhone)} className={`site-footer__link ${footerInteractiveClass} block`}>
+                    Sales: {SITE_CONTACT.salesPhone}
+                  </a>
+                  <a href={toTelHref(SITE_CONTACT.supportPhone)} className={`site-footer__link ${footerInteractiveClass} block`}>
+                    Support: {SITE_CONTACT.supportPhone}
+                  </a>
+                </div>
               </div>
               <div>
                 <p className="site-footer__heading typ-overline mb-1">Email</p>

@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
+import { TrustStrip } from "@/components/home/TrustStrip";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { SOLUTIONS_DELIVERY_STEPS, SOLUTIONS_PAGE_COPY } from "@/data/site/routeCopy";
 import { buildPageMetadata } from "@/data/site/seo";
+import { getBusinessStats } from "@/lib/businessStats";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = buildPageMetadata(SITE_URL, {
@@ -13,9 +15,11 @@ export const metadata: Metadata = buildPageMetadata(SITE_URL, {
   path: "/solutions",
 });
 
-export default function SolutionsPage() {
+export default async function SolutionsPage() {
+  const { stats } = await getBusinessStats();
+
   return (
-    <section className="scheme-page flex min-h-screen flex-col items-center">
+    <section className="scheme-page flex min-h-screen flex-col">
       <Hero
         variant="small"
         title={SOLUTIONS_PAGE_COPY.heroTitle}
@@ -46,19 +50,9 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="scheme-section-soft scheme-border w-full border-y py-16">
+      <section className="home-section home-section--dark w-full py-14 md:py-18">
         <div className="container px-6 2xl:px-0">
-          <div className="stats-block grid grid-cols-2 gap-4 md:grid-cols-4">
-            {SOLUTIONS_PAGE_COPY.stats.map((item) => (
-              <div
-                key={item.label}
-                className="scheme-panel scheme-border rounded-[1.25rem] border p-5 text-center"
-              >
-                <p className="typ-stat text-primary">{item.value}</p>
-                <p className="stats-block__label mt-2">{item.label}</p>
-              </div>
-            ))}
-          </div>
+          <TrustStrip stats={stats} embedded showLogos={false} dark />
         </div>
       </section>
 
@@ -108,9 +102,6 @@ export default function SolutionsPage() {
               </Link>
               <Link href="/products" className="btn-outline">
                 {SOLUTIONS_PAGE_COPY.planningSecondaryCta}
-              </Link>
-              <Link href="/downloads" className="btn-outline">
-                {SOLUTIONS_PAGE_COPY.planningTertiaryCta}
               </Link>
             </div>
           </div>

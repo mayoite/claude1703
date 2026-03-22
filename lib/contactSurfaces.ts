@@ -27,13 +27,6 @@ const ROUTE_PREFIXES_WITH_DEDICATED_CONTACT_SURFACE = [
   "/products/",
 ] as const;
 
-const ROUTES_SUPPRESSING_FOOTER_CONVERSION_PANEL = new Set([
-  "/compare",
-  "/configurator",
-  "/contact",
-  "/quote-cart",
-]);
-
 const ROUTES_SUPPRESSING_FLOATING_QUICK_CONTACT = new Set([
   "/compare",
   "/configurator",
@@ -55,14 +48,6 @@ export function routeHasContactTeaser(pathname: string | null) {
   }
 
   return ROUTES_WITH_CONTACT_TEASER.has(pathname) || matchesDedicatedContactPrefix(pathname);
-}
-
-export function routeSuppressesFooterConversionPanel(pathname: string | null) {
-  if (!pathname) {
-    return false;
-  }
-
-  return ROUTES_SUPPRESSING_FOOTER_CONVERSION_PANEL.has(pathname) || matchesDedicatedContactPrefix(pathname);
 }
 
 export function routeSuppressesFloatingQuickContact(pathname: string | null) {

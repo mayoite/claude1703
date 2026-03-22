@@ -158,7 +158,7 @@ export function AdvancedBot() {
             closeBot();
           }
         }}
-        className="whatsapp-cta fixed bottom-20 right-3 z-40 inline-flex h-11 items-center gap-1.5 px-3 text-white shadow-xl transition-colors sm:bottom-24 sm:right-6 sm:h-12 sm:gap-2 sm:px-4"
+        className="whatsapp-cta fixed bottom-20 right-3 z-40 inline-flex h-11 items-center gap-1.5 px-3 text-inverse shadow-xl transition-colors sm:bottom-24 sm:right-6 sm:h-12 sm:gap-2 sm:px-4"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open WhatsApp project assistant"
@@ -168,7 +168,7 @@ export function AdvancedBot() {
         <span className="hidden sm:inline text-xs font-semibold tracking-wide">
           WhatsApp
         </span>
-        <span className="hidden sm:inline h-2 w-2 rounded-full bg-white/90" />
+        <span className="hidden sm:inline h-2 w-2 rounded-full bg-panel/90" />
       </motion.button>
 
       <AnimatePresence>
@@ -178,14 +178,14 @@ export function AdvancedBot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="fixed z-40 right-3 bottom-32 sm:right-6 sm:bottom-40 w-[min(22rem,calc(100vw-1.5rem))] sm:w-80 rounded-2xl bg-white shadow-2xl border border-neutral-200"
+            className="fixed z-40 right-3 bottom-32 sm:right-6 sm:bottom-40 w-[min(22rem,calc(100vw-1.5rem))] sm:w-80 rounded-2xl bg-panel shadow-2xl border border-soft"
           >
-            <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-200">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-soft">
               <div>
-                <p className="text-sm font-semibold text-neutral-900">
+                <p className="text-sm font-semibold text-strong">
                   WhatsApp Project Assistant
                 </p>
-                <p className="text-xs text-neutral-500">
+                <p className="text-xs text-muted">
                   Share your requirement in under 60 seconds
                 </p>
               </div>
@@ -193,7 +193,7 @@ export function AdvancedBot() {
                 onClick={closeBot}
                 aria-label="Close chat assistant"
                 title="Close chat assistant"
-                className="p-1 rounded-full hover:bg-neutral-100 text-neutral-500"
+                className="p-1 rounded-full hover:bg-hover text-muted"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -202,7 +202,7 @@ export function AdvancedBot() {
             <div className="px-4 py-3 space-y-3 text-sm">
               {step === 0 && (
                 <div className="space-y-3">
-                  <p className="text-neutral-800">
+                  <p className="text-strong">
                     Which product family or project type is this for?
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -212,8 +212,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "workstations"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Workstations
@@ -222,8 +222,8 @@ export function AdvancedBot() {
                       onClick={() => setState({ ...state, useCase: "seating" })}
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "seating"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Seating
@@ -232,8 +232,8 @@ export function AdvancedBot() {
                       onClick={() => setState({ ...state, useCase: "meeting" })}
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "meeting"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Meeting tables
@@ -242,8 +242,8 @@ export function AdvancedBot() {
                       onClick={() => setState({ ...state, useCase: "storage" })}
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "storage"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Storage
@@ -254,8 +254,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "acoustics"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Acoustics
@@ -266,8 +266,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "reception"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Reception & lounge
@@ -278,8 +278,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "cafeteria"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Cafeteria
@@ -290,8 +290,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "full-office"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Full office
@@ -300,8 +300,8 @@ export function AdvancedBot() {
                       onClick={() => setState({ ...state, useCase: "other" })}
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.useCase === "other"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Other
@@ -312,7 +312,7 @@ export function AdvancedBot() {
 
               {step === 1 && (
                 <div className="space-y-3">
-                  <p className="text-neutral-800">
+                  <p className="text-strong">
                     Roughly how many seats or units do you need?
                   </p>
                   <input
@@ -322,14 +322,14 @@ export function AdvancedBot() {
                       setState({ ...state, seats: e.target.value })
                     }
                     placeholder="e.g. 12 workstations, 30 chairs"
-                    className="w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                    className="w-full rounded-md border border-muted px-3 py-2 text-sm focus:outline-none focus-ring-theme focus:border-primary"
                   />
                 </div>
               )}
 
               {step === 2 && (
                 <div className="space-y-3">
-                  <p className="text-neutral-800">
+                  <p className="text-strong">
                     Tell us about your company and project timing.
                   </p>
                   <input
@@ -339,7 +339,7 @@ export function AdvancedBot() {
                       setState({ ...state, companyName: e.target.value })
                     }
                     placeholder="Company name"
-                    className="w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                    className="w-full rounded-md border border-muted px-3 py-2 text-sm focus:outline-none focus-ring-theme focus:border-primary"
                   />
                   <input
                     type="text"
@@ -348,7 +348,7 @@ export function AdvancedBot() {
                       setState({ ...state, city: e.target.value })
                     }
                     placeholder="City and state"
-                    className="w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                    className="w-full rounded-md border border-muted px-3 py-2 text-sm focus:outline-none focus-ring-theme focus:border-primary"
                   />
                   <div className="flex flex-wrap gap-2">
                     <button
@@ -357,8 +357,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.timeline === "immediately"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       ASAP (0–4 weeks)
@@ -369,8 +369,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.timeline === "one-to-three"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       1–3 months
@@ -381,8 +381,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.timeline === "three-to-six"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       3–6 months
@@ -393,8 +393,8 @@ export function AdvancedBot() {
                       }
                       className={`px-3 py-1.5 rounded-full border text-xs ${
                         state.timeline === "exploring"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Just exploring
@@ -406,7 +406,7 @@ export function AdvancedBot() {
                     onChange={(e) =>
                       setState({ ...state, budget: e.target.value })
                     }
-                    className="w-full rounded-md border border-neutral-200 px-3 py-2 text-xs text-neutral-700 focus:outline-none focus:ring-1 focus:ring-amber-400 focus:border-amber-400"
+                    className="w-full rounded-md border border-soft px-3 py-2 text-xs text-body focus:outline-none focus-ring-theme focus:border-primary"
                     aria-label="Your approximate budget"
                     placeholder="e.g. ₹5,00,000"
                     title="Your approximate budget"
@@ -416,7 +416,7 @@ export function AdvancedBot() {
 
               {step === 3 && (
                 <div className="space-y-3">
-                  <p className="text-neutral-800">How should we contact you?</p>
+                  <p className="text-strong">How should we contact you?</p>
                   <div className="flex gap-2">
                     <button
                       onClick={() =>
@@ -424,8 +424,8 @@ export function AdvancedBot() {
                       }
                       className={`flex-1 px-3 py-1.5 rounded-full border text-xs ${
                         state.contactMethod === "whatsapp"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       WhatsApp
@@ -436,8 +436,8 @@ export function AdvancedBot() {
                       }
                       className={`flex-1 px-3 py-1.5 rounded-full border text-xs ${
                         state.contactMethod === "email"
-                          ? "bg-neutral-900 text-white border-neutral-900"
-                          : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
+                          ? "bg-inverse text-inverse border-inverse"
+                          : "border-muted text-body hover:border-strong"
                       }`}
                     >
                       Email
@@ -454,14 +454,14 @@ export function AdvancedBot() {
                         ? "Your email address"
                         : "Your WhatsApp number with country code"
                     }
-                    className="w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                    className="w-full rounded-md border border-muted px-3 py-2 text-sm focus:outline-none focus-ring-theme focus:border-primary"
                   />
                 </div>
               )}
 
               {step === 4 && (
                 <div className="space-y-3">
-                  <p className="text-neutral-800">
+                  <p className="text-strong">
                     Any additional notes or special requirements?
                   </p>
                   <textarea
@@ -471,13 +471,13 @@ export function AdvancedBot() {
                     }
                     rows={3}
                     placeholder="Optional details about layout, timelines, or brands."
-                    className="w-full rounded-md border border-neutral-300 px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                    className="w-full rounded-md border border-muted px-3 py-2 text-sm resize-none focus:outline-none focus-ring-theme focus:border-primary"
                   />
-                  <div className="rounded-md bg-neutral-50 border border-neutral-200 px-3 py-2 text-[11px] leading-snug text-neutral-700">
+                  <div className="rounded-md bg-hover border border-soft px-3 py-2 text-[11px] leading-snug text-body">
                     <p className="font-medium mb-1">
                       Preview of what we receive:
                     </p>
-                    <pre className="whitespace-pre-wrap text-[10px] text-neutral-700">
+                    <pre className="whitespace-pre-wrap text-[10px] text-body">
                       {summary}
                     </pre>
                   </div>
@@ -486,14 +486,14 @@ export function AdvancedBot() {
                       href={whatsappUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="whatsapp-cta inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-white transition-colors"
+                      className="whatsapp-cta inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-inverse transition-colors"
                     >
                       Send via WhatsApp
                       <ArrowRight className="w-3 h-3" />
                     </a>
                     <a
                       href={mailtoUrl}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-neutral-900 px-3 py-1.5 text-xs font-medium text-neutral-900 hover:bg-neutral-900 hover:text-white transition-colors"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-inverse px-3 py-1.5 text-xs font-medium text-strong hover:bg-inverse hover:text-inverse transition-colors"
                     >
                       Send via Email
                       <ArrowRight className="w-3 h-3" />
@@ -503,10 +503,10 @@ export function AdvancedBot() {
               )}
             </div>
 
-            <div className="flex items-center justify-between px-4 py-3 border-t border-neutral-200">
+            <div className="flex items-center justify-between px-4 py-3 border-t border-soft">
               <button
                 onClick={handleBack}
-                className="text-xs text-neutral-600 hover:text-neutral-900"
+                className="text-xs text-muted hover:text-strong"
               >
                 {step === 0 ? "Close" : "Back"}
               </button>
@@ -516,8 +516,8 @@ export function AdvancedBot() {
                   disabled={!canGoNext}
                   className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium ${
                     canGoNext
-                      ? "bg-neutral-900 text-white hover:bg-neutral-800"
-                      : "bg-neutral-200 text-neutral-500 cursor-not-allowed"
+                      ? "bg-inverse text-inverse hover:bg-inverse"
+                      : "bg-hover text-muted cursor-not-allowed"
                   }`}
                 >
                   Next
@@ -527,7 +527,7 @@ export function AdvancedBot() {
               {step === 4 && (
                 <button
                   onClick={resetBot}
-                  className="text-xs text-neutral-500 hover:text-neutral-800"
+                  className="text-xs text-muted hover:text-strong"
                 >
                   Start over
                 </button>
@@ -539,4 +539,5 @@ export function AdvancedBot() {
     </>
   );
 }
+
 

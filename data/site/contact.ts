@@ -38,37 +38,6 @@ export const SITE_CONTACT = {
   ] satisfies SiteSocialLink[],
 } as const;
 
-export const FOOTER_CONVERSION_PANEL = {
-  eyebrow: "Start in the right lane",
-  title: "Need planning, documents, or a commercial next step?",
-  description:
-    "Use the planning route for layout guidance, the Resource Desk for packs and technical sheets, or contact sales when your team is ready to discuss scope and commercials.",
-  actions: [
-    {
-      label: "Guided Planner",
-      href: "/planning",
-      variant: "primary" as const,
-    },
-    {
-      label: "Open Resource Desk",
-      href: "/downloads",
-      variant: "secondary" as const,
-    },
-    {
-      label: "Contact sales",
-      href: "/contact",
-      variant: "secondary" as const,
-    },
-  ],
-  highlights: [
-    "Planning-led guidance",
-    "Resource Desk routing",
-    "Sales and support continuity",
-  ],
-  responseLine: "Patna-based team supporting Bihar, Jharkhand, and multi-city rollout briefs.",
-  whatsappPrompt: "Need help choosing the right planning, documentation, or sales lane?",
-} as const;
-
 export const SUPPORT_PHONE_DIGITS = "919031022875";
 export const SALES_PHONE_DIGITS = "919835630940";
 

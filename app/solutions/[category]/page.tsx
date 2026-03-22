@@ -83,7 +83,7 @@ export default async function SolutionsCategoryPage({
   return (
     <section className="container mx-auto px-6 py-24 text-center">
       <h1 className="text-4xl font-light mb-4">{entry.title}</h1>
-      <p className="text-neutral-500">{entry.description}</p>
+      <p className="text-muted">{entry.description}</p>
     </section>
   );
 }

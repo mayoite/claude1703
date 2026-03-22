@@ -46,11 +46,11 @@ export async function CategoryGrid() {
               <Link
                 key={category.id}
                 href={categoryHref}
-                className="group scheme-panel scheme-border relative block overflow-hidden rounded-[1.9rem] border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_-42px_rgba(18,48,66,0.24)]"
+                className="group scheme-panel scheme-border relative block overflow-hidden rounded-[1.9rem] border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_-42px_var(--overlay-inverse-24)]"
               >
                 <div className="scheme-section-soft scheme-border relative aspect-square overflow-hidden border-b">
                   <CategoryImage src={flagshipImage} alt="" />
-                  <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/8" />
+                  <div className="absolute inset-0 bg-[color:transparent] transition-colors duration-500 group-hover:bg-[color:var(--overlay-inverse-12)]" />
                 </div>
 
                 <div className="flex items-center justify-between gap-4 px-5 py-5 md:px-6 md:py-6">
@@ -85,3 +85,5 @@ export async function CategoryGrid() {
     </section>
   );
 }
+
+

@@ -21,17 +21,17 @@ type SizeOption = {
 };
 
 const DECORS: DecorColor[] = [
-  { id: "white", name: "Crystal White", hex: "#f5f5f5", priceMod: 0 },
-  { id: "oak", name: "Light Oak", hex: "#e6d0b3", priceMod: 50 },
-  { id: "walnut", name: "Walnut", hex: "#5d4037", priceMod: 80 },
-  { id: "black", name: "Graphite Black", hex: "#262626", priceMod: 20 },
+  { id: "white", name: "Crystal White", hex: "var(--color-ecru-50)", priceMod: 0 },
+  { id: "oak", name: "Light Oak", hex: "var(--color-ecru-300)", priceMod: 50 },
+  { id: "walnut", name: "Walnut", hex: "var(--color-ecru-900)", priceMod: 80 },
+  { id: "black", name: "Graphite Black", hex: "var(--color-dark-midnight-blue-900)", priceMod: 20 },
 ];
 
 const FRAMES: DecorColor[] = [
-  { id: "silver", name: "Silver", hex: "#e5e7eb", priceMod: 0 },
-  { id: "white", name: "White", hex: "#ffffff", priceMod: 0 },
-  { id: "black", name: "Black", hex: "#171717", priceMod: 0 },
-  { id: "chrome", name: "Chrome", hex: "#a3a3a3", priceMod: 100 },
+  { id: "silver", name: "Silver", hex: "var(--color-ocean-boat-blue-100)", priceMod: 0 },
+  { id: "white", name: "White", hex: "var(--color-ecru-50)", priceMod: 0 },
+  { id: "black", name: "Black", hex: "var(--color-dark-midnight-blue-950)", priceMod: 0 },
+  { id: "chrome", name: "Chrome", hex: "var(--color-ecru-500)", priceMod: 100 },
 ];
 
 const SIZES: SizeOption[] = [
@@ -97,13 +97,13 @@ export function Configurator() {
       {/* LEFT: 3D Scene */}
       <div
         ref={containerRef}
-        className={`w-full lg:w-2/3 bg-neutral-100 h-[500px] md:h-[600px] flex items-center justify-center relative overflow-hidden cursor-move ${isDragging ? "cursor-grabbing" : ""}`}
+        className={`w-full lg:w-2/3 bg-hover h-[500px] md:h-[600px] flex items-center justify-center relative overflow-hidden cursor-move ${isDragging ? "cursor-grabbing" : ""}`}
         onMouseDown={handleMouseDown}
       >
         {/* Background Grid */}
-        <div className="absolute inset-0 bg-neutral-100/50 bg-size-[40px_40px] bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] transform-3d perspective-[1000px] flex items-center justify-center pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[color:var(--surface-soft)] transform-3d perspective-[1000px] flex items-center justify-center pointer-events-none"></div>
 
-        <div className="absolute top-4 left-4 z-20 flex items-center gap-2 text-neutral-400 text-sm">
+        <div className="absolute top-4 left-4 z-20 flex items-center gap-2 text-subtle text-sm">
           <RotateCcw className="w-4 h-4" /> Drag to rotate
         </div>
 
@@ -137,7 +137,7 @@ export function Configurator() {
                 borderRadius: "4px",
               }}
             >
-              <div className="absolute inset-0 bg-linear-to-tr from-neutral-200 to-transparent opacity-50 pointer-events-none mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-[color:var(--overlay-panel-12)] opacity-40 pointer-events-none"></div>
             </div>
 
             {/* Thickness (Sides) - Simplified for performance */}
@@ -217,7 +217,7 @@ export function Configurator() {
         </motion.div>
 
         {/* Dimensions Label Overlay */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-neutral-500 text-xs tracking-widest bg-white/90 px-4 py-2 backdrop-blur-sm border border-neutral-200">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted text-xs tracking-widest bg-[color:var(--overlay-panel-92)] px-4 py-2 backdrop-blur-sm border border-soft">
           W: {size.widthCm} | D: {size.depthCm}
         </div>
       </div>
@@ -226,7 +226,7 @@ export function Configurator() {
       <div className="w-full lg:w-1/3 space-y-10">
         <div>
           <h2 className="text-4xl font-light mb-2">WINEA PRO</h2>
-          <p className="text-neutral-500 font-light">
+          <p className="text-muted font-light">
             Ergonomic individual desk system
           </p>
           <div className="mt-6 text-5xl font-light text-primary">
@@ -238,7 +238,7 @@ export function Configurator() {
         <div className="space-y-8">
           {/* Size Selector */}
           <div className="space-y-3">
-            <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+            <label className="text-xs font-bold uppercase tracking-widest text-subtle">
               Dimensions
             </label>
             <div className="flex flex-wrap gap-2">
@@ -248,8 +248,8 @@ export function Configurator() {
                   onClick={() => setSize(opt)}
                   className={`px-4 py-3 border text-sm transition-all duration-300 ${
                     size.id === opt.id
-                      ? "border-neutral-900 bg-neutral-900 text-white"
-                      : "border-neutral-200 hover:border-neutral-900 text-neutral-700 bg-white"
+                      ? "border-inverse bg-inverse text-inverse"
+                      : "border-soft hover:border-inverse text-body bg-panel"
                   }`}
                 >
                   {opt.label}
@@ -260,7 +260,7 @@ export function Configurator() {
 
           {/* Decor Selector */}
           <div className="space-y-3">
-            <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+            <label className="text-xs font-bold uppercase tracking-widest text-subtle">
               Tabletop Decor
             </label>
             <div className="flex flex-wrap gap-3">
@@ -270,26 +270,26 @@ export function Configurator() {
                   onClick={() => setDecor(opt)}
                   className={`w-14 h-14 relative border transition-all duration-300 ${
                     decor.id === opt.id
-                      ? "border-neutral-900 scale-110 shadow-lg"
-                      : "border-neutral-200 hover:border-neutral-400"
+                      ? "border-inverse scale-110 shadow-lg"
+                      : "border-soft hover:border-strong"
                   }`}
                   style={{ backgroundColor: opt.hex }}
                   title={opt.name}
                 >
                   {decor.id === opt.id && (
-                    <span className="absolute inset-0 flex items-center justify-center text-white/50 mix-blend-difference">
+                    <span className="absolute inset-0 flex items-center justify-center text-inverse/50 mix-blend-difference">
                       <Check className="w-6 h-6 stroke-2" />
                     </span>
                   )}
                 </button>
               ))}
             </div>
-            <p className="text-sm text-neutral-600 italic">{decor.name}</p>
+            <p className="text-sm text-muted italic">{decor.name}</p>
           </div>
 
           {/* Frame Selector */}
           <div className="space-y-3">
-            <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+            <label className="text-xs font-bold uppercase tracking-widest text-subtle">
               Frame Color
             </label>
             <div className="flex flex-wrap gap-3">
@@ -299,30 +299,30 @@ export function Configurator() {
                   onClick={() => setFrame(opt)}
                   className={`w-14 h-14 relative border transition-all duration-300 ${
                     frame.id === opt.id
-                      ? "border-neutral-900 scale-110 shadow-lg"
-                      : "border-neutral-200 hover:border-neutral-400"
+                      ? "border-inverse scale-110 shadow-lg"
+                      : "border-soft hover:border-strong"
                   }`}
                   style={{ backgroundColor: opt.hex }}
                   title={opt.name}
                 >
                   {frame.id === opt.id && (
-                    <span className="absolute inset-0 flex items-center justify-center text-white/50 mix-blend-difference">
+                    <span className="absolute inset-0 flex items-center justify-center text-inverse/50 mix-blend-difference">
                       <Check className="w-6 h-6 stroke-2" />
                     </span>
                   )}
                 </button>
               ))}
             </div>
-            <p className="text-sm text-neutral-600 italic">{frame.name}</p>
+            <p className="text-sm text-muted italic">{frame.name}</p>
           </div>
         </div>
 
         {/* Actions */}
-        <div className="pt-8 border-t border-neutral-100 space-y-4">
-          <button className="w-full bg-primary text-white py-5 px-6 text-lg font-medium hover:bg-neutral-900 transition-colors uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
+        <div className="pt-8 border-t border-soft space-y-4">
+          <button className="w-full bg-primary text-inverse py-5 px-6 text-lg font-medium hover:bg-inverse transition-colors uppercase tracking-widest shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
             Request Quote
           </button>
-          <div className="flex justify-between text-xs text-neutral-500 font-medium uppercase tracking-wide">
+          <div className="flex justify-between text-xs text-muted font-medium uppercase tracking-wide">
             <span>Delivery: 4-6 Weeks</span>
             <span>Made in Germany</span>
           </div>
@@ -331,4 +331,7 @@ export function Configurator() {
     </div>
   );
 }
+
+
+
 

@@ -57,7 +57,7 @@ export function WhatsAppCTA() {
     },
   ] as const;
   const actionClass =
-    "group flex items-center gap-3 rounded-[var(--radius-lg)] border border-[color:color-mix(in_srgb,var(--surface-inverse)_8%,transparent)] bg-[color:color-mix(in_srgb,var(--surface-panel-strong)_72%,transparent)] px-4 py-3 shadow-[0_10px_24px_-28px_rgba(16,26,40,0.22)] transition-[transform,border-color,background-color,box-shadow] duration-[var(--motion-base)] ease-[var(--ease-standard)] hover:-translate-y-0.5 hover:border-(--color-primary) hover:bg-white hover:shadow-[var(--shadow-soft)]";
+    "group flex items-center gap-3 rounded-[var(--radius-lg)] border border-[color:var(--overlay-inverse-06)] bg-[color:var(--overlay-panel-72)] px-4 py-3 shadow-[0_10px_24px_-28px_var(--overlay-inverse-24)] transition-[transform,border-color,background-color,box-shadow] duration-[var(--motion-base)] ease-[var(--ease-standard)] hover:-translate-y-0.5 hover:border-(--color-primary) hover:bg-panel hover:shadow-theme-soft";
 
   return (
     <>
@@ -69,7 +69,7 @@ export function WhatsAppCTA() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.25 }}
         whileTap={{ scale: 0.96 }}
-        className={`fixed right-3 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full border border-(--color-primary) bg-(--color-primary) text-white shadow-[0_24px_48px_-28px_rgba(16,26,40,0.7)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-primary-hover) hover:shadow-[0_30px_54px_-28px_rgba(16,26,40,0.82)] sm:right-5 ${buttonOffset}`}
+        className={`fixed right-3 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full border border-(--color-primary) bg-(--color-primary) text-inverse shadow-[0_24px_48px_-28px_var(--overlay-inverse-35)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-primary-hover) hover:shadow-[0_30px_54px_-28px_var(--overlay-inverse-35)] sm:right-5 ${buttonOffset}`}
       >
         {open ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
       </motion.button>
@@ -85,14 +85,14 @@ export function WhatsAppCTA() {
           >
             <div className="mb-4 flex items-start justify-between gap-4">
               <div>
-                <p className="text-sm font-semibold text-neutral-950">Quick contact</p>
-                <p className="text-xs text-neutral-700">Reach the team directly.</p>
+                <p className="text-sm font-semibold text-strong">Quick contact</p>
+                <p className="text-xs text-body">Reach the team directly.</p>
               </div>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close WhatsApp quick contact"
-                className="rounded-full bg-neutral-100 p-1.5 text-neutral-700 transition-colors hover:bg-neutral-200"
+                className="rounded-full bg-hover p-1.5 text-body transition-colors hover:bg-hover"
               >
                 <X className="h-3.5 w-3.5" />
               </button>
@@ -109,7 +109,7 @@ export function WhatsAppCTA() {
                     rel={action.external ? "noopener noreferrer" : undefined}
                     className={actionClass}
                   >
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--color-primary)_8%,transparent)] text-(--color-primary)">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:var(--surface-accent-wash)] text-(--color-primary)">
                       <Icon className="h-4 w-4" />
                     </span>
                     <span className="flex min-w-0 flex-1 flex-col">
@@ -139,3 +139,5 @@ export function WhatsAppCTA() {
     </>
   );
 }
+
+

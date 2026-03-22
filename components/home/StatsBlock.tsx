@@ -34,11 +34,11 @@ function StatItem({
     >
       <div
         data-testid={`kpi-${id}`}
-        className="text-5xl md:text-6xl font-light text-neutral-900 tracking-tight tabular-nums"
+        className="text-5xl md:text-6xl font-light text-strong tracking-tight tabular-nums"
       >
         {value}
       </div>
-      <div className="mt-2 text-xs text-neutral-500 font-semibold tracking-[0.15em] uppercase">
+      <div className="mt-2 text-xs text-muted font-semibold tracking-[0.15em] uppercase">
         {label}
       </div>
     </motion.div>
@@ -54,14 +54,14 @@ export function StatsBlock({ stats, asOfLabel }: StatsBlockProps) {
   ];
 
   return (
-    <section className="w-full bg-neutral-50 border-y border-neutral-100 py-20 md:py-28">
+    <section className="w-full bg-hover border-y border-soft py-20 md:py-28">
       <div className="container px-6 2xl:px-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
           {rows.map((stat, i) => (
             <StatItem key={stat.id} id={stat.id} value={stat.value} label={stat.label} index={i} />
           ))}
         </div>
-        <p data-testid="kpi-as-of-home" className="mt-8 text-center text-xs font-medium text-neutral-500 tracking-wide">
+        <p data-testid="kpi-as-of-home" className="mt-8 text-center text-xs font-medium text-muted tracking-wide">
           {asOfLabel}
         </p>
       </div>

@@ -18,7 +18,7 @@ export default function ImprintPage() {
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <aside className="scheme-panel-dark rounded-[2rem] p-7 md:p-9">
             <p className="typ-label scheme-text-inverse-muted">{LEGAL_PAGE_COPY.imprint.overviewKicker}</p>
-            <h2 className="typ-section mt-3 text-white">
+            <h2 className="typ-section mt-3 text-inverse">
               {LEGAL_PAGE_COPY.imprint.overviewTitle}
             </h2>
             <p className="page-copy scheme-text-inverse-body mt-4">
@@ -56,3 +56,4 @@ export default function ImprintPage() {
     </section>
   );
 }
+

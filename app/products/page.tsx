@@ -108,7 +108,7 @@ export default function ProductsPage() {
                 {PRODUCTS_PAGE_COPY.featureBullets.map((item) => (
                   <li
                     key={item}
-                    className="rounded-[1.25rem] border scheme-border bg-white px-4 py-4 page-copy-sm scheme-text-body"
+                    className="rounded-[1.25rem] border scheme-border bg-panel px-4 py-4 page-copy-sm scheme-text-body"
                   >
                     <span aria-hidden="true" className="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
                       +
@@ -129,7 +129,7 @@ export default function ProductsPage() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,48,66,0.02)_0%,rgba(18,48,66,0.18)_100%)]" />
+                  <div className="absolute inset-0 bg-[color:var(--overlay-inverse-12)]" />
                 </div>
               </div>
 
@@ -230,7 +230,7 @@ export default function ProductsPage() {
                 {HOMEPAGE_TRUST_CONTENT.logos.slice(0, 8).map((logo) => (
                   <div
                     key={logo.name}
-                    className="flex min-h-14 items-center justify-center rounded-[1.25rem] border scheme-border bg-white px-3 py-2"
+                    className="flex min-h-14 items-center justify-center rounded-[1.25rem] border scheme-border bg-panel px-3 py-2"
                   >
                     <Image
                       src={logo.src}
@@ -260,3 +260,5 @@ export default function ProductsPage() {
     </section>
   );
 }
+
+

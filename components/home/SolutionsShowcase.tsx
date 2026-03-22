@@ -8,7 +8,7 @@ import { HOMEPAGE_SOLUTIONS_CONTENT } from "@/data/site/homepage";
 const sectionShellClass = "container px-6 2xl:px-0";
 
 const panelClass =
-  "rounded-[2rem] border border-(--border-muted) bg-white px-6 py-8 shadow-[0_28px_76px_-52px_color-mix(in_srgb,var(--surface-inverse)_14%,transparent)] md:px-8 md:py-10";
+  "rounded-[2rem] border border-(--border-muted) bg-panel px-6 py-8 shadow-[0_28px_76px_-52px_var(--overlay-inverse-12)] md:px-8 md:py-10";
 
 const kickerClass =
   "mb-3 text-[0.74rem] font-semibold uppercase leading-[1.2] tracking-[0.12em] text-(--text-body)";
@@ -23,7 +23,7 @@ const linkClass =
   "inline-flex w-fit items-center gap-2 text-[var(--type-body-size)] font-semibold tracking-[0.01em] text-(--text-brand) transition-[color,transform] duration-[var(--motion-fast)] [transition-timing-function:var(--ease-standard)] hover:text-(--color-primary-active) [&_svg]:transition-transform [&_svg]:duration-[var(--motion-fast)] [&_svg]:[transition-timing-function:var(--ease-standard)] hover:[&_svg]:translate-x-1";
 
 const cardClass =
-  "group relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-(--border-soft) bg-white shadow-(--shadow-soft) transition-[transform,border-color,box-shadow] duration-[var(--motion-base)] [transition-timing-function:var(--ease-standard)] hover:-translate-y-1.5 hover:border-(--border-hover) hover:shadow-[0_34px_76px_-52px_color-mix(in_srgb,var(--surface-inverse)_22%,transparent)]";
+  "group relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-(--border-soft) bg-panel shadow-(--shadow-soft) transition-[transform,border-color,box-shadow] duration-[var(--motion-base)] [transition-timing-function:var(--ease-standard)] hover:-translate-y-1.5 hover:border-(--border-hover) hover:shadow-[0_34px_76px_-52px_var(--overlay-inverse-24)]";
 
 export function SolutionsShowcase() {
   return (
@@ -77,3 +77,4 @@ export function SolutionsShowcase() {
     </section>
   );
 }
+

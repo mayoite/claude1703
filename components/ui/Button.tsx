@@ -25,7 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           {
             "btn-primary": variant === "primary",
             "btn-outline": variant === "outline",
-            "rounded-full px-4 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2": variant === "ghost",
+            "rounded-full px-4 py-2 text-sm font-medium text-body transition-colors hover:bg-hover hover:text-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2": variant === "ghost",
             "text-primary underline-offset-4 hover:underline": variant === "link",
             "text-sm": size === "default",
             "min-h-[var(--control-height-sm)] px-4 text-xs": size === "sm",

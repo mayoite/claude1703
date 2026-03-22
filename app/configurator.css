@@ -6,10 +6,10 @@
   position: relative;
   overflow: hidden;
   border-radius: 1.5rem;
-  border: 1px solid #e5e5e5;
-  background-color: #0a0a0a;
+  border: 1px solid var(--border-soft);
+  background-color: var(--surface-canvas);
   padding: 1.25rem;
-  color: white;
+  color: var(--text-inverse);
 }
 @media (min-width: 768px) {
   .configurator-visual { padding: 1.75rem; }
@@ -19,9 +19,7 @@
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(20, 52, 203, 0.42), transparent 40%),
-    radial-gradient(circle at 100% 100%, rgba(29, 78, 216, 0.22), transparent 45%);
+  background: var(--overlay-inverse-18);
 }
 
 @utility configurator-visual__grid {
@@ -29,10 +27,7 @@
   position: absolute;
   inset: 0;
   opacity: 0.2;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
-  background-size: 26px 26px;
+  background: var(--overlay-panel-10);
 }
 
 @utility configurator-visual__header {
@@ -47,15 +42,15 @@
 }
 
 @utility configurator-visual__seat-chip {
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--overlay-panel-14);
+  background: var(--overlay-panel-10);
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: white;
+  color: var(--text-inverse);
 }
 
 @utility configurator-visual__canvas {
@@ -63,10 +58,10 @@
   z-index: 10;
   overflow: hidden;
   border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--overlay-panel-14);
   padding: 1rem;
-  background: #0e1424;
-  box-shadow: 0 32px 80px -36px rgba(0, 0, 0, 0.65);
+  background: var(--surface-canvas-soft);
+  box-shadow: 0 32px 80px -36px var(--overlay-inverse-35);
 }
 
 @utility configurator-visual__stats {
@@ -86,8 +81,8 @@
 
 @utility configurator-visual__stat {
   border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--overlay-panel-14);
+  background: var(--overlay-panel-08);
   padding: 0.75rem 1rem;
 }
 
@@ -99,7 +94,7 @@
 }
 
 @utility configurator-visual__fit-chip {
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   border-width: 1px;
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
@@ -107,21 +102,21 @@
 }
 
 @utility configurator-visual__fit-chip--ok {
-  border-color: rgba(110, 231, 183, 0.5);
-  background: rgba(16, 185, 129, 0.15);
-  color: #d1fae5;
+  border-color: var(--color-success);
+  background: var(--surface-status-ok);
+  color: var(--color-success);
 }
 
 @utility configurator-visual__fit-chip--bad {
-  border-color: rgba(253, 164, 175, 0.6);
-  background: rgba(244, 63, 94, 0.2);
-  color: #fecdd3;
+  border-color: var(--color-danger);
+  background: var(--surface-status-bad);
+  color: var(--color-danger);
 }
 
 @utility configurator-visual__meta-chip {
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--overlay-panel-14);
+  background: var(--overlay-panel-08);
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
@@ -129,13 +124,13 @@
 }
 
 @utility configurator-visual__option-chip {
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--overlay-panel-14);
+  background: var(--overlay-panel-12);
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: white;
+  color: var(--text-inverse);
 }
 
 @utility configurator-visual__suggestions {
@@ -156,17 +151,17 @@
 @utility configurator-visual__suggestion {
   overflow: hidden;
   border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--overlay-panel-14);
+  background: var(--overlay-panel-08);
 }
 
 /* Form panel (white area) */
 @utility configurator-form {
   border-radius: 1.5rem;
-  border: 1px solid #e5e5e5;
-  background: white;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-panel-strong);
   padding: 1.25rem;
-  box-shadow: 0 26px 60px -42px rgba(15, 23, 42, 0.35);
+  box-shadow: 0 26px 60px -42px var(--overlay-inverse-35);
 }
 @media (min-width: 768px) {
   .configurator-form { padding: 1.75rem; }
@@ -177,14 +172,14 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   border-radius: 0.75rem;
-  border: 1px solid #e5e5e5;
-  background: #fafafa;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-soft);
   padding: 0.25rem;
 }
 
 .configurator-form__toggle {
   display: inline-flex;
-  min-height: 2.75rem;
+  min-height: var(--control-height-sm);
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
@@ -195,30 +190,30 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   transition-property: color, background-color, border-color;
-  transition-duration: 150ms;
+  transition-duration: var(--motion-fast);
 }
 
 .configurator-form__toggle--active {
   border-color: var(--color-primary);
   background: var(--color-primary);
-  color: white;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  color: var(--text-inverse);
+  box-shadow: 0 1px 2px var(--overlay-inverse-06);
 }
 
 .configurator-form__toggle--idle {
   border-color: transparent;
   background: transparent;
-  color: #404040;
+  color: var(--text-body);
 }
 .configurator-form__toggle--idle:hover {
-  border-color: #d4d4d4;
-  background: white;
+  border-color: var(--border-muted);
+  background: var(--surface-panel-strong);
 }
 
 @utility configurator-form__stage {
   border-radius: 0.75rem;
-  border: 1px solid #e5e5e5;
-  background: #fafafa;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-soft);
   padding: 1rem;
 }
 
@@ -228,7 +223,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #525252;
+  color: var(--text-muted);
 }
 
 @utility configurator-form__field {
@@ -236,20 +231,20 @@
   flex-direction: column;
   gap: 0.25rem;
   font-size: 0.875rem;
-  color: #404040;
+  color: var(--text-body);
 }
 
 @utility configurator-form__input {
   width: 100%;
   border-radius: 0.5rem;
-  border: 1px solid #d4d4d4;
-  background: white;
+  border: 1px solid var(--border-muted);
+  background: var(--surface-panel-strong);
   padding: 0.625rem 0.75rem;
-  color: #171717;
+  color: var(--text-heading);
   outline: none;
 }
-.configurator-form__input::placeholder { color: #a3a3a3; }
-.configurator-form__input:focus { border-color: rgba(0, 102, 149, 0.6); }
+.configurator-form__input::placeholder { color: var(--text-subtle); }
+.configurator-form__input:focus { border-color: var(--color-primary); }
 
 /* Shell & layout */
 @utility configurator-shell {
@@ -291,22 +286,22 @@
   padding: 1rem;
   text-align: left;
   transition-property: color, background-color, border-color;
-  transition-duration: 150ms;
+  transition-duration: var(--motion-fast);
 }
 
 .configurator-mode-switcher__button--active {
   border-color: var(--color-primary);
-  background: rgba(0, 102, 149, 0.05);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  background: var(--surface-accent-wash);
+  box-shadow: 0 1px 2px var(--overlay-inverse-06);
 }
 
 .configurator-mode-switcher__button--idle {
-  border-color: #e5e5e5;
-  background: #fafafa;
+  border-color: var(--border-soft);
+  background: var(--surface-soft);
 }
 .configurator-mode-switcher__button--idle:hover {
-  border-color: #d4d4d4;
-  background: white;
+  border-color: var(--border-muted);
+  background: var(--surface-panel-strong);
 }
 
 .configurator-budget-band {
@@ -315,27 +310,27 @@
   padding: 1rem;
   text-align: left;
   transition-property: color, background-color, border-color;
-  transition-duration: 150ms;
+  transition-duration: var(--motion-fast);
 }
 
 .configurator-budget-band--active {
   border-color: var(--color-primary);
-  background: rgba(0, 102, 149, 0.05);
+  background: var(--surface-accent-wash);
 }
 
 .configurator-budget-band--idle {
-  border-color: #e5e5e5;
-  background: #fafafa;
+  border-color: var(--border-soft);
+  background: var(--surface-soft);
 }
 .configurator-budget-band--idle:hover {
-  border-color: #d4d4d4;
-  background: white;
+  border-color: var(--border-muted);
+  background: var(--surface-panel-strong);
 }
 
 @utility configurator-review-inline {
   border-radius: 1rem;
-  border: 1px solid #e5e5e5;
-  background: #fafafa;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-soft);
   padding: 1rem;
 }
 
@@ -347,21 +342,21 @@
 }
 
 @utility configurator-review-inline__fact {
-  border-radius: 9999px;
-  border: 1px solid #d4d4d4;
-  background: white;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-muted);
+  background: var(--surface-panel-strong);
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #404040;
+  color: var(--text-body);
 }
 
 @utility configurator-copilot {
   border-radius: 1.5rem;
-  border: 1px solid #e5e5e5;
-  background: white;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-panel-strong);
   padding: 1.25rem;
-  box-shadow: 0 26px 60px -42px rgba(15, 23, 42, 0.25);
+  box-shadow: 0 26px 60px -42px var(--overlay-inverse-24);
 }
 @media (min-width: 768px) {
   .configurator-copilot { padding: 1.75rem; }
@@ -369,14 +364,14 @@
 
 @utility configurator-review__snapshot {
   border-radius: 1rem;
-  border: 1px solid #e5e5e5;
-  background: white;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-panel-strong);
 }
 
 @utility configurator-review__summary {
   border-radius: 1rem;
-  border: 1px solid #e5e5e5;
-  background: #fafafa;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-soft);
   padding: 1rem;
 }
 
@@ -390,12 +385,13 @@
   justify-content: space-between;
   gap: 0.75rem;
   border-radius: 1rem;
-  border: 1px solid #e5e5e5;
-  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-soft);
+  background: var(--overlay-panel-95);
   padding: 0.75rem;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  box-shadow: 0 25px 50px -12px var(--overlay-inverse-24);
   backdrop-filter: blur(4px);
 }
 @media (min-width: 1280px) {
   .configurator-mobile-review { display: none; }
 }
+

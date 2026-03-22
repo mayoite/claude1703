@@ -58,7 +58,7 @@ export const ABOUT_PAGE_COPY = {
   supportDescription:
     "Use the planning or Resource Desk lanes when your team needs layout guidance, category packs, technical sheets, or a clearer next step before procurement.",
   supportPrimaryCta: "Guided Planner",
-  supportSecondaryCta: "Open Resource Desk",
+  supportSecondaryCta: "Contact the team",
 } as const;
 
 export const CONTACT_PAGE_COPY = {
@@ -76,7 +76,7 @@ export const CONTACT_PAGE_COPY = {
   quickDeskTitle: "Use the right lane from the start.",
   quickDeskDescription:
     "Planning discussions, document requests, and quote conversations move faster when the request reaches the right team first.",
-  quickDeskPrimaryCta: "Open Resource Desk",
+  quickDeskPrimaryCta: "Contact the team",
   quickDeskSecondaryCta: "Guided Planner",
   offices: [
     {
@@ -383,7 +383,7 @@ export const SOLUTIONS_PAGE_COPY = {
     "Share site details, timelines, and seat count. We will suggest a practical approach for products, layout, and execution.",
   planningPrimaryCta: "Guided Planner",
   planningSecondaryCta: "Browse product categories",
-  planningTertiaryCta: "Open Resource Desk",
+  planningTertiaryCta: "Contact the team",
 } as const;
 
 export const SOLUTIONS_DELIVERY_STEPS = [
@@ -410,8 +410,8 @@ export const SOLUTIONS_DELIVERY_STEPS = [
 export const SUSTAINABILITY_PAGE_COPY = {
   heroTitle: "Sustainability in practice.",
   heroSubtitle:
-    "We focus on durable workspace systems, practical material choices, and lower rework across planning and delivery.",
-  introTitleLead: "Our approach for ",
+    "Long-life systems. Lower lifecycle waste.",
+  introTitleLead: "Our approach for",
   introTitleEmphasis: "long-life workspaces.",
   introDescription:
     "Sustainability in office projects depends on material choice, maintainability, and planning discipline from specification to after-sales support.",
@@ -503,7 +503,7 @@ export const SUSTAINABILITY_PAGE_COPY = {
   routeNoteTitle: "Need sustainability information for a live project?",
   routeNoteDescription:
     "Ask for the current product pack or planning support when you need material guidance, category recommendations, or project-fit clarification.",
-  routeNotePrimaryCta: "Open Resource Desk",
+  routeNotePrimaryCta: "Contact the team",
   routeNoteSecondaryCta: "Guided Planner",
 } as const;
 
@@ -609,7 +609,7 @@ export const SOCIAL_PAGE_COPY = {
   ctaDescription:
     "Move from inspiration into category shortlists, planning support, and documentation requests through the same live product and Resource Desk routes.",
   primaryCta: "Browse products",
-  secondaryCta: "Open Resource Desk",
+  secondaryCta: "Contact the team",
 } as const;
 
 export const SOCIAL_PAGE_POSTS = [
@@ -688,7 +688,7 @@ export const NEWS_PAGE_COPY = {
   ctaTitle: "Need a current product, planning, or support update?",
   ctaDescription:
     "Use the contact and Resource Desk routes when you need the latest category packs, service routing, or planning context for a live project.",
-  primaryCta: "Open Resource Desk",
+  primaryCta: "Contact the team",
   secondaryCta: "Contact the team",
 } as const;
 
@@ -730,7 +730,7 @@ export const TRACKING_PAGE_COPY = {
     "The fastest path is to send the reference and request summary directly to the support team instead of relying on a fake public tracker.",
   primaryCta: "Raise a support request",
   secondaryCta: "Call support",
-  tertiaryCta: "Open Resource Desk",
+  tertiaryCta: "Contact the team",
 } as const;
 
 export const SUPPORT_IVR_PAGE_COPY = {
@@ -763,7 +763,7 @@ export const PLANNING_PAGE_COPY = {
     "If your team needs category packs, technical sheets, or layout references before the planning call, start at the Resource Desk and we will route the right material into the same discussion.",
   primaryCta: "Guided Planner",
   secondaryCta: "View products",
-  tertiaryCta: "Open Resource Desk",
+  tertiaryCta: "Contact the team",
 } as const;
 
 export const PLANNING_PAGE_STEPS = [
@@ -810,7 +810,7 @@ export const SERVICE_PAGE_COPY = {
     "Use the Resource Desk when the fastest next step is a document pack, technical sheet, warranty reference, or planning record tied to your workspace setup.",
   primaryCta: "Raise a support request",
   secondaryCta: "Track order",
-  tertiaryCta: "Open Resource Desk",
+  tertiaryCta: "Contact the team",
 } as const;
 
 export const SERVICE_PAGE_PILLARS = [
@@ -1115,7 +1115,7 @@ export const CATEGORY_ROUTE_COPY = {
   metadataSuffix: "One&Only",
   metadataTail: "Browse our full range of {category} for practical office planning and delivery.",
   browseAllCta: "Browse all categories",
-  resourceDeskCta: "Open Resource Desk",
+  resourceDeskCta: "Contact the team",
   compareIdleLabel: "Select up to 4 products to compare",
   compareActiveLabel: "Compare {count} selected",
   pricingFallback: "Pricing shared on request",
@@ -1150,7 +1150,7 @@ export const COMPARE_ROUTE_COPY = {
   countLabel: "Comparing {count} products",
   mobileHint: "Swipe horizontally on smaller screens to read every specification column.",
   browseCta: "Browse all categories",
-  resourceDeskCta: "Open Resource Desk",
+  resourceDeskCta: "Contact the team",
   primaryCta: "Request quote",
   viewProductCta: "View product",
   addToQuoteCta: "Add to enquiry",
@@ -1158,7 +1158,7 @@ export const COMPARE_ROUTE_COPY = {
   emptyDescription:
     "Add up to 4 products from category listings or product pages, then return here to compare the details side by side.",
   emptyPrimaryCta: "Browse all categories",
-  emptySecondaryCta: "Open Resource Desk",
+  emptySecondaryCta: "Contact the team",
 } as const;
 
 export const QUOTE_CART_ROUTE_COPY = {
@@ -1168,7 +1168,7 @@ export const QUOTE_CART_ROUTE_COPY = {
     "Keep shortlisted products, quantities, and the next planning or documentation step together before you contact sales.",
   browseCta: "Browse products",
   compareCta: "Compare selected",
-  resourceDeskCta: "Open Resource Desk",
+  resourceDeskCta: "Contact the team",
   planningCta: "Guided Planner",
   primaryCta: "Submit quote request",
   summaryTitle: "Request summary",
@@ -1182,7 +1182,7 @@ export const QUOTE_CART_ROUTE_COPY = {
   emptyDescription:
     "Add products from category or product pages to keep procurement options together before you request pricing or documentation.",
   emptyPrimaryCta: "Browse products",
-  emptySecondaryCta: "Open Resource Desk",
+  emptySecondaryCta: "Contact the team",
   clearCta: "Clear all",
   removeCta: "Remove",
 } as const;
@@ -1224,7 +1224,7 @@ export const PDP_ROUTE_COPY = {
     requestQuote: "Request Quote",
     consultation: "Book a Consultation",
     planning: "Guided Planner",
-    resourceDesk: "Open Resource Desk",
+    resourceDesk: "Contact the team",
     returnToResults: "Return to filtered results",
     returnToCategory: "Back to category",
     copyLink: "Copy Link",

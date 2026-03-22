@@ -15,6 +15,7 @@ export interface HeroProps {
   showButton?: boolean;
   buttonText?: string;
   buttonLink?: string;
+  sectionId?: string;
 }
 
 const titleVariants: Variants = {
@@ -49,6 +50,7 @@ export function Hero({
   showButton = true,
   buttonText = "Discover office furniture",
   buttonLink = "/products",
+  sectionId = "page-hero",
 }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -70,6 +72,7 @@ export function Hero({
 
   return (
     <section
+      id={sectionId}
       ref={containerRef}
       className={`scheme-panel-dark relative w-full overflow-hidden group hero-section ${getHeightClass()}${isSmall ? " page-hero" : ""}`}
     >
@@ -104,22 +107,22 @@ export function Hero({
           <div className="w-full h-full" />
         )}
 
-        <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(12,34,48,0.9)_0%,rgba(12,34,48,0.72)_40%,rgba(12,34,48,0.28)_76%,rgba(12,34,48,0.14)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,174,219,0.15),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[color:var(--overlay-inverse-35)]" />
+        <div className="absolute inset-0 bg-[color:var(--overlay-inverse-12)]" />
       </motion.div>
 
       {/* Content Container */}
       <div className="absolute inset-0 z-10 flex flex-col justify-end">
-        <div className="container-wide h-full flex flex-col justify-center pb-20 pt-32">
+        <div className="container h-full flex flex-col items-start justify-center pb-20 pt-32 text-left">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-4xl space-y-7"
+            className="w-full max-w-[44rem] self-start space-y-7 text-left"
           >
             <motion.div variants={titleVariants} className="overflow-hidden">
               <h1
-                className={`hero-title scheme-text-inverse ${isSmall ? "max-w-[12ch] text-[clamp(2.6rem,5vw,4.7rem)]" : "max-w-[13ch] text-[clamp(3.25rem,6vw,5.8rem)]"}`}
+                className={`hero-title scheme-text-inverse text-left ${isSmall ? "max-w-[12ch] text-[clamp(2.6rem,5vw,4.7rem)]" : "max-w-[13ch] text-[clamp(3.25rem,6vw,5.8rem)]"}`}
               >
                 {title || (
                   <>
@@ -135,7 +138,7 @@ export function Hero({
             {subtitle && (
               <motion.p
                 variants={titleVariants}
-                className="hero-subtitle scheme-text-inverse-muted max-w-2xl"
+                className="hero-subtitle scheme-text-inverse-body max-w-3xl text-left"
               >
                 {subtitle}
               </motion.p>
@@ -161,3 +164,4 @@ export function Hero({
     </section>
   );
 }
+

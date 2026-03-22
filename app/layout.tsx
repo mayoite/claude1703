@@ -35,10 +35,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-white selection:bg-primary selection:text-white">
+      <body className="antialiased bg-panel selection:bg-primary selection:text-inverse">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-9999 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:outline-none focus:ring-2 focus:ring-primary"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-9999 focus:bg-panel focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:outline-none focus:ring-2 focus:ring-primary"
         >
           Skip to main content
         </a>
@@ -55,3 +55,4 @@ export default function RootLayout({
     </html>
   );
 }
+

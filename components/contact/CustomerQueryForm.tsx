@@ -119,18 +119,18 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
       {contextCopy ? (
         <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
           <p className="typ-label text-primary">{contextCopy.eyebrow}</p>
-          <p className="mt-2 text-base font-medium text-neutral-900">{contextCopy.title}</p>
-          <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+          <p className="mt-2 text-base font-medium text-strong">{contextCopy.title}</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
             {contextCopy.description}
           </p>
         </div>
       ) : null}
-      <p className="text-sm text-neutral-600">
+      <p className="text-sm text-muted">
         Fields marked <span className="font-semibold text-primary">*</span> are required. Share
         either email or phone and we will respond within 1 business day.
       </p>
       <div>
-        <label htmlFor="name" className="mb-2 block typ-label text-neutral-500">
+        <label htmlFor="name" className="mb-2 block typ-label text-muted">
           Name <span className="text-primary">*</span>
         </label>
         <input
@@ -140,12 +140,12 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
           placeholder="Your Name"
           value={form.name}
           onChange={(event) => setForm({ ...form, name: event.target.value })}
-          className="w-full border-0 border-b border-neutral-300 bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-neutral-400"
+          className="w-full border-0 border-b border-muted bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-subtle"
           required
         />
       </div>
       <div>
-        <label htmlFor="company" className="mb-2 block typ-label text-neutral-500">
+        <label htmlFor="company" className="mb-2 block typ-label text-muted">
           Company
         </label>
         <input
@@ -154,12 +154,12 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
           placeholder="Company Name (optional)"
           value={form.company}
           onChange={(event) => setForm({ ...form, company: event.target.value })}
-          className="w-full border-0 border-b border-neutral-300 bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-neutral-400"
+          className="w-full border-0 border-b border-muted bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-subtle"
         />
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
-          <label htmlFor="email" className="mb-2 block typ-label text-neutral-500">
+          <label htmlFor="email" className="mb-2 block typ-label text-muted">
             Email
           </label>
           <input
@@ -169,11 +169,11 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
             placeholder="your@email.com"
             value={form.email}
             onChange={(event) => setForm({ ...form, email: event.target.value })}
-            className="w-full border-0 border-b border-neutral-300 bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-neutral-400"
+            className="w-full border-0 border-b border-muted bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-subtle"
           />
         </div>
         <div>
-          <label htmlFor="phone" className="mb-2 block typ-label text-neutral-500">
+          <label htmlFor="phone" className="mb-2 block typ-label text-muted">
             Phone / WhatsApp
           </label>
           <input
@@ -183,14 +183,14 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
             placeholder="+91..."
             value={form.phone}
             onChange={(event) => setForm({ ...form, phone: event.target.value })}
-            className="w-full border-0 border-b border-neutral-300 bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-neutral-400"
+            className="w-full border-0 border-b border-muted bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-subtle"
           />
         </div>
       </div>
       <div>
         <label
           htmlFor="preferredContact"
-          className="mb-2 block typ-label text-neutral-500"
+          className="mb-2 block typ-label text-muted"
         >
           Preferred Contact
         </label>
@@ -203,7 +203,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
               preferredContact: event.target.value as PreferredContact,
             })
           }
-          className="w-full border-0 border-b border-neutral-300 bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-neutral-400"
+          className="w-full border-0 border-b border-muted bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-subtle"
         >
           <option value="any">Any</option>
           <option value="email">Email</option>
@@ -212,7 +212,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="mb-2 block typ-label text-neutral-500">
+        <label htmlFor="message" className="mb-2 block typ-label text-muted">
           Message <span className="text-primary">*</span>
         </label>
         <textarea
@@ -221,19 +221,19 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
           rows={4}
           value={form.message}
           onChange={(event) => setForm({ ...form, message: event.target.value })}
-          className="w-full border-0 border-b border-neutral-300 bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-neutral-400"
+          className="w-full border-0 border-b border-muted bg-transparent px-0 py-3 outline-none transition-colors focus:border-primary placeholder:text-subtle"
           required
         />
       </div>
 
       {error ? (
-        <p role="alert" className="text-sm text-red-600">
+        <p role="alert" className="text-sm text-danger">
           {error}
         </p>
       ) : null}
 
       {result ? (
-        <div className="space-y-3 border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900">
+        <div className="space-y-3 border border-success bg-success-soft p-4 text-sm text-success">
           <p>
             Query submitted. Reference: <span className="font-medium">{result.queryId}</span>
           </p>
@@ -241,7 +241,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
             {result.followUp.email ? (
               <a
                 href={result.followUp.email}
-                className="inline-flex items-center border border-emerald-400 px-3 py-1.5 text-xs font-medium uppercase tracking-wide"
+                className="inline-flex items-center border border-success px-3 py-1.5 text-xs font-medium uppercase tracking-wide"
               >
                 Reply by Email
               </a>
@@ -251,7 +251,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
                 href={result.followUp.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center border border-emerald-400 px-3 py-1.5 text-xs font-medium uppercase tracking-wide"
+                className="inline-flex items-center border border-success px-3 py-1.5 text-xs font-medium uppercase tracking-wide"
               >
                 Reply on WhatsApp
               </a>
@@ -268,7 +268,7 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
         >
           {isSubmitting ? "Sending..." : "Send - we respond within 1 business day"}
         </button>
-        <p className="text-sm text-neutral-600">
+        <p className="text-sm text-muted">
           Prefer to speak now?{" "}
           <a
             href={PRIMARY_QUOTE_PHONE_LINK}
@@ -282,3 +282,4 @@ export function CustomerQueryForm({ intent, source }: CustomerQueryFormProps) {
     </form>
   );
 }
+

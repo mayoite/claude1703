@@ -1,14 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { HOMEPAGE_PARTNERSHIP_CONTENT } from "@/data/site/homepage";
+import { fadeUp } from "@/lib/helpers/motion";
 
 export function PartnershipBanner() {
   return (
-    <section className="home-section home-section--soft py-10 md:py-12">
+    <section className="home-section home-section--white py-10 md:py-12">
       <div className="home-shell">
         <div className="home-frame home-frame--roomy flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-          <div className="shrink-0 md:pl-2">
+          <motion.div className="shrink-0 md:pl-2" {...fadeUp(14, 0.03)}>
             <Image
               src={HOMEPAGE_PARTNERSHIP_CONTENT.image.src}
               alt={HOMEPAGE_PARTNERSHIP_CONTENT.image.alt}
@@ -18,10 +22,10 @@ export function PartnershipBanner() {
               quality={100}
               className="h-auto w-[154px] md:w-[224px]"
             />
-          </div>
+          </motion.div>
 
-          <div className="max-w-2xl">
-            <h2 className="home-heading scheme-text-strong mb-4">
+          <motion.div className="max-w-2xl" {...fadeUp(18, 0.08)}>
+            <h2 className="home-heading mb-4">
               {HOMEPAGE_PARTNERSHIP_CONTENT.title[0]}{" "}
               <span className="home-heading__accent">
                 {HOMEPAGE_PARTNERSHIP_CONTENT.title[1]}
@@ -30,10 +34,12 @@ export function PartnershipBanner() {
             <p className="scheme-text-body mb-6 max-w-lg text-base">
               {HOMEPAGE_PARTNERSHIP_CONTENT.description}
             </p>
-            <Link href={HOMEPAGE_PARTNERSHIP_CONTENT.cta.href} className="link-arrow typ-label">
+            <motion.div whileHover={{ y: -1 }} whileTap={{ y: 0 }}>
+              <Link href={HOMEPAGE_PARTNERSHIP_CONTENT.cta.href} className="link-arrow typ-label">
               {HOMEPAGE_PARTNERSHIP_CONTENT.cta.label} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

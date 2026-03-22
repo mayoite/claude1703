@@ -32,7 +32,7 @@ export default function TrackingPage() {
               {TRACKING_PAGE_COPY.referenceItems.map((item) => (
                 <li
                   key={item}
-                  className="page-copy-sm scheme-text-body border-b border-black/8 pb-4 last:border-b-0 last:pb-0"
+                  className="page-copy-sm scheme-text-body border-b border-[color:var(--overlay-inverse-12)] pb-4 last:border-b-0 last:pb-0"
                 >
                   {item}
                 </li>
@@ -60,10 +60,10 @@ export default function TrackingPage() {
 
       <section className="container px-6 py-18 2xl:px-0 md:py-22">
         <div className="scheme-panel-dark relative overflow-hidden rounded-[2rem] p-8 md:p-10">
-          <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top_right,rgba(13,45,180,0.16),transparent_58%)]" />
+          <div className="absolute inset-y-0 right-0 w-1/2 bg-[color:var(--overlay-panel-12)]" />
           <div className="relative z-10 grid gap-6 lg:grid-cols-[1.1fr_auto] lg:items-end">
             <div className="max-w-2xl">
-              <h2 className="typ-section text-white">{TRACKING_PAGE_COPY.supportTitle}</h2>
+              <h2 className="typ-section text-inverse">{TRACKING_PAGE_COPY.supportTitle}</h2>
               <p className="page-copy scheme-text-inverse-body mt-4">{TRACKING_PAGE_COPY.supportDescription}</p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -72,9 +72,6 @@ export default function TrackingPage() {
               </Link>
               <Link href="/contact" className="btn-outline-light">
                 {TRACKING_PAGE_COPY.secondaryCta}
-              </Link>
-              <Link href="/downloads" className="btn-outline-light">
-                {TRACKING_PAGE_COPY.tertiaryCta}
               </Link>
             </div>
           </div>
@@ -85,3 +82,6 @@ export default function TrackingPage() {
     </section>
   );
 }
+
+
+

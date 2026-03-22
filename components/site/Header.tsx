@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -73,22 +73,24 @@ async function resolveSearchDestination(
 }
 
 const siteHeaderBaseClass =
-  "fixed top-0 left-0 z-50 w-full border-b border-neutral-200/70 backdrop-blur-xl transition-shadow [background-color:var(--surface-glass-strong)] [transition-duration:var(--motion-fast)] [transition-timing-function:var(--ease-standard)]";
+  "fixed top-0 left-0 z-50 w-full border-b border-soft backdrop-blur-xl transition-shadow [background-color:var(--surface-glass-strong)] [transition-duration:var(--motion-fast)] [transition-timing-function:var(--ease-standard)]";
 const siteHeaderScrolledClass = "[box-shadow:var(--shadow-panel)]";
 const headerUtilityCopyClass =
-  "text-neutral-500 [font-size:var(--type-body-size)] font-normal [letter-spacing:0.04em] [line-height:1.35]";
+  "text-muted [font-size:var(--type-body-size)] font-normal [letter-spacing:0.04em] [line-height:1.35]";
 const headerUtilityLinksClass =
-  "flex items-center gap-5 text-neutral-600 [font-size:var(--type-body-size)] font-normal [letter-spacing:0.04em] [line-height:1.35]";
+  "flex items-center gap-5 text-muted [font-size:var(--type-body-size)] font-normal [letter-spacing:0.04em] [line-height:1.35]";
 const headerSearchShellClass =
   "border [border-color:var(--border-soft)] [background:var(--surface-glass-strong)] [box-shadow:var(--shadow-soft)] [backdrop-filter:blur(12px)]";
 const headerSearchPanelClass =
   "absolute right-0 mt-2 w-[24rem] overflow-hidden border p-4 [border-radius:var(--radius-xl)] [border-color:var(--border-soft)] [background:var(--surface-glass-strong)] [box-shadow:var(--shadow-panel)] [backdrop-filter:blur(18px)]";
 const headerSearchMetaClass =
-  "mb-2 flex items-center justify-between text-neutral-600 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+  "mb-2 flex items-center justify-between text-muted [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
 const headerSearchBadgeClass =
-  "rounded-full bg-neutral-100 px-2 py-0.5 text-neutral-700 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+  "rounded-full bg-hover px-2 py-0.5 text-body [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
 const headerSearchKindClass =
-  "text-neutral-500 [font-size:var(--type-body-size)] font-semibold uppercase [letter-spacing:0.14em] [line-height:1.25]";
+  "text-muted [font-size:var(--type-body-size)] font-semibold uppercase [letter-spacing:0.14em] [line-height:1.25]";
+const OTHERS_SUBCATEGORY_NAMES = new Set(["Cafe chairs", "Cafe Tables"]);
+const OTHERS_SUBCATEGORY_ORDER = ["Cafe Tables", "Cafe chairs"] as const;
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -238,6 +240,59 @@ export function SiteHeader() {
     setSearchQuery("");
   };
 
+  const megaMenuGroups = useMemo(
+    () =>
+      groupedCategories.map((group) => ({
+        ...group,
+        items: group.items.map((item) => ({
+          ...item,
+          subcategories: Array.isArray(item.subcategories)
+            ? item.subcategories.filter(
+                (subcategory) => !OTHERS_SUBCATEGORY_NAMES.has(subcategory.name),
+              )
+            : [],
+        })),
+      })),
+    [groupedCategories],
+  );
+
+  const megaMenuOthers = useMemo(() => {
+    const extracted = new Map<
+      string,
+      { id: string; name: string; href: string; count?: number }
+    >();
+
+    for (const group of groupedCategories) {
+      for (const item of group.items) {
+        if (!Array.isArray(item.subcategories)) continue;
+        for (const subcategory of item.subcategories) {
+          if (!OTHERS_SUBCATEGORY_NAMES.has(subcategory.name)) continue;
+          extracted.set(subcategory.name, {
+            id: subcategory.id,
+            name: subcategory.name,
+            href: subcategory.href,
+            count: subcategory.count,
+          });
+        }
+      }
+    }
+
+    const values = Array.from(extracted.values());
+    values.sort((a, b) => {
+      const aIndex = OTHERS_SUBCATEGORY_ORDER.indexOf(
+        a.name as (typeof OTHERS_SUBCATEGORY_ORDER)[number],
+      );
+      const bIndex = OTHERS_SUBCATEGORY_ORDER.indexOf(
+        b.name as (typeof OTHERS_SUBCATEGORY_ORDER)[number],
+      );
+      const ai = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex;
+      const bi = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
+      return ai - bi;
+    });
+
+    return values;
+  }, [groupedCategories]);
+
   const openGuidedPlanner = () => {
     window.dispatchEvent(new CustomEvent("oando-assistant:open"));
   };
@@ -248,7 +303,7 @@ export function SiteHeader() {
         <div className="container-wide px-4 sm:px-6">
           <div
             className={cn(
-              "hidden 2xl:flex items-center justify-between overflow-hidden border-b border-neutral-100 transition-[max-height,opacity,padding] duration-300",
+              "hidden 2xl:flex items-center justify-between overflow-hidden border-b border-soft transition-[max-height,opacity,padding] duration-300",
               scrolled ? "max-h-0 opacity-0 py-0" : "max-h-10 opacity-100 py-2",
             )}
             aria-label="Utility navigation"
@@ -261,12 +316,6 @@ export function SiteHeader() {
               <span />
             )}
             <div className={headerUtilityLinksClass}>
-              <Link href="/service" className="whitespace-nowrap transition-colors hover:text-primary">
-                Service
-              </Link>
-              <Link href="/showrooms" className="whitespace-nowrap transition-colors hover:text-primary">
-                Showrooms
-              </Link>
               <Link href="/contact" className="whitespace-nowrap transition-colors hover:text-primary">
                 Contact
               </Link>
@@ -309,10 +358,10 @@ export function SiteHeader() {
                         className={cn(
                           "typ-nav relative inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-2 text-[0.95rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-2.5 xl:text-[1rem]",
                           isActive
-                            ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
+                            ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-[color:var(--color-contrast-accent)] after:content-['']"
                             : activeMega === link.label
                               ? "text-primary"
-                              : "text-neutral-700 hover:text-primary",
+                              : "text-body hover:text-primary",
                         )}
                       >
                         {link.label}
@@ -334,8 +383,8 @@ export function SiteHeader() {
                     className={cn(
                       "typ-nav relative whitespace-nowrap rounded-lg px-2 py-2 text-[0.95rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-2.5 xl:text-[1rem]",
                       isActive
-                        ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
-                        : "text-neutral-700 hover:text-primary",
+                        ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-[color:var(--color-contrast-accent)] after:content-['']"
+                        : "text-body hover:text-primary",
                     )}
                   >
                     {link.label}
@@ -354,16 +403,16 @@ export function SiteHeader() {
                     void submitSearch();
                   }}
                 >
-                  <Search className="h-4 w-4 text-neutral-500" />
+                  <Search className="h-4 w-4 text-muted" />
                   <input
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                     onFocus={() => setShowSearchPanel(true)}
                     placeholder="AI search products..."
-                    className="w-44 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
+                    className="w-44 bg-transparent text-sm text-strong outline-none placeholder:text-subtle"
                     aria-label="Search products with AI"
                   />
-                  <Sparkles className="h-4 w-4 text-accent1" />
+                  <Sparkles className="h-4 w-4 text-[color:var(--color-contrast-accent)]" />
                   <button type="submit" className="sr-only">
                     Submit header search
                   </button>
@@ -391,7 +440,7 @@ export function SiteHeader() {
                         )}
                       </div>
                       {searchLoading ? (
-                        <p className="py-6 text-sm text-neutral-500">Searching...</p>
+                        <p className="py-6 text-sm text-muted">Searching...</p>
                       ) : searchResults.length > 0 ? (
                         <ul className="space-y-1">
                           {searchResults.map((result) => (
@@ -399,7 +448,7 @@ export function SiteHeader() {
                               <Link
                                 href={result.href}
                                 onClick={onSearchResultClick}
-                                className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
+                                className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-body hover:bg-hover hover:text-strong"
                               >
                                 <span>{result.title}</span>
                                 <span className={headerSearchKindClass}>
@@ -414,21 +463,21 @@ export function SiteHeader() {
                           <Link
                             href="/products"
                             onClick={onSearchResultClick}
-                            className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                            className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-body hover:bg-hover"
                           >
                             All Products
                           </Link>
                           <Link
                             href="/solutions"
                             onClick={onSearchResultClick}
-                            className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                            className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-body hover:bg-hover"
                           >
                             Solutions
                           </Link>
                           <Link
                             href="/projects"
                             onClick={onSearchResultClick}
-                            className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                            className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-body hover:bg-hover"
                           >
                             Projects
                           </Link>
@@ -442,7 +491,7 @@ export function SiteHeader() {
               <button
                 type="button"
                 onClick={openGuidedPlanner}
-                className="btn-nav-primary shrink-0 px-5 text-[0.92rem] xl:px-6 xl:text-[0.95rem]"
+                className="btn-hero-primary btn-hero-accent"
               >
                 Guided Planner
               </button>
@@ -455,7 +504,7 @@ export function SiteHeader() {
                 aria-expanded={mobileOpen}
                 aria-controls="mobile-nav-drawer"
                 onClick={() => setMobileOpen((prev) => !prev)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-soft text-body lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 <Menu className="h-5 w-5" />
               </button>
@@ -474,31 +523,37 @@ export function SiteHeader() {
               transition={{ duration: 0.15 }}
               onMouseEnter={() => setActiveMega("Products")}
               onMouseLeave={() => setActiveMega(null)}
-              className="hidden lg:block border-t border-neutral-100 bg-white/95 backdrop-blur-xl"
+              className="hidden lg:block border-t border-soft [background:var(--surface-panel-strong)] backdrop-blur-md [box-shadow:var(--shadow-soft)]"
             >
               <div className="container-wide px-6 py-8">
-                <div className="grid grid-cols-6 gap-4">
-                  {groupedCategories.map((group) => (
-                    <div key={group.groupId}>
+                <div className={cn("grid gap-5", megaMenuOthers.length > 0 ? "grid-cols-7" : "grid-cols-6")}>
+                  {megaMenuGroups.map((group, groupIndex) => (
+                    <div
+                      key={group.groupId}
+                      className={cn(
+                        "min-w-0 px-3",
+                        groupIndex > 0 && "border-l border-soft",
+                      )}
+                    >
                       <Link
                         href={group.items[0]?.href || `/products/${group.groupId}`}
                         onClick={() => setActiveMega(null)}
-                        className="typ-overline mb-2 inline-flex text-neutral-500 transition-colors hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        className="typ-overline mb-2 inline-flex text-strong transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                       >
                         {group.groupLabel}
                       </Link>
-                      <ul className="space-y-1">
+                      <ul className="space-y-1.5">
                         {group.items.map((item) => (
                           <li key={item.id}>
                             {item.name.trim().toLowerCase() !== group.groupLabel.trim().toLowerCase() && (
                               <Link
                                 href={item.href}
                                 onClick={() => setActiveMega(null)}
-                                className="flex items-center justify-between rounded-lg px-2 py-1.5 text-base text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                                className="flex items-center justify-between rounded-lg px-2 py-1.5 text-[0.96rem] text-strong hover:bg-soft hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                               >
                                 <span>{item.name}</span>
                                 {typeof item.count === "number" && (
-                                  <span className="text-xs text-neutral-400">
+                                  <span className="text-[0.8rem] font-medium text-muted">
                                     {item.count}
                                   </span>
                                 )}
@@ -507,17 +562,17 @@ export function SiteHeader() {
 
                             {Array.isArray(item.subcategories) &&
                               item.subcategories.length > 0 && (
-                              <ul className="ml-2 mt-1 space-y-0.5 border-l border-neutral-100 pl-2">
+                              <ul className="ml-2 mt-1.5 space-y-1 border-l border-soft pl-2.5">
                                 {item.subcategories.map((subcategory) => (
                                   <li key={`${item.id}-${subcategory.id}`}>
                                     <Link
                                       href={subcategory.href}
                                       onClick={() => setActiveMega(null)}
-                                      className="flex items-center justify-between rounded-md px-2 py-1 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                                      className="flex items-center justify-between rounded-md px-2 py-1 text-[0.88rem] text-body hover:bg-soft hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                                     >
                                       <span>{subcategory.name}</span>
                                       {typeof subcategory.count === "number" && (
-                                        <span className="text-xs text-neutral-400">
+                                        <span className="text-xs text-subtle">
                                           {subcategory.count}
                                         </span>
                                       )}
@@ -532,16 +587,45 @@ export function SiteHeader() {
                     </div>
                   ))}
 
-                  {/* View all link */}
-                  <div className="flex items-start pt-5">
-                    <Link
-                      href="/products"
-                      onClick={() => setActiveMega(null)}
-                      className="text-base font-normal text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    >
-                      All Products &gt;
-                    </Link>
-                  </div>
+                  {megaMenuOthers.length > 0 && (
+                    <div className="min-w-0 border-l border-soft px-3">
+                      <Link
+                        href="/products"
+                        onClick={() => setActiveMega(null)}
+                        className="typ-overline mb-2 inline-flex text-strong transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      >
+                        Others
+                      </Link>
+                      <ul className="space-y-1.5">
+                        {megaMenuOthers.map((subcategory) => (
+                          <li key={subcategory.id}>
+                            <Link
+                              href={subcategory.href}
+                              onClick={() => setActiveMega(null)}
+                              className="flex items-center justify-between rounded-lg px-2 py-1.5 text-[0.96rem] text-strong hover:bg-soft hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                            >
+                              <span>{subcategory.name}</span>
+                              {typeof subcategory.count === "number" && (
+                                <span className="text-[0.8rem] font-medium text-muted">
+                                  {subcategory.count}
+                                </span>
+                              )}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                </div>
+                <div className="mt-4 border-t border-soft pt-3">
+                  <Link
+                    href="/products"
+                    onClick={() => setActiveMega(null)}
+                    className="inline-flex items-center rounded-lg px-3 py-2 text-sm font-semibold text-primary hover:bg-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    All Products &gt;
+                  </Link>
                 </div>
               </div>
             </motion.div>

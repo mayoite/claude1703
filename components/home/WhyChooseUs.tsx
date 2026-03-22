@@ -77,12 +77,12 @@ export function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="scheme-panel scheme-border group rounded-[1.5rem] border p-8 transition-colors hover:border-neutral-400"
+              className="scheme-panel scheme-border group rounded-[1.5rem] border p-8 transition-colors hover:border-strong"
             >
-              <div className="mb-6 text-neutral-900 transition-colors group-hover:text-primary">
+              <div className="mb-6 text-strong transition-colors group-hover:text-primary">
                 <feature.icon className="h-8 w-8" strokeWidth={1} />
               </div>
-              <h3 className="mb-3 text-xl font-medium tracking-tight text-neutral-900">
+              <h3 className="mb-3 text-xl font-medium tracking-tight text-strong">
                 {feature.title}
               </h3>
               <p className="page-copy-sm scheme-text-body">{feature.description}</p>

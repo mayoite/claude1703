@@ -32,7 +32,7 @@ export function MegaMenu({ isOpen, items, cards, onClose }: MegaMenuProps) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-neutral-100 z-[998]"
+          className="absolute top-full left-0 w-full bg-panel shadow-lg border-t border-soft z-[998]"
           onMouseLeave={onClose}
         >
           <div className="container px-6 2xl:px-0 py-10">
@@ -45,7 +45,7 @@ export function MegaMenu({ isOpen, items, cards, onClose }: MegaMenuProps) {
                       <Link
                         href={item.href}
                         prefetch={false}
-                        className="text-[15px] font-normal text-neutral-800 hover:text-primary transition-colors block"
+                        className="text-[15px] font-normal text-strong hover:text-primary transition-colors block"
                       >
                         {item.label}
                       </Link>
@@ -64,7 +64,7 @@ export function MegaMenu({ isOpen, items, cards, onClose }: MegaMenuProps) {
                       prefetch={false}
                       className="group block"
                     >
-                      <div className="relative aspect-[16/9] bg-neutral-100 mb-3 overflow-hidden">
+                      <div className="relative aspect-[16/9] bg-hover mb-3 overflow-hidden">
                         {card.image && (
                           <Image
                             src={card.image}
@@ -74,12 +74,12 @@ export function MegaMenu({ isOpen, items, cards, onClose }: MegaMenuProps) {
                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                         )}
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+                        <div className="absolute inset-0 bg-[color:transparent] group-hover:bg-[color:var(--overlay-inverse-06)] transition-colors" />
                       </div>
-                      <h3 className="text-base font-bold text-neutral-900 group-hover:text-primary transition-colors mb-1">
+                      <h3 className="text-base font-bold text-strong group-hover:text-primary transition-colors mb-1">
                         {card.title}
                       </h3>
-                      <p className="text-sm text-neutral-500 font-light">
+                      <p className="text-sm text-muted font-light">
                         {card.description}
                       </p>
                     </Link>
@@ -93,3 +93,6 @@ export function MegaMenu({ isOpen, items, cards, onClose }: MegaMenuProps) {
     </AnimatePresence>
   );
 }
+
+
+

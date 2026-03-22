@@ -55,10 +55,10 @@ export function ConfiguratorSteps() {
                         className={cn(
                             "flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors border",
                             currentStep === step.id
-                                ? "bg-primary text-white border-primary"
+                                ? "bg-primary text-inverse border-primary"
                                 : step.complete
-                                    ? "bg-neutral-100 text-neutral-900 border-neutral-200"
-                                    : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-300"
+                                    ? "bg-hover text-strong border-soft"
+                                    : "bg-panel text-muted border-soft hover:border-muted"
                         )}
                     >
                         {index + 1}. {step.title}
@@ -67,7 +67,7 @@ export function ConfiguratorSteps() {
             </div>
 
             {/* Step Content */}
-            <div className="border border-neutral-200 p-6 lg:p-8 min-h-[400px]">
+            <div className="border border-soft p-6 lg:p-8 min-h-[400px]">
                 {currentStep === 0 && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-light">Select Furniture Type</h2>
@@ -83,11 +83,11 @@ export function ConfiguratorSteps() {
                                         "p-6 border-2 text-left transition-all hover:shadow-md",
                                         config.furnitureType === type
                                             ? "border-primary bg-primary/5"
-                                            : "border-neutral-200 hover:border-neutral-300"
+                                            : "border-soft hover:border-muted"
                                     )}
                                 >
                                     <h3 className="text-lg font-medium capitalize">{type} Workstation</h3>
-                                    <p className="text-sm text-neutral-600 mt-2">
+                                    <p className="text-sm text-muted mt-2">
                                         {type === "desking"
                                             ? "Shared and non-shared workstations"
                                             : type === "cabin"
@@ -115,7 +115,7 @@ export function ConfiguratorSteps() {
                                                 "w-full p-4 border-2 text-left",
                                                 config.seatingType === type
                                                     ? "border-primary bg-primary/5"
-                                                    : "border-neutral-200"
+                                                    : "border-soft"
                                             )}
                                         >
                                             <span className="capitalize">{type.replace("-", " ")}</span>
@@ -128,7 +128,7 @@ export function ConfiguratorSteps() {
                                 <select
                                     value={config.seatingCount}
                                     onChange={(e) => updateConfig({ seatingCount: parseInt(e.target.value) })}
-                                    className="w-full px-4 py-3 border border-neutral-200 bg-white focus:outline-none focus:border-primary"
+                                    className="w-full px-4 py-3 border border-soft bg-panel focus:outline-none focus:border-primary"
                                 >
                                     {[1, 2, 3, 4, 6, 8, 12].map((num) => (
                                         <option key={num} value={num}>
@@ -143,7 +143,7 @@ export function ConfiguratorSteps() {
                                         type="checkbox"
                                         checked={config.hasReturnPartition}
                                         onChange={(e) => updateConfig({ hasReturnPartition: e.target.checked })}
-                                        className="w-5 h-5 border-neutral-300"
+                                        className="w-5 h-5 border-muted"
                                     />
                                     <span className="text-sm">Include Return Partition</span>
                                 </label>
@@ -151,7 +151,7 @@ export function ConfiguratorSteps() {
                         </div>
                         <button
                             onClick={() => setCurrentStep(2)}
-                            className="bg-primary text-white px-6 py-3 hover:bg-primary/90 transition-colors"
+                            className="bg-primary text-inverse px-6 py-3 hover:bg-primary/90 transition-colors"
                         >
                             Next Step
                         </button>
@@ -173,11 +173,11 @@ export function ConfiguratorSteps() {
                                         "p-6 border-2 text-left transition-all hover:shadow-md",
                                         config.layout === option.value
                                             ? "border-primary bg-primary/5"
-                                            : "border-neutral-200"
+                                            : "border-soft"
                                     )}
                                 >
                                     <h3 className="text-lg font-medium">{option.label}</h3>
-                                    <p className="text-sm text-neutral-600 mt-1">{option.description}</p>
+                                    <p className="text-sm text-muted mt-1">{option.description}</p>
                                 </button>
                             ))}
                         </div>
@@ -193,7 +193,7 @@ export function ConfiguratorSteps() {
                                 <select
                                     value={config.partitionHeight}
                                     onChange={(e) => updateConfig({ partitionHeight: e.target.value })}
-                                    className="w-full px-4 py-3 border border-neutral-200 bg-white focus:outline-none focus:border-primary"
+                                    className="w-full px-4 py-3 border border-soft bg-panel focus:outline-none focus:border-primary"
                                 >
                                     <option value="">Select height</option>
                                     <option value="1000 mm">1000 mm</option>
@@ -206,7 +206,7 @@ export function ConfiguratorSteps() {
                         </div>
                         <button
                             onClick={() => setCurrentStep(4)}
-                            className="bg-primary text-white px-6 py-3 hover:bg-primary/90 transition-colors"
+                            className="bg-primary text-inverse px-6 py-3 hover:bg-primary/90 transition-colors"
                         >
                             Next Step
                         </button>
@@ -227,7 +227,7 @@ export function ConfiguratorSteps() {
                                             "p-4 border-2 text-sm",
                                             config.topFinish === finish
                                                 ? "border-primary bg-primary/5"
-                                                : "border-neutral-200"
+                                                : "border-soft"
                                         )}
                                     >
                                         {finish}
@@ -241,7 +241,7 @@ export function ConfiguratorSteps() {
                                 <select
                                     value={config.legType}
                                     onChange={(e) => updateConfig({ legType: e.target.value })}
-                                    className="w-full px-4 py-3 border border-neutral-200 bg-white focus:outline-none focus:border-primary"
+                                    className="w-full px-4 py-3 border border-soft bg-panel focus:outline-none focus:border-primary"
                                 >
                                     <option value="">Select leg type</option>
                                     <option value="Powder coated steel">Powder coated steel</option>
@@ -253,7 +253,7 @@ export function ConfiguratorSteps() {
                         </div>
                         <button
                             onClick={() => setCurrentStep(5)}
-                            className="bg-primary text-white px-6 py-3 hover:bg-primary/90 transition-colors"
+                            className="bg-primary text-inverse px-6 py-3 hover:bg-primary/90 transition-colors"
                         >
                             Next Step
                         </button>
@@ -267,7 +267,7 @@ export function ConfiguratorSteps() {
                             <label className="block text-sm font-medium mb-3">Select Accessories</label>
                             <div className="grid md:grid-cols-2 gap-3">
                                 {accessoryOptions.map((accessory) => (
-                                    <label key={accessory} className="flex items-center gap-3 p-4 border border-neutral-200 cursor-pointer hover:bg-neutral-50">
+                                    <label key={accessory} className="flex items-center gap-3 p-4 border border-soft cursor-pointer hover:bg-hover">
                                         <input
                                             type="checkbox"
                                             checked={config.accessories.includes(accessory)}
@@ -289,7 +289,7 @@ export function ConfiguratorSteps() {
                             <select
                                 value={config.cableManagement}
                                 onChange={(e) => updateConfig({ cableManagement: e.target.value })}
-                                className="w-full px-4 py-3 border border-neutral-200 bg-white focus:outline-none focus:border-primary"
+                                className="w-full px-4 py-3 border border-soft bg-panel focus:outline-none focus:border-primary"
                             >
                                 <option value="">Select option</option>
                                 <option value="Tray only">Tray only</option>
@@ -307,14 +307,14 @@ export function ConfiguratorSteps() {
                 <button
                     onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
                     disabled={currentStep === 0}
-                    className="px-6 py-3 border border-neutral-300 text-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-neutral-50"
+                    className="px-6 py-3 border border-muted text-body disabled:opacity-50 disabled:cursor-not-allowed hover:bg-hover"
                 >
                     Previous
                 </button>
                 {currentStep < 5 && (
                     <button
                         onClick={() => setCurrentStep(currentStep + 1)}
-                        className="px-6 py-3 bg-neutral-900 text-white hover:bg-neutral-800"
+                        className="px-6 py-3 bg-inverse text-inverse hover:bg-inverse"
                     >
                         Skip to Next
                     </button>
@@ -323,3 +323,4 @@ export function ConfiguratorSteps() {
         </div>
     );
 }
+

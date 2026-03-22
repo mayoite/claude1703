@@ -31,7 +31,7 @@ export default function PlanningPage() {
                 key={step.title}
                 className="scheme-panel scheme-border rounded-[1.5rem] border p-6"
               >
-                <h3 className="text-2xl font-light tracking-tight text-neutral-950">{step.title}</h3>
+                <h3 className="text-2xl font-light tracking-tight text-strong">{step.title}</h3>
                 <p className="page-copy scheme-text-body mt-3">{step.detail}</p>
               </article>
             ))}
@@ -67,9 +67,6 @@ export default function PlanningPage() {
                 <Link href="/products" className="btn-outline">
                   {PLANNING_PAGE_COPY.secondaryCta}
                 </Link>
-                <Link href="/downloads" className="btn-outline">
-                  {PLANNING_PAGE_COPY.tertiaryCta}
-                </Link>
               </div>
             </div>
           </div>
@@ -82,15 +79,12 @@ export default function PlanningPage() {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <p className="typ-label scheme-text-inverse-muted">{PLANNING_PAGE_COPY.deskKicker}</p>
-                <h2 className="typ-section mt-4 text-white">{PLANNING_PAGE_COPY.deskTitle}</h2>
+                <h2 className="typ-section mt-4 text-inverse">{PLANNING_PAGE_COPY.deskTitle}</h2>
                 <p className="page-copy scheme-text-inverse-body mt-4 max-w-2xl">
                   {PLANNING_PAGE_COPY.deskDescription}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link href="/downloads" className="home-btn-secondary">
-                  {PLANNING_PAGE_COPY.tertiaryCta}
-                </Link>
                 <Link href="/contact" className="home-btn-primary">
                   {PLANNING_PAGE_COPY.primaryCta}
                 </Link>
@@ -104,3 +98,4 @@ export default function PlanningPage() {
     </section>
   );
 }
+

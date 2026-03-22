@@ -55,21 +55,21 @@ interface MobileNavDrawerProps {
 const drawerSearchClass =
   "flex items-center gap-2 rounded-[var(--radius-lg)] border px-3 py-2.5 [border-color:var(--border-soft)] [background:var(--surface-glass-strong)] [box-shadow:var(--shadow-soft)]";
 const drawerGroupLabelClass =
-  "px-3 pb-1 pt-2 text-neutral-500 [font-size:var(--type-body-size)] font-semibold uppercase tracking-[0.14em] [line-height:1.25]";
+  "px-3 pb-1 pt-2 text-muted [font-size:var(--type-body-size)] font-semibold uppercase tracking-[0.14em] [line-height:1.25]";
 const drawerLinkClass =
-  "flex min-h-12 items-center rounded-xl px-3 font-normal text-neutral-800 hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary [font-size:var(--type-body-size)]";
+  "flex min-h-12 items-center rounded-xl px-3 font-normal text-strong hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary [font-size:var(--type-body-size)]";
 const drawerSubtleLinkClass =
-  "flex min-h-11 items-center justify-between rounded-lg px-3 text-base text-neutral-700 hover:bg-white";
+  "flex min-h-11 items-center justify-between rounded-lg px-3 text-base text-body hover:bg-panel";
 const drawerSubcategoryLinkClass =
-  "flex min-h-9 items-center justify-between rounded-md px-2 py-1 text-sm text-neutral-600 hover:bg-white";
+  "flex min-h-9 items-center justify-between rounded-md px-2 py-1 text-sm text-muted hover:bg-panel";
 const drawerCallLinkClass =
-  "mb-3 flex min-h-12 items-center justify-center rounded-lg border border-neutral-200 font-semibold text-primary transition-colors hover:border-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary [font-size:var(--type-body-size)] [letter-spacing:var(--type-letter-copy)] [line-height:1.6]";
+  "mb-3 flex min-h-12 items-center justify-center rounded-lg border border-soft font-semibold text-primary transition-colors hover:border-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary [font-size:var(--type-body-size)] [letter-spacing:var(--type-letter-copy)] [line-height:1.6]";
 const drawerSearchNoteClass =
-  "text-neutral-600 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+  "text-muted [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
 const drawerCountClass =
-  "text-neutral-500 [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
+  "text-muted [font-size:var(--type-body-size)] font-medium [letter-spacing:0.04em] [line-height:1.35]";
 const drawerShellClass =
-  "border-l shadow-2xl [border-color:var(--border-soft)] [background:linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] [box-shadow:-22px_0_54px_-34px_rgba(10,14,51,0.1)]";
+  "border-l shadow-2xl [border-color:var(--border-soft)] [background:var(--surface-panel-strong)] [box-shadow:-22px_0_54px_-34px_var(--overlay-inverse-12)]";
 
 export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategories }: MobileNavDrawerProps) {
   const router = useRouter();
@@ -206,7 +206,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[60] bg-neutral-900/30 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-[60] bg-[var(--surface-inverse)]/30 backdrop-blur-sm lg:hidden"
             aria-hidden="true"
             onClick={handleClose}
           />
@@ -223,14 +223,14 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
             transition={{ duration: 0.24, ease: "easeInOut" }}
             className={`${drawerShellClass} fixed inset-y-0 right-0 z-[70] flex w-[92vw] max-w-md flex-col overflow-y-auto lg:hidden`}
           >
-            <div className="flex items-center justify-between border-b border-neutral-100 px-5 py-4">
+            <div className="flex items-center justify-between border-b border-soft px-5 py-4">
               <OneAndOnlyLogo className="h-8" variant="orange" />
               <button
                 ref={closeBtnRef}
                 type="button"
                 onClick={handleClose}
                 aria-label="Close navigation"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 text-neutral-600 hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-soft text-muted hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -245,13 +245,13 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                     void submitSearch();
                   }}
                 >
-                  <Search className="h-4 w-4 text-neutral-500" />
+                  <Search className="h-4 w-4 text-muted" />
                   <input
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                     onFocus={() => setShowSearchPanel(true)}
                     placeholder="AI search products..."
-                    className="w-full bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
+                    className="w-full bg-transparent text-sm text-strong outline-none placeholder:text-subtle"
                     aria-label="Mobile AI product search"
                   />
                   <Sparkles className="h-4 w-4 text-accent1" />
@@ -261,7 +261,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                 </form>
 
                 {(showSearchPanel || searchQuery.trim().length >= 2) && (
-                  <div className="mt-2 rounded-2xl border border-neutral-200 bg-neutral-50 p-3">
+                  <div className="mt-2 rounded-2xl border border-soft bg-hover p-3">
                     <p className={drawerSearchNoteClass}>
                       {searchLoading
                         ? "Searching"
@@ -270,7 +270,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                           : "No results"}
                     </p>
                     {searchLoading ? (
-                      <p className="text-sm text-neutral-500">Searching...</p>
+                      <p className="text-sm text-muted">Searching...</p>
                     ) : searchResults.length > 0 ? (
                       <ul className="space-y-1">
                         {searchResults.map((result) => (
@@ -278,7 +278,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                             <Link
                               href={result.href}
                               onClick={onSearchResultClick}
-                              className="flex items-center justify-between rounded-lg bg-white px-3 py-2 text-sm text-neutral-700"
+                              className="flex items-center justify-between rounded-lg bg-panel px-3 py-2 text-sm text-body"
                             >
                               <span>{result.title}</span>
                               <span className={drawerCountClass}>
@@ -289,7 +289,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-sm text-neutral-500">
+                      <p className="text-sm text-muted">
                         Type at least 2 characters to search.
                       </p>
                     )}
@@ -314,14 +314,14 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
                           {link.label}
                           <ChevronDown
                             className={cn(
-                              "h-4 w-4 text-neutral-400 transition-transform",
+                              "h-4 w-4 text-subtle transition-transform",
                               isOpen && "rotate-180",
                             )}
                           />
                         </button>
 
                         {isOpen && (
-                          <div className="mt-1 space-y-2 rounded-xl border border-neutral-100 bg-neutral-50 p-2">
+                          <div className="mt-1 space-y-2 rounded-xl border border-soft bg-hover p-2">
                             <Link
                               href="/products"
                               onClick={handleClose}
@@ -353,7 +353,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
 
                                       {Array.isArray(item.subcategories) &&
                                         item.subcategories.length > 0 && (
-                                        <ul className="ml-5 mt-1 space-y-0.5 border-l border-neutral-200 pl-3">
+                                        <ul className="ml-5 mt-1 space-y-0.5 border-l border-soft pl-3">
                                           {item.subcategories.map((subcategory) => (
                                             <li key={`${item.id}-${subcategory.id}`}>
                                               <Link
@@ -398,7 +398,7 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
               </ul>
             </nav>
 
-            <div className="sticky bottom-0 border-t border-neutral-100 bg-white px-5 py-4">
+            <div className="sticky bottom-0 border-t border-soft bg-panel px-5 py-4">
               <a
                 href="tel:+919835630940"
                 onClick={handleClose}
@@ -429,3 +429,5 @@ export function MobileNavDrawer({ open, onClose, closeButtonRef, groupedCategori
     </AnimatePresence>
   );
 }
+
+

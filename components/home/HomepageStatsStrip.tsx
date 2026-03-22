@@ -10,7 +10,7 @@ const statsGridClass =
   "grid grid-cols-2 gap-3 xl:grid-cols-4";
 
 const statCardClass =
-  "group relative overflow-hidden rounded-[1.4rem] border border-[color:color-mix(in_srgb,var(--color-brand-muted)_30%,white)] bg-white p-5 shadow-[0_28px_58px_-44px_color-mix(in_srgb,var(--surface-inverse)_20%,transparent)] transition-[transform,border-color,box-shadow,background] duration-[var(--motion-base)] [transition-timing-function:var(--ease-standard)] hover:-translate-y-1 hover:border-[color:color-mix(in_srgb,var(--color-primary)_38%,white)] hover:bg-(--surface-soft) hover:shadow-[0_34px_72px_-48px_color-mix(in_srgb,var(--surface-inverse)_22%,transparent)]";
+  "group relative overflow-hidden rounded-[1.4rem] border border-[color:var(--border-accent)] bg-panel p-5 shadow-[0_28px_58px_-44px_var(--overlay-inverse-18)] transition-[transform,border-color,box-shadow,background] duration-[var(--motion-base)] [transition-timing-function:var(--ease-standard)] hover:-translate-y-1 hover:border-[color:var(--border-hover)] hover:bg-(--surface-soft) hover:shadow-[0_34px_72px_-48px_var(--overlay-inverse-24)]";
 
 export function HomepageStatsStrip() {
   return (
@@ -36,3 +36,4 @@ export function HomepageStatsStrip() {
     </section>
   );
 }
+

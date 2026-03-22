@@ -5,12 +5,13 @@ export function FooterLogoMarquee() {
   const trackLogos = [...HOMEPAGE_TRUST_CONTENT.logos, ...HOMEPAGE_TRUST_CONTENT.logos];
 
   return (
-    <section aria-hidden="true" className="footer-logo-marquee w-full border-y border-neutral-200 bg-neutral-50 py-4 md:py-5">
+    <section
+      aria-hidden="true"
+      className="footer-logo-marquee w-full border-y border-soft bg-panel py-4 md:py-5"
+      style={{ ["--marquee-duration" as string]: "110s" }}
+    >
       <div className="relative overflow-hidden">
-        <div
-          className="footer-logo-marquee__track animate-marquee motion-reduce:animate-none"
-          style={{ animationDuration: "110s" }}
-        >
+        <div className="footer-logo-marquee__track">
           {trackLogos.map((logo, index) => (
             <div
               key={`${logo.name}-${index}`}
@@ -21,7 +22,7 @@ export function FooterLogoMarquee() {
                 alt={logo.name}
                 width={208}
                 height={72}
-                className="h-10 w-auto object-contain opacity-38 grayscale transition-opacity duration-500 hover:opacity-56 md:h-12"
+                className="h-10 w-auto object-contain opacity-100 saturate-100 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-150 motion-reduce:hover:scale-100 md:h-12"
               />
             </div>
           ))}

@@ -310,6 +310,6 @@ export const CONFIGURATOR_SVG_TONES = {
   screenStroke: "#93c5fd",
   modestyStroke: "rgb(248, 250, 252)",
   canvasFill: "#111b31",
-  fullPowerBeamStroke: "#facc15",
+  fullPowerBeamStroke: "#d9d9d9",
   racewayStroke: "#38bdf8",
 } as const;

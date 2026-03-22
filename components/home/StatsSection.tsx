@@ -15,7 +15,7 @@ interface StatsSectionProps {
 
 export function StatsSection({ title, subtitle, stats }: StatsSectionProps) {
     return (
-        <section className="w-full py-24 bg-neutral-900 text-white overflow-hidden">
+        <section className="w-full py-24 bg-inverse text-inverse overflow-hidden">
             <div className="container px-6 2xl:px-0">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-20">
                     <div className="max-w-2xl space-y-6">
@@ -43,7 +43,7 @@ export function StatsSection({ title, subtitle, stats }: StatsSectionProps) {
                             <div className="text-5xl md:text-7xl font-extralight tracking-tighter text-primary">
                                 {stat.value}
                             </div>
-                            <div className="h-px w-12 bg-neutral-700" />
+                            <div className="h-px w-12 bg-inverse-soft" />
                             <div className="scheme-text-inverse-muted text-sm uppercase tracking-[0.2em] font-medium">
                                 {stat.label}
                             </div>
@@ -54,4 +54,6 @@ export function StatsSection({ title, subtitle, stats }: StatsSectionProps) {
         </section>
     );
 }
+
+
 

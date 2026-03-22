@@ -32,7 +32,7 @@ export default function ServicePage() {
                 key={item.title}
                 className="scheme-panel scheme-border rounded-[1.5rem] border p-6"
               >
-                <h3 className="text-2xl font-light tracking-tight text-neutral-950">{item.title}</h3>
+                <h3 className="text-2xl font-light tracking-tight text-strong">{item.title}</h3>
                 <p className="page-copy scheme-text-body mt-3">{item.detail}</p>
               </article>
             ))}
@@ -56,10 +56,10 @@ export default function ServicePage() {
                         href={`tel:${phone.replace(/\s+/g, "")}`}
                         className="scheme-panel scheme-border block rounded-[1.25rem] border px-5 py-4 transition-colors hover:border-primary/50"
                       >
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-700">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-body">
                           {channel.label}
                         </p>
-                        <p className="mt-1 text-lg text-neutral-900">{phone}</p>
+                        <p className="mt-1 text-lg text-strong">{phone}</p>
                       </a>
                     );
                   }
@@ -72,10 +72,10 @@ export default function ServicePage() {
                         href={`mailto:${email}`}
                         className="scheme-panel scheme-border block rounded-[1.25rem] border px-5 py-4 transition-colors hover:border-primary/50"
                       >
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-700">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-body">
                           {channel.label}
                         </p>
-                        <p className="mt-1 text-lg text-neutral-900">{email}</p>
+                        <p className="mt-1 text-lg text-strong">{email}</p>
                       </a>
                     );
                   }
@@ -88,10 +88,10 @@ export default function ServicePage() {
                       rel="noopener noreferrer"
                       className="scheme-panel scheme-border block rounded-[1.25rem] border px-5 py-4 transition-colors hover:border-primary/50"
                     >
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-700">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-body">
                         {channel.label}
                       </p>
-                      <p className="mt-1 text-lg text-neutral-900">{channel.value}</p>
+                      <p className="mt-1 text-lg text-strong">{channel.value}</p>
                     </a>
                   );
                 })}
@@ -110,9 +110,6 @@ export default function ServicePage() {
                 <Link href="/tracking" className="btn-outline">
                   {SERVICE_PAGE_COPY.secondaryCta}
                 </Link>
-                <Link href="/downloads" className="btn-outline">
-                  {SERVICE_PAGE_COPY.tertiaryCta}
-                </Link>
               </div>
             </div>
           </div>
@@ -125,15 +122,12 @@ export default function ServicePage() {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <p className="typ-label scheme-text-inverse-muted">{SERVICE_PAGE_COPY.supportDeskKicker}</p>
-                <h2 className="typ-section mt-4 text-white">{SERVICE_PAGE_COPY.supportDeskTitle}</h2>
+                <h2 className="typ-section mt-4 text-inverse">{SERVICE_PAGE_COPY.supportDeskTitle}</h2>
                 <p className="page-copy scheme-text-inverse-body mt-4 max-w-2xl">
                   {SERVICE_PAGE_COPY.supportDeskDescription}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link href="/downloads" className="home-btn-secondary">
-                  {SERVICE_PAGE_COPY.tertiaryCta}
-                </Link>
                 <Link href="/contact" className="home-btn-primary">
                   {SERVICE_PAGE_COPY.primaryCta}
                 </Link>
@@ -147,3 +141,4 @@ export default function ServicePage() {
     </section>
   );
 }
+

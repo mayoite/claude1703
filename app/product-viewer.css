@@ -16,7 +16,7 @@
   backdrop-filter: blur(4px);
   top: 4rem;
   border-color: var(--border-soft);
-  background: rgba(251, 252, 253, 0.9);
+  background: var(--overlay-panel-88);
 }
 
 @utility pdp-shell {
@@ -25,9 +25,29 @@
   flex-direction: column;
 }
 
+@utility pdp-page {
+  background: var(--surface-page);
+}
+
 @media (min-width: 1024px) {
   .pdp-shell {
     flex-direction: row;
+  }
+}
+
+@utility pdp-media-column {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .pdp-media-column {
+    width: 58%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pdp-media-column {
+    width: 62%;
   }
 }
 
@@ -36,7 +56,7 @@
   width: 100%;
   flex-direction: column;
   padding-top: 0;
-  background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface-page) 100%);
+  background: var(--surface-soft);
 }
 
 @media (min-width: 1024px) {
@@ -55,7 +75,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   border-left: 1px solid var(--border-soft);
-  background: linear-gradient(180deg, rgba(251, 252, 253, 0.98) 0%, rgba(242, 246, 248, 0.96) 100%);
+  background: var(--surface-panel-strong);
 }
 
 .pdp-detail-pane::-webkit-scrollbar {
@@ -76,13 +96,46 @@
   }
 }
 
+@utility pdp-detail-column {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .pdp-detail-column {
+    position: sticky;
+    top: 112px;
+    height: calc(100vh - 112px);
+    width: 42%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pdp-detail-column {
+    width: 38%;
+  }
+}
+
+@utility pdp-viewer-shell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-top: 1px solid var(--border-soft);
+  background: var(--surface-soft);
+}
+
+@utility pdp-model-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 @utility pdp-card {
   border-radius: 2rem;
   border-width: 1px;
   padding: 1.25rem;
   border-color: var(--border-soft);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(242, 246, 248, 0.96) 100%);
-  box-shadow: 0 20px 48px -42px rgba(18, 48, 66, 0.14);
+  background: var(--surface-panel-strong);
+  box-shadow: 0 20px 48px -42px var(--overlay-inverse-12);
 }
 
 @media (min-width: 640px) {
@@ -92,7 +145,7 @@
 }
 
 @utility pdp-card--plain {
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--overlay-panel-95);
 }
 
 @utility pdp-info-grid {
@@ -103,7 +156,7 @@
 @utility pdp-info-row {
   border-radius: 1rem;
   border-width: 1px;
-  background-color: white;
+  background-color: var(--text-inverse);
   padding: 1rem;
   border-color: var(--border-soft);
 }
@@ -143,28 +196,32 @@
   text-transform: uppercase;
 }
 
+@utility pdp-chip--viewer-toggle {
+  background: var(--surface-glass-strong);
+}
+
 @utility pdp-chip--white {
-  border-color: #e5e5e5;
-  background-color: white;
-  color: #404040;
+  border-color: var(--border-soft);
+  background-color: var(--text-inverse);
+  color: var(--text-body);
 }
 
 @utility pdp-chip--soft {
-  border-color: #e5e5e5;
-  background-color: #fafafa;
-  color: #404040;
+  border-color: var(--border-soft);
+  background-color: var(--surface-soft);
+  color: var(--text-body);
 }
 
 @utility pdp-chip--solid {
-  background-color: #171717;
-  color: white;
+  background-color: var(--text-heading);
+  color: var(--text-inverse);
 }
 
 @utility pdp-chip--success {
   border-width: 1px;
-  border-color: #bbf7d0;
-  background-color: #f0fdf4;
-  color: #15803d;
+  border-color: var(--color-success);
+  background-color: var(--surface-status-ok);
+  color: var(--color-success);
 }
 
 @utility pdp-section-label {
@@ -202,6 +259,73 @@
   text-transform: uppercase;
 }
 
+@utility pdp-title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .pdp-title {
+    font-size: 3rem;
+  }
+}
+
+@utility pdp-divider {
+  border-top: 1px solid var(--border-soft);
+}
+
+@utility pdp-swatch {
+  height: 2.75rem;
+  width: 2.75rem;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  border-width: 2px;
+  transition-property: transform, border-color, box-shadow;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-standard);
+}
+
+@utility pdp-swatch--active {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 2px var(--border-muted);
+  transform: scale(1.1);
+}
+
+@utility pdp-swatch--idle {
+  border-color: var(--border-soft);
+}
+
+.pdp-swatch--idle:hover {
+  border-color: var(--border-muted);
+  transform: scale(1.05);
+}
+
+@utility pdp-feature-item {
+  display: flex;
+  min-height: 100%;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-soft);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+@utility pdp-overview-panel {
+  border-radius: 1rem;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-soft);
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
 /* ── PDP CTAs (need hover states, can't be pure @utility) ── */
 
 .pdp-cta-primary {
@@ -216,7 +340,7 @@
   transition-duration: 150ms;
   border-color: var(--color-primary);
   color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.94);
+  background: var(--overlay-panel-95);
 }
 
 .pdp-cta-primary:hover {
@@ -231,7 +355,7 @@
   justify-content: space-between;
   border-radius: 1rem;
   padding: 1rem 1.5rem;
-  color: white;
+  color: var(--text-inverse);
   transition-property: background-color;
   transition-duration: 150ms;
   background: var(--surface-inverse);
@@ -252,9 +376,10 @@
   transition-duration: 150ms;
   border-color: var(--border-soft);
   color: var(--text-strong);
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--overlay-panel-72);
 }
 
 .pdp-cta-secondary:hover {
   border-color: var(--border-strong);
 }
+

@@ -25,7 +25,7 @@ export function CompareColumnActions({
     <div className="mt-4 grid gap-2">
       <Link
         href={productHref}
-        className="inline-flex min-h-10 items-center justify-center rounded-xl border border-neutral-200 px-3 text-sm font-medium text-neutral-800 transition-colors hover:border-neutral-900"
+        className="inline-flex min-h-10 items-center justify-center rounded-xl border border-soft px-3 text-sm font-medium text-strong transition-colors hover:border-inverse"
       >
         {viewLabel}
       </Link>
@@ -40,7 +40,7 @@ export function CompareColumnActions({
           })
         }
         aria-label={`Add to quote cart ${productName}`}
-        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-primary px-3 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
+        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-primary px-3 text-sm font-medium text-inverse transition-colors hover:bg-primary-hover"
       >
         <MessageSquare className="h-4 w-4" />
         {addLabel}
@@ -48,3 +48,4 @@ export function CompareColumnActions({
     </div>
   );
 }
+

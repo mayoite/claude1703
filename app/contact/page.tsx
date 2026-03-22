@@ -21,10 +21,10 @@ function firstValue(value: string | string[] | undefined): string | null {
 }
 
 const cardStyle =
-  "border border-[var(--border-soft)] rounded-[var(--radius-lg)] p-5 md:p-6 bg-[linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] shadow-[var(--shadow-soft)]";
+  "border border-soft rounded-[var(--radius-lg)] p-5 md:p-6 bg-panel shadow-theme-soft";
 
 const labelStyle =
-  "font-sans text-[length:var(--type-label-size)] font-medium tracking-[0.11em] uppercase leading-[1.2] text-[var(--text-muted)]";
+  "font-sans text-[length:var(--type-label-size)] font-medium tracking-[0.11em] uppercase leading-[1.2] text-muted";
 
 export default async function ContactPage({
   searchParams,
@@ -56,13 +56,13 @@ export default async function ContactPage({
       />
       <section className="container grid gap-8 px-6 py-12 2xl:px-0 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:gap-12 md:py-16">
         <div className="space-y-8">
-          <div className="section-divider border-b border-neutral-200 pb-6">
+          <div className="section-divider border-b border-soft pb-6">
             <p className={labelStyle}>{CONTACT_PAGE_COPY.sectionTitle}</p>
-            <h2 className="typ-section mt-3 text-neutral-950">{CONTACT_PAGE_COPY.introTitle}</h2>
-            <p className="mt-3 max-w-prose text-base leading-relaxed text-neutral-700">
+            <h2 className="typ-section mt-3 text-strong">{CONTACT_PAGE_COPY.introTitle}</h2>
+            <p className="mt-3 max-w-prose text-base leading-relaxed text-body">
               {CONTACT_PAGE_COPY.introDescription}
             </p>
-            <p className="mt-4 text-sm leading-7 text-neutral-700">
+            <p className="mt-4 text-sm leading-7 text-body">
               {CONTACT_PAGE_COPY.resourceDeskLead}{" "}
               <Link href="/downloads" className="font-semibold text-primary transition-colors hover:text-primary-hover">
                 {CONTACT_PAGE_COPY.resourceDeskCta}
@@ -89,38 +89,38 @@ export default async function ContactPage({
               <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <p className={labelStyle}>Service region</p>
-                <p className="mt-3 text-sm leading-relaxed text-neutral-600">{SITE_CONTACT.regionLine}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted">{SITE_CONTACT.regionLine}</p>
               </div>
             </div>
-            <div className="flex items-start gap-4 border-t border-neutral-200 py-4">
+            <div className="flex items-start gap-4 border-t border-soft py-4">
               <Phone className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <p className={labelStyle}>Quotes and planning</p>
                 <a
                   href={`tel:${SITE_CONTACT.salesPhone.replace(/\s+/g, "")}`}
-                  className="mt-1 inline-flex items-center text-base text-neutral-950 transition-colors hover:text-primary"
+                  className="mt-1 inline-flex items-center text-base text-strong transition-colors hover:text-primary"
                 >
                   {SITE_CONTACT.salesPhone}
                 </a>
               </div>
             </div>
-            <div className="flex items-start gap-4 border-t border-neutral-200 py-4">
+            <div className="flex items-start gap-4 border-t border-soft py-4">
               <Phone className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <p className={labelStyle}>Support and enquiries</p>
                 <a
                   href={`tel:${SITE_CONTACT.supportPhone.replace(/\s+/g, "")}`}
-                  className="mt-1 inline-flex items-center text-base text-neutral-950 transition-colors hover:text-primary"
+                  className="mt-1 inline-flex items-center text-base text-strong transition-colors hover:text-primary"
                 >
                   {SITE_CONTACT.supportPhone}
                 </a>
               </div>
             </div>
-            <div className="flex items-start gap-4 border-t border-neutral-200 py-4 last:pb-0">
+            <div className="flex items-start gap-4 border-t border-soft py-4 last:pb-0">
               <Mail className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <p className={labelStyle}>Email</p>
-                <a href={`mailto:${SITE_CONTACT.salesEmail}`} className="mt-1 inline-flex items-center text-base text-neutral-950 transition-colors hover:text-primary">
+                <a href={`mailto:${SITE_CONTACT.salesEmail}`} className="mt-1 inline-flex items-center text-base text-strong transition-colors hover:text-primary">
                   {SITE_CONTACT.salesEmail}
                 </a>
               </div>
@@ -128,15 +128,12 @@ export default async function ContactPage({
           </div>
         </div>
 
-        <div className="border border-[var(--border-soft)] rounded-[var(--radius-xl)] p-6 md:p-8 bg-[linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] shadow-[var(--shadow-panel)]">
+        <div className="border border-soft rounded-[var(--radius-xl)] p-6 md:p-8 bg-panel shadow-theme-panel">
           <div className="scheme-panel-dark mb-6 rounded-[1.5rem] p-6">
             <p className="typ-label scheme-text-inverse-muted">{CONTACT_PAGE_COPY.quickDeskKicker}</p>
-            <h2 className="typ-section mt-3 text-white">{CONTACT_PAGE_COPY.quickDeskTitle}</h2>
+            <h2 className="typ-section mt-3 text-inverse">{CONTACT_PAGE_COPY.quickDeskTitle}</h2>
             <p className="page-copy scheme-text-inverse-body mt-3">{CONTACT_PAGE_COPY.quickDeskDescription}</p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link href="/downloads" className="btn-outline-light">
-                {CONTACT_PAGE_COPY.quickDeskPrimaryCta}
-              </Link>
               <Link href="/planning" className="btn-primary">
                 {CONTACT_PAGE_COPY.quickDeskSecondaryCta}
               </Link>
@@ -148,3 +145,4 @@ export default async function ContactPage({
     </section>
   );
 }
+

@@ -570,7 +570,7 @@ export function Simple2DConfigurator({
             <div className="configurator-visual__header">
               <div>
                 <p className="typ-label scheme-text-inverse-muted mb-2">{CONFIGURATOR_COPY.studioKicker}</p>
-                <h2 className="text-2xl font-light tracking-tight text-white">
+                <h2 className="text-2xl font-light tracking-tight text-inverse">
                   {form.projectType === "workstations"
                     ? CONFIGURATOR_COPY.workstationTitle
                     : CONFIGURATOR_COPY.storageTitle}
@@ -676,24 +676,24 @@ export function Simple2DConfigurator({
             <div className="configurator-visual__stats">
               <div className="configurator-visual__stat">
                 <p className="configurator-visual__stat-label">{CONFIGURATOR_COPY.totalLabel}</p>
-                <p className="mt-1 text-2xl font-light text-white">{totalSeatsOrUnits}</p>
+                <p className="mt-1 text-2xl font-light text-inverse">{totalSeatsOrUnits}</p>
               </div>
               <div className="configurator-visual__stat">
                 <p className="configurator-visual__stat-label">{CONFIGURATOR_COPY.footprintLabel}</p>
-                <p className="mt-1 text-2xl font-light text-white">
+                <p className="mt-1 text-2xl font-light text-inverse">
                   {Math.round(roughWidthMm / 1000)}m x {Math.round(roughDepthMm / 1000)}m
                 </p>
               </div>
               <div className="configurator-visual__stat">
                 <p className="configurator-visual__stat-label">{CONFIGURATOR_COPY.fitLabel}</p>
-                <p className="mt-1 text-sm font-semibold text-white">{fitStatusText}</p>
+                <p className="mt-1 text-sm font-semibold text-inverse">{fitStatusText}</p>
                 <p className="scheme-text-inverse-muted mt-1 text-xs">
                   Room {Math.round(roomWidthMm / 1000)}m x {Math.round(roomLengthMm / 1000)}m
                 </p>
               </div>
               <div className="configurator-visual__stat">
                 <p className="configurator-visual__stat-label">{CONFIGURATOR_COPY.budgetLabel}</p>
-                <p className="mt-1 text-lg font-medium text-white">{budgetRangeText}</p>
+                <p className="mt-1 text-lg font-medium text-inverse">{budgetRangeText}</p>
               </div>
             </div>
 
@@ -708,8 +708,8 @@ export function Simple2DConfigurator({
               </span>
             </div>
 
-            <div className="relative z-10 mt-4 rounded-2xl border border-white/15 bg-white/[0.08] p-4">
-              <p className="text-sm font-semibold text-white">Decision snapshot</p>
+            <div className="relative z-10 mt-4 rounded-2xl border border-inverse bg-[color:var(--overlay-panel-08)] p-4">
+              <p className="text-sm font-semibold text-inverse">Decision snapshot</p>
               <p className="scheme-text-inverse-body mt-2 text-sm">{fitSummary}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {selectedOptionSummary.map((option) => (
@@ -728,7 +728,7 @@ export function Simple2DConfigurator({
                 <div className="configurator-visual__suggestion-grid">
                   {SERIES_SUGGESTIONS[form.workstationSeries].map((system) => (
                     <Link key={system.name} href={system.href} className="group configurator-visual__suggestion">
-                      <div className="relative aspect-[16/10] bg-neutral-800">
+                      <div className="relative aspect-[16/10] bg-inverse">
                         <Image
                           src={system.image}
                           alt={system.name}
@@ -738,7 +738,7 @@ export function Simple2DConfigurator({
                         />
                       </div>
                       <div className="p-3">
-                        <p className="text-base font-medium text-white">{system.name}</p>
+                        <p className="text-base font-medium text-inverse">{system.name}</p>
                         <p className="scheme-text-inverse-body mt-1 text-sm leading-relaxed">{system.hint}</p>
                       </div>
                     </Link>
@@ -753,11 +753,11 @@ export function Simple2DConfigurator({
           <section className="configurator-form">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="typ-label mb-2 text-neutral-700">{CONFIGURATOR_COPY.setupKicker}</p>
-                <h3 className="text-2xl font-light tracking-tight text-neutral-950">
+                <p className="typ-label mb-2 text-body">{CONFIGURATOR_COPY.setupKicker}</p>
+                <h3 className="text-2xl font-light tracking-tight text-strong">
                   {CONFIGURATOR_COPY.setupTitle}
                 </h3>
-                <p className="mt-2 max-w-2xl text-sm text-neutral-600">
+                <p className="mt-2 max-w-2xl text-sm text-muted">
                   {mode === "quick-estimate"
                     ? CONFIGURATOR_COPY.quickEstimateDescription
                     : CONFIGURATOR_COPY.technicalPlannerDescription}
@@ -767,7 +767,7 @@ export function Simple2DConfigurator({
                 <button
                   type="button"
                   onClick={openGuidedPlanner}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-full border border-neutral-300 px-4 text-sm text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-950"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full border border-muted px-4 text-sm text-body transition-colors hover:border-strong hover:text-strong"
                 >
                   <Bot className="h-4 w-4" />
                   {CONFIGURATOR_COPY.plannerSecondaryCta}
@@ -775,7 +775,7 @@ export function Simple2DConfigurator({
                 <button
                   type="button"
                   onClick={jumpToReview}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-full bg-neutral-900 px-4 text-sm text-white transition-colors hover:bg-primary"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full bg-inverse px-4 text-sm text-inverse transition-colors hover:bg-primary"
                 >
                   {CONFIGURATOR_COPY.reviewCta}
                   <ArrowRight className="h-4 w-4" />
@@ -784,7 +784,7 @@ export function Simple2DConfigurator({
             </div>
 
             <div className="mt-6">
-              <p className="typ-overline mb-2 text-neutral-600">
+              <p className="typ-overline mb-2 text-muted">
                 {CONFIGURATOR_COPY.modeSwitcherLabel}
               </p>
               <div className="configurator-mode-switcher">
@@ -800,7 +800,7 @@ export function Simple2DConfigurator({
                 >
                   <div>
                     <p className="text-sm font-semibold">{CONFIGURATOR_COPY.quickModeLabel}</p>
-                    <p className="mt-1 text-xs text-neutral-500">
+                    <p className="mt-1 text-xs text-muted">
                       {CONFIGURATOR_COPY.quickModeDescription}
                     </p>
                   </div>
@@ -817,7 +817,7 @@ export function Simple2DConfigurator({
                 >
                   <div>
                     <p className="text-sm font-semibold">{CONFIGURATOR_COPY.technicalModeLabel}</p>
-                    <p className="mt-1 text-xs text-neutral-500">
+                    <p className="mt-1 text-xs text-muted">
                       {CONFIGURATOR_COPY.technicalModeDescription}
                     </p>
                   </div>
@@ -967,7 +967,7 @@ export function Simple2DConfigurator({
                   </div>
 
                   <div className="mt-4">
-                    <p className="mb-3 text-sm font-medium text-neutral-800">
+                    <p className="mb-3 text-sm font-medium text-strong">
                       {CONFIGURATOR_COPY.budgetBandLabel}
                     </p>
                     <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
@@ -983,7 +983,7 @@ export function Simple2DConfigurator({
                           }`}
                         >
                           <span className="block text-sm font-semibold">{band.label}</span>
-                          <span className="mt-1 block text-xs text-neutral-500">{band.hint}</span>
+                          <span className="mt-1 block text-xs text-muted">{band.hint}</span>
                         </button>
                       ))}
                     </div>
@@ -992,15 +992,15 @@ export function Simple2DConfigurator({
                   <button
                     type="button"
                     onClick={() => setShowQuickNotes((prev) => !prev)}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-neutral-700"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-body"
                   >
                     {showQuickNotes ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
                     {CONFIGURATOR_COPY.quickNotesLabel}
                   </button>
 
                   {showQuickNotes ? (
-                    <div className="mt-3 rounded-2xl border border-neutral-200 bg-white p-4">
-                      <p className="text-sm text-neutral-600">{CONFIGURATOR_COPY.quickNotesDescription}</p>
+                    <div className="mt-3 rounded-2xl border border-soft bg-panel p-4">
+                      <p className="text-sm text-muted">{CONFIGURATOR_COPY.quickNotesDescription}</p>
                       <textarea
                         rows={4}
                         value={form.notes}
@@ -1014,10 +1014,10 @@ export function Simple2DConfigurator({
 
                 <div className="configurator-review-inline">
                   <div>
-                    <p className="text-sm font-semibold text-neutral-950">
+                    <p className="text-sm font-semibold text-strong">
                       {CONFIGURATOR_COPY.quickEstimateReviewTitle}
                     </p>
-                    <p className="mt-1 text-sm text-neutral-600">
+                    <p className="mt-1 text-sm text-muted">
                       {CONFIGURATOR_COPY.quickEstimateReviewDescription}
                     </p>
                   </div>
@@ -1452,18 +1452,18 @@ export function Simple2DConfigurator({
           <section className="configurator-copilot">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="typ-label mb-2 text-neutral-700">{CONFIGURATOR_COPY.copilotKicker}</p>
-                <h3 className="text-2xl font-light tracking-tight text-neutral-950">
+                <p className="typ-label mb-2 text-body">{CONFIGURATOR_COPY.copilotKicker}</p>
+                <h3 className="text-2xl font-light tracking-tight text-strong">
                   {CONFIGURATOR_COPY.copilotTitle}
                 </h3>
-                <p className="mt-2 max-w-2xl text-sm text-neutral-600">
+                <p className="mt-2 max-w-2xl text-sm text-muted">
                   {CONFIGURATOR_COPY.copilotDescription}
                 </p>
               </div>
               <button
                 type="button"
                 onClick={() => setCopilot({ loading: false, error: "", result: null })}
-                className="text-sm text-neutral-500 underline"
+                className="text-sm text-muted underline"
               >
                 {CONFIGURATOR_COPY.copilotReset}
               </button>
@@ -1475,7 +1475,7 @@ export function Simple2DConfigurator({
                   key={starter}
                   type="button"
                   onClick={() => void submitCopilotQuery(starter)}
-                  className="rounded-full border border-neutral-300 bg-white px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
+                  className="rounded-full border border-muted bg-panel px-3 py-1.5 text-xs text-body transition-colors hover:border-primary/50 hover:text-primary"
                 >
                   {starter}
                 </button>
@@ -1483,7 +1483,7 @@ export function Simple2DConfigurator({
               <button
                 type="button"
                 onClick={() => void submitCopilotQuery(copilotPrompt)}
-                className="inline-flex items-center gap-1.5 rounded-full border border-neutral-300 bg-white px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
+                className="inline-flex items-center gap-1.5 rounded-full border border-muted bg-panel px-3 py-1.5 text-xs text-body transition-colors hover:border-primary/50 hover:text-primary"
               >
                 <Wand2 className="h-3.5 w-3.5" />
                 {CONFIGURATOR_COPY.copilotPrimaryPrompt}
@@ -1503,24 +1503,24 @@ export function Simple2DConfigurator({
                   type="button"
                   onClick={() => void submitCopilotQuery(copilotQuery)}
                   disabled={!copilotQuery.trim() || copilot.loading}
-                  className="typ-chip inline-flex min-h-11 items-center gap-2 rounded-xl bg-neutral-900 px-4 text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-50"
+                  className="typ-chip inline-flex min-h-11 items-center gap-2 rounded-xl bg-inverse px-4 text-inverse transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {copilot.loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
                   {CONFIGURATOR_COPY.copilotSubmit}
                 </button>
               </div>
-              {copilot.error ? <p className="mt-2 text-xs text-red-600">{copilot.error}</p> : null}
+              {copilot.error ? <p className="mt-2 text-xs text-danger">{copilot.error}</p> : null}
             </div>
 
             {!copilot.result && !copilot.loading ? (
-              <div className="mt-5 rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-5">
-                <p className="text-sm font-semibold text-neutral-950">{CONFIGURATOR_COPY.copilotEmptyTitle}</p>
-                <p className="mt-2 text-sm text-neutral-600">{CONFIGURATOR_COPY.copilotEmptyDescription}</p>
+              <div className="mt-5 rounded-2xl border border-dashed border-muted bg-hover p-5">
+                <p className="text-sm font-semibold text-strong">{CONFIGURATOR_COPY.copilotEmptyTitle}</p>
+                <p className="mt-2 text-sm text-muted">{CONFIGURATOR_COPY.copilotEmptyDescription}</p>
               </div>
             ) : null}
 
             {copilot.loading ? (
-              <div className="mt-5 inline-flex items-center gap-2 rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
+              <div className="mt-5 inline-flex items-center gap-2 rounded-xl border border-soft bg-hover px-4 py-3 text-sm text-body">
                 <Loader2 className="h-4 w-4 animate-spin" />
                 Thinking through this planning snapshot...
               </div>
@@ -1528,18 +1528,18 @@ export function Simple2DConfigurator({
 
             {copilot.result ? (
               <div className="mt-5 space-y-4">
-                <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                  <p className="text-sm font-semibold text-neutral-950">{copilot.result.summary}</p>
-                  <p className="mt-2 text-sm text-neutral-600">
+                <div className="rounded-2xl border border-soft bg-hover p-4">
+                  <p className="text-sm font-semibold text-strong">{copilot.result.summary}</p>
+                  <p className="mt-2 text-sm text-muted">
                     Indicative budget: {copilot.result.totalBudget}
                   </p>
                 </div>
                 {copilot.result.warnings?.length ? (
-                  <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4">
-                    <p className="text-sm font-semibold text-amber-900">
+                  <div className="rounded-2xl border border-warning bg-warning-soft p-4">
+                    <p className="text-sm font-semibold text-warning">
                       {CONFIGURATOR_COPY.copilotWarningsTitle}
                     </p>
-                    <ul className="mt-2 space-y-2 text-sm text-amber-900">
+                    <ul className="mt-2 space-y-2 text-sm text-warning">
                       {copilot.result.warnings.map((warning) => (
                         <li key={warning}>{warning}</li>
                       ))}
@@ -1547,11 +1547,11 @@ export function Simple2DConfigurator({
                   </div>
                 ) : null}
                 {copilot.result.nextActions?.length ? (
-                  <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-                    <p className="text-sm font-semibold text-neutral-950">
+                  <div className="rounded-2xl border border-soft bg-panel p-4">
+                    <p className="text-sm font-semibold text-strong">
                       {CONFIGURATOR_COPY.copilotNextActionsTitle}
                     </p>
-                    <ul className="mt-2 space-y-2 text-sm text-neutral-700">
+                    <ul className="mt-2 space-y-2 text-sm text-body">
                       {copilot.result.nextActions.map((action) => (
                         <li key={action}>{action}</li>
                       ))}
@@ -1560,11 +1560,11 @@ export function Simple2DConfigurator({
                 ) : null}
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                   {copilot.result.recommendations.map((item) => (
-                    <div key={`${item.productId}-${item.productName}`} className="rounded-2xl border border-neutral-200 bg-white p-4">
+                    <div key={`${item.productId}-${item.productName}`} className="rounded-2xl border border-soft bg-panel p-4">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <p className="text-sm font-semibold text-neutral-950">{item.productName}</p>
-                          <p className="typ-chip mt-1 text-neutral-500">
+                          <p className="text-sm font-semibold text-strong">{item.productName}</p>
+                          <p className="typ-chip mt-1 text-muted">
                             {item.category}
                           </p>
                         </div>
@@ -1575,8 +1575,8 @@ export function Simple2DConfigurator({
                           View
                         </Link>
                       </div>
-                      <p className="mt-3 text-sm text-neutral-700">{item.why}</p>
-                      <p className="mt-3 text-sm font-medium text-neutral-950">{item.budgetEstimate}</p>
+                      <p className="mt-3 text-sm text-body">{item.why}</p>
+                      <p className="mt-3 text-sm font-medium text-strong">{item.budgetEstimate}</p>
                     </div>
                   ))}
                 </div>
@@ -1587,12 +1587,12 @@ export function Simple2DConfigurator({
           <section ref={reviewRef} className="configurator-form configurator-review">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="typ-label mb-2 text-neutral-700">{CONFIGURATOR_COPY.reviewTitle}</p>
-                <h3 className="text-2xl font-light tracking-tight text-neutral-950">
+                <p className="typ-label mb-2 text-body">{CONFIGURATOR_COPY.reviewTitle}</p>
+                <h3 className="text-2xl font-light tracking-tight text-strong">
                   {CONFIGURATOR_COPY.reviewDescription}
                 </h3>
               </div>
-              <div className="typ-chip rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-neutral-600">
+              <div className="typ-chip rounded-full border border-soft bg-hover px-3 py-1 text-muted">
                 {mode === "quick-estimate"
                   ? CONFIGURATOR_COPY.quickModeLabel
                   : CONFIGURATOR_COPY.technicalModeLabel}
@@ -1602,7 +1602,7 @@ export function Simple2DConfigurator({
             <form className="mt-6 space-y-5" onSubmit={submitEnquiry}>
               <div className="configurator-review__snapshot">
                 <div className="configurator-review__summary">
-                  <p className="text-sm font-semibold text-neutral-950">Planning snapshot</p>
+                  <p className="text-sm font-semibold text-strong">Planning snapshot</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {reviewChecklist.map((item) => (
                       <span key={item} className="configurator-review-inline__fact">
@@ -1611,17 +1611,17 @@ export function Simple2DConfigurator({
                     ))}
                   </div>
                   <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-                    <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                      <p className="typ-chip text-neutral-500">
+                    <div className="rounded-2xl border border-soft bg-hover p-4">
+                      <p className="typ-chip text-muted">
                         {CONFIGURATOR_COPY.budgetLabel}
                       </p>
-                      <p className="mt-2 text-lg font-medium text-neutral-950">{budgetRangeText}</p>
-                      <p className="mt-1 text-sm text-neutral-600">{budgetBandLabel}</p>
+                      <p className="mt-2 text-lg font-medium text-strong">{budgetRangeText}</p>
+                      <p className="mt-1 text-sm text-muted">{budgetBandLabel}</p>
                     </div>
-                    <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                      <p className="typ-chip text-neutral-500">Fit and density</p>
-                      <p className="mt-2 text-lg font-medium text-neutral-950">{fitStatusText}</p>
-                      <p className="mt-1 text-sm text-neutral-600">
+                    <div className="rounded-2xl border border-soft bg-hover p-4">
+                      <p className="typ-chip text-muted">Fit and density</p>
+                      <p className="mt-2 text-lg font-medium text-strong">{fitStatusText}</p>
+                      <p className="mt-1 text-sm text-muted">
                         {ratingFromCoverage(planCoveragePercent)} with {areaPerSeatOrUnit.toFixed(2)} sq m /{" "}
                         {form.projectType === "workstations" ? "seat" : "unit"}
                       </p>
@@ -1650,9 +1650,9 @@ export function Simple2DConfigurator({
                 </div>
               </div>
 
-              {submit.error ? <p className="text-sm text-red-600">{submit.error}</p> : null}
+              {submit.error ? <p className="text-sm text-danger">{submit.error}</p> : null}
               {submit.queryId ? (
-                <p className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
+                <p className="rounded-lg border border-success bg-success-soft px-3 py-2 text-sm text-success">
                   Configuration sent. Reference: <span className="font-semibold">{submit.queryId}</span>
                 </p>
               ) : null}
@@ -1673,13 +1673,13 @@ export function Simple2DConfigurator({
 
       <div className="configurator-mobile-review">
         <div>
-          <p className="typ-overline text-neutral-500">{fitStatusText}</p>
-          <p className="text-sm font-semibold text-neutral-950">{budgetRangeText}</p>
+          <p className="typ-overline text-muted">{fitStatusText}</p>
+          <p className="text-sm font-semibold text-strong">{budgetRangeText}</p>
         </div>
         <button
           type="button"
           onClick={jumpToReview}
-          className="inline-flex min-h-11 items-center gap-2 rounded-full bg-neutral-900 px-4 text-sm text-white"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full bg-inverse px-4 text-sm text-inverse"
         >
           {CONFIGURATOR_COPY.mobileReviewBar}
           <ArrowRight className="h-4 w-4" />
@@ -1688,3 +1688,4 @@ export function Simple2DConfigurator({
     </div>
   );
 }
+

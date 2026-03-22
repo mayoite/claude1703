@@ -74,7 +74,7 @@ function GridSkeleton() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="aspect-4/3 animate-pulse rounded-[1.6rem] border scheme-border bg-white"
+            className="aspect-4/3 animate-pulse rounded-[1.6rem] border scheme-border bg-panel"
           />
         ))}
       </div>
@@ -104,10 +104,10 @@ export default async function CategoryPage({
     return (
       <div className="scheme-page flex min-h-screen flex-col items-center justify-center p-8 text-center">
         <div className="scheme-panel rounded-[1.8rem] border px-8 py-10">
-        <h1 className="mb-4 text-2xl font-light text-neutral-900">
+        <h1 className="mb-4 text-2xl font-light text-strong">
           {CATEGORY_ROUTE_COPY.offlineTitle}
         </h1>
-        <p className="mb-8 max-w-md text-neutral-500">
+        <p className="mb-8 max-w-md text-muted">
           {CATEGORY_ROUTE_COPY.offlineDescription}
         </p>
         </div>
@@ -167,4 +167,5 @@ export default async function CategoryPage({
     </div>
   );
 }
+
 

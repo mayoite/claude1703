@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export function PartnerSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-panel">
       <div className="container mx-auto px-6 lg:px-12 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Logo and Text Group */}
@@ -24,14 +24,14 @@ export function PartnerSection() {
             </div>
 
             {/* Vertical Divider (Desktop only) */}
-            <div className="hidden md:block w-px h-12 bg-neutral-200" />
+            <div className="hidden md:block w-px h-12 bg-soft" />
 
             {/* Text Content */}
             <div className="text-left">
-              <h3 className="text-2xl font-medium text-neutral-900 leading-tight">
+              <h3 className="text-2xl font-medium text-strong leading-tight">
                 Official Strategic Partner
               </h3>
-              <p className="text-lg text-neutral-500">
+              <p className="text-lg text-muted">
                 Exclusive partnership for premium office solutions in India
               </p>
             </div>
@@ -52,3 +52,5 @@ export function PartnerSection() {
     </section>
   );
 }
+
+

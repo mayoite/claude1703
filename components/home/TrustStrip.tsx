@@ -8,9 +8,10 @@ interface TrustStripProps {
   stats: BusinessStats;
   embedded?: boolean;
   showLogos?: boolean;
+  dark?: boolean;
 }
 
-export function TrustStrip({ stats, embedded = false, showLogos = true }: TrustStripProps) {
+export function TrustStrip({ stats, embedded = false, showLogos = true, dark = false }: TrustStripProps) {
   const kpis = [
     {
       value: formatKpiValuePlus(stats.clientOrganisations),
@@ -32,13 +33,19 @@ export function TrustStrip({ stats, embedded = false, showLogos = true }: TrustS
 
   const content = (
     <>
-      <div className={`stats-block grid grid-cols-2 gap-4 md:grid-cols-4 ${embedded ? "stats-block--embedded" : ""}`}>
+      <div className={`grid grid-cols-2 gap-4 md:grid-cols-4 ${embedded ? "" : "stats-block"}`}>
         {kpis.map(({ value, label, testId }) => (
-          <div key={label} className="scheme-panel scheme-border rounded-2xl border p-6 text-center">
-            <p data-testid={testId} className="typ-stat text-primary">
+          <div key={label} className={dark
+            ? "rounded-2xl border border-inverse bg-[color:var(--overlay-panel-08)] p-6 text-center backdrop-blur-sm"
+            : "scheme-panel scheme-border rounded-2xl border p-6 text-center"}>
+            <p data-testid={testId} className={dark
+              ? "font-display text-[clamp(2rem,4vw,3rem)] font-[350] leading-[0.96] tracking-[-0.045em] text-[var(--color-accent)]"
+              : "typ-stat text-primary"}>
               {value}
             </p>
-            <p className="stats-block__label mt-2">{label}</p>
+            <p className={dark
+              ? "mt-2 text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[var(--text-inverse-muted)]"
+              : "stats-block__label mt-2"}>{label}</p>
           </div>
         ))}
       </div>
@@ -80,3 +87,4 @@ export function TrustStrip({ stats, embedded = false, showLogos = true }: TrustS
     </section>
   );
 }
+

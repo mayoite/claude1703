@@ -71,10 +71,9 @@ export const SITE_FOOTER_NAV = [
   {
     heading: "Company",
     links: [
-      { href: "/about", label: "About Us" },
+      { href: "/about", label: "About" },
       { href: "/trusted-by", label: "Trusted By" },
-      { href: "/projects", label: "Case Studies" },
-      { href: "/portfolio", label: "Portfolio" },
+      { href: "/projects", label: "Projects" },
       { href: "/sustainability", label: "Sustainability" },
       { href: "/service", label: "After Sales" },
     ],
@@ -83,6 +82,7 @@ export const SITE_FOOTER_NAV = [
     heading: "Support",
     links: [
       { href: "/contact", label: "Contact Us" },
+      { href: "/planner", label: "Planner Software" },
       { href: "/configurator", label: "2D Configurator" },
       { href: "/planning", label: "Planning Service" },
       { href: "/downloads", label: "Downloads" },

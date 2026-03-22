@@ -35,7 +35,7 @@ export function Teaser({
     <section
       className={cn(
         "w-full py-14 md:py-20",
-        lightMode ? "bg-white text-neutral-900" : "bg-neutral-900 text-white",
+        lightMode ? "bg-panel text-strong" : "bg-inverse text-inverse",
         className,
       )}
     >
@@ -71,7 +71,7 @@ export function Teaser({
                 <p
                   className={cn(
                     "typ-h3 max-w-xl font-normal leading-relaxed",
-                    lightMode ? "text-neutral-700" : "text-neutral-200",
+                    lightMode ? "text-body" : "text-inverse-body",
                   )}
                 >
                   {description}
@@ -86,8 +86,8 @@ export function Teaser({
                   "group mt-8 inline-flex items-center gap-4 border-b pb-2 transition-colors",
                   reversed ? "md:ml-auto" : "",
                   lightMode
-                    ? "border-neutral-900 text-neutral-900 hover:border-primary-hover hover:text-primary"
-                    : "border-white text-white hover:border-primary-hover hover:text-primary",
+                    ? "border-strong text-strong hover:border-primary-hover hover:text-primary"
+                    : "border-inverse text-inverse hover:border-primary-hover hover:text-primary",
                 )}
               >
                 <span className="typ-cta">{linkText}</span>
@@ -118,7 +118,7 @@ export function Teaser({
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                 )}
-                <div className="absolute inset-0 bg-black/5 transition-colors duration-500 group-hover:bg-transparent" />
+                <div className="absolute inset-0 bg-[color:var(--overlay-inverse-06)] transition-colors duration-500 group-hover:bg-transparent" />
               </div>
             </Reveal>
           </div>
@@ -127,3 +127,5 @@ export function Teaser({
     </section>
   );
 }
+
+

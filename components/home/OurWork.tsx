@@ -28,7 +28,7 @@ interface OurWorkProps {
 
 export function OurWork({ clientCount }: OurWorkProps) {
   return (
-    <section className="w-full bg-neutral-50 py-20 md:py-28 border-t border-neutral-200">
+    <section className="w-full bg-hover py-20 md:py-28 border-t border-soft">
       <div className="container-wide">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
@@ -36,13 +36,13 @@ export function OurWork({ clientCount }: OurWorkProps) {
             <p className="scheme-text-muted text-xs font-bold tracking-[0.25em] uppercase mb-4">
               Trusted Clients
             </p>
-            <h2 className="text-3xl md:text-4xl text-neutral-900 tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-4xl text-strong tracking-tight leading-tight">
               Trusted by India&apos;s most respected organisations.
             </h2>
           </div>
           <Link
             href="/projects"
-            className="shrink-0 text-xs font-bold tracking-[0.2em] uppercase text-neutral-500 hover:text-neutral-900 transition-colors border-b border-neutral-300 hover:border-neutral-900 pb-1"
+            className="shrink-0 text-xs font-bold tracking-[0.2em] uppercase text-muted hover:text-strong transition-colors border-b border-muted hover:border-strong pb-1"
           >
             View all clients →
           </Link>
@@ -63,3 +63,4 @@ export function OurWork({ clientCount }: OurWorkProps) {
     </section>
   );
 }
+

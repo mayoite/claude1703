@@ -33,7 +33,7 @@ export function WhyUs({ stats, asOfLabel }: WhyUsProps) {
       <div className="container px-6 2xl:px-0">
         <div className="mb-14">
           <p className="typ-label mb-4 text-(--color-accent-soft)">Why teams choose us</p>
-          <h2 className="typ-section text-white">By the numbers</h2>
+          <h2 className="typ-section text-inverse">By the numbers</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
           {pillars.map(({ id, number, label, caption }) => (
@@ -56,3 +56,4 @@ export function WhyUs({ stats, asOfLabel }: WhyUsProps) {
     </section>
   );
 }
+

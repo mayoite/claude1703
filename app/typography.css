@@ -1,6 +1,11 @@
 @theme {
   --font-display: var(--font-cisco-sans), "Cisco Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-sans: var(--font-cisco-sans), "Cisco Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-helvetica-neue), "Helvetica Neue", var(--font-cisco-sans), "Cisco Sans", Helvetica, Arial, sans-serif;
+  --font-weight-display-light: 300;
+  --font-weight-display-regular: 400;
+  --font-weight-copy-regular: 400;
+  --font-weight-copy-medium: 500;
+  --font-weight-copy-semibold: 600;
 
   --type-label-size: 0.72rem;
   --type-title-sm-size: clamp(1.12rem, 1.04rem + 0.24vw, 1.28rem);
@@ -17,33 +22,44 @@
   --type-letter-copy: -0.008em;
   --type-letter-label: 0.05em;
   --type-letter-label-wide: 0.11em;
+  --type-leading-display: 0.94;
+  --type-leading-title: 1.08;
+  --type-leading-h3: 1.14;
+  --type-leading-copy: 1.52;
+  --type-leading-copy-sm: 1.6;
 }
 
 /* ── Display / H1 ── */
 @utility typ-h1 {
   font-family: var(--font-display);
   font-size: var(--type-display-size);
-  font-weight: 275;
+  font-weight: var(--font-weight-display-light);
   letter-spacing: var(--type-letter-tight);
-  line-height: 0.86;
+  line-height: var(--type-leading-display);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 @utility typ-display {
   font-family: var(--font-display);
   font-size: var(--type-display-size);
-  font-weight: 275;
+  font-weight: var(--font-weight-display-light);
   letter-spacing: var(--type-letter-tight);
-  line-height: 0.86;
+  line-height: var(--type-leading-display);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 @utility hero-title {
   font-family: var(--font-display);
   font-size: var(--type-display-size);
-  font-weight: 275;
+  font-weight: var(--font-weight-display-light);
   letter-spacing: var(--type-letter-tight);
-  line-height: 0.86;
+  line-height: var(--type-leading-display);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
@@ -51,36 +67,45 @@
 @utility typ-h2 {
   font-family: var(--font-display);
   font-size: var(--type-title-lg-size);
-  font-weight: 350;
+  font-weight: var(--font-weight-display-regular);
   letter-spacing: var(--type-letter-title);
-  line-height: 1;
+  line-height: var(--type-leading-title);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 @utility typ-section {
   font-family: var(--font-display);
   font-size: var(--type-title-lg-size);
-  font-weight: 350;
+  font-weight: var(--font-weight-display-regular);
   letter-spacing: var(--type-letter-title);
-  line-height: 1;
+  line-height: var(--type-leading-title);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 @utility home-heading {
   font-family: var(--font-display);
   font-size: var(--type-title-lg-size);
-  font-weight: 350;
+  font-weight: var(--font-weight-display-regular);
   letter-spacing: var(--type-letter-title);
-  line-height: 1;
+  line-height: var(--type-leading-title);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
+  color: var(--text-heading-soft);
   text-wrap: balance;
 }
 
 @utility section-title {
   font-family: var(--font-display);
   font-size: var(--type-title-lg-size);
-  font-weight: 350;
+  font-weight: var(--font-weight-display-regular);
   letter-spacing: var(--type-letter-title);
-  line-height: 1;
+  line-height: var(--type-leading-title);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
@@ -88,9 +113,11 @@
 @utility typ-h3 {
   font-family: var(--font-display);
   font-size: var(--type-title-sm-size);
-  font-weight: 350;
+  font-weight: var(--font-weight-display-regular);
   letter-spacing: -0.038em;
-  line-height: 1.02;
+  line-height: var(--type-leading-h3);
+  font-kerning: normal;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
@@ -98,137 +125,137 @@
 @utility typ-lead {
   font-family: var(--font-sans);
   font-size: var(--type-body-lg-size);
-  font-weight: 400;
+  font-weight: var(--font-weight-copy-regular);
   letter-spacing: var(--type-letter-copy);
-  line-height: 1.48;
+  line-height: var(--type-leading-copy);
 }
 
 @utility home-copy {
   font-family: var(--font-sans);
   font-size: var(--type-body-lg-size);
-  font-weight: 400;
+  font-weight: var(--font-weight-copy-regular);
   letter-spacing: var(--type-letter-copy);
-  line-height: 1.48;
+  line-height: var(--type-leading-copy);
 }
 
 @utility hero-subtitle {
   font-family: var(--font-sans);
   font-size: var(--type-body-lg-size);
-  font-weight: 400;
+  font-weight: var(--font-weight-copy-regular);
   letter-spacing: var(--type-letter-copy);
-  line-height: 1.48;
+  line-height: var(--type-leading-copy);
 }
 
 @utility page-copy {
   font-family: var(--font-sans);
   font-size: var(--type-body-lg-size);
-  font-weight: 400;
+  font-weight: var(--font-weight-copy-regular);
   letter-spacing: var(--type-letter-copy);
-  line-height: 1.48;
+  line-height: var(--type-leading-copy);
 }
 
 /* ── Body small ── */
 @utility page-copy-sm {
   font-family: var(--font-sans);
   font-size: var(--type-body-size);
-  font-weight: 400;
+  font-weight: var(--font-weight-copy-regular);
   letter-spacing: var(--type-letter-copy);
-  line-height: 1.56;
+  line-height: var(--type-leading-copy-sm);
 }
 
 @utility typ-body-sm {
   font-family: var(--font-sans);
   font-size: var(--type-body-size);
-  font-weight: 400;
+  font-weight: var(--font-weight-copy-regular);
   letter-spacing: var(--type-letter-copy);
-  line-height: 1.56;
+  line-height: var(--type-leading-copy-sm);
 }
 
 @utility catalog-card__description {
   font-family: var(--font-sans);
   font-size: var(--type-body-size);
-  font-weight: 400;
+  font-weight: var(--font-weight-copy-regular);
   letter-spacing: var(--type-letter-copy);
-  line-height: 1.56;
+  line-height: var(--type-leading-copy-sm);
 }
 
 /* ── Nav ── */
 @utility typ-nav {
   font-family: var(--font-sans);
   font-size: var(--type-body-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.01em;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 @utility typ-nav-sm {
   font-family: var(--font-sans);
   font-size: var(--type-body-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.02em;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 @utility typ-micro {
   font-family: var(--font-sans);
   font-size: var(--type-body-size);
-  font-weight: 600;
+  font-weight: var(--font-weight-copy-semibold);
   letter-spacing: 0.08em;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 /* ── Label / eyebrow ── */
 @utility typ-label {
   font-family: var(--font-sans);
   font-size: var(--type-label-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.11em;
-  line-height: 1.2;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
 @utility typ-eyebrow {
   font-family: var(--font-sans);
   font-size: var(--type-label-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.11em;
-  line-height: 1.2;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
 @utility typ-overline {
   font-family: var(--font-sans);
   font-size: var(--type-label-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.11em;
-  line-height: 1.2;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
 @utility typ-chip {
   font-family: var(--font-sans);
   font-size: var(--type-label-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.11em;
-  line-height: 1.2;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
 @utility home-kicker {
   font-family: var(--font-sans);
   font-size: var(--type-label-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.11em;
-  line-height: 1.2;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
 @utility catalog-card__eyebrow {
   font-family: var(--font-sans);
   font-size: var(--type-label-size);
-  font-weight: 500;
+  font-weight: var(--font-weight-copy-medium);
   letter-spacing: 0.11em;
-  line-height: 1.2;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
@@ -236,30 +263,30 @@
 @utility typ-cta {
   font-family: var(--font-sans);
   font-size: var(--type-body-size);
-  font-weight: 600;
+  font-weight: var(--font-weight-copy-semibold);
   letter-spacing: 0.04em;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 /* ── Stat ── */
 @utility typ-stat {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 4.2rem);
-  font-weight: 325;
+  font-weight: var(--font-weight-display-light);
   letter-spacing: -0.06em;
-  line-height: 0.92;
+  line-height: 1;
   font-variant-numeric: tabular-nums;
 }
 
 /* ── Accent styles ── */
 @utility home-heading__accent {
-  color: var(--color-brand-muted);
+  color: var(--color-ocean-boat-blue-500);
   font-style: normal;
-  font-weight: 350;
+  font-weight: var(--font-weight-display-regular);
   letter-spacing: inherit;
 }
 
 @utility hero-accent {
-  color: var(--color-brand-muted);
-  font-weight: 350;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-display-regular);
 }

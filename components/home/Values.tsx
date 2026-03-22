@@ -19,7 +19,7 @@ const VALUES = [
 
 export function Values() {
     return (
-        <section className="w-full bg-white py-24 md:py-32">
+        <section className="w-full bg-panel py-24 md:py-32">
             <div className="container px-6 2xl:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
                     {VALUES.map((value, idx) => (
@@ -31,10 +31,10 @@ export function Values() {
                             transition={{ duration: 0.5, delay: idx * 0.2 }}
                             className="flex flex-col gap-4 group"
                         >
-                            <h3 className="text-3xl font-light text-neutral-900 border-l-2 border-primary pl-4 group-hover:pl-6 transition-all duration-300">
+                            <h3 className="text-3xl font-light text-strong border-l-2 border-primary pl-4 group-hover:pl-6 transition-all duration-300">
                                 {value.title}
                             </h3>
-                            <p className="text-lg font-light text-neutral-600 leading-relaxed pl-4">
+                            <p className="text-lg font-light text-muted leading-relaxed pl-4">
                                 {value.description}
                             </p>
                         </motion.div>
@@ -44,3 +44,4 @@ export function Values() {
         </section>
     );
 }
+

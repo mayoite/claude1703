@@ -1,5 +1,5 @@
 export const HOMEPAGE_HERO_CONTENT = {
-  eyebrow: "One&Only workspace systems",
+  eyebrow: "One & Only Furniture",
   title: ["Workspaces", "that", "perform"],
   description: "",
   primaryCta: { label: "Guided Planner", href: "/contact" },

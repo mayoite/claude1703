@@ -9,7 +9,7 @@ export default function TrustedByPage() {
   const sectors = Array.from(new Set(TRUSTED_BY_CLIENTS.map((client) => client.sector)));
 
   return (
-    <section className="scheme-page flex min-h-screen flex-col items-center">
+    <section className="scheme-page flex min-h-screen flex-col">
       <Hero
         variant="small"
         title={TRUSTED_BY_PAGE_COPY.heroTitle}
@@ -19,7 +19,7 @@ export default function TrustedByPage() {
       />
 
       <section className="container px-6 py-18 2xl:px-0 md:py-22">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="trusted-by-overview-grid">
           <div>
             <p className="typ-label scheme-text-body mb-4">{TRUSTED_BY_PAGE_COPY.overviewKicker}</p>
             <h2 className="typ-section scheme-text-strong max-w-3xl">
@@ -30,7 +30,7 @@ export default function TrustedByPage() {
             </p>
           </div>
 
-          <div className="scheme-panel scheme-border rounded-[1.75rem] border p-6 md:p-8">
+          <div className="scheme-panel scheme-border trusted-by-stats-panel border p-6 md:p-8">
             <p className="typ-label scheme-text-body mb-4">{TRUSTED_BY_PAGE_COPY.statsKicker}</p>
             <div className="grid grid-cols-2 gap-4">
               {TRUSTED_BY_STATS.map((item) => (
@@ -38,7 +38,7 @@ export default function TrustedByPage() {
                   key={item.label}
                   className="scheme-panel-soft scheme-border rounded-2xl border p-5"
                 >
-                  <p className="typ-stat text-primary">{item.value}</p>
+                  <p className="typ-stat scheme-text-brand">{item.value}</p>
                   <p className="stats-block__label mt-2">{item.label}</p>
                 </div>
               ))}
@@ -49,12 +49,12 @@ export default function TrustedByPage() {
 
       <section className="w-full py-6">
         <div className="container px-6 2xl:px-0">
-          <div className="scheme-panel-dark relative overflow-hidden rounded-[2rem] p-8 md:p-10">
-            <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top_right,rgba(13,45,180,0.24),transparent_58%)]" />
-            <div className="relative z-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="scheme-panel-dark trusted-by-sector-band p-8 md:p-10">
+            <div className="trusted-by-sector-glow" />
+            <div className="trusted-by-sector-grid">
               <div>
                 <p className="typ-label scheme-text-inverse-muted">{TRUSTED_BY_PAGE_COPY.sectorsKicker}</p>
-                <h2 className="typ-section mt-4 text-white">{TRUSTED_BY_PAGE_COPY.sectorsTitle}</h2>
+                <h2 className="typ-section mt-4 text-inverse">{TRUSTED_BY_PAGE_COPY.sectorsTitle}</h2>
                 <p className="page-copy scheme-text-inverse-body mt-4 max-w-xl">
                   {TRUSTED_BY_PAGE_COPY.sectorsDescription}
                 </p>
@@ -63,7 +63,7 @@ export default function TrustedByPage() {
                 {sectors.map((sector) => (
                   <span
                     key={sector}
-                    className="inline-flex min-h-11 items-center rounded-full border border-white/15 bg-white/7 px-5 text-sm font-medium tracking-[0.06em] text-white/88 backdrop-blur-sm"
+                    className="trusted-by-sector-chip"
                   >
                     {sector}
                   </span>
@@ -92,3 +92,5 @@ export default function TrustedByPage() {
     </section>
   );
 }
+
+

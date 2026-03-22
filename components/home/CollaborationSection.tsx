@@ -9,7 +9,7 @@ export function CollaborationSection() {
       <div className="flex flex-col lg:flex-row min-h-[520px]">
 
         {/* Image panel — full-bleed, no container padding */}
-        <div className="relative w-full lg:w-[55%] aspect-[16/10] lg:aspect-auto overflow-hidden bg-neutral-200">
+        <div className="relative w-full lg:w-[55%] aspect-[16/10] lg:aspect-auto overflow-hidden bg-soft">
           <Image
             src="/images/hero/tvs-patna-hq.webp"
             alt="Collaborative office workspace designed by One&Only"
@@ -22,7 +22,7 @@ export function CollaborationSection() {
         {/* Text panel */}
         <div className="section-ink flex w-full flex-col justify-center px-8 py-16 md:px-16 lg:w-[45%] lg:py-20">
           <p className="typ-label scheme-text-inverse-muted mb-6">Workspace Solutions</p>
-          <h2 className="typ-section text-white mb-6 leading-tight">
+          <h2 className="typ-section text-inverse mb-6 leading-tight">
             Space for{" "}
             <em className="italic scheme-text-inverse-muted">collaboration.</em>
           </h2>
@@ -32,7 +32,7 @@ export function CollaborationSection() {
           </p>
           <Link
             href="/solutions"
-            className="typ-label inline-flex items-center gap-3 text-white border-b border-white/20 pb-2 hover:border-white/60 transition-colors w-fit"
+            className="typ-label inline-flex items-center gap-3 text-inverse border-b border-inverse pb-2 hover:border-inverse/60 transition-colors w-fit"
           >
             Explore workspace solutions <ArrowRight className="h-4 w-4" />
           </Link>
@@ -42,3 +42,5 @@ export function CollaborationSection() {
     </section>
   );
 }
+
+

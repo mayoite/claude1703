@@ -5,17 +5,22 @@ import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 import { HOMEPAGE_COLLECTIONS_CONTENT } from "@/data/site/homepage";
+import { fadeUp } from "@/lib/helpers/motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 export function Collections() {
   return (
-    <section className="bg-white py-10 md:py-12">
+    <section className="home-section--soft border-t border-b border-[var(--border-soft)] py-10 md:py-12">
       <div className="home-shell">
         <div className="home-frame home-frame--standard">
-          <div className="mb-10 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between">
+          <motion.div
+            className="mb-10 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between"
+            {...fadeUp(14, 0.03)}
+          >
             <div className="max-w-3xl">
               <h2 className="home-heading">
                 {HOMEPAGE_COLLECTIONS_CONTENT.titleLead}{" "}
@@ -26,22 +31,27 @@ export function Collections() {
             </div>
 
             <div className="flex gap-4">
-              <button
+              <motion.button
                 aria-label="Previous slide"
-                className="swiper-button-prev-custom inline-flex h-12 w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 transition-all hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:opacity-50"
+                className="swiper-button-prev-custom inline-flex h-12 w-12 items-center justify-center rounded-full border border-soft bg-panel text-body transition-all hover:border-strong hover:bg-inverse hover:text-inverse disabled:opacity-50"
+                whileHover={{ y: -1 }}
+                whileTap={{ y: 0 }}
               >
                 <ArrowLeft className="h-5 w-5" />
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 aria-label="Next slide"
-                className="swiper-button-next-custom inline-flex h-12 w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 transition-all hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:opacity-50"
+                className="swiper-button-next-custom inline-flex h-12 w-12 items-center justify-center rounded-full border border-soft bg-panel text-body transition-all hover:border-strong hover:bg-inverse hover:text-inverse disabled:opacity-50"
+                whileHover={{ y: -1 }}
+                whileTap={{ y: 0 }}
               >
                 <ArrowRight className="h-5 w-5" />
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
 
-          <Swiper
+          <motion.div {...fadeUp(18, 0.08)}>
+            <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={24}
             slidesPerView={1}
@@ -64,7 +74,7 @@ export function Collections() {
               <SwiperSlide key={item.name}>
                 <Link
                   href={item.href}
-                  className="group relative block aspect-[3/4] overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-neutral-100"
+                  className="group relative block aspect-[3/4] overflow-hidden rounded-[1.75rem] border border-soft bg-hover"
                 >
                   <Image
                     src={item.image}
@@ -73,25 +83,28 @@ export function Collections() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/68 via-black/20 to-transparent opacity-76 transition-opacity duration-500 group-hover:opacity-82" />
+                  <div className="absolute inset-0 bg-[color:var(--overlay-inverse-24)] opacity-76 transition-opacity duration-500 group-hover:opacity-82" />
 
-                  <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-7 text-center">
-                    <h3 className="mb-3 text-2xl font-light text-white">
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-6 md:p-7">
+                    <h3 className="text-xl font-light text-inverse md:text-2xl">
                       {item.name}
                     </h3>
                     <div
                       aria-hidden="true"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/92 text-neutral-900 transition-all duration-500 group-hover:bg-white"
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--surface-panel-strong)] text-[1.35rem] leading-none text-strong transition-all duration-300 group-hover:translate-x-0.5"
                     >
-                      <ArrowRight className="h-5 w-5" />
+                      <span>→</span>
                     </div>
                   </div>
                 </Link>
               </SwiperSlide>
             ))}
           </Swiper>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
+
+

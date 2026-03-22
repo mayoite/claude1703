@@ -136,18 +136,18 @@ export default async function ComparePage({
   );
 
   return (
-    <section className="min-h-screen bg-white pt-24">
+    <section className="min-h-screen bg-panel pt-24">
       <div className="container px-6 py-14 2xl:px-0">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="typ-label mb-3 text-neutral-700">{COMPARE_ROUTE_COPY.kicker}</p>
-            <h1 className="typ-section text-neutral-950">{COMPARE_ROUTE_COPY.title}</h1>
-            <p className="mt-3 max-w-3xl text-base leading-relaxed text-neutral-600">
+            <p className="typ-label mb-3 text-body">{COMPARE_ROUTE_COPY.kicker}</p>
+            <h1 className="typ-section text-strong">{COMPARE_ROUTE_COPY.title}</h1>
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">
               {COMPARE_ROUTE_COPY.description}
             </p>
             {items.length > 0 ? (
-              <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-neutral-600">
-                <span className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1">
+              <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted">
+                <span className="rounded-full border border-soft bg-hover px-3 py-1">
                   {COMPARE_ROUTE_COPY.countLabel.replace("{count}", String(items.length))}
                 </span>
                 <span>{COMPARE_ROUTE_COPY.mobileHint}</span>
@@ -158,9 +158,6 @@ export default async function ComparePage({
             <Link href="/products" className="btn-outline">
               {COMPARE_ROUTE_COPY.browseCta}
             </Link>
-            <Link href="/downloads" className="btn-outline">
-              {COMPARE_ROUTE_COPY.resourceDeskCta}
-            </Link>
             <a href="/contact?intent=quote&source=compare" className="btn-primary">
               {COMPARE_ROUTE_COPY.primaryCta}
             </a>
@@ -168,28 +165,25 @@ export default async function ComparePage({
         </div>
 
         {items.length === 0 ? (
-          <div className="rounded-xl border border-neutral-300 bg-neutral-50 p-8">
-            <p className="text-lg text-neutral-800">
+          <div className="rounded-xl border border-muted bg-hover p-8">
+            <p className="text-lg text-strong">
               {COMPARE_ROUTE_COPY.emptyTitle}
             </p>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
               {COMPARE_ROUTE_COPY.emptyDescription}
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link href="/products" className="btn-outline">
                 {COMPARE_ROUTE_COPY.emptyPrimaryCta}
               </Link>
-              <Link href="/downloads" className="btn-outline">
-                {COMPARE_ROUTE_COPY.emptySecondaryCta}
-              </Link>
             </div>
           </div>
         ) : (
-          <div className="overflow-x-auto rounded-xl border border-neutral-300">
-            <table className="min-w-[760px] w-full border-collapse bg-white">
+          <div className="overflow-x-auto rounded-xl border border-muted">
+            <table className="min-w-[760px] w-full border-collapse bg-panel">
               <thead>
                 <tr>
-                  <th className="w-56 border-b border-neutral-300 bg-neutral-50 px-4 py-4 text-left text-sm font-semibold text-neutral-800">
+                  <th className="w-56 border-b border-muted bg-hover px-4 py-4 text-left text-sm font-semibold text-strong">
                     Specification
                   </th>
                   {items.map((item) => {
@@ -201,10 +195,10 @@ export default async function ComparePage({
                     return (
                       <th
                         key={item.product.id}
-                        className="border-b border-l border-neutral-300 px-4 py-4 text-left align-top"
+                        className="border-b border-l border-muted px-4 py-4 text-left align-top"
                       >
                         <Link href={productHref} className="block">
-                          <div className="relative mb-3 aspect-[4/3] overflow-hidden rounded-md border border-neutral-300 bg-neutral-50">
+                          <div className="relative mb-3 aspect-[4/3] overflow-hidden rounded-md border border-muted bg-hover">
                             <Image
                               src={image}
                               alt={item.product.name}
@@ -213,7 +207,7 @@ export default async function ComparePage({
                               className="object-cover"
                             />
                           </div>
-                          <p className="text-sm font-semibold text-neutral-950">{item.product.name}</p>
+                          <p className="text-sm font-semibold text-strong">{item.product.name}</p>
                         </Link>
                         <CompareColumnActions
                           productName={item.product.name}
@@ -230,13 +224,13 @@ export default async function ComparePage({
               <tbody>
                 {compareRows.map((row) => (
                   <tr key={row.key}>
-                    <td className="border-t border-neutral-200 bg-neutral-50 px-4 py-3 text-sm font-semibold text-neutral-800">
+                    <td className="border-t border-soft bg-hover px-4 py-3 text-sm font-semibold text-strong">
                       {row.label}
                     </td>
                     {items.map((item) => (
                       <td
                         key={`${item.product.id}-${row.key}`}
-                        className="border-l border-t border-neutral-200 px-4 py-3 text-sm text-neutral-800"
+                        className="border-l border-t border-soft px-4 py-3 text-sm text-strong"
                       >
                         {specValue(item, row.key)}
                       </td>
@@ -251,3 +245,4 @@ export default async function ComparePage({
     </section>
   );
 }
+

@@ -44,11 +44,11 @@ export function SummaryPanel() {
                 <h3 className="text-lg font-medium">Summary</h3>
                 <button
                     onClick={handleCopy}
-                    className="flex items-center gap-2 text-sm text-neutral-600 hover:text-neutral-900"
+                    className="flex items-center gap-2 text-sm text-muted hover:text-strong"
                 >
                     {copied ? (
                         <>
-                            <CheckCircle2 className="w-4 h-4 text-green-500" />
+                            <CheckCircle2 className="w-4 h-4 text-success" />
                             <span>Copied!</span>
                         </>
                     ) : (
@@ -62,14 +62,14 @@ export function SummaryPanel() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="whatsapp-cta flex items-center gap-2 px-6 py-3 text-sm font-medium text-white transition-colors"
+                    className="whatsapp-cta flex items-center gap-2 px-6 py-3 text-sm font-medium text-inverse transition-colors"
                 >
                     Send via WhatsApp
                     <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
                     href={mailtoUrl}
-                    className="flex items-center gap-2 border border-neutral-900 text-neutral-900 px-6 py-3 text-sm font-medium hover:bg-neutral-900 hover:text-white transition-colors"
+                    className="flex items-center gap-2 border border-inverse text-strong px-6 py-3 text-sm font-medium hover:bg-inverse hover:text-inverse transition-colors"
                 >
                     Send via Email
                     <ArrowRight className="w-4 h-4" />
@@ -78,3 +78,5 @@ export function SummaryPanel() {
         </div>
     );
 }
+
+

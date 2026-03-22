@@ -179,8 +179,8 @@ export default function CustomerQueriesOpsPage() {
     <section className="container py-12">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h1 className="typ-h1 text-neutral-900">Customer queries</h1>
-          <p className="mt-2 text-sm text-neutral-600">
+          <h1 className="typ-h1 text-strong">Customer queries</h1>
+          <p className="mt-2 text-sm text-muted">
             Live inbox with 10-second auto-refresh.
           </p>
         </div>
@@ -188,16 +188,16 @@ export default function CustomerQueriesOpsPage() {
           type="button"
           onClick={() => void fetchItems()}
           disabled={!hasToken || loading}
-          className="inline-flex items-center gap-2 rounded-md border border-neutral-300 px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-50 disabled:opacity-50"
+          className="inline-flex items-center gap-2 rounded-md border border-muted px-3 py-2 text-sm text-body hover:bg-hover disabled:opacity-50"
         >
           <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
           Refresh
         </button>
       </div>
 
-      <div className="mb-6 grid gap-4 rounded-xl border border-neutral-200 bg-white p-4 md:grid-cols-3">
+      <div className="mb-6 grid gap-4 rounded-xl border border-soft bg-panel p-4 md:grid-cols-3">
         <div className="md:col-span-2">
-          <label className="mb-2 block text-xs uppercase tracking-wide text-neutral-500">
+          <label className="mb-2 block text-xs uppercase tracking-wide text-muted">
             Admin token
           </label>
           <input
@@ -205,14 +205,14 @@ export default function CustomerQueriesOpsPage() {
             value={adminTokenInput}
             onChange={(event) => setAdminTokenInput(event.target.value)}
             placeholder="Paste CUSTOMER_QUERIES_ADMIN_TOKEN"
-            className="w-full rounded-md border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-primary"
+            className="w-full rounded-md border border-muted px-3 py-2 text-sm outline-none focus:border-primary"
           />
         </div>
         <div className="flex items-end">
           <button
             type="button"
             onClick={applyToken}
-            className="w-full rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-black"
+            className="w-full rounded-md bg-inverse px-4 py-2 text-sm font-medium text-inverse hover:bg-inverse-soft"
           >
             Apply token
           </button>
@@ -220,11 +220,11 @@ export default function CustomerQueriesOpsPage() {
       </div>
 
       <div className="mb-6 flex flex-wrap items-center gap-3">
-        <label className="text-xs uppercase tracking-wide text-neutral-500">Filter</label>
+        <label className="text-xs uppercase tracking-wide text-muted">Filter</label>
         <select
           value={statusFilter}
           onChange={(event) => setStatusFilter(event.target.value as "all" | QueryStatus)}
-          className="rounded-md border border-neutral-300 px-3 py-2 text-sm"
+          className="rounded-md border border-muted px-3 py-2 text-sm"
         >
           <option value="all">All</option>
           {statusOptions.map((status) => (
@@ -233,25 +233,25 @@ export default function CustomerQueriesOpsPage() {
             </option>
           ))}
         </select>
-        <p className="text-xs text-neutral-500">
+        <p className="text-xs text-muted">
           {lastUpdatedAt ? `Last sync: ${formatDate(lastUpdatedAt)}` : "Not synced yet"}
         </p>
       </div>
 
       {error ? (
-        <div className="mb-6 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+        <div className="mb-6 rounded-md border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">
           {error}
         </div>
       ) : null}
 
       {!hasToken ? (
-        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-6 text-sm text-neutral-600">
+        <div className="rounded-xl border border-soft bg-hover p-6 text-sm text-muted">
           Enter admin token to load queries.
         </div>
       ) : null}
 
       {hasToken && items.length === 0 && !loading ? (
-        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-6 text-sm text-neutral-600">
+        <div className="rounded-xl border border-soft bg-hover p-6 text-sm text-muted">
           No queries found.
         </div>
       ) : null}
@@ -266,23 +266,23 @@ export default function CustomerQueriesOpsPage() {
           };
 
           return (
-            <article key={item.id} className="rounded-xl border border-neutral-200 bg-white p-4">
+            <article key={item.id} className="rounded-xl border border-soft bg-panel p-4">
               <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <h2 className="text-base font-semibold text-neutral-900">{item.name}</h2>
-                  <p className="text-xs text-neutral-500">
+                  <h2 className="text-base font-semibold text-strong">{item.name}</h2>
+                  <p className="text-xs text-muted">
                     {item.company ? `${item.company} • ` : ""}
                     {item.email || "No email"} • {item.phone || "No phone"}
                   </p>
                 </div>
-                <p className="text-xs text-neutral-500">{formatDate(item.created_at)}</p>
+                <p className="text-xs text-muted">{formatDate(item.created_at)}</p>
               </div>
 
-              <p className="mb-4 text-sm text-neutral-700">{item.message}</p>
+              <p className="mb-4 text-sm text-body">{item.message}</p>
 
               <div className="grid gap-3 md:grid-cols-4">
                 <div>
-                  <label className="mb-1 block text-xs uppercase tracking-wide text-neutral-500">
+                  <label className="mb-1 block text-xs uppercase tracking-wide text-muted">
                     Status
                   </label>
                   <select
@@ -296,7 +296,7 @@ export default function CustomerQueriesOpsPage() {
                         },
                       }))
                     }
-                    className="w-full rounded-md border border-neutral-300 px-2 py-2 text-sm"
+                    className="w-full rounded-md border border-muted px-2 py-2 text-sm"
                   >
                     {statusOptions.map((status) => (
                       <option key={status} value={status}>
@@ -306,7 +306,7 @@ export default function CustomerQueriesOpsPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="mb-1 block text-xs uppercase tracking-wide text-neutral-500">
+                  <label className="mb-1 block text-xs uppercase tracking-wide text-muted">
                     Follow-up channel
                   </label>
                   <select
@@ -320,7 +320,7 @@ export default function CustomerQueriesOpsPage() {
                         },
                       }))
                     }
-                    className="w-full rounded-md border border-neutral-300 px-2 py-2 text-sm"
+                    className="w-full rounded-md border border-muted px-2 py-2 text-sm"
                   >
                     {followUpOptions.map((channel) => (
                       <option key={channel} value={channel}>
@@ -330,7 +330,7 @@ export default function CustomerQueriesOpsPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="mb-1 block text-xs uppercase tracking-wide text-neutral-500">
+                  <label className="mb-1 block text-xs uppercase tracking-wide text-muted">
                     Follow-up target
                   </label>
                   <input
@@ -346,7 +346,7 @@ export default function CustomerQueriesOpsPage() {
                       }))
                     }
                     placeholder="email / phone"
-                    className="w-full rounded-md border border-neutral-300 px-2 py-2 text-sm"
+                    className="w-full rounded-md border border-muted px-2 py-2 text-sm"
                   />
                 </div>
                 <div className="md:flex md:items-end">
@@ -354,7 +354,7 @@ export default function CustomerQueriesOpsPage() {
                     type="button"
                     onClick={() => void handleSave(item.id)}
                     disabled={savingId === item.id}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-white hover:bg-primary/90 disabled:opacity-60"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-inverse hover:bg-primary/90 disabled:opacity-60"
                   >
                     <Save className="h-4 w-4" />
                     {savingId === item.id ? "Saving..." : "Save"}
@@ -363,7 +363,7 @@ export default function CustomerQueriesOpsPage() {
               </div>
 
               <div className="mt-3">
-                <label className="mb-1 block text-xs uppercase tracking-wide text-neutral-500">
+                <label className="mb-1 block text-xs uppercase tracking-wide text-muted">
                   Follow-up notes
                 </label>
                 <textarea
@@ -379,7 +379,7 @@ export default function CustomerQueriesOpsPage() {
                     }))
                   }
                   placeholder="Call summary, next action, etc."
-                  className="w-full rounded-md border border-neutral-300 px-3 py-2 text-sm"
+                  className="w-full rounded-md border border-muted px-3 py-2 text-sm"
                 />
               </div>
             </article>
@@ -389,3 +389,5 @@ export default function CustomerQueriesOpsPage() {
     </section>
   );
 }
+
+

@@ -25,7 +25,7 @@ export default function TermsPage() {
               {LEGAL_PAGE_COPY.terms.overviewDescription}
             </p>
             <div className="scheme-border mt-8 border-t pt-6">
-              <p className="text-sm leading-7 text-neutral-700">
+              <p className="text-sm leading-7 text-body">
                 Use this page together with the refund, privacy, and service routes when a client
                 needs clear guidance on commercial handling, support scope, or warranty-backed
                 follow-up.
@@ -49,7 +49,7 @@ export default function TermsPage() {
                   index === 0 ? "scheme-panel-dark" : "scheme-panel"
                 }`}
               >
-                <h2 className={`typ-card ${index === 0 ? "text-white" : "scheme-text-strong"}`}>
+                <h2 className={`typ-card ${index === 0 ? "text-inverse" : "scheme-text-strong"}`}>
                   {section.heading}
                 </h2>
                 <p
@@ -69,4 +69,5 @@ export default function TermsPage() {
     </section>
   );
 }
+
 

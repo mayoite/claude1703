@@ -5,17 +5,14 @@ import { KpiIntegrityMonitor } from "@/components/analytics/KpiIntegrityMonitor"
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { PROJECTS_PAGE_CLIENTS, PROJECTS_PAGE_COPY } from "@/data/site/routeCopy";
 import { getBusinessStats } from "@/lib/businessStats";
-import { formatKpiAsOf, formatKpiValuePlus } from "@/lib/kpiFormat";
+import { formatKpiValuePlus } from "@/lib/kpiFormat";
 
 export default async function ProjectsPage() {
   const { stats, source } = await getBusinessStats();
   const clientsValue = formatKpiValuePlus(stats.clientOrganisations);
-  const projectsValue = formatKpiValuePlus(stats.projectsDelivered);
-  const sectorsValue = formatKpiValuePlus(stats.sectorsServed);
-  const asOfLabel = formatKpiAsOf(stats.asOfDate);
 
   return (
-    <section className="scheme-page flex min-h-screen flex-col items-center">
+    <section className="scheme-page flex min-h-screen flex-col">
       <KpiIntegrityMonitor page="projects" source={source} stats={stats} />
       <Hero
         variant="small"
@@ -26,28 +23,6 @@ export default async function ProjectsPage() {
       />
 
       <section className="container-wide py-16 md:py-24">
-        <div className="stats-block scheme-border mb-16 grid grid-cols-1 gap-6 border-b pb-16 sm:grid-cols-3">
-          {[
-            { id: "client-organisations", value: clientsValue, label: "Client Organisations" },
-            { id: "projects-delivered", value: projectsValue, label: "Projects Delivered" },
-            { id: "sectors-served", value: sectorsValue, label: "Sectors Served" },
-          ].map((stat) => (
-            <div key={stat.label} className="scheme-panel-soft scheme-border rounded-[1.5rem] border px-6 py-7 text-center">
-              <p data-testid={`kpi-${stat.id}-projects`} className="typ-stat mb-1 text-neutral-900">
-                {stat.value}
-              </p>
-              <p className="stats-block__label">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-
-        <p
-          data-testid="kpi-as-of-projects"
-          className="-mt-10 mb-16 text-center text-xs font-medium tracking-wide text-neutral-500"
-        >
-          {asOfLabel}
-        </p>
-
         <div className="scheme-panel scheme-border mb-12 rounded-[2rem] border p-8 md:p-10">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>

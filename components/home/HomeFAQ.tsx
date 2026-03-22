@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { HOMEPAGE_FAQ_CONTENT } from "@/data/site/homepage";
+import { fadeUp, staggerContainer, staggerItem } from "@/lib/helpers/motion";
 
 export function HomeFAQ() {
   const [open, setOpen] = useState<number | null>(null);
@@ -11,7 +13,7 @@ export function HomeFAQ() {
     <section className="home-section home-section--white py-10 md:py-14">
       <div className="home-shell">
         <div className="home-frame home-frame--standard">
-          <div className="mb-7 md:mb-8">
+          <motion.div className="mb-7 md:mb-8" {...fadeUp(12, 0.02)}>
             <h2 className="home-heading">
               {HOMEPAGE_FAQ_CONTENT.titleLead}
               {HOMEPAGE_FAQ_CONTENT.titleAccent ? (
@@ -23,51 +25,68 @@ export function HomeFAQ() {
                 </>
               ) : null}
             </h2>
-          </div>
+          </motion.div>
 
-          <dl className="divide-y divide-neutral-200">
+          <motion.dl
+            className="divide-y divide-soft"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.14 }}
+          >
             {HOMEPAGE_FAQ_CONTENT.items.map((item, index) => {
               const btnId = `faq-btn-${index}`;
               const panelId = `faq-panel-${index}`;
               const isOpen = open === index;
 
               return (
-                <div key={index} className="py-3.5 md:py-4">
+                <motion.div key={index} className="py-3.5 md:py-4" variants={staggerItem}>
                   <dt>
                     <button
                       type="button"
                       id={btnId}
                       aria-expanded={isOpen}
                       aria-controls={panelId}
-                      className="flex w-full items-center justify-between gap-4 text-left"
+                      className="flex w-full items-center justify-between gap-4 py-1 text-left transition-colors duration-200 hover:text-strong"
                       onClick={() => setOpen(isOpen ? null : index)}
                     >
-                      <span className="text-base font-medium text-neutral-950 md:text-[1.06rem]">
+                      <span className="typ-body-sm text-body md:text-[1.03rem] md:leading-[1.45]">
                         {item.q}
                       </span>
-                      <ChevronDown
-                        className={`h-5 w-5 shrink-0 text-neutral-400 transition-transform duration-200 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
+                      <motion.span
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ChevronDown
+                        className="h-5 w-5 shrink-0 text-subtle"
                         aria-hidden="true"
-                      />
+                        />
+                      </motion.span>
                     </button>
                   </dt>
-                  <dd
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={btnId}
-                    hidden={!isOpen}
-                    className="mt-2 text-base leading-relaxed text-neutral-600"
-                  >
-                    {item.a}
-                  </dd>
-                </div>
+                  <AnimatePresence initial={false}>
+                    {isOpen ? (
+                      <motion.dd
+                        id={panelId}
+                        role="region"
+                        aria-labelledby={btnId}
+                        className="mt-2 overflow-hidden page-copy-sm scheme-text-muted"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        <div className="pb-1">{item.a}</div>
+                      </motion.dd>
+                    ) : null}
+                  </AnimatePresence>
+                </motion.div>
               );
             })}
-          </dl>
+          </motion.dl>
         </div>
       </div>
     </section>
   );
 }
+

@@ -35,17 +35,17 @@ export default async function ShowroomsPage() {
             <p className="typ-label scheme-text-body">{asOfLabel}</p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-xl border border-neutral-300 bg-neutral-50 px-6 py-5">
-              <p className="typ-stat text-neutral-950">{formatKpiValuePlus(stats.clientOrganisations)}</p>
-              <p className="mt-2 text-sm font-medium text-neutral-800">Client organisations</p>
+            <div className="rounded-xl border border-muted bg-hover px-6 py-5">
+              <p className="typ-stat text-strong">{formatKpiValuePlus(stats.clientOrganisations)}</p>
+              <p className="mt-2 text-sm font-medium text-strong">Client organisations</p>
             </div>
-            <div className="rounded-xl border border-neutral-300 bg-neutral-50 px-6 py-5">
-              <p className="typ-stat text-neutral-950">{formatKpiValuePlus(stats.projectsDelivered)}</p>
-              <p className="mt-2 text-sm font-medium text-neutral-800">Projects delivered</p>
+            <div className="rounded-xl border border-muted bg-hover px-6 py-5">
+              <p className="typ-stat text-strong">{formatKpiValuePlus(stats.projectsDelivered)}</p>
+              <p className="mt-2 text-sm font-medium text-strong">Projects delivered</p>
             </div>
-            <div className="rounded-xl border border-neutral-300 bg-neutral-50 px-6 py-5">
-              <p className="typ-stat text-neutral-950">{formatKpiValuePlus(stats.sectorsServed)}</p>
-              <p className="mt-2 text-sm font-medium text-neutral-800">Sectors served</p>
+            <div className="rounded-xl border border-muted bg-hover px-6 py-5">
+              <p className="typ-stat text-strong">{formatKpiValuePlus(stats.sectorsServed)}</p>
+              <p className="mt-2 text-sm font-medium text-strong">Sectors served</p>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default async function ShowroomsPage() {
             {SHOWROOMS_CLIENTS.map((client) => (
               <div
                 key={client}
-                className="scheme-panel scheme-border rounded-md border px-4 py-3 text-sm font-semibold text-neutral-800"
+                className="scheme-panel scheme-border rounded-md border px-4 py-3 text-sm font-semibold text-strong"
               >
                 {client}
               </div>
@@ -88,8 +88,8 @@ export default async function ShowroomsPage() {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {SHOWROOMS_HIGHLIGHTS.map((item) => (
               <article key={item.title} className="scheme-panel-soft scheme-border rounded-xl border p-6">
-                <h3 className="text-2xl font-light tracking-tight text-neutral-950">{item.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-neutral-800">{item.detail}</p>
+                <h3 className="text-2xl font-light tracking-tight text-strong">{item.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-strong">{item.detail}</p>
               </article>
             ))}
           </div>

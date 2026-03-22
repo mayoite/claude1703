@@ -1,39 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { HOMEPAGE_TESTIMONIALS_CONTENT } from "@/data/site/homepage";
+import { fadeUp, staggerContainer, staggerItem } from "@/lib/helpers/motion";
 
 export function TestimonialsStrip() {
   return (
-    <section className="home-section home-section--sand py-10 md:py-14">
+    <section className="home-section home-section--soft border-t border-b border-[var(--border-soft)] py-10 md:py-14">
       <div className="home-shell">
         <div className="home-frame home-frame--standard">
-          <div className="mb-8 md:mb-10">
+          <motion.div className="mb-8 md:mb-10" {...fadeUp(14, 0.03)}>
             <h2 className="home-heading">
               {HOMEPAGE_TESTIMONIALS_CONTENT.titleLead}{" "}
               <span className="home-heading__accent">
                 {HOMEPAGE_TESTIMONIALS_CONTENT.titleAccent}
               </span>
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <motion.div
+            className="grid grid-cols-1 gap-6 md:grid-cols-3"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.16 }}
+          >
             {HOMEPAGE_TESTIMONIALS_CONTENT.items.map((item) => (
-              <blockquote
+              <motion.blockquote
                 key={item.org}
-                className="flex h-full flex-col gap-5 rounded-xl border border-neutral-200 bg-white p-7"
+                variants={staggerItem}
+                whileHover={{ y: -3 }}
+                transition={{ duration: 0.2 }}
+                className="flex h-full flex-col gap-5 rounded-xl border border-[var(--border-muted)] bg-panel p-7 shadow-[0_8px_32px_-16px_var(--overlay-inverse-12)]"
               >
-                <p className="text-base leading-relaxed text-neutral-700">
+                <p className="text-base leading-relaxed text-body">
                   &ldquo;{item.quote}&rdquo;
                 </p>
                 <footer className="mt-auto">
-                  <p className="text-sm font-semibold text-neutral-950">
+                  <p className="text-sm font-semibold text-strong">
                     {item.author}
                   </p>
-                  <p className="text-xs text-neutral-600">{item.org}</p>
+                  <p className="text-xs text-muted">{item.org}</p>
                 </footer>
-              </blockquote>
+              </motion.blockquote>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
+
+

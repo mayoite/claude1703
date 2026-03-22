@@ -28,7 +28,7 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
 
 export function InteractiveRoom() {
   return (
-    <section className="w-full bg-neutral-900 py-32 text-white">
+    <section className="w-full bg-inverse py-32 text-inverse">
       <div className="container px-6 2xl:px-0">
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="max-w-2xl">
@@ -48,7 +48,7 @@ export function InteractiveRoom() {
         </div>
 
         <Reveal delay={0.2} width="100%">
-          <div className="w-full rounded-sm overflow-hidden border border-neutral-800">
+          <div className="w-full rounded-sm overflow-hidden border border-strong">
             <HotspotImage
               src="/images/products/imported/nuvic/image-1.webp"
               alt="Modern office spatial setup"
@@ -60,3 +60,5 @@ export function InteractiveRoom() {
     </section>
   );
 }
+
+

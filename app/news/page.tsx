@@ -52,16 +52,13 @@ export default function NewsPage() {
 
       <section className="container px-6 py-18 2xl:px-0 md:py-22">
         <div className="scheme-panel-dark relative overflow-hidden rounded-[2rem] p-8 md:p-10">
-          <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top_right,rgba(13,45,180,0.16),transparent_58%)]" />
+          <div className="absolute inset-y-0 right-0 w-1/2 bg-[color:var(--overlay-panel-12)]" />
           <div className="relative z-10 grid gap-6 lg:grid-cols-[1.1fr_auto] lg:items-end">
             <div className="max-w-2xl">
-              <h2 className="typ-section text-white">{NEWS_PAGE_COPY.ctaTitle}</h2>
+              <h2 className="typ-section text-inverse">{NEWS_PAGE_COPY.ctaTitle}</h2>
               <p className="page-copy scheme-text-inverse-body mt-4">{NEWS_PAGE_COPY.ctaDescription}</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/downloads" className="btn-primary">
-                {NEWS_PAGE_COPY.primaryCta}
-              </Link>
               <Link href="/contact" className="btn-outline-light">
                 {NEWS_PAGE_COPY.secondaryCta}
               </Link>
@@ -74,3 +71,5 @@ export default function NewsPage() {
     </section>
   );
 }
+
+

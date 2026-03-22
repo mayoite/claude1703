@@ -24,7 +24,7 @@ export function HotspotImage({ src, alt, hotspots }: HotspotImageProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   return (
-    <div className="relative w-full h-[600px] bg-neutral-100 overflow-hidden group">
+    <div className="relative w-full h-[600px] bg-hover overflow-hidden group">
       <Image
         src={src}
         alt={alt}
@@ -40,7 +40,7 @@ export function HotspotImage({ src, alt, hotspots }: HotspotImageProps) {
           style={{ top: `${hotspot.y}%`, left: `${hotspot.x}%` }}
         >
           {/* Pulse Effect */}
-          <span className="absolute -inset-2 rounded-full bg-white/30 animate-ping" />
+          <span className="absolute -inset-2 rounded-full bg-panel/30 animate-ping" />
 
           <button
             title={`View details for ${hotspot.title || hotspot.id}`}
@@ -49,8 +49,8 @@ export function HotspotImage({ src, alt, hotspots }: HotspotImageProps) {
             }
             className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-colors shadow-lg ${
               activeId === hotspot.id
-                ? "bg-primary text-white"
-                : "bg-white text-primary hover:bg-neutral-100"
+                ? "bg-primary text-inverse"
+                : "bg-panel text-primary hover:bg-hover"
             }`}
           >
             <Plus
@@ -67,14 +67,14 @@ export function HotspotImage({ src, alt, hotspots }: HotspotImageProps) {
                 initial={{ opacity: 0, y: 10, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                className="absolute left-1/2 -translate-x-1/2 bottom-12 w-64 bg-white p-4 shadow-xl z-20 pointer-events-auto text-left"
+                className="absolute left-1/2 -translate-x-1/2 bottom-12 w-64 bg-panel p-4 shadow-xl z-20 pointer-events-auto text-left"
               >
                 {hotspot.title && (
                   <h4 className="font-medium text-lg mb-1">
                     {hotspot.title}
                   </h4>
                 )}
-                <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                <p className="text-sm text-muted font-light leading-relaxed">
                   {hotspot.description}
                 </p>
                 {hotspot.linkUrl && (
@@ -86,7 +86,7 @@ export function HotspotImage({ src, alt, hotspots }: HotspotImageProps) {
                   </a>
                 )}
                 {/* Little triangle arrow */}
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white transform rotate-45" />
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-panel transform rotate-45" />
               </motion.div>
             )}
           </AnimatePresence>
@@ -95,4 +95,5 @@ export function HotspotImage({ src, alt, hotspots }: HotspotImageProps) {
     </div>
   );
 }
+
 

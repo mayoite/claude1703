@@ -27,7 +27,7 @@ export default function GalleryPage() {
         <Masonry columns={2} gap="2rem">
           {GALLERY_PROJECTS.map((project) => (
             <MasonryItem key={`${project.title}-${project.location}`}>
-              <article className="group scheme-border relative mb-8 overflow-hidden rounded-xl border bg-neutral-100">
+              <article className="group scheme-border relative mb-8 overflow-hidden rounded-xl border bg-hover">
                 <Image
                   src={project.image}
                   alt={`${project.title} project`}
@@ -35,12 +35,12 @@ export default function GalleryPage() {
                   height={800}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-[color:var(--overlay-inverse-24)]" />
                 <div className="absolute bottom-0 left-0 p-6">
                   <p className="scheme-text-inverse-muted text-xs font-semibold uppercase tracking-[0.18em]">
                     {project.category}
                   </p>
-                  <h3 className="mt-2 text-3xl font-light tracking-tight text-white">{project.title}</h3>
+                  <h3 className="mt-2 text-3xl font-light tracking-tight text-inverse">{project.title}</h3>
                   <p className="scheme-text-inverse-body mt-1 text-sm">{project.location}</p>
                 </div>
               </article>
@@ -53,3 +53,5 @@ export default function GalleryPage() {
     </section>
   );
 }
+
+

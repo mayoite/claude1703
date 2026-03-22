@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import type {
   CompatCategory as Category,
@@ -323,7 +323,7 @@ function AccordionSection({
         className="group flex w-full items-center justify-between px-4 py-3 text-left"
         aria-expanded={open}
       >
-        <span className="filter-ui-heading group-hover:text-neutral-900 transition-colors flex items-center gap-2">
+        <span className="filter-ui-heading group-hover:text-strong transition-colors flex items-center gap-2">
           {title}
           {count !== undefined && count > 0 && (
             <span className="filter-ui-count">
@@ -393,8 +393,8 @@ function SustainabilityButtons({
         className={clsx(
           "rounded-full border px-3 py-1.5 text-xs font-semibold transition-all",
           selected === null
-            ? "border-primary bg-primary text-white"
-            : "scheme-border bg-white scheme-text-body hover:border-primary hover:text-primary",
+            ? "border-primary bg-primary text-inverse"
+            : "scheme-border bg-panel scheme-text-body hover:border-primary hover:text-primary",
         )}
       >
         Any
@@ -407,8 +407,8 @@ function SustainabilityButtons({
           className={clsx(
             "rounded-full border px-3 py-1.5 text-xs font-semibold transition-all",
             selected === threshold
-              ? "border-primary bg-primary text-white"
-              : "scheme-border bg-white scheme-text-body hover:border-primary hover:text-primary",
+              ? "border-primary bg-primary text-inverse"
+              : "scheme-border bg-panel scheme-text-body hover:border-primary hover:text-primary",
           )}
         >
           &gt;= {threshold}
@@ -440,12 +440,12 @@ function Toggle({
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
-          checked ? "bg-primary" : "bg-neutral-200",
+          checked ? "bg-primary" : "bg-hover",
         )}
       >
         <span
           className={clsx(
-            "absolute w-3.5 h-3.5 bg-white rounded-full shadow transition-all",
+            "absolute w-3.5 h-3.5 bg-panel rounded-full shadow transition-all",
             checked ? "left-[18px]" : "left-[3px]",
           )}
         />
@@ -680,12 +680,12 @@ function ActiveChips({
     chips.push({ label: `Eco >= ${filters.ecoMin}`, key: "ecoMin", value: filters.ecoMin });
 
   return (
-    <div className="catalog-active-chips border-b border-neutral-100 py-3">
+    <div className="catalog-active-chips border-b border-soft py-3">
       <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
         <span className="filter-ui-label">
           {CATEGORY_ROUTE_COPY.activeFiltersLabel}
         </span>
-        <span className="text-xs text-neutral-500">
+        <span className="text-xs text-muted">
           {CATEGORY_ROUTE_COPY.activeCountLabel.replace("{count}", String(total))}
         </span>
       </div>
@@ -704,7 +704,7 @@ function ActiveChips({
         <button
           type="button"
           onClick={onClearAll}
-          className="text-xs text-neutral-500 hover:text-neutral-900 underline transition-colors ml-1"
+          className="text-xs text-muted hover:text-strong underline transition-colors ml-1"
         >
           {CATEGORY_ROUTE_COPY.clearFiltersCta}
         </button>
@@ -1123,15 +1123,12 @@ function AdvancedFilterGridInner({
             <span>{allProducts} products in this category</span>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <Link href="/downloads" className="btn-outline text-xs">
-              {CATEGORY_ROUTE_COPY.resourceDeskCta}
-            </Link>
             {compareItems.length > 0 ? (
               <Link href={compareHref} className="btn-outline text-xs">
                 {compareLabel}
               </Link>
             ) : (
-              <p className="text-xs text-neutral-500">
+              <p className="text-xs text-muted">
                 {compareLabel}
               </p>
             )}
@@ -1239,7 +1236,7 @@ function AdvancedFilterGridInner({
               <p className="scheme-text-muted pt-2 text-xs">Refreshing products...</p>
             )}
             {error && (
-              <p className="pt-2 text-xs text-red-600">
+              <p className="pt-2 text-xs text-danger">
                 {CATEGORY_ROUTE_COPY.filterFallbackMessage}
               </p>
             )}
@@ -1261,7 +1258,7 @@ function AdvancedFilterGridInner({
               {Array.from({ length: 6 }).map((_, index) => (
                 <div
                   key={`loading-${index}`}
-                  className="h-[24rem] rounded-[1.6rem] border scheme-border bg-white animate-pulse"
+                  className="h-[24rem] rounded-[1.6rem] border scheme-border bg-panel animate-pulse"
                 />
               ))}
             </div>
@@ -1313,7 +1310,7 @@ function AdvancedFilterGridInner({
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+            className="fixed inset-0 bg-overlay z-40 lg:hidden"
             onClick={() => setDrawerOpen(false)}
             aria-hidden="true"
           />
@@ -1322,12 +1319,12 @@ function AdvancedFilterGridInner({
             ref={drawerRef}
             id="mobile-filter-drawer"
             tabIndex={-1}
-            className="fixed inset-y-0 left-0 z-[65] flex w-[88vw] max-w-sm flex-col overflow-y-auto border-l shadow-2xl [border-color:var(--border-soft)] [background:linear-gradient(180deg,var(--surface-panel-strong)_0%,var(--surface-panel-soft)_100%)] [box-shadow:-22px_0_54px_-34px_rgba(10,14,51,0.1)] lg:hidden"
+            className="fixed inset-y-0 left-0 z-[65] flex w-[88vw] max-w-sm flex-col overflow-y-auto border-l shadow-2xl [border-color:var(--border-soft)] [background:var(--surface-panel-strong)] [box-shadow:-22px_0_54px_-34px_var(--overlay-inverse-12)] lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Filter products"
           >
-            <div className="flex items-center justify-between border-b scheme-border bg-white/92 px-4 py-4 backdrop-blur">
+            <div className="flex items-center justify-between border-b scheme-border bg-[color:var(--overlay-panel-92)] px-4 py-4 backdrop-blur">
               <span className="flex items-center gap-2 text-sm font-medium scheme-text-strong">
                 <Filter className="w-4 h-4" />
                 Filters
@@ -1343,12 +1340,12 @@ function AdvancedFilterGridInner({
                 aria-label="Close filters"
                 className="min-h-11 min-w-11 inline-flex items-center justify-center"
               >
-                <X className="h-5 w-5 text-neutral-500 hover:text-neutral-900" />
+                <X className="h-5 w-5 text-muted hover:text-strong" />
               </button>
             </div>
             <div className="p-4">{renderSidebarContent({ showHeaderClearAll: false })}</div>
-            <div className="sticky bottom-0 relative flex gap-2 border-t scheme-border bg-white p-4">
-              <div className="absolute left-4 top-0 -translate-y-full rounded-t-md bg-white/95 px-3 py-2 text-xs text-neutral-500 shadow-sm">
+            <div className="sticky bottom-0 relative flex gap-2 border-t scheme-border bg-panel p-4">
+              <div className="absolute left-4 top-0 -translate-y-full rounded-t-md bg-[color:var(--overlay-panel-95)] px-3 py-2 text-xs text-muted shadow-sm">
                 {CATEGORY_ROUTE_COPY.drawerResultsHint}
               </div>
               {activeCount > 0 && (
@@ -1358,7 +1355,7 @@ function AdvancedFilterGridInner({
                     clearAll();
                     setDrawerOpen(false);
                   }}
-                  className="flex-1 rounded-full border border-neutral-200 text-sm text-neutral-700 transition-colors hover:border-primary hover:bg-neutral-50"
+                  className="flex-1 rounded-full border border-soft text-sm text-body transition-colors hover:border-primary hover:bg-hover"
                 >
                   Clear all
                 </button>
@@ -1403,3 +1400,6 @@ export function FilterGrid({
     </Suspense>
   );
 }
+
+
+

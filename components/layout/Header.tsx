@@ -88,8 +88,8 @@ export function Header() {
           "fixed top-0 left-0 w-full z-1020 transition-all duration-500 ease-in-out",
           isVisible ? "translate-y-0" : "-translate-y-full",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm"
-            : "bg-white border-b border-neutral-100",
+            ? "bg-[color:var(--overlay-panel-95)] backdrop-blur-md shadow-sm"
+            : "bg-panel border-b border-soft",
         )}
         onMouseLeave={() => setActiveMenu(null)}
       >
@@ -97,12 +97,12 @@ export function Header() {
           {/* Meta Navigation (Top Row) */}
           <div
             className={clsx(
-              "w-full flex justify-end items-center transition-all duration-300 overflow-hidden bg-white border-b border-neutral-100",
+              "w-full flex justify-end items-center transition-all duration-300 overflow-hidden bg-panel border-b border-soft",
               isScrolled ? "h-0 opacity-0" : "h-10 opacity-100",
             )}
           >
-            <div className="container-wide flex justify-end items-center gap-6 text-[11px] uppercase tracking-widest font-bold text-neutral-400">
-              <span className="hidden md:inline mr-auto text-neutral-500 font-medium">
+            <div className="container-wide flex justify-end items-center gap-6 text-[11px] uppercase tracking-widest font-bold text-subtle">
+              <span className="hidden md:inline mr-auto text-muted font-medium">
                 One&Only
               </span>
               <Link
@@ -180,7 +180,7 @@ export function Header() {
                     prefetch={false}
                     className={clsx(
                       "h-full flex items-center text-sm font-medium transition-colors duration-200",
-                      "text-neutral-700 hover:text-primary",
+                      "text-body hover:text-primary",
                       activeMenu === item.label && "text-primary",
                     )}
                   >
@@ -205,7 +205,7 @@ export function Header() {
                 prefetch={false}
                 className={clsx(
                   "text-xs font-semibold tracking-widest uppercase px-5 py-2.5 border transition-colors duration-200",
-                  "border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white",
+                  "border-inverse text-strong hover:bg-inverse hover:text-inverse",
                 )}
               >
                 Request Quote
@@ -216,7 +216,7 @@ export function Header() {
               onClick={() => setIsMenuOpen(true)}
               className={clsx(
                 "flex lg:hidden items-center justify-center w-11 h-11 border transition-colors",
-                "border-neutral-200 text-neutral-700 hover:bg-neutral-50",
+                "border-soft text-body hover:bg-hover",
               )}
               aria-label="Open menu"
             >
@@ -243,3 +243,4 @@ export function Header() {
     </>
   );
 }
+

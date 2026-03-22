@@ -285,13 +285,13 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 z-50 w-full border-b border-neutral-200/70 bg-white/90 backdrop-blur-xl transition-all duration-300",
-          scrolled ? "shadow-[0_14px_45px_-28px_rgba(0,0,0,0.45)]" : "shadow-none",
+          "fixed top-0 left-0 z-50 w-full border-b border-soft/70 bg-[color:var(--overlay-panel-92)] backdrop-blur-xl transition-all duration-300",
+          scrolled ? "shadow-[0_14px_45px_-28px_var(--overlay-inverse-35)]" : "shadow-none",
         )}
       >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-full bg-gradient-to-b from-primary/8 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-full bg-primary/8"
           style={{
             transform: reduceMotion ? "translateY(0)" : `translateY(${parallaxOffset}px)`,
           }}
@@ -320,7 +320,7 @@ export function Navbar() {
                         "nav-pill inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold",
                         activeDesktopMenu === link.label
                           ? "text-primary"
-                          : "text-neutral-700 hover:text-primary",
+                          : "text-body hover:text-primary",
                       )}
                     >
                       {link.label}
@@ -340,7 +340,7 @@ export function Navbar() {
                       "nav-pill px-3 py-2 text-sm font-semibold transition-colors",
                       pathname === link.href
                         ? "text-primary"
-                        : "text-neutral-700 hover:text-primary",
+                        : "text-body hover:text-primary",
                     )}
                   >
                     {link.label}
@@ -353,14 +353,14 @@ export function Navbar() {
               {!hideDesktopSearch && (
                 <div ref={searchPanelRef} className="relative hidden xl:block">
                   <label className="ai-search-shell flex h-11 items-center gap-2.5 rounded-full px-4">
-                    <Search className="h-4 w-4 text-neutral-500" />
+                    <Search className="h-4 w-4 text-muted" />
                     <input
                       ref={desktopSearchInputRef}
                       value={searchQuery}
                       onChange={(event) => setSearchQuery(event.target.value)}
                       onFocus={() => setShowSearchPanel(true)}
                       placeholder="AI search products..."
-                      className="w-52 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
+                      className="w-52 bg-transparent text-sm text-strong outline-none placeholder:text-subtle"
                       aria-label="Search products"
                     />
                     <Sparkles className="h-4 w-4 text-accent1" />
@@ -372,12 +372,12 @@ export function Navbar() {
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
-                        className="absolute right-0 mt-2 w-[24rem] overflow-hidden rounded-3xl border border-neutral-200 bg-white p-4 shadow-[0_24px_55px_-30px_rgba(0,0,0,0.45)]"
+                        className="absolute right-0 mt-2 w-[24rem] overflow-hidden rounded-3xl border border-soft bg-panel p-4 shadow-[0_24px_55px_-30px_var(--overlay-inverse-35)]"
                       >
-                        <div className="mb-2 flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-500">
+                        <div className="mb-2 flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
                           <span>{searchSectionTitle}</span>
                           {searchSource && (
-                            <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px]">
+                            <span className="rounded-full bg-hover px-2 py-0.5 text-[10px]">
                               {searchSource === "ai"
                                 ? "AI Ranked"
                                 : searchSource === "static-fallback"
@@ -387,7 +387,7 @@ export function Navbar() {
                           )}
                         </div>
                         {searchLoading ? (
-                          <p className="py-6 text-sm text-neutral-500">Searching...</p>
+                          <p className="py-6 text-sm text-muted">Searching...</p>
                         ) : searchResults.length > 0 ? (
                           <ul className="space-y-1">
                             {searchResults.map((result) => (
@@ -395,10 +395,10 @@ export function Navbar() {
                                 <Link
                                   href={result.href}
                                   onClick={onSearchResultClick}
-                                  className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
+                                  className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-body hover:bg-hover hover:text-strong"
                                 >
                                   <span>{result.title}</span>
-                                  <span className="text-[10px] uppercase tracking-[0.14em] text-neutral-400">
+                                  <span className="text-[10px] uppercase tracking-[0.14em] text-subtle">
                                     {result.type}
                                   </span>
                                 </Link>
@@ -412,10 +412,10 @@ export function Navbar() {
                                 key={item.href}
                                 href={item.href}
                                 onClick={onSearchResultClick}
-                                className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                                className="flex items-center justify-between rounded-xl px-3 py-2 text-sm text-body hover:bg-hover"
                               >
                                 {item.label}
-                                <ChevronRight className="h-4 w-4 text-neutral-400" />
+                                <ChevronRight className="h-4 w-4 text-subtle" />
                               </Link>
                             ))}
                           </div>
@@ -428,12 +428,12 @@ export function Navbar() {
 
               <Link
                 href="/quote-cart"
-                className="nav-pill relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 hover:text-primary"
+                className="nav-pill relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-soft text-body hover:text-primary"
                 aria-label="Quote cart"
               >
                 <ShoppingCart className="h-5 w-5" />
                 {totalQty > 0 && (
-                  <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-white">
+                  <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-inverse">
                     {Math.min(totalQty, 99)}
                   </span>
                 )}
@@ -441,7 +441,7 @@ export function Navbar() {
 
               <Link
                 href="/contact"
-                className="hidden md:inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-primary/90"
+                className="hidden md:inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-inverse transition-colors hover:bg-primary/90"
               >
                 Request Quote
               </Link>
@@ -449,7 +449,7 @@ export function Navbar() {
               <button
                 ref={mobileMenuToggleRef}
                 type="button"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-800 lg:hidden"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-soft text-strong lg:hidden"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-nav-drawer"
@@ -471,13 +471,13 @@ export function Navbar() {
               transition={{ duration: 0.16 }}
               onMouseEnter={() => setActiveDesktopMenu("Products")}
               onMouseLeave={() => setActiveDesktopMenu(null)}
-              className="hidden lg:block border-t border-neutral-200 bg-white/95 backdrop-blur-xl"
+              className="hidden lg:block border-t border-soft bg-[color:var(--overlay-panel-95)] backdrop-blur-xl"
             >
               <div className="container-wide py-8">
                 <div className="grid grid-cols-5 gap-5">
                   {groupedCategories.map((group) => (
-                    <div key={group.groupId} className="rounded-2xl border border-neutral-100 bg-white p-4">
-                      <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.14em] text-neutral-500">
+                    <div key={group.groupId} className="rounded-2xl border border-soft bg-panel p-4">
+                      <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.14em] text-muted">
                         {group.groupLabel}
                       </p>
                       <ul className="space-y-1">
@@ -485,7 +485,7 @@ export function Navbar() {
                           <li key={item.id}>
                             <Link
                               href={item.href}
-                              className="flex items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-neutral-800 hover:bg-neutral-50 hover:text-neutral-900"
+                              className="flex items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-strong hover:bg-hover hover:text-strong"
                             >
                               <span>
                                 {item.name.trim().toLowerCase() === group.groupLabel.trim().toLowerCase()
@@ -493,20 +493,20 @@ export function Navbar() {
                                   : item.name}
                               </span>
                               {typeof item.count === "number" && (
-                                <span className="text-[10px] text-neutral-400">{item.count}</span>
+                                <span className="text-[10px] text-subtle">{item.count}</span>
                               )}
                             </Link>
                             {Array.isArray(item.subcategories) && item.subcategories.length > 0 && (
-                              <ul className="ml-2 mt-1.5 space-y-1 border-l border-neutral-100 pl-2.5">
+                              <ul className="ml-2 mt-1.5 space-y-1 border-l border-soft pl-2.5">
                                 {item.subcategories.map((subcategory) => (
                                   <li key={`${item.id}-${subcategory.id}`}>
                                     <Link
                                       href={subcategory.href}
-                                      className="flex items-center justify-between rounded-md px-2 py-1 text-xs text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900"
+                                      className="flex items-center justify-between rounded-md px-2 py-1 text-xs text-muted hover:bg-hover hover:text-strong"
                                     >
                                       <span>{subcategory.name}</span>
                                       {typeof subcategory.count === "number" && (
-                                        <span className="text-[10px] text-neutral-400">
+                                        <span className="text-[10px] text-subtle">
                                           {subcategory.count}
                                         </span>
                                       )}
@@ -527,15 +527,15 @@ export function Navbar() {
                     <Link
                       key={card.title}
                       href={card.href}
-                      className="mega-card group overflow-hidden rounded-3xl border border-neutral-100 bg-white"
+                      className="mega-card group overflow-hidden rounded-3xl border border-soft bg-panel"
                     >
                       <div
                         className="h-28 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                         style={{ backgroundImage: `url(${card.image})` }}
                       />
                       <div className="p-4">
-                        <p className="mb-1 text-sm font-semibold text-neutral-900">{card.title}</p>
-                        <p className="text-xs leading-relaxed text-neutral-500">{card.description}</p>
+                        <p className="mb-1 text-sm font-semibold text-strong">{card.title}</p>
+                        <p className="text-xs leading-relaxed text-muted">{card.description}</p>
                       </div>
                     </Link>
                   ))}
@@ -555,7 +555,7 @@ export function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.24, ease: "easeInOut" }}
-            className="fixed inset-y-0 right-0 z-[70] w-full max-w-md overflow-y-auto border-l border-neutral-200 bg-white p-5 lg:hidden"
+            className="fixed inset-y-0 right-0 z-[70] w-full max-w-md overflow-y-auto border-l border-soft bg-panel p-5 lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation"
@@ -564,7 +564,7 @@ export function Navbar() {
               <OneAndOnlyLogo className="h-8" variant="orange" />
               <button
                 type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-soft"
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-label="Close menu"
               >
@@ -573,7 +573,7 @@ export function Navbar() {
             </div>
 
             <div className="ai-search-shell mb-5 flex items-center gap-2 rounded-2xl px-3 py-2.5">
-              <Search className="h-4 w-4 text-neutral-500" />
+              <Search className="h-4 w-4 text-muted" />
               <input
                 value={searchQuery}
                 onChange={(event) => {
@@ -581,19 +581,19 @@ export function Navbar() {
                   setShowSearchPanel(true);
                 }}
                 placeholder="Search products..."
-                className="w-full bg-transparent text-sm text-neutral-800 outline-none"
+                className="w-full bg-transparent text-sm text-strong outline-none"
                 aria-label="Mobile search products"
               />
               <Sparkles className="h-4 w-4 text-accent1" />
             </div>
 
             {(showSearchPanel || searchQuery.trim().length >= 2) && (
-              <div className="mb-5 rounded-2xl border border-neutral-200 bg-neutral-50 p-3">
-                <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-neutral-500">
+              <div className="mb-5 rounded-2xl border border-soft bg-hover p-3">
+                <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-muted">
                   {searchSectionTitle}
                 </p>
                 {searchLoading ? (
-                  <p className="text-sm text-neutral-500">Searching...</p>
+                  <p className="text-sm text-muted">Searching...</p>
                 ) : searchResults.length > 0 ? (
                   <ul className="space-y-1">
                     {searchResults.map((result) => (
@@ -601,10 +601,10 @@ export function Navbar() {
                         <Link
                           href={result.href}
                           onClick={onSearchResultClick}
-                          className="flex items-center justify-between rounded-lg bg-white px-3 py-2 text-sm text-neutral-700"
+                          className="flex items-center justify-between rounded-lg bg-panel px-3 py-2 text-sm text-body"
                         >
                           <span>{result.title}</span>
-                          <span className="text-[10px] uppercase tracking-[0.14em] text-neutral-400">
+                          <span className="text-[10px] uppercase tracking-[0.14em] text-subtle">
                             {result.type}
                           </span>
                         </Link>
@@ -612,7 +612,7 @@ export function Navbar() {
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-sm text-neutral-500">No results found.</p>
+                  <p className="text-sm text-muted">No results found.</p>
                 )}
               </div>
             )}
@@ -624,7 +624,7 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex min-h-11 items-center rounded-xl px-3 text-base text-neutral-800 hover:bg-neutral-50"
+                  className="flex min-h-11 items-center rounded-xl px-3 text-base text-strong hover:bg-hover"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -632,15 +632,15 @@ export function Navbar() {
                 ))}
             </nav>
 
-            <div className="mt-6 border-t border-neutral-200 pt-4">
-              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-neutral-500">
+            <div className="mt-6 border-t border-soft pt-4">
+              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-muted">
                 Product Categories
               </p>
               <div className="space-y-2">
                 {groupedCategories.map((group) => {
                   const open = Boolean(mobileAccordion[group.groupId]);
                   return (
-                    <div key={group.groupId} className="rounded-2xl border border-neutral-200 bg-white">
+                    <div key={group.groupId} className="rounded-2xl border border-soft bg-panel">
                       <button
                         type="button"
                         className="flex w-full items-center justify-between px-3 py-2.5 text-left"
@@ -652,7 +652,7 @@ export function Navbar() {
                           }))
                         }
                       >
-                        <span className="text-sm font-semibold text-neutral-800">{group.groupLabel}</span>
+                        <span className="text-sm font-semibold text-strong">{group.groupLabel}</span>
                         <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} />
                       </button>
                       {open && (
@@ -661,7 +661,7 @@ export function Navbar() {
                             <li key={item.id}>
                               <Link
                                 href={item.href}
-                                className="flex min-h-11 items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-neutral-800 hover:bg-neutral-50"
+                                className="flex min-h-11 items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-strong hover:bg-hover"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
                                 <span>
@@ -670,21 +670,21 @@ export function Navbar() {
                                     : item.name}
                                 </span>
                                 {typeof item.count === "number" && (
-                                  <span className="text-[10px] text-neutral-400">{item.count}</span>
+                                  <span className="text-[10px] text-subtle">{item.count}</span>
                                 )}
                               </Link>
                               {Array.isArray(item.subcategories) && item.subcategories.length > 0 && (
-                                <ul className="ml-2 space-y-1 border-l border-neutral-100 pl-2.5 pb-1">
+                                <ul className="ml-2 space-y-1 border-l border-soft pl-2.5 pb-1">
                                   {item.subcategories.map((subcategory) => (
                                     <li key={`${item.id}-${subcategory.id}`}>
                                       <Link
                                         href={subcategory.href}
-                                        className="flex min-h-10 items-center justify-between rounded-md px-2 py-1 text-xs text-neutral-600 hover:bg-neutral-50"
+                                        className="flex min-h-10 items-center justify-between rounded-md px-2 py-1 text-xs text-muted hover:bg-hover"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                       >
                                         <span>{subcategory.name}</span>
                                         {typeof subcategory.count === "number" && (
-                                          <span className="text-[10px] text-neutral-400">
+                                          <span className="text-[10px] text-subtle">
                                             {subcategory.count}
                                           </span>
                                         )}
@@ -709,7 +709,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="menu-chip flex min-h-11 items-center justify-center rounded-full border border-neutral-200 px-3 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-700"
+                  className="menu-chip flex min-h-11 items-center justify-center rounded-full border border-soft px-3 text-xs font-semibold uppercase tracking-[0.12em] text-body"
                 >
                   {item.label}
                 </Link>
@@ -720,12 +720,12 @@ export function Navbar() {
               <Link
                 href="/quote-cart"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex flex-1 items-center justify-center gap-2 rounded-full border border-neutral-200 py-3 text-sm font-semibold text-neutral-800"
+                className="flex flex-1 items-center justify-center gap-2 rounded-full border border-soft py-3 text-sm font-semibold text-strong"
               >
                 <ShoppingCart className="h-4 w-4" />
                 Cart
                 {totalQty > 0 && (
-                  <span className="rounded-full bg-primary px-1.5 py-0.5 text-[10px] font-bold text-white">
+                  <span className="rounded-full bg-primary px-1.5 py-0.5 text-[10px] font-bold text-inverse">
                     {Math.min(totalQty, 99)}
                   </span>
                 )}
@@ -733,7 +733,7 @@ export function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex flex-1 items-center justify-center rounded-full bg-primary py-3 text-sm font-bold uppercase tracking-[0.12em] text-white"
+                className="flex flex-1 items-center justify-center rounded-full bg-primary py-3 text-sm font-bold uppercase tracking-[0.12em] text-inverse"
               >
                 Request Quote
               </Link>
@@ -744,3 +744,5 @@ export function Navbar() {
     </>
   );
 }
+
+

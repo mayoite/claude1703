@@ -61,12 +61,12 @@ export function FeaturedCarousel() {
   }
 
   return (
-    <section className="w-full bg-neutral-50 py-16 md:py-24" aria-label="Featured products carousel">
+    <section className="w-full bg-hover py-16 md:py-24" aria-label="Featured products carousel">
       <div className="container px-6 2xl:px-0">
         <div className="mb-10 flex items-end justify-between gap-6">
           <div>
-            <p className="typ-label mb-3 text-neutral-700">Featured products</p>
-            <h2 className="typ-section text-neutral-900">Built for active work floors.</h2>
+            <p className="typ-label mb-3 text-body">Featured products</p>
+            <h2 className="typ-section text-strong">Built for active work floors.</h2>
           </div>
           <div className="hidden items-center gap-3 sm:flex">
             <button
@@ -75,7 +75,7 @@ export function FeaturedCarousel() {
               aria-label="Previous featured product"
               onClick={() => emblaApi?.scrollPrev()}
               disabled={!canScrollPrev}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900 disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-muted text-body transition-colors hover:border-strong hover:text-strong disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -85,7 +85,7 @@ export function FeaturedCarousel() {
               aria-label="Next featured product"
               onClick={() => emblaApi?.scrollNext()}
               disabled={!canScrollNext}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900 disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-muted text-body transition-colors hover:border-strong hover:text-strong disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -110,7 +110,7 @@ export function FeaturedCarousel() {
               <div key={product.id} className="min-w-0 flex-[0_0_100%] pr-4 md:flex-[0_0_50%] md:pr-6">
                 <Link
                   href={product.link}
-                  className="group relative block overflow-hidden rounded-2xl bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  className="group relative block overflow-hidden rounded-2xl bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   <div className="relative aspect-[3/4] overflow-hidden">
                     <Image
@@ -120,9 +120,9 @@ export function FeaturedCarousel() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent p-6">
+                    <div className="absolute inset-x-0 bottom-0 bg-[color:var(--overlay-inverse-24)] p-6">
                       <p className="typ-label scheme-text-inverse-muted mb-1">{product.category}</p>
-                      <h3 className="typ-section tracking-tight text-white">{product.name}</h3>
+                      <h3 className="typ-section tracking-tight text-inverse">{product.name}</h3>
                     </div>
                   </div>
                 </Link>
@@ -142,7 +142,7 @@ export function FeaturedCarousel() {
                 aria-current={selectedIndex === index}
                 onClick={() => emblaApi?.scrollTo(index)}
                 className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                  selectedIndex === index ? "bg-neutral-900" : "bg-neutral-300"
+                  selectedIndex === index ? "bg-inverse" : "bg-muted"
                 }`}
               />
             ))}
@@ -154,7 +154,7 @@ export function FeaturedCarousel() {
               aria-label="Previous featured product"
               onClick={() => emblaApi?.scrollPrev()}
               disabled={!canScrollPrev}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-muted text-body disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -164,7 +164,7 @@ export function FeaturedCarousel() {
               aria-label="Next featured product"
               onClick={() => emblaApi?.scrollNext()}
               disabled={!canScrollNext}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-muted text-body disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -183,3 +183,5 @@ export function FeaturedCarousel() {
     </section>
   );
 }
+
+

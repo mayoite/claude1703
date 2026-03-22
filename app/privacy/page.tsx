@@ -76,12 +76,12 @@ export default function PrivacyPage() {
         <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
           <aside className="scheme-panel-dark rounded-[2rem] p-7 md:p-9">
             <p className="typ-label scheme-text-inverse-muted">{LEGAL_PAGE_COPY.privacy.overviewKicker}</p>
-            <h2 className="typ-section mt-3 text-white">{LEGAL_PAGE_COPY.privacy.overviewTitle}</h2>
+            <h2 className="typ-section mt-3 text-inverse">{LEGAL_PAGE_COPY.privacy.overviewTitle}</h2>
             <p className="page-copy scheme-text-inverse-body mt-4">
               {LEGAL_PAGE_COPY.privacy.overviewDescription}
             </p>
 
-            <div className="scheme-border mt-8 border-t border-white/12 pt-7">
+            <div className="scheme-border mt-8 border-t border-inverse pt-7">
               <h3 className="scheme-text-inverse-muted text-sm font-semibold uppercase tracking-[0.14em]">
                 {LEGAL_PAGE_COPY.privacy.commitmentsTitle}
               </h3>
@@ -95,9 +95,6 @@ export default function PrivacyPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="home-btn-primary">
                 Contact team
-              </Link>
-              <Link href="/downloads" className="home-btn-secondary">
-                Open Resource Desk
               </Link>
             </div>
           </aside>
@@ -152,24 +149,24 @@ export default function PrivacyPage() {
               </div>
 
               <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-neutral-200 text-left text-sm">
-                  <thead className="bg-white/70">
+                <table className="min-w-full divide-y divide-soft text-left text-sm">
+                  <thead className="bg-panel/70">
                     <tr>
-                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Cookie</th>
-                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Category</th>
-                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Purpose</th>
-                      <th className="px-6 py-3 font-medium text-neutral-900 md:px-8">Duration</th>
+                      <th className="px-6 py-3 font-medium text-strong md:px-8">Cookie</th>
+                      <th className="px-6 py-3 font-medium text-strong md:px-8">Category</th>
+                      <th className="px-6 py-3 font-medium text-strong md:px-8">Purpose</th>
+                      <th className="px-6 py-3 font-medium text-strong md:px-8">Duration</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-neutral-200 bg-white/90">
+                  <tbody className="divide-y divide-soft bg-[color:var(--overlay-panel-92)]">
                     {COOKIE_ROWS.map((row) => (
                       <tr key={row.name}>
-                        <td className="px-6 py-3 text-xs font-medium tracking-wide text-neutral-900 md:px-8">
+                        <td className="px-6 py-3 text-xs font-medium tracking-wide text-strong md:px-8">
                           {row.name}
                         </td>
-                        <td className="px-6 py-3 text-neutral-700 md:px-8">{row.category}</td>
-                        <td className="px-6 py-3 text-neutral-700 md:px-8">{row.purpose}</td>
-                        <td className="px-6 py-3 text-neutral-700 md:px-8">{row.duration}</td>
+                        <td className="px-6 py-3 text-body md:px-8">{row.category}</td>
+                        <td className="px-6 py-3 text-body md:px-8">{row.purpose}</td>
+                        <td className="px-6 py-3 text-body md:px-8">{row.duration}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -203,3 +200,4 @@ export default function PrivacyPage() {
     </section>
   );
 }
+

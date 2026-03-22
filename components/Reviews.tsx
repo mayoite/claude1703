@@ -57,9 +57,9 @@ export function Reviews({
   };
 
   return (
-    <div className="mt-16 pt-12 border-t border-neutral-100">
+    <div className="mt-16 pt-12 border-t border-soft">
       <div className="flex items-center justify-between mb-8">
-        <h3 className="text-2xl font-light text-neutral-900">
+        <h3 className="text-2xl font-light text-strong">
           Customer Reviews
         </h3>
         <div className="flex flex-col items-end">
@@ -71,12 +71,12 @@ export function Reviews({
                   "w-5 h-5",
                   i < Math.round(Number(avgRating))
                     ? "fill-current"
-                    : "text-neutral-200 fill-transparent",
+                    : "text-inverse-body fill-transparent",
                 )}
               />
             ))}
           </div>
-          <span className="text-sm font-medium text-neutral-500">
+          <span className="text-sm font-medium text-muted">
             {avgRating}/5.0 ({reviews.length} Reviews)
           </span>
         </div>
@@ -86,17 +86,17 @@ export function Reviews({
         {/* Review List */}
         <div className="space-y-6">
           {reviews.length === 0 ? (
-            <p className="text-neutral-500 font-light italic">
+            <p className="text-muted font-light italic">
               No reviews yet. Be the first to review!
             </p>
           ) : (
             reviews.map((r) => (
               <div
                 key={r.id}
-                className="pb-6 border-b border-neutral-100 last:border-0"
+                className="pb-6 border-b border-soft last:border-0"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-semibold text-neutral-900">
+                  <span className="font-semibold text-strong">
                     {r.user_name}
                   </span>
                   <div className="flex text-primary">
@@ -107,16 +107,16 @@ export function Reviews({
                           "w-3.5 h-3.5",
                           i < r.rating
                             ? "fill-current"
-                            : "text-neutral-200 fill-transparent",
+                            : "text-inverse-body fill-transparent",
                         )}
                       />
                     ))}
                   </div>
                 </div>
-                <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                <p className="text-sm text-muted font-light leading-relaxed">
                   {r.comment}
                 </p>
-                <span className="text-xs text-neutral-400 mt-2 block">
+                <span className="text-xs text-subtle mt-2 block">
                   {new Date(r.created_at).toLocaleDateString()}
                 </span>
               </div>
@@ -125,13 +125,13 @@ export function Reviews({
         </div>
 
         {/* Review Form */}
-        <div className="bg-neutral-50 p-8 rounded-2xl border border-neutral-100 h-fit">
-          <h4 className="text-lg font-medium text-neutral-900 mb-6">
+        <div className="bg-hover p-8 rounded-2xl border border-soft h-fit">
+          <h4 className="text-lg font-medium text-strong mb-6">
             Write a Review
           </h4>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm text-neutral-600 mb-2">
+              <label className="block text-sm text-muted mb-2">
                 Rating
               </label>
               <div className="flex gap-2">
@@ -149,7 +149,7 @@ export function Reviews({
                         "w-6 h-6",
                         val <= rating
                           ? "text-primary fill-current"
-                          : "text-neutral-300 fill-transparent",
+                          : "text-inverse-muted fill-transparent",
                       )}
                     />
                   </button>
@@ -159,7 +159,7 @@ export function Reviews({
             <div>
               <label
                 htmlFor="userName"
-                className="block text-sm text-neutral-600 mb-2"
+                className="block text-sm text-muted mb-2"
               >
                 Name
               </label>
@@ -168,14 +168,14 @@ export function Reviews({
                 id="userName"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
-                className="w-full px-4 py-2 border border-neutral-200 rounded-sm focus:outline-none focus:border-neutral-900 transition-colors"
+                className="w-full px-4 py-2 border border-soft rounded-sm focus:outline-none focus:border-strong transition-colors"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="comment"
-                className="block text-sm text-neutral-600 mb-2"
+                className="block text-sm text-muted mb-2"
               >
                 Review
               </label>
@@ -184,14 +184,14 @@ export function Reviews({
                 rows={4}
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                className="w-full px-4 py-2 border border-neutral-200 rounded-sm focus:outline-none focus:border-neutral-900 transition-colors resize-none"
+                className="w-full px-4 py-2 border border-soft rounded-sm focus:outline-none focus:border-strong transition-colors resize-none"
                 required
               />
             </div>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-neutral-900 text-white font-medium text-sm py-3 rounded-sm hover:bg-neutral-800 transition-colors disabled:bg-neutral-400"
+              className="w-full bg-inverse text-inverse font-medium text-sm py-3 rounded-sm hover:bg-inverse transition-colors disabled:bg-muted"
             >
               {isSubmitting ? "Submitting..." : "Submit Review"}
             </button>
@@ -201,3 +201,5 @@ export function Reviews({
     </div>
   );
 }
+
+

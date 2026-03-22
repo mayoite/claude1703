@@ -2,8 +2,10 @@
 
 import { FormEvent, useState } from "react";
 import { ArrowUpRight, MessageCircle, MessageSquareText, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 import { buildWhatsAppHref, SITE_CONTACT, toTelHref } from "@/data/site/contact";
 import { HOMEPAGE_CONTACT_CONTENT } from "@/data/site/homepage";
+import { fadeUp, staggerContainer, staggerItem } from "@/lib/helpers/motion";
 
 export function ContactTeaser() {
   const [name, setName] = useState("");
@@ -76,21 +78,26 @@ export function ContactTeaser() {
   }
 
   return (
-    <section className="home-section home-section--soft scheme-border border-t py-14 md:py-18">
+    <section className="home-section home-section--soft border-t border-[var(--border-soft)] py-14 md:py-18">
       <div className="home-shell">
         <div className="contact-teaser home-frame home-frame--standard">
           <div className="contact-teaser__stack">
-            <div className="contact-teaser__intro">
+            <motion.div className="contact-teaser__intro" {...fadeUp(12, 0.02)}>
               <p className="contact-teaser__support-kicker">{HOMEPAGE_CONTACT_CONTENT.titleLead}</p>
               <h2 className="typ-section scheme-text-strong max-w-2xl">
                 {HOMEPAGE_CONTACT_CONTENT.titleAccent}
               </h2>
-              <p className="home-copy mt-4 max-w-2xl text-neutral-600">
+              <p className="home-copy mt-4 max-w-2xl text-muted">
                 {HOMEPAGE_CONTACT_CONTENT.description}
               </p>
-            </div>
+            </motion.div>
 
-            <form aria-label="Project brief enquiry" className="contact-teaser__form" onSubmit={handleSubmit}>
+            <motion.form
+              aria-label="Project brief enquiry"
+              className="contact-teaser__form"
+              onSubmit={handleSubmit}
+              {...fadeUp(16, 0.08)}
+            >
               <div className="contact-teaser__mini-grid">
                 <label className="contact-teaser__field">
                   <span className="contact-teaser__field-label">Name</span>
@@ -148,7 +155,7 @@ export function ContactTeaser() {
               <label className="contact-teaser__field mt-3">
                 <div className="flex items-center justify-between">
                   <span className="contact-teaser__field-label">Brief</span>
-                  <span className="text-xs text-neutral-400" aria-live="polite" aria-atomic="true">
+                  <span className="text-xs text-subtle" aria-live="polite" aria-atomic="true">
                     {brief.length}/5000
                   </span>
                 </div>
@@ -165,27 +172,28 @@ export function ContactTeaser() {
 
               <div className="contact-teaser__actions mt-5">
                 <p className="contact-teaser__footer-chip">Business-day response</p>
-                <button type="submit" disabled={isSubmitting} className="home-btn-primary">
+                <button type="submit" disabled={isSubmitting} className="home-btn-primary sm:ml-auto">
                   <MessageSquareText className="h-4 w-4" aria-hidden="true" />
                   {isSubmitting ? "Sending..." : "Send Brief"}
-                </button>
-                <button
-                  type="button"
-                  className="home-btn-secondary"
-                  onClick={() =>
-                    window.dispatchEvent(new CustomEvent("oando-assistant:open"))
-                  }
-                >
-                  Guided Planner
                 </button>
               </div>
 
               <div className="contact-teaser__support-row mt-4">
-                {directActions.map((action) => {
+                <motion.div
+                  className="contents"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  {directActions.map((action) => {
                   const Icon = action.icon;
                   return (
-                    <a
+                    <motion.a
                       key={action.label}
+                      variants={staggerItem}
+                      whileHover={{ y: -1 }}
+                      whileTap={{ y: 0 }}
                       href={action.href}
                       target={action.external ? "_blank" : undefined}
                       rel={action.external ? "noopener noreferrer" : undefined}
@@ -196,9 +204,10 @@ export function ContactTeaser() {
                       </span>
                       <span>{action.label}</span>
                       <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
+                    </motion.a>
                   );
                 })}
+                </motion.div>
               </div>
 
               {formStatus.type !== "idle" ? (
@@ -206,7 +215,7 @@ export function ContactTeaser() {
                   {formStatus.message}
                 </p>
               ) : null}
-            </form>
+            </motion.form>
           </div>
         </div>
       </div>

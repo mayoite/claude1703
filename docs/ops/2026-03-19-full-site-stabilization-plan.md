@@ -220,11 +220,11 @@ Exit criteria:
 
 ## Navigation Simplification Checklist
 
-- [ ] Remove `Trusted by` from primary nav
-- [ ] Decide whether `Portfolio` is merged into `Projects`
-- [ ] Decide whether `Configurator` remains top-level or moves into planning/support
-- [ ] Collapse utility links to one clear user-facing support path
-- [ ] Align header naming with footer naming
+- [x] Remove `Trusted by` from primary nav
+- [x] Decide whether `Portfolio` is merged into `Projects`
+- [x] Decide whether `Configurator` remains top-level or moves into planning/support
+- [x] Collapse utility links to one clear user-facing support path
+- [x] Align header naming with footer naming
 - [ ] Verify desktop header at `1440`, `1280`, `1180`, `1080`
 - [ ] Verify mobile drawer remains clean after IA reduction
 

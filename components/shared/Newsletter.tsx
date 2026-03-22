@@ -30,7 +30,7 @@ export function Newsletter() {
                             />
                             <Button
                                 size="lg"
-                                className="bg-neutral-900 hover:bg-primary text-white px-10 h-auto py-5 uppercase tracking-widest text-sm font-bold"
+                                className="bg-inverse hover:bg-primary text-inverse px-10 h-auto py-5 uppercase tracking-widest text-sm font-bold"
                             >
                                 Subscribe
                                 <ArrowRight className="ml-3 w-5 h-5" />
@@ -46,3 +46,4 @@ export function Newsletter() {
         </section>
     );
 }
+

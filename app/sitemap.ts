@@ -16,6 +16,7 @@ const STATIC_PATHS = [
   "/gallery",
   "/contact",
   "/configurator",
+  "/planner",
   "/compare",
   "/service",
   "/showrooms",

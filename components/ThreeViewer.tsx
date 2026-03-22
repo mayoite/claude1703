@@ -24,7 +24,7 @@ export default function ThreeViewer({ modelUrl, fallback }: ThreeViewerProps) {
   if (!modelUrl) return fallback || null;
 
   return (
-    <div className="w-full h-full min-h-[400px] bg-gray-50 rounded-lg overflow-hidden relative">
+    <div className="w-full h-full min-h-[400px] bg-soft rounded-lg overflow-hidden relative">
       <Suspense
         fallback={
           <div className="absolute inset-0 flex items-center justify-center">
@@ -58,3 +58,4 @@ export default function ThreeViewer({ modelUrl, fallback }: ThreeViewerProps) {
     </div>
   );
 }
+

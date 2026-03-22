@@ -52,10 +52,10 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
             key={idx}
             onClick={() => setSelectedIndex(idx)}
             className={clsx(
-              "shrink-0 w-16 h-16 md:w-20 md:h-20 bg-neutral-100 rounded-sm overflow-hidden border-2 transition-all relative outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2",
+              "shrink-0 w-16 h-16 md:w-20 md:h-20 bg-hover rounded-sm overflow-hidden border-2 transition-all relative outline-none focus-visible:ring-2 focus-visible:ring-inverse focus-visible:ring-offset-2",
               safeIndex === idx
-                ? "border-neutral-900 opacity-100"
-                : "border-transparent opacity-60 hover:opacity-100 hover:border-neutral-300",
+                ? "border-inverse opacity-100"
+                : "border-transparent opacity-60 hover:opacity-100 hover:border-muted",
             )}
             title={`View ${productName} image ${idx + 1}`}
           >
@@ -72,7 +72,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
       </div>
 
       {/* Main image */}
-      <div className="order-1 md:order-2 relative bg-neutral-100 w-full min-h-[50vw] md:min-h-125 lg:min-h-0 flex-1 flex items-center justify-center p-4">
+      <div className="order-1 md:order-2 relative bg-hover w-full min-h-[50vw] md:min-h-125 lg:min-h-0 flex-1 flex items-center justify-center p-4">
         <Image
           src={currentImage}
           alt={`Primary product photo of ${productName}`}
@@ -84,7 +84,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
 
         {/* Image count badge */}
         {images.length > 0 && (
-          <div className="pointer-events-none absolute bottom-4 right-4 z-10 rounded-full border border-neutral-200 bg-white/92 px-3 py-1 text-sm font-bold tracking-widest text-neutral-800 shadow-sm backdrop-blur">
+          <div className="pointer-events-none absolute bottom-4 right-4 z-10 rounded-full border border-soft bg-[color:var(--overlay-panel-92)] px-3 py-1 text-sm font-bold tracking-widest text-strong shadow-sm backdrop-blur">
             {safeIndex + 1} / {images.length}
           </div>
         )}
@@ -92,3 +92,4 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
     </div>
   );
 }
+

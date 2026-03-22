@@ -347,7 +347,7 @@ export function UnifiedAssistant() {
           onClick={() => setMobileLauncherOpen((prev) => !prev)}
           aria-label="Open workspace assistant"
           aria-expanded={mobileLauncherOpen}
-          className={`fixed left-3 z-50 inline-flex min-h-11 max-w-[calc(100vw-6.75rem)] items-center gap-2 rounded-full bg-neutral-900 px-4 py-3 text-white shadow-xl transition-colors hover:bg-primary ${mobileLauncherOffset}`}
+          className={`fixed left-3 z-50 inline-flex min-h-11 max-w-[calc(100vw-6.75rem)] items-center gap-2 rounded-full bg-inverse px-4 py-3 text-inverse shadow-xl transition-colors hover:bg-primary ${mobileLauncherOffset}`}
         >
           <Sparkles className="h-4 w-4" />
           <span className="truncate text-sm font-normal">
@@ -358,7 +358,7 @@ export function UnifiedAssistant() {
 
         {mobileLauncherOpen && !suppressFloatingLauncher ? (
           <div
-            className={`fixed left-3 right-3 z-50 rounded-2xl border border-neutral-200 bg-white p-3 shadow-2xl ${mobilePanelOffset}`}
+            className={`fixed left-3 right-3 z-50 rounded-2xl border border-soft bg-panel p-3 shadow-2xl ${mobilePanelOffset}`}
           >
             <div className="grid grid-cols-1 gap-2">
               <button
@@ -367,7 +367,7 @@ export function UnifiedAssistant() {
                   setMobileLauncherOpen(false);
                   setGuidedOpen(true);
                 }}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-4 text-sm font-normal text-white"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-inverse px-4 text-sm font-normal text-inverse"
               >
                 <MessageSquareText className="h-4 w-4" />
                 {MOBILE_ASSISTANT_COPY.planner}
@@ -378,7 +378,7 @@ export function UnifiedAssistant() {
                   setMobileLauncherOpen(false);
                   setChatOpen(true);
                 }}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-normal text-white"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-normal text-inverse"
               >
                 <Sparkles className="h-4 w-4" />
                 {MOBILE_ASSISTANT_COPY.chatbot}
@@ -394,7 +394,7 @@ export function UnifiedAssistant() {
           type="button"
           onClick={() => setChatOpen(true)}
           aria-label="Open AI chatbot"
-          className="fixed bottom-5 left-4 z-40 inline-flex items-center gap-2 rounded-full bg-primary px-3.5 py-3 text-white shadow-xl transition-colors hover:bg-primary-hover"
+          className="fixed bottom-5 left-4 z-40 inline-flex items-center gap-2 rounded-full bg-primary px-3.5 py-3 text-inverse shadow-xl transition-colors hover:bg-primary-hover"
         >
           <Sparkles className="h-4 w-4" />
           <span className="hidden xl:inline text-xs font-semibold uppercase tracking-[0.14em]">
@@ -406,26 +406,26 @@ export function UnifiedAssistant() {
 
       {guidedOpen ? (
         <div
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/45 p-0 sm:items-center sm:p-6"
+          className="fixed inset-0 z-50 flex items-end justify-center bg-overlay p-0 sm:items-center sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="Guided planner"
         >
-          <div className="relative flex max-h-[92vh] w-full max-w-[560px] flex-col overflow-hidden rounded-t-3xl bg-white shadow-2xl sm:rounded-2xl">
-            <div className="flex items-center justify-between border-b border-neutral-100 px-5 py-4">
+          <div className="relative flex max-h-[92vh] w-full max-w-[560px] flex-col overflow-hidden rounded-t-3xl bg-panel shadow-2xl sm:rounded-2xl">
+            <div className="flex items-center justify-between border-b border-soft px-5 py-4">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900 text-white">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-inverse text-inverse">
                   <Bot className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-neutral-900">{GUIDED_PLANNER_COPY.title}</p>
-                  <p className="text-xs text-neutral-500">{GUIDED_PLANNER_COPY.subtitle}</p>
+                  <p className="text-sm font-semibold text-strong">{GUIDED_PLANNER_COPY.title}</p>
+                  <p className="text-xs text-muted">{GUIDED_PLANNER_COPY.subtitle}</p>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => setGuidedOpen(false)}
-                className="rounded-full bg-neutral-100 p-2 text-neutral-700 transition-colors hover:bg-neutral-200"
+                className="rounded-full bg-hover p-2 text-body transition-colors hover:bg-soft"
                 aria-label="Close guided planner"
               >
                 <X className="h-4 w-4" />
@@ -434,12 +434,12 @@ export function UnifiedAssistant() {
 
             <div className="flex-1 overflow-y-auto p-5">
               {guidedSubmittedId ? (
-                <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-                  <p className="mb-1 flex items-center gap-2 text-sm font-semibold text-emerald-900">
+                <div className="rounded-xl border border-success bg-success-soft p-4">
+                  <p className="mb-1 flex items-center gap-2 text-sm font-semibold text-success">
                     <CheckCircle2 className="h-4 w-4" />
                     {GUIDED_PLANNER_COPY.submittedTitle}
                   </p>
-                  <p className="text-sm text-emerald-800">Reference: {guidedSubmittedId}</p>
+                  <p className="text-sm text-success">Reference: {guidedSubmittedId}</p>
                   <div className="mt-3 flex gap-3">
                     <button
                       type="button"
@@ -447,14 +447,14 @@ export function UnifiedAssistant() {
                         setGuidedOpen(false);
                         setChatOpen(true);
                       }}
-                      className="text-xs font-semibold uppercase tracking-wide text-neutral-900 underline"
+                      className="text-xs font-semibold uppercase tracking-wide text-strong underline"
                     >
                       {GUIDED_PLANNER_COPY.submittedFollowUp}
                     </button>
                     <button
                       type="button"
                       onClick={resetGuided}
-                      className="text-xs font-semibold uppercase tracking-wide text-neutral-500 underline"
+                      className="text-xs font-semibold uppercase tracking-wide text-muted underline"
                     >
                       {GUIDED_PLANNER_COPY.submittedReset}
                     </button>
@@ -464,7 +464,7 @@ export function UnifiedAssistant() {
                 <div className="space-y-4">
                   {guidedStep === 0 ? (
                     <>
-                      <p className="text-sm text-neutral-700">{GUIDED_PLANNER_COPY.stepOneIntro}</p>
+                      <p className="text-sm text-body">{GUIDED_PLANNER_COPY.stepOneIntro}</p>
                       <div className="flex flex-wrap gap-2">
                         {(Object.keys(USE_CASE_LABEL) as UseCase[]).map((key) => (
                           <button
@@ -473,8 +473,8 @@ export function UnifiedAssistant() {
                             onClick={() => setGuided({ ...guided, useCase: key })}
                             className={`rounded-full border px-3 py-1.5 text-xs ${
                               guided.useCase === key
-                                ? "border-neutral-900 bg-neutral-900 text-white"
-                                : "border-neutral-300 text-neutral-700"
+                                ? "border-inverse bg-inverse text-inverse"
+                                : "border-muted text-body"
                             }`}
                           >
                             {USE_CASE_LABEL[key]}
@@ -486,27 +486,27 @@ export function UnifiedAssistant() {
                         placeholder={GUIDED_PLANNER_COPY.placeholders.seats}
                         value={guided.seats}
                         onChange={(event) => setGuided({ ...guided, seats: event.target.value })}
-                        className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                     </>
                   ) : null}
 
                   {guidedStep === 1 ? (
                     <>
-                      <p className="text-sm text-neutral-700">{GUIDED_PLANNER_COPY.stepTwoIntro}</p>
+                      <p className="text-sm text-body">{GUIDED_PLANNER_COPY.stepTwoIntro}</p>
                       <input
                         type="text"
                         placeholder={GUIDED_PLANNER_COPY.placeholders.company}
                         value={guided.company}
                         onChange={(event) => setGuided({ ...guided, company: event.target.value })}
-                        className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                       <input
                         type="text"
                         placeholder={GUIDED_PLANNER_COPY.placeholders.city}
                         value={guided.city}
                         onChange={(event) => setGuided({ ...guided, city: event.target.value })}
-                        className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                       <div className="flex flex-wrap gap-2">
                         {(Object.keys(TIMELINE_LABEL) as Timeline[]).map((key) => (
@@ -516,8 +516,8 @@ export function UnifiedAssistant() {
                             onClick={() => setGuided({ ...guided, timeline: key })}
                             className={`rounded-full border px-3 py-1.5 text-xs ${
                               guided.timeline === key
-                                ? "border-neutral-900 bg-neutral-900 text-white"
-                                : "border-neutral-300 text-neutral-700"
+                                ? "border-inverse bg-inverse text-inverse"
+                                : "border-muted text-body"
                             }`}
                           >
                             {TIMELINE_LABEL[key]}
@@ -529,52 +529,52 @@ export function UnifiedAssistant() {
                         placeholder={GUIDED_PLANNER_COPY.placeholders.budget}
                         value={guided.budget}
                         onChange={(event) => setGuided({ ...guided, budget: event.target.value })}
-                        className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                       <textarea
                         rows={3}
                         placeholder={GUIDED_PLANNER_COPY.placeholders.notes}
                         value={guided.notes}
                         onChange={(event) => setGuided({ ...guided, notes: event.target.value })}
-                        className="w-full resize-none rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full resize-none rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                     </>
                   ) : null}
 
                   {guidedStep === 2 ? (
                     <>
-                      <p className="text-sm text-neutral-700">{GUIDED_PLANNER_COPY.stepThreeIntro}</p>
+                      <p className="text-sm text-body">{GUIDED_PLANNER_COPY.stepThreeIntro}</p>
                       <input
                         type="text"
                         placeholder={GUIDED_PLANNER_COPY.placeholders.name}
                         value={guided.name}
                         onChange={(event) => setGuided({ ...guided, name: event.target.value })}
-                        className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                       <input
                         type="email"
                         placeholder={GUIDED_PLANNER_COPY.placeholders.email}
                         value={guided.email}
                         onChange={(event) => setGuided({ ...guided, email: event.target.value })}
-                        className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                       <input
                         type="tel"
                         placeholder={GUIDED_PLANNER_COPY.placeholders.phone}
                         value={guided.phone}
                         onChange={(event) => setGuided({ ...guided, phone: event.target.value })}
-                        className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                        className="w-full rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                       />
                     </>
                   ) : null}
 
-                  {guidedError ? <p className="text-sm text-red-600">{guidedError}</p> : null}
+                  {guidedError ? <p className="text-sm text-danger">{guidedError}</p> : null}
 
                   <div className="flex items-center justify-between pt-2">
                     <button
                       type="button"
                       onClick={() => setGuidedStep((prev) => (prev > 0 ? prev - 1 : prev))}
-                      className="text-xs font-semibold uppercase tracking-wide text-neutral-500"
+                      className="text-xs font-semibold uppercase tracking-wide text-muted"
                       disabled={guidedStep === 0 || guidedSaving}
                     >
                       {GUIDED_PLANNER_COPY.back}
@@ -583,7 +583,7 @@ export function UnifiedAssistant() {
                       type="button"
                       onClick={handleGuidedNext}
                       disabled={!stepValid || guidedSaving}
-                      className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white disabled:cursor-not-allowed disabled:opacity-50"
+                      className="inline-flex items-center gap-2 rounded-full bg-inverse px-4 py-2 text-xs font-semibold uppercase tracking-wide text-inverse disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       {guidedSaving ? (
                         <>
@@ -612,40 +612,40 @@ export function UnifiedAssistant() {
 
       {chatOpen ? (
         <div
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/45 p-0 sm:items-center sm:p-6"
+          className="fixed inset-0 z-50 flex items-end justify-center bg-overlay p-0 sm:items-center sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="AI chatbot"
         >
-          <div className="relative flex max-h-[92vh] w-full max-w-[640px] flex-col overflow-hidden rounded-t-3xl bg-white shadow-2xl sm:rounded-2xl">
-            <div className="flex items-center justify-between border-b border-neutral-100 px-5 py-4">
+          <div className="relative flex max-h-[92vh] w-full max-w-[640px] flex-col overflow-hidden rounded-t-3xl bg-panel shadow-2xl sm:rounded-2xl">
+            <div className="flex items-center justify-between border-b border-soft px-5 py-4">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-inverse">
                   <Sparkles className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-neutral-900">{AI_CHATBOT_COPY.title}</p>
-                  <p className="text-xs text-neutral-500">{AI_CHATBOT_COPY.subtitle}</p>
+                  <p className="text-sm font-semibold text-strong">{AI_CHATBOT_COPY.title}</p>
+                  <p className="text-xs text-muted">{AI_CHATBOT_COPY.subtitle}</p>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => setChatOpen(false)}
-                className="rounded-full bg-neutral-100 p-2 text-neutral-700 transition-colors hover:bg-neutral-200"
+                className="rounded-full bg-hover p-2 text-body transition-colors hover:bg-soft"
                 aria-label="Close AI chatbot"
               >
                 <X className="h-4 w-4" />
               </button>
             </div>
 
-            <div className="border-b border-neutral-100 bg-primary/5 px-5 py-3">
+            <div className="border-b border-soft bg-primary/5 px-5 py-3">
               <div className="flex flex-wrap gap-2">
                 {AI_ASSISTANT_STARTERS.map((starter) => (
                   <button
                     key={starter}
                     type="button"
                     onClick={() => applyStarter(starter)}
-                    className="rounded-full border border-neutral-300 bg-white px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
+                    className="rounded-full border border-muted bg-panel px-3 py-1.5 text-xs text-body transition-colors hover:border-primary/50 hover:text-primary"
                   >
                     {starter}
                   </button>
@@ -670,31 +670,31 @@ export function UnifiedAssistant() {
                   <div
                     className={`max-w-[88%] rounded-xl px-4 py-3 text-sm ${
                       message.role === "user"
-                        ? "bg-neutral-900 text-white"
-                        : "border border-neutral-200 bg-neutral-50 text-neutral-800"
+                        ? "bg-inverse text-inverse"
+                        : "border border-soft bg-hover text-strong"
                     }`}
                   >
                     <p>{sanitizeDisplayText(message.text)}</p>
 
                     {message.result ? (
                       <div className="mt-3 space-y-3">
-                        <div className="rounded-lg border border-neutral-200 bg-white p-3">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                        <div className="rounded-lg border border-soft bg-panel p-3">
+                          <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                             {message.result.pricingMode === "band"
                               ? AI_CHATBOT_COPY.bandLabel
                               : AI_CHATBOT_COPY.totalLabel}
                           </p>
-                          <p className="mt-1 text-sm font-semibold text-neutral-900">
+                          <p className="mt-1 text-sm font-semibold text-strong">
                             {message.result.totalBudget}
                           </p>
                         </div>
 
                         {message.result.warnings?.length ? (
-                          <div className="rounded-lg border border-amber-200 bg-amber-50 p-3">
-                            <p className="text-xs font-semibold uppercase tracking-wide text-amber-900">
+                          <div className="rounded-lg border border-warning bg-warning-soft p-3">
+                            <p className="text-xs font-semibold uppercase tracking-wide text-warning">
                               {AI_CHATBOT_COPY.warningsTitle}
                             </p>
-                            <div className="mt-2 space-y-1 text-xs text-amber-900">
+                            <div className="mt-2 space-y-1 text-xs text-warning">
                               {message.result.warnings.map((warning) => (
                                 <p key={warning}>{warning}</p>
                               ))}
@@ -705,10 +705,10 @@ export function UnifiedAssistant() {
                         {message.result.recommendations.map((item) => (
                           <div
                             key={`${message.id}-${item.productId}`}
-                            className="rounded-lg border border-neutral-200 bg-white p-3"
+                            className="rounded-lg border border-soft bg-panel p-3"
                           >
                             <div className="mb-1 flex items-start justify-between gap-2">
-                              <p className="text-sm font-semibold text-neutral-900">
+                              <p className="text-sm font-semibold text-strong">
                                 {item.productName}
                               </p>
                               <Link
@@ -718,16 +718,16 @@ export function UnifiedAssistant() {
                                 View
                               </Link>
                             </div>
-                            <p className="text-xs text-neutral-700">{item.why}</p>
+                            <p className="text-xs text-body">{item.why}</p>
                           </div>
                         ))}
 
                         {message.result.nextActions?.length ? (
-                          <div className="rounded-lg border border-neutral-200 bg-white p-3">
-                            <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                          <div className="rounded-lg border border-soft bg-panel p-3">
+                            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                               {AI_CHATBOT_COPY.nextActionsTitle}
                             </p>
-                            <div className="mt-2 space-y-1 text-xs text-neutral-700">
+                            <div className="mt-2 space-y-1 text-xs text-body">
                               {message.result.nextActions.map((action) => (
                                 <p key={action}>{action}</p>
                               ))}
@@ -742,7 +742,7 @@ export function UnifiedAssistant() {
 
               {aiLoading ? (
                 <div className="flex justify-start">
-                  <div className="inline-flex items-center gap-2 rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
+                  <div className="inline-flex items-center gap-2 rounded-xl border border-soft bg-hover px-4 py-3 text-sm text-body">
                     <Loader2 className="h-4 w-4 animate-spin" />
                     {AI_CHATBOT_COPY.thinking}
                   </div>
@@ -750,7 +750,7 @@ export function UnifiedAssistant() {
               ) : null}
             </div>
 
-            <div className="border-t border-neutral-100 p-4">
+            <div className="border-t border-soft p-4">
               {lastUserQuery ? (
                 <div className="mb-3 flex flex-wrap gap-2">
                   {AI_ASSISTANT_REFINERS.map((refiner) => (
@@ -758,7 +758,7 @@ export function UnifiedAssistant() {
                       key={refiner.label}
                       type="button"
                       onClick={() => void submitAiQuery(refiner.apply(lastUserQuery))}
-                      className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
+                      className="rounded-full border border-muted px-3 py-1.5 text-xs text-body transition-colors hover:border-primary/50 hover:text-primary"
                     >
                       {refiner.label}
                     </button>
@@ -769,14 +769,14 @@ export function UnifiedAssistant() {
                       setChatOpen(false);
                       setGuidedOpen(true);
                     }}
-                    className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
+                    className="rounded-full border border-muted px-3 py-1.5 text-xs text-body transition-colors hover:border-primary/50 hover:text-primary"
                   >
                     {AI_CHATBOT_COPY.switchToPlanner}
                   </button>
                   <button
                     type="button"
                     onClick={resetChatbot}
-                    className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 transition-colors hover:border-primary/50 hover:text-primary"
+                    className="rounded-full border border-muted px-3 py-1.5 text-xs text-body transition-colors hover:border-primary/50 hover:text-primary"
                   >
                     {AI_CHATBOT_COPY.reset}
                   </button>
@@ -789,18 +789,18 @@ export function UnifiedAssistant() {
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder={AI_CHATBOT_COPY.placeholder}
-                  className="min-h-11 flex-1 resize-none rounded-lg border border-neutral-200 px-3 py-2 text-sm outline-none focus:border-neutral-900"
+                  className="min-h-11 flex-1 resize-none rounded-lg border border-soft px-3 py-2 text-sm outline-none focus:border-strong"
                 />
                 <button
                   type="submit"
                   disabled={!query.trim() || aiLoading}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-neutral-900 px-4 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-50"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-inverse px-4 text-xs font-semibold uppercase tracking-[0.12em] text-inverse transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <Send className="h-4 w-4" />
                   {AI_CHATBOT_COPY.send}
                 </button>
               </form>
-              {aiError ? <p className="mt-2 text-xs text-red-600">{aiError}</p> : null}
+              {aiError ? <p className="mt-2 text-xs text-danger">{aiError}</p> : null}
             </div>
           </div>
         </div>
@@ -808,3 +808,4 @@ export function UnifiedAssistant() {
     </>
   );
 }
+

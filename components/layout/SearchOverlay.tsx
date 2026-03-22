@@ -40,15 +40,15 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-white/95 backdrop-blur-sm z-60 flex flex-col items-center justify-start pt-32 px-6"
+          className="fixed inset-0 bg-[color:var(--overlay-panel-95)] backdrop-blur-sm z-60 flex flex-col items-center justify-start pt-32 px-6"
         >
           {/* Close Button */}
           <button
             onClick={onClose}
             title="Close Search"
-            className="absolute top-8 right-8 p-2 hover:bg-neutral-100 rounded-full transition-colors"
+            className="absolute top-8 right-8 p-2 hover:bg-hover rounded-full transition-colors"
           >
-            <X className="w-8 h-8 text-neutral-400 hover:text-neutral-900" />
+            <X className="w-8 h-8 text-subtle hover:text-strong" />
           </button>
 
           {/* Search Input */}
@@ -59,21 +59,21 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search for products, solutions..."
-              className="w-full text-4xl md:text-5xl font-light text-neutral-900 placeholder:text-neutral-300 bg-transparent border-b-2 border-neutral-200 focus:border-primary outline-none py-4 pr-12 transition-colors"
+              className="w-full text-4xl md:text-5xl font-light text-strong placeholder:text-subtle bg-transparent border-b-2 border-soft focus:border-primary outline-none py-4 pr-12 transition-colors"
             />
-            <Search className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 text-neutral-400" />
+            <Search className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 text-subtle" />
           </div>
 
           {/* Results / Suggestions */}
           <div className="w-full max-w-3xl mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-sm font-medium uppercase tracking-wide text-neutral-400 mb-6">
+              <h3 className="text-sm font-medium uppercase tracking-wide text-subtle mb-6">
                 Popular Searches
               </h3>
               <ul className="space-y-4">
                 {SUGGESTIONS.map((item) => (
                   <li key={item}>
-                    <button className="text-lg md:text-xl font-light text-neutral-600 hover:text-primary transition-colors flex items-center gap-2 group">
+                    <button className="text-lg md:text-xl font-light text-muted hover:text-primary transition-colors flex items-center gap-2 group">
                       <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                       {item}
                     </button>
@@ -83,13 +83,13 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
             </div>
             {query && (
               <div>
-                <h3 className="text-sm font-medium uppercase tracking-wide text-neutral-400 mb-6">
+                <h3 className="text-sm font-medium uppercase tracking-wide text-subtle mb-6">
                   Results
                 </h3>
-                <div className="p-4 bg-neutral-50 border border-neutral-100 text-neutral-500 italic">
+                <div className="p-4 bg-hover border border-soft text-muted italic">
                   Showing results for &quot;{query}&quot;...
                   <br />
-                  <span className="text-xs not-italic text-neutral-400">
+                  <span className="text-xs not-italic text-subtle">
                     (This is a simulated search interface)
                   </span>
                 </div>
@@ -101,3 +101,4 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
     </AnimatePresence>
   );
 }
+
