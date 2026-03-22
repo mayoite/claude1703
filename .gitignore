@@ -36,6 +36,16 @@ fonts_report.txt
 *.bak
 *.orig
 .tmp-start.err
+.tmp/
+.knip.raw.json
+.knip.stderr.txt
+seo-report.txt
+ux-report.txt
+test_output*.txt
+tmp-*.png
+tmp-*.jpg
+tmp-*.jpeg
+tmp-*.gif
 
 # debug
 npm-debug.log*
