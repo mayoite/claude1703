@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { LEGAL_PAGE_COPY } from "@/data/site/routeCopy";
 import { SITE_CONTACT } from "@/data/site/contact";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Privacy Policy",
+  description: "How One&Only collects, uses, and protects your personal data.",
+  path: "/privacy",
+});
 
 const COOKIE_ROWS = [
   {
@@ -81,7 +90,7 @@ export default function PrivacyPage() {
               {LEGAL_PAGE_COPY.privacy.overviewDescription}
             </p>
 
-            <div className="scheme-border mt-8 border-t border-inverse pt-7">
+            <div className="mt-8 border-t scheme-border pt-7">
               <h3 className="scheme-text-inverse-muted text-sm font-semibold uppercase tracking-[0.14em]">
                 {LEGAL_PAGE_COPY.privacy.commitmentsTitle}
               </h3>

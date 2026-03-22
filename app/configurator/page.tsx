@@ -1,53 +1,35 @@
-import { Hero } from "@/components/home/Hero";
-import { Simple2DConfigurator } from "@/components/configurator/Simple2DConfigurator";
-import { CONFIGURATOR_PAGE_COPY } from "@/data/site/routeCopy";
-import { getBusinessStats } from "@/lib/businessStats";
-import { formatKpiValuePlus } from "@/lib/kpiFormat";
+import type { Metadata } from "next";
+import { Configurator } from "@/components/configurator/Configurator";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
 
-export default async function ConfiguratorPage({
-  searchParams,
-}: {
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
-}) {
-  const resolvedSearchParams = searchParams ? await searchParams : {};
-  const rawType = Array.isArray(resolvedSearchParams.type)
-    ? resolvedSearchParams.type[0]
-    : resolvedSearchParams.type;
-  const defaultType = rawType === "storages" ? "storages" : "workstations";
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Office Planning Studio",
+  description:
+    "Lay out workstations, tables, seating, and storage in a 2D office planning workspace.",
+  path: "/configurator",
+});
 
-  const { stats } = await getBusinessStats();
-
+export default async function ConfiguratorPage() {
   return (
-    <section className="flex min-h-screen flex-col items-center bg-panel">
-      <Hero
-        variant="small"
-        title={CONFIGURATOR_PAGE_COPY.heroTitle}
-        subtitle={CONFIGURATOR_PAGE_COPY.heroSubtitle}
-        showButton={false}
-        backgroundImage="/images/catalog/oando-workstations--deskpro/image-1.jpg"
-      />
-
-      <section className="w-full border-y border-soft bg-hover py-12">
-        <div className="container px-6 2xl:px-0">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {[
-              stats.clientOrganisations,
-              stats.projectsDelivered,
-              stats.sectorsServed,
-            ].map((value, index) => (
-              <div key={CONFIGURATOR_PAGE_COPY.statsLabels[index]} className="rounded-lg border border-muted bg-panel px-5 py-4">
-                <p className="text-2xl text-strong">{formatKpiValuePlus(value)}</p>
-                <p className="text-sm text-body">{CONFIGURATOR_PAGE_COPY.statsLabels[index]}</p>
-              </div>
-            ))}
-          </div>
+    <section className="min-h-screen bg-panel">
+      <section className="border-b border-soft bg-hover/60">
+        <div className="mx-auto max-w-[1760px] px-4 py-4 md:px-6 2xl:px-8">
+          <p className="text-[11px] font-medium text-subtle">
+            Office Planning Studio
+          </p>
+          <h1 className="mt-1.5 text-base font-semibold tracking-tight text-strong md:text-lg">
+            Plan the room, then place the office.
+          </h1>
+          <p className="mt-1 max-w-3xl text-sm leading-6 text-body">
+            Draw the shell, place products in 2D, and create a quote-ready workspace.
+          </p>
         </div>
       </section>
 
-      <section className="container px-6 py-16 md:py-20 2xl:px-0">
-        <Simple2DConfigurator defaultType={defaultType} />
-      </section>
+      <div className="w-full">
+        <Configurator />
+      </div>
     </section>
   );
 }
-

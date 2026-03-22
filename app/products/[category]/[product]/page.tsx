@@ -201,7 +201,7 @@ export async function generateMetadata({
   );
 
   const productName = typeof product.name === "string" ? product.name : "";
-  const title = `${productName} | ${PDP_ROUTE_COPY.productBrand}`;
+  const title = productName;
   const descriptionFallback = PDP_ROUTE_COPY.fallbackDescription.replace(
     "{name}",
     productName,
@@ -392,6 +392,11 @@ async function ProductContent({
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       priceCurrency: "INR",
+      price: "0",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        description: "Price on request",
+      },
       seller: { "@type": "Organization", name: PDP_ROUTE_COPY.productBrand },
     },
     category: resolvedCategoryId,

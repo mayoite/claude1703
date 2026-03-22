@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram } from "lucide-react";
@@ -5,12 +6,15 @@ import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { getProducts } from "@/lib/getProducts";
 import { SOCIAL_PAGE_COPY, SOCIAL_PAGE_POSTS } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
 
-export const metadata = {
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
   title: "Social Highlights",
   description:
     "Project inspiration and product-linked social highlights grounded in the live catalog and planning routes.",
-};
+  path: "/social",
+});
 
 export default async function SocialPage() {
   const products = await getProducts();

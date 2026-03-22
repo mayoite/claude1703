@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { TRACKING_PAGE_COPY } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Order and Delivery Tracking",
+  description:
+    "Use the correct support lane for order-reference, delivery-status, installation, or after-sales follow-up requests.",
+  path: "/tracking",
+});
 
 export default function TrackingPage() {
   return (

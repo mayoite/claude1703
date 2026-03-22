@@ -1,12 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { LEGAL_PAGE_COPY } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
 
-export const metadata = {
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
   title: LEGAL_PAGE_COPY.refund.metadataTitle,
   description: LEGAL_PAGE_COPY.refund.metadataDescription,
-};
+  path: "/refund-and-return-policy",
+});
 
 export default function RefundAndReturnPolicyPage() {
   return (

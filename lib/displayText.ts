@@ -35,6 +35,40 @@ export function filterMeaningfulDimensionText(value: string): string {
   return /\d/.test(normalized) ? normalized : "";
 }
 
+/**
+ * Splits a semicolon-separated dimension string into distinct variant lines.
+ * Deduplicates identical lines and returns at most `maxLines` entries.
+ */
+export function splitDimensionVariants(value: string, maxLines = 4): string[] {
+  if (!value) return [];
+  const parts = value.split(";").map((s) => s.trim()).filter(Boolean);
+  if (parts.length <= 1) return parts;
+
+  // Group into variant chunks: each chunk starts with "L 1" (first length dimension)
+  const variants: string[] = [];
+  let current: string[] = [];
+  for (const part of parts) {
+    // New variant starts when we see "L 1" (the first length dimension of a config)
+    const isVariantStart = /^L\s*1\s*[-–]/i.test(part);
+    if (isVariantStart && current.length > 0) {
+      variants.push(current.join("; "));
+      current = [];
+    }
+    current.push(part);
+  }
+  if (current.length > 0) variants.push(current.join("; "));
+
+  // Deduplicate
+  const seen = new Set<string>();
+  const deduped = variants.filter((v) => {
+    if (seen.has(v)) return false;
+    seen.add(v);
+    return true;
+  });
+
+  return deduped.slice(0, maxLines);
+}
+
 const GENERIC_MATERIAL_TOKENS = new Set([
   "fabric",
   "foam",

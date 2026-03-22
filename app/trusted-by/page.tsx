@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import { ClientBadge } from "@/components/ClientBadge";
 import { Hero } from "@/components/home/Hero";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { TRUSTED_BY_CLIENTS, TRUSTED_BY_STATS } from "@/data/site/proof";
 import { TRUSTED_BY_PAGE_COPY } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Trusted By",
+  description:
+    "Trusted by industry leaders across government, manufacturing, finance, automotive, IT, and institutional sectors.",
+  path: "/trusted-by",
+});
 
 export default function TrustedByPage() {
   const sectors = Array.from(new Set(TRUSTED_BY_CLIENTS.map((client) => client.sector)));

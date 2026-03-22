@@ -7,22 +7,29 @@ describe("ContactTeaser", () => {
     jest.restoreAllMocks();
   });
 
-  test("dispatches guided planner open event", () => {
-    const dispatchSpy = jest.spyOn(window, "dispatchEvent");
-
+  test("renders contact form fields correctly", () => {
     render(<ContactTeaser />);
-    fireEvent.click(screen.getByRole("button", { name: /open guided planner/i }));
-
-    expect(dispatchSpy).toHaveBeenCalled();
-    const eventArg = dispatchSpy.mock.calls[0]?.[0];
-    expect(eventArg).toBeInstanceOf(CustomEvent);
-    expect((eventArg as CustomEvent).type).toBe("oando-assistant:open");
+    
+    expect(screen.getByRole("textbox", { name: /Name/i })).toBeInTheDocument();
   });
 
-  test("does not render legacy AI chatbot trigger", () => {
+  test("submits contact form with user input", async () => {
+    const fetchSpy = jest.spyOn(window, "fetch").mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({}),
+    } as Response);
+
     render(<ContactTeaser />);
-    expect(
-      screen.queryByRole("button", { name: /open ai chatbot/i }),
-    ).not.toBeInTheDocument();
+    
+    // Fill required fields
+    fireEvent.change(screen.getByRole("textbox", { name: /Name/i }), { target: { value: "Test User" } });
+    fireEvent.change(screen.getByRole("textbox", { name: /City/i }), { target: { value: "Test City" } });
+    fireEvent.change(screen.getByRole("textbox", { name: /Phone or Email/i }), { target: { value: "test@example.com" } });
+    fireEvent.change(screen.getByRole("textbox", { name: /Brief/i }), { target: { value: "Project Brief" } });
+
+    // Submit the form
+    fireEvent.submit(screen.getByRole("form", { name: /Project brief enquiry/i }));
+
+    expect(fetchSpy).toHaveBeenCalled();
   });
 });

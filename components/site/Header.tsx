@@ -598,7 +598,7 @@ export function SiteHeader() {
                       </Link>
                       <ul className="space-y-1.5">
                         {megaMenuOthers.map((subcategory) => (
-                          <li key={subcategory.id}>
+                          <li key={subcategory.name}>
                             <Link
                               href={subcategory.href}
                               onClick={() => setActiveMega(null)}

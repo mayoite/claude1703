@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
@@ -7,6 +8,15 @@ import {
   SERVICE_PAGE_COPY,
   SERVICE_PAGE_PILLARS,
 } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Service and Support",
+  description:
+    "After-sales support, warranty service, and delivery tracking for One&Only workspace projects.",
+  path: "/service",
+});
 
 export default function ServicePage() {
   return (

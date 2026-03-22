@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { GALLERY_PAGE_COPY, GALLERY_PROJECTS } from "@/data/site/routeCopy";
 import { Masonry, MasonryItem } from "@/components/ui/Masonry";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Project Gallery",
+  description:
+    "Selected workspace deliveries across corporate, public, and institutional environments.",
+  path: "/gallery",
+});
 
 export default function GalleryPage() {
   return (

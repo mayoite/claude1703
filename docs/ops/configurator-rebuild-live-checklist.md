@@ -1,0 +1,333 @@
+# Configurator Rebuild Live Checklist
+
+Last updated: 2026-03-22 21:11:33 +05:30
+Update rule: This file must be updated every 10 minutes during active work, even when no milestone has completed.
+
+## Now
+- Active task: ensure opening drag is not blocked by stage tool handlers.
+- Current route state: opening hit-targets now cancel event bubbling and force tool back to `select` so drag works even while in door/window mode.
+- Current quality state: targeted lint on `Configurator.tsx` passes; build still clean.
+
+## Done
+- Removed `components/configurator/Simple2DConfigurator.tsx`.
+- Rewired `app/configurator/page.tsx` to use `Configurator`.
+- Removed dead `type` query handling tied to the deleted component.
+- Created the rebuild plan document.
+- Created the dedicated TODO tracker.
+- Created the dedicated handover document.
+- Added planner support modules for catalog, types, and planner utilities.
+- Replaced the old desk-style `Configurator` with a 2D office planning studio shell.
+- Added room presets, room dimensions, openings, catalog rail, query rail, interactive canvas, inspector, shortlist, and bottom summary bar.
+- Reduced route-level marketing chrome around the configurator.
+- Reduced heading scale and removed some low-value info density from the planner UI.
+- Changed seeded workstation logic so pedestals no longer appear as loose default objects.
+- Tightened the room setup panel so the controls behave more like a tool palette than a large form.
+- Normalized workstation and meeting-table planning heights to `750`.
+- Moved planner domain modules into `lib/planner`.
+- Extracted reusable configurator UI modules:
+  - `components/configurator/ui/CollapsibleSection.tsx`
+  - `components/configurator/panels/RoomSetupPanel.tsx`
+- Replaced the catalog wall with a lower-clutter product selector flow:
+  - category
+  - product
+  - seater
+  - size
+  - add to plan
+- Reworked the planner page hierarchy so the canvas gets more horizontal and vertical space.
+- Moved the inspector below the planner and left only one side options rail.
+- Added metric / imperial switching in room setup.
+- Updated the starter room from `5 x 6 m` to `8 x 6 m`.
+- Raised the minimum initial canvas scale so the room occupies at least half the available planner width.
+- Turned the default preset into a stronger `Starter Office` template with a seeded collaboration layout.
+- Normalized all workstation planning heights to `750`.
+- Added reference sources under `tmp`:
+  - `tmp/ej2-showcase-react-floor-planner`
+  - `tmp/imports/mj-react-planner-2.0.7`
+  - `tmp/imports/starter-main`
+- Added `public/planner-lab/mj-react-planner-preview.png` for visual reference inside the app.
+- Added the temporary comparison route `app/ops/planner-lab/page.tsx`.
+- Added the short alias route `app/planner-lab/page.tsx`.
+- Removed the live configurator embed from the lab page so references stay isolated from the product route.
+- Removed the duplicate `app/ops/planner-lab/page.tsx` route.
+- Added local screenshot assets for `threejs-3d-room-designer` to `public/planner-lab`.
+- Expanded the lab to show all five active references.
+- Added clickable actions to the lab cards where a useful runnable target exists.
+- Split the lab into `Visual shortlist` and `Secondary references`.
+- Added planner tool-mode state to the live configurator for:
+  - `select`
+  - `product`
+  - `wall`
+  - `door`
+  - `window`
+  - `column`
+  - `note`
+- Added internal state and helpers for:
+  - interior walls
+  - columns
+  - notes
+  - click-based opening placement
+  - click-based product placement
+- Wired the planner toolbar into the live canvas panel.
+- Added stage click handling for active drawing tools.
+- Made the grid toggle affect the real stage render.
+- Rendered first-pass planner elements on canvas:
+  - interior walls
+  - columns
+  - notes
+- Reused `addOpening()` in the openings panel and removed dead scaffold helpers.
+- Ran browser-level verification on `/configurator` and captured a fresh viewport screenshot.
+- Reviewed the imported reference code directly for canvas behavior:
+  - `mj-react-planner` viewer/rulers/tool pipeline
+  - `mj-react-planner` snap scene generation
+  - `mj-react-planner` cursor model
+  - `threejs-3d-room-designer` planner mode and wall/item interaction flow
+- Refined the live canvas format pass:
+  - replaced noisy delimiter text artifacts
+  - reduced toolbar visual weight
+  - softened ruler palette
+  - muted and downsized resize handles
+  - tightened route headline/subtitle copy for a cleaner tool-first entry
+- Started architecture split for canvas module structure:
+  - added `canvas/types.ts`
+  - added `canvas/tooling.ts`
+  - added `canvas/PlannerToolbar.tsx`
+  - replaced inline tool JSX in `Configurator.tsx` with `PlannerToolbar`
+- Continued architecture split:
+  - added `canvas/constants.ts`
+  - added `canvas/domain.ts`
+  - moved canvas constants/domain typing out of `Configurator.tsx`
+- Fixed the reported canvas blockers:
+  - removed hidden interaction padding by using `INTERACTION_PADDING_MM = 0`
+  - changed wall drafting to chained point-to-point drawing
+  - replaced unstable right-click popup flow with reliable right-click reset to `Select`
+  - disabled drag interactions outside `Select` mode so tools stop conflicting
+- Completed a SmartDraw-style layout pass:
+  - converted the previous multi-column rail into one compact left rail
+  - made the canvas the dominant right-side surface in a two-column shell
+  - replaced the noisy sticky summary with a compact action bar
+  - reduced top-level planner status noise to a small seat counter badge
+  - verified the route visually with `tmp-smartdraw-layout-pass.png`
+- Added explicit linear workstation modeling:
+  - added `linear-shared` and `linear-non-sharing` footprint support in planner types
+  - added a new `Linear Workstation System` with:
+    - `1 Seat Linear / 1200 x 700`
+    - `2 Seat Linear Non-sharing / 2400 x 700`
+    - `2 Seat Linear Sharing / 2400 x 1200`
+    - `4 Seat Linear Sharing / 3000 x 1200`
+  - rendered linear seat-tab visuals and internal split lines directly on canvas
+  - suppressed generic seat dots/pedestals for these linear footprints to avoid visual conflict
+- Added sofa components (`single seater`, `3 seater`) under seating catalog and implemented custom sofa footprint rendering on canvas.
+- Added immediate reliability controls:
+  - `Reset canvas` button in planner action bar
+  - right-click no longer mutates planner tool/scene state
+- Expanded opening controls:
+  - `double-door` type support in planner opening model
+  - separate `Add single door` and `Add double door` actions
+  - per-opening type switcher in panel (`single door`, `double door`, `window`)
+- Continued small-file architecture:
+  - moved scene snapshot read/write/clear into `lib/planner/sceneStorage.ts`
+  - moved opening defaults/titles/type-guards into `components/configurator/canvas/openings.ts`
+  - rewired `Configurator.tsx` to consume extracted modules
+- Picked up files from `tmp` into repo-owned reference folders:
+  - `components/configurator/references/open-source/mj-react-planner/viewer2d/*`
+  - `components/configurator/references/open-source/mj-react-planner/utils/*`
+  - `components/configurator/references/open-source/ej2-floor-planner/*`
+  - provenance added in `components/configurator/references/open-source/README.md`
+- Hardened right-click interaction:
+  - added dedicated `handleCanvasRightClick()` in configurator canvas flow
+  - right-click now acts as non-destructive escape to `Select` (no scene reset)
+- Expanded core selected-item controls:
+  - added `Flip` action alongside `Rotate`, `Duplicate`, and `Delete`
+  - made duplicate preserve mirrored orientation state
+  - made linear non-sharing footprints respond visually to flip orientation
+- Enforced chair placement and sizing rules from product guidance:
+  - removed seeded auto-chair placements from `boardroom-plus` preset
+  - normalized `Fluid Task Chair` and `Myel Guest Chair` footprints to `650 x 650`
+- Hardened right-click reliability:
+  - added container-level `onContextMenu` interception
+  - kept stage-level `onContextMenu` interception
+  - added `Esc` key as tool-exit fallback
+- Expanded category/product coverage for current delivery:
+  - kept workstation families aligned with requested linear and L-shape sets
+  - relabeled `tables` category to `Desks` in UI
+  - added `Other Items` category (`other-items`) with planner-ready variants
+  - added new families/variants across:
+    - meeting tables (`Round Meeting Table`)
+    - desks (`Executive Desk`)
+    - storages (`Credenza Storage`)
+    - chairs (`Training Chair`)
+    - other items (`Partition Screen`, `Mobile Whiteboard`, `Planter Divider`)
+- Fixed urgent runtime/interaction blockers:
+  - reverted invalid `dynamic(..., { ssr: false })` server-component usage on `/configurator`
+  - removed client-only snapshot initialization causing hydration mismatch
+  - added movable + resizable handles for door openings (windows already supported)
+  - aligned linear workstation option coverage to include `600` and `750` depth variants
+- Hardened right-click to address residual failures:
+  - added right-button detection in stage `onMouseDown`
+  - added capturing `window` contextmenu interception scoped to planner canvas
+  - kept existing stage and container contextmenu protection
+- Added visible right-click UX:
+  - context menu overlay appears at pointer location on canvas
+  - action items reuse existing selected-item handlers and disable correctly when no item is selected
+  - left click anywhere closes the context menu cleanly
+- Fixed context-menu action reliability for rotate/flip:
+  - removed premature global capture-close that could unmount menu before `onClick` fires
+  - switched to outside-pointer close with context-menu hit-test
+  - right-click on a product now force-selects that product before showing menu actions
+- Fixed no-op interaction caused by overlay event capture:
+  - moved product drag/select/right-click handling to a dedicated top interaction rectangle per item
+  - made base visual product rect and labels non-listening so overlays cannot swallow pointer intent
+- Fixed route build blocker:
+  - restored `app/ops/planner-lab/page.tsx` as a re-export shim to avoid missing-page typegen failure.
+- Improved opening interactions for reliability:
+  - added thick transparent drag-hit lines for both doors and windows
+  - increased opening handle radius from `5` to `8`
+  - added explicit per-opening `offsetMm` input in the openings panel
+- Added opening entity actions to context menu:
+  - right-click now detects openings when no product is hit
+  - `Rotate`, `Flip`, and `Delete` actions now apply to selected openings (doors/windows), not only products
+  - opening edit drag is enabled in `select`, `door`, and `window` tool modes
+- Added opening inspector panel:
+  - shows selected opening type, edge, width, and offset
+  - provides visible `Rotate`, `Flip`, and `Delete` controls outside the context menu
+- Hardened opening drag start:
+  - opening hit-targets now `cancelBubble` so stage click handlers don't spawn new openings
+  - drag start forces tool to `select` to prevent tool-mode conflicts
+
+## Next
+- Complete full double-door and single-door CAD symbol refinement pass on all wall edges.
+- Add remaining high-priority catalog families (desks, conference, storage, chairs, pedestals) from provided references and PDFs.
+- Add drag-time snapping guides for move/resize to reduce placement friction during demos.
+
+## Blocked
+- No functional blocker yet.
+- Product normalization from partner spec sources is still pending.
+
+## Risks
+- The current planner is a strong shell, but some query behaviors are still heuristic rather than fully rule-driven.
+- The worktree is already dirty in unrelated areas, so all configurator edits must stay carefully scoped.
+- Most products only have sizes and photos, which means the planner must be excellent in 2D before any 3D expansion.
+- The canvas still needs visible behavioral change fast; subtle panel tweaks are no longer enough for the current review bar.
+- Minified reference code on the Three.js side slows direct extraction, so the clearest implementation patterns are currently coming from `mj-react-planner`.
+
+## Decisions Locked
+- `/configurator` remains the public route.
+- The rebuild is 2D-first and query-oriented.
+- Product photos/specs are first-class selection assets.
+- 3D is optional and selective, not required for planner usefulness.
+- Partner data is for normalization into internal data, not runtime dependency.
+
+## 10-Minute Update Log
+- 2026-03-22 11:22:08 +05:30
+  - Initialized live checklist after removing `Simple2DConfigurator` and relinking `/configurator`.
+- 2026-03-22 11:23:19 +05:30
+  - Added the rebuild plan, TODO tracker, and handover document under `docs/ops`.
+- 2026-03-22 11:45:25 +05:30
+  - Implemented the first live planner shell and passed targeted lint on the new configurator modules.
+- 2026-03-22 11:54:45 +05:30
+  - Reduced shell chrome, tightened typography, and removed loose default pedestal clutter after visual review.
+- 2026-03-22 12:10:26 +05:30
+  - Compressed the room setup panel and normalized workstation/meeting-table heights to `750`.
+- 2026-03-22 13:41:06 +05:30
+  - Moved planner logic into `lib/planner` and extracted the first reusable configurator UI modules without breaking the live route.
+- 2026-03-22 14:40:58 +05:30
+  - Replaced the add-product card wall with a structured selector flow for product, seater, and size.
+- 2026-03-22 14:48:34 +05:30
+  - Enlarged the planner, reduced the layout to one side rail, moved the inspector below, and added metres/feet switching.
+- 2026-03-22 14:51:13 +05:30
+  - Updated the default room to `8 x 6 m` and increased the initial canvas fill so the planner feels more present on load.
+- 2026-03-22 15:06:04 +05:30
+  - Switched the default experience to a stronger template-first starter office with seeded workstation, table, and storage objects, and normalized workstation heights to `750`.
+- 2026-03-22 15:27:29 +05:30
+  - Added new planner reference sources to `tmp`, including the MIT `mj-react-planner` package and the local starter zip, while keeping them isolated from the live app.
+- 2026-03-22 15:30:00 +05:30
+  - Added a temporary `/ops/planner-lab` route that stages reference material and the live planner together for side-by-side design review.
+- 2026-03-22 15:33:54 +05:30
+  - Split the lab back out of the product flow, removed the embedded live planner from it, and added the shorter `/planner-lab` route.
+- 2026-03-22 15:34:57 +05:30
+  - Removed the duplicate ops lab route so `/planner-lab` is the single source of truth for imported planner references.
+- 2026-03-22 15:37:52 +05:30
+  - Expanded `/planner-lab` to represent the full active shortlist, including `threejs-3d-room-designer` screenshots and the live configurator baseline.
+- 2026-03-22 15:43:04 +05:30
+  - Added clickable actions to `/planner-lab`, including upstream and published demo links where available.
+- 2026-03-22 16:00:13 +05:30
+  - Reorganized `/planner-lab` so only true visual references stay in the main comparison and non-visual sources are demoted to a secondary section.
+- 2026-03-22 16:16:05 +05:30
+  - Added live planner tool-mode groundwork in `Configurator.tsx` for drawing-oriented actions and shifted active work back from the lab into the real `/configurator` canvas.
+- 2026-03-22 16:22:53 +05:30
+  - Completed the first live canvas-tool pass with a planner toolbar, stage click actions, grid toggle wiring, rendered architectural elements, and clean targeted lint.
+- 2026-03-22 18:53:49 +05:30
+  - Switched the next canvas pass to direct reference-driven implementation after reviewing `mj-react-planner` and `threejs-3d-room-designer` internals for rulers, snapping, modes, and editing behavior.
+- 2026-03-22 19:07:25 +05:30
+  - Completed a focused format-refinement pass on `/configurator` so the stronger canvas now sits more cleanly in the site’s visual language without changing core tool direction.
+- 2026-03-22 19:11:56 +05:30
+  - Continued interaction hardening and visual alignment.
+- 2026-03-22 20:52:14 +05:30
+  - Patched right-click action reliability for `Rotate`/`Flip` and added right-click item selection before menu open.
+- 2026-03-22 20:55:33 +05:30
+  - Added top interaction hit-layer for placed items and disabled event listening on base visual rect to prevent dead clicks.
+- 2026-03-22 20:59:55 +05:30
+  - Added opening drag-hit lines, offset input, and restored `ops/planner-lab` route shim so production build completes.
+- 2026-03-22 21:06:20 +05:30
+  - Enabled opening entity selection + rotate/flip/delete from context menu and expanded opening edit availability beyond select mode.
+- 2026-03-22 21:09:14 +05:30
+  - Added opening inspector panel with explicit controls so door/window actions are always visible and reachable.
+- 2026-03-22 21:11:33 +05:30
+  - Added event canceling and tool reset on opening drag start to fix non-draggable doors/windows.
+  - Completed the first non-trivial canvas structure split to align with full planner architecture direction instead of one-file growth.
+- 2026-03-22 19:24:45 +05:30
+  - Applied core interaction corrections based on live review feedback and expanded canvas module structure to keep future work manageable.
+- 2026-03-22 19:34:41 +05:30
+  - Applied SmartDraw-inspired shell composition (compact left rail + dominant canvas), simplified noisy summaries, passed lint, and captured a fresh browser screenshot.
+- 2026-03-22 19:46:17 +05:30
+  - Implemented explicit linear workstation shapes and variants (sharing + non-sharing), added custom footprint rendering, and validated with lint + browser screenshot.
+- 2026-03-22 19:47:15 +05:30
+  - Added single-seater linear workstation variant (`1 Seat Linear / 1200 x 700`) to the same linear family and validated catalog lint.
+- 2026-03-22 19:48:04 +05:30
+  - Added `2 Seat L-Shape Non-sharing / 1800 x 1800` to `DeskPro L-Pod` and validated catalog lint.
+- 2026-03-22 19:48:47 +05:30
+  - Added `1 Seat Linear L-Shape / 1200 x 1200` to `DeskPro L-Pod` and validated catalog lint.
+- 2026-03-22 19:51:11 +05:30
+  - Added `Cabin Table` family in `tables` with `1200 x 750` and `1500 x 750` variants (3-seat pattern) and validated catalog lint.
+- 2026-03-22 19:52:18 +05:30
+  - Enforced `750mm` as a locked validation rule for all `workstations`, `meeting-tables`, and `tables` variants in planner catalog code.
+- 2026-03-22 19:52:58 +05:30
+  - Added `Conference Table` meeting-table family with `Conference 11 Seat / 3600 x 1200` variant from the provided layout reference.
+- 2026-03-22 19:53:37 +05:30
+  - Updated `1 Seat Linear` workstation dimensions from `1200 x 700` to `1200 x 600` based on the provided CAD reference.
+- 2026-03-22 19:54:18 +05:30
+  - Updated `4 Seat Linear Sharing` workstation dimensions to `2400 x 1500` (2x2 of `1200 x 750`) from the provided CAD reference.
+- 2026-03-22 19:58:45 +05:30
+  - Locked `4 Seat L-Shape` variant naming and notes to explicit `3000 x 3000` CAD reference for clearer workstation selection.
+- 2026-03-22 19:59:45 +05:30
+  - Updated `2 Seat L-Shape Non-sharing` dimensions to `3000 x 1500` from the provided CAD reference and refreshed variant notes.
+- 2026-03-22 20:00:55 +05:30
+  - Updated `1 Seat L-Shape` workstation dimensions to `1500 x 1500` from the provided CAD reference and standardized variant labeling.
+- 2026-03-22 20:04:30 +05:30
+  - Added sofa components (`single seater`, `3 seater`) under seating catalog and implemented custom sofa footprint rendering on canvas.
+- 2026-03-22 20:12:11 +05:30
+  - Added a `Reset canvas` action and removed right-click-driven tool reset behavior to prevent accidental context loss.
+- 2026-03-22 20:12:39 +05:30
+  - Verified targeted lint and fresh browser capture after urgent stability changes.
+- 2026-03-22 20:15:04 +05:30
+  - Added opening type switcher and explicit single/double door panel actions; validated via lint and browser screenshot.
+- 2026-03-22 20:23:16 +05:30
+  - Split additional monolith responsibilities into `sceneStorage` and `openings` modules and revalidated route behavior.
+- 2026-03-22 20:26:52 +05:30
+  - Imported high-value reference files from `tmp` into structured in-repo folders for direct adaptation in upcoming planner passes.
+- 2026-03-22 20:28:41 +05:30
+  - Implemented and verified safe right-click escape behavior for canvas tooling without data loss.
+- 2026-03-22 20:30:59 +05:30
+  - Implemented full selected-item action set with visible flip behavior and validated lint + browser pass.
+- 2026-03-22 20:33:10 +05:30
+  - Removed auto-seeded chairs and normalized chair footprint dimensions to `650 x 650` for manual user placement flow.
+- 2026-03-22 20:34:30 +05:30
+  - Hardened right-click behavior across canvas hit zones and added `Esc` fallback for reliable exit to select mode.
+- 2026-03-22 20:36:57 +05:30
+  - Completed requested category coverage expansion including `Other Items` and additional desk/meeting/storage/chair product families.
+- 2026-03-22 20:41:39 +05:30
+  - Resolved hydration/runtime blockers and implemented move+resize handles for both door and window openings.
+- 2026-03-22 20:42:45 +05:30
+  - Implemented triple-guard right-click handling to force reliable exit-to-select on canvas interactions.
+- 2026-03-22 20:48:05 +05:30
+  - Added visible right-click action menu and validated behavior with lint + browser capture.

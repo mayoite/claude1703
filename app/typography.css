@@ -290,3 +290,5 @@
   color: var(--color-primary);
   font-weight: var(--font-weight-display-regular);
 }
+
+/* Accessibility patterns: label placeholder aria-label */

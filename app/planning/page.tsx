@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
@@ -6,6 +7,15 @@ import {
   PLANNING_PAGE_DELIVERABLES,
   PLANNING_PAGE_STEPS,
 } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Planning Service",
+  description:
+    "A structured approach for planning, procurement alignment, execution, and support.",
+  path: "/planning",
+});
 
 export default function PlanningPage() {
   return (

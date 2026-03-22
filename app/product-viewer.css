@@ -21,7 +21,6 @@
 
 @utility pdp-shell {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -67,19 +66,12 @@
 
 @utility pdp-detail-pane {
   width: 100%;
-  overflow-y: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   border-left: 1px solid var(--border-soft);
   background: var(--surface-panel-strong);
-}
-
-.pdp-detail-pane::-webkit-scrollbar {
-  display: none;
 }
 
 @media (min-width: 640px) {
@@ -102,9 +94,6 @@
 
 @media (min-width: 1024px) {
   .pdp-detail-column {
-    position: sticky;
-    top: 112px;
-    height: calc(100vh - 112px);
     width: 42%;
   }
 }
@@ -382,4 +371,18 @@
 .pdp-cta-secondary:hover {
   border-color: var(--border-strong);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* Accessibility patterns: label placeholder aria-label */
 

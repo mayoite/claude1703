@@ -119,7 +119,9 @@
   justify-content: center;
   gap: 0.5rem;
   white-space: nowrap;
-  transition: all 150ms;
+  transition-property: transform, background-color, border-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: var(--ease-standard);
   min-height: 3rem;
   padding-inline: 1.5rem;
   border-radius: var(--radius-pill);
@@ -489,4 +491,18 @@
   letter-spacing: -0.025em;
   line-height: 1.15;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* Accessibility patterns: label placeholder aria-label */
 

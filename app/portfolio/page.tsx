@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -5,6 +6,14 @@ import Image from "next/image";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { PORTFOLIO_CLIENTS, PORTFOLIO_PAGE_COPY } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Portfolio",
+  description: "Real delivery photos grouped by client projects.",
+  path: "/portfolio",
+});
 
 type ClientPortfolio = (typeof PORTFOLIO_CLIENTS)[number];
 

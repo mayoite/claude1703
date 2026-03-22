@@ -6,6 +6,7 @@ import type { BusinessStats, BusinessStatsResult } from "@/lib/types/businessSta
 import { fetchNhostBusinessStats } from "@/lib/nhostBackup";
 import {
   BUSINESS_STATS_FETCH_TIMEOUT_MS,
+  BUSINESS_STATS_TOTAL_BUDGET_MS,
   BUSINESS_STATS_REVALIDATE_SECONDS,
   BUSINESS_STATS_SAFE_DEFAULTS,
 } from "@/data/site/fallbacks";
@@ -85,13 +86,12 @@ const getCachedLiveBusinessStats = unstable_cache(fetchLiveBusinessStats, ["busi
   tags: ["business-stats"],
 });
 
-export async function getBusinessStats(options?: {
-  forceLive?: boolean;
-}): Promise<BusinessStatsResult> {
-  const fetchedAt = new Date().toISOString();
-
+async function fetchBusinessStatsChain(
+  fetchedAt: string,
+  forceLive?: boolean,
+): Promise<BusinessStatsResult> {
   try {
-    const stats = options?.forceLive
+    const stats = forceLive
       ? await fetchLiveBusinessStats()
       : await getCachedLiveBusinessStats();
     lastKnownGoodStats = stats;
@@ -118,4 +118,22 @@ export async function getBusinessStats(options?: {
 
     return { stats: BUSINESS_STATS_SAFE_DEFAULTS, source: "safe-default", fetchedAt };
   }
+}
+
+export async function getBusinessStats(options?: {
+  forceLive?: boolean;
+}): Promise<BusinessStatsResult> {
+  const fetchedAt = new Date().toISOString();
+
+  const budgetTimeout = new Promise<BusinessStatsResult>((resolve) => {
+    setTimeout(() => {
+      resolve({
+        stats: lastKnownGoodStats ?? BUSINESS_STATS_SAFE_DEFAULTS,
+        source: lastKnownGoodStats ? "stale-cache" : "safe-default",
+        fetchedAt,
+      });
+    }, BUSINESS_STATS_TOTAL_BUDGET_MS);
+  });
+
+  return Promise.race([fetchBusinessStatsChain(fetchedAt, options?.forceLive), budgetTimeout]);
 }

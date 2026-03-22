@@ -426,6 +426,18 @@ function classifyToRequestedSubcategoryInternal(
   categoryId: RequestedCategoryId,
   item: ProductWithContext,
 ): string {
+  // Fast path: if the product already has a canonical subcategoryId in its
+  // metadata, use it directly. This prevents the shared seriesName (derived
+  // from the first product in a series group) from contaminating text-match
+  // classification for every other product in that series.
+  const metaSubId = item.product.metadata?.subcategoryId;
+  if (metaSubId) {
+    const directDef = (Catalog_SUBCATEGORY_DEFINITIONS[categoryId] ?? []).find(
+      (def) => def.id === metaSubId,
+    );
+    if (directDef) return directDef.label;
+  }
+
   return resolveCanonicalSubcategory(categoryId, {
     subcategory: item.product.metadata?.subcategory || "",
     productName: item.product.name,

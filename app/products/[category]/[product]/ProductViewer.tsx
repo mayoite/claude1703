@@ -25,6 +25,7 @@ import {
   sanitizeDisplayText as normalizeDisplayText,
   filterMeaningfulDimensionText,
   filterMeaningfulMaterialList,
+  splitDimensionVariants,
 } from "@/lib/displayText";
 import { PDP_ROUTE_COPY } from "@/data/site/routeCopy";
 
@@ -211,12 +212,16 @@ export function ProductViewer({
   const overview = normalizeDisplayText(
     product.detailedInfo?.overview || product.description || "",
   );
-  const dimensions = filterMeaningfulDimensionText(
+  const dimensionsRaw = filterMeaningfulDimensionText(
     toText(rawSpecs.dimensions) ||
       toText(rawSpecs.dimension) ||
       product.detailedInfo?.dimensions ||
       "",
   );
+  const dimensionVariants = splitDimensionVariants(dimensionsRaw);
+  const dimensions = dimensionVariants.length > 1
+    ? dimensionVariants.join(" | ")
+    : dimensionsRaw;
   const specMaterials = filterMeaningfulMaterialList(toStringList(rawSpecs.materials));
   const finishOptions = toStringList(rawSpecs.finish_options);
   const primaryMaterials = filterMeaningfulMaterialList(
@@ -534,19 +539,30 @@ export function ProductViewer({
                       and commercial follow-up.
                     </p>
                     <div className="pdp-info-grid">
-                      {summaryCards.map((card) => (
-                        <div
-                          key={card.label}
-                          className="pdp-info-row"
-                        >
-                          <p className="pdp-card-label mb-2">
-                            {card.label}
-                          </p>
-                          <p className="text-sm leading-relaxed scheme-text-body">
-                            {card.value}
-                          </p>
-                        </div>
-                      ))}
+                      {summaryCards.map((card) => {
+                        const isDimCard = (card.label === PDP_ROUTE_COPY.summary.dimensions || card.label === "Sizes") && dimensionVariants.length > 1;
+                        return (
+                          <div
+                            key={card.label}
+                            className="pdp-info-row"
+                          >
+                            <p className="pdp-card-label mb-2">
+                              {card.label}
+                            </p>
+                            {isDimCard ? (
+                              <ul className="flex flex-col gap-0.5">
+                                {dimensionVariants.map((v, i) => (
+                                  <li key={i} className="text-sm leading-relaxed scheme-text-body">{v}</li>
+                                ))}
+                              </ul>
+                            ) : (
+                              <p className="text-sm leading-relaxed scheme-text-body">
+                                {card.value}
+                              </p>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   </>
                 ) : null}
@@ -725,19 +741,30 @@ export function ProductViewer({
                 {PDP_ROUTE_COPY.ctas.specifications}
               </h2>
               <div className="mb-7 grid gap-3">
-                {specRows.map((row) => (
-                  <div
-                    key={row.label}
-                    className="pdp-info-row"
-                  >
-                    <span className="pdp-card-label mb-2 block">
-                      {row.label}
-                    </span>
-                    <span className="text-sm leading-relaxed scheme-text-body">
-                      {row.value}
-                    </span>
-                  </div>
-                ))}
+                {specRows.map((row) => {
+                  const isDimRow = (row.label === "Dimensions" || row.label === "Sizes") && dimensionVariants.length > 1;
+                  return (
+                    <div
+                      key={row.label}
+                      className="pdp-info-row"
+                    >
+                      <span className="pdp-card-label mb-2 block">
+                        {row.label}
+                      </span>
+                      {isDimRow ? (
+                        <ul className="flex flex-col gap-0.5">
+                          {dimensionVariants.map((v, i) => (
+                            <li key={i} className="text-sm leading-relaxed scheme-text-body">{v}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <span className="text-sm leading-relaxed scheme-text-body">
+                          {row.value}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {features.length > 0 && (

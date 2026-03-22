@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { FeaturedCarousel } from "@/components/home/FeaturedCarousel";
@@ -13,6 +14,15 @@ import {
 } from "@/data/site/routeCopy";
 import { getBusinessStats } from "@/lib/businessStats";
 import { formatKpiAsOf, formatKpiValuePlus } from "@/lib/kpiFormat";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Showrooms",
+  description:
+    "A closer look at our execution model, project footprint, and the teams who trust us.",
+  path: "/showrooms",
+});
 
 export default async function ShowroomsPage() {
   const { stats } = await getBusinessStats();

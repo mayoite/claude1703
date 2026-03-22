@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getProductByUrlKey, type Product } from "@/lib/getProducts";
@@ -11,6 +12,14 @@ import {
 } from "@/lib/displayText";
 import { COMPARE_ROUTE_COPY } from "@/data/site/routeCopy";
 import { CompareColumnActions } from "@/components/products/CompareColumnActions";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Compare Products",
+  description: "Side-by-side comparison of One&Only office furniture products.",
+  path: "/compare",
+});
 
 type CompareItem = {
   productUrlKey: string;

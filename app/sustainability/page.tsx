@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { Newsletter } from "@/components/shared/Newsletter";
@@ -11,6 +12,14 @@ import {
   Wrench,
 } from "lucide-react";
 import { SUSTAINABILITY_PAGE_COPY } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Sustainability",
+  description: "Long-life systems. Lower lifecycle waste.",
+  path: "/sustainability",
+});
 
 const pillarIconMap = {
   leaf: Leaf,

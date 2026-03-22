@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
@@ -6,12 +7,21 @@ import { ClientBadge } from "@/components/ClientBadge";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { ABOUT_PAGE_COPY } from "@/data/site/routeCopy";
 import { TRUSTED_BY_CLIENTS, TRUSTED_BY_STATS } from "@/data/site/proof";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "About One&Only",
+  description:
+    "We provide office furniture and workspace solutions across India, offering durable designs, installation, and asset management.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   const featuredClients = TRUSTED_BY_CLIENTS.slice(0, 8);
 
   return (
-    <main className="flex min-h-screen w-full flex-col scheme-page">
+    <div className="flex min-h-screen w-full flex-col scheme-page">
       <Hero
         variant="small"
         title={ABOUT_PAGE_COPY.heroTitle}
@@ -175,7 +185,7 @@ export default function AboutPage() {
       </section>
 
       <ContactTeaser />
-    </main>
+    </div>
   );
 }
 

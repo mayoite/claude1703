@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Briefcase, GraduationCap, Users } from "lucide-react";
 import { Hero } from "@/components/home/Hero";
 import { JobCard } from "@/components/career/JobCard";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { CAREER_PAGE_COPY, CAREER_PAGE_JOBS } from "@/data/site/routeCopy";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Careers",
+  description:
+    "Join a team that builds practical, high-impact workspaces for organizations across India.",
+  path: "/career",
+});
 
 const CAREER_PILLAR_ICONS = {
   users: Users,

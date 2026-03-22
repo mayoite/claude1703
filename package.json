@@ -39,6 +39,7 @@
     "recovery:handover": "node scripts/recovery-handover.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
     "@archilogic/floor-plan-sdk": "^5.2.1",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-dialog": "^1.1.15",

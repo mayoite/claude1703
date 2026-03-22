@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ClientBadge } from "@/components/ClientBadge";
@@ -6,6 +7,15 @@ import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { PROJECTS_PAGE_CLIENTS, PROJECTS_PAGE_COPY } from "@/data/site/routeCopy";
 import { getBusinessStats } from "@/lib/businessStats";
 import { formatKpiValuePlus } from "@/lib/kpiFormat";
+import { buildPageMetadata } from "@/data/site/seo";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export const metadata: Metadata = buildPageMetadata(SITE_URL, {
+  title: "Projects",
+  description:
+    "Workspace projects delivered across government, finance, energy, manufacturing, and more.",
+  path: "/projects",
+});
 
 export default async function ProjectsPage() {
   const { stats, source } = await getBusinessStats();
