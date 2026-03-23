@@ -72,7 +72,7 @@ export const SITE_FOOTER_NAV = [
     heading: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: "/login", label: "Partner Login" },
+      { href: "/login", label: "Partner Portal" },
       { href: "/trusted-by", label: "Trusted By" },
       { href: "/projects", label: "Projects" },
       { href: "/sustainability", label: "Sustainability" },
@@ -83,11 +83,17 @@ export const SITE_FOOTER_NAV = [
     ],
   },
   {
+    heading: "Digital Workspace",
+    links: [
+      { href: "/smartdraw", label: "Floor Planner" },
+      { href: "/configurator", label: "3D Configurator" },
+      { href: "/login", label: "Partner Portal" },
+    ],
+  },
+  {
     heading: "Support",
     links: [
       { href: "/contact", label: "Contact Us" },
-      { href: "/configurator", label: "2D Configurator" },
-      { href: "/planning", label: "Planning Service" },
       { href: "/faq", label: "FAQ" },
       { href: "/downloads", label: "Downloads" },
       { href: "/showrooms", label: "Showrooms" },
