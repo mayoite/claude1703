@@ -6,13 +6,13 @@ import { SITE_CONTACT } from "@/data/site/contact";
 
 export const SITE_NAV_LINKS = [
   { label: "Products", href: "/products", hasMega: true },
+  { label: "Floor Planner", href: "/smartdraw" },
   { label: "Configurator", href: "/configurator" },
+  { label: "Partner Portal", href: "/login" },
   { label: "Solutions", href: "/solutions" },
   { label: "Projects", href: "/projects" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Trusted by", href: "/trusted-by" },
   { label: "About", href: "/about" },
-  { label: "Sustainability", href: "/sustainability" },
 ] as const;
 
 export const SITE_CTA_LINKS = [
@@ -83,16 +83,11 @@ export const SITE_FOOTER_NAV = [
     ],
   },
   {
-    heading: "Digital Workspace",
+    heading: "Support & Tools",
     links: [
       { href: "/smartdraw", label: "Floor Planner" },
       { href: "/configurator", label: "3D Configurator" },
       { href: "/login", label: "Partner Portal" },
-    ],
-  },
-  {
-    heading: "Support",
-    links: [
       { href: "/contact", label: "Contact Us" },
       { href: "/faq", label: "FAQ" },
       { href: "/downloads", label: "Downloads" },
