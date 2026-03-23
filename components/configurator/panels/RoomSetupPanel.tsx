@@ -49,7 +49,7 @@ export function RoomSetupPanel({
   onSeedLayout,
 }: RoomSetupPanelProps) {
   return (
-    <div className="order-1 rounded-[1rem] border border-soft bg-panel p-2.5 shadow-sm">
+    <div className="order-1 rounded-2xl border border-soft bg-panel p-2.5 shadow-sm">
       <div className="flex items-center justify-between gap-3">
         <div>
           <p className="text-[11px] font-medium text-subtle">Room setup</p>

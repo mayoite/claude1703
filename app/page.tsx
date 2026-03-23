@@ -3,6 +3,7 @@ import { HomepageHero } from "@/components/home/HomepageHero";
 import { PartnershipBanner } from "@/components/home/PartnershipBanner";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { ProcessSection } from "@/components/home/ProcessSection";
+import { InteractiveTools } from "@/components/home/InteractiveTools";
 import { Collections } from "@/components/home/Collections";
 import { Projects } from "@/components/home/Projects";
 import { HomeFAQ } from "@/components/home/HomeFAQ";
@@ -38,6 +39,10 @@ export default async function Home() {
       <HomepageHero />
       <SectionReveal delay={0.02}>
         <PartnershipBanner />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <InteractiveTools />
       </SectionReveal>
 
       <SectionReveal delay={0.05}>

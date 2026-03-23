@@ -72,6 +72,7 @@ export const SITE_FOOTER_NAV = [
     heading: "Company",
     links: [
       { href: "/about", label: "About" },
+      { href: "/login", label: "Partner Login" },
       { href: "/trusted-by", label: "Trusted By" },
       { href: "/projects", label: "Projects" },
       { href: "/sustainability", label: "Sustainability" },

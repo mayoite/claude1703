@@ -39,7 +39,7 @@ export default function PlanningPage() {
             {PLANNING_PAGE_STEPS.map((step) => (
               <article
                 key={step.title}
-                className="scheme-panel scheme-border rounded-[1.5rem] border p-6"
+                className="scheme-panel scheme-border rounded-3xl border p-6"
               >
                 <h3 className="text-2xl font-light tracking-tight text-strong">{step.title}</h3>
                 <p className="page-copy scheme-text-body mt-3">{step.detail}</p>
@@ -65,7 +65,7 @@ export default function PlanningPage() {
               </ul>
             </div>
 
-            <div className="scheme-panel scheme-border rounded-[1.5rem] border p-6">
+            <div className="scheme-panel scheme-border rounded-3xl border p-6">
               <p className="typ-label scheme-text-body mb-3">{PLANNING_PAGE_COPY.bestForKicker}</p>
               <p className="page-copy scheme-text-body">
                 {PLANNING_PAGE_COPY.bestForDescription}
@@ -85,7 +85,7 @@ export default function PlanningPage() {
 
       <section className="w-full py-6 md:py-10">
         <div className="container px-6 2xl:px-0">
-          <div className="scheme-panel-dark rounded-[2rem] p-8 md:p-10">
+          <div className="scheme-panel-dark rounded-4xl p-8 md:p-10">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <p className="typ-label scheme-text-inverse-muted">{PLANNING_PAGE_COPY.deskKicker}</p>

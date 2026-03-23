@@ -36,18 +36,8 @@
 
 @utility pdp-media-column {
   width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .pdp-media-column {
-    width: 58%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .pdp-media-column {
-    width: 62%;
-  }
+  @variant lg { width: 58%; }
+  @variant xl { width: 62%; }
 }
 
 @utility pdp-media-pane {
@@ -56,12 +46,7 @@
   flex-direction: column;
   padding-top: 0;
   background: var(--surface-soft);
-}
-
-@media (min-width: 1024px) {
-  .pdp-media-pane {
-    padding-top: 2rem;
-  }
+  @variant lg { padding-top: 2rem; }
 }
 
 @utility pdp-detail-pane {
@@ -72,17 +57,11 @@
   padding-bottom: 2.5rem;
   border-left: 1px solid var(--border-soft);
   background: var(--surface-panel-strong);
-}
-
-@media (min-width: 640px) {
-  .pdp-detail-pane {
+  @variant sm {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-}
-
-@media (min-width: 1024px) {
-  .pdp-detail-pane {
+  @variant lg {
     padding-left: 3rem;
     padding-right: 3rem;
   }
@@ -90,18 +69,8 @@
 
 @utility pdp-detail-column {
   width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .pdp-detail-column {
-    width: 42%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .pdp-detail-column {
-    width: 38%;
-  }
+  @variant lg { width: 42%; }
+  @variant xl { width: 38%; }
 }
 
 @utility pdp-viewer-shell {
@@ -125,12 +94,7 @@
   border-color: var(--border-soft);
   background: var(--surface-panel-strong);
   box-shadow: 0 20px 48px -42px var(--overlay-inverse-12);
-}
-
-@media (min-width: 640px) {
-  .pdp-card {
-    padding: 1.5rem;
-  }
+  @variant sm { padding: 1.5rem; }
 }
 
 @utility pdp-card--plain {
@@ -253,12 +217,7 @@
   font-weight: 300;
   line-height: 1.05;
   letter-spacing: -0.025em;
-}
-
-@media (min-width: 640px) {
-  .pdp-title {
-    font-size: 3rem;
-  }
+  @variant sm { font-size: 3rem; }
 }
 
 @utility pdp-divider {

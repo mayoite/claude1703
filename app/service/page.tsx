@@ -40,7 +40,7 @@ export default function ServicePage() {
             {SERVICE_PAGE_PILLARS.map((item) => (
               <article
                 key={item.title}
-                className="scheme-panel scheme-border rounded-[1.5rem] border p-6"
+                className="scheme-panel scheme-border rounded-3xl border p-6"
               >
                 <h3 className="text-2xl font-light tracking-tight text-strong">{item.title}</h3>
                 <p className="page-copy scheme-text-body mt-3">{item.detail}</p>
@@ -108,7 +108,7 @@ export default function ServicePage() {
               </div>
             </div>
 
-            <div className="scheme-panel scheme-border rounded-[1.5rem] border p-6">
+            <div className="scheme-panel scheme-border rounded-3xl border p-6">
               <p className="typ-label scheme-text-body mb-3">{SERVICE_PAGE_COPY.supportKicker}</p>
               <p className="page-copy scheme-text-body">
                 {SERVICE_PAGE_COPY.supportDescription}
@@ -128,7 +128,7 @@ export default function ServicePage() {
 
       <section className="w-full py-6 md:py-10">
         <div className="container px-6 2xl:px-0">
-          <div className="scheme-panel-dark rounded-[2rem] p-8 md:p-10">
+          <div className="scheme-panel-dark rounded-4xl p-8 md:p-10">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <p className="typ-label scheme-text-inverse-muted">{SERVICE_PAGE_COPY.supportDeskKicker}</p>

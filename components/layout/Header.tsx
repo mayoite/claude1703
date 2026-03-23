@@ -88,7 +88,7 @@ export function Header() {
           "fixed top-0 left-0 w-full z-1020 transition-all duration-500 ease-in-out",
           isVisible ? "translate-y-0" : "-translate-y-full",
           isScrolled
-            ? "bg-[color:var(--overlay-panel-95)] backdrop-blur-md shadow-sm"
+            ? "bg-(--overlay-panel-95) backdrop-blur-md shadow-sm"
             : "bg-panel border-b border-soft",
         )}
         onMouseLeave={() => setActiveMenu(null)}
@@ -105,6 +105,13 @@ export function Header() {
               <span className="hidden md:inline mr-auto text-muted font-medium">
                 One&Only
               </span>
+              <Link
+                href="/login"
+                prefetch={false}
+                className="hover:text-primary transition-colors text-primary/80"
+              >
+                Partner Login
+              </Link>
               <Link
                 href="/service"
                 prefetch={false}

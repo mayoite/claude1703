@@ -128,8 +128,8 @@ export default async function ContactPage({
           </div>
         </div>
 
-        <div className="border border-soft rounded-[var(--radius-xl)] p-6 md:p-8 bg-panel shadow-theme-panel">
-          <div className="scheme-panel-dark mb-6 rounded-[1.5rem] p-6">
+        <div className="border border-soft rounded-xl p-6 md:p-8 bg-panel shadow-theme-panel">
+          <div className="scheme-panel-dark mb-6 rounded-3xl p-6">
             <p className="typ-label scheme-text-inverse-muted">{CONTACT_PAGE_COPY.quickDeskKicker}</p>
             <h2 className="typ-section mt-3 text-inverse">{CONTACT_PAGE_COPY.quickDeskTitle}</h2>
             <p className="page-copy scheme-text-inverse-body mt-3">{CONTACT_PAGE_COPY.quickDeskDescription}</p>

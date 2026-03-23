@@ -29,6 +29,7 @@ const NAV = [
       { href: "/sustainability", label: "Sustainability" },
       { href: "/service", label: "Service" },
       { href: "/contact", label: "Contact" },
+      { href: "/login", label: "Partner Login" },
     ],
   },
 ];
@@ -135,6 +136,13 @@ export function Footer() {
               className="hover:text-subtle transition-colors"
             >
               Terms
+            </Link>
+            <Link
+              href="/configurator"
+              prefetch={false}
+              className="hover:text-subtle transition-colors opacity-60"
+            >
+              Office Planner
             </Link>
           </div>
           <div suppressHydrationWarning>

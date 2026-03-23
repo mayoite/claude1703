@@ -316,6 +316,9 @@ export function SiteHeader() {
               <span />
             )}
             <div className={headerUtilityLinksClass}>
+              <Link href="/login" className="whitespace-nowrap transition-colors hover:text-primary">
+                Partner Login
+              </Link>
               <Link href="/contact" className="whitespace-nowrap transition-colors hover:text-primary">
                 Contact
               </Link>
@@ -330,7 +333,7 @@ export function SiteHeader() {
               aria-label="One&Only - home"
               className="inline-flex h-full shrink-0 items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
-              <OneAndOnlyLogo className="h-[1.875rem] md:h-[2.125rem] xl:h-9" variant="orange" />
+              <OneAndOnlyLogo className="h-7.5 md:h-8.5 xl:h-9" variant="orange" />
             </Link>
 
             {/* Center nav — desktop only */}
@@ -358,7 +361,7 @@ export function SiteHeader() {
                         className={cn(
                           "typ-nav relative inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-2 text-[0.95rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-2.5 xl:text-[1rem]",
                           isActive
-                            ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-[color:var(--color-contrast-accent)] after:content-['']"
+                            ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-(--color-contrast-accent) after:content-['']"
                             : activeMega === link.label
                               ? "text-primary"
                               : "text-body hover:text-primary",
@@ -383,7 +386,7 @@ export function SiteHeader() {
                     className={cn(
                       "typ-nav relative whitespace-nowrap rounded-lg px-2 py-2 text-[0.95rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-2.5 xl:text-[1rem]",
                       isActive
-                        ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-[color:var(--color-contrast-accent)] after:content-['']"
+                        ? "text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-(--color-contrast-accent) after:content-['']"
                         : "text-body hover:text-primary",
                     )}
                   >
@@ -412,7 +415,7 @@ export function SiteHeader() {
                     className="w-44 bg-transparent text-sm text-strong outline-none placeholder:text-subtle"
                     aria-label="Search products with AI"
                   />
-                  <Sparkles className="h-4 w-4 text-[color:var(--color-contrast-accent)]" />
+                  <Sparkles className="h-4 w-4 text-(--color-contrast-accent)" />
                   <button type="submit" className="sr-only">
                     Submit header search
                   </button>
@@ -523,7 +526,7 @@ export function SiteHeader() {
               transition={{ duration: 0.15 }}
               onMouseEnter={() => setActiveMega("Products")}
               onMouseLeave={() => setActiveMega(null)}
-              className="hidden lg:block border-t border-soft [background:var(--surface-panel-strong)] backdrop-blur-md [box-shadow:var(--shadow-soft)]"
+              className="hidden lg:block border-t border-soft [background:var(--surface-panel-strong)] backdrop-blur-md shadow-theme-soft"
             >
               <div className="container-wide px-6 py-8">
                 <div className={cn("grid gap-5", megaMenuOthers.length > 0 ? "grid-cols-7" : "grid-cols-6")}>

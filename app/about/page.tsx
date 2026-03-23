@@ -32,7 +32,7 @@ export default function AboutPage() {
 
       <section className="container mx-auto px-6 py-16 2xl:px-0 md:py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div className="relative aspect-[16/11] overflow-hidden rounded-[2rem] border scheme-border shadow-[0_24px_60px_-42px_var(--overlay-inverse-18)]">
+          <div className="relative aspect-16/11 overflow-hidden rounded-4xl border scheme-border shadow-[0_24px_60px_-42px_var(--overlay-inverse-18)]">
             <Image
               src="/images/hero/hero-2.webp"
               alt="Workspace delivery by One&Only"
@@ -162,7 +162,7 @@ export default function AboutPage() {
 
       <section className="container mx-auto px-6 pb-16 2xl:px-0 md:pb-24">
         <div className="relative overflow-hidden rounded-[2.5rem] scheme-panel-dark p-8 md:p-14">
-          <div className="absolute inset-y-0 right-0 w-1/2 bg-[color:var(--overlay-panel-12)]" />
+          <div className="absolute inset-y-0 right-0 w-1/2 bg-(--overlay-panel-12)" />
           <div className="relative z-10 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="max-w-2xl">
               <h2 className="typ-section scheme-text-inverse text-balance">

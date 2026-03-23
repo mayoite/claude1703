@@ -21,7 +21,7 @@ export default function SupportPage() {
           <p className="page-copy scheme-text-body mt-5">{SUPPORT_IVR_PAGE_COPY.introDescription}</p>
         </div>
 
-        <div className="scheme-panel scheme-border rounded-[2rem] border p-6 md:p-8">
+        <div className="scheme-panel scheme-border rounded-4xl border p-6 md:p-8">
           <VisualIVR />
         </div>
 
