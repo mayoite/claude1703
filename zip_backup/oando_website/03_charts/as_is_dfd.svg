@@ -65,7 +65,7 @@
 <title>ext_paths</title>
 <path fill="#fff5f5" stroke="#2d3748" d="M103.75,-121C103.75,-121 12,-121 12,-121 6,-121 0,-115 0,-109 0,-109 0,-97 0,-97 0,-91 6,-85 12,-85 12,-85 103.75,-85 103.75,-85 109.75,-85 115.75,-91 115.75,-97 115.75,-97 115.75,-109 115.75,-109 115.75,-115 109.75,-121 103.75,-121"/>
 <text xml:space="preserve" text-anchor="middle" x="57.88" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">E3 legacy image paths</text>
-<text xml:space="preserve" text-anchor="middle" x="57.88" y="-93.5" font-family="Helvetica,sans-Serif" font-size="10.00">(normalized into /images/catalog/*)</text>
+<text xml:space="preserve" text-anchor="middle" x="57.88" y="-93.5" font-family="Helvetica,sans-Serif" font-size="10.00">(/images/afc/*)</text>
 </g>
 <!-- ext_paths&#45;&gt;proc_map -->
 <g id="edge3" class="edge">
