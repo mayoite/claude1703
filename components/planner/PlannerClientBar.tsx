@@ -133,7 +133,7 @@ export function PlannerClientBar({
           <h3 className="text-2xl font-semibold tracking-tight text-[var(--text-inverse)]">
             Bill of Quantities
           </h3>
-          <p className="max-w-2xl mt-3 text-[15px] leading-7 font-medium text-[var(--text-inverse-muted)]">
+          <p className="mt-3 max-w-2xl text-[15px] leading-7 font-medium text-[var(--text-inverse-muted)]">
             Manage project identifiers and review the generated technical
             specifications for the floor plan.
           </p>
@@ -190,7 +190,7 @@ export function PlannerClientBar({
             <p className="text-[12px] font-semibold tracking-[0.04em] text-[var(--text-inverse-subtle)]">
               CURRENT STATUS
             </p>
-            <p className="mt-2 text-[14px] font-medium leading-6 text-[var(--text-inverse-muted)]">
+            <p className="mt-2 text-[14px] leading-6 font-medium text-[var(--text-inverse-muted)]">
               {boqRows.length > 0
                 ? "Layout preview and quantity list are in sync."
                 : "Place products to populate the overview and quantity list."}
@@ -258,9 +258,9 @@ export function PlannerClientBar({
 
         {boqRows.length > 0 ? (
           <div className="grid gap-4 pb-12 sm:grid-cols-2 lg:grid-cols-4">
-            {boqRows.map((row) => (
+            {boqRows.map((row, index) => (
               <div
-                key={row.catalogId}
+                key={`${row.catalogId || row.name}-${index}`}
                 className="group flex flex-col rounded-2xl border border-inverse bg-[var(--overlay-panel-08)] p-5 transition hover:border-[var(--border-contrast-accent)]"
               >
                 <div className="mb-3 flex items-start justify-between gap-4">

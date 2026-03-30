@@ -12,7 +12,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { useHotkeys } from "react-hotkeys-hook";
 import { LayoutGrid } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -125,20 +124,6 @@ export function BlueprintPlanner() {
   const resetDocument = usePlannerStore((state) => state.resetDocument);
   const commitDocument = usePlannerStore((state) => state.commitDocument);
 
-  useHotkeys("ctrl+z", (e) => {
-    e.preventDefault();
-    handleUndo();
-  });
-
-  useHotkeys("ctrl+y, ctrl+shift+z", (e) => {
-    e.preventDefault();
-    handleRedo();
-  });
-
-  useHotkeys("delete, backspace", () => {
-    handleDeleteItem();
-  });
-
   useEffect(() => {
     if (sessionTrackedRef.current) return;
     if (typeof window === "undefined") return;
@@ -156,6 +141,37 @@ export function BlueprintPlanner() {
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
+      const isModifierPressed = event.ctrlKey || event.metaKey;
+
+      if (isModifierPressed && event.key.toLowerCase() === "z" && !event.shiftKey) {
+        event.preventDefault();
+        handleUndo();
+        return;
+      }
+
+      if (
+        isModifierPressed &&
+        (event.key.toLowerCase() === "y" ||
+          (event.key.toLowerCase() === "z" && event.shiftKey))
+      ) {
+        event.preventDefault();
+        handleRedo();
+        return;
+      }
+
+      if (event.key === "Delete" || event.key === "Backspace") {
+        const target = event.target as HTMLElement | null;
+        const isTextField =
+          target instanceof HTMLInputElement ||
+          target instanceof HTMLTextAreaElement ||
+          target?.isContentEditable === true;
+
+        if (!isTextField) {
+          handleDeleteItem();
+        }
+        return;
+      }
+
       if (event.key !== "Escape") {
         return;
       }
@@ -168,7 +184,7 @@ export function BlueprintPlanner() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [setActiveTool, setStatus]);
+  }, [handleDeleteItem, handleRedo, handleUndo, setActiveTool, setStatus]);
 
   useEffect(() => {
     let cancelled = false;
@@ -859,7 +875,7 @@ export function BlueprintPlanner() {
                   </Button>
                   <button
                     type="button"
-                    className="flex flex-1 items-center justify-center rounded-full border border-inverse bg-[var(--overlay-panel-08)] px-1 text-[10px] font-semibold tracking-[0.18em] text-[var(--text-inverse-subtle)] transition-colors hover:bg-[var(--overlay-panel-10)] hover:text-[var(--text-inverse)] [writing-mode:vertical-rl]"
+                    className="flex flex-1 items-center justify-center rounded-full border border-inverse bg-[var(--overlay-panel-08)] px-1 text-[10px] font-semibold tracking-[0.18em] text-[var(--text-inverse-subtle)] transition-colors [writing-mode:vertical-rl] hover:bg-[var(--overlay-panel-10)] hover:text-[var(--text-inverse)]"
                     onFocus={() => setIsSidebarPeeked(true)}
                     onMouseEnter={() => setIsSidebarPeeked(true)}
                   >
@@ -918,11 +934,11 @@ export function BlueprintPlanner() {
             >
               <div className="planner-surface mb-0 rounded-none border-x-0 border-t-0 px-4 py-4 text-[var(--text-inverse)] sm:px-6 lg:px-8">
                 <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-                  <div>
-                    <h2 className="font-display text-[clamp(1.9rem,3vw,2.7rem)] font-[350] leading-[1] tracking-[-0.04em] text-[var(--text-inverse)]">
-                      {projectName || "Workspace proposal"}
-                    </h2>
-                    <p className="mt-2 text-[0.98rem] leading-6 text-[var(--text-inverse-body)]">
+                  <div className="space-y-2">
+                    <p className="text-[11px] font-semibold tracking-[0.16em] text-[var(--text-inverse-subtle)]">
+                      LIVE PROJECT CANVAS
+                    </p>
+                    <p className="text-[0.98rem] leading-6 text-[var(--text-inverse-body)]">
                       {selectedItem
                         ? `Current staged product: ${selectedItem.name}`
                         : "Choose a product from the catalog, then place and refine the layout."}
@@ -1059,7 +1075,8 @@ export function BlueprintPlanner() {
               <AnimatePresence initial={false}>
                 {isInspectorOpen ? (
                   <motion.div
-                    className="pb-3 pt-4"
+                    key="planner-inspector"
+                    className="pt-4 pb-3"
                     initial={reduceMotion ? false : { opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={reduceMotion ? undefined : { opacity: 0, y: 12 }}
@@ -1077,6 +1094,7 @@ export function BlueprintPlanner() {
 
                 {isClientBarOpen ? (
                   <motion.div
+                    key="planner-client-bar"
                     className="pb-3"
                     initial={reduceMotion ? false : { opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

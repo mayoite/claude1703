@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function PlannerPage() {
   return (
-    <div className="planner-shell relative z-10 h-full isolate pointer-events-auto">
+    <div className="planner-shell pointer-events-auto relative isolate z-10 h-full">
       <PlannerErrorBoundary>
         <BlueprintPlanner />
       </PlannerErrorBoundary>

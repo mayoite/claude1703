@@ -16,16 +16,25 @@ export function usePlannerUI() {
   const [isClientBarOpen, setIsClientBarOpen] = useState(true);
 
   useEffect(() => {
-    if (isDesktopViewport()) {
-      setIsSidebarOpen(true);
-      setIsInspectorOpen(true);
-      setIsClientBarOpen(true);
-      return;
+    function syncPanelsToViewport() {
+      if (isDesktopViewport()) {
+        setIsSidebarOpen(true);
+        setIsInspectorOpen(true);
+        setIsClientBarOpen(true);
+        return;
+      }
+
+      setIsSidebarOpen(false);
+      setIsInspectorOpen(false);
+      setIsClientBarOpen(false);
     }
 
-    setIsSidebarOpen(false);
-    setIsInspectorOpen(false);
-    setIsClientBarOpen(false);
+    syncPanelsToViewport();
+    window.addEventListener("resize", syncPanelsToViewport);
+
+    return () => {
+      window.removeEventListener("resize", syncPanelsToViewport);
+    };
   }, []);
 
   const toggleSidebar = useCallback(() => {

@@ -77,12 +77,12 @@ export function PlannerToolbar({
 
   return (
     <div className="z-20 flex w-full flex-wrap items-center gap-x-3 gap-y-3 border-b border-[var(--planner-toolbar-border)] bg-transparent px-4 py-4 lg:px-6">
-      <div className="flex items-center gap-2 p-1 bg-[var(--planner-toolbar-surface)] rounded-[14px] border border-[var(--planner-toolbar-border)]">
+      <div className="flex items-center gap-2 rounded-[14px] border border-[var(--planner-toolbar-border)] bg-[var(--planner-toolbar-surface)] p-1">
         <Button
           size="sm"
           variant="ghost"
           className={cn(
-            "h-9 gap-2 px-4 rounded-[10px] text-[12px] font-semibold tracking-[0.02em] transition-all",
+            "h-9 gap-2 rounded-[10px] px-4 text-[12px] font-semibold tracking-[0.02em] transition-all",
             activeTool === "draw"
               ? "bg-[var(--planner-accent)] text-black hover:bg-[var(--planner-accent-hover)]"
               : "text-[var(--text-inverse-muted)] hover:bg-white/8 hover:text-white",
@@ -98,7 +98,7 @@ export function PlannerToolbar({
           size="sm"
           variant="ghost"
           className={cn(
-            "h-9 gap-2 px-4 rounded-[10px] text-[12px] font-semibold tracking-[0.02em] transition-all",
+            "h-9 gap-2 rounded-[10px] px-4 text-[12px] font-semibold tracking-[0.02em] transition-all",
             activeTool === "move"
               ? "border border-white/14 bg-white/10 text-white hover:bg-white/12"
               : "text-[var(--text-inverse-muted)] hover:bg-white/8 hover:text-white",
@@ -114,7 +114,7 @@ export function PlannerToolbar({
           size="sm"
           variant="ghost"
           className={cn(
-            "h-9 gap-2 px-4 rounded-[10px] text-[12px] font-semibold tracking-[0.02em] transition-all",
+            "h-9 gap-2 rounded-[10px] px-4 text-[12px] font-semibold tracking-[0.02em] transition-all",
             "text-[var(--text-inverse-muted)] hover:bg-white/8 hover:text-white",
           )}
           onClick={onPrepareWallEditing}
@@ -161,7 +161,7 @@ export function PlannerToolbar({
           size="sm"
           variant="ghost"
           className={cn(
-            "h-9 w-9 rounded-[10px] p-0 hover:bg-hover transition-colors",
+            "h-9 w-9 rounded-[10px] p-0 transition-colors hover:bg-hover",
             showGrid ? "text-[var(--planner-accent)]" : "text-[var(--text-inverse-muted)]",
           )}
           onClick={onToggleGrid}
@@ -198,10 +198,10 @@ export function PlannerToolbar({
         <div className="flex flex-wrap items-center gap-3">
           {selectionLabel && selectionLabel !== "No selection" ? (
             <div className="flex items-center gap-2 rounded-full border border-[var(--planner-accent-soft-border)] bg-[var(--planner-accent-soft-bg)] px-4 py-2">
-              <span className="text-[11px] font-semibold tracking-[0.05em] text-[var(--planner-accent)]">
-                Selected:
+              <span className="text-[10px] font-semibold tracking-[0.16em] text-[var(--planner-accent)]">
+                SELECTED
               </span>
-              <span className="text-[11px] font-semibold text-white">
+              <span className="text-[11px] font-semibold tracking-[0.02em] text-white">
                 {selectionLabel}
               </span>
             </div>
@@ -248,14 +248,14 @@ export function PlannerToolbar({
               </Button>
               <Sep />
               <div className="px-2 py-1 text-right">
-                <div className="text-[10px] font-semibold tracking-[0.03em] text-[var(--text-inverse-subtle)]">
+                <div className="text-[10px] font-semibold tracking-[0.14em] text-[var(--text-inverse-subtle)]">
                   Position
                 </div>
                 <div className="text-[10px] font-bold text-[var(--text-inverse-muted)]">
                   {itemPosition ? `${roundedX} x ${roundedZ}` : "-"}
                 </div>
-                <div className="text-[10px] font-semibold tracking-[0.03em] text-[var(--planner-selection)]">
-                  Rotation: {itemRotation ?? 0} deg
+                <div className="text-[10px] font-semibold tracking-[0.08em] text-[var(--planner-selection)]">
+                  Rotation {itemRotation ?? 0} deg
                 </div>
               </div>
             </div>
