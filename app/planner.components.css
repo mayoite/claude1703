@@ -5,59 +5,32 @@
   background: var(--planner-shell-bg);
 }
 
-.planner-shell::before,
-.planner-shell::after {
-  content: "";
-  position: absolute;
-  inset: auto;
-  border-radius: 9999px;
-  filter: blur(70px);
-  opacity: 0.48;
-  pointer-events: none;
-}
-
-.planner-shell::before {
-  top: -8rem;
-  left: -5rem;
-  width: 18rem;
-  height: 18rem;
-  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
-}
-
-.planner-shell::after {
-  top: 6rem;
-  right: -4rem;
-  width: 16rem;
-  height: 16rem;
-  background: color-mix(in srgb, var(--color-accent2) 16%, transparent);
-}
-
 .planner-shell-card {
   border: 1px solid var(--planner-shell-border);
-  background: color-mix(in srgb, rgba(7, 12, 18, 0.84) 82%, transparent);
+  background: var(--planner-panel-strong);
   box-shadow:
     var(--planner-shell-glow),
     var(--planner-shell-shadow);
-  backdrop-filter: blur(24px);
+  backdrop-filter: none;
 }
 
 .planner-surface {
   border: 1px solid var(--planner-panel-border);
   background: var(--planner-panel-bg);
   box-shadow: var(--planner-panel-shadow);
-  backdrop-filter: blur(18px);
+  backdrop-filter: none;
 }
 
 .planner-shell-chip {
-  border: 1px solid color-mix(in srgb, white 10%, transparent);
-  background: color-mix(in srgb, white 7%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--planner-shell-muted);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .planner-rail-section {
   border: 1px solid color-mix(in srgb, white 8%, transparent);
-  background: color-mix(in srgb, white 4%, transparent);
+  background: rgba(255, 255, 255, 0.03);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
@@ -75,9 +48,7 @@
 }
 
 .planner-stage-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.12)),
-    var(--planner-stage-grid);
+  background: var(--planner-stage-grid);
 }
 
 .planner-utility-panel {

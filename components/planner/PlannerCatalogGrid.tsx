@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import {
   Bookmark,
-  ChevronDown,
   FolderOpen,
   LayoutPanelLeft,
   Loader2,
@@ -19,6 +18,7 @@ import { PlannerCatalogImage } from "./PlannerCatalogImage";
 import type { PlannerCatalogItem } from "./types";
 
 type RailSection = "library" | "collections" | "recent" | "saved";
+type SupportFilter = "all" | "docs" | "specs" | "core";
 
 interface PlannerCatalogGridProps {
   className?: string;
@@ -90,14 +90,32 @@ export function PlannerCatalogGrid({
   onCollapse,
 }: PlannerCatalogGridProps) {
   const [activeSection, setActiveSection] = useState<RailSection>("library");
+  const [supportFilter, setSupportFilter] = useState<SupportFilter>("all");
   const catalogCount = catalogSummary.phaseOneItemCount || catalogSummary.itemCount || 0;
+  const filteredCatalog = useMemo(
+    () =>
+      visibleCatalog.filter((item) => {
+        const badge = getSupportBadge(item);
+        if (supportFilter === "docs") {
+          return badge === "Docs ready";
+        }
+        if (supportFilter === "specs") {
+          return badge === "Specs ready";
+        }
+        if (supportFilter === "core") {
+          return badge === "Core data";
+        }
+        return true;
+      }),
+    [supportFilter, visibleCatalog],
+  );
   const featuredCollections = useMemo(
     () =>
       categories.slice(0, 6).map((category, index) => {
         const featuredItem =
-          visibleCatalog.find(
+          filteredCatalog.find(
             (item) => (item.categoryLabel ?? item.category) === category,
-          ) ?? visibleCatalog[index] ?? null;
+          ) ?? filteredCatalog[index] ?? visibleCatalog[index] ?? null;
 
         return {
           category,
@@ -105,7 +123,7 @@ export function PlannerCatalogGrid({
           tone: index % 2 === 0 ? "from-white/10 to-white/4" : "from-[var(--planner-accent-soft-bg)] to-white/4",
         };
       }),
-    [categories, visibleCatalog],
+    [categories, filteredCatalog, visibleCatalog],
   );
   const railTitle =
     activeSection === "library"
@@ -128,13 +146,12 @@ export function PlannerCatalogGrid({
   const navItems: Array<{
     id: RailSection;
     label: string;
-    shortLabel: string;
     icon: typeof LayoutPanelLeft;
   }> = [
-    { id: "library", label: "Library", shortLabel: "LIB", icon: LayoutPanelLeft },
-    { id: "collections", label: "Collections", shortLabel: "SET", icon: Sparkles },
-    { id: "recent", label: "Recent", shortLabel: "REC", icon: FolderOpen },
-    { id: "saved", label: "Saved", shortLabel: "PIN", icon: Bookmark },
+    { id: "library", label: "Library", icon: LayoutPanelLeft },
+    { id: "collections", label: "Sets", icon: Sparkles },
+    { id: "recent", label: "Recent", icon: FolderOpen },
+    { id: "saved", label: "Saved", icon: Bookmark },
   ];
 
   return (
@@ -144,8 +161,8 @@ export function PlannerCatalogGrid({
         className,
       )}
     >
-      <div className="grid min-h-0 w-full grid-cols-[72px_minmax(0,1fr)]">
-        <div className="flex min-h-0 flex-col items-center gap-3 border-r border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] px-3 py-5">
+      <div className="grid min-h-0 w-full grid-cols-[64px_minmax(0,1fr)]">
+        <div className="flex min-h-0 flex-col items-center gap-2 border-r border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] px-2 py-3">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeSection === item.id;
@@ -156,15 +173,16 @@ export function PlannerCatalogGrid({
                 type="button"
                 onClick={() => setActiveSection(item.id)}
                 className={cn(
-                  "flex w-full flex-col items-center gap-2 rounded-[18px] border px-2 py-3 text-center transition-all",
+                  "flex w-full flex-col items-center gap-1 rounded-[14px] border px-1.5 py-2 text-center transition-all",
                   isActive
                     ? "border-[var(--planner-accent-soft-border)] bg-[var(--planner-accent-soft-bg)] text-white shadow-[var(--planner-shadow-accent)]"
                     : "border-white/8 bg-white/5 text-[var(--planner-shell-muted)] hover:border-white/14 hover:bg-white/8 hover:text-white",
                 )}
+                title={item.label}
               >
                 <Icon className="h-4 w-4" />
-                <span className="text-[10px] font-semibold tracking-[0.18em]">
-                  {item.shortLabel}
+                <span className="text-[8px] font-semibold tracking-[0.04em]">
+                  {item.label}
                 </span>
               </button>
             );
@@ -172,15 +190,15 @@ export function PlannerCatalogGrid({
         </div>
 
         <div className="flex min-h-0 flex-col">
-          <div className="shrink-0 space-y-4 border-b border-white/10 px-5 py-5 text-[var(--planner-shell-text)]">
+          <div className="shrink-0 space-y-2.5 border-b border-white/10 px-3.5 py-3 text-[var(--planner-shell-text)]">
             <div className="flex items-start justify-between gap-3">
               <div className="space-y-2">
                 <p className="text-[11px] font-semibold tracking-[0.24em] text-[var(--planner-shell-muted)] uppercase">
                   {railTitle}
                 </p>
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex flex-wrap items-center gap-1">
                   <span className="planner-shell-chip rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-[0.04em]">
-                    {displayedCount} visible
+                    {filteredCatalog.length} visible
                   </span>
                   <span className="planner-shell-chip rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-[0.04em]">
                     {catalogCount} curated
@@ -191,7 +209,7 @@ export function PlannerCatalogGrid({
                     </span>
                   ) : null}
                 </div>
-                <p className="max-w-sm text-[13px] leading-5 text-[var(--planner-shell-muted)]">
+                <p className="max-w-sm text-[11px] leading-4.5 text-[var(--planner-shell-muted)]">
                   {railIntro}
                 </p>
               </div>
@@ -210,7 +228,7 @@ export function PlannerCatalogGrid({
 
             {activeSection === "library" ? (
               <>
-                <div className="planner-rail-section transition-focus-within flex items-center gap-2 rounded-2xl px-3 py-3 focus-within:border-white/30">
+                <div className="planner-rail-section transition-focus-within flex items-center gap-2 rounded-xl px-3 py-2 focus-within:border-white/30">
                   <Search className="h-3.5 w-3.5 shrink-0 text-[var(--planner-shell-muted)]" />
                   <input
                     type="text"
@@ -221,39 +239,72 @@ export function PlannerCatalogGrid({
                   />
                 </div>
 
-                <div className="group relative">
-                  <label htmlFor="catalog-category-select" className="sr-only">
-                    Filter by category
-                  </label>
-                  <select
-                    id="catalog-category-select"
-                    value={activeCategory}
-                    onChange={(event) => onCategoryChange(event.target.value)}
-                    className="planner-rail-section w-full appearance-none rounded-2xl py-3 pr-8 pl-3 text-[13px] font-medium tracking-[0.02em] text-white transition-colors outline-none hover:bg-white/10"
+                <div className="flex gap-1.5 overflow-x-auto pb-0.5">
+                  <button
+                    type="button"
+                    onClick={() => onCategoryChange("")}
+                    className={cn(
+                      "rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-[0.03em] whitespace-nowrap transition-all",
+                      activeCategory.length === 0
+                        ? "border-[var(--planner-accent-soft-border)] bg-[var(--planner-accent-soft-bg)] text-white"
+                        : "border-white/10 bg-white/5 text-[var(--planner-shell-muted)] hover:border-white/16 hover:text-white",
+                    )}
                   >
-                    <option value="">ALL CATEGORIES</option>
-                    {categories.map((category) => (
-                      <option key={category} value={category}>
-                        {category}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-[var(--planner-shell-muted)] transition-colors group-hover:text-white" />
+                    All
+                  </button>
+                  {categories.slice(0, 8).map((category) => (
+                    <button
+                      key={category}
+                      type="button"
+                      onClick={() => onCategoryChange(category)}
+                      className={cn(
+                        "rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-[0.03em] whitespace-nowrap transition-all",
+                        activeCategory === category
+                          ? "border-[var(--planner-accent-soft-border)] bg-[var(--planner-accent-soft-bg)] text-white"
+                          : "border-white/10 bg-white/5 text-[var(--planner-shell-muted)] hover:border-white/16 hover:text-white",
+                      )}
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="flex gap-1.5 overflow-x-auto pb-0.5">
+                  {[
+                    { id: "all" as const, label: "All data" },
+                    { id: "docs" as const, label: "Docs ready" },
+                    { id: "specs" as const, label: "Specs ready" },
+                    { id: "core" as const, label: "Core data" },
+                  ].map((option) => (
+                    <button
+                      key={option.id}
+                      type="button"
+                      onClick={() => setSupportFilter(option.id)}
+                      className={cn(
+                        "rounded-full border px-2.5 py-1 text-[9px] font-semibold tracking-[0.06em] whitespace-nowrap transition-all",
+                        supportFilter === option.id
+                          ? "border-[var(--planner-accent-soft-border)] bg-white/12 text-white"
+                          : "border-white/8 bg-black/10 text-[var(--planner-shell-muted)] hover:border-white/14 hover:text-white",
+                      )}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
                 </div>
               </>
             ) : null}
           </div>
 
-          <div className="shrink-0 border-b border-white/10 bg-white/5 p-4">
+          <div className="shrink-0 border-b border-white/10 bg-white/5 p-3">
             {activeSection === "library" ? (
               <>
-                <p className="mb-3 text-[11px] font-semibold tracking-[0.16em] text-[var(--planner-shell-muted)] uppercase">
+                <p className="mb-2 text-[10px] font-semibold tracking-[0.14em] text-[var(--planner-shell-muted)] uppercase">
                   {selectedItem ? "Staged product" : "Select a product"}
                 </p>
                 {selectedItem ? (
-                  <div className="planner-rail-section rounded-[24px] p-3 text-[var(--planner-shell-text)]">
+                  <div className="planner-rail-section rounded-[20px] p-2.5 text-[var(--planner-shell-text)]">
                     <div className="flex items-start gap-3">
-                      <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-[20px] border border-white/10 bg-white shadow-theme-soft">
+                      <div className="relative h-14 w-18 shrink-0 overflow-hidden rounded-[16px] border border-white/10 bg-white shadow-theme-soft">
                         <PlannerCatalogImage
                           item={selectedItem}
                           alt={selectedItem.name}
@@ -263,25 +314,25 @@ export function PlannerCatalogGrid({
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="truncate text-[1rem] font-semibold tracking-[0.01em] text-white">
+                          <h3 className="truncate text-[13px] font-semibold tracking-[0.01em] text-white">
                             {selectedItem.name}
                           </h3>
                           <span className="rounded-full border border-white/10 bg-white/8 px-2 py-0.5 text-[10px] font-semibold tracking-[0.03em] text-[var(--planner-shell-muted)]">
                             {getSupportBadge(selectedItem)}
                           </span>
                         </div>
-                        <p className="mt-1 truncate text-[12px] font-medium tracking-[0.03em] text-[var(--planner-shell-muted)]">
+                        <p className="mt-0.5 truncate text-[11px] font-medium tracking-[0.03em] text-[var(--planner-shell-muted)]">
                           {selectedItem.family || selectedItem.categoryLabel || selectedItem.category}
                         </p>
-                        <p className="truncate text-[12px] font-medium tracking-[0.02em] text-[var(--planner-shell-muted)]">
+                        <p className="truncate text-[11px] font-medium tracking-[0.02em] text-[var(--planner-shell-muted)]">
                           {selectedItem.subcategoryLabel ?? selectedItem.categoryLabel ?? selectedItem.category}
                         </p>
-                        <p className="mt-2 text-[12px] font-semibold tracking-[0.02em] text-white/90">
+                        <p className="mt-1 text-[11px] font-semibold tracking-[0.02em] text-white/90">
                           {getDimensionLabel(selectedItem)}
                         </p>
                       </div>
                     </div>
-                    <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-semibold tracking-[0.03em] text-[var(--planner-shell-muted)]">
+                    <div className="mt-2 flex flex-wrap gap-1.5 text-[10px] font-semibold tracking-[0.03em] text-[var(--planner-shell-muted)]">
                       {selectedItem.materials?.[0] ? (
                         <span className="rounded-full border border-white/10 bg-white/8 px-2.5 py-1">
                           {selectedItem.materials[0]}
@@ -295,7 +346,7 @@ export function PlannerCatalogGrid({
                     </div>
                     <Button
                       size="sm"
-                      className="mt-3 h-10 w-full rounded-2xl bg-[var(--planner-accent)] px-3 text-[12px] font-semibold tracking-[0.02em] text-[var(--planner-accent-contrast)] shadow-[var(--planner-shadow-accent)] hover:bg-[var(--planner-accent-hover)]"
+                      className="mt-2.5 h-9 w-full rounded-xl bg-[var(--planner-accent)] px-3 text-[11px] font-semibold tracking-[0.02em] text-[var(--planner-accent-contrast)] shadow-[var(--planner-shadow-accent)] hover:bg-[var(--planner-accent-hover)]"
                       onClick={() => onAddCatalogItem(selectedItem)}
                     >
                       Add item to canvas
@@ -417,7 +468,7 @@ export function PlannerCatalogGrid({
               </div>
             ) : null}
 
-            {!catalogLoading && !catalogError && visibleCatalog.length === 0 ? (
+            {!catalogLoading && !catalogError && filteredCatalog.length === 0 ? (
               <div className="flex flex-col items-center justify-center p-12 text-[var(--planner-shell-muted)]">
                 <Search className="mb-4 h-12 w-12" />
                 <p className="text-center text-[12px] font-semibold tracking-[0.04em]">
@@ -430,8 +481,8 @@ export function PlannerCatalogGrid({
             ) : null}
 
             {!catalogLoading && !catalogError ? (
-              <div className="grid grid-cols-1 gap-3 px-4 pt-4 pb-12">
-                {visibleCatalog.map((item) => {
+              <div className="grid grid-cols-1 gap-2.5 px-3.5 pt-3.5 pb-10">
+                {filteredCatalog.map((item) => {
                   const isSelected = item.id === selectedItem?.id;
 
                   return (
@@ -440,7 +491,7 @@ export function PlannerCatalogGrid({
                       type="button"
                       onClick={() => onSelectItem(item.id)}
                       className={cn(
-                        "group flex w-full items-start gap-4 rounded-[24px] border px-4 py-4 text-left transition-all",
+                        "group flex w-full items-center gap-3 rounded-[18px] border px-3 py-3 text-left transition-all",
                         isSelected
                           ? "border-[var(--planner-accent-soft-border)] bg-[var(--planner-accent-soft-bg)] shadow-[var(--planner-shadow-accent)]"
                           : "border-white/8 bg-white/6 hover:border-white/16 hover:bg-white/10",
@@ -448,7 +499,7 @@ export function PlannerCatalogGrid({
                     >
                       <div
                         className={cn(
-                          "relative h-16 w-20 shrink-0 overflow-hidden rounded-[18px] border transition-colors",
+                          "relative h-14 w-16 shrink-0 overflow-hidden rounded-[14px] border transition-colors",
                           isSelected
                             ? "border-white/40 bg-white"
                             : "border-white/10 bg-white group-hover:border-white/25",
@@ -478,9 +529,6 @@ export function PlannerCatalogGrid({
                         <p className="truncate text-[12px] font-medium tracking-[0.02em] text-[var(--planner-shell-muted)]">
                           {item.family || item.categoryLabel || "General"}
                         </p>
-                        <p className="truncate text-[12px] font-medium tracking-[0.02em] text-[var(--planner-shell-muted)]">
-                          {item.subcategoryLabel ?? item.categoryLabel ?? item.category ?? "General"}
-                        </p>
                         <p
                           className={cn(
                             "truncate text-[12px] font-medium tracking-[0.01em] transition-colors",
@@ -498,7 +546,7 @@ export function PlannerCatalogGrid({
               </div>
             ) : null}
 
-            {canShowMore && !catalogLoading && !catalogError ? (
+            {canShowMore && supportFilter === "all" && !catalogLoading && !catalogError ? (
               <div className="px-4 pb-12">
                 <Button
                   variant="outline"

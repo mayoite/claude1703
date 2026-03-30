@@ -1,62 +1,43 @@
 @theme {
-  --planner-shell-bg: radial-gradient(
-      circle at top left,
-      color-mix(in srgb, var(--color-accent) 22%, transparent) 0%,
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at top right,
-      color-mix(in srgb, var(--color-accent2) 18%, transparent) 0%,
-      transparent 30%
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--surface-inverse) 92%, #030712) 0%,
-      color-mix(in srgb, var(--surface-inverse) 86%, #07111f) 52%,
-      color-mix(in srgb, var(--surface-panel) 84%, #eef3f8) 100%
-    );
-  --planner-shell-border: color-mix(in srgb, var(--border-inverse) 62%, transparent);
-  --planner-shell-shadow: 0 28px 90px rgba(5, 10, 18, 0.34);
+  --planner-shell-bg: var(--surface-inverse);
+  --planner-shell-border: rgba(255, 255, 255, 0.08);
+  --planner-shell-shadow: 0 20px 60px rgba(1, 5, 10, 0.28);
   --planner-shell-glow: 0 1px 0 rgba(255, 255, 255, 0.06) inset;
-  --planner-shell-display: color-mix(in srgb, white 94%, var(--color-accent) 6%);
-  --planner-shell-text: #eef5fb;
-  --planner-shell-muted: color-mix(in srgb, #eef5fb 62%, #8ea5bb);
-  --planner-shell-copy: #dbe5ef;
-  --planner-shell-rail: color-mix(in srgb, rgba(8, 15, 24, 0.94) 90%, transparent);
-  --planner-shell-stat: color-mix(in srgb, rgba(255, 255, 255, 0.08) 82%, transparent);
+  --planner-shell-display: var(--text-inverse);
+  --planner-shell-text: var(--text-inverse);
+  --planner-shell-muted: var(--text-inverse-subtle);
+  --planner-shell-copy: var(--text-inverse-body);
+  --planner-shell-rail: var(--surface-inverse-soft);
+  --planner-shell-stat: rgba(255, 255, 255, 0.04);
 
-  --planner-stage-bg: linear-gradient(
+  --planner-stage-bg: var(--surface-inverse-soft);
+  --planner-stage-grid: linear-gradient(
     180deg,
-    rgba(15, 24, 36, 0.96) 0%,
-    rgba(10, 18, 28, 0.98) 100%
-  );
-  --planner-stage-grid: radial-gradient(
-    circle at top,
-    rgba(36, 54, 76, 0.9),
-    rgba(15, 23, 34, 0.96)
+    color-mix(in srgb, var(--surface-inverse-soft) 92%, black) 0%,
+    color-mix(in srgb, var(--surface-inverse) 90%, black) 100%
   );
   --planner-stage-border: color-mix(in srgb, white 10%, transparent);
-  --planner-stage-shadow: 0 28px 70px rgba(3, 8, 15, 0.36);
-  --planner-stage-topline: color-mix(in srgb, var(--color-accent2) 18%, transparent);
+  --planner-stage-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  --planner-stage-topline: color-mix(in srgb, var(--color-accent) 16%, transparent);
 
-  --planner-panel-bg: color-mix(in srgb, rgba(10, 18, 28, 0.92) 88%, transparent);
-  --planner-panel-strong: color-mix(in srgb, var(--surface-inverse) 90%, rgba(9, 14, 22, 0.92));
+  --planner-panel-bg: var(--surface-inverse-soft);
+  --planner-panel-strong: var(--surface-inverse);
   --planner-panel-border: color-mix(in srgb, white 10%, transparent);
-  --planner-panel-shadow: 0 24px 54px rgba(4, 10, 18, 0.28);
-  --planner-utility-panel: color-mix(in srgb, rgba(14, 22, 32, 0.96) 92%, transparent);
+  --planner-panel-shadow: none;
+  --planner-utility-panel: var(--surface-inverse-soft);
 
   --planner-accent: color-mix(in srgb, var(--color-accent) 74%, white);
-  --planner-accent-hover: color-mix(in srgb, var(--color-accent-strong) 74%, white);
+  --planner-accent-hover: color-mix(in srgb, var(--color-accent) 84%, white);
   --planner-accent-contrast: #081018;
-  --planner-accent-soft-bg: color-mix(in srgb, var(--color-accent) 16%, rgba(10, 18, 28, 0.9));
-  --planner-accent-soft-border: color-mix(in srgb, var(--color-accent) 30%, rgba(255, 255, 255, 0.2));
-  --planner-shadow-accent: 0 16px 36px rgba(176, 138, 82, 0.24);
+  --planner-accent-soft-bg: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  --planner-accent-soft-border: color-mix(in srgb, var(--color-accent) 28%, transparent);
+  --planner-shadow-accent: 0 10px 24px rgba(151, 118, 72, 0.16);
   --planner-copy-strong: color-mix(in srgb, var(--text-heading) 94%, #081018);
 
-  --planner-toolbar-surface: color-mix(in srgb, rgba(13, 21, 31, 0.94) 92%, transparent);
-  --planner-toolbar-border: color-mix(in srgb, white 9%, transparent);
+  --planner-toolbar-surface: var(--surface-inverse-soft);
+  --planner-toolbar-border: rgba(255, 255, 255, 0.08);
 
-  --planner-status-bg: color-mix(in srgb, var(--surface-inverse) 88%, rgba(7, 12, 18, 0.84));
+  --planner-status-bg: color-mix(in srgb, var(--surface-inverse) 94%, transparent);
   --planner-status-text: var(--text-inverse);
 
   --planner-input-border: color-mix(in srgb, white 10%, transparent);
@@ -80,7 +61,7 @@
   --planner-placeholder-storage: var(--color-sustain-400);
   --planner-placeholder-default: var(--text-subtle);
 
-  --planner-selection: color-mix(in srgb, var(--color-accent2) 78%, white);
+  --planner-selection: color-mix(in srgb, var(--color-accent) 64%, white);
   --planner-selection-text: var(--text-inverse);
 
   --planner-room-fill-top: color-mix(in srgb, white 78%, var(--surface-accent-wash));

@@ -791,53 +791,9 @@ export function BlueprintPlanner() {
           {...panelMotionProps}
           transition={entranceTransition}
         >
-          <motion.section
-            className="planner-shell-card relative overflow-hidden rounded-none border-x-0 border-t-0 px-5 py-6 text-[var(--text-inverse)] sm:px-6 lg:px-10 lg:py-8"
-            {...panelMotionProps}
-            transition={entranceTransition}
-          >
-            <div className="relative z-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-end">
-              <div className="grid gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl border border-inverse bg-[var(--overlay-panel-08)] px-4 py-4 shadow-theme-soft">
-                  <p className="text-[11px] font-semibold tracking-[0.16em] text-[var(--text-inverse-subtle)]">
-                    CATALOG
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold text-[var(--text-inverse)]">
-                    {catalogSummary.itemCount || catalog.length}
-                  </p>
-                  <p className="mt-1 text-[12px] text-[var(--text-inverse-muted)]">
-                    products indexed
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-inverse bg-[var(--overlay-panel-08)] px-4 py-4 shadow-theme-soft">
-                  <p className="text-[11px] font-semibold tracking-[0.16em] text-[var(--text-inverse-subtle)]">
-                    PLACED
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold text-[var(--text-inverse)]">
-                    {plannerDocument.items.length}
-                  </p>
-                  <p className="mt-1 text-[12px] text-[var(--text-inverse-muted)]">
-                    items on canvas
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-inverse bg-[var(--overlay-panel-08)] px-4 py-4 shadow-theme-soft">
-                  <p className="text-[11px] font-semibold tracking-[0.16em] text-[var(--text-inverse-subtle)]">
-                    OUTPUT
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold text-[var(--planner-selection)]">
-                    {boqRows.length}
-                  </p>
-                  <p className="mt-1 text-[12px] text-[var(--text-inverse-muted)]">
-                    bill-of-quantity lines
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.section>
-
           <motion.div
             className={cn(
-              "planner-shell-card relative grid min-h-[calc(100vh-220px)] w-full gap-0 overflow-hidden rounded-none border-x-0 border-b-0 p-0 transition-all duration-500 ease-in-out",
+              "planner-shell-card relative grid min-h-[calc(100vh-160px)] w-full gap-0 overflow-hidden rounded-none border-x-0 border-b-0 p-0 transition-all duration-500 ease-in-out",
               sidebarVisible
                 ? "lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[420px_minmax(0,1fr)]"
                 : "lg:grid-cols-[44px_minmax(0,1fr)]",
@@ -863,7 +819,7 @@ export function BlueprintPlanner() {
               }}
             >
               {!sidebarVisible && (
-                <div className="flex h-full flex-col items-center gap-4 px-2 py-5">
+                <div className="flex h-full flex-col items-center gap-3 px-2 py-4">
                   <Button
                     variant="ghost"
                     size="sm"
@@ -932,99 +888,96 @@ export function BlueprintPlanner() {
               {...panelMotionProps}
               transition={entranceTransition}
             >
-              <div className="planner-surface mb-0 rounded-none border-x-0 border-t-0 px-4 py-4 text-[var(--text-inverse)] sm:px-6 lg:px-8">
-                <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-                  <div className="space-y-2">
-                    <p className="text-[11px] font-semibold tracking-[0.16em] text-[var(--text-inverse-subtle)]">
-                      LIVE PROJECT CANVAS
-                    </p>
-                    <p className="text-[0.98rem] leading-6 text-[var(--text-inverse-body)]">
-                      {selectedItem
-                        ? `Current staged product: ${selectedItem.name}`
-                        : "Choose a product from the catalog, then place and refine the layout."}
-                    </p>
+              <div className="planner-surface mb-0 rounded-none border-x-0 border-t-0 px-4 py-2.5 text-[var(--text-inverse)] sm:px-5 lg:px-6">
+                <div className="mb-1.5 flex flex-col gap-1.5 lg:flex-row lg:items-center lg:justify-between">
+                  <div className="text-[12px] font-medium text-[var(--text-inverse-body)]">
+                    {selectedItem
+                      ? `Staged: ${selectedItem.name}`
+                      : "Stage a product, place it, then refine the layout."}
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="rounded-full border border-inverse bg-[var(--overlay-panel-08)] px-3 py-1.5 text-[11px] font-semibold tracking-[0.12em] text-[var(--text-inverse-subtle)]">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="rounded-full border border-inverse bg-white/4 px-2.5 py-1 text-[10px] font-semibold tracking-[0.12em] text-[var(--text-inverse-subtle)]">
                       VIEW {currentView === "3d" ? "3D REVIEW" : "2D PLAN"}
                     </span>
-                    <span className="rounded-full border border-inverse bg-[var(--overlay-panel-08)] px-3 py-1.5 text-[11px] font-semibold tracking-[0.12em] text-[var(--text-inverse-subtle)]">
+                    <span className="rounded-full border border-inverse bg-white/4 px-2.5 py-1 text-[10px] font-semibold tracking-[0.12em] text-[var(--text-inverse-subtle)]">
                       TOOL {activeTool === "draw" ? "DRAW" : "MOVE"}
                     </span>
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="h-9 rounded-full border border-inverse bg-[var(--overlay-panel-08)] px-4 text-[11px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-[var(--overlay-panel-10)] hover:text-[var(--text-inverse)]"
+                      className="h-8 rounded-full border border-inverse bg-white/4 px-3 text-[10px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-white/8 hover:text-[var(--text-inverse)]"
                       onClick={toggleInspector}
                     >
-                      {isInspectorOpen ? "Hide inspector" : "Inspector"}
+                      {isInspectorOpen ? "Inspector off" : "Inspector"}
                     </Button>
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="h-9 rounded-full border border-inverse bg-[var(--overlay-panel-08)] px-4 text-[11px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-[var(--overlay-panel-10)] hover:text-[var(--text-inverse)]"
+                      className="h-8 rounded-full border border-inverse bg-white/4 px-3 text-[10px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-white/8 hover:text-[var(--text-inverse)]"
                       onClick={toggleClientBar}
                     >
-                      {isClientBarOpen ? "Hide details" : "Details"}
+                      {isClientBarOpen ? "Details off" : "Details"}
                     </Button>
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="h-9 rounded-full border border-inverse bg-[var(--overlay-panel-08)] px-4 text-[11px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-[var(--overlay-panel-10)] hover:text-[var(--text-inverse)]"
+                      className="h-8 rounded-full border border-inverse bg-white/4 px-3 text-[10px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-white/8 hover:text-[var(--text-inverse)]"
                       onClick={() => setIsAiPanelOpen((value) => !value)}
                     >
-                      {isAiPanelOpen ? "Hide advisor" : "AI advisor"}
+                      {isAiPanelOpen ? "Advisor off" : "Advisor"}
                     </Button>
                   </div>
                 </div>
 
-                <PlannerToolbar
-                  currentView={currentView}
-                  activeTool={activeTool}
-                  canUndo={canUndo}
-                  canRedo={canRedo}
-                  showGrid={showGrid}
-                  selectionLabel={sceneSelection?.title ?? "No selection"}
-                  selectedItemPosition={
-                    selectedPlacedItem
-                      ? {
-                          x: selectedPlacedItem.position.x,
-                          z: selectedPlacedItem.position.z,
-                        }
-                      : null
-                  }
-                  selectedItemRotationDeg={selectedPlacedItem?.rotationDeg ?? null}
-                  onUndo={handleUndo}
-                  onRedo={handleRedo}
-                  onSave={handleSave}
-                  onSwitchView={handleSwitchView}
-                  onDrawMode={() => {
-                    setActiveTool("draw");
-                    setStatus("Draw mode active");
-                  }}
-                  onMoveMode={() => {
-                    setActiveTool("move");
-                    setStatus("Move mode active");
-                  }}
-                  onToggleGrid={() => setShowGrid(!showGrid)}
-                  onExportPdf={handleExportCustomerPdf}
-                  onPrepareWallEditing={() => {
-                    handleCanvasSelectRoom();
-                    setStatus("Resize mode active");
-                  }}
-                  onRotateSelectedItem={handleRotateItem}
-                  onDuplicateSelectedItem={handleDuplicateItem}
-                  onDeleteSelectedItem={handleDeleteItem}
-                />
+                <div className="w-full">
+                  <PlannerToolbar
+                    currentView={currentView}
+                    activeTool={activeTool}
+                    canUndo={canUndo}
+                    canRedo={canRedo}
+                    showGrid={showGrid}
+                    selectionLabel={sceneSelection?.title ?? "No selection"}
+                    selectedItemPosition={
+                      selectedPlacedItem
+                        ? {
+                            x: selectedPlacedItem.position.x,
+                            z: selectedPlacedItem.position.z,
+                          }
+                        : null
+                    }
+                    selectedItemRotationDeg={selectedPlacedItem?.rotationDeg ?? null}
+                    onUndo={handleUndo}
+                    onRedo={handleRedo}
+                    onSave={handleSave}
+                    onSwitchView={handleSwitchView}
+                    onDrawMode={() => {
+                      setActiveTool("draw");
+                      setStatus("Draw mode active");
+                    }}
+                    onMoveMode={() => {
+                      setActiveTool("move");
+                      setStatus("Move mode active");
+                    }}
+                    onToggleGrid={() => setShowGrid(!showGrid)}
+                    onExportPdf={handleExportCustomerPdf}
+                    onPrepareWallEditing={() => {
+                      handleCanvasSelectRoom();
+                      setStatus("Resize mode active");
+                    }}
+                    onRotateSelectedItem={handleRotateItem}
+                    onDuplicateSelectedItem={handleDuplicateItem}
+                    onDeleteSelectedItem={handleDeleteItem}
+                  />
+                </div>
               </div>
 
-              <div className="planner-stage relative min-h-[420px] flex-1 overflow-hidden rounded-none p-0 sm:min-h-[520px]">
+              <div className="planner-stage relative min-h-[360px] flex-1 overflow-hidden rounded-none p-0 sm:min-h-[460px]">
                 <div className="planner-stage-grid relative h-full overflow-hidden rounded-none border-y border-[var(--planner-stage-border)]">
-                  <div className="pointer-events-none absolute inset-x-0 top-0 z-[1] flex items-center justify-between px-5 py-4">
-                    <div className="rounded-full border border-white/80 bg-white/75 px-3 py-1.5 text-[11px] font-semibold tracking-[0.14em] text-[var(--text-heading)] shadow-theme-soft backdrop-blur">
+                  <div className="pointer-events-none absolute inset-x-0 top-0 z-[1] flex items-center justify-between px-4 py-3">
+                    <div className="rounded-full border border-white/10 bg-[var(--surface-inverse)] px-2.5 py-1 text-[10px] font-semibold tracking-[0.14em] text-[var(--text-inverse-body)]">
                       {currentView === "3d" ? "SPATIAL REVIEW" : "TECHNICAL CANVAS"}
                     </div>
-                    <div className="hidden rounded-full border border-white/80 bg-white/75 px-3 py-1.5 text-[11px] font-medium text-[var(--text-muted)] shadow-theme-soft backdrop-blur sm:block">
+                    <div className="hidden rounded-full border border-white/10 bg-[var(--surface-inverse)] px-2.5 py-1 text-[10px] font-medium text-[var(--text-inverse-subtle)] sm:block">
                       {showGrid ? "Grid visible" : "Grid hidden"}
                     </div>
                   </div>
