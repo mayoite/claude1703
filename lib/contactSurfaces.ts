@@ -32,6 +32,7 @@ const ROUTES_SUPPRESSING_FLOATING_QUICK_CONTACT = new Set([
   "/configurator",
   "/contact",
   "/downloads",
+  "/planner",
   "/planning",
   "/quote-cart",
 ]);
@@ -55,5 +56,8 @@ export function routeSuppressesFloatingQuickContact(pathname: string | null) {
     return false;
   }
 
-  return ROUTES_SUPPRESSING_FLOATING_QUICK_CONTACT.has(pathname);
+  return (
+    ROUTES_SUPPRESSING_FLOATING_QUICK_CONTACT.has(pathname) ||
+    pathname.startsWith("/planner/")
+  );
 }

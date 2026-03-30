@@ -10,7 +10,7 @@ export type AdvisorRecommendation = {
 };
 
 export type ConfiguratorAdvisorContext = {
-  source: "global" | "configurator";
+  source: "global" | "configurator" | "planner";
   mode?: "quick-estimate" | "technical-planner";
   sourcePath?: string;
   projectType?: "workstations" | "storages";
@@ -63,9 +63,9 @@ export function sanitizeAdvisorPriceText(
 export function buildConfiguratorContextSummary(
   context: ConfiguratorAdvisorContext | undefined,
 ): string {
-  if (!context || context.source !== "configurator") return "";
+  if (!context || context.source === "global") return "";
 
-  const lines = ["Configurator context:"];
+  const lines = [context.source === "planner" ? "Planner context:" : "Configurator context:"];
   if (context.mode) lines.push(`Mode: ${context.mode}`);
   if (context.projectType) lines.push(`Project type: ${context.projectType}`);
   if (typeof context.seatOrUnitCount === "number") {

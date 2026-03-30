@@ -37,19 +37,20 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <HomepageHero />
-      <SectionReveal delay={0.02}>
+
+      <SectionReveal delay={0.03} variant="scale-in" distance={12}>
         <PartnershipBanner />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
+      <SectionReveal delay={0.04} variant="fade-left" distance={18}>
         <InteractiveTools />
       </SectionReveal>
 
-      <SectionReveal delay={0.05}>
+      <SectionReveal delay={0.05} variant="scale-in" distance={14}>
         <Collections />
       </SectionReveal>
 
-      <SectionReveal delay={0.08}>
+      <SectionReveal delay={0.08} variant="fade-right" distance={20}>
         <Projects />
       </SectionReveal>
 
@@ -57,7 +58,7 @@ export default async function Home() {
         <TestimonialsStrip />
       </SectionReveal>
 
-      <SectionReveal delay={0.16}>
+      <SectionReveal delay={0.16} variant="fade-left" distance={18}>
         <section className="home-section home-section--dark py-14 md:py-18">
           <div className="home-shell">
             <ProcessSection embedded dark />
@@ -68,11 +69,11 @@ export default async function Home() {
         </section>
       </SectionReveal>
 
-      <SectionReveal delay={0.18}>
+      <SectionReveal delay={0.18} variant="fade-right" distance={18}>
         <HomeFAQ />
       </SectionReveal>
 
-      <SectionReveal delay={0.2}>
+      <SectionReveal delay={0.2} variant="scale-in" distance={14}>
         <ContactTeaser />
       </SectionReveal>
     </div>

@@ -1,0 +1,130 @@
+/* Workspace Planner component styles */
+.planner-shell {
+  position: relative;
+  overflow: hidden;
+  background: var(--planner-shell-bg);
+}
+
+.planner-shell::before,
+.planner-shell::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.planner-shell::before {
+  top: -8rem;
+  left: -5rem;
+  width: 18rem;
+  height: 18rem;
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+.planner-shell::after {
+  top: 6rem;
+  right: -4rem;
+  width: 16rem;
+  height: 16rem;
+  background: color-mix(in srgb, var(--color-accent2) 16%, transparent);
+}
+
+.planner-shell-card {
+  border: 1px solid var(--planner-shell-border);
+  background: color-mix(in srgb, rgba(7, 12, 18, 0.84) 82%, transparent);
+  box-shadow:
+    var(--planner-shell-glow),
+    var(--planner-shell-shadow);
+  backdrop-filter: blur(24px);
+}
+
+.planner-surface {
+  border: 1px solid var(--planner-panel-border);
+  background: var(--planner-panel-bg);
+  box-shadow: var(--planner-panel-shadow);
+  backdrop-filter: blur(18px);
+}
+
+.planner-shell-chip {
+  border: 1px solid color-mix(in srgb, white 10%, transparent);
+  background: color-mix(in srgb, white 7%, transparent);
+  color: var(--planner-shell-muted);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.planner-rail-section {
+  border: 1px solid color-mix(in srgb, white 8%, transparent);
+  background: color-mix(in srgb, white 4%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.planner-shell-stat {
+  border: 1px solid color-mix(in srgb, white 8%, transparent);
+  background: var(--planner-shell-stat);
+  color: var(--planner-shell-text);
+  backdrop-filter: blur(16px);
+}
+
+.planner-stage {
+  border: 1px solid var(--planner-stage-border);
+  background: var(--planner-stage-bg);
+  box-shadow: var(--planner-stage-shadow);
+}
+
+.planner-stage-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.12)),
+    var(--planner-stage-grid);
+}
+
+.planner-utility-panel {
+  border: 1px solid var(--planner-panel-border);
+  background: var(--planner-utility-panel);
+  box-shadow: var(--planner-panel-shadow);
+}
+
+.prop-input {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--planner-input-border);
+  border-radius: 0.75rem;
+  background: linear-gradient(
+    180deg,
+    var(--planner-input-bg-top) 0%,
+    var(--planner-input-bg-bottom) 100%
+  );
+  color: var(--planner-input-text);
+  font-size: 0.8125rem;
+  outline: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+.prop-input:focus {
+  border-color: var(--planner-input-focus);
+  box-shadow: var(--focus-ring);
+  transform: translateY(-1px);
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  color: var(--planner-icon);
+  transition: all 0.15s;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.icon-btn:hover {
+  background-color: var(--planner-icon-hover-bg);
+  color: var(--planner-icon-hover-text);
+}

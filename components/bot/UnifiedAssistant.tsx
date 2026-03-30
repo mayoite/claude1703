@@ -334,7 +334,8 @@ export function UnifiedAssistant() {
   const suppressFloatingLauncher =
     pathname.startsWith("/products") ||
     pathname === "/compare" ||
-    pathname.startsWith("/configurator");
+    pathname.startsWith("/configurator") ||
+    pathname.startsWith("/planner");
   const mobileLauncherOffset = consentChosen ? "bottom-20" : "bottom-40";
   const mobilePanelOffset = consentChosen ? "bottom-36" : "bottom-56";
 

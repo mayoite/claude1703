@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getProducts } from "@/lib/getProducts";
-import { createSupabaseAdminClient } from "@/lib/supabaseAdmin";
 import { normalizeRequestedCategoryId } from "@/lib/catalogCategories";
 import { SITE_URL } from "@/lib/siteUrl";
 import {
@@ -20,6 +19,9 @@ type AdvisorClientConfig = {
 };
 
 const DEFAULT_OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.4";
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX_REQUESTS = 10;
+const advisorRateLimit = new Map<string, { count: number; resetAt: number }>();
 
 function createOpenRouterClient(apiKey: string) {
   return new OpenAI({
@@ -54,17 +56,46 @@ function resolveAdvisorClient(): AdvisorClientConfig | null {
 
 function parsePayload(
   value: unknown,
-): { query: string; userId: string; context?: ConfiguratorAdvisorContext } | null {
+): { query: string; context?: ConfiguratorAdvisorContext } | null {
   if (!value || typeof value !== "object") return null;
   const source = value as AdvisorRequest & Record<string, unknown>;
   const query = typeof source.query === "string" ? source.query.trim() : "";
-  const userId = typeof source.userId === "string" ? source.userId.trim() : "";
   if (!query) return null;
   const context =
     source.context && typeof source.context === "object"
       ? (source.context as ConfiguratorAdvisorContext)
       : undefined;
-  return { query, userId, context };
+  return { query, context };
+}
+
+function getAdvisorRateLimitKey(req: NextRequest): string {
+  const forwardedFor = req.headers.get("x-forwarded-for");
+  if (forwardedFor) {
+    return forwardedFor.split(",")[0]?.trim() || "unknown";
+  }
+
+  return req.headers.get("x-real-ip")?.trim() || "unknown";
+}
+
+function isRateLimited(key: string): boolean {
+  const now = Date.now();
+  const existing = advisorRateLimit.get(key);
+
+  if (!existing || existing.resetAt <= now) {
+    advisorRateLimit.set(key, {
+      count: 1,
+      resetAt: now + RATE_LIMIT_WINDOW_MS,
+    });
+    return false;
+  }
+
+  if (existing.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return true;
+  }
+
+  existing.count += 1;
+  advisorRateLimit.set(key, existing);
+  return false;
 }
 
 function normalizeCategoryId(raw: string): string {
@@ -169,17 +200,23 @@ function buildHeuristicRecommendations(
 function buildContextualNextActions(
   context: ConfiguratorAdvisorContext | undefined,
 ): string[] {
-  if (!context || context.source !== "configurator") {
+  if (!context || context.source === "global") {
     return [
       "Share team size, city, and category priorities to tighten the shortlist.",
       "Confirm whether budget, delivery speed, or ergonomics should lead the recommendation.",
     ];
   }
 
-  const actions = [
-    "Review the fit result before locking product family decisions.",
-    "Compare one lower-budget and one ergonomic alternative against the current snapshot.",
-  ];
+  const actions =
+    context.source === "planner"
+      ? [
+          "Test one tighter layout and one lower-density layout before locking the product mix.",
+          "Compare one lower-budget and one ergonomic alternative against the current plan.",
+        ]
+      : [
+          "Review the fit result before locking product family decisions.",
+          "Compare one lower-budget and one ergonomic alternative against the current snapshot.",
+        ];
   if (context.fitStatus?.toLowerCase().includes("over")) {
     actions.unshift("Reduce seat or unit density, or increase the usable planning zone.");
   }
@@ -192,7 +229,7 @@ function buildContextualNextActions(
 function buildContextualWarnings(
   context: ConfiguratorAdvisorContext | undefined,
 ): string[] {
-  if (!context || context.source !== "configurator") return [];
+  if (!context || context.source === "global") return [];
   const warnings: string[] = [];
   if (context.fitStatus?.toLowerCase().includes("over")) {
     warnings.push("Current layout does not fit inside the stated planning zone.");
@@ -216,8 +253,10 @@ function buildFallbackAdvisorResponse(
         ? context.estimatedBudget
         : inferBudgetFromQuery(query),
     summary:
-      context?.source === "configurator"
-        ? "Here is a practical shortlist based on the current configurator snapshot. Use this to decide the next change, not as a final BOQ."
+      context?.source === "planner"
+        ? "Here is a practical shortlist based on the current planner layout. Use this to decide the next room or furniture change, not as a final BOQ."
+        : context?.source === "configurator"
+          ? "Here is a practical shortlist based on the current configurator snapshot. Use this to decide the next change, not as a final BOQ."
         : "Here is a practical shortlist based on your brief and our available catalog. Share team size and site details for a tighter recommendation.",
     nextActions: buildContextualNextActions(context),
     warnings: buildContextualWarnings(context),
@@ -264,21 +303,20 @@ function normalizeRecommendation(
   };
 }
 
-function isMissingUserHistoryTable(message: string): boolean {
-  const normalized = message.toLowerCase();
-  return (
-    normalized.includes("could not find the table") &&
-    normalized.includes("public.user_history")
-  );
-}
-
 export async function POST(req: NextRequest) {
   try {
     const parsedBody = parsePayload(await req.json());
     if (!parsedBody) {
       return NextResponse.json({ error: "Query is required" }, { status: 400 });
     }
-    const { query, userId, context } = parsedBody;
+    const { query, context } = parsedBody;
+
+    if (isRateLimited(getAdvisorRateLimitKey(req))) {
+      return NextResponse.json(
+        { error: "Too many advisor requests. Please wait a minute and try again." },
+        { status: 429 },
+      );
+    }
 
     const products = await getProducts();
     if (!products || products.length === 0) {
@@ -305,24 +343,6 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    let historyContext = "";
-    if (userId) {
-      const supabaseAdmin = createSupabaseAdminClient();
-      const { data, error } = await supabaseAdmin
-        .from("user_history")
-        .select("viewed_products")
-        .eq("user_id", userId)
-        .single();
-      if (error && !isMissingUserHistoryTable(error.message)) {
-        console.error("[ai-advisor] user_history error:", error.message);
-      }
-      if (data?.viewed_products?.length) {
-        historyContext =
-          `\nClient History (Recently Viewed Products): ${data.viewed_products.join(", ")}` +
-          "\nPrioritize recommending complementary or similar items based on this history.";
-      }
-    }
-
     const productList = products
       .slice(0, 80)
       .map(
@@ -338,7 +358,6 @@ Consider team size, industry, budget sensitivity, location context, and ergonomi
 Only use the live catalog below.
 This is an India-facing experience, so never return USD or dollar pricing. Use INR budget bands or "On request".
 Do not fabricate a final BOQ or fake precision totals.
-${historyContext}
 ${contextSummary ? `\n${contextSummary}\n` : ""}
 
 Available products:
@@ -433,7 +452,7 @@ Respond ONLY with valid JSON in this exact shape:
         pricingMode: "on-request",
         fallbackUsed: true,
       },
-      { status: 200 },
+      { status: 503 },
     );
   }
 }

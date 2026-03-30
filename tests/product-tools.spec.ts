@@ -37,100 +37,36 @@ test.describe("Product tools", () => {
     await expect(page.getByLabel(/Message/i)).toHaveValue(/products I compared/i);
   });
 
-  test("workstation module configurator submits enquiry", async ({ page }) => {
-    let payload: Record<string, unknown> | undefined;
-
-    await page.route("**/api/customer-queries", async (route) => {
-      payload = route.request().postDataJSON() as Record<string, unknown>;
-      await route.fulfill({
-        status: 201,
-        contentType: "application/json",
-        body: JSON.stringify({ success: true, queryId: "CFG-2201" }),
-      });
-    });
-
+  test("legacy configurator route resolves to the active planner shell", async ({ page }) => {
     await page.goto("/configurator");
-    await expect(page.getByRole("img", { name: /rough workstation drawing/i })).toBeVisible();
-    await page.getByRole("button", { name: /technical planner/i }).click();
-    await page.getByLabel("Series").selectOption("Panel Series");
-    await page.getByLabel("Layout").selectOption("cluster-4");
-    await page.getByLabel("Screen height (mm)").selectOption("530");
-    await page.getByLabel("Raceway").selectOption("spine");
-    await page.getByLabel("Room width (mm)").fill("9000");
-    await page.getByLabel("Room length (mm)").fill("14000");
-    await page.getByRole("button", { name: /jump to review/i }).click();
-    await page.getByPlaceholder("End client (optional)").fill("Acme Global");
-    await page.getByPlaceholder("Your name").fill("Ayush");
-    await page.getByPlaceholder("Work email").fill("ayush@example.com");
-    await page.getByRole("button", { name: /Submit configuration/i }).click();
-
-    await expect(page.getByText(/Configuration sent. Reference: CFG-2201/i)).toBeVisible();
-    expect(payload).toBeTruthy();
-    expect(String(payload?.message ?? "")).toContain("Room size:");
-    expect(String(payload?.message ?? "")).toContain("End client: Acme Global");
-    expect(String(payload?.message ?? "")).toContain("Mode: technical-planner");
+    await expect(page).toHaveURL(/\/planner\/?$/);
+    await expect(page.getByRole("heading", { name: /Workspace Planner/i })).toBeVisible();
+    await expect(page.getByText(/Room Snapshot/i)).toBeVisible();
   });
 
-  test("configurator keeps global assistant quiet and sends snapshot-aware copilot payload", async ({
-    page,
-  }) => {
-    let advisorPayload: Record<string, unknown> | undefined;
-
-    await page.route("**/api/ai-advisor/**", async (route) => {
-      advisorPayload = route.request().postDataJSON() as Record<string, unknown>;
-      await route.fulfill({
-        status: 200,
-        contentType: "application/json",
-        body: JSON.stringify({
-          recommendations: [
-            {
-              productUrlKey: "oando-workstations--deskpro",
-              productId: "oando-workstations--deskpro",
-              productName: "DeskPro",
-              category: "workstations",
-              why: "Keeps the footprint compact while preserving modular growth.",
-              budgetEstimate: "Indicative band after review",
-            },
-          ],
-          totalBudget: "INR band after review",
-          summary: "The current snapshot is workable if you keep density controlled.",
-          nextActions: ["Compare one lower-budget benching option."],
-          warnings: ["Budget remains indicative until the BOQ review."],
-          pricingMode: "band",
-        }),
-      });
-    });
-
-    await page.goto("/configurator");
+  test("planner keeps the global assistant quiet on the active route", async ({ page }) => {
+    await page.goto("/planner");
     const acceptCookies = page.getByRole("button", { name: /Accept All/i });
     if (await acceptCookies.isVisible().catch(() => false)) {
       await acceptCookies.click();
     }
     await expect(page.getByRole("button", { name: /open ai chatbot/i })).toHaveCount(0);
     await expect(page.getByRole("button", { name: /open workspace assistant/i })).toHaveCount(0);
-    await page.getByRole("button", { name: /use current snapshot/i }).click();
-    await expect(page.getByText(/Indicative budget: INR band after review/i)).toBeVisible();
-    expect(advisorPayload).toBeTruthy();
-    expect(advisorPayload?.context).toMatchObject({
-      source: "configurator",
-      mode: "quick-estimate",
-      projectType: "workstations",
-    });
   });
 
-  test("configurator mobile keeps review path visible", async ({ page }) => {
+  test("planner mobile keeps the main command surface visible", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/configurator");
+    await page.goto("/planner");
     const acceptCookies = page.getByRole("button", { name: /Accept All/i });
     if (await acceptCookies.isVisible().catch(() => false)) {
       await acceptCookies.click();
     }
 
-    await expect(page.getByRole("button", { name: /Review and submit/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: /^Reset$/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: /Open 3D/i })).toBeVisible();
+    await expect(page.getByText(/Catalog/i)).toBeVisible();
     await expect(page.getByRole("button", { name: /open workspace assistant/i })).toHaveCount(0);
     await expect(page.getByRole("button", { name: /open ai chatbot/i })).toHaveCount(0);
-    await page.getByRole("button", { name: /Review and submit/i }).click();
-    await expect(page.getByText(/Final review and submission/i)).toBeVisible();
   });
 
   test("quote cart restores compare continuity when multiple products are present", async ({ page }) => {

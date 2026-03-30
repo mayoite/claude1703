@@ -1,2 +1,5 @@
-export { metadata } from "@/app/planner-lab/page";
-export { default } from "@/app/planner-lab/page";
+import { redirect } from "next/navigation";
+
+export default function LabPage() {
+  redirect("/planner");
+}

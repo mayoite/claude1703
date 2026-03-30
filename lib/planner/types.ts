@@ -1,90 +1,130 @@
-export type PlannerCategory =
-  | "workstations"
-  | "meeting-tables"
-  | "chairs"
-  | "storages"
-  | "other-items";
+export type PlannerEngineMode = "blueprint-bridge" | "react-canvas";
 
-export type QueryAction =
-  | "what-fits"
-  | "increase-seats"
-  | "reduce-footprint"
-  | "premium"
-  | "lower-budget"
-  | "compare-similar";
+export type PlannerViewMode = "2.5d" | "3d";
 
-export type VariantDefinition = {
-  id: string;
-  label: string;
-  widthMm: number;
-  depthMm: number;
-  heightMm: number;
-  footprintShape?:
-    | "rectangle"
-    | "l-shape"
-    | "linear-shared"
-    | "linear-non-sharing"
-    | "sofa";
-  seatCount?: number;
-  unitCount?: number;
-  priceInr: number;
-  notes: string;
-  modelUrl?: string;
+export type PlannerToolMode = "move" | "draw";
+
+export type PlannerPoint2D = {
+  x: number;
+  y: number;
 };
 
-export type PlannerProduct = {
+export type PlannerPoint3D = {
+  x: number;
+  y: number;
+  z: number;
+};
+
+export type PlannerSceneSelection =
+  | {
+      kind: "item" | "wall" | "room";
+      id?: string;
+      title: string;
+      detail?: string;
+      areaSqM?: number;
+    }
+  | null;
+
+export type PlannerWall = {
+  id: string;
+  start: PlannerPoint2D;
+  end: PlannerPoint2D;
+  kind: "boundary" | "interior";
+};
+
+export type PlannerRoom = {
   id: string;
   name: string;
-  category: PlannerCategory;
-  family: string;
-  description: string;
-  image: string;
-  href: string;
-  finishes: string[];
-  tags: string[];
-  variants: VariantDefinition[];
+  outline: PlannerPoint2D[];
+  areaSqM?: number;
 };
 
-export type PlannerItem = {
+export type PlannerPlacedItem = {
   id: string;
-  productId: string;
-  variantId: string;
-  finish: string;
-  xMm: number;
-  yMm: number;
-  rotation: 0 | 90;
-  mirrored?: boolean;
+  catalogId: string;
+  name: string;
+  category?: string;
+  color?: string;
+  position: PlannerPoint3D;
+  rotationDeg: number;
+  widthCm: number;
+  depthCm: number;
+  heightCm: number;
+  sourceUrl?: string;
+  spec?: string;
+  topView?: string;
+  shape?: string;
+  renderStyle?: string;
+};
+
+export type PlannerDocumentMetadata = {
+  source: "starter" | "blueprint-bridge" | "react-canvas";
+  importedAt: string;
+  serializedSource?: string | null;
+};
+
+export type PlannerDocument = {
+  version: "planner-document.v1";
+  units: "cm";
+  rooms: PlannerRoom[];
+  walls: PlannerWall[];
+  items: PlannerPlacedItem[];
+  metadata: PlannerDocumentMetadata;
 };
 
 export type Opening = {
   id: string;
-  type: "door" | "double-door" | "window";
-  edge: "top" | "right" | "bottom" | "left";
-  offsetMm: number;
+  type: "door" | "window" | "double-door";
+  xMm: number;
+  yMm: number;
   widthMm: number;
-  hinge?: "start" | "end";
+  rotationDeg: number;
+  flipHorizontal: boolean;
+};
+
+export type PlannerItem = {
+  id: string;
+  catalogId: string;
+  xMm: number;
+  yMm: number;
+  rotationDeg: number;
 };
 
 export type RoomState = {
+  widthMm: number;
+  depthMm: number;
+};
+
+export type PlannerCategory =
+  | "workstations"
+  | "seating"
+  | "soft-seating"
+  | "tables"
+  | "storage"
+  | "education"
+  | "accessories"
+  | "all";
+
+export type VariantDefinition = {
+  id: string;
   name: string;
   widthMm: number;
   depthMm: number;
-  clearanceMm: number;
+  heightMm: number;
+  seatCount: number;
+  unitCount: number;
+  price?: number;
 };
 
-export type RoomPreset = {
-  id: string;
-  title: string;
-  description: string;
-  room: RoomState;
-  seatTarget: number;
-  openings: Opening[];
-};
+export type QueryAction = "what-fits" | "recommend" | "optimize";
 
 export type QuerySuggestion = {
-  productId: string;
-  variantId: string;
-  badge: string;
-  reason: string;
-  canFit: boolean;
+  label: string;
+  query: string;
+};
+
+export type PlannerHistoryState<T> = {
+  past: T[];
+  present: T;
+  future: T[];
 };

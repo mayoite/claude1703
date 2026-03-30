@@ -15,14 +15,14 @@ export function FooterLogoMarquee() {
           {trackLogos.map((logo, index) => (
             <div
               key={`${logo.name}-${index}`}
-              className="footer-logo-marquee__item flex h-12 w-34 shrink-0 items-center justify-center md:h-16 md:w-44"
+              className="footer-logo-marquee__item group h-12 w-34 shrink-0 md:h-16 md:w-44"
             >
               <Image
                 src={logo.src}
                 alt={logo.name}
                 width={208}
                 height={72}
-                className="h-10 w-auto object-contain opacity-100 saturate-100 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-150 motion-reduce:hover:scale-100 md:h-12"
+                className="h-10 w-auto object-contain grayscale opacity-70 saturate-0 transition-[filter,opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.7] group-hover:grayscale-0 group-hover:opacity-100 group-hover:saturate-100 motion-reduce:transition-none motion-reduce:group-hover:scale-100 md:h-12"
               />
             </div>
           ))}

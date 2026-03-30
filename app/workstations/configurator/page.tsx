@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function WorkstationConfiguratorPage() {
-  redirect("/configurator?type=workstations");
+export default function WorkstationsConfiguratorPage() {
+  redirect("/planner");
 }

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One&Only - Workspace Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,500,0,0">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header id="toolbar">
+    <div class="toolbar-group brand-group">
+      <div class="brand-lockup">
+        <span class="brand">One&Only</span>
+        <span class="brand-sub">Workspace Planner</span>
+      </div>
+      <span class="toolbar-pill toolbar-pill-muted">AFC workspace planning studio</span>
+    </div>
+
+    <div class="toolbar-main">
+      <div class="toolbar-cluster">
+        <span class="cluster-label">Plan</span>
+        <button id="btn-new" class="btn-strong" title="New plan"><span class="material-symbols-outlined">add_circle</span><span class="btn-label">New</span></button>
+        <button id="btn-save" title="Save plan"><span class="material-symbols-outlined">save</span><span class="btn-label">Save</span></button>
+        <button id="btn-load" title="Load plan"><span class="material-symbols-outlined">folder_open</span><span class="btn-label">Load</span></button>
+        <button id="btn-export" class="btn-accent" title="Export image"><span class="material-symbols-outlined">image</span><span class="btn-label">Export</span></button>
+      </div>
+
+      <div class="toolbar-cluster">
+        <span class="cluster-label">Edit</span>
+        <button id="btn-tool-select" class="active" title="Select tool"><span class="material-symbols-outlined">near_me</span><span class="btn-label">Select</span></button>
+        <button id="btn-tool-wall" title="Draw walls"><span class="material-symbols-outlined">architecture</span><span class="btn-label">Wall</span></button>
+        <button id="btn-undo" title="Undo"><span class="material-symbols-outlined">undo</span><span class="btn-label">Undo</span></button>
+        <button id="btn-redo" title="Redo"><span class="material-symbols-outlined">redo</span><span class="btn-label">Redo</span></button>
+      </div>
+
+      <div class="toolbar-cluster">
+        <span class="cluster-label">View</span>
+        <button id="btn-snap" class="active" title="Snap to grid"><span class="material-symbols-outlined">grid_4x4</span><span class="btn-label">Snap</span></button>
+        <button id="btn-labels" title="Toggle labels"><span class="material-symbols-outlined">label</span><span class="btn-label">Labels</span></button>
+        <button id="btn-dims" title="Toggle dimensions"><span class="material-symbols-outlined">straighten</span><span class="btn-label">Dims</span></button>
+        <button id="btn-view-2d" class="active" title="2D plan view"><span class="material-symbols-outlined">view_in_ar</span><span class="btn-label">2D</span></button>
+        <button id="btn-view-3d" title="2.5D presentation view"><span class="material-symbols-outlined">deployed_code</span><span class="btn-label">2.5D</span></button>
+        <button id="btn-zoom-out" title="Zoom out"><span class="material-symbols-outlined">zoom_out</span></button>
+        <span id="zoom-level" class="zoom-display">100%</span>
+        <button id="btn-zoom-in" title="Zoom in"><span class="material-symbols-outlined">zoom_in</span></button>
+        <button id="btn-zoom-fit" title="Fit room"><span class="material-symbols-outlined">fit_screen</span><span class="btn-label">Fit</span></button>
+      </div>
+    </div>
+
+    <input id="load-input" type="file" accept="application/json" hidden>
+  </header>
+
+  <div id="app">
+    <aside id="sidebar-left">
+      <div class="sidebar-sticky-head">
+        <div class="sidebar-title-row">
+          <div>
+            <p class="sidebar-kicker">Catalog</p>
+            <h2 class="sidebar-title">Office products</h2>
+          </div>
+          <span id="catalog-count-total" class="sidebar-total">0</span>
+        </div>
+        <div class="sidebar-search">
+          <span class="material-symbols-outlined">search</span>
+          <input id="catalog-search" type="text" placeholder="Search desks, seating, storage..." autocomplete="off">
+        </div>
+      </div>
+      <div id="catalog-list"></div>
+    </aside>
+
+    <main id="canvas-wrap">
+      <div class="canvas-hud">
+        <div class="hud-card">
+          <span class="hud-kicker">Live workspace scene</span>
+          <strong id="hud-title">Focus Studio</strong>
+          <span id="hud-meta">2D planning canvas</span>
+          <div class="hud-badges">
+            <span id="hud-badge-view" class="hud-badge">2D</span>
+            <span id="hud-badge-tool" class="hud-badge">Select</span>
+            <span id="hud-badge-snap" class="hud-badge">Snap On</span>
+          </div>
+        </div>
+      </div>
+      <div id="canvas-stage">
+        <svg id="planner-canvas" aria-label="Workspace planner canvas"></svg>
+      </div>
+      <div id="drop-hint" class="drop-hint hidden">
+        <span class="material-symbols-outlined">move_item</span>
+        Drop to place
+      </div>
+    </main>
+
+    <aside id="sidebar-right">
+      <section id="room-props" class="sidebar-section room-panel">
+        <div class="section-header-row">
+          <h3 class="sidebar-heading"><span class="material-symbols-outlined">meeting_room</span> Room</h3>
+          <span class="section-badge">Live</span>
+        </div>
+        <div class="prop-row">
+          <label for="room-width">Width (cm)</label>
+          <input id="room-width" type="number" min="200" max="5000" step="10" value="1010">
+        </div>
+        <div class="prop-row">
+          <label for="room-depth">Depth (cm)</label>
+          <input id="room-depth" type="number" min="200" max="5000" step="10" value="600">
+        </div>
+        <div class="mini-preset-row">
+          <button class="mini-preset" data-room-preset="600x400">6 x 4</button>
+          <button class="mini-preset" data-room-preset="800x600">8 x 6</button>
+          <button class="mini-preset" data-room-preset="1010x600">10.1 x 6</button>
+          <button class="mini-preset" data-room-preset="1200x800">12 x 8</button>
+        </div>
+        <div class="room-summary-grid">
+          <article class="room-summary-card">
+            <span class="insight-label">Layout</span>
+            <strong id="room-summary-layout">Focus Studio</strong>
+          </article>
+          <article class="room-summary-card">
+            <span class="insight-label">Area</span>
+            <strong id="room-summary-area">60.6 sq.m</strong>
+          </article>
+          <article class="room-summary-card">
+            <span class="insight-label">Items</span>
+            <strong id="room-summary-items">0 placed</strong>
+          </article>
+          <article class="room-summary-card">
+            <span class="insight-label">Selection</span>
+            <strong id="room-summary-selection">None</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="selection-panel" class="sidebar-section hidden">
+        <div class="section-header-row">
+          <h3 class="sidebar-heading"><span class="material-symbols-outlined">tune</span> <span id="selection-title">Properties</span></h3>
+          <span id="selection-badge" class="section-badge section-badge-muted">Inspector</span>
+        </div>
+        <div id="selection-content"></div>
+      </section>
+
+      <section id="no-selection" class="sidebar-section inspector-empty">
+        <div class="empty-hero">
+          <p class="sidebar-kicker">Quick start</p>
+          <h3>Build a stronger office plan</h3>
+          <p>Start with a layout, then drag AFC products onto the canvas for a richer workspace composition.</p>
+        </div>
+        <div class="quick-layouts">
+          <button class="quick-layout" data-layout="focus"><span class="quick-layout-title">Focus Studio</span><span class="quick-layout-copy">Bench desks with a compact meeting corner</span></button>
+          <button class="quick-layout" data-layout="team"><span class="quick-layout-title">Team Bench</span><span class="quick-layout-copy">Denser workstation layout for project teams</span></button>
+          <button class="quick-layout" data-layout="boardroom"><span class="quick-layout-title">Boardroom</span><span class="quick-layout-copy">Conference-led layout with presentation wall</span></button>
+          <button class="quick-layout" data-layout="reception"><span class="quick-layout-title">Reception</span><span class="quick-layout-copy">Lounge-first arrival zone with waiting seats</span></button>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-card">
+            <span class="insight-label">Products</span>
+            <strong id="summary-product-count">0</strong>
+          </article>
+          <article class="insight-card">
+            <span class="insight-label">Categories</span>
+            <strong id="summary-category-count">0</strong>
+          </article>
+          <article class="insight-card">
+            <span class="insight-label">View mode</span>
+            <strong id="summary-view-mode">2D</strong>
+          </article>
+          <article class="insight-card">
+            <span class="insight-label">Layout</span>
+            <strong id="summary-layout-name">Focus Studio</strong>
+          </article>
+          <article class="insight-card">
+            <span class="insight-label">Area</span>
+            <strong id="summary-room-area">60.6 sq.m</strong>
+          </article>
+          <article class="insight-card">
+            <span class="insight-label">Shortcuts</span>
+            <strong>W / R / Del</strong>
+          </article>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <footer id="statusbar">
+    <span id="status-text">Ready - drag products from the catalog or click to add.</span>
+    <span id="status-room">Room: 1010 x 600 cm</span>
+    <span id="status-items">0 items</span>
+  </footer>
+
+  <script src="./planner-catalog.generated.js" onerror="window.__plannerCatalogLoadError='Planner catalog failed to load.'"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
