@@ -888,47 +888,7 @@ export function BlueprintPlanner() {
               {...panelMotionProps}
               transition={entranceTransition}
             >
-              <div className="planner-surface mb-0 rounded-none border-x-0 border-t-0 px-4 py-2.5 text-[var(--text-inverse)] sm:px-5 lg:px-6">
-                <div className="mb-1.5 flex flex-col gap-1.5 lg:flex-row lg:items-center lg:justify-between">
-                  <div className="text-[12px] font-medium text-[var(--text-inverse-body)]">
-                    {selectedItem
-                      ? `Staged: ${selectedItem.name}`
-                      : "Stage a product, place it, then refine the layout."}
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="rounded-full border border-inverse bg-white/4 px-2.5 py-1 text-[10px] font-semibold tracking-[0.12em] text-[var(--text-inverse-subtle)]">
-                      VIEW {currentView === "3d" ? "3D REVIEW" : "2D PLAN"}
-                    </span>
-                    <span className="rounded-full border border-inverse bg-white/4 px-2.5 py-1 text-[10px] font-semibold tracking-[0.12em] text-[var(--text-inverse-subtle)]">
-                      TOOL {activeTool === "draw" ? "DRAW" : "MOVE"}
-                    </span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-8 rounded-full border border-inverse bg-white/4 px-3 text-[10px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-white/8 hover:text-[var(--text-inverse)]"
-                      onClick={toggleInspector}
-                    >
-                      {isInspectorOpen ? "Inspector off" : "Inspector"}
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-8 rounded-full border border-inverse bg-white/4 px-3 text-[10px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-white/8 hover:text-[var(--text-inverse)]"
-                      onClick={toggleClientBar}
-                    >
-                      {isClientBarOpen ? "Details off" : "Details"}
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-8 rounded-full border border-inverse bg-white/4 px-3 text-[10px] font-semibold tracking-[0.08em] text-[var(--text-inverse-subtle)] hover:bg-white/8 hover:text-[var(--text-inverse)]"
-                      onClick={() => setIsAiPanelOpen((value) => !value)}
-                    >
-                      {isAiPanelOpen ? "Advisor off" : "Advisor"}
-                    </Button>
-                  </div>
-                </div>
-
+              <div className="planner-surface mb-0 rounded-none border-x-0 border-t-0 px-4 py-2 text-[var(--text-inverse)] sm:px-5 lg:px-6">
                 <div className="w-full">
                   <PlannerToolbar
                     currentView={currentView}
@@ -967,6 +927,12 @@ export function BlueprintPlanner() {
                     onRotateSelectedItem={handleRotateItem}
                     onDuplicateSelectedItem={handleDuplicateItem}
                     onDeleteSelectedItem={handleDeleteItem}
+                    isInspectorOpen={isInspectorOpen}
+                    isClientBarOpen={isClientBarOpen}
+                    isAiPanelOpen={isAiPanelOpen}
+                    onToggleInspector={toggleInspector}
+                    onToggleClientBar={toggleClientBar}
+                    onToggleAiPanel={() => setIsAiPanelOpen((value) => !value)}
                   />
                 </div>
               </div>

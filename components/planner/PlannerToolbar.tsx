@@ -7,13 +7,16 @@ import {
   Grid2X2,
   Grid3X3,
   Move,
+  PanelsTopLeft,
   PenTool,
   RotateCcw,
   RotateCw,
   Save,
+  Sparkles,
   SplitSquareVertical,
   StretchHorizontal,
   Trash2,
+  ClipboardList,
 } from "lucide-react";
 
 interface PlannerToolbarProps {
@@ -37,6 +40,12 @@ interface PlannerToolbarProps {
   onRotateSelectedItem: (deltaDeg: number) => void;
   onDuplicateSelectedItem: () => void;
   onDeleteSelectedItem: () => void;
+  isInspectorOpen: boolean;
+  isClientBarOpen: boolean;
+  isAiPanelOpen: boolean;
+  onToggleInspector: () => void;
+  onToggleClientBar: () => void;
+  onToggleAiPanel: () => void;
 }
 
 function Sep() {
@@ -64,6 +73,12 @@ export function PlannerToolbar({
   onRotateSelectedItem,
   onDuplicateSelectedItem,
   onDeleteSelectedItem,
+  isInspectorOpen,
+  isClientBarOpen,
+  isAiPanelOpen,
+  onToggleInspector,
+  onToggleClientBar,
+  onToggleAiPanel,
 }: PlannerToolbarProps) {
   const itemPosition = selectedItemPosition ?? null;
   const itemRotation =
@@ -76,7 +91,7 @@ export function PlannerToolbar({
   const roundedZ = itemPosition ? Math.round(itemPosition.z) : null;
 
   return (
-    <div className="z-20 flex w-full max-w-[768px] flex-wrap items-center gap-x-2 gap-y-2 border-b border-[var(--planner-toolbar-border)] bg-transparent px-0 py-2">
+    <div className="z-20 flex w-full max-w-[768px] flex-wrap items-center gap-x-2 gap-y-2 border-b border-[var(--planner-toolbar-border)] bg-transparent px-0 py-1.5">
       <div className="flex items-center gap-1 rounded-[12px] border border-[var(--planner-toolbar-border)] bg-[var(--planner-toolbar-surface)] p-1">
         <Button
           size="sm"
@@ -192,9 +207,46 @@ export function PlannerToolbar({
           <FileDown className="mr-1.5 h-4 w-4" />
           Export
         </Button>
+        <Sep />
+        <Button
+          size="sm"
+          variant="ghost"
+          className={cn(
+            "h-8 w-8 rounded-[9px] p-0 hover:bg-white/8",
+            isInspectorOpen ? "text-white" : "text-[var(--text-inverse-muted)]",
+          )}
+          onClick={onToggleInspector}
+          title="Toggle inspector"
+        >
+          <PanelsTopLeft className="h-4 w-4" />
+        </Button>
+        <Button
+          size="sm"
+          variant="ghost"
+          className={cn(
+            "h-8 w-8 rounded-[9px] p-0 hover:bg-white/8",
+            isClientBarOpen ? "text-white" : "text-[var(--text-inverse-muted)]",
+          )}
+          onClick={onToggleClientBar}
+          title="Toggle details"
+        >
+          <ClipboardList className="h-4 w-4" />
+        </Button>
+        <Button
+          size="sm"
+          variant="ghost"
+          className={cn(
+            "h-8 w-8 rounded-[9px] p-0 hover:bg-white/8",
+            isAiPanelOpen ? "text-white" : "text-[var(--text-inverse-muted)]",
+          )}
+          onClick={onToggleAiPanel}
+          title="Toggle advisor"
+        >
+          <Sparkles className="h-4 w-4" />
+        </Button>
       </div>
 
-      <div className="flex w-full items-center justify-between gap-3 lg:ml-auto lg:w-auto lg:justify-normal">
+      <div className="flex w-full items-center justify-between gap-2 lg:ml-auto lg:w-auto lg:justify-normal">
         <div className="flex flex-wrap items-center gap-2">
           {selectionLabel && selectionLabel !== "No selection" ? (
             <div className="flex items-center gap-2 rounded-full border border-[var(--planner-accent-soft-border)] bg-[var(--planner-accent-soft-bg)] px-3 py-1.5">
