@@ -10,6 +10,7 @@ import { WhatsAppCTA } from "@/components/ui/WhatsAppCTA";
 import { ciscoSans, helveticaNeue } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/siteUrl";
 import { buildGlobalJsonLd, buildSiteMetadata } from "@/data/site/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const DynamicBotWrapper = dynamic(() => import("@/components/bot/DynamicBotWrapper"));
 
@@ -51,6 +52,7 @@ export default function RootLayout({
           <DynamicBotWrapper />
           <WhatsAppCTA />
         </QueryProvider>
+        <Analytics />
       </body>
     </html>
   );
