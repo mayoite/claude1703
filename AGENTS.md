@@ -1,35 +1,55 @@
 # AGENTS.md
 
-## Purpose
-Project-specific instructions for Codex agents working in this repository.
+## Project Context
 
-## Scope
-- Applies to this repository only.
-- If this file conflicts with global rules, prefer this file for repo work.
+Enterprise design + IA revamp (cisco.com aesthetic): clean, modular, confident, proof-driven.
+
+**Stack:** Next.js · Tailwind CSS · Supabase
+
+---
 
 ## Core Rules
-- No nonsense.
-- UX has to be brilliant.
-- Use multi agents where required.
-- Default to parallel agent execution for independent tasks.
-- Use a lead agent to merge, validate, and resolve conflicts.
-- Maximize capability over cost and latency unless explicitly overridden.
+
+- No debug/fallback text visible to users.
+- Never break `/products/*` routing.
+- Homepage leads with brand promise — spotlights go in Projects section.
+- No fake personalization — implement it or rename it honestly.
+- Accessibility: keyboard nav, focus states, semantic landmarks.
+- Performance: no heavy hero media, keep LCP fast.
+
+---
 
 ## Working Rules
-- Make focused, minimal changes.
-- Do not modify unrelated files.
-- Keep code style consistent with existing patterns.
-- Run relevant checks before finishing when possible.
-- Prefer parallel reads, analysis, and validation when tasks are independent.
+
+- Make focused, minimal changes. Do not touch unrelated files.
+- Match existing code style and conventions.
+- Run relevant checks before finishing (`npm run lint`, `npm run build`, `npm run test:a11y`).
+- Parallel reads, analysis, and validation where tasks are independent.
 - Serialize only when one step depends on another.
-
-## Preferred Commands
-- Install: `npm install`
-- Test: `npm test`
-- Lint: `npm run lint`
-- Build: `npm run build`
-
-## Notes For Agents
 - Ask before destructive actions (deletes, resets, force pushes).
-- If requirements are unclear, state assumptions briefly and proceed.
-- Keep one final owner for integration, consistency, and regression review.
+- Never push to remote unless explicitly instructed.
+
+---
+
+## Response Format
+
+Every response must include:
+
+1. **File plan** — files to be created or modified
+2. **Exact diffs** — precise code changes
+3. **Acceptance checklist** — criteria to verify the change is complete
+
+If env vars are required, list them and explain failure modes.
+
+---
+
+## Commands
+
+```bash
+npm install       # install deps
+npm run dev       # dev server
+npm run build     # production build
+npm run lint      # lint
+npm test          # unit tests
+npm run test:a11y # accessibility tests
+```
